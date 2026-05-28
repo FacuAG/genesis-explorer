@@ -1,0 +1,563 @@
+{
+  "metadata": {
+    "title": "Genesis Timeline and Study Dataset",
+    "version": "2.0",
+    "source": "Book of Genesis, Matthew 1, Luke 3",
+    "chronology_system": "Anno Mundi (AM)",
+    "description": "Structured dataset for generating timelines, genealogies, maps and study guides. Enriched with exact chronology, overlap tables, complete lineage to Jesus, precise biblical references, and explicit relationships."
+  },
+
+  "layers": [
+    "chronology",
+    "genealogy",
+    "relationships",
+    "hierarchy",
+    "covenants",
+    "messianic_promises",
+    "geography",
+    "dispensations",
+    "questions"
+  ],
+
+  "dispensations": [
+    {
+      "id": "disp_innocence",
+      "name": "Inocencia",
+      "start_event": "creation",
+      "end_event": "fall"
+    },
+    {
+      "id": "disp_conscience",
+      "name": "Conciencia",
+      "start_event": "fall",
+      "end_event": "flood_start"
+    },
+    {
+      "id": "disp_human_government",
+      "name": "Gobierno Humano",
+      "start_event": "flood_end",
+      "end_event": "babel_tower"
+    },
+    {
+      "id": "disp_promise",
+      "name": "Promesa",
+      "start_event": "abraham_call",
+      "end_event": "joseph_death"
+    }
+  ],
+
+  "locations": [
+    { "id": "eden", "name": "Edén", "type": "region" },
+    { "id": "ararat", "name": "Ararat", "type": "mountain_region" },
+    { "id": "babel", "name": "Babel", "type": "city" },
+    { "id": "ur", "name": "Ur", "type": "city" },
+    { "id": "haran", "name": "Harán", "type": "city" },
+    { "id": "canaan", "name": "Canaán", "type": "region" },
+    { "id": "bethel", "name": "Betel", "type": "city" },
+    { "id": "hebron", "name": "Hebrón", "type": "city" },
+    { "id": "egypt", "name": "Egipto", "type": "nation" }
+  ],
+
+  "covenants": [
+    { "id": "creation_covenant", "name": "Creación", "participants": ["God", "Adam", "Eve"] },
+    { "id": "eden_covenant", "name": "Edén", "participants": ["God", "Adam", "Eve"] },
+    { "id": "noahic_covenant", "name": "Noé", "participants": ["God", "Noah"] },
+    { "id": "abrahamic_covenant", "name": "Abraham", "participants": ["God", "Abraham"] },
+    { "id": "circumcision_covenant", "name": "Circuncisión", "participants": ["God", "Abraham"] }
+  ],
+
+  "messianic_promises": [
+    { 
+      "id": "seed_of_woman", 
+      "title": "Simiente de la mujer", 
+      "through": ["Eve"],
+      "references": [{"book": "Genesis", "chapter": 3, "verse_start": 15, "verse_end": 15}],
+      "verses": ["Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar."]
+    },
+    { 
+      "id": "line_of_shem", 
+      "title": "Línea de Sem", 
+      "through": ["Shem"],
+      "references": [{"book": "Genesis", "chapter": 9, "verse_start": 26, "verse_end": 26}],
+      "verses": ["Dijo más: Bendito por Jehová mi Dios sea Sem, y sea Canaán su siervo."]
+    },
+    { 
+      "id": "abraham_promise", 
+      "title": "Promesa a Abraham", 
+      "through": ["Abraham"],
+      "references": [{"book": "Genesis", "chapter": 12, "verse_start": 3, "verse_end": 3}],
+      "verses": ["Bendeciré a los que te bendijeren, y a los que te maldijeren maldeciré; y serán benditas en ti todas las familias de la tierra."]
+    },
+    { 
+      "id": "isaac_promise", 
+      "title": "Promesa a Isaac", 
+      "through": ["Isaac"],
+      "references": [{"book": "Genesis", "chapter": 26, "verse_start": 4, "verse_end": 4}],
+      "verses": ["Multiplicaré tu descendencia como las estrellas del cielo, y daré a tu descendencia todas estas tierras; y todas las naciones de la tierra serán benditas en tu simiente."]
+    },
+    { 
+      "id": "jacob_promise", 
+      "title": "Promesa a Jacob", 
+      "through": ["Jacob"],
+      "references": [{"book": "Genesis", "chapter": 28, "verse_start": 14, "verse_end": 14}],
+      "verses": ["Será tu descendencia como el polvo de la tierra, y te extenderás al occidente, al oriente, al norte y al sur; y todas las familias de la tierra serán benditas en ti y en tu simiente."]
+    },
+    { 
+      "id": "judah_promise", 
+      "title": "Promesa a Judá", 
+      "through": ["Judah"],
+      "references": [{"book": "Genesis", "chapter": 49, "verse_start": 10, "verse_end": 10}],
+      "verses": ["No será quitado el cetro de Judá, Ni el legislador de entre sus pies, Hasta que venga Siloh; Y a él se congregarán los pueblos."]
+    }
+  ],
+
+  "timeline_events": [
+    { 
+      "id": "creation", 
+      "name": "Creación", 
+      "category": "creation",
+      "approx_year_am": 0, 
+      "teaching": "Dios crea todas las cosas", 
+      "references": [{"book": "Genesis", "chapter": 1, "verse_start": 1, "verse_end": 31}],
+      "verses": ["En el principio creó Dios los cielos y la tierra."]
+    },
+    { 
+      "id": "adam_eve", 
+      "name": "Adán y Eva", 
+      "category": "creation",
+      "approx_year_am": 0, 
+      "location": "eden", 
+      "teaching": "Humanidad creada a imagen de Dios", 
+      "references": [{"book": "Genesis", "chapter": 1, "verse_start": 26, "verse_end": 27}],
+      "verses": ["Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó."]
+    },
+    { 
+      "id": "fall", 
+      "name": "La Caída", 
+      "category": "judgment",
+      "location": "eden", 
+      "teaching": "Entrada del pecado", 
+      "references": [{"book": "Genesis", "chapter": 3, "verse_start": 1, "verse_end": 24}],
+      "verses": ["Y vio la mujer que el árbol era bueno para comer... y tomó de su fruto, y comió; y dio también a su marido, el cual comió así como ella."]
+    },
+    { 
+      "id": "cain_abel", 
+      "name": "Caín y Abel", 
+      "category": "sin",
+      "teaching": "Primer homicidio", 
+      "references": [{"book": "Genesis", "chapter": 4, "verse_start": 1, "verse_end": 8}],
+      "verses": ["Y dijo Caín a su hermano Abel: Salgamos al campo. Y aconteció que estando ellos en el campo, Caín se levantó contra su hermano Abel, y lo mató."]
+    },
+    { 
+      "id": "set_birth", 
+      "name": "Nacimiento de Set", 
+      "category": "genealogy",
+      "approx_year_am": 130, 
+      "references": [{"book": "Genesis", "chapter": 5, "verse_start": 3, "verse_end": 3}],
+      "verses": ["Y vivió Adán ciento treinta años, y engendró un hijo a su semejanza, conforme a su imagen, y llamó su nombre Set."]
+    },
+    { 
+      "id": "enoch_translation", 
+      "name": "Enoc es traspuesto", 
+      "category": "miracle",
+      "approx_year_am": 987, 
+      "teaching": "Comunión íntima con Dios", 
+      "references": [{"book": "Genesis", "chapter": 5, "verse_start": 24, "verse_end": 24}],
+      "verses": ["Caminó, pues, Enoc con Dios, y desapareció, porque le llevó Dios."]
+    },
+    { 
+      "id": "flood_start", 
+      "name": "Inicio del Diluvio", 
+      "category": "judgment",
+      "approx_year_am": 1656, 
+      "exact_date": "Año 600 de Noé, Mes 2, Día 17",
+      "location": "Global", 
+      "teaching": "Juicio de Dios sobre el pecado", 
+      "references": [{"book": "Genesis", "chapter": 7, "verse_start": 11, "verse_end": 11}],
+      "verses": ["El año seiscientos de la vida de Noé, en el mes segundo, a los diecisiete días del mes, aquel día fueron rotas todas las fuentes del grande abismo, y las cataratas de los cielos fueron abiertas."]
+    },
+    { 
+      "id": "flood_end", 
+      "name": "Fin del Diluvio (Tierra seca)", 
+      "category": "restoration",
+      "approx_year_am": 1657, 
+      "exact_date": "Año 601 de Noé, Mes 2, Día 27",
+      "location": "ararat", 
+      "teaching": "Misericordia y nuevo comienzo", 
+      "references": [{"book": "Genesis", "chapter": 8, "verse_start": 14, "verse_end": 14}],
+      "verses": ["Y en el mes segundo, a los veintisiete días del mes, se secó la tierra."]
+    },
+    { 
+      "id": "rainbow_covenant", 
+      "name": "Pacto del arco iris", 
+      "category": "covenant",
+      "approx_year_am": 1657, 
+      "teaching": "Promesa de preservación", 
+      "references": [{"book": "Genesis", "chapter": 9, "verse_start": 12, "verse_end": 17}],
+      "verses": ["Mi arco he puesto en las nubes, el cual será por señal del pacto entre mí y la tierra."]
+    },
+    { 
+      "id": "babel_tower", 
+      "name": "Torre de Babel y Dispersión", 
+      "category": "judgment",
+      "approx_year_am": 1757, 
+      "location": "babel", 
+      "teaching": "Orgullo humano y origen de los idiomas", 
+      "references": [{"book": "Genesis", "chapter": 11, "verse_start": 1, "verse_end": 9}],
+      "verses": ["Y dijeron: Vamos, edifiquémonos una ciudad y una torre, cuya cúspide llegue al cielo... Por esto fue llamado el nombre de ella Babel, porque allí confundió Jehová el lenguaje de toda la tierra."]
+    },
+    { 
+      "id": "abraham_call", 
+      "name": "Llamamiento de Abraham", 
+      "category": "patriarch",
+      "approx_year_am": 2083, 
+      "location": "haran", 
+      "teaching": "Fe y obediencia", 
+      "references": [{"book": "Genesis", "chapter": 12, "verse_start": 1, "verse_end": 4}],
+      "verses": ["Pero Jehová había dicho a Abram: Vete de tu tierra y de tu parentela, y de la casa de tu padre, a la tierra que te mostraré."]
+    },
+    { 
+      "id": "isaac_birth", 
+      "name": "Nacimiento de Isaac", 
+      "category": "patriarch",
+      "approx_year_am": 2108, 
+      "references": [{"book": "Genesis", "chapter": 21, "verse_start": 1, "verse_end": 3}],
+      "verses": ["Visitó Jehová a Sara, como había dicho, e hizo Jehová con Sara como había hablado. Y Sara concibió y dio a Abraham un hijo en su vejez..."]
+    },
+    { 
+      "id": "jacob_birth", 
+      "name": "Nacimiento de Jacob", 
+      "category": "patriarch",
+      "approx_year_am": 2168, 
+      "references": [{"book": "Genesis", "chapter": 25, "verse_start": 26, "verse_end": 26}],
+      "verses": ["Después salió su hermano, trabada su mano al calcañar de Esaú, y fue llamado su nombre Jacob."]
+    },
+    { 
+      "id": "descent_to_egypt", 
+      "name": "Descenso de Israel a Egipto", 
+      "category": "exile",
+      "approx_year_am": 2298, 
+      "location": "egypt", 
+      "teaching": "Providencia de Dios", 
+      "references": [{"book": "Genesis", "chapter": 46, "verse_start": 1, "verse_end": 34}],
+      "verses": ["Salió Israel con todo lo que tenía, y vino a Beerseba, y ofreció sacrificios al Dios de su padre Isaac."]
+    },
+    { 
+      "id": "joseph_death", 
+      "name": "Muerte de José", 
+      "category": "patriarch",
+      "approx_year_am": 2369, 
+      "location": "egypt", 
+      "references": [{"book": "Genesis", "chapter": 50, "verse_start": 26, "verse_end": 26}],
+      "verses": ["Y murió José a la edad de ciento diez años; y lo embalsamaron, y fue puesto en un ataúd en Egipto."]
+    }
+  ],
+
+  "main_genealogy": [
+    "Adam", "Seth", "Enosh", "Kenan", "Mahalalel", "Jared", "Enoch", "Methuselah", "Lamech", "Noah", 
+    "Shem", "Arphaxad", "Shelah", "Eber", "Peleg", "Reu", "Serug", "Nahor", "Terah", "Abraham", 
+    "Isaac", "Jacob", "Judah", "Perez", "Hezron", "Ram", "Amminadab", "Nahshon", "Salmon", "Boaz", 
+    "Obed", "Jesse", "David", "Solomon", "Rehoboam", "Abijah", "Asa", "Jehoshaphat", "Jehoram", 
+    "Uzziah", "Jotham", "Ahaz", "Hezekiah", "Manasseh", "Amon", "Josiah", "Jeconiah", "Shealtiel", 
+    "Zerubbabel", "Abiud", "Eliakim", "Azor", "Zadok", "Achim", "Eliud", "Eleazar", "Matthan", 
+    "Jacob", "Joseph", "Jesus"
+  ],
+
+  "people": [
+    { "id": "adam", "name": "Adán", "category": "first_human", "birth_am": 0, "death_am": 930, "lifespan": 930, "spouse": "eve", "children": ["cain", "abel", "seth"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 3, "verse_end": 5}], "verses": ["Y fueron todos los días que vivió Adán novecientos treinta años; y murió."] },
+    { "id": "eve", "name": "Eva", "category": "first_human", "spouse": "adam", "references": [{"book": "Genesis", "chapter": 2, "verse_start": 22, "verse_end": 22}], "verses": ["Y de la costilla que Jehová Dios tomó del hombre, hizo una mujer, y la trajo al hombre."] },
+    { "id": "cain", "name": "Caín", "category": "early_humanity", "parents": ["adam", "eve"], "references": [{"book": "Genesis", "chapter": 4, "verse_start": 1, "verse_end": 1}], "verses": ["Conoció Adán a su mujer Eva, la cual concibió y dio a luz a Caín..."] },
+    { "id": "abel", "name": "Abel", "category": "early_humanity", "parents": ["adam", "eve"], "references": [{"book": "Genesis", "chapter": 4, "verse_start": 2, "verse_end": 2}], "verses": ["Y después dio a luz a su hermano Abel. Y Abel fue pastor de ovejas, y Caín fue labrador de la tierra."] },
+    
+    { "id": "seth", "name": "Set", "category": "antediluvian_patriarch", "birth_am": 130, "death_am": 1042, "lifespan": 912, "parents": ["adam", "eve"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 3, "verse_end": 8}], "verses": ["Y vivió Adán ciento treinta años, y engendró un hijo... y llamó su nombre Set."] },
+    { "id": "enosh", "name": "Enós", "category": "antediluvian_patriarch", "birth_am": 235, "death_am": 1140, "lifespan": 905, "parents": ["seth"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 9, "verse_end": 11}], "verses": ["Vivió Set ciento cinco años, y engendró a Enós."] },
+    { "id": "kenan", "name": "Cainán", "category": "antediluvian_patriarch", "birth_am": 325, "death_am": 1235, "lifespan": 910, "parents": ["enosh"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 12, "verse_end": 14}], "verses": ["Vivió Enós noventa años, y engendró a Cainán."] },
+    { "id": "mahalalel", "name": "Mahalaleel", "category": "antediluvian_patriarch", "birth_am": 395, "death_am": 1290, "lifespan": 895, "parents": ["kenan"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 15, "verse_end": 17}], "verses": ["Vivió Cainán setenta años, y engendró a Mahalaleel."] },
+    { "id": "jared", "name": "Jared", "category": "antediluvian_patriarch", "birth_am": 460, "death_am": 1422, "lifespan": 962, "parents": ["mahalalel"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 18, "verse_end": 20}], "verses": ["Vivió Mahalaleel sesenta y cinco años, y engendró a Jared."] },
+    { "id": "enoch", "name": "Enoc", "category": "prophet", "birth_am": 622, "death_am": 987, "lifespan": 365, "parents": ["jared"], "special": "Trasladado por Dios", "references": [{"book": "Genesis", "chapter": 5, "verse_start": 21, "verse_end": 24}], "verses": ["Caminó, pues, Enoc con Dios, y desapareció, porque le llevó Dios."] },
+    { "id": "methuselah", "name": "Matusalén", "category": "antediluvian_patriarch", "birth_am": 687, "death_am": 1656, "lifespan": 969, "parents": ["enoch"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 25, "verse_end": 27}], "verses": ["Vivió Enoc sesenta y cinco años, y engendró a Matusalén."] },
+    { "id": "lamech", "name": "Lamec", "category": "antediluvian_patriarch", "birth_am": 874, "death_am": 1651, "lifespan": 777, "parents": ["methuselah"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 28, "verse_end": 31}], "verses": ["Vivió Matusalén ciento ochenta y siete años, y engendró a Lamec."] },
+    { "id": "noah", "name": "Noé", "category": "flood_survivor", "birth_am": 1056, "death_am": 2006, "lifespan": 950, "parents": ["lamech"], "children": ["shem", "ham", "japheth"], "references": [{"book": "Genesis", "chapter": 5, "verse_start": 28, "verse_end": 29}], "verses": ["y llamó su nombre Noé, diciendo: Este nos aliviará de nuestras obras y del trabajo de nuestras manos..."] },
+    
+    { "id": "shem", "name": "Sem", "category": "flood_survivor", "birth_am": 1556, "death_am": 2158, "lifespan": 600, "parents": ["noah"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 10, "verse_end": 11}], "verses": ["Estas son las generaciones de Sem: Sem, de edad de cien años, engendró a Arfaxad, dos años después del diluvio."] },
+    { "id": "ham", "name": "Cam", "category": "flood_survivor", "parents": ["noah"], "references": [{"book": "Genesis", "chapter": 10, "verse_start": 6, "verse_end": 6}], "verses": ["Los hijos de Cam: Cus, Mizraim, Fut y Canaán."] },
+    { "id": "japheth", "name": "Jafet", "category": "flood_survivor", "parents": ["noah"], "references": [{"book": "Genesis", "chapter": 10, "verse_start": 2, "verse_end": 2}], "verses": ["Los hijos de Jafet: Gomer, Magog, Madai, Javán, Tubal, Mesec y Tiras."] },
+    
+    { "id": "arphaxad", "name": "Arfaxad", "category": "postdiluvian_patriarch", "birth_am": 1658, "death_am": 2096, "lifespan": 438, "parents": ["shem"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 10, "verse_end": 13}], "verses": ["Sem, de edad de cien años, engendró a Arfaxad, dos años después del diluvio."] },
+    { "id": "shelah", "name": "Sala", "category": "postdiluvian_patriarch", "birth_am": 1693, "death_am": 2126, "lifespan": 433, "parents": ["arphaxad"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 14, "verse_end": 15}], "verses": ["Vivió Arfaxad treinta y cinco años, y engendró a Sala."] },
+    { "id": "eber", "name": "Heber", "category": "postdiluvian_patriarch", "birth_am": 1723, "death_am": 2187, "lifespan": 464, "parents": ["shelah"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 16, "verse_end": 17}], "verses": ["Vivió Sala treinta años, y engendró a Heber."] },
+    { "id": "peleg", "name": "Peleg", "category": "postdiluvian_patriarch", "birth_am": 1757, "death_am": 1996, "lifespan": 239, "parents": ["eber"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 18, "verse_end": 19}], "verses": ["Vivió Heber treinta y cuatro años, y engendró a Peleg."] },
+    { "id": "reu", "name": "Reu", "category": "postdiluvian_patriarch", "birth_am": 1787, "death_am": 2026, "lifespan": 239, "parents": ["peleg"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 20, "verse_end": 21}], "verses": ["Vivió Peleg treinta años, y engendró a Reu."] },
+    { "id": "serug", "name": "Serug", "category": "postdiluvian_patriarch", "birth_am": 1819, "death_am": 2049, "lifespan": 230, "parents": ["reu"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 22, "verse_end": 23}], "verses": ["Vivió Reu treinta y dos años, y engendró a Serug."] },
+    { "id": "nahor", "name": "Nacor", "category": "postdiluvian_patriarch", "birth_am": 1849, "death_am": 1997, "lifespan": 148, "parents": ["serug"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 24, "verse_end": 25}], "verses": ["Vivió Serug treinta años, y engendró a Nacor."] },
+    { "id": "terah", "name": "Taré", "category": "postdiluvian_patriarch", "birth_am": 1878, "death_am": 2083, "lifespan": 205, "parents": ["nahor"], "references": [{"book": "Genesis", "chapter": 11, "verse_start": 26, "verse_end": 32}], "verses": ["Y fueron los días de Taré doscientos cinco años; y murió Taré en Harán."] },
+    
+    { "id": "abraham", "name": "Abraham", "category": "patriarch", "birth_am": 2008, "death_am": 2183, "lifespan": 175, "parents": ["terah"], "spouse": "sarah", "references": [{"book": "Genesis", "chapter": 11, "verse_start": 26, "verse_end": 26}], "verses": ["Vivió Taré setenta años, y engendró a Abram, a Nacor y a Harán."] },
+    { "id": "sarah", "name": "Sara", "category": "matriarch", "lifespan": 127, "spouse": "abraham", "references": [{"book": "Genesis", "chapter": 23, "verse_start": 1, "verse_end": 1}], "verses": ["Fue la vida de Sara ciento veintisiete años; tantos fueron los años de la vida de Sara."] },
+    { "id": "isaac", "name": "Isaac", "category": "patriarch", "birth_am": 2108, "death_am": 2288, "lifespan": 180, "parents": ["abraham", "sarah"], "spouse": "rebekah", "references": [{"book": "Genesis", "chapter": 21, "verse_start": 5, "verse_end": 5}], "verses": ["Y era Abraham de cien años cuando nació Isaac su hijo."] },
+    { "id": "rebekah", "name": "Rebeca", "category": "matriarch", "spouse": "isaac", "references": [{"book": "Genesis", "chapter": 24, "verse_start": 67, "verse_end": 67}], "verses": ["Y la trajo Isaac a la tienda de su madre Sara, y tomó a Rebeca por mujer, y la amó..."] },
+    
+    { "id": "jacob", "name": "Jacob", "category": "patriarch", "birth_am": 2168, "death_am": 2315, "lifespan": 147, "parents": ["isaac", "rebekah"], "spouses": ["leah", "rachel", "bilhah", "zilpah"], "references": [{"book": "Genesis", "chapter": 25, "verse_start": 26, "verse_end": 26}], "verses": ["Después salió su hermano, trabada su mano al calcañar de Esaú, y fue llamado su nombre Jacob."] },
+    { "id": "leah", "name": "Lea", "category": "matriarch", "spouse": "jacob", "references": [{"book": "Genesis", "chapter": 29, "verse_start": 23, "verse_end": 23}], "verses": ["Y sucedió que a la noche tomó a Lea su hija, y se la trajo; y él se llegó a ella."] },
+    { "id": "rachel", "name": "Raquel", "category": "matriarch", "spouse": "jacob", "references": [{"book": "Genesis", "chapter": 29, "verse_start": 28, "verse_end": 28}], "verses": ["E hizo Jacob así, y cumplió la semana de aquélla; y él le dio a Raquel su hija por mujer."] },
+    { "id": "bilhah", "name": "Bilha", "category": "matriarch", "spouse": "jacob", "references": [{"book": "Genesis", "chapter": 29, "verse_start": 29, "verse_end": 29}], "verses": ["Y dio Labán a Raquel su hija su sierva Bilha por criada."] },
+    { "id": "zilpah", "name": "Zilpa", "category": "matriarch", "spouse": "jacob", "references": [{"book": "Genesis", "chapter": 29, "verse_start": 24, "verse_end": 24}], "verses": ["Y dio Labán su sierva Zilpa a su hija Lea por criada."] },
+    
+    { "id": "reuben", "name": "Rubén", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 29, "verse_start": 32, "verse_end": 32}], "verses": ["Y concibió Lea, y dio a luz un hijo, y llamó su nombre Rubén..."] },
+    { "id": "simeon", "name": "Simeón", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 29, "verse_start": 33, "verse_end": 33}], "verses": ["Concibió otra vez, y dio a luz un hijo... y llamó su nombre Simeón."] },
+    { "id": "levi", "name": "Leví", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 29, "verse_start": 34, "verse_end": 34}], "verses": ["Y concibió otra vez, y dio a luz un hijo... y por eso llamó su nombre Leví."] },
+    { "id": "judah", "name": "Judá", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 29, "verse_start": 35, "verse_end": 35}], "verses": ["Concibió otra vez, y dio a luz un hijo... y llamó su nombre Judá."] },
+    { "id": "dan", "name": "Dan", "category": "tribal_patriarch", "parents": ["jacob", "bilhah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 6, "verse_end": 6}], "verses": ["Y dijo Raquel: Me juzgó Dios... y por tanto llamó su nombre Dan."] },
+    { "id": "naphtali", "name": "Neftalí", "category": "tribal_patriarch", "parents": ["jacob", "bilhah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 8, "verse_end": 8}], "verses": ["Y dijo Raquel: Con luchas de Dios he contendido con mi hermana... y llamó su nombre Neftalí."] },
+    { "id": "gad", "name": "Gad", "category": "tribal_patriarch", "parents": ["jacob", "zilpah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 11, "verse_end": 11}], "verses": ["Y dijo Lea: Vino la ventura; y llamó su nombre Gad."] },
+    { "id": "asher", "name": "Aser", "category": "tribal_patriarch", "parents": ["jacob", "zilpah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 13, "verse_end": 13}], "verses": ["Y dijo Lea: Para dicha mía... y llamó su nombre Aser."] },
+    { "id": "issachar", "name": "Isacar", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 18, "verse_end": 18}], "verses": ["Y dijo Lea: Dios me ha dado mi recompensa... y llamó su nombre Isacar."] },
+    { "id": "zebulun", "name": "Zabulón", "category": "tribal_patriarch", "parents": ["jacob", "leah"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 20, "verse_end": 20}], "verses": ["Y dijo Lea: Dios me ha dado una buena dote... y llamó su nombre Zabulón."] },
+    { "id": "joseph", "name": "José", "category": "patriarch", "birth_am": 2259, "death_am": 2369, "lifespan": 110, "parents": ["jacob", "rachel"], "references": [{"book": "Genesis", "chapter": 30, "verse_start": 24, "verse_end": 24}], "verses": ["y llamó su nombre José, diciendo: Añádame Jehová otro hijo."] },
+    { "id": "benjamin", "name": "Benjamín", "category": "tribal_patriarch", "parents": ["jacob", "rachel"], "references": [{"book": "Genesis", "chapter": 35, "verse_start": 18, "verse_end": 18}], "verses": ["Y aconteció que al salírsele el alma (pues murió), llamó su nombre Benoni; mas su padre lo llamó Benjamín."] },
+
+    { "id": "david", "name": "Rey David", "category": "king", "references": [{"book": "Matthew", "chapter": 1, "verse_start": 6, "verse_end": 6}], "verses": ["e Isaí engendró al rey David..."] },
+    { "id": "jesus", "name": "Jesucristo", "category": "messiah", "references": [{"book": "Matthew", "chapter": 1, "verse_start": 16, "verse_end": 16}], "verses": ["y Jacob engendró a José, marido de María, de la cual nació Jesús, llamado el Cristo."] }
+  ],
+
+  "relationships": [
+    { "id": "rel_1", "from": "adam", "to": "cain", "type": "parent" },
+    { "id": "rel_2", "from": "eve", "to": "cain", "type": "parent" },
+    { "id": "rel_3", "from": "adam", "to": "abel", "type": "parent" },
+    { "id": "rel_4", "from": "eve", "to": "abel", "type": "parent" },
+    { "id": "rel_5", "from": "adam", "to": "seth", "type": "parent" },
+    { "id": "rel_6", "from": "eve", "to": "seth", "type": "parent" },
+    { "id": "rel_7", "from": "adam", "to": "eve", "type": "spouse" },
+    { "id": "rel_8", "from": "seth", "to": "enosh", "type": "parent" },
+    { "id": "rel_9", "from": "enosh", "to": "kenan", "type": "parent" },
+    { "id": "rel_10", "from": "kenan", "to": "mahalalel", "type": "parent" },
+    { "id": "rel_11", "from": "mahalalel", "to": "jared", "type": "parent" },
+    { "id": "rel_12", "from": "jared", "to": "enoch", "type": "parent" },
+    { "id": "rel_13", "from": "enoch", "to": "methuselah", "type": "parent" },
+    { "id": "rel_14", "from": "methuselah", "to": "lamech", "type": "parent" },
+    { "id": "rel_15", "from": "lamech", "to": "noah", "type": "parent" },
+    { "id": "rel_16", "from": "noah", "to": "shem", "type": "parent" },
+    { "id": "rel_17", "from": "noah", "to": "ham", "type": "parent" },
+    { "id": "rel_18", "from": "noah", "to": "japheth", "type": "parent" },
+    { "id": "rel_19", "from": "shem", "to": "arphaxad", "type": "parent" },
+    { "id": "rel_20", "from": "arphaxad", "to": "shelah", "type": "parent" },
+    { "id": "rel_21", "from": "shelah", "to": "eber", "type": "parent" },
+    { "id": "rel_22", "from": "eber", "to": "peleg", "type": "parent" },
+    { "id": "rel_23", "from": "peleg", "to": "reu", "type": "parent" },
+    { "id": "rel_24", "from": "reu", "to": "serug", "type": "parent" },
+    { "id": "rel_25", "from": "serug", "to": "nahor", "type": "parent" },
+    { "id": "rel_26", "from": "nahor", "to": "terah", "type": "parent" },
+    { "id": "rel_27", "from": "terah", "to": "abraham", "type": "parent" },
+    { "id": "rel_28", "from": "abraham", "to": "sarah", "type": "spouse" },
+    { "id": "rel_29", "from": "abraham", "to": "isaac", "type": "parent" },
+    { "id": "rel_30", "from": "sarah", "to": "isaac", "type": "parent" },
+    { "id": "rel_31", "from": "isaac", "to": "rebekah", "type": "spouse" },
+    { "id": "rel_32", "from": "isaac", "to": "jacob", "type": "parent" },
+    { "id": "rel_33", "from": "rebekah", "to": "jacob", "type": "parent" },
+    { "id": "rel_34", "from": "jacob", "to": "leah", "type": "spouse" },
+    { "id": "rel_35", "from": "jacob", "to": "rachel", "type": "spouse" },
+    { "id": "rel_36", "from": "jacob", "to": "bilhah", "type": "spouse" },
+    { "id": "rel_37", "from": "jacob", "to": "zilpah", "type": "spouse" },
+    { "id": "rel_38", "from": "jacob", "to": "reuben", "type": "parent" },
+    { "id": "rel_39", "from": "leah", "to": "reuben", "type": "parent" },
+    { "id": "rel_40", "from": "jacob", "to": "simeon", "type": "parent" },
+    { "id": "rel_41", "from": "leah", "to": "simeon", "type": "parent" },
+    { "id": "rel_42", "from": "jacob", "to": "levi", "type": "parent" },
+    { "id": "rel_43", "from": "leah", "to": "levi", "type": "parent" },
+    { "id": "rel_44", "from": "jacob", "to": "judah", "type": "parent" },
+    { "id": "rel_45", "from": "leah", "to": "judah", "type": "parent" },
+    { "id": "rel_46", "from": "jacob", "to": "dan", "type": "parent" },
+    { "id": "rel_47", "from": "bilhah", "to": "dan", "type": "parent" },
+    { "id": "rel_48", "from": "jacob", "to": "naphtali", "type": "parent" },
+    { "id": "rel_49", "from": "bilhah", "to": "naphtali", "type": "parent" },
+    { "id": "rel_50", "from": "jacob", "to": "gad", "type": "parent" },
+    { "id": "rel_51", "from": "zilpah", "to": "gad", "type": "parent" },
+    { "id": "rel_52", "from": "jacob", "to": "asher", "type": "parent" },
+    { "id": "rel_53", "from": "zilpah", "to": "asher", "type": "parent" },
+    { "id": "rel_54", "from": "jacob", "to": "issachar", "type": "parent" },
+    { "id": "rel_55", "from": "leah", "to": "issachar", "type": "parent" },
+    { "id": "rel_56", "from": "jacob", "to": "zebulun", "type": "parent" },
+    { "id": "rel_57", "from": "leah", "to": "zebulun", "type": "parent" },
+    { "id": "rel_58", "from": "jacob", "to": "joseph", "type": "parent" },
+    { "id": "rel_59", "from": "rachel", "to": "joseph", "type": "parent" },
+    { "id": "rel_60", "from": "jacob", "to": "benjamin", "type": "parent" },
+    { "id": "rel_61", "from": "rachel", "to": "benjamin", "type": "parent" }
+  ],
+
+  "hierarchy": [
+    {
+      "id": "book_genesis",
+      "type": "book",
+      "children": [
+        "story_creation",
+        "story_flood",
+        "story_babel",
+        "story_abraham",
+        "story_isaac",
+        "story_jacob",
+        "story_joseph"
+      ]
+    },
+    {
+      "id": "story_creation",
+      "type": "story",
+      "children": [
+        "creation",
+        "adam_eve",
+        "fall",
+        "cain_abel",
+        "set_birth",
+        "enoch_translation"
+      ]
+    },
+    {
+      "id": "story_flood",
+      "type": "story",
+      "children": [
+        "flood_start",
+        "flood_end",
+        "rainbow_covenant"
+      ]
+    },
+    {
+      "id": "story_babel",
+      "type": "story",
+      "children": [
+        "babel_tower"
+      ]
+    },
+    {
+      "id": "story_abraham",
+      "type": "story",
+      "children": [
+        "abraham_call",
+        "isaac_birth"
+      ]
+    },
+    {
+      "id": "story_isaac",
+      "type": "story",
+      "children": [
+        "jacob_birth"
+      ]
+    },
+    {
+      "id": "story_jacob",
+      "type": "story",
+      "children": [
+        "descent_to_egypt"
+      ]
+    },
+    {
+      "id": "story_joseph",
+      "type": "story",
+      "children": [
+        "joseph_death"
+      ]
+    }
+  ],
+
+  "notable_overlaps": [
+    {
+      "from": "Adam",
+      "to": "Methuselah",
+      "years_overlap": 243,
+      "description": "Adán vivió 930 años. Matusalén nació en el año 687, por lo que convivieron 243 años."
+    },
+    {
+      "from": "Adam",
+      "to": "Lamech",
+      "years_overlap": 56,
+      "description": "Adán (muerte 930) llegó a conocer a Lamech, el padre de Noé (nacimiento 874), conviviendo 56 años."
+    },
+    {
+      "from": "Methuselah",
+      "to": "Noah",
+      "years_overlap": 600,
+      "description": "Matusalén murió en el año del Diluvio (1656), por lo que convivió 600 años exactos con su nieto Noé."
+    },
+    {
+      "from": "Noah",
+      "to": "Abraham",
+      "years_overlap": 0,
+      "description": "Noé murió en el año 2006, apenas 2 años antes del nacimiento de Abraham en el 2008."
+    },
+    {
+      "from": "Shem",
+      "to": "Abraham",
+      "years_overlap": 150,
+      "description": "Sem sobrevivió al diluvio y murió en el año 2158, por lo que convivió con Abraham (nacimiento 2008) durante 150 años de la vida de Abraham."
+    },
+    {
+      "from": "Shem",
+      "to": "Isaac",
+      "years_overlap": 50,
+      "description": "Sem (muerte 2158) llegó a convivir 50 años con Isaac (nacimiento 2108)."
+    },
+    {
+      "from": "Eber",
+      "to": "Jacob",
+      "years_overlap": 19,
+      "description": "Heber (de quien proviene la palabra 'hebreo', muerte 2187) vivió lo suficiente para convivir 19 años con Jacob (nacimiento 2168)."
+    }
+  ],
+
+  "questions": [
+    {
+      "id": "question_cain_wife",
+      "title": "¿Quién era la esposa de Caín?",
+      "related_events": ["cain_abel"],
+      "related_people": ["cain"],
+      "references": [{"book": "Genesis", "chapter": 4, "verse_start": 17, "verse_end": 17}],
+      "verses": ["Y conoció Caín a su mujer, la cual concibió y dio a luz a Enoc; y edificó una ciudad, y llamó el nombre de la ciudad del nombre de su hijo, Enoc."]
+    },
+    {
+      "id": "question_sons_of_god",
+      "title": "¿Quiénes eran los hijos de Dios en Génesis 6?",
+      "related_events": ["flood_start"],
+      "related_people": ["noah"],
+      "references": [{"book": "Genesis", "chapter": 6, "verse_start": 2, "verse_end": 2}],
+      "verses": ["Viendo los hijos de Dios que las hijas de los hombres eran hermosas, tomaron para sí mujeres, escogiendo entre todas."]
+    },
+    {
+      "id": "question_nephilim",
+      "title": "¿Qué eran los nefilim?",
+      "related_events": ["flood_start"],
+      "related_people": [],
+      "references": [{"book": "Genesis", "chapter": 6, "verse_start": 4, "verse_end": 4}],
+      "verses": ["Había gigantes en la tierra en aquellos días, y también después que se llegaron los hijos de Dios a las hijas de los hombres, y les engendraron hijos. Estos fueron los valientes que desde la antigüedad fueron varones de renombre."]
+    },
+    {
+      "id": "question_long_lifespans",
+      "title": "¿Por qué vivían tantos años antes del diluvio?",
+      "related_events": ["flood_start"],
+      "related_people": ["methuselah"],
+      "references": [{"book": "Genesis", "chapter": 6, "verse_start": 3, "verse_end": 3}],
+      "verses": ["Y dijo Jehová: No contenderá mi espíritu con el hombre para siempre, porque ciertamente él es carne; mas serán sus días ciento veinte años."]
+    },
+    {
+      "id": "question_flood_global",
+      "title": "¿Fue global o local el diluvio?",
+      "related_events": ["flood_start"],
+      "related_people": ["noah"],
+      "references": [{"book": "Genesis", "chapter": 7, "verse_start": 19, "verse_end": 19}],
+      "verses": ["Y las aguas subieron mucho sobre la tierra; y todos los montes altos que había debajo de todos los cielos, fueron cubiertos."]
+    },
+    {
+      "id": "question_eden_location",
+      "title": "¿Existió realmente el Edén y dónde estaba?",
+      "related_events": ["creation", "adam_eve"],
+      "related_people": ["adam", "eve"],
+      "references": [{"book": "Genesis", "chapter": 2, "verse_start": 10, "verse_end": 14}],
+      "verses": ["Y salía de Edén un río para regar el huerto, y de allí se repartía en cuatro brazos..."]
+    },
+    {
+      "id": "question_god_repented",
+      "title": "¿Qué significa que Dios se arrepintió de haber hecho al hombre?",
+      "related_events": ["flood_start"],
+      "related_people": [],
+      "references": [{"book": "Genesis", "chapter": 6, "verse_start": 6, "verse_end": 6}],
+      "verses": ["Y se arrepintió Jehová de haber hecho hombre en la tierra, y le dolió en su corazón."]
+    }
+  ]
+}
