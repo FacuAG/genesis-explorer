@@ -8159,14 +8159,1285 @@
           "note": "José convivió 17 años en Canaán y 17 años en Egipto con su padre Jacob."
         }
       ]
+    },
+    {
+      "id": "lamech_cainite",
+      "name": "Lamec (Caínita)",
+      "name_meaning": "Poderoso / Destruidor / El que humilla",
+      "name_origin": "Hebreo: Lémek (derivado del arameo 'poderoso/fuerte')",
+      "category": "cainite_line",
+      "importance": "medium",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Séptimo patriarca de la línea caínita; primer polígamo y primer poeta de la venganza sangrienta",
+        "first_mention": {
+          "chapter": 4,
+          "verse": 18
+        },
+        "last_mention": {
+          "chapter": 4,
+          "verse": 24
+        }
+      },
+      "family": {
+        "father": "methushael",
+        "mother": null,
+        "spouse": "adah_zillah",
+        "children": [
+          "jabal",
+          "jubal",
+          "tubal_cain",
+          "naamah"
+        ],
+        "generation_from_adam": 7
+      },
+      "biography": {
+        "short": "Patriarca de la séptima generación caínita, primer hombre en quebrantar el modelo del matrimonio monógamo y autor del Canto de la Venganza.",
+        "full": "Lamec fue el séptima generación desde Adán a través del linaje rebelde de Caín. Representa la cúspide de la sofisticación cultural material mezclada con el deterioro moral y la arrogancia impía del mundo antediluviano.\n\nLamec fue el primer hombre en la historia humana que distorsionó el diseño divino del matrimonio monogámico (instituido en el Edén), al tomar para sí dos esposas: Ada y Zila. Con ellas engendró hijos pioneros en el desarrollo de la civilización secular: Jabal (padre de los ganaderos nómadas que habitan en tiendas), Jubal (padre de los músicos e instrumentos de cuerda y viento) y Tubal-caín (artífice de toda obra de bronce y de hierro).\n\nConsumido por el orgullo y la violencia brutal, Lamec compuso el 'Canto de la Espada' (Génesis 4:23-24), el poema profano más antiguo registrado. Declaró con arrogancia ante sus esposas que había matado a un joven por haberle herido, proclamando que si Caín sería vengado siete veces, Lamec lo sería setenta veces siete. Este canto simboliza la instauración del reinado de la venganza humana desenfrenada."
+      },
+      "character_arc": "Hijo de la civilización caínita → Primer polígamo → Tirano arrogante y autor del canto de venganza sangrienta",
+      "personality_traits": [
+        "arrogante y desafiante",
+        "polígamo",
+        "violento y vengativo"
+      ],
+      "theological_significance": "Lamec representa el fruto consumado del desarrollo humano apartado de Dios: avances técnicos y culturales acompañados de corrupción moral e hiper-violencia. Su declaración de venganza 'setenta veces siete' es explícitamente invertida por Jesucristo en Mateo 18:22, cuando ordena a sus discípulos perdonar a su hermano 'setenta veces siete'.",
+      "event_ids": [
+        "cain_curse_nod"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 4,
+          "verse_start": 18,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 4:23-24",
+        "text": "Y dijo Lamec a sus mujeres Ada y Zila: Oíd mi voz, mujeres de Lamec; escuchad mis palabras: Que a un hombre maté por mi herida, y a un joven por mi golpe. Si siete veces será vengado Caín, Lamec en verdad setenta veces siete lo será."
+      },
+      "cross_references_nt": [
+        "Mateo 18:21-22"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "lamech_sethite",
+      "name": "Lamec (Setita)",
+      "name_meaning": "Poderoso / Alivio",
+      "name_origin": "Hebreo: Lémek",
+      "category": "antediluvian_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 874,
+        "death_am": 1651,
+        "lifespan": 777,
+        "notable_age": "Engendrado por Matusalén a los 187 años (AM 874); engendró a Noé a los 182 años (AM 1056); murió a los 777 años, 5 años antes del Diluvio (AM 1651)",
+        "first_mention": {
+          "chapter": 5,
+          "verse": 25
+        },
+        "last_mention": {
+          "chapter": 5,
+          "verse": 31
+        }
+      },
+      "family": {
+        "father": "methuselah",
+        "mother": null,
+        "spouse": null,
+        "children": [
+          "noah"
+        ],
+        "generation_from_adam": 9
+      },
+      "biography": {
+        "short": "Noveno patriarca de la línea de Set, padre de Noé, quien profetizó en el nacimiento de su hijo el consuelo frente a la maldición de la tierra.",
+        "full": "Lamec fue el noveno patriarca de la línea piadosa de Set, nacido en el año AM 874. Pertenecía a la estirpe bendita que preservaba la fe monoteísta en medio de la creciente apostasía del mundo antediluviano.\n\nA los 182 años de edad engendró a su hijo Noé (AM 1056). En el nacimiento del niño, Lamec fue movido por un espíritu de profecía y profunda esperanza en el consuelo de Dios, exclamando: **'Este nos aliviará de nuestras obras y del trabajo de nuestras manos, a causa de la tierra que Jehová maldijo'** (Génesis 5:29).\n\nLamec sintió con dolor el peso penoso del trabajo agrícola sobre la tierra que continuaba bajo la maldición edénica. Anhelaba la llegada de un redentor que restaurara la paz y el reposo. Vivió 595 años más engendrando hijos e hijas, falleciendo a los 777 años de edad en el año AM 1651, apenas cinco años antes de desencadenarse el Diluvio Universal."
+      },
+      "character_arc": "Patriarca piadoso antediluviano → Padre creyente y profeta de consuelo → Peregrino de fe fallecido antes del cataclismo",
+      "personality_traits": [
+        "piadoso y humilde",
+        "sensible a la maldición del pecado",
+        "profeta de consuelo"
+      ],
+      "theological_significance": "La profecía de Lamec sobre Noé señala la necesidad humana universal de descanso espiritual y liberación de la maldición del pecado. Encuentra su cumplimiento último no solo en la preservación del arca de Noé, sino en la persona de Jesucristo, quien invita: 'Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar' (Mateo 11:28).",
+      "event_ids": [
+        "genealogy_adam_noah"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 25,
+          "verse_end": 31
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 5:29",
+        "text": "Y llamó su nombre Noé, diciendo: Este nos aliviará de nuestras obras y del trabajo de nuestras manos, a causa de la tierra que Jehová maldijo."
+      },
+      "cross_references_nt": [
+        "Lucas 3:36",
+        "Mateo 11:28"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "adam",
+          "years_together": 56,
+          "note": "Lamec convivió 56 años con Adán en el inicio de su vida."
+        }
+      ]
+    },
+    {
+      "id": "terah",
+      "name": "Taré",
+      "name_meaning": "Retraso / Íbice / Estación",
+      "name_origin": "Hebreo: Téraj ('estación/retraso')",
+      "category": "postdiluvian_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 1878,
+        "death_am": 2083,
+        "lifespan": 205,
+        "notable_age": "Engendró a Abram, Nacor y Harán desde los 70 años (AM 1948); salió de Ur rumbo a Canaán pero se asentó en Harán donde murió a los 205 años (AM 2083)",
+        "first_mention": {
+          "chapter": 11,
+          "verse": 24
+        },
+        "last_mention": {
+          "chapter": 11,
+          "verse": 32
+        }
+      },
+      "family": {
+        "father": "nahor_pater",
+        "mother": null,
+        "spouse": null,
+        "children": [
+          "abraham",
+          "nahor",
+          "haran_brother",
+          "sarah"
+        ],
+        "generation_from_adam": 19
+      },
+      "biography": {
+        "short": "Padre de Abraham, Sara y Nacor, que inició la migración desde Ur de los Caldeos pero se detuvo en Harán donde falleció.",
+        "full": "Taré nació en el año AM 1878 en Ur de los Caldeos, siendo la novena generación desde Sem. Vivió en una sociedad mesopotámica inmersa en la idolatría sumeria y acadia, donde según Josué 24:2, tanto Taré como sus antepasados servían a dioses extraños al otro lado del río Éufrates.\n\nA los 70 años engendró a Abram, Nacor y Harán. Tras la trágica muerte prematura de su hijo Harán en Ur, Taré tomó a su hijo Abram, a su nieto Lot y a su nuera Sarai, y salió de Ur de los Caldeos para ir a la tierra de Canaán. Sin embargo, al llegar a la próspera ciudad comercial de Harán, en el norte de Mesopotamia, Taré se asentó allí y detuvo el viaje.\n\nTaré permaneció en Harán el resto de sus días, falleciendo a los 205 años de edad en el año AM 2083. Su muerte fue la señal providencial para que su hijo Abraham reanudara el llamado divino e ingresara finalmente a la Tierra Prometida de Canaán."
+      },
+      "character_arc": "Idólatra patriarcal en Ur → Migrante inconcluso detenido en Harán → Padre de la simiente del pacto abrahámico",
+      "personality_traits": [
+        "patriarca mesopotámico",
+        "iniciador del viaje familiar",
+        "detenido a medio camino"
+      ],
+      "theological_significance": "Taré representa el estado inicial de idolatría del cual Dios rescata soberanamente a su pueblo (Josué 24:2). Su permanencia y muerte en Harán ilustra el peligro de detenerse a medio camino de las promesas de Dios, resaltando la fe decidida de Abraham quien continuó la marcha hacia Canaán tras la muerte de su padre.",
+      "event_ids": [
+        "terah_moves",
+        "abraham_call"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 11,
+          "verse_start": 24,
+          "verse_end": 32
+        }
+      ],
+      "key_verse": {
+        "reference": "Josué 24:2",
+        "text": "Y dijo Josué a todo el pueblo: Así dice Jehová, Dios de Israel: Vuestros padres habitaron antiguamente al otro lado del río, esto es, Taré, padre de Abraham y de Nacor; y servían a dioses extraños."
+      },
+      "cross_references_nt": [
+        "Hechos 7:2-4"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "shem",
+          "years_together": 205,
+          "note": "Taré convivió toda su vida (205 años) con el gran patriarca Sem."
+        }
+      ]
+    },
+    {
+      "id": "melchizedek",
+      "name": "Melquisedec",
+      "name_meaning": "Rey de Justicia / Mi Rey es Justicia",
+      "name_origin": "Hebreo: Malki-Tzédek (derivado de Mélek, 'rey', y Tzédek, 'justicia')",
+      "category": "priest_king",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Contemporáneo de Abraham; Rey de Salem y Sacerdote del Dios Altísimo (El Elyon)",
+        "first_mention": {
+          "chapter": 14,
+          "verse": 18
+        },
+        "last_mention": {
+          "chapter": 14,
+          "verse": 20
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": null,
+        "children": [],
+        "generation_from_adam": null
+      },
+      "biography": {
+        "short": "Misterioso Rey de Salem y Sacerdote del Dios Altísimo que bendijo a Abraham tras el rescate de Lot y recibió de él los diezmos de todo.",
+        "full": "Melquisedec aparece de manera repentina y majestuosa en el relato de Génesis 14, tras la victoria militar de Abram contra la coalición de cuatro reyes mesopotámicos para rescatar a su sobrino Lot. Es identificado con el doble título de **Rey de Salem** (Jerusalén, 'Rey de Paz') y **Sacerdote del Dios Altísimo** (*El Elyon*).\n\nMelquisedec salió al encuentro de Abram al valle de Shaveh trayendo **pan y vino**, elementos que prefiguran la Cena del Señor. Pronunció una Solemne bendición sobre el patriarca: **'Bendito sea Abram del Dios Altísimo, creador de los cielos y de la tierra; y bendito sea el Dios Altísimo, que entregó tus enemigos en tu mano'** (Génesis 14:19-20).\n\nEn respuesta a su dignidad superior, Abram le dio los diezmos de todo el botín. El texto bíblico omite deliberadamente la genealogía, nacimiento y muerte de Melquisedec, configurando un tipo eterno del sacerdocio supremo sin principio ni fin de días."
+      },
+      "character_arc": "Sacerdote y Rey del Dios Altísimo en Canaán → Tipo eterno de la majestad sacerdotal superior que bendice a Abraham",
+      "personality_traits": [
+        "majestuoso y santo",
+        "sacerdote supremo",
+        "rey de justicia y paz"
+      ],
+      "theological_significance": "Melquisedec es una de las figuras tipológicas supremas de todo el Antiguo Testamento. El Salmo 110:4 y la Epístola a los Hebreos (capítulos 5 a 7) declaran que Jesucristo es el Gran Sumo Sacerdote **'según el orden de Melquisedec'**, un sacerdocio eterno, regio y superior al sacerdocio levítico de Aarón, por cuanto Abraham mismo (y Leví en sus lomos) pagó diezmos a Melquisedec y fue bendecido por él.",
+      "event_ids": [
+        "melchizedek"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 14,
+          "verse_start": 18,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 14:18-19",
+        "text": "Entonces Melquisedec, rey de Salem y sacerdote del Dios Altísimo, sacó pan y vino; y le bendijo, diciendo: Bendito sea Abram del Dios Altísimo, creador de los cielos y de la tierra."
+      },
+      "cross_references_nt": [
+        "Salmo 110:4",
+        "Hebreos 5:6-10",
+        "Hebreos 6:20",
+        "Hebreos 7:1-28"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "laban",
+      "name": "Labán",
+      "name_meaning": "Blanco / Brillante",
+      "name_origin": "Hebreo: Laván ('blanco')",
+      "category": "patriarch_relative",
+      "importance": "high",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Hijo de Betuel, hermano de Rebeca, padre de Lea y Raquel; hospedó a Jacob en Harán durante 20 años",
+        "first_mention": {
+          "chapter": 24,
+          "verse": 29
+        },
+        "last_mention": {
+          "chapter": 31,
+          "verse": 55
+        }
+      },
+      "family": {
+        "father": "bethuel",
+        "mother": null,
+        "spouse": null,
+        "children": [
+          "leah",
+          "rachel"
+        ],
+        "generation_from_adam": 21
+      },
+      "biography": {
+        "short": "Tío y suegro arameo de Jacob, caracterizado por su astucia comercial y engaños, que sirvió como instrumento providencial para disciplinar y multiplicar la casa de Jacob en Harán.",
+        "full": "Labán vivió en Padan-aram (Harán). Aparece por primera vez al recibir con entusiasmo al siervo de Abraham (Eliezer) tras ver los ricos pendientes y brazaletes de oro dados a su hermana Rebeca, revelando su inclinación hacia la ganancia material.\n\nCuando Jacob llegó huyendo a Harán, Labán lo acogió y acordó darle a su hija menor Raquel tras siete años de trabajo. Sin embargo, en la noche de bodas, Labán engañó a Jacob introduciendo a su hija mayor Lea, justificándose en la costumbre local. Obligó a Jacob a servir siete años adicionales por Raquel y cambió el salario de Jacob diez veces durante seis años más de trabajo ganadero.\n\nA pesar del fraude constante de Labán, la providencia de Dios bendijo milagrosamente a Jacob con grandes rebaños. Cuando Jacob huyó secretamente hacia Canaán, Labán lo persiguió hasta el monte de Galaad. Advertido por Dios en sueños de no hablarle a Jacob 'ni bien ni mal', celebró finalmente un pacto de no agresión en Mizpa ('Jehová ataje entre tú y yo') y regresó a su lugar."
+      },
+      "character_arc": "Pariente hospitalario en Harán → Patron y suegro astuto y manipulador → Perseguidor confrontado por Dios que pacta la separación pacífica",
+      "personality_traits": [
+        "astuto y avaricioso",
+        "negociador duro y manipulador",
+        "supersticioso",
+        "instrumento providencial involuntario"
+      ],
+      "theological_significance": "Labán es el instrumento providencial que Dios utilizó para disciplinar al 'suplantador' Jacob, haciéndole experimentar en su propia carne el dolor del engaño. Su historia demuestra cómo Dios sobrepasa la codicia humana para cumplir sus propósitos eternos de multiplicar a la casa de Israel.",
+      "event_ids": [
+        "rebekah_marriage",
+        "jacob_marries_leah_rachel",
+        "jacob_flees_laban"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 24,
+          "verse_start": 29,
+          "verse_end": 60
+        },
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 13,
+          "verse_end": 30
+        },
+        {
+          "book": "Génesis",
+          "chapter": 31,
+          "verse_start": 1,
+          "verse_end": 55
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 31:24",
+        "text": "Y vino Dios a Labán arameo en sueños aquella noche, y le dijo: Guárdate que no hables a Jacob descomedidamente."
+      },
+      "cross_references_nt": [],
+      "notable_overlaps": []
+    },
+    {
+      "id": "tamar",
+      "name": "Tamar",
+      "name_meaning": "Palmera / Palmera de dátiles",
+      "name_origin": "Hebreo: Tamár ('palmera')",
+      "category": "messianic_line",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Nuera de Judá; madre gemela de Fares y Zara mediante la ley del levirato",
+        "first_mention": {
+          "chapter": 38,
+          "verse": 6
+        },
+        "last_mention": {
+          "chapter": 38,
+          "verse": 30
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": "er",
+        "children": [
+          "perez",
+          "zerah"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "Nuera de Judá que exigió con audacia la justicia del pacto del levirato, dando a luz a Fares, antepasado directo del rey David y de Jesucristo.",
+        "full": "Tamar fue una mujer cananea casada con Er, el hijo primogénito de Judá. Cuando Er murió por su maldad ante Jehová, Judá ordenó a su segundo hijo Onán cumplir el deber del levirato. Onán actuó egoístamente para no dar descendencia a su hermano difunto y también fue muerto por Dios. Judá, temiendo falsamente que Tamar fuera la causa de la muerte de sus hijos, la envió a la casa de su padre con la promesa engañosa de darle a su hijo menor Sela cuando creciera.\n\nAl ver que pasaba el tiempo y la promesa no se cumplía, Tamar actuó con audacia para preservar la línea del pacto. Se quitó los vestidos de viuda, se cubrió con un velo y se sentó en la entrada de Enaim junto al camino. Judá no la reconoció y solicitó unirse a ella; Tamar exigió como prenda su sello, su cordón y su báculo.\n\nTres meses después, al anunciarse que Tamar estaba encinta y ser condenada a la hoguera por Judá, Tamar presentó públicamente el sello, el cordón y el báculo, diciendo: 'Reconoce de quién son estas cosas'. Judá reconoció su pecado exclamando: **'Más justa es ella que yo, por cuanto no la he dado a mi hijo Sela'**. Tamar dio a luz a los gemelos Fares ('Brecha') y Zara, asegurando la continuidad de la simiente real."
+      },
+      "character_arc": "Viuda abandonada y defraudada → Mujer audaz que exige la justicia del pacto → Vindicada por Judá como 'más justa que yo' → Antepasada directa de David y Cristo",
+      "personality_traits": [
+        "valiente y decidida",
+        "celosa de la bendición del pacto",
+        "perseverante ante la injusticia"
+      ],
+      "theological_significance": "Tamar es una de las cinco mujeres nombradas explícitamente en la genealogía del Mesías en el Evangelio de Mateo (Mateo 1:3). Su historia demuestra la soberana gracia de Dios que incorpora a mujeres extranjeras y situaciones complejas para preservar la estirpe mesiánica de Fares, de quien nacería el Rey David y nuestro Salvador Jesucristo.",
+      "event_ids": [
+        "judah_tamar_sin"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 38,
+          "verse_start": 6,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 38:26",
+        "text": "Entonces Judá los reconoció, y dijo: Más justa es ella que yo, por cuanto no la he dado a mi hijo Sela. Y nunca más la conoció."
+      },
+      "cross_references_nt": [
+        "Mateo 1:3",
+        "Lucas 3:33",
+        "Rut 4:12"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "potiphar",
+      "name": "Potifar",
+      "name_meaning": "El que la divinidad Ra ha dado",
+      "name_origin": "Egipcio: Pa-di-pa-ra ('ofrenda del Dios Sol Ra')",
+      "category": "egyptian_official",
+      "importance": "medium",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Oficial egipcio, capitán de la guardia de Faraón; comprador y amo de José",
+        "first_mention": {
+          "chapter": 37,
+          "verse": 36
+        },
+        "last_mention": {
+          "chapter": 39,
+          "verse": 20
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": "wife_potiphar",
+        "children": [],
+        "generation_from_adam": null
+      },
+      "biography": {
+        "short": "Capitán de la guardia de Faraón en Egipto, amo de José, que reconoció la bendición de Dios sobre la vida del joven hebreo.",
+        "full": "Potifar era un alto dignatario de la corte egipcia, capitán de la guardia del palacio del Faraón. Compró a José como esclavo a los mercaderes ismaelitas.\n\nPotifar observó que Jehová estaba con José y que todo lo que hacía lo prosperaba en su mano. Puso a José a cargo de toda su casa y de todos sus bienes. La Biblia registra que desde el momento en que Potifar confió su casa a José, **'Jehová bendijo la casa del egipcio a causa de José'**.\n\nCuando su esposa calumnió falsamente a José tras ser rechazada en su intento de seducción, Potifar se encendió en ira. Sin embargo, en lugar de ejecutar sumariamente al esclavo hebreo (como era la costumbre legal en Egipto), encarceló a José en la prisión real donde estaban los presos del rey, permitiendo providencialmente la posterior exaltación de José ante Faraón."
+      },
+      "character_arc": "Amo egipcio próspero por causa de José → Esposo engañado que encarcela providencialmente a José",
+      "personality_traits": [
+        "oficial distinguido",
+        "administrador sensato",
+        "influido por su esposa"
+      ],
+      "theological_significance": "La historia de Potifar demuestra cómo la presencia y el testimonio de un hijo de Dios trae bendición aun sobre casas y gobernantes paganos. Evidencia también la mano providencial de Dios, que incluso en la prisión guardó la vida de José para un propósito mayor.",
+      "event_ids": [
+        "joseph_potiphar_prison"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 37,
+          "verse_start": 36,
+          "verse_end": 36
+        },
+        {
+          "book": "Génesis",
+          "chapter": 39,
+          "verse_start": 1,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 39:5",
+        "text": "Y aconteció que desde cuando le dio el encargo de su casa y de todo lo que tenía, Jehová bendijo la casa del egipcio a causa de José, y la bendición de Jehová estaba sobre todo lo que tenía, así en la casa como en el campo."
+      },
+      "cross_references_nt": [
+        "Hechos 7:9-10"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "pharaoh_joseph",
+      "name": "Faraón (de los días de José)",
+      "name_meaning": "Gran Casa / Palacio Real",
+      "name_origin": "Egipcio: Per-Aa ('Gran Casa')",
+      "category": "egyptian_official",
+      "importance": "high",
+      "chronology": {
+        "birth_am": null,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Monarca del Imperio Egipcio que soñó las vacas y espigas, y elevó a José a Gran Visir",
+        "first_mention": {
+          "chapter": 40,
+          "verse": 2
+        },
+        "last_mention": {
+          "chapter": 50,
+          "verse": 11
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": null,
+        "children": [],
+        "generation_from_adam": null
+      },
+      "biography": {
+        "short": "Monarca de Egipto que experimentó los sueños de las vacas y espigas, reconoció el Espíritu de Dios en José y lo nombró Gran Visir.",
+        "full": "Este Faraón gobernó Egipto durante la época del ascenso de José. Tuvo dos sueños perturbadores en una misma noche: siete vacas flacas devorando a siete vacas gordas, y siete espigas menudas devorando a siete espigas llenas. Ante la incapacidad de los magos y sabios de Egipto para interpretarlos, el jefe de los coperos recordó su experiencia en prisión y recomendó a José.\n\nAl escuchar la interpretación divina dada por José (siete años de abundancia seguidos de siete años de severa hambruna) y su sabio consejo de administración, Faraón declaró ante sus siervos: **'¿Acaso hallaremos a otro hombre como este, en quien esté el espíritu de Dios?'**.\n\nFaraón vistió a José de lino finísimo, le puso su anillo de sellar, su collar de oro y el segundo carro del reino, nombrándolo Gran Visir sobre todo Egipto. Acogió generosamente a la familia de Jacob (70 almas), otorgándoles la mejor tierra agrícola de Egipto en Gosén."
+      },
+      "character_arc": "Monarca turbado por visiones divinas → Gobernante sabio que reconoce la revelación de Dios → Protector generoso del linaje de Israel en Gosén",
+      "personality_traits": [
+        "monarca receptivo a la revelación",
+        "gobernante pragmático y generoso",
+        "protector de Israel"
+      ],
+      "theological_significance": "Faraón demuestra cómo Dios dispone los corazones de los reyes de la tierra para cumplir sus decretos de salvación (Proverbios 21:1). Su reconocimiento de que el Espíritu de Dios estaba en José es uno de los testimonios gentiles más tempranos de la verdad del Dios único.",
+      "event_ids": [
+        "joseph_interprets_pharaoh",
+        "jacob_family_egypt"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 41,
+          "verse_start": 1,
+          "verse_end": 57
+        },
+        {
+          "book": "Génesis",
+          "chapter": 47,
+          "verse_start": 1,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 41:38",
+        "text": "Y dijo Faraón a sus siervos: ¿Acaso hallaremos a otro hombre como este, en quien esté el espíritu de Dios?"
+      },
+      "cross_references_nt": [
+        "Hechos 7:10"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "benjamin",
+      "name": "Benjamín",
+      "name_meaning": "Hijo de mi mano derecha (Originalmente Ben-oni: Hijo de mi dolor)",
+      "name_origin": "Hebreo: Binyamín (derivado de Ben, 'hijo', y Yamín, 'diestra/mano derecha')",
+      "category": "tribal_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2271,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Nacido cerca de Efrata (Belén) al morir su madre Raquel (AM 2271); hijo menor de Jacob; patriarca de la tribu de Benjamín",
+        "first_mention": {
+          "chapter": 35,
+          "verse": 18
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 27
+        }
+      },
+      "family": {
+        "father": "jacob",
+        "mother": "rachel",
+        "spouse": null,
+        "children": [
+          "bela",
+          "becher",
+          "ashbel"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "Hijo menor de Jacob y Raquel, hermano de padre y madre de José, por quien Judá ofreció su vida en fianza durante las pruebas en Egipto.",
+        "full": "Benjamín fue el doceavo y último hijo de Jacob, y el único nacido dentro de la Tierra Prometida de Canaán. Su madre Raquel murió durante el parto doloroso cerca de Belén, llamándole en su último aliento **Ben-oni** ('Hijo de mi dolor'). Sin embargo, su padre Jacob cambió su nombre a **Benjamín** ('Hijo de mi mano derecha') para rechazar el presagio de dolor y afirmar su valor de honra.\n\nTras la supuesta muerte de José, Benjamín se convirtió en el hijo más amado y protegido por el anciano Jacob, quien se negaba a dejarlo viajar a Egipto por temor a que le sobreviniera algún desastre. Durante el segundo viaje a Egipto por alimento, José probó a sus hermanos colocando su copa de plata en el saco de Benjamín. Ante la amenaza de esclavizar a Benjamín, Judá se ofreció como esclavo en su lugar, demostrando el arrepentimiento genuino de la familia.\n\nEn la bendición patriarcal final de Génesis 49:27, Jacob profetizó: **'Benjamín es lobo arrebatador; a la mañana comerá la presa, y a la tarde repartirá los despojos'**, señalando el carácter guerrero de su tribu futura (de la cual nacerían el rey Saúl y el apóstol Pablo)."
+      },
+      "character_arc": "Hijo del dolor trágico de Raquel → Hijo amado y protegido por Jacob → Objeto de la prueba de amor y fianza en Egipto → Patriarca de la tribu guerrera de Benjamín",
+      "personality_traits": [
+        "hijo amado y protegido",
+        "leal a su hermano José",
+        "padre de tribu guerrera"
+      ],
+      "theological_significance": "Benjamín es la figura que une el perdón de José con la transformación de Judá. De su tribu nacería el primer rey de Israel (Saúl) y posteriormente el gran apóstol de los gentiles, Pablo de Tarso (Filipenses 3:5).",
+      "event_ids": [
+        "return_to_bethel_deaths",
+        "brothers_first_travel",
+        "joseph_reveals_himself",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 35,
+          "verse_start": 16,
+          "verse_end": 18
+        },
+        {
+          "book": "Génesis",
+          "chapter": 43,
+          "verse_start": 1,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 44,
+          "verse_start": 1,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 27,
+          "verse_end": 27
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 49:27",
+        "text": "Benjamín es lobo arrebatador; a la mañana comerá la presa, y a la tarde repartirá los despojos."
+      },
+      "cross_references_nt": [
+        "Hechos 13:21",
+        "Romanos 11:1",
+        "Filipenses 3:5"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "ruben",
+      "name": "Rubén",
+      "name_meaning": "Ved, un hijo / Jehová ha visto mi aflicción",
+      "name_origin": "Hebreo: Reuvén (derivado de Raáh, 'ver', y Ben, 'hijo')",
+      "category": "tribal_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2225,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Hijo primogénito de Jacob y Lea; perdió los derechos de la primogenitura por profanar el lecho de su padre con Bilha",
+        "first_mention": {
+          "chapter": 29,
+          "verse": 32
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 4
+        }
+      },
+      "family": {
+        "father": "jacob",
+        "mother": "leah",
+        "spouse": null,
+        "children": [
+          "hanoch",
+          "pallu",
+          "hezron",
+          "carmi"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "Hijo primogénito de Jacob y Lea, que intentó salvar la vida de José en el pozo, pero perdió su derecho a la primogenitura por su inestabilidad moral.",
+        "full": "Rubén fue el hijo primogénito de Jacob, nacido de Lea en Padan-aram. Su nombre expresa la inmensa alegría de Lea al exclamar: 'Jehová ha visto mi aflicción; ahora me amará mi marido'.\n\nRubén demostró rasgos de compasión al oponerse al plan homicida de sus hermanos contra José en Dotán, aconsejándoles no derramar sangre sino arrojarlo a un pozo seco, con la intención secreta de librarlo y devolverlo sano a su padre. Sin embargo, al regresar al pozo y descubrir que José había sido vendido, rasgó sus vestidos en dolor.\n\nSu carácter estuvo trágicamente marcado por la inestabilidad y la falta de autocontrol. Cometió el grave pecado de acostarse con Bilha, concubina de su padre (Génesis 35:22). Por esta profanación, Jacob en su lecho de muerte le retiró la primogenitura, profetizando: **'Rubén, tú eres mi primogénito... Impetuoso como las aguas, no serás el principal, por cuanto subiste al lecho de tu padre'** (Génesis 49:3-4). La primogenitura doble fue dada a los hijos de José y el liderazgo regio a Judá."
+      },
+      "character_arc": "Primogénito prometedor → Defensor dubitativo de José → Inestable y profanador del lecho paterno → Patriarca despojado de la primogenitura",
+      "personality_traits": [
+        "bienintencionado pero inestable",
+        "falta de firmeza y liderazgo",
+        "impetuoso como las aguas"
+      ],
+      "theological_significance": "Rubén es una solemne advertencia de cómo la inestabilidad moral y el pecado descontrolado pueden echar a perder privilegios espirituales y de liderazgo. Demuestra que la primogenitura en el reino de Dios no se basa en el orden biológico de nacimiento sino en la gracia y la fidelidad.",
+      "event_ids": [
+        "birth_12_tribes",
+        "joseph_dreams_sold",
+        "return_to_bethel_deaths",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 32,
+          "verse_end": 32
+        },
+        {
+          "book": "Génesis",
+          "chapter": 37,
+          "verse_start": 21,
+          "verse_end": 30
+        },
+        {
+          "book": "Génesis",
+          "chapter": 35,
+          "verse_start": 22,
+          "verse_end": 22
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 3,
+          "verse_end": 4
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 49:3-4",
+        "text": "Rubén, tú eres mi primogénito, mi fortaleza, y el principio de mis fuerzas; principal en dignidad, principal en poder. Impetuoso como las aguas, no serás el principal, por cuanto subiste al lecho de tu padre."
+      },
+      "cross_references_nt": [
+        "1 Crónicas 5:1"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "levi",
+      "name": "Leví",
+      "name_meaning": "Unido / Adherido",
+      "name_origin": "Hebreo: Leví (derivado de Laváh, 'unir/adherir')",
+      "category": "tribal_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2228,
+        "death_am": 2365,
+        "lifespan": 137,
+        "notable_age": "Tercer hijo de Jacob y Lea; vivió 137 años; antepasado directo de Moisés, Aarón y la tribu sacerdotal de Israel",
+        "first_mention": {
+          "chapter": 29,
+          "verse": 34
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 7
+        }
+      },
+      "family": {
+        "father": "jacob",
+        "mother": "leah",
+        "spouse": null,
+        "children": [
+          "gershon",
+          "kohath",
+          "merari"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "Tercer hijo de Jacob y Lea, que ejecutó junto a Simeón la cruenta venganza en Siquem, cuyo linaje fue transformado por Dios en la tribu sacerdotal de Israel.",
+        "full": "Leví fue el tercer hijo nacido de Jacob y Lea en Padan-aram. Su madre exclamó gozosa al nacer: 'Ahora esta vez se unirá mi marido conmigo, porque le he dado tres hijos'.\n\nJunto a su hermano Simeón, Leví protagonizó el sangriento episodio de venganza en Siquem (Génesis 34). Enfurecidos por la deshonra sufrida por su hermana Dina a manos de Siquem, engañaron a los siquemitas convenciéndolos de circuncidarse, y al tercer día irrumpieron a espada en la ciudad masacrando a todos los varones y saqueando la villa. Jacob reprendió severamente su violencia fiera por poner en peligro a la familia ante las naciones cananeas.\n\nEn su lecho de muerte, Jacob profetizó sobre Simeón y Leví: **'Maldito su furor, que fue fiero; y su ira, que fue dura. Yo los dividiré en Jacob, y los esparciré en Israel'** (Génesis 49:7). Esta profecía de dispersión se cumplió providencialmente de dos formas distintas: mientras Simeón se debilitó, la tribu de Leví consagró su celo por Jehová en el incidente del becerro de oro en el Éxodo (Éxodo 32), siendo transformada su dispersión en la honra de no recibir herencia territorial sino habitar en 48 ciudades sacerdotales esparcidas para enseñar la Ley a todo Israel."
+      },
+      "character_arc": "Hijo de la aflicción de Lea → Guerrero violento e impulsivo en Siquem → Reprendido por Jacob → Linaje redimido y dedicado al sacerdocio santo de Dios",
+      "personality_traits": [
+        "celoso e impetuoso",
+        "severo y vengativo en su juventud",
+        "redimido para la santidad y el servicio"
+      ],
+      "theological_significance": "Leví representa la **Redención y Transmutación de la Ira Humana por la Gracia**. La misma naturaleza apasionada y celosa que produjo la masacre de Siquem, al ser rendida a Dios en el Éxodo, convirtió a la tribu de Leví en los guardianes del Tabernáculo, sacerdotes de los sacrificios y maestros de la Torá en Israel (Malaquías 2:4-7).",
+      "event_ids": [
+        "birth_12_tribes",
+        "dinah_shechem_tragedy",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 34,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 34,
+          "verse_start": 25,
+          "verse_end": 31
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 5,
+          "verse_end": 7
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 49:5-7",
+        "text": "Simeón y Leví son hermanos; sus armas son instrumentos de violencia... Yo los dividiré en Jacob, y los esparciré en Israel."
+      },
+      "cross_references_nt": [
+        "Éxodo 32:26-28",
+        "Deuteronomio 33:8-11",
+        "Malaquías 2:4-7",
+        "Hebreos 7:9-11"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "judah",
+      "name": "Judá",
+      "name_meaning": "Alabanza / Que Jehová sea alabado",
+      "name_origin": "Hebreo: Yehudáh (derivado de Yadáh, 'alabar/dar gracias')",
+      "category": "messianic_line",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2229,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Cuarto hijo de Jacob y Lea; propuso vender a José a Egipto (17 años); arrepentido en el incidente de Tamar; fiador sustituto de Benjamín; receptor del cetro de Siloh",
+        "first_mention": {
+          "chapter": 29,
+          "verse": 35
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 12
+        }
+      },
+      "family": {
+        "father": "jacob",
+        "mother": "leah",
+        "spouse": "shuah_daughter",
+        "children": [
+          "er",
+          "onan",
+          "shelah",
+          "perez",
+          "zerah"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "Cuarto hijo de Jacob y Lea, garantizador sustituto de Benjamín, de cuyo linaje nacieron el rey David y Jesucristo, el León de la Tribu de Judá.",
+        "full": "Judá nació en Padan-aram en el año AM 2229. Su madre Lea exclamó victoriosa al nacer: 'Esta vez alabaré a Jehová', llamando su nombre Judá ('Alabanza').\n\nEn su juventud mostró un liderazgo natural pero fallido. Sugirió a sus hermanos vender a José a los ismaelitas por 20 piezas de plata para evitar su muerte directa. Se apartó temporalmente de sus hermanos, se casó con una cananea y sufrió la muerte de sus dos hijos Er y Onán por su maldad ante Dios. Al ser confrontado por su nuera Tamar tras negar el levirato, Judá experimentó un profundo quebrantamiento y arrepentimiento público, reconociendo: 'Más justa es ella que yo'.\n\nEste quebrantamiento transformó radicalmente el carácter de Judá. Se ofreció valientemente como **fiador personal y sustituto** de Benjamín ante Jacob y ante José en Egipto. Su célebre y conmovedor discurso de intercesión sustitutiva en Génesis 44:18-34 ('Ruego que quede tu siervo por siervo en lugar del joven') convenció a José de revelarse a sus hermanos.\n\nEn su lecho de muerte, Jacob pronunció sobre Judá la profecía patriarcal y mesiánica suprema de Génesis 49:8-10: **'Judá, te alabarán tus hermanos... Cachorro de león, Judá... No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos'**. Judá recibió el liderazgo regio de Israel, convirtiéndose en el antepasado directo de la dinastía davídica y de nuestro Salvador Jesucristo."
+      },
+      "character_arc": "Hermano astuto que propone la venta de José → Creyente quebrantado por su pecado con Tamar → Intercesor y sustituto dispuesto a dar su vida por su hermano → Líder regio poseedor del Cetro Mesiánico de Siloh",
+      "personality_traits": [
+        "líder nato",
+        "transformado por el arrepentimiento genuino",
+        "intercesor sustitutivo dispuesto al sacrificio",
+        "cabeza de la tribu real y mesiánica"
+      ],
+      "theological_significance": "Judá es la figura más importante del Antiguo Testamento respecto a la preservación del linaje real y mesiánico. Su disposición a ser sustituto de Benjamín es una prefiguración hermosa del trabajo redentor de Jesucristo. La **Profecía de Siloh** (Génesis 49:10) garantiza que el gobierno legítimo universal pertenece a Cristo, a quien el Apocalipsis corona como **'El León de la tribu de Judá, la Raíz de David'** (Apocalipsis 5:5).",
+      "event_ids": [
+        "birth_12_tribes",
+        "joseph_dreams_sold",
+        "judah_tamar_sin",
+        "brothers_first_travel",
+        "joseph_reveals_himself",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 35,
+          "verse_end": 35
+        },
+        {
+          "book": "Génesis",
+          "chapter": 37,
+          "verse_start": 26,
+          "verse_end": 27
+        },
+        {
+          "book": "Génesis",
+          "chapter": 38,
+          "verse_start": 1,
+          "verse_end": 30
+        },
+        {
+          "book": "Génesis",
+          "chapter": 44,
+          "verse_start": 18,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 8,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 49:10",
+        "text": "No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos."
+      },
+      "cross_references_nt": [
+        "Mateo 1:2-3",
+        "Lucas 3:33",
+        "Hebreos 7:14",
+        "Apocalipsis 5:5"
+      ],
+      "notable_overlaps": []
     }
   ],
   "relationships": [],
   "locations": [],
-  "covenants": [],
-  "messianic_promises": [],
-  "themes": [],
-  "questions": [],
+  "covenants": [
+    {
+      "id": "edenic_covenant",
+      "name": "Pacto Edénico",
+      "nature": "conditional",
+      "dispensation": "disp_innocence",
+      "parties": {
+        "god": "Jehová Dios",
+        "human_representative": "adam"
+      },
+      "scriptural_reference": {
+        "book": "Génesis",
+        "chapter": 1,
+        "verse_start": 28,
+        "verse_end": 30
+      },
+      "key_verse": {
+        "reference": "Génesis 2:16-17",
+        "text": "Y mandó Jehová Dios al hombre, diciendo: De todo árbol del huerto podrás comer; mas del árbol de la ciencia del bien y del mal no comerás; porque el día que de él comieres, ciertamente morirás."
+      },
+      "description": "Pacto condicional de inocencia establecido en el Huerto del Edén antes de la Caída. Dios otorgó al hombre dominio y mayordomía sobre la Creación, y el mandato de multiplicarse y sojuzgar la tierra, sujeto a la obediencia perfecta de no comer del Árbol de la Ciencia del Bien y del Mal.",
+      "provisions": [
+        "Mayordomía y señorio sobre los seres vivientes",
+        "Mandato de fructificar y sojuzgar la tierra",
+        "Prohibición de comer del Árbol de la Ciencia del Bien y del Mal",
+        "Advertencia de muerte física y espiritual por desobediencia"
+      ],
+      "sign": "El Árbol de la Vida",
+      "associated_event_id": "creation_man",
+      "fulfillment_in_christ": "Cristo es el Postrer Adán que rindió obediencia perfecta e intachable donde el primer Adán falló, ganando la vida eterna para los creyentes."
+    },
+    {
+      "id": "adamic_covenant",
+      "name": "Pacto Adámico (Post-Caída)",
+      "nature": "unconditional",
+      "dispensation": "disp_conscience",
+      "parties": {
+        "god": "Jehová Dios",
+        "human_representative": "adam_eve"
+      },
+      "scriptural_reference": {
+        "book": "Génesis",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 19
+      },
+      "key_verse": {
+        "reference": "Génesis 3:15",
+        "text": "Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar."
+      },
+      "description": "Pacto post-caída que declara las consecuencias penales del pecado sobre la serpiente, la mujer, el hombre y la tierra entera, e introduce la primera promesa redentora del Mesías (Protoevangelio).",
+      "provisions": [
+        "Maldición sobre la serpiente y derrota final de Satanás",
+        "Multiplicación de dolores en la maternidad para la mujer",
+        "Maldición del suelo con espinos y cardos, exigiendo trabajo penoso",
+        "Muerte física indispensable: 'polvo eres, y al polvo volverás'",
+        "Promesa del Protoevangelio: la Simiente de la mujer victoriosa"
+      ],
+      "sign": "Túnicas de pieles hechas por Dios (primer sacrificio expiatorio sustitutivo)",
+      "associated_event_id": "fall_judgment",
+      "fulfillment_in_christ": "Cumplido en la Cruz del Calvario, donde Cristo fue herido en el calcañar (sufrimiento físico) pero aplastó la cabeza de la serpiente (derrota de la muerte y del diablo)."
+    },
+    {
+      "id": "noahic_covenant",
+      "name": "Pacto Noéico",
+      "nature": "unconditional",
+      "dispensation": "disp_human_gov",
+      "parties": {
+        "god": "Jehová Dios",
+        "human_representative": "noah_humanity_creation"
+      },
+      "scriptural_reference": {
+        "book": "Génesis",
+        "chapter": 9,
+        "verse_start": 8,
+        "verse_end": 17
+      },
+      "key_verse": {
+        "reference": "Génesis 9:11",
+        "text": "Estableceré mi pacto con vosotros, y no exterminaré ya más toda carne con aguas de diluvio, ni habrá más diluvio para destruir la tierra."
+      },
+      "description": "Pacto incondicional y universal establecido por Dios con Noé, sus descendientes y toda criatura viviente tras el Diluvio, garantizando la preservación cósmica de las estaciones y el orden de la naturaleza.",
+      "provisions": [
+        "Promesa divina de no volver a exterminar la tierra con un Diluvio universal",
+        "Preservación perpetua del ciclo de estaciones, siembra, siega, frío y calor",
+        "Permiso para consumir carne animal, prohibiendo beber su sangre",
+        "Institución de la pena capital humana para castigar el homicidio"
+      ],
+      "sign": "El Arco Iris (*Keshet*) en las nubes",
+      "associated_event_id": "noahic_covenant",
+      "fulfillment_in_christ": "Garantiza la estabilidad del universo material hasta el día del juicio final y el establecimiento de los Cielos Nuevos y Tierra Nueva por Cristo."
+    },
+    {
+      "id": "abrahamic_covenant",
+      "name": "Pacto Abrahámico",
+      "nature": "unconditional",
+      "dispensation": "disp_promise",
+      "parties": {
+        "god": "Jehová Dios",
+        "human_representative": "abraham"
+      },
+      "scriptural_reference": {
+        "book": "Génesis",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 21
+      },
+      "key_verse": {
+        "reference": "Génesis 12:2-3",
+        "text": "Y haré de ti una nación grande, y te bendeciré, y engrandeceré tu nombre, y serás bendición. Bendeciré a los que te bendijeren, y a los que te maldijeren maldeciré; y serán benditas en ti todas las familias de la tierra."
+      },
+      "description": "El pacto incondicional supremo del Antiguo Testamento. Dios prometió soberanamente a Abraham una Tierra geográfica definida, una Nación grande innumerable y una Bendición universal para todas las familias de la tierra a través de su Simiente.",
+      "provisions": [
+        "Promesa de la Tierra de Canaán desde el río de Egipto hasta el Éufrates",
+        "Promesa de una descendencia innumerable como las estrellas del cielo",
+        "Promesa de bendición divina universal para todas las naciones del mundo",
+        "Justificación contada por la sola fe (Génesis 15:6)"
+      ],
+      "sign": "Animales cortados y la antorcha de fuego que pasó entre las piezas (Génesis 15)",
+      "associated_event_id": "abrahamic_covenant",
+      "fulfillment_in_christ": "Pablo enseña en Gálatas 3:16 que la 'Simiente' prometida a Abraham es Cristo. Todos los creyentes en Cristo son hechos verdaderos herederos del pacto abrahámico."
+    },
+    {
+      "id": "circumcision_covenant",
+      "name": "Pacto de la Circuncisión",
+      "nature": "conditional_sign",
+      "dispensation": "disp_promise",
+      "parties": {
+        "god": "El Shaddai",
+        "human_representative": "abraham_lineage"
+      },
+      "scriptural_reference": {
+        "book": "Génesis",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "key_verse": {
+        "reference": "Génesis 17:10",
+        "text": "Este es mi pacto, que guardaréis entre mí y vosotros y tu descendencia después de ti: Será circuncidado todo varón de entre vosotros."
+      },
+      "description": "Ratificación del pacto abrahámico donde Dios se revela como El Shaddai (Dios Todopoderoso) e instituye la circuncisión de todo varón a los ocho días de nacido como señal física perpetua de pertenencia al pacto.",
+      "provisions": [
+        "Revelación de Dios como El Shaddai",
+        "Cambio de nombre de Abram a Abraham y de Sarai a Sara",
+        "Institución de la circuncisión ritual a los 8 días de nacido",
+        "Exclusión del pacto del que rehusara circuncidarse"
+      ],
+      "sign": "La Circuncisión física en el prepucio de la carne",
+      "associated_event_id": "covenant_circumcision",
+      "fulfillment_in_christ": "Sustituido en el Nuevo Testamento por la **Circuncisión del Corazón** no hecha a mano mediante el Santo Bautismo y el Espíritu Santo (Colosenses 2:11-12)."
+    }
+  ],
+  "messianic_promises": [
+    {
+      "id": "protoevangelium",
+      "name": "El Protoevangelio (La Simiente de la Mujer)",
+      "reference": "Génesis 3:15",
+      "text": "Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar.",
+      "recipient": "eva",
+      "speaker": "Jehová Dios",
+      "theological_explanation": "Primera profecía mesiánica de las Sagradas Escrituras. Anuncia el conflicto espiritual continuo entre el bien y el mal, y predice que de la mujer nacerá un Redentor varón que sufrirá un herida temporal ('herir en el calcañar'), pero infligirá una derrota mortal definitiva a Satanás ('herir en la cabeza').",
+      "fulfillment_nt": "Gálatas 4:4 ('Dios envió a su Hijo, nacido de mujer') y Hebreos 2:14 (destruyó por medio de la muerte al que tenía el imperio de la muerte)."
+    },
+    {
+      "id": "seth_line_promise",
+      "name": "Preservación del Linaje Santo en Set",
+      "reference": "Génesis 4:25-26",
+      "text": "Y conoció de nuevo Adán a su mujer, la cual dio a luz un hijo, y llamó su nombre Set: Porque Dios (dijo ella) me ha sustituido otro hijo en lugar de Abel, a quien mató Caín.",
+      "recipient": "seth",
+      "speaker": "Eva",
+      "theological_explanation": "Revela que la promesa del Mesías no se perdió con la muerte de Abel ni continuó en Caín, sino que fue preservada providencialmente en Set, de quien nació la línea de adoradores de Jehová.",
+      "fulfillment_nt": "Lucas 3:38 ubica a Set en la genealogía directa de Jesucristo."
+    },
+    {
+      "id": "shem_blessing",
+      "name": "La Bendición Mesiánica de Sem",
+      "reference": "Génesis 9:26",
+      "text": "Dijo también: Bendito por Jehová mi Dios sea Sem, y sea Canaán su siervo.",
+      "recipient": "shem",
+      "speaker": "Noé",
+      "theological_explanation": "Noé profetiza que la revelación del Dios verdadero y la salvación habitarán de manera singular en la descendencia de Sem, restringiendo el linaje mesiánico al pueblo semita.",
+      "fulfillment_nt": "Lucas 3:36 y Romanos 9:4-5 ('de quienes según la carne vino Cristo')."
+    },
+    {
+      "id": "abrahamic_blessing_promise",
+      "name": "La Bendición Universal en la Simiente de Abraham",
+      "reference": "Génesis 12:3",
+      "text": "Y serán benditas en ti todas las familias de la tierra.",
+      "recipient": "abraham",
+      "speaker": "Jehová Dios",
+      "theological_explanation": "Dios estrecha la promesa mesiánica a la estirpe de Abraham, anunciando que la bendición de salvación de todas las naciones del mundo provendrá de su descendencia.",
+      "fulfillment_nt": "Gálatas 3:8 ('La Escritura, previendo que Dios había de justificar por la fe a los gentiles, dio de antemano la buena nueva a Abraham')."
+    },
+    {
+      "id": "isaac_promise",
+      "name": "La Confirmación Mesiánica en Isaac",
+      "reference": "Génesis 26:4",
+      "text": "Multiplicaré tu descendencia como las estrellas del cielo... y todas las naciones de la tierra serán benditas en tu simiente.",
+      "recipient": "isaac",
+      "speaker": "Jehová Dios",
+      "theological_explanation": "Excluye a Ismael y confirma que la promesa del Mesías discurre de manera soberana y exclusiva a través de Isaac, el hijo de la promesa.",
+      "fulfillment_nt": "Romanos 9:7 ('En Isaac te será llamada descendencia')."
+    },
+    {
+      "id": "jacob_promise",
+      "name": "La Visión de la Escalera de Betel en Jacob",
+      "reference": "Génesis 28:14",
+      "text": "Será tu descendencia como el polvo de la tierra... y todas las familias de la tierra serán benditas en ti y en tu simiente.",
+      "recipient": "jacob",
+      "speaker": "Jehová Dios",
+      "theological_explanation": "Excluye a Esaú y confirma la línea mesiánica en Jacob. La Escalera de Betel prefigura la mediación perfecta entre el cielo y la tierra.",
+      "fulfillment_nt": "Juan 1:51 ('Veréis el cielo abierto, y a los ángeles de Dios que suben y descienden sobre el Hijo del Hombre')."
+    },
+    {
+      "id": "shiloh_prophecy_judah",
+      "name": "La Profecía de Siloh sobre la Tribu de Judá",
+      "reference": "Génesis 49:10",
+      "text": "No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos.",
+      "recipient": "judah",
+      "speaker": "Jacob",
+      "theological_explanation": "Profecía mesiánica cumbre del Génesis. Anuncia que la soberanía y el derecho real pertenecerán a la tribu de Judá hasta la llegada de **Siloh** ('El Enviado' / 'Aquel a quien pertenece el derecho' / 'El Rey de Paz'), a quien todas las naciones rendirán obediencia.",
+      "fulfillment_nt": "Apocalipsis 5:5 ('El León de la tribu de Judá, la Raíz de David, ha vencido') y Lucas 1:32-33."
+    }
+  ],
+  "themes": [
+    {
+      "id": "theme_creation",
+      "title": "La Soberanía de Dios en la Creación Ex Nihilo",
+      "summary": "Dios creó los cielos y la tierra de la nada (*ex nihilo*) mediante su palabra todopoderosa, estableciendo su dominio absoluto y el valor inherente del ser humano como su imagen.",
+      "key_passages": [
+        "Génesis 1:1-31",
+        "Génesis 2:1-7"
+      ],
+      "theological_depth": "Establece el monoteísmo bíblico frente al panteísmo y el dualismo paganismo. Dios existe independientemente de la materia creada y es el único Dador de vida y Ley."
+    },
+    {
+      "id": "theme_fall_sin",
+      "title": "La Caída, el Pecado Original y sus Consecuencias",
+      "summary": "La desobediencia voluntaria de Adán y Eva introdujo el pecado, la muerte física y la muerte espiritual en la Creación, corrompiendo la naturaleza humana.",
+      "key_passages": [
+        "Génesis 3:1-24",
+        "Génesis 6:5"
+      ],
+      "theological_depth": "Fundamento de la doctrina del Pecado Original y la Depravación Humana. Demuestra que el sufrimiento y el mal del mundo provienen de la rebelión humana y no de una falla en el Creador."
+    },
+    {
+      "id": "theme_covenant_grace",
+      "title": "La Iniciativa del Pacto y la Gracia Incondicional",
+      "summary": "Dios se acerca por iniciativa propia al hombre caído mediante pactos solemnes de gracia (Edénico, Noéico, Abrahámico), prometiendo redención inmerecida.",
+      "key_passages": [
+        "Génesis 3:15",
+        "Génesis 9:8-17",
+        "Génesis 15:1-21"
+      ],
+      "theological_depth": "Muestra que la salvación es de origen 100% divino. Dios se ató bajo juramento propio para rescatar a la humanidad de la ruina."
+    },
+    {
+      "id": "theme_providence",
+      "title": "La Providencia Divina en la Historia Humana",
+      "summary": "Dios gobierna soberanamente todos los acontecimientos, decisiones e incluso los pecados humanos para cumplir su propósito salvífico supremo.",
+      "key_passages": [
+        "Génesis 45:5-8",
+        "Génesis 50:20"
+      ],
+      "theological_depth": "Demuestra la compatibilidad entre la responsabilidad moral humana y la soberanía absoluta de Dios: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'."
+    },
+    {
+      "id": "theme_messianic_line",
+      "title": "La Preservación Ininterrumpida de la Simiente Mesiánica",
+      "summary": "Rastro intencional de la línea genealógica de la promesa desde Eva → Set → Sem → Abraham → Isaac → Jacob → Judá hasta el Mesías.",
+      "key_passages": [
+        "Génesis 3:15",
+        "Génesis 12:3",
+        "Génesis 49:10"
+      ],
+      "theological_depth": "Demuestra que la historia bíblica no es una serie de hechos al azar, sino un plan redentor perfectamente diseñado hacia Jesucristo."
+    },
+    {
+      "id": "theme_justification_faith",
+      "title": "La Justificación por la Sola Fe",
+      "summary": "La declaración divina de justicia sobre el creyente no se basa en las obras de la ley sino en la fe depositada en la palabra y promesa de Dios.",
+      "key_passages": [
+        "Génesis 15:6",
+        "Génesis 22:1-18"
+      ],
+      "theological_depth": "Base del dogma novotestamentario expuesto por Pablo en Romanos y Gálatas: 'Creyó Abraham a Dios, y le fue contado por justicia'."
+    },
+    {
+      "id": "theme_divine_sovereign_choice",
+      "title": "La Elección Soberana de Dios",
+      "summary": "La elección del linaje de la promesa responde a la soberana gracia de Dios y no al orden biológico o mérito personal (Set sobre Caín, Isaac sobre Ismael, Jacob sobre Esaú).",
+      "key_passages": [
+        "Génesis 25:23",
+        "Génesis 27:1-40"
+      ],
+      "theological_depth": "Ilustra que los propósitos divinos conforme a la elección se mantienen firmes por la voluntad soberana del que llama."
+    },
+    {
+      "id": "theme_substitutionary_sacrifice",
+      "title": "El Sacrificio Sustitutivo y la Expiación por Sangre",
+      "summary": "Principio redentor según el cual la culpa del pecador es cubierta mediante la muerte sustitutiva de un inocente (túnicas de pieles, arca de Noé, el carnero en Moriah).",
+      "key_passages": [
+        "Génesis 3:21",
+        "Génesis 4:4",
+        "Génesis 22:13"
+      ],
+      "theological_significance": "Prefiguración del Sacrificio Perfecto de Jesucristo como el Cordero de Dios que quita el pecado del mundo."
+    }
+  ],
+  "questions": [
+    {
+      "id": "question_cain_wife",
+      "question": "¿De dónde tomó Caín a su esposa en Génesis 4:17?",
+      "answer": "La esposa de Caín fue una hermana o sobrina directa, nacida de Adán y Eva. Génesis 5:4 registra que Adán vivió 930 años y 'engendró hijos e hijas'. En las primeras generaciones de la humanidad, dada la pureza del código genético original recién creado por Dios y la necesidad del mandato de poblar la tierra, el matrimonio entre parientes cercanos era indispensable y no estaba prohibido genéticamente ni moralmente (la prohibición mosaica de incesto se dio miles de años después en Levítico 18).",
+      "biblical_references": [
+        "Génesis 4:17",
+        "Génesis 5:4",
+        "Hechos 17:26"
+      ]
+    },
+    {
+      "id": "question_flood_scope",
+      "question": "¿Fue el Diluvio de Noé un cataclismo de alcance global o local?",
+      "answer": "El texto del Génesis utiliza un lenguaje inequívoco de universalidad geográfica y biológica: 'todos los montes altos que había debajo de todos los cielos fueron cubiertos' (Gén. 7:19) y 'pereció toda carne que se mueve sobre la tierra' (Gén. 7:21). El propósito del Diluvio era juzgar a toda la raza humana caída y corrupta; si hubiera sido local, no habría sido necesario construir un Arca gigantesca durante 120 años ni preservar especímenes de todas las aves del cielo.",
+      "biblical_references": [
+        "Génesis 7:19-23",
+        "2 Pedro 3:5-6",
+        "Mateo 24:37-39"
+      ]
+    },
+    {
+      "id": "question_sons_of_god",
+      "question": "¿Quiénes eran los 'hijos de Dios' en Génesis 6:1-4?",
+      "answer": "Existen dos interpretaciones bíblicas históricas principales: 1) **Línea de Set vs. Línea de Caín** (la interpretación patriarcal tradicional): los 'hijos de Dios' eran la descendencia piadosa de Set que se mezcló en matrimonio con las 'hijas de los hombres' (la línea impía y mundana de Caín), desatando la corrupción moral total. 2) **Seres Angélicos Caídos**: ángeles caídos que tomaron forma humana violando su orden creado (apoyado por referencias en Judas 6 y 2 Pedro 2:4). En ambos casos, el pasaje enfatiza la rebelión total contra el orden divino que provocó el juicio del Diluvio.",
+      "biblical_references": [
+        "Génesis 6:1-4",
+        "2 Pedro 2:4-5",
+        "Judas 1:6"
+      ]
+    },
+    {
+      "id": "question_melchizedek_identity",
+      "question": "¿Quién era Melquisedec y por qué no se menciona su origen?",
+      "answer": "Melquisedec era un rey histórico de Salem (Jerusalén) y sacerdote auténtico del Dios Altísimo (*El Elyon*). El texto del Génesis omite deliberadamente la información de su genealogía, nacimiento y muerte para que figurara en la historia sagrada como un tipo perfecto de la persona de Jesucristo: un Rey-Sacerdote eterno cuya dignidad es superior a la de Abraham y al orden sacerdotal levítico (Hebreos 7:1-3).",
+      "biblical_references": [
+        "Génesis 14:18-20",
+        "Salmo 110:4",
+        "Hebreos 7:1-17"
+      ]
+    },
+    {
+      "id": "question_abraham_lie",
+      "question": "¿Por qué Abraham dijo que Sara era su hermana en Egipto y Gerar?",
+      "answer": "Sara era efectivamente medio hermana de Abraham por parte de padre (Génesis 20:12). Sin embargo, al ocultar que era su esposa por temor a ser asesinado por los monarcas paganos, Abraham incurrió en una media verdad motivada por el temor humano y la falta de fe en la protección divina. Dios intervino milagrosamente para proteger a Sara y preservar la pureza del linaje del pacto a pesar de la debilidad del patriarca.",
+      "biblical_references": [
+        "Génesis 12:10-20",
+        "Génesis 20:1-18"
+      ]
+    },
+    {
+      "id": "question_jacob_blessing_ethics",
+      "question": "¿Por qué Dios bendijo a Jacob si este obtuvo la bendición por engaño?",
+      "answer": "La bendición de Jacob responde al decreto soberano incondicional de Dios anunciado antes de su nacimiento ('el mayor servirá al menor', Gén. 25:23) y no al mérito de su estratagema humana. Aunque Jacob utilizó engaños impensados junto a su madre Rebeca, Dios lo disciplinó severamente haciéndolo sufrir 20 años de engaños a manos de Labán y perdiendo la paz con su hermano, hasta que fue quebrantado y transformado en Peniel (Israel).",
+      "biblical_references": [
+        "Génesis 25:23",
+        "Génesis 27:1-40",
+        "Romanos 9:10-13"
+      ]
+    },
+    {
+      "id": "question_joseph_evil_intended",
+      "question": "¿Cómo encaja el mal actuar de los hermanos de José con la soberanía de Dios?",
+      "answer": "Génesis 50:20 revela la doctrina suprema de la Providencia Concurrente: **'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'**. Los hermanos actuaron libremente con malas intenciones envidiosas y son 100% responsables moralmente de su pecado; sin embargo, Dios en su sabiduría infinita sobrepasó ese acto malévolo para cumplir su decreto perfecto de preservar con vida a la familia del pacto en Egipto.",
+      "biblical_references": [
+        "Génesis 45:5-8",
+        "Génesis 50:20",
+        "Hechos 2:23"
+      ]
+    },
+    {
+      "id": "question_shiloh_meaning",
+      "question": "¿Qué significa el nombre 'Siloh' en la profecía de Génesis 49:10?",
+      "answer": "'Siloh' en hebreo es un título profético mesiánico que significa **'Aquel a quien pertenece el derecho'**, **'El Enviado'** o **'El Pacífico / Rey de Paz'**. La profecía declara que la tribu de Judá mantendría el cetro de gobierno e identidad judicial hasta la venida del Mesías Prometido, a quien todas las naciones del mundo se congregarán voluntariamente en adoración.",
+      "biblical_references": [
+        "Génesis 49:10",
+        "Lucas 1:32-33",
+        "Apocalipsis 5:5"
+      ]
+    }
+  ],
   "chapters_map": [],
   "notable_overlaps": []
 }
