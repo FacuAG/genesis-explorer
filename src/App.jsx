@@ -5,6 +5,8 @@ import { TimelineView } from './components/timeline/TimelineView';
 import { PersonPanel } from './components/panels/PersonPanel';
 import { CovenantPanel } from './components/panels/CovenantPanel';
 import { LocationPanel } from './components/panels/LocationPanel';
+import { DispensationPanel } from './components/panels/DispensationPanel';
+import { ChapterMapPanel } from './components/panels/ChapterMapPanel';
 import { QuestionPanel } from './components/panels/QuestionPanel';
 import './App.css';
 
@@ -114,6 +116,19 @@ export function App() {
               people={genesis.people}
               peopleMap={genesis.peopleMap}
               eventsMap={genesis.eventsMap}
+              onSelectEvent={() => setActiveTab('timeline')}
+            />
+          )}
+
+          {activeTab === 'dispensations' && (
+            <DispensationPanel dispensations={genesis.dispensations} />
+          )}
+
+          {activeTab === 'chapters' && (
+            <ChapterMapPanel
+              chapters={genesis.chaptersMap}
+              eventsMap={genesis.eventsMap}
+              peopleMap={genesis.peopleMap}
               onSelectEvent={() => setActiveTab('timeline')}
             />
           )}

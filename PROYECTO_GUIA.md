@@ -1340,12 +1340,12 @@ I-04 EventPanel y subcomponentes                           COMPLETADO
 I-05 PersonPanel y LifespanBar                             COMPLETADO
 I-06 TimelineControls y filtros                            COMPLETADO
 I-07 Diseno visual premium                                 COMPLETADO
-I-08 Funcionalidades extendidas                            EN PROGRESO
+I-08 Funcionalidades extendidas                            COMPLETADO
 
 ESTADO GLOBAL: 
 - Datos Genesis: 100% (9/9 tareas principales completadas - ¡FASE DE DATOS FINALIZADA CON ÉXITO!)
-- Interfaz: 88% (7/8 tareas completadas)
-- Libros: 1 listo para interfaz (Genesis)
+- Interfaz: 100% (8/8 tareas completadas - ¡APLICACIÓN WEB GENESIS EXPLORER COMPLETA Y FUNCIONAL!)
+- Libros: 1 100% completo (Génesis con datos e interfaz)
 
 NOTAS DE SESIONES ANTERIORES:
 - 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).

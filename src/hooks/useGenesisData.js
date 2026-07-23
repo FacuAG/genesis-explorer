@@ -100,6 +100,7 @@ export function useGenesisData() {
     messianicPromises: genesisData.messianic_promises || [],
     themes: genesisData.themes || [],
     questions: genesisData.questions || [],
+    dispensations: genesisData.dispensations || [],
     chaptersMap: genesisData.chapters_map || [],
     notableOverlaps: genesisData.notable_overlaps || [],
     // Maps indexados O(1)

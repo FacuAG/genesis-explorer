@@ -69,6 +69,18 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
             <span className="tab-icon">👤</span> Personajes & Vidas
           </button>
           <button
+            className={`nav-tab-btn ${activeTab === 'dispensations' ? 'active' : ''}`}
+            onClick={() => setActiveTab('dispensations')}
+          >
+            <span className="tab-icon">🕊️</span> Dispensaciones
+          </button>
+          <button
+            className={`nav-tab-btn ${activeTab === 'chapters' ? 'active' : ''}`}
+            onClick={() => setActiveTab('chapters')}
+          >
+            <span className="tab-icon">📖</span> Capítulos (1-50)
+          </button>
+          <button
             className={`nav-tab-btn ${activeTab === 'covenants' ? 'active' : ''}`}
             onClick={() => setActiveTab('covenants')}
           >
