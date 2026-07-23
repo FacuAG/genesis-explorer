@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { Timeline } from 'vis-timeline/standalone';
 import { DataSet } from 'vis-data/standalone';
 import { mapGenesisToVisData, amToDate } from '../../utils/timelineMapper';
+import { TimelineControls } from './TimelineControls';
 import { EventPanel } from '../panels/EventPanel';
 import './TimelineView.css';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
@@ -11,22 +12,54 @@ import 'vis-timeline/styles/vis-timeline-graph2d.css';
  * Utiliza el motor vis-timeline con renderizado de eje Anno Mundi (AM),
  * apilamiento dinámico anti-superposición, zoom real y selección interactiva de eventos.
  */
-export function TimelineView({ events, eras, narrativeBlocks, covenants, peopleMap, locationsMap, onSelectEvent, onSelectPerson }) {
+export function TimelineView({ events = [], eras = [], narrativeBlocks = [], covenants = [], peopleMap, locationsMap, onSelectEvent, onSelectPerson }) {
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
   const [selectedEventId, setSelectedEventId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Filtro activo por categoría de evento
+  // Estados de Filtro Avanzado
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedBlockId, setSelectedBlockId] = useState('all');
+  const [selectedChapter, setSelectedChapter] = useState('all');
+  const [filterText, setFilterText] = useState('');
+
+  // Filtrado multi-criterio de eventos
+  const filteredEvents = useMemo(() => {
+    return events.filter(e => {
+      // 1. Filtro por Categoría
+      if (selectedCategory !== 'all' && e.category !== selectedCategory) return false;
+
+      // 2. Filtro por Bloque Narrativo
+      if (selectedBlockId !== 'all') {
+        const block = narrativeBlocks.find(b => b.id === selectedBlockId);
+        if (block && block.chapters_range) {
+          const [startCh, endCh] = block.chapters_range.split('-').map(Number);
+          const eventCh = e.scriptural_reference?.chapter;
+          if (eventCh && (eventCh < startCh || eventCh > endCh)) return false;
+        }
+      }
+
+      // 3. Filtro por Capítulo Específico
+      if (selectedChapter !== 'all') {
+        const targetCh = Number(selectedChapter);
+        if (e.scriptural_reference?.chapter !== targetCh) return false;
+      }
+
+      // 4. Filtro por Texto / Palabra clave
+      if (filterText && filterText.trim().length > 0) {
+        const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const name = (e.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const summary = (e.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        if (!name.includes(q) && !summary.includes(q)) return false;
+      }
+
+      return true;
+    });
+  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, narrativeBlocks]);
 
   useEffect(() => {
     if (!containerRef.current) return;
-
-    // Filter events by category if selected
-    const filteredEvents = selectedCategory === 'all'
-      ? events
-      : events.filter(e => e.category === selectedCategory);
 
     // Transform data for vis-timeline
     const { groups, items } = mapGenesisToVisData(filteredEvents, narrativeBlocks, covenants);
@@ -100,9 +133,9 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, peopleM
         timelineInstanceRef.current = null;
       }
     };
-  }, [events, narrativeBlocks, covenants, selectedCategory, onSelectEvent]);
+  }, [filteredEvents, narrativeBlocks, covenants, onSelectEvent, events]);
 
-  // Funciones de navegación de zoom
+  // Funciones de navegación de zoom y salto de ventana Anno Mundi
   const handleZoomIn = () => {
     if (timelineInstanceRef.current) timelineInstanceRef.current.zoomIn(0.4);
   };
@@ -112,7 +145,15 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, peopleM
   };
 
   const handleFitAll = () => {
-    if (timelineInstanceRef.current) timelineInstanceRef.current.setWindow(amToDate(0), amToDate(2369));
+    if (timelineInstanceRef.current) {
+      timelineInstanceRef.current.setWindow(amToDate(0), amToDate(2369), { animation: true });
+    }
+  };
+
+  const handleJumpToAM = (startAM, endAM) => {
+    if (timelineInstanceRef.current) {
+      timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
+    }
   };
 
   // Evento actualmente seleccionado para la vista rápida inferior
@@ -120,39 +161,23 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, peopleM
 
   return (
     <div className="timeline-view-wrapper">
-      {/* Barra de Controles y Filtros Superior */}
-      <div className="timeline-toolbar">
-        <div className="toolbar-left">
-          <label className="toolbar-label">Filtrar Categoria:</label>
-          <select
-            className="toolbar-category-select"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option value="all">🔍 Todas las Categorias ({events.length})</option>
-            <option value="creation">✨ Creación</option>
-            <option value="covenant">👑 Pacto Divino</option>
-            <option value="judgment">🔥 Juicio Divino</option>
-            <option value="miracle">⚡ Milagro / Teofanía</option>
-            <option value="patriarch">👤 Ciclo Patriarcal</option>
-            <option value="restoration">🕊️ Restauración / Gracia</option>
-            <option value="exile">🏕️ Migración / Exilio</option>
-            <option value="sin">⚠️ Rebelión / Pecado</option>
-          </select>
-        </div>
-
-        <div className="toolbar-controls">
-          <button className="control-btn" onClick={handleZoomIn} title="Acercar Zoom">
-            🔍 + Zoom
-          </button>
-          <button className="control-btn" onClick={handleZoomOut} title="Alejar Zoom">
-            🔍 - Zoom
-          </button>
-          <button className="control-btn control-btn-accent" onClick={handleFitAll} title="Ver Todo Génesis">
-            🌌 Ver Todo (AM 0 - 2369)
-          </button>
-        </div>
-      </div>
+      {/* Panel Flotante de Controles y Filtros Avanzados */}
+      <TimelineControls
+        eventsCount={filteredEvents.length}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        selectedBlockId={selectedBlockId}
+        setSelectedBlockId={setSelectedBlockId}
+        selectedChapter={selectedChapter}
+        setSelectedChapter={setSelectedChapter}
+        filterText={filterText}
+        setFilterText={setFilterText}
+        narrativeBlocks={narrativeBlocks}
+        onJumpToAM={handleJumpToAM}
+        onZoomIn={handleZoomIn}
+        onZoomOut={handleZoomOut}
+        onFitAll={handleFitAll}
+      />
 
       {/* Contenedor Principal de la Línea de Tiempo vis-timeline */}
       <div className="vis-timeline-mount" ref={containerRef} />

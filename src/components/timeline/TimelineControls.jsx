@@ -1,0 +1,140 @@
+import React from 'react';
+import { EVENT_CATEGORIES } from '../../utils/timelineMapper';
+import './TimelineControls.css';
+
+/**
+ * Componente de Controles y Filtros Avanzados para la Línea de Tiempo de Génesis.
+ */
+export function TimelineControls({
+  eventsCount = 0,
+  selectedCategory,
+  setSelectedCategory,
+  selectedBlockId,
+  setSelectedBlockId,
+  selectedChapter,
+  setSelectedChapter,
+  filterText,
+  setFilterText,
+  narrativeBlocks = [],
+  onJumpToAM,
+  onZoomIn,
+  onZoomOut,
+  onFitAll
+}) {
+  // Hitos bíblicos estratégicos para el salto rápido de ventana
+  const QUICK_JUMPS = [
+    { label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación (AM 0)' },
+    { label: '🌊 El Diluvio', amStart: 1650, amEnd: 1660, title: 'Salto al Diluvio de Noé (AM 1656)' },
+    { label: '🗼 Torre de Babel', amStart: 1740, amEnd: 1770, title: 'Salto a Babel (AM 1750)' },
+    { label: '👑 Llamado Abraham', amStart: 2015, amEnd: 2035, title: 'Salto al Llamado de Abraham (AM 2023)' },
+    { label: '🌾 José en Egipto', amStart: 2280, amEnd: 2305, title: 'Salto a José Gobernador de Egipto (AM 2288)' }
+  ];
+
+  return (
+    <div className="timeline-controls-wrapper">
+      {/* Fila 1: Filtros de Búsqueda y Selección */}
+      <div className="controls-row-filters">
+        {/* Buscador de Eventos */}
+        <div className="filter-group search-input-group">
+          <span className="search-icon">🔍</span>
+          <input
+            type="text"
+            className="timeline-search-input"
+            placeholder="Filtrar eventos por palabra..."
+            value={filterText}
+            onChange={(e) => setFilterText(e.target.value)}
+          />
+          {filterText && (
+            <button className="clear-search-btn" onClick={() => setFilterText('')}>✕</button>
+          )}
+        </div>
+
+        {/* Selector de Categoría */}
+        <div className="filter-group">
+          <label className="filter-label">Categoría:</label>
+          <select
+            className="controls-select"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            <option value="all">Todas las Categorías</option>
+            {Object.entries(EVENT_CATEGORIES).map(([key, cat]) => (
+              <option key={key} value={key}>
+                {cat.icon} {cat.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Selector de Bloque Narrativo */}
+        <div className="filter-group">
+          <label className="filter-label">Bloque Narrativo:</label>
+          <select
+            className="controls-select"
+            value={selectedBlockId}
+            onChange={(e) => setSelectedBlockId(e.target.value)}
+          >
+            <option value="all">Todos los Bloques Narrativos</option>
+            {narrativeBlocks.map(b => (
+              <option key={b.id} value={b.id}>
+                📍 {b.name} (Caps. {b.chapters_range})
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Selector de Capítulo Específico del 1 al 50 */}
+        <div className="filter-group">
+          <label className="filter-label">Capítulo:</label>
+          <select
+            className="controls-select chapter-select"
+            value={selectedChapter}
+            onChange={(e) => setSelectedChapter(e.target.value)}
+          >
+            <option value="all">Todos (1 - 50)</option>
+            {Array.from({ length: 50 }, (_, i) => i + 1).map(num => (
+              <option key={num} value={num}>Capítulo {num}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Contador de Eventos Visibles */}
+        <div className="events-count-badge">
+          ⚡ {eventsCount} Evento{eventsCount !== 1 ? 's' : ''}
+        </div>
+      </div>
+
+      {/* Fila 2: Saltos Rápido a Hitos Bíblicos y Zoom */}
+      <div className="controls-row-jumps">
+        <div className="quick-jumps-group">
+          <span className="quick-jumps-title">📍 Salto Rápido:</span>
+          <div className="quick-jump-buttons">
+            {QUICK_JUMPS.map((jump, idx) => (
+              <button
+                key={idx}
+                className="jump-chip-btn"
+                onClick={() => onJumpToAM(jump.amStart, jump.amEnd)}
+                title={jump.title}
+              >
+                {jump.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Botones de Navegación de Zoom */}
+        <div className="zoom-actions-group">
+          <button className="control-action-btn" onClick={onZoomIn} title="Acercar Zoom">
+            🔍 + Zoom
+          </button>
+          <button className="control-action-btn" onClick={onZoomOut} title="Alejar Zoom">
+            🔍 - Zoom
+          </button>
+          <button className="control-action-btn action-accent" onClick={onFitAll} title="Ver Todo Génesis (AM 0 - 2369)">
+            🌌 Ver Todo (AM 0 - 2369)
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

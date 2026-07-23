@@ -1,0 +1,196 @@
+/* TimelineControls CSS Vanilla — Genesis Explorer */
+
+.timeline-controls-wrapper {
+  background: rgba(30, 32, 41, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.1rem 1.35rem;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.controls-row-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.filter-label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.search-input-group {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.timeline-search-input {
+  width: 100%;
+  background: #181920;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem 0.45rem 2.2rem;
+  color: #f8fafc;
+  font-size: 0.85rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.timeline-search-input:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 10px rgba(170, 59, 255, 0.2);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.clear-search-btn:hover {
+  color: #ffffff;
+}
+
+.controls-select {
+  background: #181920;
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls-select:hover {
+  border-color: #c084fc;
+}
+
+.chapter-select {
+  max-width: 140px;
+}
+
+.events-count-badge {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  margin-left: auto;
+}
+
+/* Fila 2: Saltos Rápido y Zoom */
+.controls-row-jumps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.quick-jumps-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.quick-jumps-title {
+  font-size: 0.8rem;
+  color: #c084fc;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.quick-jump-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.jump-chip-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jump-chip-btn:hover {
+  background: rgba(170, 59, 255, 0.2);
+  border-color: #c084fc;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.zoom-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.control-action-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-action-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.action-accent {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.25) 0%, rgba(99, 102, 241, 0.25) 100%);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+}
+
+.action-accent:hover {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
+}
