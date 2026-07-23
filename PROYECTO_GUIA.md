@@ -1339,12 +1339,12 @@ I-03 Componente Timeline principal                         COMPLETADO
 I-04 EventPanel y subcomponentes                           COMPLETADO
 I-05 PersonPanel y LifespanBar                             COMPLETADO
 I-06 TimelineControls y filtros                            COMPLETADO
-I-07 Diseno visual premium                                 EN PROGRESO
-I-08 Funcionalidades extendidas                            PENDIENTE
+I-07 Diseno visual premium                                 COMPLETADO
+I-08 Funcionalidades extendidas                            EN PROGRESO
 
 ESTADO GLOBAL: 
 - Datos Genesis: 100% (9/9 tareas principales completadas - ¡FASE DE DATOS FINALIZADA CON ÉXITO!)
-- Interfaz: 75% (6/8 tareas completadas)
+- Interfaz: 88% (7/8 tareas completadas)
 - Libros: 1 listo para interfaz (Genesis)
 
 NOTAS DE SESIONES ANTERIORES:
