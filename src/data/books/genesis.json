@@ -6189,7 +6189,1978 @@
       }
     }
   ],
-  "people": [],
+  "people": [
+    {
+      "id": "adam",
+      "name": "Adán",
+      "name_meaning": "Tierra / De la tierra roja / Ser humano",
+      "name_origin": "Hebreo: Adam (derivado de Adamah, 'suelo/tierra')",
+      "category": "first_man",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 0,
+        "death_am": 930,
+        "lifespan": 930,
+        "notable_age": "Creado en el sexto día de la Creación (AM 0); engendró a Set a los 130 años",
+        "first_mention": {
+          "chapter": 1,
+          "verse": 26
+        },
+        "last_mention": {
+          "chapter": 5,
+          "verse": 5
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": "eve",
+        "children": [
+          "cain",
+          "abel",
+          "seth"
+        ],
+        "generation_from_adam": 1
+      },
+      "biography": {
+        "short": "El primer hombre creado directamente por Dios a su imagen y semejanza, cabeza federal de la humanidad y primer patriarca de la historia.",
+        "full": "Adán fue el primer ser humano creado por Dios el sexto día de la Creación a partir del polvo de la tierra, recibiendo directamente el aliento de vida divinamente infundido por Jehová Dios. Puesto en el Huerto del Edén para labrarlo y guardarlo, Dios le otorgó soberanía delegada sobre la creación animada, encargándole poner nombre a todas las bestias y aves del campo.\n\nEn su estado inicial de inocencia y justicia original, Adán disfrutaba de una comunión directa e intachable con el Creador. Recibió a Eva como su ayuda idónea y hueso de sus huesos, instituyendo el Santo Matrimonio monogámico e indisoluble. Sin embargo, al sucumbir al engaño de la serpiente y desobedecer el mandato prohibitivo referente al Árbol de la Ciencia del Bien y del Mal, Adán cayó del estado de gracia previa, trayendo la muerte física y espiritual sobre sí mismo y sobre toda su descendencia biológica como cabeza federal de la raza humana.\n\nTras el juicio divino en el Edén, Adán escuchó la promesa redentora del Protoevangelio (Génesis 3:15) y nombró a su esposa Eva ('Madre de todos los vivientes') en un acto insigne de fe esperanzada. Fue revestido por Dios con túnicas de pieles mediante el sacrificio sustitutivo de un animal inocente, e impulsado al trabajo penoso en la tierra maldita por el pecado. Vivió 930 años, engendrando hijos e hijas, entre ellos Caín, Abel y Set, y transmitió oralmente la revelación divina de la Creación a ocho generaciones sucesivas de patriarcas antediluvianos antes de su muerte en el año AM 930."
+      },
+      "character_arc": "Inocencia y Mayordomía Edénica → Caída y Rebelión Federal → Arrepentimiento y Fe en el Protoevangelio → Patriarca doliente y maestro de las generaciones antediluvianas",
+      "personality_traits": [
+        "creado a imagen de Dios",
+        "mayordomo responsable",
+        "vulnerable a la tentación",
+        "receptivo al arrepentimiento y a la gracia"
+      ],
+      "theological_significance": "Adán es la cabeza federal y representante legal de toda la raza humana caída. En el Nuevo Testamento, Pablo establece el paralelo teológico supremo entre el 'Primer Adán' (cuyo pecado trajo condenación y muerte a todos) y el 'Postrer Adán' / Jesucristo (cuya obediencia perfecta y resurrección traen justificación y vida eterna a los creyentes).",
+      "event_ids": [
+        "creation_man",
+        "creation_woman",
+        "fall_temptation",
+        "fall_judgment",
+        "birth_seth"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 1,
+          "verse_start": 26,
+          "verse_end": 31
+        },
+        {
+          "book": "Génesis",
+          "chapter": 2,
+          "verse_start": 7,
+          "verse_end": 25
+        },
+        {
+          "book": "Génesis",
+          "chapter": 3,
+          "verse_start": 1,
+          "verse_end": 24
+        },
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 1,
+          "verse_end": 5
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 2:7",
+        "text": "Entonces Jehová Dios formó al hombre del polvo de la tierra, y sopló en su nariz aliento de vida, y fue el hombre un ser viviente."
+      },
+      "cross_references_nt": [
+        "Romanos 5:12-19",
+        "1 Corintios 15:22",
+        "1 Corintios 15:45",
+        "1 Timoteo 2:13-14",
+        "Lucas 3:38"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "methuselah",
+          "years_together": 243,
+          "note": "Adán convivió 243 años con Matusalén, transmitiéndole de primera mano los acontecimientos de la Creación y el Edén."
+        },
+        {
+          "with_person_id": "lamech",
+          "years_together": 56,
+          "note": "Adán convivió 56 años con Lamec (padre de Noé), garantizando la continuidad pedagógica de la verdad divina."
+        }
+      ]
+    },
+    {
+      "id": "eve",
+      "name": "Eva",
+      "name_meaning": "Madre de todos los vivientes / Vida / Viviente",
+      "name_origin": "Hebreo: Javáh (derivado de Jayáh, 'vivir')",
+      "category": "first_woman",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 0,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Creada en el sexto día de la Creación a partir del costado de Adán",
+        "first_mention": {
+          "chapter": 1,
+          "verse": 27
+        },
+        "last_mention": {
+          "chapter": 4,
+          "verse": 25
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": "adam",
+        "children": [
+          "cain",
+          "abel",
+          "seth"
+        ],
+        "generation_from_adam": 1
+      },
+      "biography": {
+        "short": "La primera mujer de la historia, formada por Dios de la costilla de Adán para ser su compañera e igual, y madre de toda la raza humana.",
+        "full": "Eva fue la primera mujer creada directamente por Dios al final del sexto día de la Creación. A diferencia de Adán (formado del polvo), Eva fue construida milagrosamente a partir de una de las costillas del hombre mientras este dormía en un profundo sueño divino. Dios la presentó a Adán no como una sierva ni como una criatura inferior, sino como su 'ezer keneghdo' (ayuda idónea, compañera correspondiente e igual), estableciendo el modelo divino del matrimonio monogámico.\n\nEn el Huerto del Edén, Eva fue engañada astutamente por la serpiente antigua (Satanás), quien puso en duda la veracidad y la bondad del mandamiento de Dios ('¿Conque Dios os ha dicho...?'). Eva contempló el árbol prohibido, codició la sabiduría autónoma y comió del fruto, entregándole también a su marido. Este acto consumó la Caída de la humanidad.\n\nTras el juicio de Dios, donde se le profetizó dolor en la maternidad y subordinación en la relación matrimonial, Eva recibió la promesa del Protoevangelio: de su simiente nacería el Redentor que aplastaría la cabeza de la serpiente (Génesis 3:15). Adán la llamó 'Eva' (Javáh) expresando su fe en que ella sería la madre de todos los seres vivientes. Experimentó la terrible angustia del primer homicidio cuando su primogénito Caín asesinó a su segundo hijo Abel, pero al nacer Set declaró con fe renovada: 'Dios me ha sustituido otro hijo en lugar de Abel, a quien mató Caín'."
+      },
+      "character_arc": "Compañera perfecta e inocente → Engañada por la serpiente y participante de la Caída → Juicio y fe en la promesa de la Simiente → Madre doliente confortada en el nacimiento de Set",
+      "personality_traits": [
+        "socia igualitaria e idónea",
+        "persuasible y vulnerada por el engaño",
+        "madre amorosa y doliente",
+        "creyente en la promesa divina del hijo sustituto"
+      ],
+      "theological_significance": "Eva es la madre de toda la humanidad biológica y la mujer receptora de la primera profecía mesiánica de la historia (el Protoevangelio en Génesis 3:15). En la tipología del Nuevo Testamento, Eva es comparada con la Iglesia (esposa del segundo Adán) y contrastada con María (cuya obediencia contrapone el desatino de Eva).",
+      "event_ids": [
+        "creation_woman",
+        "fall_temptation",
+        "fall_judgment",
+        "cain_abel_birth",
+        "birth_seth"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 1,
+          "verse_start": 27,
+          "verse_end": 28
+        },
+        {
+          "book": "Génesis",
+          "chapter": 2,
+          "verse_start": 18,
+          "verse_end": 25
+        },
+        {
+          "book": "Génesis",
+          "chapter": 3,
+          "verse_start": 1,
+          "verse_end": 20
+        },
+        {
+          "book": "Génesis",
+          "chapter": 4,
+          "verse_start": 1,
+          "verse_end": 25
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 3:20",
+        "text": "Y llamó el hombre el nombre de su mujer, Eva, por cuanto ella era la madre de todos los vivientes."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 3:15",
+          "text": "Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar."
+        }
+      ],
+      "cross_references_nt": [
+        "2 Corintios 11:3",
+        "1 Timoteo 2:13-15",
+        "Gálatas 4:4"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "cain",
+      "name": "Caín",
+      "name_meaning": "Adquisición / Adquirido / Lanza",
+      "name_origin": "Hebreo: Qáyin (derivado de Qanáh, 'adquirir/obtener')",
+      "category": "cainite_line",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 1,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Primer ser humano nacido de mujer mediante concepción biológica natural",
+        "first_mention": {
+          "chapter": 4,
+          "verse": 1
+        },
+        "last_mention": {
+          "chapter": 4,
+          "verse": 25
+        }
+      },
+      "family": {
+        "father": "adam",
+        "mother": "eve",
+        "spouse": "wife_cain",
+        "children": [
+          "enoch_cainite"
+        ],
+        "generation_from_adam": 2
+      },
+      "biography": {
+        "short": "El primer primogénito de la historia, labrador de la tierra, que asesinó por envidia a su hermano Abel e inició la línea antediluviana impía.",
+        "full": "Caín fue el hijo primogénito de Adán y Eva, nacido fuera del Huerto del Edén tras la Caída. Su madre exclamó gozosa al nacer: 'He adquirido varón con el favor de Jehová'. De adulto, Caín se dedicó a ser labrador de la tierra. Al transcurrir el tiempo, Caín presentó una ofrenda a Dios del fruto de la tierra. Sin embargo, su ofrenda carecía de fe, de sacrificio de sangre y de una actitud interna de rendición justa, por lo cual Jehová no miró con agrado su ofrenda a diferencia de la de su hermano Abel.\n\nConsumido por los celos, la envidia y el orgullo, el rostro de Caín se demudó. Dios se le acercó en gracia preventiva advirtiéndole: 'El pecado está a la puerta; con todo esto, a ti será su deseo, y tú te enseñorearás de él'. Caín ignoró la advertencia divina, engañó a su hermano Abel llevándolo al campo y cometió el primer fratricidio y homicidio de la historia humana.\n\nAl ser confrontado por Dios ('¿Dónde está Abel tu hermano?'), Caín respondió desafiante con frialdad impenitente: 'No sé. ¿Soy yo guarda de mi hermano?'. Dios lo maldijo de la tierra (que abrió su boca para recibir la sangre de su hermano) y lo condenó a ser vagabundo y fugitivo. Al quejarse de la severidad del castigo, Dios le puso una señal protectora para que nadie lo matara. Caín salió de la presencia de Jehová, se estableció en la tierra de Nod ('Errante'), edificó la primera ciudad impía llamándola Enoc y dio origen a una descendencia caracterizada por el progreso material y técnico (metalurgia, música) mezclado con la poligamia y la violencia desenfrenada (Lamec)."
+      },
+      "character_arc": "Primogénito prometedor → Cultivador religioso ególatra → Homicida impenitente de su hermano → Vagabundo expulsado y fundador de la civilización rebelde",
+      "personality_traits": [
+        "religioso ritualista sin fe",
+        "envidioso y orgulloso",
+        "homicida impenitente",
+        "fundador de cultura secularizada e impía"
+      ],
+      "theological_significance": "Caín representa la religión humana carnal que intenta acercarse a Dios según sus propios méritos sin arrepentimiento ni fe redentora. En el Nuevo Testamento, el 'camino de Caín' (Judas 11) se presenta como el prototipo del odio fraternal, el egoísmo y la rebelión contra Dios.",
+      "event_ids": [
+        "cain_abel_birth",
+        "cain_abel_offering",
+        "first_murder",
+        "cain_curse_nod"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 4,
+          "verse_start": 1,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 4:8",
+        "text": "Y dijo Caín a su hermano Abel: Vayamos al campo. Y aconteció que estando ellos en el campo, Caín se levantó contra su hermano Abel, y le mató."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 4:9",
+          "text": "Y Jehová dijo a Caín: ¿Dónde está Abel tu hermano? Y él respondió: No sé. ¿Soy yo guarda de mi hermano?"
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 11:4",
+        "1 Juan 3:12",
+        "Judas 1:11"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "abel",
+      "name": "Abel",
+      "name_meaning": "Soplo / Vapor / Vanidad",
+      "name_origin": "Hebreo: Hébel (derivado de Hával, 'vapor/aliento')",
+      "category": "first_martyr",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2,
+        "death_am": 129,
+        "lifespan": 127,
+        "notable_age": "Asesinado en su juventud por su hermano Caín antes del nacimiento de Set (AM 130)",
+        "first_mention": {
+          "chapter": 4,
+          "verse": 2
+        },
+        "last_mention": {
+          "chapter": 4,
+          "verse": 25
+        }
+      },
+      "family": {
+        "father": "adam",
+        "mother": "eve",
+        "spouse": null,
+        "children": [],
+        "generation_from_adam": 2
+      },
+      "biography": {
+        "short": "El segundo hijo de Adán y Eva, pastor de ovejas, primer hombre justo y primer mártir de la fe en la historia humana.",
+        "full": "Abel fue el segundo hijo nacido de la unión de Adán y Eva. Su nombre en hebreo (Hébel, 'vapor' o 'transitorio') fue trágicamente profético respecto a la brevedad de su vida terrenal. Mientras su hermano Caín escogió cultivar la tierra, Abel se dedicó al pastoreo de ovejas.\n\nCuando llegó el tiempo de presentar sacrificios ante Jehová, Abel ofreció con profunda fe y devoción reverente los primogénitos de sus ovejas, de lo más gordo de ellas. Al ofrecer la vida y la sangre de las primeras crías del rebaño, Abel reconoció la necesidad de un sacrificio sustitutivo de sangre inocente como expiación por el pecado, en consonancia con las túnicas de pieles recibidas por sus padres en el Edén.\n\nJehová miró con agrado a Abel y a su ofrenda, dando testimonio visible de que sus obras eran justas. Esta aprobación divina desató la ira furiosa y la envidia homicida de Caín. Llevado engañado al campo, Abel fue víctima del primer asesinato de la humanidad. Aunque su voz terrenal fue acallada violentamente, su sangre clamó desde la tierra exigiendo la justicia de Dios, convirtiéndose en el primer héroe y mártir de la fe registrado en las Sagradas Escrituras."
+      },
+      "character_arc": "Pastor humilde de ovejas → Adorador fiel mediante el sacrificio de fe → Mártir inocente asesinado → Testigo inmortal de la justicia que habla tras su muerte",
+      "personality_traits": [
+        "pastor humilde",
+        "adorador fiel de corazón puro",
+        "varón justo e intachable",
+        "mártir paciente"
+      ],
+      "theological_significance": "Abel encabeza la nómina de los héroes de la fe en Hebreos 11. Su sacrificio demostró que la justificación ante Dios requiere fe genuina y expiación por sangre. Jesucristo lo nombra el primer mártir justo de la historia (Mateo 23:35), y la Epístola a los Hebreos declara que la sangre del Nuevo Pacto de Jesús 'habla mejor que la de Abel' (Hebreos 12:24), pues mientras la sangre de Abel clamaba justicia y venganza, la sangre de Cristo clama perdón y misericordia.",
+      "event_ids": [
+        "cain_abel_birth",
+        "cain_abel_offering",
+        "first_murder"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 4,
+          "verse_start": 2,
+          "verse_end": 10
+        }
+      ],
+      "key_verse": {
+        "reference": "Hebreos 11:4",
+        "text": "Por la fe Abel ofreció a Dios más excelente sacrificio que Caín, por lo cual alcanzó testimonio de que era justo, dando Dios testimonio de sus ofrendas; y muerto, aún habla por ella."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 4:4",
+          "text": "Y Abel trajo también de los primogénitos de sus ovejas, de lo más gordo de ellas. Y miró Jehová con agrado a Abel y a su ofrenda."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 23:35",
+        "Lucas 11:51",
+        "Hebreos 11:4",
+        "Hebreos 12:24",
+        "1 Juan 3:12"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "seth",
+      "name": "Set",
+      "name_meaning": "Sustituido / Sustituto / Puesto",
+      "name_origin": "Hebreo: Shet (derivado de Shát, 'poner/establecer')",
+      "category": "antediluvian_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 130,
+        "death_am": 1042,
+        "lifespan": 912,
+        "notable_age": "Engendrado por Adán a los 130 años (AM 130); engendró a Enós a los 105 años (AM 235)",
+        "first_mention": {
+          "chapter": 4,
+          "verse": 25
+        },
+        "last_mention": {
+          "chapter": 5,
+          "verse": 8
+        }
+      },
+      "family": {
+        "father": "adam",
+        "mother": "eve",
+        "spouse": null,
+        "children": [
+          "enos"
+        ],
+        "generation_from_adam": 2
+      },
+      "biography": {
+        "short": "El tercer hijo de Adán y Eva, engendrado a la semejanza de Adán, a través de quien se inició la línea piadosa que conservó la fe y la promesa mesiánica.",
+        "full": "Set fue engendrado por Adán a los 130 años de edad, tras el asesinato de Abel. Eva reconoció la intervención providencial de Dios al nombrarlo Set (Shet), exclamando con gozo y fe renovada: 'Dios me ha sustituido otro hijo en lugar de Abel, a quien mató Caín'. El texto bíblico resalta de manera especial que Adán engendró a un hijo 'a su semejanza, conforme a su imagen', indicando la transmisión de la naturaleza humana y del pacto divino a través de su linaje.\n\nSet se convirtió en la cabeza de la línea patriarcal piadosa antediluviana, en contraposición directa a la línea rebelde y secularizada de Caín. A los 105 años, Set engendró a Enós (AM 235). El pasaje de Génesis 4:26 registra un hito histórico de vital trascendencia espiritual durante los días de Set y su hijo Enós: **'Entonces los hombres comenzaron a invocar el nombre de Jehová'**, marcando el nacimiento del culto público organizado y corporativo de la fe bíblica.\n\nSet vivió 912 años en total, siendo el segundo patriarca de la línea mesiánica directa que conecta a Adán con Noé y posteriormente con Abraham y Jesucristo. Durante sus más de nueve siglos de vida, Set presenció la edificación de las generaciones piadosas de Enoc y Matusalén, falleciendo en el año AM 1042, poco después de la muerte de Adán."
+      },
+      "character_arc": "Hijo prometido de sustitución → Patriarca piadoso de la fe verdadera → Fundador de la adoración corporativa a Jehová → Antepasado mesiánico intachable",
+      "personality_traits": [
+        "hombre piadoso",
+        "preservador del culto divino",
+        "fiel transmisor del pacto patriarcal"
+      ],
+      "theological_significance": "Set representa la preservación de la 'Simiente de la Promesa' (Génesis 3:15) frente al intento satánico de destruir la línea mesiánica mediante el asesinato de Abel. De la estirpe de Set nacen los grandes patriarcas piadosos (Enoc, Noé) y, en última instancia, el Mesías Salvador Jesucristo (Lucas 3:38).",
+      "event_ids": [
+        "birth_seth",
+        "invocation_jehovah"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 4,
+          "verse_start": 25,
+          "verse_end": 26
+        },
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 3,
+          "verse_end": 8
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 4:26",
+        "text": "Y a Set también le nació un hijo, y llamó su nombre Enós. Entonces los hombres comenzaron a invocar el nombre de Jehová."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 5:3",
+          "text": "Y vivió Adán ciento treinta años, y engendró un hijo a su semejanza, conforme a su imagen, y llamó su nombre Set."
+        }
+      ],
+      "cross_references_nt": [
+        "Lucas 3:38",
+        "1 Crónicas 1:1"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "adam",
+          "years_together": 800,
+          "note": "Set convivió 800 años con su padre Adán, absorbiendo toda la enseñanza original del Edén."
+        },
+        {
+          "with_person_id": "methuselah",
+          "years_together": 355,
+          "note": "Set convivió 355 años con Matusalén, transmitiendo la revelación sin fisuras."
+        }
+      ]
+    },
+    {
+      "id": "enoch",
+      "name": "Enoc",
+      "name_meaning": "Consagrado / Dedicado / Iniciado",
+      "name_origin": "Hebreo: Janók (derivado de Janák, 'consagrar/dedicar')",
+      "category": "antediluvian_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 622,
+        "death_am": 987,
+        "lifespan": 365,
+        "notable_age": "Séptimo patriarca desde Adán; no experimentó muerte física sino que fue traspuesto por Dios a los 365 años (AM 987)",
+        "first_mention": {
+          "chapter": 5,
+          "verse": 18
+        },
+        "last_mention": {
+          "chapter": 5,
+          "verse": 24
+        }
+      },
+      "family": {
+        "father": "jared",
+        "mother": null,
+        "spouse": null,
+        "children": [
+          "methuselah"
+        ],
+        "generation_from_adam": 7
+      },
+      "biography": {
+        "short": "Séptimo patriarca desde Adán que caminó íntimamente con Dios durante 300 años y fue traspuesto al cielo sin ver muerte.",
+        "full": "Enoc fue el séptimo patriarca en la genealogía piadosa desde Adán a través de Set. Nació en el año AM 622. A los 65 años engendró a Matusalén (AM 687). El acontecimiento determinante de la vida de Enoc ocurrió tras el nacimiento de su hijo Matusalén, momento a partir del cual **'caminó Enoc con Dios trescientos años'**.\n\nEn medio de una generación antediluviana progresivamente corrompida y apostata, Enoc mantuvo una íntima comunión de fe, santidad y obediencia continua con su Creador. Fue también un valiente profeta de juicio que denunció las impiedades de su época, profetizando la venida futura del Señor con sus santas decenas de millares para ejecutar juicio sobre los impíos (Judas 14-15).\n\nTras completar 365 años de vida terrenal terrena, ocurrió el milagro insigne de su traslación: **'Caminó, pues, Enoc con Dios, y desapareció, porque le llevó Dios'** (Génesis 5:24). Enoc no experimentó la muerte física biológica, sino que fue traspuesto directamente a la presencia gloriosa de Dios en cuerpo y alma, dejando un testimonio eterno de que es posible agradar a Dios mediante la fe."
+      },
+      "character_arc": "Patriarca antediluviano → Profeta y peregrino que camina íntimamente con Dios → Transfigurado y traspuesto vivo al cielo sin probar muerte",
+      "personality_traits": [
+        "santo e íntimo con Dios",
+        "profeta valiente de juicio",
+        "varón de fe intachable"
+      ],
+      "theological_significance": "Enoc es el modelo bíblico supremo de la comunión íntima por fe ('caminar con Dios') y un tipo glorioso del arrebatamiento de la Iglesia y de la victoria sobre la muerte. En el Nuevo Testamento, Hebreos 11:5 señala que antes de ser traspuesto tuvo testimonio de haber agradado a Dios, y Judas 14-15 rescata su profecía mesiánica de juicio.",
+      "event_ids": [
+        "genealogy_adam_noah",
+        "translation_enoch"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 18,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 5:24",
+        "text": "Caminó, pues, Enoc con Dios, y desapareció, porque le llevó Dios."
+      },
+      "additional_verses": [
+        {
+          "reference": "Hebreos 11:5",
+          "text": "Por la fe Enoc fue traspuesto para no ver muerte, y no fue hallado, porque lo traspuso Dios; y antes que fuese traspuesto, tuvo testimonio de haber agradado a Dios."
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 11:5",
+        "Judas 1:14-15",
+        "Lucas 3:37"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "adam",
+          "years_together": 308,
+          "note": "Enoc convivió 308 años con Adán, aprendiendo la historia sagrada directamente del primer hombre."
+        },
+        {
+          "with_person_id": "methuselah",
+          "years_together": 300,
+          "note": "Enoc instruyó a su hijo Matusalén durante 300 años de caminata divina antes de ser traspuesto."
+        }
+      ]
+    },
+    {
+      "id": "methuselah",
+      "name": "Matusalén",
+      "name_meaning": "Hombre de la jabalina / Cuando él muera, enviará (el juicio)",
+      "name_origin": "Hebreo: Metushélaj (derivado de Mút, 'morir', y Shálaj, 'enviar')",
+      "category": "antediluvian_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 687,
+        "death_am": 1656,
+        "lifespan": 969,
+        "notable_age": "El ser humano más longevo registrado en la historia (969 años); murió en el mismo año del Diluvio (AM 1656)",
+        "first_mention": {
+          "chapter": 5,
+          "verse": 21
+        },
+        "last_mention": {
+          "chapter": 5,
+          "verse": 27
+        }
+      },
+      "family": {
+        "father": "enoch",
+        "mother": null,
+        "spouse": null,
+        "children": [
+          "lamech"
+        ],
+        "generation_from_adam": 8
+      },
+      "biography": {
+        "short": "El hombre más longevo registrado en la historia bíblica (969 años), cuyo nombre profético señalaba que al morir vendría el juicio del Diluvio.",
+        "full": "Matusalén nació en el año AM 687, siendo hijo del profeta Enoc. Su nombre encierra un profundo misterio profético: 'Cuando él muera, será enviado' (haciendo referencia al juicio del Diluvio Universal). A los 187 años engendró a Lamec (AM 874), y vivió 782 años más engendrando hijos e hijas.\n\nMatusalén ostenta el récord indiscutible de la longevidad humana registrado en la Biblia: **969 años**. Su dilatada existencia es el monumento más elocuente de la paciencia y la longitud de la gracia de Dios hacia el mundo antediluviano, retrasando el juicio del Diluvio mientras Matusalén permanecía con vida.\n\nMatusalén sirvió como el eslabón cronológico e histórico insustituible entre el mundo edénico y el mundo postdiluviano. Convivió 243 años con Adán y 600 años con su nieto Noé. Murió en el año AM 1656, el año exacto en que comenzaron a abrirse las fuentes del grande abismo y las cataratas de los cielos para desencadenar el Diluvio Universal."
+      },
+      "character_arc": "Hijo del profeta Enoc → Eslabón patriarcal longevo de la revelación edénica → Testigo del juicio inminente → Guardián de la fe cuya muerte dio paso al Diluvio",
+      "personality_traits": [
+        "hombre de longevidad extraordinaria",
+        "testigo de la paciencia de Dios",
+        "fiel transmisor del linaje patriarcal"
+      ],
+      "theological_significance": "La inmensa longevidad de Matusalén (969 años) simboliza la paciencia de Dios que 'no quiere que ninguno perezca, sino que todos procedan al arrepentimiento' (2 Pedro 3:9). Su muerte en el año exacto del Diluvio evidencia la precisión absoluta de las profecías divinas.",
+      "event_ids": [
+        "genealogy_adam_noah",
+        "flood_start"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 21,
+          "verse_end": 27
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 5:27",
+        "text": "Fueron, pues, todos los días de Matusalén novecientos sesenta y nueve años; y murió."
+      },
+      "additional_verses": [
+        {
+          "reference": "1 Crónicas 1:3",
+          "text": "Enoc, Matusalén, Lamec,"
+        }
+      ],
+      "cross_references_nt": [
+        "Lucas 3:37",
+        "1 Pedro 3:20",
+        "2 Pedro 3:9"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "adam",
+          "years_together": 243,
+          "note": "Matusalén convivió 243 años con Adán, recibiendo directamente el testimonio de la Creación y el Edén."
+        },
+        {
+          "with_person_id": "noah",
+          "years_together": 600,
+          "note": "Matusalén convivió 600 años con su nieto Noé, ayudando en la edificación del arca y la predicación de justicia."
+        }
+      ]
+    },
+    {
+      "id": "noah",
+      "name": "Noé",
+      "name_meaning": "Descanso / Alivio / Consuelo",
+      "name_origin": "Hebreo: Nóaj (derivado de Núaj, 'descansar/reposar')",
+      "category": "flood_survivor",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 1056,
+        "death_am": 2006,
+        "lifespan": 950,
+        "notable_age": "Engendró a sus tres hijos a los 500 años; tenía 600 años cuando comenzó el Diluvio (AM 1656)",
+        "first_mention": {
+          "chapter": 5,
+          "verse": 29
+        },
+        "last_mention": {
+          "chapter": 9,
+          "verse": 29
+        }
+      },
+      "family": {
+        "father": "lamech",
+        "mother": null,
+        "spouse": "wife_noah",
+        "children": [
+          "shem",
+          "ham",
+          "japheth"
+        ],
+        "generation_from_adam": 10
+      },
+      "biography": {
+        "short": "El último patriarca antediluviano y primer padre del mundo postdiluviano, único hombre justo de su generación que construyó el Arca por fe.",
+        "full": "Noé fue el décimo patriarca desde Adán a través de la línea de Set, nacido en el año AM 1056. Su padre Lamec lo nombró Noé (Nóaj, 'Consuelo'), profetizando al nacer: 'Este nos aliviará de nuestras obras y del trabajo de nuestras manos, a causa de la tierra que Jehová maldijo'. En medio de una corrupción moral universal desenfrenada donde 'todo diseño de los pensamientos del corazón de los hombres era de continuo solamente el mal', Noé halló gracia ante los ojos de Jehová por ser un 'varón justo e íntegro en sus generaciones' que caminaba intachablemente con Dios.\n\nA los 480 años, Dios le reveló el juicio inminente del Diluvio Universal y le dio el diseño arquitectónico detallado del Arca para preservar la vida humana y animal. Durante 120 años, Noé actuó como 'pregonero de justicia' (2 Pedro 2:5) mientras construía audazmente la nave en tierra seca por fe obediente, aun ante la burla violenta del mundo sin fe. En el año 600 de su vida (AM 1656), Noé y su familia entraron en el Arca con las parejas de animales, y Jehová cerró la puerta tras ellos.\n\nTras sobrevivir al cataclismo del Diluvio durante 370 días en el arca, Noé desembarcó en los montes de Ararat y su primer acto fue edificar un altar a Jehová y ofrecer sacrificios de animales limpios. Dios olió el olor grato e hizo con Noé el **Pacto Noéico** incondicional, prometiendo no volver a destruir la tierra con agua y poniendo el Arco Iris como señal eterna. Posteriormente fue agricultor, plantó una viña, sufrió el incidente del vino y de la falta de respeto de su hijo Cam, y profetizó la bendición de Sem y Jafet. Noé vivió 350 años después del Diluvio, falleciendo a los 950 años en el año AM 2006, habiendo conocido a Abraham."
+      },
+      "character_arc": "Hombre justo en una generación perversa → Pregonero de justicia y constructor del Arca → Redimido sobreviviente del Diluvio → Receptor del Pacto del Arco Iris y segundo padre de la humanidad",
+      "personality_traits": [
+        "varón justo e íntegro",
+        "obediente incondicional por fe",
+        "pregonero de justicia paciente",
+        "adorador de altar y padre patriarcal"
+      ],
+      "theological_significance": "Noé es la figura patriarcal cumbre del juicio y la preservación providencial. El Arca de Noé es el tipo del Antiguo Testamento más transparente de la salvación en Jesucristo: así como el Arca fue el único medio para escapar de la ira divina en el agua, Cristo es el único refugio para librarse de la ira venidera. En el NT se destaca su fe (Hebreos 11:7) y su papel como pregón de arrepentimiento.",
+      "event_ids": [
+        "humanity_corruption",
+        "god_speaks_noah",
+        "flood_start",
+        "ark_lands_ararat",
+        "noahic_covenant",
+        "noah_drunkenness_curse"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 28,
+          "verse_end": 32
+        },
+        {
+          "book": "Génesis",
+          "chapter": 6,
+          "verse_start": 1,
+          "verse_end": 22
+        },
+        {
+          "book": "Génesis",
+          "chapter": 7,
+          "verse_start": 1,
+          "verse_end": 24
+        },
+        {
+          "book": "Génesis",
+          "chapter": 8,
+          "verse_start": 1,
+          "verse_end": 22
+        },
+        {
+          "book": "Génesis",
+          "chapter": 9,
+          "verse_start": 1,
+          "verse_end": 29
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 6:9",
+        "text": "Estas son las generaciones de Noé: Noé, varon justo, era perfecto en sus generaciones; con Dios caminó Noé."
+      },
+      "additional_verses": [
+        {
+          "reference": "Hebreos 11:7",
+          "text": "Por la fe Noé, cuando fue advertido por Dios acerca de cosas que aún no se veían, con temor preparó el arca en que su casa se salvase; y por esa fe condenó al mundo, y fue hecho heredero de la justicia que viene por la fe."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 24:37-38",
+        "Lucas 17:26-27",
+        "Hebreos 11:7",
+        "1 Pedro 3:20",
+        "2 Pedro 2:5"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "methuselah",
+          "years_together": 600,
+          "note": "Noé convivió 600 años con su abuelo Matusalén hasta el año del Diluvio."
+        },
+        {
+          "with_person_id": "abraham",
+          "years_together": 58,
+          "note": "Noé convivió 58 años con Abraham (nacido en AM 1948), transmitiéndole viva la historia del Diluvio y la Creación."
+        }
+      ]
+    },
+    {
+      "id": "shem",
+      "name": "Sem",
+      "name_meaning": "Nombre / Renombre / Fama",
+      "name_origin": "Hebreo: Shem ('nombre/reputación')",
+      "category": "postdiluvian_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 1558,
+        "death_am": 2158,
+        "lifespan": 600,
+        "notable_age": "Tenía 98 años al comenzar el Diluvio; engendró a Arfaxad dos años después del Diluvio a los 100 años (AM 1658)",
+        "first_mention": {
+          "chapter": 5,
+          "verse": 32
+        },
+        "last_mention": {
+          "chapter": 11,
+          "verse": 11
+        }
+      },
+      "family": {
+        "father": "noah",
+        "mother": "wife_noah",
+        "spouse": null,
+        "children": [
+          "arfaxad",
+          "elam",
+          "asshur",
+          "lud",
+          "aram"
+        ],
+        "generation_from_adam": 11
+      },
+      "biography": {
+        "short": "Hijo primogénito piadoso de Noé y ancestro de las naciones semitas, de cuyo linaje nacieron Abraham, Israel y el Mesías.",
+        "full": "Sem nació en el año AM 1558, siendo el primogénito piadoso de Noé. Vivió casi un siglo en el mundo antediluviano antes del cataclismo del Diluvio. A los 98 años entró en el Arca junto a su esposa, su padre Noé y sus dos hermanos Jafet y Cam, sobreviviendo a la destrucción del juicio universal.\n\nTras salir del arca, Sem demostró una piedad e integridad filiar intachable cuando su padre Noé se embriagó involuntariamente. En contraste con la falta de respeto deshonrosa de Cam, Sem y su hermano Jafet tomaron un manto sobre sus hombros y caminaron de espaldas para cubrir con la máxima reverencia la desnudez de su padre. Al despertar Noé, pronunció la célebre bendición profética: **'Bendito por Jehová mi Dios sea Sem, y sea Canaán su siervo. Engrandezca Dios a Jafet, y habite en las tiendas de Sem'** (Génesis 9:26-27), estableciendo que la presencia de Dios y la revelación del pacto habitarían de manera singular en la descendencia de Sem.\n\nSem es la cabeza fundamental de los pueblos semitas (hebreos, arameos, asirios). Engendró a Arfaxad a los 100 años y vivió 500 años más después del Diluvio. Sem sobrevivió durante diez generaciones patriarcales completas, siendo testigo de la dispersión de Babel, del llamado de Abraham, de la destrucción de Sodoma y del nacimiento de Isaac y Jacob. Murió en el año AM 2158 a los 600 años de edad."
+      },
+      "character_arc": "Superviviente piadoso del Diluvio → Hijo reverente bendecido por Noé → Cabeza patriarcal del linaje semita → Antepasado directo de Abraham y Cristo",
+      "personality_traits": [
+        "piadoso y reverente",
+        "respetuoso con las autoridades del pacto",
+        "guardián de la revelación monoteísta"
+      ],
+      "theological_significance": "Sem es el heredero directo de la promesa mesiánica dentro del mundo postdiluviano. La profecía de Noé declara que Jehová es el 'Dios de Sem', indicando que la línea de la simiente prometida de la mujer (Génesis 3:15) continuaría exclusivamente a través de los semitas hasta culminar en Abraham, David y Jesucristo.",
+      "event_ids": [
+        "flood_start",
+        "noahic_covenant",
+        "noah_drunkenness_curse",
+        "table_of_nations",
+        "shem_genealogy"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 5,
+          "verse_start": 32,
+          "verse_end": 32
+        },
+        {
+          "book": "Génesis",
+          "chapter": 9,
+          "verse_start": 23,
+          "verse_end": 27
+        },
+        {
+          "book": "Génesis",
+          "chapter": 11,
+          "verse_start": 10,
+          "verse_end": 11
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 9:26",
+        "text": "Dijo también: Bendito por Jehová mi Dios sea Sem, y sea Canaán su siervo."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 11:10",
+          "text": "Estas son las generaciones de Sem: Sem, de edad de cien años, engendró a Arfaxad, dos años después del diluvio."
+        }
+      ],
+      "cross_references_nt": [
+        "Lucas 3:36",
+        "Hebreos 7:1"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "abraham",
+          "years_together": 175,
+          "note": "Sem vivió durante toda la vida terrenal de Abraham (175 años), siendo el gran maestro patriarcal de la revelación de Dios."
+        },
+        {
+          "with_person_id": "jacob",
+          "years_together": 50,
+          "note": "Sem convivió 50 años con Jacob (nacido en AM 2108), conectando cuatro épocas históricas sin mediadores."
+        }
+      ]
+    },
+    {
+      "id": "abraham",
+      "name": "Abraham",
+      "name_meaning": "Padre de una multitud de naciones (Originalmente Abram: Padre enaltado)",
+      "name_origin": "Hebreo: Avrahám (derivado de Av, 'padre', y Rahám, 'multitud')",
+      "category": "covenant_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 1948,
+        "death_am": 2123,
+        "lifespan": 175,
+        "notable_age": "Llamado por Dios a los 75 años en Harán (AM 2023); nacimiento de Isaac a los 100 años (AM 2048)",
+        "first_mention": {
+          "chapter": 11,
+          "verse": 26
+        },
+        "last_mention": {
+          "chapter": 25,
+          "verse": 10
+        }
+      },
+      "family": {
+        "father": "terah",
+        "mother": null,
+        "spouse": "sarah",
+        "children": [
+          "isaac",
+          "ishmael"
+        ],
+        "generation_from_adam": 20
+      },
+      "biography": {
+        "short": "El Padre de la Fe y amigo de Dios, llamado fuera de Ur de los Caldeos, receptor del Pacto Abrahámico incondicional.",
+        "full": "Abraham (originalmente Abram) nació en Ur de los Caldeos en el año AM 1948, siendo hijo de Taré. Criado en una cultura idolátrica mesopotámica, recibió el llamado soberano del Dios de la gloria: **'Vete de tu tierra y de tu parentela, y de la casa de tu padre, a la tierra que te mostraré. Y haré de ti una nación grande, y te bendeciré... y serán benditas en ti todas las familias de la tierra'** (Génesis 12:1-3). A los 75 años, en obediencia por fe, salió de Harán hacia Canaán junto a su esposa Sarai y su sobrino Lot.\n\nEn Canaán, Abraham vivió como peregrino en tiendas, edificando altares a Jehová en Siquem, Betel y Hebrón. Atravesó pruebas de fe severas: el descenso a Egipto por hambruna, la separación de Lot, el rescate militar de su sobrino y el diezmo al rey-sacerdote Melquisedec en Salem. En Génesis 15, Dios ratificó el **Pacto Abrahámico** mediante un sacrificio de animales cortados; el pasaje registra el fundamento de la salvación: **'Y creyó a Jehová, y le fue contado por justicia'** (Génesis 15:6).\n\nTras sucumbir temporalmente al plan humano engendrando a Ismael con Agar a los 86 años, Dios se le reveló a los 99 años como **El Shaddai** (Dios Todopoderoso), cambió su nombre a Abraham ('Padre de multitudes'), instituyó la circuncisión y le anunció el nacimiento de Isaac. Intercedió audazmente ante Dios por Sodoma y presenció su juicio. A los 100 años experimentó el nacimiento milagroso del hijo de la promesa, Isaac. La cúspide de su fe ocurrió en el monte Moriah (Génesis 22), cuando estuvo dispuesto a ofrecer en sacrificio a Isaac, donde Dios proveyó el carnero sustituto y reveló su nombre **Jehová-Jireh** ('El Señor proveerá'). Compró la cueva de Macpela para sepultar a Sara y envió a su criado a buscar esposa para Isaac. Murió 'en buena vejez, anciano y lleno de días' a los 175 años (AM 2123)."
+      },
+      "character_arc": "Idólatra llamado de Ur → Peregrino y adorador en Canaán → Creyente justificado por fe → Padre de naciones purificado en el monte Moriah y Amigo de Dios",
+      "personality_traits": [
+        "padre de la fe obediente",
+        "hospitalario y generoso",
+        "intercesor audaz e intimo con Dios",
+        "amigo de Dios (Amigo del Altísimo)"
+      ],
+      "theological_significance": "Abraham es la figura pilar de la fe judeocristiana. El Pacto Abrahámico (Tierra, Nación, Bendición universal) es el eje de toda la teología de la redención. Pablo cita a Abraham en Romanos 4 y Gálatas 3 como el prototipo suprema de la **Justificación por la sola Fe**, demostrando que la promesa no fue por la ley ni por las obras, sino por la fe que une al creyente con Jesucristo, la Simiente suprema de Abraham.",
+      "event_ids": [
+        "terah_moves",
+        "abraham_call",
+        "abraham_canaan",
+        "lot_rescue",
+        "melchizedek",
+        "abrahamic_covenant",
+        "covenant_circumcision",
+        "sodom_intercession",
+        "isaac_birth",
+        "binding_of_isaac",
+        "sarah_death_burial",
+        "abraham_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 12,
+          "verse_start": 1,
+          "verse_end": 20
+        },
+        {
+          "book": "Génesis",
+          "chapter": 15,
+          "verse_start": 1,
+          "verse_end": 21
+        },
+        {
+          "book": "Génesis",
+          "chapter": 17,
+          "verse_start": 1,
+          "verse_end": 27
+        },
+        {
+          "book": "Génesis",
+          "chapter": 22,
+          "verse_start": 1,
+          "verse_end": 19
+        },
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 1,
+          "verse_end": 10
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 15:6",
+        "text": "Y creyó a Jehová, y le fue contado por justicia."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 12:2-3",
+          "text": "Y haré de ti una nación grande, y te bendeciré... y serán benditas en ti todas las familias de la tierra."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 4:1-25",
+        "Gálatas 3:6-18",
+        "Hebreos 11:8-19",
+        "Santiago 2:21-23"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "shem",
+          "years_together": 175,
+          "note": "Abraham convivió los 175 años de su vida con el patriarca postdiluviano Sem."
+        },
+        {
+          "with_person_id": "jacob",
+          "years_together": 15,
+          "note": "Abraham convivió 15 años con su nieto Jacob, transmitiéndole la bendición del pacto."
+        }
+      ]
+    },
+    {
+      "id": "sarah",
+      "name": "Sara",
+      "name_meaning": "Princesa / Madre de Reyes (Originalmente Sarai: Mi princesa / Contenciosa)",
+      "name_origin": "Hebreo: Saráh (derivado de Sar, 'príncipe/gobernante')",
+      "category": "covenant_matriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 1958,
+        "death_am": 2085,
+        "lifespan": 127,
+        "notable_age": "Diez años menor que Abraham; dio a luz a Isaac a los 90 años en la vejez; única mujer cuya edad exacta de muerte se registra en la Biblia (127 años)",
+        "first_mention": {
+          "chapter": 11,
+          "verse": 29
+        },
+        "last_mention": {
+          "chapter": 23,
+          "verse": 19
+        }
+      },
+      "family": {
+        "father": "terah",
+        "mother": null,
+        "spouse": "abraham",
+        "children": [
+          "isaac"
+        ],
+        "generation_from_adam": 20
+      },
+      "biography": {
+        "short": "La matriarca suprema de Israel, esposa de Abraham y madre milagrosa de Isaac a los 90 años de edad.",
+        "full": "Sara (originalmente Sarai) nació diez años después de Abraham en Mesopotamia, siendo medio hermana de su esposo por parte de padre (Génesis 20:12). Durante décadas sufrió el estigma doloroso de la esterilidad en una cultura donde la descendencia era la máxima honra. Acompañó fielmente a Abraham en su migración por fe desde Ur y Harán hacia Canaán, habitando en tiendas como peregrina.\n\nPoseedora de una belleza extraordinaria, enfrentó situaciones de peligro moral extremo en Egipto y Gerar, donde Abraham la presentó como su hermana por temor humano. En ambas ocasiones, Dios intervino milagrosamente mediante plagas y visiones para proteger su pureza y la integridad de la línea de la promesa. Tras 25 años de espera en Canaán, impulsó impacientemente a Abraham a unirse a su sierva Agar para engendrar a Ismael, lo que generó fuertes conflictos domésticos.\n\nA los 89 años, Dios le cambió su nombre de Sarai a Sara ('Princesa'), prometiendo que sería 'madre de naciones y reyes de pueblos saldrán de ella'. Aunque inicialmente se rió con incredulidad detrás de la tienda al escuchar el anuncio de los visitantes celestiales ('¿Habré de tener deleite siendo ya vieja?'), fortaleció su fe creyendo fiel al que lo había prometido. A los 90 años dio a luz milagrosamente a Isaac ('Risa'), exclamando: 'Dios me ha hecho reír, y cualquiera que lo oyere, se reirá conmigo'. Murió a los 127 años en Quiriat-arba (Hebrón) y fue sepultada en la cueva de Macpela, la primera posesión legal judía en la Tierra Prometida."
+      },
+      "character_arc": "Matriarca estéril doliente → Esposa fiel expuesta al peligro y protegida por Dios → Creyente fortalecida en la fe por encima del vientre muerto → Madre dichosa de la promesa",
+      "personality_traits": [
+        "hermosa y distinguida",
+        "fiel y sumisa a su esposo",
+        "humana y protectora de su hijo",
+        "matriarca triunfante por fe"
+      ],
+      "theological_significance": "Sara es la única mujer incluida en el 'Salón de la Fama de la Fe' en Hebreos 11 por haber considerado fiel a Dios para dar a luz a pesar de la vejez. En Gálatas 4:21-31, Pablo utiliza a Sara como alegoría de la **Jerusalén de Arriba**, libre y madre de los hijos del Nuevo Pacto de la gracia, en contraste con Agar (el pacto de la ley y la esclavitud).",
+      "event_ids": [
+        "abraham_call",
+        "abraham_egypt",
+        "hagar_ishmael",
+        "heavenly_visitors",
+        "isaac_birth",
+        "hagar_expelled",
+        "sarah_death_burial"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 11,
+          "verse_start": 29,
+          "verse_end": 31
+        },
+        {
+          "book": "Génesis",
+          "chapter": 17,
+          "verse_start": 15,
+          "verse_end": 21
+        },
+        {
+          "book": "Génesis",
+          "chapter": 18,
+          "verse_start": 9,
+          "verse_end": 15
+        },
+        {
+          "book": "Génesis",
+          "chapter": 21,
+          "verse_start": 1,
+          "verse_end": 12
+        },
+        {
+          "book": "Génesis",
+          "chapter": 23,
+          "verse_start": 1,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Hebreos 11:11",
+        "text": "Por la fe también la misma Sara, siendo estéril, recibió fuerza para concebir; y dio a luz aun fuera del tiempo de la edad, porque creyó que era fiel quien lo había prometido."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 21:6",
+          "text": "Entonces dijo Sara: Dios me ha hecho reír, y cualquiera que lo oyere, se reirá conmigo."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 4:19",
+        "Gálatas 4:22-31",
+        "Hebreos 11:11",
+        "1 Pedro 3:6"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "lot",
+      "name": "Lot",
+      "name_meaning": "Velo / Cobertura / Oculto",
+      "name_origin": "Hebreo: Lot ('cobertura/envoltura')",
+      "category": "patriarch_relative",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 1940,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Sobrino de Abraham, hijo de Harán; rescatado de Sodoma antes de su destrucción en fuego",
+        "first_mention": {
+          "chapter": 11,
+          "verse": 27
+        },
+        "last_mention": {
+          "chapter": 19,
+          "verse": 38
+        }
+      },
+      "family": {
+        "father": "haran_brother",
+        "mother": null,
+        "spouse": "wife_lot",
+        "children": [
+          "moab",
+          "ben_ammi"
+        ],
+        "generation_from_adam": 20
+      },
+      "biography": {
+        "short": "Sobrino de Abraham que escogió la fértil llanura del Jordán cerca de Sodoma, rescatado por fe y misericordia antes de la destrucción del fuego.",
+        "full": "Lot fue hijo de Harán (hermano de Abraham) y sobrino del patriarca. Tras quedar huérfano en Ur de los Caldeos, fue adoptado en la familia de Abraham, acompañándolo en su viaje hacia Canaán y Egipto. Al regresar de Egipto con grandes riquezas en ganado y tiendas, se desató una contienda entre los pastores de Abraham y los de Lot por la escasez de pastos.\n\nAnte la propuesta generosa de Abraham de dividirse pacíficamente, Lot alzó sus ojos y escogió egoístamente toda la llanura del Jordán por su fertilidad parecida al huerto de Jehová, sin considerar la maldad espiritual extrema de sus habitantes. Fue asentando sus tiendas gradualmente hasta habitar dentro de la perversa ciudad de **Sodoma**. Vivió allí el trauma de ser capturado en la guerra de los cuatro reyes mesopotámicos, siendo liberado audazmente por el ejército particular de Abraham.\n\nA pesar de ser un varón justo que abrumaba su alma cada día viendo las abominaciones de Sodoma (2 Pedro 2:7-8), llegó a ser un magistrado acomodado a la puerta de la ciudad. Cuando dos ángeles celestiales llegaron a Sodoma para destruirla, Lot los hospedó y los defendió. A la mañana siguiente, ante su vacilación, los ángeles lo tomaron de la mano a él, a su esposa y a sus dos hijas por la misericordia de Dios, sacándolos de la ciudad antes de que cayera fuego y azufre del cielo. Su esposa miró atrás contra el mandato divino y se convirtió en estatua de sal. Lot se refugió atemorizado en una cueva en Zoar, donde sus dos hijas lo embriagaron e incesto engendraron a Moab y Ben-ammi, ancestros de los moabitas y amonitas."
+      },
+      "character_arc": "Compañero de peregrinaje con Abraham → Hombre de fe que elige por la vista y se acomoda en Sodoma → Rescatado por la misericordia divina → Padre doliente de naciones enemigas en una cueva",
+      "personality_traits": [
+        "creyente justo pero vacilante",
+        "motivado por la vista material",
+        "hospitalario en medio del paganismo",
+        "rescatado por intercesión y gracia"
+      ],
+      "theological_significance": "Lot representa el contraste trágico del 'creyente carnal' o comprometido con el mundo. Aunque retenía la fe y la justicia básica (2 Pedro 2:7-8), sus decisiones basadas en la codicia visual resultaron en la pérdida de su familia, sus bienes y su testimonio. Jesucristo advierte severamente a la Iglesia: **'Acordaos de la mujer de Lot'** (Lucas 17:32).",
+      "event_ids": [
+        "lot_separation",
+        "lot_rescue",
+        "sodom_intercession",
+        "sodom_destruction",
+        "lot_daughters"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 11,
+          "verse_start": 27,
+          "verse_end": 31
+        },
+        {
+          "book": "Génesis",
+          "chapter": 13,
+          "verse_start": 1,
+          "verse_end": 13
+        },
+        {
+          "book": "Génesis",
+          "chapter": 14,
+          "verse_start": 11,
+          "verse_end": 16
+        },
+        {
+          "book": "Génesis",
+          "chapter": 19,
+          "verse_start": 1,
+          "verse_end": 38
+        }
+      ],
+      "key_verse": {
+        "reference": "2 Pedro 2:7-8",
+        "text": "Y libró al justo Lot, abrumado por la nefanda conducta de los malvados (porque este justo, que moraba entre ellos, afligía cada día su alma justa viendo y oyendo los hechos inicuos de ellos)."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 13:10",
+          "text": "Y alzó Lot sus ojos, y vio toda la llanura del Jordán, que toda ella era de riego... como el huerto de Jehová, como la tierra de Egipto."
+        }
+      ],
+      "cross_references_nt": [
+        "Lucas 17:28-32",
+        "2 Pedro 2:7-9"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "hagar",
+      "name": "Agar",
+      "name_meaning": "Fuga / Huidiza / Emigración",
+      "name_origin": "Egipcio / Hebreo: Hagár ('huyendo/emigración')",
+      "category": "matriarch_secondary",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2010,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Sierva egipcia adquirida en Egipto; madre de Ismael cuando Abraham tenía 86 años (AM 2034)",
+        "first_mention": {
+          "chapter": 16,
+          "verse": 1
+        },
+        "last_mention": {
+          "chapter": 21,
+          "verse": 21
+        }
+      },
+      "family": {
+        "father": null,
+        "mother": null,
+        "spouse": "abraham",
+        "children": [
+          "ishmael"
+        ],
+        "generation_from_adam": 20
+      },
+      "biography": {
+        "short": "Sierva egipcia de Sara que engendró a Ismael, consolada milagrosamente en el desierto por el Dios que Ve (El-roi).",
+        "full": "Agar fue una mujer egipcia que probablemente ingresó como sierva a la casa de Abram durante su estancia en Egipto a causa de la hambruna (Génesis 12). Tras diez años de esterilidad de Sara en Canaán, Sara entregó a Agar por mujer a Abram para tener hijos de ella. Al quedar encinta, Agar comenzó a mirar con desprecio a su señora Sara, desatando un duro conflicto doméstico que la llevó a huir desamparada hacia el desierto rumbo a Shur.\n\nJunto a una fuente de agua en el desierto, el Ángel de Jehová se le apareció por primera vez en la Biblia a una mujer extranjera, ordenándole regresar y someterse a Sara, al tiempo que le prometió una descendencia innumerable a través de su hijo **Ismael** ('Dios oye'). Asombrada y consolada, Agar invocó el nombre de Jehová llamándole **El-roi** ('Tú eres el Dios que me ve'), exclamando: '¿No he visto también aquí al que me ve?'.\n\nCatorce años después del nacimiento de Ismael, cuando Isaac fue destetado, Ismael se burlaba del hijo de la promesa. Sara exigió su expulsión definitiva. Abraham la despedazó enviándola al desierto de Beerseba con pan y un odre de agua. Cuando el agua se agotó y el muchacho estaba a punto de morir de sed bajo un arbusto, Agar se alejó a tiro de arco para no ver morir al niño y lloró a gritos. Dios escuchó la voz del muchacho, el Ángel de Dios abrió los ojos de Agar para ver un pozo de agua viva y le reiteró la promesa de hacer de Ismael una gran nación. Agar proveyó esposa egipcia para Ismael en el desierto de Parán."
+      },
+      "character_arc": "Sierva extranjera descartable → Madre embarazada en fuga consolada por Dios (El-roi) → Madre expulsada en el desierto salvada por el agua viva de Dios",
+      "personality_traits": [
+        "sierva afligida",
+        "madre abnegada y doliente",
+        "receptora de revelaciones de gracia divina",
+        "testigo de El-roi"
+      ],
+      "theological_significance": "Agar demuestra la misericordia soberana e incluyente de Dios hacia los marginados y extranjeros. En la alegoría apostólica de Gálatas 4:21-31, Agar representa el **Pacto del Monte Sinaí** (la Ley), que engendra hijos para esclavitud, en contraste con Sara, que representa la gracia y la libertad de la Jerusalén celestial.",
+      "event_ids": [
+        "hagar_ishmael",
+        "hagar_expelled"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 16,
+          "verse_start": 1,
+          "verse_end": 16
+        },
+        {
+          "book": "Génesis",
+          "chapter": 21,
+          "verse_start": 9,
+          "verse_end": 21
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 16:13",
+        "text": "Entonces llamó el nombre de Jehová que hablaba con ella: Tú eres Dios que ve; porque dijo: ¿No he visto también aquí al que me ve?"
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 21:19",
+          "text": "Entonces Dios le abrió los ojos, y vio un pozo de agua; y fue y llenó el odre de agua, y dio de beber al muchacho."
+        }
+      ],
+      "cross_references_nt": [
+        "Gálatas 4:24-30"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "ishmael",
+      "name": "Ismael",
+      "name_meaning": "Dios oye / Dios escuchará",
+      "name_origin": "Hebreo: Yishmaél (derivado de Shamá, 'oír', y El, 'Dios')",
+      "category": "patriarch_relative",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2034,
+        "death_am": 2171,
+        "lifespan": 137,
+        "notable_age": "Nacido cuando Abraham tenía 86 años (AM 2034); circuncidado a los 13 años (AM 2047); murió a los 137 años (AM 2171)",
+        "first_mention": {
+          "chapter": 16,
+          "verse": 11
+        },
+        "last_mention": {
+          "chapter": 25,
+          "verse": 17
+        }
+      },
+      "family": {
+        "father": "abraham",
+        "mother": "hagar",
+        "spouse": null,
+        "children": [
+          "nebajot",
+          "kedar"
+        ],
+        "generation_from_adam": 21
+      },
+      "biography": {
+        "short": "Hijo primogénito de Abraham y Agar, padre de 12 príncipes y progenitor de las naciones árabes.",
+        "full": "Ismael nació en el año AM 2034, siendo el primogénito de Abraham a los 86 años de edad a través de la sierva egipcia Agar. Su nombre fue ordenado directamente por el Ángel de Jehová antes de su nacimiento: 'Llamarás su nombre Ismael, porque Jehová ha oído tu aflicción'. La profecía divina anunció que sería un hombre fiero ('asno montés'), su mano contra todos y la mano de todos contra él, habitando delante de todos sus hermanos.\n\nIsmael creció durante 14 años como el único hijo y presunto heredero de Abraham. A los 13 años fue circuncidado junto a su padre al instituirse el pacto de la circuncisión (Génesis 17). Al nacer el hijo de la promesa, Isaac, Ismael fue desheredado de la herencia del pacto abrahámico, aunque Dios prometió a Abraham bendecir a Ismael haciéndolo fructificar y engendrar 12 príncipes y una gran nación por ser descendencia de Abraham.\n\nTras ser expulsado junto a su madre Agar al desierto de Parán, Dios lo protegió, creció y se convirtió en un diestro arquero del desierto. Tuvo 12 hijos que se convirtieron en príncipes y jefes de tribus (Nebaiot, Cedar, Adbeel, Mibsam, etc.) desde Havila hasta Shur. Ismael mantuvo una relación de respeto posterior con su hermano Isaac, uniéndose a él para sepultar con honores a su padre Abraham en la cueva de Macpela (Génesis 25:9). Ismael vivió 137 años y fue reunido a su pueblo en el año AM 2171."
+      },
+      "character_arc": "Primogénito presuntivo del plan humano → Expulsado al desierto y preservado por Dios → Arquero del desierto y padre de 12 príncipes → Hijo reconciliado en el funeral de su padre",
+      "personality_traits": [
+        "independiente y fiero arquero",
+        "padre de 12 príncipes",
+        "bendecido temporalmente por causa de Abraham"
+      ],
+      "theological_significance": "Ismael representa al 'hijo según la carne' en contraste con Isaac, el 'hijo según la promesa'. Pablo en Gálatas 4 enseña que intentar alcanzar las promesas de Dios mediante el esfuerzo humano (la carne) engendra esclavitud espiritual, mientras que la verdadera herencia viene por la fe en la promesa de la gracia.",
+      "event_ids": [
+        "hagar_ishmael",
+        "covenant_circumcision",
+        "hagar_expelled",
+        "abraham_death",
+        "ishmael_genealogy"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 16,
+          "verse_start": 11,
+          "verse_end": 16
+        },
+        {
+          "book": "Génesis",
+          "chapter": 17,
+          "verse_start": 18,
+          "verse_end": 26
+        },
+        {
+          "book": "Génesis",
+          "chapter": 21,
+          "verse_start": 8,
+          "verse_end": 21
+        },
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 8,
+          "verse_end": 18
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 17:20",
+        "text": "Y en cuanto a Ismael, también te he oído; he aquí que le bendeciré, y le haré fructificar y multiplicar mucho en gran manera; doce príncipes engendrará, y haré de él una gran nación."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 16:12",
+          "text": "Y él será hombre fiero; su mano será contra todos, y la mano de todos contra él, y delante de todos sus hermanos habitará."
+        }
+      ],
+      "cross_references_nt": [
+        "Gálatas 4:22-31"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "isaac",
+      "name": "Isaac",
+      "name_meaning": "El que ríe / Risa de gozo",
+      "name_origin": "Hebreo: Yitzják (derivado de Tzaják, 'reír')",
+      "category": "covenant_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2048,
+        "death_am": 2228,
+        "lifespan": 180,
+        "notable_age": "Nació cuando Abraham tenía 100 años y Sara 90 (AM 2048); atado en el monte Moriah (~25 años); se casó a los 40 años; engendró gemelos a los 60 años; murió a los 180 años (AM 2228)",
+        "first_mention": {
+          "chapter": 17,
+          "verse": 19
+        },
+        "last_mention": {
+          "chapter": 35,
+          "verse": 29
+        }
+      },
+      "family": {
+        "father": "abraham",
+        "mother": "sarah",
+        "spouse": "rebekah",
+        "children": [
+          "esau",
+          "jacob"
+        ],
+        "generation_from_adam": 21
+      },
+      "biography": {
+        "short": "El hijo milagroso de la promesa, segundo patriarca de Israel, figura del sacrificio atado en el monte Moriah (Akedáh).",
+        "full": "Isaac nació en el año AM 2048 en Beerseba, siendo el hijo milagroso prometido por Dios a Abraham y Sara en su vejez (100 y 90 años respectivamente). Su nombre fue dado por Dios a Abraham antes de concebir ('Yitzják', 'Risa'), en conmemoración de la risa de asombro y el gozo del cumplimiento de la promesa divina.\n\nEn su juventud viva, Isaac fue llevado por su padre Abraham al monte Moriah para ser ofrecido en sacrificio probado (la **Akedáh**, Génesis 22). En un acto de profunda sumisión por fe, Isaac llevó la leña en su espalda, se dejó atar sobre el altar sin resistencia y presenció la provisión milagrosa del carnero sustituto provisto por Dios en el espinar. Tras la muerte de Sara, a los 40 años, se casó con Rebeca, enviada desde Mesopotamia por la intercesión y guía del criado Eliezer, hallando consuelo tras la muerte de su madre.\n\nTras 20 años de esterilidad de Rebeca, oró apasionadamente a Jehová y nacieron los gemelos Esaú y Jacob (AM 2168). Durante una severa hambruna en Canaán, Dios le ordenó permanecer en la tierra y le renovó incondicionalmente las promesas del Pacto Abrahámico. Isaac sembró en Gerar y cosechó el ciento por uno, prosperando tanto que los filisteos le envidiaron y cegaron sus pozos. Tras pacificar los conflictos por el agua (Esek, Sitna y Rehobot), hizo pacto con Abimelec en Beerseba. En su vejez, ciego y engañado por la estratagema de Rebeca y Jacob, otorgó la bendición patriarcal primaria a Jacob, reconociendo posteriormente la soberanía de la elección de Dios ('Yo le bendije, y él será bendito'). Murió a los 180 años en Hebrón (el patriarca de más larga vida entre los tres grandes) y fue sepultado por sus hijos Esaú y Jacob."
+      },
+      "character_arc": "Hijo milagroso de la promesa → Hijo atado pacientemente en el altar de Moriah → Patriarca próspero y pacificador de pozos → Padre ciego que confirma la bendición soberana a Jacob",
+      "personality_traits": [
+        "sumiso y meditabundo",
+        "pacificador de conflictos",
+        "fiel a la promesa divina en Canaán",
+        "hombre de oración"
+      ],
+      "theological_significance": "Isaac es el tipo profético primario de Jesucristo en el Antiguo Testamento: 1) Hijo amado nacido por intervención sobrenatural del Espíritu; 2) Hijo que carga la madera de su propio sacrificio hacia el monte Moriah (Calvario); 3) Hijo que se somete voluntariamente al mandato del Padre para ser entregado en muerte; 4) Rescatado figurativamente como resucitado al tercer día (Hebreos 11:19). En Gálatas 4:28, los creyentes son llamados 'hijos de la promesa como Isaac'.",
+      "event_ids": [
+        "isaac_birth",
+        "binding_of_isaac",
+        "rebekah_marriage",
+        "rebekah_barrenness_birth",
+        "isaac_covenant_gerar",
+        "isaac_wells_conflict",
+        "jacob_blessing_stolen",
+        "return_to_bethel_deaths"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 17,
+          "verse_start": 19,
+          "verse_end": 21
+        },
+        {
+          "book": "Génesis",
+          "chapter": 21,
+          "verse_start": 1,
+          "verse_end": 8
+        },
+        {
+          "book": "Génesis",
+          "chapter": 22,
+          "verse_start": 1,
+          "verse_end": 19
+        },
+        {
+          "book": "Génesis",
+          "chapter": 24,
+          "verse_start": 1,
+          "verse_end": 67
+        },
+        {
+          "book": "Génesis",
+          "chapter": 26,
+          "verse_start": 1,
+          "verse_end": 35
+        },
+        {
+          "book": "Génesis",
+          "chapter": 35,
+          "verse_start": 27,
+          "verse_end": 29
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 26:3-4",
+        "text": "Habita como forastero en esta tierra, y estaré contigo, y te bendeciré; porque a ti y a tu descendencia daré todas estas tierras, y confirmaré el juramento que hice a Abraham tu padre."
+      },
+      "additional_verses": [
+        {
+          "reference": "Hebreos 11:20",
+          "text": "Por la fe bendijo Isaac a Jacob y a Esaú respecto a cosas venideras."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 9:7-10",
+        "Gálatas 4:28",
+        "Hebreos 11:17-20"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "abraham",
+          "years_together": 75,
+          "note": "Isaac convivió 75 años con su padre Abraham, caminando juntos en la fe del pacto."
+        },
+        {
+          "with_person_id": "jacob",
+          "years_together": 120,
+          "note": "Isaac convivió 120 años con su hijo Jacob hasta poco antes de que la familia descendiera a Egipto."
+        }
+      ]
+    },
+    {
+      "id": "rebekah",
+      "name": "Rebeca",
+      "name_meaning": "Lazo / Cuerda con nudo corredizo / Hermosura que cautiva",
+      "name_origin": "Hebreo: Rivkáh (derivado de Rvak, 'atar/cautivar')",
+      "category": "covenant_matriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2030,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Hija de Betuel, nieta de Nacor; hallada por Eliezer junto al pozo en Padan-aram; casada con Isaac a los 20 años aproximadamente; dio a luz gemelos a los 40 años de matrimonio",
+        "first_mention": {
+          "chapter": 22,
+          "verse": 23
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 31
+        }
+      },
+      "family": {
+        "father": "bethuel",
+        "mother": null,
+        "spouse": "isaac",
+        "children": [
+          "esau",
+          "jacob"
+        ],
+        "generation_from_adam": 21
+      },
+      "biography": {
+        "short": "Matriarca de Israel, esposa de Isaac, receptora de la profecía divina sobre el primogénito y ejecutora del plan para asegurar la bendición de Jacob.",
+        "full": "Rebeca nació en Padan-aram (Mesopotamia), siendo hija de Betuel y hermana de Labán. Destacada por su extraordinaria belleza, pureza moral y hospitalidad diligente, fue hallada por el siervo de Abraham (Eliezer) junto al pozo de Harán, donde abrevó no solo al siervo sino a todos sus camellos. Al escuchar la revelación del Dios de Abraham, Rebeca respondió con fe decidida: 'Sí, iré', dejando su tierra patria para viajar a Canaán y convertirse en la esposa de Isaac.\n\nDurante 20 años sufrió esterilidad junto a Isaac, hasta que Dios escuchó sus oraciones. Al sentir que los gemelos luchaban fuertemente en su vientre, consultó directamente a Jehová, recibiendo la profecía divina de la elección soberana: **'Dos naciones hay en tu seno... y el mayor servirá al menor'** (Génesis 25:23). Dio a luz a Esaú y Jacob. Mientras Isaac favorecía al cazador Esaú, Rebeca amaba a Jacob por conocer el oráculo divino sobre su destino patriarcal.\n\nAl saber que el anciano y ciego Isaac planeaba otorgar la bendición del pacto a Esaú, Rebeca organizó audazmente la estratagema del disfraz con pieles de cabrito para que Jacob recibiera la bendición. Asumió la responsabilidad de la maldición sobre sí misma ('Hijo mío, sea sobre mí tu maldición'). Para proteger a Jacob de la furia homicida de Esaú, envió a su hijo amado a Padan-aram a la casa de su hermano Labán con la excusa de buscar esposa piadosa. Murió antes del regreso de Jacob y fue sepultada junto a Isaac en la cueva de Macpela."
+      },
+      "character_arc": "Joven hospitalaria y decidida en Padan-aram → Matriarca de fe en Canaán → Receptora del oráculo divino de la elección → Estratega audaz para asegurar la promesa en Jacob",
+      "personality_traits": [
+        "hospitalaria y enérgica",
+        "decidida por la fe",
+        "sensible a la revelación profética",
+        "perspicaz y estratega"
+      ],
+      "theological_significance": "Rebeca es la matriarca receptora de la profecía clave de la teología de la elección en el Antiguo Testamento ('el mayor servirá al menor'). Pablo en Romanos 9:10-12 cita a Rebeca para demostrar que el propósito de Dios conforme a la elección no depende de las obras humanas ni del orden biológico de nacimiento, sino de la soberana gracia que llama.",
+      "event_ids": [
+        "rebekah_marriage",
+        "rebekah_barrenness_birth",
+        "jacob_blessing_stolen"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 24,
+          "verse_start": 15,
+          "verse_end": 67
+        },
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 20,
+          "verse_end": 28
+        },
+        {
+          "book": "Génesis",
+          "chapter": 27,
+          "verse_start": 5,
+          "verse_end": 46
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 25:23",
+        "text": "Y le respondió Jehová: Dos naciones hay en tu seno, y dos pueblos serán divididos desde tus entrañas; un pueblo será más fuerte que el otro pueblo, y el mayor servirá al menor."
+      },
+      "additional_verses": [
+        {
+          "reference": "Romanos 9:10-12",
+          "text": "Y no sólo esto, sino también cuando Rebeca concibió de un uno, de Isaac nuestro padre... se le dijo: El mayor servirá al menor."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 9:10-12"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "esau",
+      "name": "Esaú",
+      "name_meaning": "Velludo / Peludo / Hecho",
+      "name_origin": "Hebreo: Esáv ('velludo/cubierto de pelo')",
+      "category": "tribal_patriarch",
+      "importance": "high",
+      "chronology": {
+        "birth_am": 2168,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Primogénito gemelo de Isaac y Rebeca; vendió su primogenitura por un guisado de lentejas en su juventud; padre de los edomitas",
+        "first_mention": {
+          "chapter": 25,
+          "verse": 25
+        },
+        "last_mention": {
+          "chapter": 36,
+          "verse": 43
+        }
+      },
+      "family": {
+        "father": "isaac",
+        "mother": "rebekah",
+        "spouse": "basemath",
+        "children": [
+          "eliphaz",
+          "reuel"
+        ],
+        "generation_from_adam": 22
+      },
+      "biography": {
+        "short": "Hijo primogénito de Isaac, cazador diestro, que vendió despectivamente su primogenitura sagrada a Jacob y se convirtió en el padre de los edomitas.",
+        "full": "Esaú nació en el año AM 2168, siendo el primogénito gemelo de Isaac y Rebeca. Al nacer salió rubio y cubierto de vello como una pelliza de pelo, razón por la cual llamaron su nombre Esaú ('Velludo'). Al crecer se convirtió en un diestro cazador y hombre del campo, siendo el hijo preferido de su padre Isaac por el gusto de su caza.\n\nEsaú demostró una profunda profanación e indiferencia espiritual hacia las bendiciones del pacto de Abraham. Regresando hambriento del campo, vendió su **primogenitura** sagrada a su hermano Jacob por un plato de guisado rojo de lentejas (por lo cual fue llamado **Edom**, 'Rojo'). El texto bíblico concluye de manera tajante: 'Así menospreció Esaú la primogenitura' (Génesis 25:34). A los 40 años se casó con mujeres cananeas y heteas (Judit y Basemat), lo que fue amargura de espíritu para sus padres.\n\nAl ser suplantado por Jacob en la bendición patriarcal, Esaú lloró con gran amargura e inconsolable despecho, prometiendo matar a su hermano Jacob tras el luto por su padre. Durante los 20 años de ausencia de Jacob en Harán, Esaú se estableció en el monte de Seir y edificó un poderoso imperio tribal. Al regresar Jacob, Dios ablandó el corazón de Esaú; este salió al encuentro con 400 hombres, pero corrió a abrazarlo, lo besó y lloró con él en sincera reconciliación. Se separó pacíficamente de Canaán hacia Seir, y la genealogía de sus descendientes (los duques y reyes de Edom) está registrada en Génesis 36."
+      },
+      "character_arc": "Primogénito cazador favorecido → Profanador secular de la primogenitura → Guerrero lleno de ira homicida → Príncipe rico de Edom reconciliado pacíficamente",
+      "personality_traits": [
+        "cazador terrenal y profano",
+        "impulsivo y gobernado por apetitos físicos",
+        "afectuoso en el perdón humano",
+        "padre de la nación de Edom"
+      ],
+      "theological_significance": "Esaú es la advertencia bíblica suprema contra el **secularismo y la profanación espiritual**. En Hebreos 12:16-17 se le califica de 'profano' por haber vendido por una sola comida su primogenitura eterna. En la teología paulina (Romanos 9:13), la frase 'A Jacob amé, mas a Esaú aborrecí' ilustra la soberana libertad de Dios en la elección del linaje de la promesa sin méritos humanos.",
+      "event_ids": [
+        "rebekah_barrenness_birth",
+        "esau_sells_birthright",
+        "esau_canaanite_wives",
+        "jacob_blessing_stolen",
+        "jacob_meets_esau",
+        "return_to_bethel_deaths"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 25,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 27,
+          "verse_start": 1,
+          "verse_end": 41
+        },
+        {
+          "book": "Génesis",
+          "chapter": 33,
+          "verse_start": 1,
+          "verse_end": 16
+        },
+        {
+          "book": "Génesis",
+          "chapter": 36,
+          "verse_start": 1,
+          "verse_end": 43
+        }
+      ],
+      "key_verse": {
+        "reference": "Hebreos 12:16",
+        "text": "no sea que haya algún fornicario, o profano, como Esaú, que por una comida vendió su primogenitura."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 25:34",
+          "text": "Entonces Jacob dio a Esaú pan y del guisado de las lentejas; y él comió y bebió, y se levantó y se fue. Así menospreció Esaú la primogenitura."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 9:13",
+        "Hebreos 12:16-17"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "jacob",
+      "name": "Jacob",
+      "name_meaning": "El que suplanta / El que toma del calcañar (Transformado en Israel: Príncipe de Dios / El que lucha con Dios)",
+      "name_origin": "Hebreo: Yaakóv (derivado de Akáv, 'calcañar'), e Yisraél (derivado de Saráh, 'luchar', y El, 'Dios')",
+      "category": "covenant_patriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2168,
+        "death_am": 2315,
+        "lifespan": 147,
+        "notable_age": "Nació cuando Isaac tenía 60 años (AM 2168); huyó a Harán a los 77 años (AM 2245); luchó en Peniel a los 97 años; descendió a Egipto a los 130 años (AM 2298); murió a los 147 años (AM 2315)",
+        "first_mention": {
+          "chapter": 25,
+          "verse": 26
+        },
+        "last_mention": {
+          "chapter": 50,
+          "verse": 14
+        }
+      },
+      "family": {
+        "father": "isaac",
+        "mother": "rebekah",
+        "spouse": "leah",
+        "children": [
+          "ruben",
+          "simeon",
+          "levi",
+          "judah",
+          "joseph",
+          "benjamin"
+        ],
+        "generation_from_adam": 22
+      },
+      "biography": {
+        "short": "El tercer gran patriarca del pacto, padre de las 12 Tribus de Israel, cuyo nombre fue transformado de Jacob ('Suplantador') a Israel ('Príncipe de Dios') tras luchar con Dios.",
+        "full": "Jacob nació en el año AM 2168, siendo el segundo hijo gemelo de Isaac y Rebeca. Al nacer traba la mano al calcañar de su hermano Esaú, recibiendo el nombre de Jacob ('El que toma del calcañar' / 'Suplantador'). Varón tranquilo que habitaba en tiendas, valoraba profundamente la bendición espiritual del pacto abrahámico. Compró la primogenitura de Esaú por un plato de lentejas y obtuvo la bendición patriarcal primaria mediante la estratagema impuesta por su madre Rebeca.\n\nA los 77 años huyó de Canaán hacia Harán para escapar del odio homicida de Esaú. En Luz experimentó la teofanía de la **Escalera de Betel** (Génesis 28), donde Dios le confirmó incondicionalmente el pacto abrahámico. En Harán fue engañado por su tío Labán durante 20 años de servidumbre, casándose primero con Lea y luego con Raquel. De sus cuatro mujeres (Lea, Raquel, Bilha y Zilpa) engendró a sus 12 hijos (los patriarcas de las **12 Tribus de Israel**) y a su hija Dina. Prosperó grandemente en rebaños mediante la providencia divina a pesar del fraude de Labán.\n\nEn su viaje de regreso a Canaán, en la noche crítica junto al vado de Jaboc (Génesis 32), Jacob luchó a solas con el Ángel de Jehová hasta el alba, sufriendo la dislocación de su muslo y clamando: 'No te dejaré, si no me bendices'. Dios transformó su nombre a **Israel** ('El que lucha con Dios' / 'Príncipe de Dios') y lo bendijo. Se reconcilió con Esaú, purificó a su casa de los ídolos en Betel, y sufrió las dolorosas muertes de Raquel y de su padre Isaac, así como la supuesta muerte de su hijo amado José.\n\nA los 130 años descendió a Egipto con sus 70 familiares durante la hambruna, reuniéndose con su hijo José y habitando 17 años en Gosén. En su lecho de muerte, adoptó a Efraín y Manasés, bendijo proféticamente a sus 12 hijos enunciando la célebre **Profecía de Siloh sobre Judá** (Génesis 49:10) y fue embalsamado y sepultado con honores reales en la cueva de Macpela a los 147 años."
+      },
+      "character_arc": "Suplantador astuto y manipulador → Fugitivo disciplinado por la providencia en Harán → Quebrantado y transformado en Peniel (Israel) → Patriarca anciano lleno de fe profética",
+      "personality_traits": [
+        "tenaz y perseverante",
+        "transformado por el quebrantamiento divino",
+        "padre apasionado de las 12 tribus",
+        "profeta anciano de fe madura"
+      ],
+      "theological_significance": "Jacob es la ilustración magistral de la **Gracia Soberana que Transforma el Carácter**. Dios no eligió a Jacob por su moralidad impecable, sino por su gracia incondicional, convirtiendo a un suplantador astuto en un Príncipe de Dios (Israel). Jacob representa a la nación escogida de Israel y es un héroe insigne de la fe (Hebreos 11:21) que adoró apoyado sobre el extremo de su bordón al morir.",
+      "event_ids": [
+        "rebekah_barrenness_birth",
+        "esau_sells_birthright",
+        "jacob_blessing_stolen",
+        "jacob_ladder_bethel",
+        "jacob_marries_leah_rachel",
+        "birth_12_tribes",
+        "jacob_flees_laban",
+        "wrestling_at_peniel",
+        "jacob_meets_esau",
+        "return_to_bethel_deaths",
+        "joseph_reveals_himself",
+        "jacob_family_egypt",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 26,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 28,
+          "verse_start": 10,
+          "verse_end": 22
+        },
+        {
+          "book": "Génesis",
+          "chapter": 32,
+          "verse_start": 24,
+          "verse_end": 32
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 1,
+          "verse_end": 33
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 32:28",
+        "text": "Y el varón le dijo: No se llamará más tu nombre Jacob, sino Israel; porque has luchado con Dios y con los hombres, y has vencido."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 28:15",
+          "text": "He aquí, yo estoy contigo, y te guardaré por dondequiera que fueres, y volveré a traerte a esta tierra; porque no te dejaré hasta que haya hecho lo que te he dicho."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 9:11-13",
+        "Hebreos 11:21",
+        "Juan 1:47",
+        "Juan 1:51"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "abraham",
+          "years_together": 15,
+          "note": "Jacob convivió 15 años con su abuelo Abraham hasta la muerte de este en AM 2123."
+        },
+        {
+          "with_person_id": "shem",
+          "years_together": 50,
+          "note": "Jacob convivió 50 años con el gran patriarca Sem."
+        }
+      ]
+    },
+    {
+      "id": "leah",
+      "name": "Lea",
+      "name_meaning": "Vaca montés / Cansada / Delicada",
+      "name_origin": "Hebreo: Leáh ('vaca silvestre/fatigada')",
+      "category": "covenant_matriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2220,
+        "death_am": null,
+        "lifespan": null,
+        "notable_age": "Hija mayor de Labán; dada a Jacob por engaño en la noche de bodas en Harán; madre de seis tribus de Israel",
+        "first_mention": {
+          "chapter": 29,
+          "verse": 16
+        },
+        "last_mention": {
+          "chapter": 49,
+          "verse": 31
+        }
+      },
+      "family": {
+        "father": "laban",
+        "mother": null,
+        "spouse": "jacob",
+        "children": [
+          "ruben",
+          "simeon",
+          "levi",
+          "judah",
+          "issachar",
+          "zebulun",
+          "dinah"
+        ],
+        "generation_from_adam": 22
+      },
+      "biography": {
+        "short": "Hija mayor de Labán, primera esposa de Jacob, menospreciada físicamente pero bendecida por Dios como madre de Judá (linaje del Mesías) y de Leví.",
+        "full": "Lea fue la hija mayor de Labán, arameo de Padan-aram. El texto bíblico la describe notando que sus ojos eran 'delicados' (suaves o faltos de brillo), en contraste con la deslumbrante hermosura de su hermana menor Raquel. Cuando Jacob trabajó siete años por Raquel, Labán introdujo engañosamente a Lea en la tienda nupcial a oscuras en la noche de bodas, obligando a Jacob a aceptarla como esposa primaria.\n\nSabiendo que su esposo amaba más a Raquel y que ella era menospreciada, Dios vio su aflicción y abrió su vientre milagrosamente mientras Raquel permanecía estéril. Lea dio a luz sucesivamente a cuatro primogénitos, cuyos nombres expresan el anhelo angustioso de una esposa por el amor de su marido: Rubén ('Jehová ha visto mi aflicción'), Simeón ('Jehová ha oído'), Leví ('Ahora se unirá mi marido conmigo') y **Judá** ('Esta vez alabaré a Jehová').\n\nPosteriormente entregó a su sierva Zilpa a Jacob, engendrando a Gad y Aser, y concibió nuevamente dando a luz a Isacar, Zabulón y su hija Dina. En el nacimiento de Judá, Lea trascendió el dolor emocional de buscar el afecto humano y centró su corazón plenamente en la alabanza y la gracia de Jehová. Acompañó a Jacob de regreso a Canaán y fue la única esposa patriarcal que fue sepultada junto a Jacob, Abraham, Sara, Isaac y Rebeca en la sagrada cueva de Macpela en Hebrón."
+      },
+      "character_arc": "Esposa no amada e introducida por engaño → Madre prolífica afligida por el afecto de su esposo → Mujer consolada por Dios que transforma su dolor en alabanza a Jehová → Matriarca sepultada en Macpela de cuyo seno nace el Mesías",
+      "personality_traits": [
+        "paciente en la aflicción",
+        "devota e íntima con Dios",
+        "madre fecunda",
+        "matriarca bendecida por la gracia"
+      ],
+      "theological_significance": "Lea es la prueba bíblica transparente de cómo Dios escoge y honra a los menospreciados y desfavorecidos del mundo (1 Corintios 1:27). Aunque Jacob amaba a Raquel, fue de la despreciada Lea de quien nacieron **Leví** (la tribu sacerdotal) y **Judá** (la tribu real de David y del León de Judá, Jesucristo). Rut 4:11 la celebra junto a Raquel como una de las dos mujeres que 'edificaron la casa de Israel'.",
+      "event_ids": [
+        "jacob_marries_leah_rachel",
+        "birth_12_tribes",
+        "jacob_flees_laban"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 16,
+          "verse_end": 35
+        },
+        {
+          "book": "Génesis",
+          "chapter": 30,
+          "verse_start": 17,
+          "verse_end": 21
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 31,
+          "verse_end": 31
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 29:35",
+        "text": "Concibió otra vez, y dio a luz un hijo, y dijo: Esta vez alabaré a Jehová; por esto llamó su nombre Judá; y dejó de dar a luz."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 29:31",
+          "text": "Y vio Jehová que Lea era menospreciada, y le abrió el seno; pero Raquel era estéril."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 1:2",
+        "Hebreos 7:14",
+        "Rut 4:11"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "rachel",
+      "name": "Raquel",
+      "name_meaning": "Oveja / Cordera",
+      "name_origin": "Hebreo: Rajél ('oveja hembra')",
+      "category": "covenant_matriarch",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2223,
+        "death_am": 2271,
+        "lifespan": 48,
+        "notable_age": "Hija menor de Labán; amada apasionadamente por Jacob; murió de parto cerca de Belén al dar a luz a Benjamín (AM 2271)",
+        "first_mention": {
+          "chapter": 29,
+          "verse": 6
+        },
+        "last_mention": {
+          "chapter": 35,
+          "verse": 19
+        }
+      },
+      "family": {
+        "father": "laban",
+        "mother": null,
+        "spouse": "jacob",
+        "children": [
+          "joseph",
+          "benjamin"
+        ],
+        "generation_from_adam": 22
+      },
+      "biography": {
+        "short": "Hija menor de Labán, amada esposa de Jacob, madre de José y Benjamín, que murió trágicamente en el camino a Belén.",
+        "full": "Raquel fue la hija menor de Labán, pastora de las ovejas de su padre en Harán. Descrita en las Escrituras como de 'lindo semblante y de bello parecer', fue encontrada por Jacob junto al pozo de Harán, donde él removió la piedra para abrevar su rebaño. Jacob se enamoró apasionadamente de ella, sirviendo a Labán siete años por su mano, los cuales 'le parecieron como pocos días, porque la amaba' (Génesis 29:20).\n\nVíctima del engaño de su padre Labán en la boda con Lea, Raquel fue entregada a Jacob una semana después a cambio de siete años adicionales de servidumbre. Vivió una intensa lucha espiritual y emocional marcada por la esterilidad mientras su hermana Lea daba a luz. En su desesperación exclamó a Jacob: 'Dame hijos, o si no, me muero'. Entregó a su sierva Bilha a Jacob, naciendo Dan y Naftalí.\n\nFinalmente, Dios se acordó de Raquel, la oyó y abrió su seno, dando a luz a su primogénito **José** ('Añadir'), profetizando: 'Añádame Jehová otro hijo'. Al huir de Harán, hurtó los terafines (ídolos familiares) de su padre Labán. Durante el viaje hacia Efrata (Belén), Raquel entró en un parto sumamente difícil. Al exhalar su alma al morir, llamó al recién nacido Ben-oni ('Hijo de mi dolor'), pero Jacob lo llamó **Benjamín** ('Hijo de mi mano derecha'). Raquel murió a los 48 años y fue sepultada en el camino de Belén, erigiendo Jacob un monumento sobre su tumba que perduró durante siglos."
+      },
+      "character_arc": "Pastora hermosa en Harán → Esposa amada pero estéril en lucha desesperada → Madre gozosa de José → Madre sacrificada que muere dando a luz a Benjamín en Belén",
+      "personality_traits": [
+        "hermosa y apasionadamente amada",
+        "emocional e impaciente por la maternidad",
+        "madre abnegada hasta la muerte"
+      ],
+      "theological_significance": "Raquel es la matriarca poética de Israel por excelencia. Su tumba cerca de Belén se convirtió en un símbolo Profético: en Jeremías 31:15 y Mateo 2:17-18, 'Raquel que llora por sus hijos' simboliza el dolor de las madres judías ante la deportación a Babilonia y la matanza de los inocentes por Herodes en Belén tras el nacimiento del Mesías Jesucristo.",
+      "event_ids": [
+        "jacob_marries_leah_rachel",
+        "birth_12_tribes",
+        "jacob_flees_laban",
+        "return_to_bethel_deaths"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 6,
+          "verse_end": 30
+        },
+        {
+          "book": "Génesis",
+          "chapter": 30,
+          "verse_start": 1,
+          "verse_end": 24
+        },
+        {
+          "book": "Génesis",
+          "chapter": 35,
+          "verse_start": 16,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 29:20",
+        "text": "Así sirvió Jacob por Raquel siete años; y le parecieron como pocos días, porque la amaba."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 35:18",
+          "text": "Y aconteció que al salírsele el alma (pues murió), llamó su nombre Ben-oni; mas su padre lo llamó Benjamín."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 2:17-18",
+        "Rut 4:11"
+      ],
+      "notable_overlaps": []
+    },
+    {
+      "id": "joseph",
+      "name": "José",
+      "name_meaning": "Que Jehová añada / El que añade",
+      "name_origin": "Hebreo: Yosef (derivado de Yasáf, 'añadir/incrementar')",
+      "category": "savior_figure",
+      "importance": "critical",
+      "chronology": {
+        "birth_am": 2259,
+        "death_am": 2369,
+        "lifespan": 110,
+        "notable_age": "Nació cuando Jacob tenía 91 años (AM 2259); vendido a Egipto a los 17 años (AM 2276); exaltado a Gran Visir a los 30 años (AM 2289); se reunió con su padre a los 39 años; murió a los 110 años (AM 2369)",
+        "first_mention": {
+          "chapter": 30,
+          "verse": 24
+        },
+        "last_mention": {
+          "chapter": 50,
+          "verse": 26
+        }
+      },
+      "family": {
+        "father": "jacob",
+        "mother": "rachel",
+        "spouse": "asenath",
+        "children": [
+          "manasseh",
+          "ephraim"
+        ],
+        "generation_from_adam": 23
+      },
+      "biography": {
+        "short": "El hijo amado de Jacob, vendido como esclavo por sus hermanos, elevado por la providencia divina a Gran Visir de Egipto para salvar al mundo del hambre.",
+        "full": "José nació en Padan-aram en el año AM 2259, siendo el primer hijo de Raquel y el preferido de la vejez de Jacob, quien le confeccionó una túnica especial de colores. A los 17 años tuvo sueños proféticos donde los manojos y los astros de su familia se inclinaban ante él, despertando el envidioso odio de sus hermanos. Enviado por su padre a verificar la salud de sus hermanos en Dotán, estos conspiraron contra él, le despojaron de su túnica y lo vendieron por 20 piezas de plata a mercaderes ismaelitas que lo llevaron a Egipto.\n\nEn Egipto fue comprado por Potifar, capitán de la guardia de Faraón. Dios estaba con José y prosperó la casa de Potifar bajo su administración. Ante la constante tentación sexual de la esposa de Potifar, José mantuvo una integridad moral intachable ('¿Cómo pecaría contra Dios?'). Calumniado falsamente, fue encarcelado durante 13 años. En prisión interpretó por don divino los sueños del copero y del panadero. A los 30 años fue llevado apresuradamente ante Faraón para interpretar los dos sueños del monarca sobre las 7 vacas gordas y flacas. Faraón, reconociendo el Espíritu de Dios en él, lo nombró **Gran Visir** (segundo al mando sobre todo Egipto), llamándole **Zafnat-panea** ('Salvador del mundo'). Administró brillantemente el almacenamiento de grano durante los 7 años de abundancia.\n\nDurante la gran hambruna, sus hermanos vinieron a comprar grano a Egipto. José los probó pedagógicamente hasta presenciar el arrepentimiento genuino de ellos y la intercesión sustitutiva de Judá. Con lágrimas ruidosas se reveló a sus hermanos pronuncio el dogma supremo de la providencia: **'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien, para mantener en vida a mucho pueblo'** (Génesis 50:20). Hizo descender a su padre Jacob y a toda su casa (70 almas) a Gosén. Antes de morir a los 110 años, hizo jurar a los hijos de Israel que llevarían sus huesos a la Tierra Prometida cuando Dios los visitara."
+      },
+      "character_arc": "Hijo soñador amado → Esclavo traicionado y prisionero calumniado → Administrador sabio e íntegro → Gran Visir salvador de las naciones y hermano perdonador",
+      "personality_traits": [
+        "íntegro y santo ante la tentación",
+        "sabio y hábil administrador",
+        "perdonador compasivo",
+        "varón en quien está el Espíritu de Dios"
+      ],
+      "theological_significance": "José es el tipo tipológico más completo de Jesucristo en todo el Antiguo Testamento: 1) Hijo amado enviado por el Padre a sus hermanos; 2) Aborrecido sin causa y rechazado; 3) Vendido por piezas de plata por propuesta de Judá; 4) Falsamente acusado y condenado al calabozo sin pecado; 5) Exaltado desde el sufrimiento hasta el trono de gloria a los 30 años; 6) Procreador de pan de vida y Salvador de las naciones Gentiles y Judías; 7) Hermano que perdona y se reconcilia entre lágrimas con su pueblo.",
+      "event_ids": [
+        "birth_12_tribes",
+        "joseph_dreams_sold",
+        "joseph_potiphar_prison",
+        "joseph_interprets_pharaoh",
+        "brothers_first_travel",
+        "joseph_reveals_himself",
+        "jacob_family_egypt",
+        "jacob_blesses_sons_death"
+      ],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 37,
+          "verse_start": 1,
+          "verse_end": 36
+        },
+        {
+          "book": "Génesis",
+          "chapter": 39,
+          "verse_start": 1,
+          "verse_end": 23
+        },
+        {
+          "book": "Génesis",
+          "chapter": 41,
+          "verse_start": 1,
+          "verse_end": 57
+        },
+        {
+          "book": "Génesis",
+          "chapter": 45,
+          "verse_start": 1,
+          "verse_end": 28
+        },
+        {
+          "book": "Génesis",
+          "chapter": 50,
+          "verse_start": 15,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 50:20",
+        "text": "Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien, para hacer lo que vemos hoy, para mantener en vida a mucho pueblo."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 45:5",
+          "text": "Ahora, pues, no os entristezcáis, ni os pese de haberme vendido acá; porque para preservación de vida me envió Dios delante de vosotros."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:9-14",
+        "Hebreos 11:22"
+      ],
+      "notable_overlaps": [
+        {
+          "with_person_id": "jacob",
+          "years_together": 56,
+          "note": "José convivió 17 años en Canaán y 17 años en Egipto con su padre Jacob."
+        }
+      ]
+    }
+  ],
   "relationships": [],
   "locations": [],
   "covenants": [],

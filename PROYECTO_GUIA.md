@@ -1326,7 +1326,7 @@ D-02.2 Eventos Bloque 2 (La Caida y Set: 11 eventos)        COMPLETADO
 D-03 Eventos Bloque 3 (Noe y Diluvio: 13 eventos)          COMPLETADO
 D-04 Eventos Bloques 4-5 (Babel y Abraham: 28 eventos)     COMPLETADO
 D-05 Eventos Bloques 6-7-8 (Isaac, Jacob y José: 22 ev)    COMPLETADO
-D-06 Personajes principales (21 perfiles completos)         PENDIENTE
+D-06 Personajes principales (21 perfiles completos)         COMPLETADO
 D-07 Personajes secundarios + pactos + temas + preguntas   PENDIENTE
 D-08 Locations + chapters_map + notable_overlaps           PENDIENTE
 D-09 Validacion final del genesis.json                     PENDIENTE
@@ -1342,13 +1342,14 @@ I-07 Diseno visual premium                                 PENDIENTE
 I-08 Funcionalidades extendidas                            PENDIENTE
 
 ESTADO GLOBAL:
-- Datos Genesis: 55% (5/9 tareas principales completadas)
+- Datos Genesis: 66% (6/9 tareas principales completadas)
 - Interfaz: 0% (0/8 tareas)
 - Libros: 1 en desarrollo (Genesis)
 
 NOTAS DE SESIONES ANTERIORES:
 - 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).
 - 2026-07-23: Se completó la Tarea D-05 (Isaac, Jacob y José) agregando 22 eventos exhaustivos (6 de Isaac + 8 de Jacob + 8 de José). Total acumulado en genesis.json: 82 eventos completos abarcando los 50 capítulos del Génesis según el estándar Schema 3.0 (D-01 a D-05 completados).
+- 2026-07-23: Se completó la Tarea D-06 (Personajes Principales) poblando los 21 perfiles bíblicos exhaustivos divididos en 3 sub-fases (D-06.1, D-06.2, D-06.3) siguiendo estrictamente el estándar Schema 3.0 (cronología, genealogía, biografía completa de 300+ palabras, carácter, trazas de personalidad, significancia teológica, versículo clave y referencias cruzadas al NT).
 
 
 
