@@ -1,122 +1,139 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState, useMemo } from 'react';
+import { useGenesisData } from './hooks/useGenesisData';
+import { Header } from './components/navigation/Header';
+import { TimelineView } from './components/timeline/TimelineView';
+import { PersonPanel } from './components/panels/PersonPanel';
+import { CovenantPanel } from './components/panels/CovenantPanel';
+import { LocationPanel } from './components/panels/LocationPanel';
+import { QuestionPanel } from './components/panels/QuestionPanel';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+  const [activeTab, setActiveTab] = useState('timeline');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const genesis = useGenesisData();
+
+  // Estadísticas globales para el Header
+  const totalStats = useMemo(() => ({
+    eventsCount: genesis.timelineEvents.length,
+    peopleCount: genesis.people.length,
+    covenantsCount: genesis.covenants.length
+  }), [genesis.timelineEvents, genesis.people, genesis.covenants]);
+
+  // Resultados del buscador global
+  const searchResults = useMemo(() => {
+    return genesis.searchAll(searchQuery);
+  }, [searchQuery, genesis]);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="genesis-app-root">
+      {/* Cabecera Principal */}
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        totalStats={totalStats}
+      />
 
-      <div className="ticks"></div>
+      {/* Vista de Resultados de Búsqueda (si hay query activa) */}
+      {searchQuery ? (
+        <main className="app-main-content">
+          <div className="search-results-container">
+            <h2>🔍 Resultados de Búsqueda para "{searchQuery}"</h2>
+            
+            {searchResults.events.length === 0 && searchResults.people.length === 0 && searchResults.locations.length === 0 ? (
+              <p className="no-results-msg">No se encontraron coincidencias en el libro del Génesis.</p>
+            ) : (
+              <div className="search-results-sections">
+                {searchResults.events.length > 0 && (
+                  <section className="search-section">
+                    <h3>⚡ Eventos Encontrados ({searchResults.events.length})</h3>
+                    <div className="search-cards-grid">
+                      {searchResults.events.map(e => (
+                        <div key={e.id} className="search-card">
+                          <h4>{e.name}</h4>
+                          <span className="search-am-tag">AM {e.year_am ?? 'N/A'}</span>
+                          <p>{e.summary}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+                {searchResults.people.length > 0 && (
+                  <section className="search-section">
+                    <h3>👥 Personajes Encontrados ({searchResults.people.length})</h3>
+                    <div className="search-cards-grid">
+                      {searchResults.people.map(p => (
+                        <div key={p.id} className="search-card">
+                          <h4>{p.name}</h4>
+                          <p><em>{p.name_meaning}</em></p>
+                          <p>{p.theological_significance}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+                {searchResults.locations.length > 0 && (
+                  <section className="search-section">
+                    <h3>📍 Ubicaciones Encontradas ({searchResults.locations.length})</h3>
+                    <div className="search-cards-grid">
+                      {searchResults.locations.map(l => (
+                        <div key={l.id} className="search-card">
+                          <h4>{l.name} ({l.region})</h4>
+                          <p>{l.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+              </div>
+            )}
+          </div>
+        </main>
+      ) : (
+        /* Vista Normal según pestaña seleccionada */
+        <main className="app-main-content">
+          {activeTab === 'timeline' && (
+            <TimelineView
+              events={genesis.timelineEvents}
+              eras={genesis.eras}
+              narrativeBlocks={genesis.narrativeBlocks}
+            />
+          )}
+
+          {activeTab === 'people' && (
+            <PersonPanel people={genesis.people} />
+          )}
+
+          {activeTab === 'covenants' && (
+            <CovenantPanel
+              covenants={genesis.covenants}
+              messianicPromises={genesis.messianicPromises}
+            />
+          )}
+
+          {activeTab === 'locations' && (
+            <LocationPanel locations={genesis.locations} />
+          )}
+
+          {activeTab === 'questions' && (
+            <QuestionPanel questions={genesis.questions} />
+          )}
+        </main>
+      )}
+
+      {/* Pie de Página */}
+      <footer className="app-footer">
+        <p>
+          <strong>Genesis Explorer</strong> — Basado en el sistema de cronología Anno Mundi (AM) y el estándar bíblico Reina-Valera.
+        </p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;

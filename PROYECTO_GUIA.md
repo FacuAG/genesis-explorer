@@ -1333,9 +1333,9 @@ D-08 Locations + chapters_map + notable_overlaps           COMPLETADO
 D-09 Validacion final del genesis.json                     COMPLETADO
 
 FASE INTERFAZ:
-I-01 Setup vis-timeline + estructura de componentes        PENDIENTE
-I-02 Utils y hooks base                                    PENDIENTE
-I-03 Componente Timeline principal                         PENDIENTE
+I-01 Setup vis-timeline + estructura de componentes        COMPLETADO
+I-02 Utils y hooks base                                    COMPLETADO
+I-03 Componente Timeline principal                         EN PROGRESO
 I-04 EventPanel y subcomponentes                           PENDIENTE
 I-05 PersonPanel y LifespanBar                             PENDIENTE
 I-06 TimelineControls y filtros                            PENDIENTE
@@ -1344,8 +1344,8 @@ I-08 Funcionalidades extendidas                            PENDIENTE
 
 ESTADO GLOBAL: 
 - Datos Genesis: 100% (9/9 tareas principales completadas - ¡FASE DE DATOS FINALIZADA CON ÉXITO!)
-- Interfaz: 0% (0/8 tareas)
-- Libros: 1 listo para desarrollo de interfaz (Genesis)
+- Interfaz: 25% (2/8 tareas completadas)
+- Libros: 1 listo para interfaz (Genesis)
 
 NOTAS DE SESIONES ANTERIORES:
 - 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).

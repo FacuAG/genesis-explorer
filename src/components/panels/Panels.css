@@ -1,0 +1,267 @@
+/* Panels CSS Vanilla — Genesis Explorer */
+
+.panel-container {
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.panel-header {
+  margin-bottom: 2rem;
+}
+
+.panel-header h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.6rem;
+  color: #f8fafc;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* People Grid */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.person-card {
+  background: rgba(30, 32, 41, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  border-color: #c084fc;
+  box-shadow: 0 8px 24px rgba(170, 59, 255, 0.15);
+}
+
+.person-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.person-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f1f5f9;
+}
+
+.person-category-badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+.person-meaning {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.person-lifespan {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.82rem;
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.person-theology {
+  margin: 0;
+  font-size: 0.83rem;
+  color: #94a3b8;
+  line-height: 1.45;
+}
+
+/* Covenants & Promises */
+.covenants-grid, .promises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.covenant-card, .promise-card {
+  background: rgba(30, 32, 41, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  backdrop-filter: blur(12px);
+}
+
+.covenant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.covenant-header h3, .promise-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #f8fafc;
+}
+
+.covenant-nature-tag {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.covenant-desc, .promise-explanation {
+  font-size: 0.86rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.covenant-verse {
+  margin: 0.75rem 0;
+  padding: 0.6rem 0.8rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-left: 3px solid #c084fc;
+  font-style: italic;
+  font-size: 0.83rem;
+  color: #e2e8f0;
+}
+
+.christ-fulfillment {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 0.83rem;
+  color: #a7f3d0;
+}
+
+.promise-ref-badge {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.promise-text {
+  font-style: italic;
+  color: #fef08a;
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0.6rem 0;
+}
+
+.promise-nt {
+  font-size: 0.82rem;
+  color: #93c5fd;
+  margin-top: 0.5rem;
+}
+
+/* Locations */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.location-card {
+  background: rgba(30, 32, 41, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.location-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.location-card-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #f1f5f9;
+}
+
+.location-region-tag {
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.location-modern {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 0.5rem 0;
+}
+
+.location-desc {
+  font-size: 0.86rem;
+  color: #e2e8f0;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.45;
+}
+
+.location-significance {
+  font-size: 0.83rem;
+  color: #c084fc;
+  margin: 0;
+}
+
+/* Questions */
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.question-card {
+  background: rgba(30, 32, 41, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.question-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: #fef08a;
+}
+
+.question-answer {
+  margin: 0 0 1rem 0;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.question-refs {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  display: inline-block;
+}
