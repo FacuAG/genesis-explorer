@@ -9046,7 +9046,258 @@
     }
   ],
   "relationships": [],
-  "locations": [],
+  "locations": [
+    {
+      "id": "eden",
+      "name": "Huerto del Edén",
+      "region": "Edén / Mesopotamia Antigua",
+      "modern_country": "Irak / Turquía / Irán (Región probable del Golfo Pérsico o Fuentes del Éufrates)",
+      "coordinates_approx": {
+        "lat": 31.0,
+        "lng": 47.0
+      },
+      "description": "El paraíso terrenal original plantado por Jehová Dios en el oriente, provisto de cuatro ríos (Pisón, Gihón, Hdekel/Tigris y Éufrates), hogar de Adán y Eva antes de la Caída.",
+      "significance": "Lugar de la inocencia original, comunión directa con Dios y establecimiento del primer mandato y pacto edénico.",
+      "associated_event_ids": [
+        "creation_man",
+        "creation_woman",
+        "fall_temptation",
+        "fall_judgment"
+      ]
+    },
+    {
+      "id": "ararat",
+      "name": "Montes de Ararat",
+      "region": "Cordillera de Armenia / Anatolia Oriental",
+      "modern_country": "Turquía / Armenia",
+      "coordinates_approx": {
+        "lat": 39.7,
+        "lng": 44.3
+      },
+      "description": "Cordillera montañosa donde reposó el Arca de Noé tras el descenso de las aguas del Diluvio Universal en el séptimo mes.",
+      "significance": "Lugar del desembarco de Noé, edificación del primer altar postdiluviano y establecimiento del Pacto Noéico del Arco Iris.",
+      "associated_event_ids": [
+        "ark_lands_ararat",
+        "noahic_covenant"
+      ]
+    },
+    {
+      "id": "babel",
+      "name": "Babel (Sinar)",
+      "name_meaning": "Confusión / Puerta de Dios",
+      "region": "Llanura de Sinar / Babilonia",
+      "modern_country": "Irak (Cerca de Al-Hillah)",
+      "coordinates_approx": {
+        "lat": 32.5,
+        "lng": 44.4
+      },
+      "description": "Ciudad y torre ziggurat levantadas por la humanidad unida bajo Nimrod en la llanura de Sinar como desafío arrogante a Dios.",
+      "significance": "Lugar de la confusión de lenguas impuesta por Dios y origen de la dispersión de las naciones sobre la tierra.",
+      "associated_event_ids": [
+        "tower_of_babel"
+      ]
+    },
+    {
+      "id": "ur",
+      "name": "Ur de los Caldeos",
+      "region": "Sinar / Sumeria / Mesopotamia Sur",
+      "modern_country": "Irak (Tell el-Mukayyar)",
+      "coordinates_approx": {
+        "lat": 30.9,
+        "lng": 46.1
+      },
+      "description": "Antigua y próspera metrópoli sumeria a orillas del Éufrates, cuna original de la familia de Taré, Abram y Sarai.",
+      "significance": "Lugar de donde Dios llamó soberanamente a Abram a salir de la idolatría pagana para ir a la Tierra Prometida.",
+      "associated_event_ids": [
+        "terah_moves",
+        "abraham_call"
+      ]
+    },
+    {
+      "id": "haran",
+      "name": "Harán (Padan-aram)",
+      "region": "Mesopotamia Norte / Aram-naharaim",
+      "modern_country": "Turquía (Provincia de Şanlıurfa)",
+      "coordinates_approx": {
+        "lat": 36.8,
+        "lng": 39.0
+      },
+      "description": "Importante centro comercial e itinerario de caravanas donde habitó la familia de Taré y posteriormente Labán.",
+      "significance": "Lugar donde murió Taré, donde Abraham partió a los 75 años a Canaán, y donde Jacob sirvió 20 años a Labán.",
+      "associated_event_ids": [
+        "terah_moves",
+        "abraham_call",
+        "rebekah_marriage",
+        "jacob_marries_leah_rachel",
+        "jacob_flees_laban"
+      ]
+    },
+    {
+      "id": "shechem",
+      "name": "Siquem",
+      "region": "Canaán Central (Samaria)",
+      "modern_country": "Cisjordania / Palestina (Nablus)",
+      "coordinates_approx": {
+        "lat": 32.2,
+        "lng": 35.2
+      },
+      "description": "Valle estratégico situado entre el monte Ebal y el monte Gerizim en el centro de la tierra de Canaán.",
+      "significance": "Lugar donde Abram edificó su primer altar en Canaán (Encina de Moreh), y escenario del trágico episodio de Dina y la masacre de Simeón y Leví.",
+      "associated_event_ids": [
+        "abraham_canaan",
+        "dinah_shechem_tragedy"
+      ]
+    },
+    {
+      "id": "bethel",
+      "name": "Betel (Luz / Casa de Dios)",
+      "region": "Canaán Central / Montañas de Benjamín",
+      "modern_country": "Cisjordania / Palestina (Beitin)",
+      "coordinates_approx": {
+        "lat": 31.9,
+        "lng": 35.2
+      },
+      "description": "Ciudad montañosa al norte de Jerusalén, originalmente llamada Luz, consagrada por Abraham y Jacob.",
+      "significance": "Lugar del sueño de la Escalera Celestial de Jacob y donde edificó el altar El-Betel tras purificar a su casa de los ídolos.",
+      "associated_event_ids": [
+        "abraham_canaan",
+        "jacob_ladder_bethel",
+        "return_to_bethel_deaths"
+      ]
+    },
+    {
+      "id": "hebron",
+      "name": "Hebrón (Quiriat-arba / Encinas de Mamre)",
+      "region": "Montañas de Judá",
+      "modern_country": "Cisjordania / Palestina (Al-Khalil)",
+      "coordinates_approx": {
+        "lat": 31.5,
+        "lng": 35.1
+      },
+      "description": "Antigua ciudad del sur de Canaán asociada a las Encinas de Mamre y la cueva de Macpela.",
+      "significance": "Morada principal de Abraham, lugar de la teofanía de los tres visitantes celestiales y sepulcro patriarcal de Sara, Abraham, Isaac, Rebeca, Lea y Jacob.",
+      "associated_event_ids": [
+        "heavenly_visitors",
+        "sarah_death_burial",
+        "abraham_death",
+        "return_to_bethel_deaths"
+      ]
+    },
+    {
+      "id": "beersheba",
+      "name": "Beerseba (Pozo del Juramento)",
+      "region": "Desierto del Negev",
+      "modern_country": "Israel (Beer Sheva)",
+      "coordinates_approx": {
+        "lat": 31.2,
+        "lng": 34.7
+      },
+      "description": "Ciudad y pozo en el límite sur de Canaán, punto fronterizo histórico ('desde Dan hasta Beerseba').",
+      "significance": "Lugar del pacto entre Abraham y Abimelec, residencia de Isaac, y donde Jacob recibió la visión divina antes de descender a Egipto.",
+      "associated_event_ids": [
+        "hagar_expelled",
+        "isaac_wells_conflict",
+        "jacob_family_egypt"
+      ]
+    },
+    {
+      "id": "sodom",
+      "name": "Sodoma y Gomorra",
+      "region": "Llanura del Jordán / Valle de Sidim",
+      "modern_country": "Jordania / Israel (Sureste del Mar Muerto)",
+      "coordinates_approx": {
+        "lat": 31.1,
+        "lng": 35.5
+      },
+      "description": "Ciudades fértiles de la llanura del Jordán caracterizadas por una perversión moral extrema.",
+      "significance": "Lugar de residencia de Lot y escenario de la destrucción cataclísmica por fuego y azufre caídos del cielo.",
+      "associated_event_ids": [
+        "lot_separation",
+        "lot_rescue",
+        "sodom_intercession",
+        "sodom_destruction"
+      ]
+    },
+    {
+      "id": "moriah",
+      "name": "Monte Moriah",
+      "region": "Tierra de Moriah / Monte del Templo",
+      "modern_country": "Israel / Palestina (Jerusalén)",
+      "coordinates_approx": {
+        "lat": 31.77,
+        "lng": 35.23
+      },
+      "description": "Monte designado por Dios en Canaán para la prueba de fe de Abraham sobre Isaac.",
+      "significance": "Lugar de la Akedáh (atadura de Isaac), provisión del carnero en el espinar (Jehová-Jireh) y futuro emplazamiento del Templo de Salomón y la crucifixión de Cristo.",
+      "associated_event_ids": [
+        "binding_of_isaac"
+      ]
+    },
+    {
+      "id": "peniel",
+      "name": "Peniel / Penuel (Rostro de Dios)",
+      "region": "Galaad / Vado del río Jaboc",
+      "modern_country": "Jordania (Río Zarqa)",
+      "coordinates_approx": {
+        "lat": 32.1,
+        "lng": 35.7
+      },
+      "description": "Vado estratégico a orillas del río Jaboc, al este del Jordán, en la región de Galaad.",
+      "significance": "Lugar de la lucha nocturna a solas de Jacob con el Ángel de Jehová, donde su muslo fue dislocado y su nombre transformado a Israel.",
+      "associated_event_ids": [
+        "wrestling_at_peniel"
+      ]
+    },
+    {
+      "id": "bethlehem",
+      "name": "Belén (Efrata / Casa del Pan)",
+      "region": "Montañas de Judá",
+      "modern_country": "Cisjordania / Palestina (Beit Lahm)",
+      "coordinates_approx": {
+        "lat": 31.7,
+        "lng": 35.2
+      },
+      "description": "Pequeña villa en el camino al sur de Jerusalén.",
+      "significance": "Lugar del trágico parto y sepultura de Raquel al dar a luz a Benjamín, y futuro lugar de nacimiento del Rey David y del Mesías Jesucristo.",
+      "associated_event_ids": [
+        "return_to_bethel_deaths"
+      ]
+    },
+    {
+      "id": "egypt",
+      "name": "Egipto (Mizraim)",
+      "region": "Valle del Nilo / África del Norte",
+      "modern_country": "Egipto",
+      "coordinates_approx": {
+        "lat": 30.0,
+        "lng": 31.2
+      },
+      "description": "Imperio agrícola poderoso alimentado por las crecidas periódicas del río Nilo.",
+      "significance": "Lugar de refugio por hambrunas para Abraham y Jacob, y escenario de la exaltación de José como Gran Visir.",
+      "associated_event_ids": [
+        "abraham_egypt",
+        "joseph_potiphar_prison",
+        "joseph_interprets_pharaoh",
+        "jacob_family_egypt"
+      ]
+    },
+    {
+      "id": "goshen",
+      "name": "Tierra de Gosén",
+      "region": "Delta Oriental del Nilo (Bajo Egipto)",
+      "modern_country": "Egipto (Faqus / El-Khatana)",
+      "coordinates_approx": {
+        "lat": 30.8,
+        "lng": 31.8
+      },
+      "description": "La región agrícola y ganadera más fértil del noreste del Delta de Egipto.",
+      "significance": "Tierra concedida por Faraón a Jacob y sus 70 familiares, sirviendo como la incubadora protegida donde Israel creció de tribu a nación.",
+      "associated_event_ids": [
+        "jacob_family_egypt",
+        "jacob_blesses_sons_death"
+      ]
+    }
+  ],
   "covenants": [
     {
       "id": "edenic_covenant",
@@ -9438,6 +9689,474 @@
       ]
     }
   ],
-  "chapters_map": [],
-  "notable_overlaps": []
+  "chapters_map": [
+    {
+      "chapter": 1,
+      "title": "La Creación del Universo y del Hombre en Seis Días",
+      "summary": "Creación ex nihilo del universo, la luz, el firmamento, la tierra, las lumbreras, los animales y el ser humano a imagen y semejanza de Dios.",
+      "block_id": "nb_creation",
+      "key_events": ["creation_universe", "creation_man"],
+      "key_people": ["adam"]
+    },
+    {
+      "chapter": 2,
+      "title": "El Día de Reposo, el Huerto del Edén y la Creación de la Mujer",
+      "summary": "Institución del día de reposo, detalle de la formación de Adán del polvo, el Huerto del Edén, el mandato del árbol y la creación de Eva.",
+      "block_id": "nb_creation",
+      "key_events": ["creation_man", "creation_woman"],
+      "key_people": ["adam", "eve"]
+    },
+    {
+      "chapter": 3,
+      "title": "La Caída del Hombre, el Juicio Divino y el Protoevangelio",
+      "summary": "Ttentación de la serpiente, desobediencia de Eva y Adán, juicio de Dios, promesa del Protoevangelio (3:15) y expulsión del Edén.",
+      "block_id": "nb_fall",
+      "key_events": ["fall_temptation", "fall_judgment"],
+      "key_people": ["adam", "eve"]
+    },
+    {
+      "chapter": 4,
+      "title": "Caín y Abel, el Primer Homicidio y el Nacimiento de Set",
+      "summary": "Ofrendas de Caín y Abel, primer homicidio, maldición de Caín a Nod, descendencia caínita y nacimiento de Set e invocación de Jehová.",
+      "block_id": "nb_fall",
+      "key_events": ["cain_abel_birth", "cain_abel_offering", "first_murder", "cain_curse_nod", "birth_seth", "invocation_jehovah"],
+      "key_people": ["cain", "abel", "seth", "lamech_cainite"]
+    },
+    {
+      "chapter": 5,
+      "title": "El Libro de las Generaciones de Adán hasta Noé",
+      "summary": "Registro genealógico de diez patriarcas antediluvianos desde Adán hasta Noé, destacando la caminata divina y traslación de Enoc y la longevidad de Matusalén.",
+      "block_id": "nb_fall",
+      "key_events": ["genealogy_adam_noah", "translation_enoch"],
+      "key_people": ["adam", "seth", "enoch", "methuselah", "lamech_sethite", "noah"]
+    },
+    {
+      "chapter": 6,
+      "title": "La Corrupción Universal y el Orden Divino del Arca",
+      "summary": "Corrupción de la humanidad, el dolor de Jehová, Noé halla gracia, mandato divino de construir el Arca y especificaciones arquitectónicas.",
+      "block_id": "nb_flood",
+      "key_events": ["humanity_corruption", "god_speaks_noah"],
+      "key_people": ["noah"]
+    },
+    {
+      "chapter": 7,
+      "title": "El Inicio del Diluvio Universal y la Preservación en el Arca",
+      "summary": "Entrada de Noé y las especies en el arca, cierre de la puerta por Dios, ruptura de fuentes y cataratas del cielo, cobertura total de los montes.",
+      "block_id": "nb_flood",
+      "key_events": ["flood_start"],
+      "key_people": ["noah", "shem"]
+    },
+    {
+      "chapter": 8,
+      "title": "El Descenso de las Aguas, el Desembarco y el Primer Altar",
+      "summary": "Dios se acuerda de Noé, el arca reposa en Ararat, el cuervo y la paloma, salida del arca, edificación del primer altar y ofrenda grata.",
+      "block_id": "nb_flood",
+      "key_events": ["ark_lands_ararat"],
+      "key_people": ["noah", "shem"]
+    },
+    {
+      "chapter": 9,
+      "title": "El Pacto Noéico del Arco Iris y la Profecía de Noé",
+      "summary": "Bendición a Noé, prohibición de comer sangre, pena capital por homicidio, institución del Pacto del Arco Iris, incidente del vino y profecía sobre Sem, Cam y Jafet.",
+      "block_id": "nb_flood",
+      "key_events": ["noahic_covenant", "noah_drunkenness_curse"],
+      "key_people": ["noah", "shem"]
+    },
+    {
+      "chapter": 10,
+      "title": "La Tabla de las Naciones Postdiluvianas",
+      "summary": "Registro etnográfico de los 70 pueblos y naciones nacidos de las tres ramas de Noé (Jafet, Cam y Sem), y el imperio de Nimrod.",
+      "block_id": "nb_babel",
+      "key_events": ["table_of_nations"],
+      "key_people": ["shem", "noah"]
+    },
+    {
+      "chapter": 11,
+      "title": "La Torre de Babel y la Genealogía desde Sem hasta Taré",
+      "summary": "Rebelión y edificación de la Torre de Babel, confusión de lenguas por Dios, genealogía de Sem a Abram y viaje inicial de Taré a Harán.",
+      "block_id": "nb_babel",
+      "key_events": ["tower_of_babel", "shem_genealogy", "terah_moves"],
+      "key_people": ["shem", "terah", "abraham", "sarah", "lot"]
+    },
+    {
+      "chapter": 12,
+      "title": "El Llamado de Abram, la Entrada a Canaán y el Descenso a Egipto",
+      "summary": "Llamado divino a Abram en Harán, viaje a Canaán, altares en Siquem y Betel, hambruna y descenso a Egipto donde hace pasar a Sarai por hermana.",
+      "block_id": "nb_abraham",
+      "key_events": ["abraham_call", "abraham_canaan", "abraham_egypt"],
+      "key_people": ["abraham", "sarah", "lot"]
+    },
+    {
+      "chapter": 13,
+      "title": "El Regreso a Betel y la Separación entre Abram y Lot",
+      "summary": "Abram regresa rico de Egipto, contienda de pastores, elección egoísta de Lot por la llanura del Jordán hacia Sodoma, y promesa renovada a Abram.",
+      "block_id": "nb_abraham",
+      "key_events": ["lot_separation"],
+      "key_people": ["abraham", "lot"]
+    },
+    {
+      "chapter": 14,
+      "title": "La Guerra de los Cuatro Reyes, Rescate de Lot y Melquisedec",
+      "summary": "Guerra mesopotámica, captura de Lot, campaña victoriosa de Abram con 318 criados, y encuentro con Melquisedec (Rey de Salem) recibiendo los diezmos.",
+      "block_id": "nb_abraham",
+      "key_events": ["lot_rescue", "melchizedek"],
+      "key_people": ["abraham", "lot", "melchizedek"]
+    },
+    {
+      "chapter": 15,
+      "title": "El Ratificación Solemne del Pacto Abrahámico",
+      "summary": "Visión de Abram, fe contada por justicia (15:6), profecía de 400 años de opresión en Egipto y ceremonia del pacto con animales cortados y la antorcha de fuego.",
+      "block_id": "nb_abraham",
+      "key_events": ["abrahamic_covenant"],
+      "key_people": ["abraham"]
+    },
+    {
+      "chapter": 16,
+      "title": "Agar, la Concepción y Nacimiento de Ismael",
+      "summary": "Sugerencia de Sarai, matrimonio de Abram con Agar, huida de Agar al desierto, teofanía de El-roi y nacimiento de Ismael cuando Abram tenía 86 años.",
+      "block_id": "nb_abraham",
+      "key_events": ["hagar_ishmael"],
+      "key_people": ["abraham", "sarah", "hagar", "ishmael"]
+    },
+    {
+      "chapter": 17,
+      "title": "El Pacto de la Circuncisión y el Anuncio de Isaac",
+      "summary": "Revelación de El Shaddai a los 99 años de Abram, cambio de nombres a Abraham y Sara, institución del rito de la circuncisión y promesa del nacimiento de Isaac.",
+      "block_id": "nb_abraham",
+      "key_events": ["covenant_circumcision"],
+      "key_people": ["abraham", "sarah", "ishmael"]
+    },
+    {
+      "chapter": 18,
+      "title": "Los Tres Visitantes Celestes y la Intercesión por Sodoma",
+      "summary": "Hospitalidad en Mamre, re-confirmación del hijo milagroso a Sara, revelación del juicio sobre Sodoma e intercesión audaz de Abraham.",
+      "block_id": "nb_abraham",
+      "key_events": ["heavenly_visitors", "sodom_intercession"],
+      "key_people": ["abraham", "sarah"]
+    },
+    {
+      "chapter": 19,
+      "title": "La Destrucción de Sodoma y Gomorra y el Origen de Moab y Amón",
+      "summary": "Llegada de los ángeles a Sodoma, asedio perverso, salida de Lot por misericordia, fuego y azufre, estatua de sal de su esposa e incesto de sus hijas en la cueva.",
+      "block_id": "nb_abraham",
+      "key_events": ["sodom_destruction", "lot_daughters"],
+      "key_people": ["lot"]
+    },
+    {
+      "chapter": 20,
+      "title": "Abraham y Abimelec en Gerar",
+      "summary": "Abraham reside en Gerar y presenta de nuevo a Sara como su hermana, advertencia de Dios a Abimelec en sueños, y restitución con oración sanadora.",
+      "block_id": "nb_abraham",
+      "key_events": ["abraham_canaan"],
+      "key_people": ["abraham", "sarah"]
+    },
+    {
+      "chapter": 21,
+      "title": "El Nacimiento de Isaac, la Expulsión de Agar y el Pacto en Beerseba",
+      "summary": "Nacimiento milagroso de Isaac a los 100 años de Abraham, destete, burla de Ismael, expulsión de Agar e Ismael salvados por el pozo de Dios, y pacto con Abimelec.",
+      "block_id": "nb_abraham",
+      "key_events": ["isaac_birth", "hagar_expelled"],
+      "key_people": ["abraham", "sarah", "isaac", "hagar", "ishmael"]
+    },
+    {
+      "chapter": 22,
+      "title": "La Prueba del Sacrificio de Isaac en Moriah (La Akedáh)",
+      "summary": "Dios prueba a Abraham ordenando sacrificar a Isaac en el monte Moriah, obediencia heroica, detención angélica, provisión del carnero (Jehová-Jireh) y juramento divine.",
+      "block_id": "nb_abraham",
+      "key_events": ["binding_of_isaac"],
+      "key_people": ["abraham", "isaac"]
+    },
+    {
+      "chapter": 23,
+      "title": "La Muerte y Sepultura de Sara en la Cueva de Macpela",
+      "summary": "Muerte de Sara a los 127 años en Hebrón, negociación pública con los hijos de Het y compra de la cueva de Macpela como primera propiedad judía en Canaán.",
+      "block_id": "nb_abraham",
+      "key_events": ["sarah_death_burial"],
+      "key_people": ["abraham", "sarah"]
+    },
+    {
+      "chapter": 24,
+      "title": "La Búsqueda de Esposa para Isaac y el Encuentro con Rebeca",
+      "summary": "Juramento de Eliezer, viaje a Mesopotamia, oración junto al pozo de Harán, generosidad de Rebeca, bendición de Labán y viaje de Rebeca a Canaán para casarse con Isaac.",
+      "block_id": "nb_abraham",
+      "key_events": ["rebekah_marriage"],
+      "key_people": ["abraham", "isaac", "rebekah", "laban"]
+    },
+    {
+      "chapter": 25,
+      "title": "La Muerte de Abraham, la Descendencia de Ismael y el Nacimiento de Esaú y Jacob",
+      "summary": "Matrimonio de Abraham con Cetura, muerte de Abraham a los 175 años, genealogía de Ismael (137 años), oración de Isaac por Rebeca y nacimiento gemelar de Esaú y Jacob.",
+      "block_id": "nb_isaac",
+      "key_events": ["abraham_death", "ishmael_genealogy", "rebekah_barrenness_birth", "esau_sells_birthright"],
+      "key_people": ["abraham", "isaac", "rebekah", "ishmael", "esau", "jacob"]
+    },
+    {
+      "chapter": 26,
+      "title": "Isaac en Gerar, los Pozos de Conflicto y el Pacto en Beerseba",
+      "summary": "Hambruna, confirmación del pacto a Isaac en Gerar, prosperidad al ciento por uno, envidia filistea, reapertura de pozos (Esek, Sitna, Rehobot) y pacto con Abimelec.",
+      "block_id": "nb_isaac",
+      "key_events": ["isaac_covenant_gerar", "isaac_wells_conflict", "esau_canaanite_wives"],
+      "key_people": ["isaac", "rebekah", "esau"]
+    },
+    {
+      "chapter": 27,
+      "title": "La Bendición Patriarcal Suplantada por Jacob",
+      "summary": "Ceguera de Isaac, plan de Rebeca, disfraz de Jacob con pieles de cabrito, engaño a Isaac, concesión de la bendición primaria a Jacob y clamor despechado de Esaú.",
+      "block_id": "nb_isaac",
+      "key_events": ["jacob_blessing_stolen"],
+      "key_people": ["isaac", "rebekah", "esau", "jacob"]
+    },
+    {
+      "chapter": 28,
+      "title": "La Escalera Celestial de Jacob en Betel",
+      "summary": "Envío de Jacob a Padan-aram por Isaac, sueño de la Escalera Celestial con los ángeles subiendo y bajando, teofanía divina y promesa del voto de Betel.",
+      "block_id": "nb_jacob",
+      "key_events": ["jacob_ladder_bethel"],
+      "key_people": ["jacob", "isaac", "rebekah"]
+    },
+    {
+      "chapter": 29,
+      "title": "Jacob en Harán, el Encuentro con Raquel y los Matrimonios con Lea y Raquel",
+      "summary": "Llegada al pozo de Harán, encuentro con Raquel, servidumbre de 7 años a Labán, engaño en la noche de bodas introduciendo a Lea y matrimonio con Raquel.",
+      "block_id": "nb_jacob",
+      "key_events": ["jacob_marries_leah_rachel", "birth_12_tribes"],
+      "key_people": ["jacob", "laban", "leah", "rachel", "ruben", "simeon", "levi", "judah"]
+    },
+    {
+      "chapter": 30,
+      "title": "El Nacimiento de los Hijos de Jacob y la Prosperidad en Rebaños",
+      "summary": "Competencia de matriarcas con Bilha y Zilpa, nacimiento de Dan, Naftalí, Gad, Aser, Isacar, Zabulón, Dina y José, y astucia ganadera de Jacob con las varas.",
+      "block_id": "nb_jacob",
+      "key_events": ["birth_12_tribes"],
+      "key_people": ["jacob", "leah", "rachel", "joseph", "laban"]
+    },
+    {
+      "chapter": 31,
+      "title": "La Huida Secreta de Jacob y el Pacto en Galaad con Labán",
+      "summary": "Envidia de los hijos de Labán, mandato divino de regresar, huida secreta, terafines hurtados por Raquel, persecución de Labán y pacto de separación en Galaad.",
+      "block_id": "nb_jacob",
+      "key_events": ["jacob_flees_laban"],
+      "key_people": ["jacob", "laban", "rachel", "leah"]
+    },
+    {
+      "chapter": 32,
+      "title": "Los Preparativos para Encontrarse con Esaú y la Lucha en Peniel",
+      "summary": "Campamento de Mahanaim, temor de Jacob ante los 400 hombres de Esaú, envío de presentes, y lucha nocturna a solas en Peniel donde su nombre es cambiado a Israel.",
+      "block_id": "nb_jacob",
+      "key_events": ["wrestling_at_peniel"],
+      "key_people": ["jacob"]
+    },
+    {
+      "chapter": 33,
+      "title": "La Reconciliación Emotiva entre Jacob y Esaú",
+      "summary": "Reencuentro de los gemelos, postración de Jacob, abrazo y lágrimas de reconciliación con Esaú, rechazo del regalo por Esaú y compra de tierras en Siquem.",
+      "block_id": "nb_jacob",
+      "key_events": ["jacob_meets_esau"],
+      "key_people": ["jacob", "esau"]
+    },
+    {
+      "chapter": 34,
+      "title": "La Tragedia de Dina y la Venganza Sangrienta en Siquem",
+      "summary": "Deshonra de Dina por Siquem hijo de Hamor, propuesta de matrimonio, engaño del rito de la circuncisión y masacre despiadada perpetrada por Simeón y Leví.",
+      "block_id": "nb_jacob",
+      "key_events": ["dinah_shechem_tragedy"],
+      "key_people": ["jacob", "simeon", "levi"]
+    },
+    {
+      "chapter": 35,
+      "title": "El Regreso a Betel, el Parto de Raquel y la Muerte de Isaac",
+      "summary": "Purificación de ídolos en Betel, altar El-Betel, nacimiento de Benjamín y muerte trágica de Raquel cerca de Belén, y sepultura de Isaac por Esaú y Jacob a los 180 años.",
+      "block_id": "nb_jacob",
+      "key_events": ["return_to_bethel_deaths"],
+      "key_people": ["jacob", "rachel", "benjamin", "isaac", "esau"]
+    },
+    {
+      "chapter": 36,
+      "title": "Las Generaciones de Esaú (Edom)",
+      "summary": "Registro genealógico detallado de los descendientes, duques y reyes de Esaú (Edom) en el monte de Seir antes de que reinara rey sobre Israel.",
+      "block_id": "nb_jacob",
+      "key_events": ["return_to_bethel_deaths"],
+      "key_people": ["esau"]
+    },
+    {
+      "chapter": 37,
+      "title": "Los Sueños de José y su Venta a Egipto por sus Hermanos",
+      "summary": "Favoritismo de Jacob con la túnica de colores, sueños de José, conspiración de los hermanos en Dotán, intervención de Rubén y Judá, y venta por 20 monedas de plata.",
+      "block_id": "nb_joseph",
+      "key_events": ["joseph_dreams_sold"],
+      "key_people": ["joseph", "jacob", "ruben", "judah"]
+    },
+    {
+      "chapter": 38,
+      "title": "Judá y Tamar: El Incidente del Levirato",
+      "summary": "Apartamiento de Judá, muerte de Er y Onán, engaño del levirato a Tamar, audacia del disfraz en Enaim, prendas del sello y cordón, e inclinación justa en el parto de Fares.",
+      "block_id": "nb_joseph",
+      "key_events": ["judah_tamar_sin"],
+      "key_people": ["judah", "tamar"]
+    },
+    {
+      "chapter": 39,
+      "title": "José en Casa de Potifar y la Victoria en la Tentación",
+      "summary": "Prosperidad de José en casa de Potifar, acoso constante de la esposa de Potifar, huida santa, acusación falsa con la túnica y encarcelamiento bendecido por Dios.",
+      "block_id": "nb_joseph",
+      "key_events": ["joseph_potiphar_prison"],
+      "key_people": ["joseph", "potiphar"]
+    },
+    {
+      "chapter": 40,
+      "title": "José Interpreta los Sueños del Copero y del Panadero",
+      "summary": "José en la cárcel real, sueños del jefe de coperos (tres ramas) y del jefe de panaderos (tres canastillos), interpretación exacta y olvido del copero.",
+      "block_id": "nb_joseph",
+      "key_events": ["joseph_potiphar_prison", "joseph_interprets_pharaoh"],
+      "key_people": ["joseph"]
+    },
+    {
+      "chapter": 41,
+      "title": "Los Sueños de Faraón y la Elevación de José a Gran Visir",
+      "summary": "Sueños de Faraón sobre las vacas y espigas, recomendación del copero, interpretación divina de José, nombramiento a los 30 años como Zafnat-panea y almacenamiento de grano.",
+      "block_id": "nb_joseph",
+      "key_events": ["joseph_interprets_pharaoh"],
+      "key_people": ["joseph", "pharaoh_joseph"]
+    },
+    {
+      "chapter": 42,
+      "title": "El Primer Viaje de los Hermanos de José a Egipto",
+      "summary": "Hambruna en Canaán, envío de 10 hermanos por Jacob, postración ante José sin reconocerlo, acusación de espías, retención de Simeón y exigencia de traer a Benjamín.",
+      "block_id": "nb_joseph",
+      "key_events": ["brothers_first_travel"],
+      "key_people": ["joseph", "jacob", "simeon", "ruben"]
+    },
+    {
+      "chapter": 43,
+      "title": "El Segundo Viaje a Egipto con Benjamín",
+      "summary": "Agotamiento de grano, fianza personal de Judá por Benjamín, viaje con presentes, recepción en casa de José, llanto de José al ver a Benjamín y banquete distinguido.",
+      "block_id": "nb_joseph",
+      "key_events": ["brothers_first_travel"],
+      "key_people": ["joseph", "judah", "benjamin", "jacob"]
+    },
+    {
+      "chapter": 44,
+      "title": "La Prueba de la Copa de Plata y la Intercesión Sustitutiva de Judá",
+      "summary": "Copa secreta en el saco de Benjamín, persecución, descubrimiento, desgarradura de vestidos y memorable discurso de Judá ofreciéndose como esclavo en lugar de Benjamín.",
+      "block_id": "nb_joseph",
+      "key_events": ["brothers_first_travel"],
+      "key_people": ["joseph", "judah", "benjamin"]
+    },
+    {
+      "chapter": 45,
+      "title": "José se Revela a sus Hermanos y los Envía a Buscar a Jacob",
+      "summary": "Llanto ruidoso de José, revelación dramática, declaración providencial de perdón (45:5), invitación de Faraón y regreso de los hermanos a Canaán con carros de grano.",
+      "block_id": "nb_joseph",
+      "key_events": ["joseph_reveals_himself"],
+      "key_people": ["joseph", "jacob", "pharaoh_joseph"]
+    },
+    {
+      "chapter": 46,
+      "title": "El Descenso de Jacob y su Familia a Egipto (Gosén)",
+      "summary": "Visión divina a Jacob en Beerseba ('No temas descender a Egipto'), cómputo de 70 almas de la casa de Israel, reencuentro de Jacob y José en Gosén y lágrimas.",
+      "block_id": "nb_joseph",
+      "key_events": ["jacob_family_egypt"],
+      "key_people": ["jacob", "joseph", "pharaoh_joseph"]
+    },
+    {
+      "chapter": 47,
+      "title": "Jacob ante Faraón y la Administración de la Hambruna por José",
+      "summary": "Presentación de Jacob bendiciendo a Faraón a los 130 años, establecimiento en Gosén, compra estatal del suelo e industria egipcia por grano, y juramento a José de no sepultarlo en Egipto.",
+      "block_id": "nb_joseph",
+      "key_events": ["jacob_family_egypt"],
+      "key_people": ["jacob", "joseph", "pharaoh_joseph"]
+    },
+    {
+      "chapter": 48,
+      "title": "La Adopción y Bendición de Efraín y Manasés por Jacob",
+      "summary": "Enfermedad de Jacob, adopción legal de los dos hijos de José, cruce de manos al bendecir anteponiendo al menor Efraín sobre el mayor Manasés.",
+      "block_id": "nb_joseph",
+      "key_events": ["jacob_blesses_sons_death"],
+      "key_people": ["jacob", "joseph"]
+    },
+    {
+      "chapter": 49,
+      "title": "Las Bendiciones Proféticas de Jacob a sus Doce Hijos y la Profecía de Siloh",
+      "summary": "Discurso profético final de Jacob sobre su lecho de muerte revelando el destino futuro de las 12 Tribus, destacando la Profecía de Siloh sobre Judá (49:10) y la muerte de Jacob.",
+      "block_id": "nb_joseph",
+      "key_events": ["jacob_blesses_sons_death"],
+      "key_people": ["jacob", "ruben", "simeon", "levi", "judah", "joseph", "benjamin"]
+    },
+    {
+      "chapter": 50,
+      "title": "El Sepelio de Jacob en Macpela, el Perdón de José y su Muerte en Fe",
+      "summary": "Embalsamamiento de Jacob, cortejo fúnebre real a Canaán para sepultarlo en Macpela, temor de los hermanos disipado por José ('Dios lo encaminó a bien'), y muerte de José a los 110 años con juramento de sus huesos.",
+      "block_id": "nb_joseph",
+      "key_events": ["jacob_blesses_sons_death"],
+      "key_people": ["joseph", "jacob"]
+    }
+  ],
+  "notable_overlaps": [
+    {
+      "person1_id": "adam",
+      "person2_id": "methuselah",
+      "years_together": 243,
+      "historical_note": "Adán convivió 243 años con Matusalén (AM 687 – 930), permitiendo la transmisión oral directa de la verdad de la Creación y el Edén a la octava generación patriarcal."
+    },
+    {
+      "person1_id": "adam",
+      "person2_id": "lamech_sethite",
+      "years_together": 56,
+      "historical_note": "Adán convivió 56 años con Lamec, el padre de Noé (AM 874 – 930), garantizando la continuidad pedagógica de las primeras generaciones."
+    },
+    {
+      "person1_id": "seth",
+      "person2_id": "methuselah",
+      "years_together": 355,
+      "historical_note": "Set convivió 355 años con Matusalén (AM 687 – 1042), conservando la fe y el culto público a Jehová."
+    },
+    {
+      "person1_id": "methuselah",
+      "person2_id": "noah",
+      "years_together": 600,
+      "historical_note": "Matusalén convivió 600 años con su nieto Noé (AM 1056 – 1656), falleciendo en el año exacto del inicio del Diluvio Universal."
+    },
+    {
+      "person1_id": "noah",
+      "person2_id": "abraham",
+      "years_together": 58,
+      "historical_note": "Noé, el sobreviviente del Diluvio, convivió 58 años con Abraham (nacido en AM 1948, Noé murió en AM 2006), conectando el mundo antediluviano con el padre de la fe."
+    },
+    {
+      "person1_id": "shem",
+      "person2_id": "abraham",
+      "years_together": 175,
+      "historical_note": "Sem vivió durante toda la vida terrenal de Abraham (175 años, AM 1948 – 2123), sirviendo como el gran maestro patriarcal postdiluviano."
+    },
+    {
+      "person1_id": "shem",
+      "person2_id": "jacob",
+      "years_together": 50,
+      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2108, Sem murió en AM 2158), transmitiéndole directamente la fe de las generaciones antiguas."
+    },
+    {
+      "person1_id": "abraham",
+      "person2_id": "isaac",
+      "years_together": 75,
+      "historical_note": "Abraham convivió 75 años con su hijo de la promesa Isaac (AM 2048 – 2123), instruyéndole en el camino del pacto."
+    },
+    {
+      "person1_id": "abraham",
+      "person2_id": "jacob",
+      "years_together": 15,
+      "historical_note": "Abraham convivió 15 años con su nieto Jacob (nacido en AM 2108, Abraham murió en AM 2123), dejando una impronta indeleble en su juventud."
+    },
+    {
+      "person1_id": "isaac",
+      "person2_id": "jacob",
+      "years_together": 120,
+      "historical_note": "Isaac convivió 120 años con su hijo Jacob (AM 2108 – 2228), hasta poco antes del descenso de la familia a Egipto."
+    },
+    {
+      "person1_id": "jacob",
+      "person2_id": "joseph",
+      "years_together": 56,
+      "historical_note": "Jacob convivió 17 años en Canaán y 17 años en Egipto con su hijo José (AM 2259 – 2315), experimentando el gozo de la restauración familiar."
+    }
+  ]
 }
