@@ -39,16 +39,34 @@ export function getEventSummary(e) {
 }
 
 /**
+ * Formatea de forma 100% segura cualquier referencia bíblica (string u objeto).
+ */
+export function formatRef(ref) {
+  if (!ref) return '';
+  if (typeof ref === 'string') return ref;
+  if (typeof ref === 'object') {
+    const book = ref.book || 'Génesis';
+    const ch = ref.chapter || ref.chapter_start || '';
+    const vs = ref.verse_start || ref.verse_start_ref || '';
+    const ve = ref.verse_end || ref.verse_end_ref || '';
+    if (ch && vs) {
+      return `${book} ${ch}:${vs}${ve ? '-' + ve : ''}`;
+    }
+    if (ch) return `${book} cap. ${ch}`;
+  }
+  return '';
+}
+
+/**
  * Extrae la cita bíblica formateada en string.
  */
 export function getEventRefStr(e) {
   if (!e) return '';
   if (e.scriptural_reference) {
-    return `Gén. ${e.scriptural_reference.chapter}:${e.scriptural_reference.verse_start}`;
+    return formatRef(e.scriptural_reference);
   }
   if (e.references && e.references.length > 0) {
-    const r = e.references[0];
-    return `Gén. ${r.chapter}:${r.verse_start}${r.verse_end ? '-' + r.verse_end : ''}`;
+    return formatRef(e.references[0]);
   }
   if (e.chapter_start) {
     return `Gén. ${e.chapter_start}:${e.verse_start_ref || 1}`;
@@ -184,8 +202,8 @@ export function mapGenesisToVisData(
   // 4. Mapear Pactos en covenants_group
   covenants.forEach(cov => {
     let covAM = 0;
-    if (cov.id === 'edenic_covenant') covAM = 0;
-    if (cov.id === 'adamic_covenant') covAM = 2;
+    if (cov.id === 'edenic_covenant' || cov.id === 'eden_covenant') covAM = 0;
+    if (cov.id === 'adamic_covenant' || cov.id === 'adamic') covAM = 2;
     if (cov.id === 'noahic_covenant') covAM = 1657;
     if (cov.id === 'abrahamic_covenant') covAM = 2033;
     if (cov.id === 'circumcision_covenant') covAM = 2047;
@@ -204,10 +222,8 @@ export function mapGenesisToVisData(
   let visibleEvents = events;
 
   if (detailLevel === 1) {
-    // Nivel 1: Ocultar eventos individuales por completo
     visibleEvents = [];
   } else if (detailLevel === 2) {
-    // Nivel 2: Mostrar solo eventos clave
     visibleEvents = events.filter(e => {
       const am = getEventAM(e);
       return (
@@ -218,7 +234,6 @@ export function mapGenesisToVisData(
       );
     });
   }
-  // Nivel 3: Mostrar el 100% de los eventos bíblicos
 
   visibleEvents.forEach(e => {
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };

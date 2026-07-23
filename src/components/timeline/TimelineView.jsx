@@ -7,7 +7,8 @@ import {
   getEventAM,
   getEventSummary,
   getEventRefStr,
-  getEventChapter
+  getEventChapter,
+  formatRef
 } from '../../utils/timelineMapper';
 import { TimelineControls } from './TimelineControls';
 import { EventPanel } from '../panels/EventPanel';
@@ -122,17 +123,17 @@ export function TimelineView({
       selectable: true,
       showCurrentTime: false,
       margin: {
-        item: 16,
-        axis: 24
+        item: 18,
+        axis: 26
       },
       orientation: {
         axis: 'top',
         item: 'top'
       },
-      min: amToDate(-100),
-      max: amToDate(2450),
-      // Inicio desfasado a AM -60 para evitar solapamientos con la barra de grupos izquierda
-      start: amToDate(-60),
+      min: amToDate(-300),
+      max: amToDate(2500),
+      // Inicio desfasado a AM -180 para garantizar que AM 0 quede 100% visible a la derecha del panel de grupos
+      start: amToDate(-180),
       end: amToDate(2369),
       format: {
         minorLabels: function(date, scale) {
@@ -223,7 +224,7 @@ export function TimelineView({
 
   const handleFitAll = () => {
     if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(-60), amToDate(2369), { animation: true });
+      timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
     }
   };
 
@@ -282,7 +283,7 @@ export function TimelineView({
               <div className="preview-header">
                 <span className="preview-badge badge-covenant">👑 Pacto Divino</span>
                 <h3>{selectedEntity.data.name}</h3>
-                <span className="preview-am">{selectedEntity.data.scriptural_reference}</span>
+                <span className="preview-am">{formatRef(selectedEntity.data.scriptural_reference)}</span>
                 <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
                   👑 Ver Pacto Completo ➔
                 </button>
@@ -356,7 +357,7 @@ export function TimelineView({
             <div className="entity-modal-content">
               <div className="covenant-modal-badge">Pacto Divino Solemnizado</div>
               <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
-              <p className="entity-modal-ref">📜 Cita Bíblica: {selectedEntity.data.scriptural_reference}</p>
+              <p className="entity-modal-ref">📜 Cita Bíblica: {formatRef(selectedEntity.data.scriptural_reference)}</p>
               <div className="entity-modal-section">
                 <h3>📖 Descripción del Pacto</h3>
                 <p>{selectedEntity.data.description}</p>
@@ -364,14 +365,20 @@ export function TimelineView({
               {selectedEntity.data.parties && (
                 <div className="entity-modal-section">
                   <h3>🤝 Partes Involucradas</h3>
-                  <p><strong>Dios:</strong> {selectedEntity.data.parties.divine}</p>
-                  <p><strong>Humano / Representante:</strong> {selectedEntity.data.parties.human}</p>
+                  <p><strong>Dios:</strong> {selectedEntity.data.parties.god || selectedEntity.data.parties.divine || 'Jehová Dios'}</p>
+                  <p><strong>Humano / Representante:</strong> {selectedEntity.data.parties.human_representative || selectedEntity.data.parties.human || 'La Humanidad'}</p>
                 </div>
               )}
               {selectedEntity.data.theological_significance && (
                 <div className="entity-modal-section">
                   <h3>🕊️ Significado Teológico & Redentor</h3>
                   <p>{selectedEntity.data.theological_significance}</p>
+                </div>
+              )}
+              {selectedEntity.data.fulfillment_in_christ && (
+                <div className="entity-modal-section messianic-box">
+                  <h3>✝️ Cumplimiento en Jesucristo</h3>
+                  <p>{selectedEntity.data.fulfillment_in_christ}</p>
                 </div>
               )}
             </div>
