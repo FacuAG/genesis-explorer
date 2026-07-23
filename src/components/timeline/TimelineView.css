@@ -251,7 +251,6 @@
 }
 
 .preview-badge {
-  background: linear-gradient(135deg, #aa3bff 0%, #6366f1 100%);
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 800;
@@ -259,6 +258,11 @@
   border-radius: 6px;
   text-transform: uppercase;
 }
+
+.badge-event { background: linear-gradient(135deg, #aa3bff 0%, #6366f1 100%); }
+.badge-covenant { background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%); }
+.badge-block { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.badge-era { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
 
 .preview-header h3 {
   margin: 0;
@@ -300,4 +304,69 @@
   font-style: italic;
   font-size: 0.85rem;
   color: #fef08a;
+}
+
+/* Modales Genéricos de Entidades */
+.entity-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.covenant-modal-badge, .block-modal-badge, .era-modal-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.covenant-modal-badge { background: rgba(234, 179, 8, 0.2); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.4); }
+.block-modal-badge { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+.era-modal-badge { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4); }
+
+.entity-modal-title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #f8fafc;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.entity-modal-ref {
+  margin: -0.5rem 0 0 0;
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.entity-modal-toledot {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  background: rgba(30, 41, 59, 0.6);
+  border-left: 3px solid #6366f1;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.entity-modal-section h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  color: #f1f5f9;
+}
+
+.entity-modal-section p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.messianic-box {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
 }

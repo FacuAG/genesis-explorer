@@ -17,6 +17,57 @@ export const EVENT_CATEGORIES = {
 };
 
 /**
+ * Extrae el año Anno Mundi (AM) real de cualquier evento bíblico del dataset.
+ */
+export function getEventAM(e) {
+  if (!e) return 0;
+  if (typeof e.year_am === 'number') return e.year_am;
+  if (e.chronology) {
+    if (typeof e.chronology.approx_year_am === 'number') return e.chronology.approx_year_am;
+    if (typeof e.chronology.year_am === 'number') return e.chronology.year_am;
+    if (typeof e.chronology.exact_year_am === 'number') return e.chronology.exact_year_am;
+  }
+  return 0;
+}
+
+/**
+ * Extrae el resumen o narrativa de un evento.
+ */
+export function getEventSummary(e) {
+  if (!e) return '';
+  return e.summary || e.narrative || '';
+}
+
+/**
+ * Extrae la cita bíblica formateada en string.
+ */
+export function getEventRefStr(e) {
+  if (!e) return '';
+  if (e.scriptural_reference) {
+    return `Gén. ${e.scriptural_reference.chapter}:${e.scriptural_reference.verse_start}`;
+  }
+  if (e.references && e.references.length > 0) {
+    const r = e.references[0];
+    return `Gén. ${r.chapter}:${r.verse_start}${r.verse_end ? '-' + r.verse_end : ''}`;
+  }
+  if (e.chapter_start) {
+    return `Gén. ${e.chapter_start}:${e.verse_start_ref || 1}`;
+  }
+  return '';
+}
+
+/**
+ * Extrae el número de capítulo entero para filtros.
+ */
+export function getEventChapter(e) {
+  if (!e) return 1;
+  if (e.scriptural_reference?.chapter) return e.scriptural_reference.chapter;
+  if (e.references && e.references.length > 0) return e.references[0].chapter;
+  if (e.chapter_start) return e.chapter_start;
+  return 1;
+}
+
+/**
  * Convierte un año Anno Mundi (AM) a un objeto Date falso de escala uniforme
  * AM 0 se mapea al año 1000-01-01, AM 2369 al año 3369-01-01.
  */
@@ -43,12 +94,6 @@ export function dateToAM(date) {
 /**
  * Transforma los eventos, bloques narrativos, eras y pactos de genesis.json
  * en ítems y grupos para vis-timeline según el nivel de detalle semántico (LOD).
- * 
- * @param {Array} events - Lista de eventos bíblicos
- * @param {Array} narrativeBlocks - Lista de bloques narrativos
- * @param {Array} covenants - Lista de pactos
- * @param {Array} eras - Lista de eras teológicas
- * @param {number} detailLevel - 1: Macro (Eras/Pactos), 2: Medio (Bloques), 3: Completo (82 Eventos)
  */
 export function mapGenesisToVisData(
   events = [],
@@ -91,7 +136,7 @@ export function mapGenesisToVisData(
 
   const items = [];
 
-  // 2. Mapear Eras Teológicas (Nivel 1, 2 y 3)
+  // 2. Mapear Eras Teológicas
   eras.forEach(era => {
     const startAM = era.am_start ?? 0;
     const endAM = era.am_end ?? 2369;
@@ -109,12 +154,11 @@ export function mapGenesisToVisData(
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
-      className: `vis-item-era era-${era.id}`,
-      title: `<strong>${era.name}</strong> (${era.subtitle}): ${era.description}`
+      className: `vis-item-era era-${era.id}`
     });
   });
 
-  // 3. Mapear Bloques Narrativos (Nivel 1, 2 y 3)
+  // 3. Mapear Bloques Narrativos
   narrativeBlocks.forEach(block => {
     const startAM = block.am_start ?? 0;
     const endAM = block.am_end ?? (startAM + 10);
@@ -133,8 +177,7 @@ export function mapGenesisToVisData(
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
-      className: `vis-item-narrative-block block-${block.id}`,
-      title: `<strong>${block.name}</strong> (Génesis Caps. ${chapRange})<br/>${block.summary ? block.summary.substring(0, 180) + '...' : ''}`
+      className: `vis-item-narrative-block block-${block.id}`
     });
   });
 
@@ -153,51 +196,40 @@ export function mapGenesisToVisData(
       content: `<div class="vis-covenant-card">👑 <strong>${cov.name}</strong></div>`,
       start: amToDate(covAM),
       type: 'box',
-      className: 'vis-item-covenant',
-      title: `<strong>${cov.name}</strong>: ${cov.description}`
+      className: 'vis-item-covenant'
     });
   });
 
-  // 5. Mapear Eventos Bíblicos (Filtrados por Nivel de Detalle Semantic Zoom)
+  // 5. Mapear Eventos Bíblicos (Filtrados por Nivel de Detalle Semántico)
   let visibleEvents = events;
 
   if (detailLevel === 1) {
-    // Nivel 1: Ocultar eventos individuales por completo (solo Eras, Bloques y Pactos)
+    // Nivel 1: Ocultar eventos individuales por completo
     visibleEvents = [];
   } else if (detailLevel === 2) {
-    // Nivel 2: Mostrar solo eventos clave (Pactos, Creación, Juicios globales)
-    visibleEvents = events.filter(e =>
-      e.category === 'covenant' ||
-      e.category === 'creation' ||
-      e.category === 'judgment' ||
-      e.year_am === 0 ||
-      e.year_am === 1656 ||
-      e.year_am === 1750 ||
-      e.year_am === 2023 ||
-      e.year_am === 2288
-    );
+    // Nivel 2: Mostrar solo eventos clave
+    visibleEvents = events.filter(e => {
+      const am = getEventAM(e);
+      return (
+        e.category === 'covenant' ||
+        e.category === 'creation' ||
+        e.category === 'judgment' ||
+        am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2288
+      );
+    });
   }
-  // Nivel 3: Mostrar el 100% de los eventos (82 eventos)
+  // Nivel 3: Mostrar el 100% de los eventos bíblicos
 
   visibleEvents.forEach(e => {
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };
-    const amYear = e.year_am ?? 0;
-    const refStr = e.scriptural_reference ? `Gén. ${e.scriptural_reference.chapter}:${e.scriptural_reference.verse_start}` : '';
+    const amYear = getEventAM(e);
+    const eventName = e.short_name || e.name;
 
     const contentHtml = `
       <div class="vis-event-card category-${e.category}">
         <span class="event-icon">${cat.icon}</span>
-        <span class="event-title">${e.name}</span>
+        <span class="event-title">${eventName}</span>
         <span class="event-am-tag">AM ${amYear}</span>
-      </div>
-    `;
-
-    const tooltipHtml = `
-      <div class="vis-tooltip-box">
-        <h4>${cat.icon} ${e.name}</h4>
-        <p class="tooltip-am"><strong>Año:</strong> AM ${amYear} | <strong>Cita:</strong> ${refStr}</p>
-        <p class="tooltip-summary">${e.summary}</p>
-        ${e.key_verse ? `<blockquote class="tooltip-verse">"${e.key_verse.text}"</blockquote>` : ''}
       </div>
     `;
 
@@ -207,8 +239,7 @@ export function mapGenesisToVisData(
       content: contentHtml,
       start: amToDate(amYear),
       type: 'box',
-      className: `vis-item-event cat-${e.category}`,
-      title: tooltipHtml
+      className: `vis-item-event cat-${e.category}`
     });
   });
 

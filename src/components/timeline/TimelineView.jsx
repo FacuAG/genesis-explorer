@@ -1,9 +1,17 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { Timeline } from 'vis-timeline/standalone';
 import { DataSet } from 'vis-data/standalone';
-import { mapGenesisToVisData, amToDate } from '../../utils/timelineMapper';
+import {
+  mapGenesisToVisData,
+  amToDate,
+  getEventAM,
+  getEventSummary,
+  getEventRefStr,
+  getEventChapter
+} from '../../utils/timelineMapper';
 import { TimelineControls } from './TimelineControls';
 import { EventPanel } from '../panels/EventPanel';
+import { Modal } from '../common/Modal';
 import './TimelineView.css';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
@@ -12,10 +20,21 @@ import 'vis-timeline/styles/vis-timeline-graph2d.css';
  * Utiliza el motor vis-timeline con renderizado de eje Anno Mundi (AM),
  * apilamiento dinámico anti-superposición, zoom real y selección interactiva de eventos.
  */
-export function TimelineView({ events = [], eras = [], narrativeBlocks = [], covenants = [], peopleMap, locationsMap, onSelectEvent, onSelectPerson }) {
+export function TimelineView({
+  events = [],
+  eras = [],
+  narrativeBlocks = [],
+  covenants = [],
+  peopleMap,
+  locationsMap,
+  onSelectEvent,
+  onSelectPerson
+}) {
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
-  const [selectedEventId, setSelectedEventId] = useState(null);
+
+  // Entidad activa seleccionada (Evento, Pacto, Bloque o Era)
+  const [selectedEntity, setSelectedEntity] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Estados de Filtro Avanzado
@@ -24,6 +43,31 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
   const [selectedChapter, setSelectedChapter] = useState('all');
   const [filterText, setFilterText] = useState('');
   const [detailLevel, setDetailLevel] = useState(2); // Default Nivel 2: Limpio & Estructurado
+
+  // Maps para búsqueda $O(1)$ de Pactos, Bloques y Eras
+  const covenantsMap = useMemo(() => {
+    const map = new Map();
+    covenants.forEach(c => map.set(c.id, c));
+    return map;
+  }, [covenants]);
+
+  const blocksMap = useMemo(() => {
+    const map = new Map();
+    narrativeBlocks.forEach(b => map.set(b.id, b));
+    return map;
+  }, [narrativeBlocks]);
+
+  const erasMap = useMemo(() => {
+    const map = new Map();
+    eras.forEach(e => map.set(e.id, e));
+    return map;
+  }, [eras]);
+
+  const eventsMap = useMemo(() => {
+    const map = new Map();
+    events.forEach(e => map.set(e.id, e));
+    return map;
+  }, [events]);
 
   // Filtrado multi-criterio de eventos
   const filteredEvents = useMemo(() => {
@@ -37,7 +81,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
         if (block) {
           const startCh = block.chapters_start ?? 1;
           const endCh = block.chapters_end ?? 50;
-          const eventCh = e.scriptural_reference?.chapter;
+          const eventCh = getEventChapter(e);
           if (eventCh && (eventCh < startCh || eventCh > endCh)) return false;
         }
       }
@@ -45,14 +89,15 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       // 3. Filtro por Capítulo Específico
       if (selectedChapter !== 'all') {
         const targetCh = Number(selectedChapter);
-        if (e.scriptural_reference?.chapter !== targetCh) return false;
+        const eventCh = getEventChapter(e);
+        if (eventCh !== targetCh) return false;
       }
 
       // 4. Filtro por Texto / Palabra clave
       if (filterText && filterText.trim().length > 0) {
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const name = (e.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const summary = (e.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const summary = getEventSummary(e).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         if (!name.includes(q) && !summary.includes(q)) return false;
       }
 
@@ -78,15 +123,16 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       showCurrentTime: false,
       margin: {
         item: 16,
-        axis: 22
+        axis: 24
       },
       orientation: {
         axis: 'top',
         item: 'top'
       },
-      min: amToDate(0),
-      max: amToDate(2400),
-      start: amToDate(0),
+      min: amToDate(-100),
+      max: amToDate(2450),
+      // Inicio desfasado a AM -60 para evitar solapamientos con la barra de grupos izquierda
+      start: amToDate(-60),
       end: amToDate(2369),
       format: {
         minorLabels: function(date, scale) {
@@ -98,7 +144,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
             else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
           }
           const am = yr - 1000;
-          return `AM ${am}`;
+          return am < 0 ? `Antes de AM 0` : `AM ${am}`;
         },
         majorLabels: function(date, scale) {
           let yr = 1000;
@@ -109,7 +155,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
             else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
           }
           const am = yr - 1000;
-          return `Anno Mundi (AM ${am})`;
+          return am < 0 ? `Período Inicial` : `Anno Mundi (AM ${am})`;
         }
       },
       template: function (item) {
@@ -121,24 +167,36 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
     const timeline = new Timeline(containerRef.current, visItems, visGroups, options);
     timelineInstanceRef.current = timeline;
 
-    // Manejador del evento de selección
+    // Manejador del evento de selección (clic en cualquier ítem)
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
-        if (!itemId.startsWith('block_') && !itemId.startsWith('cov_') && !itemId.startsWith('era_')) {
-          setSelectedEventId(itemId);
-          if (onSelectEvent) {
-            const eventObj = events.find(e => e.id === itemId);
-            onSelectEvent(eventObj || itemId);
+
+        if (itemId.startsWith('era_')) {
+          const eraId = itemId.replace('era_', '');
+          const eraObj = erasMap.get(eraId);
+          if (eraObj) setSelectedEntity({ type: 'era', data: eraObj });
+        } else if (itemId.startsWith('block_')) {
+          const blockId = itemId.replace('block_', '');
+          const blockObj = blocksMap.get(blockId);
+          if (blockObj) setSelectedEntity({ type: 'block', data: blockObj });
+        } else if (itemId.startsWith('cov_')) {
+          const covId = itemId.replace('cov_', '');
+          const covObj = covenantsMap.get(covId);
+          if (covObj) setSelectedEntity({ type: 'covenant', data: covObj });
+        } else {
+          const eventObj = eventsMap.get(itemId);
+          if (eventObj) {
+            setSelectedEntity({ type: 'event', data: eventObj });
+            if (onSelectEvent) onSelectEvent(eventObj);
           }
         }
       }
     });
 
-    // Manejador de doble clic para abrir el modal de detalle directamente
+    // Manejador de doble clic para abrir el modal directamente
     timeline.on('doubleClick', function (properties) {
-      if (properties.item && !properties.item.startsWith('block_') && !properties.item.startsWith('cov_') && !properties.item.startsWith('era_')) {
-        setSelectedEventId(properties.item);
+      if (properties.item) {
         setIsModalOpen(true);
       }
     });
@@ -149,13 +207,12 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
         timelineInstanceRef.current = null;
       }
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, onSelectEvent, events]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
 
   // Funciones de navegación de zoom y salto de ventana Anno Mundi
   const handleZoomIn = () => {
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.zoomIn(0.4);
-      // Auto-escalar a Nivel 3 (Detalle Completo) al hacer zoom in
       if (detailLevel < 3) setDetailLevel(3);
     }
   };
@@ -166,20 +223,16 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
 
   const handleFitAll = () => {
     if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(0), amToDate(2369), { animation: true });
+      timelineInstanceRef.current.setWindow(amToDate(-60), amToDate(2369), { animation: true });
     }
   };
 
   const handleJumpToAM = (startAM, endAM) => {
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
-      // Al saltar a una ventana pequeña, cambiar automáticamente a Nivel 3 para ver los eventos locales
       setDetailLevel(3);
     }
   };
-
-  // Evento actualmente seleccionado para la vista rápida inferior
-  const currentSelectedObj = events.find(e => e.id === selectedEventId);
 
   return (
     <div className="timeline-view-wrapper">
@@ -206,37 +259,166 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       {/* Contenedor Principal de la Línea de Tiempo vis-timeline */}
       <div className="vis-timeline-mount" ref={containerRef} />
 
-      {/* Tarjeta de Evento Seleccionado en Vivo (Quick Preview Panel) */}
-      {currentSelectedObj && (
+      {/* Previsualizador Rápido Inferior según la entidad seleccionada */}
+      {selectedEntity && (
         <div className="selected-event-preview-bar">
-          <div className="preview-header">
-            <span className="preview-badge">Evento Seleccionado</span>
-            <h3>{currentSelectedObj.name}</h3>
-            <span className="preview-am">Anno Mundi: AM {currentSelectedObj.year_am}</span>
-            <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-              📖 Ver Detalle Exegético ➔
-            </button>
-            <button className="preview-close-btn" onClick={() => setSelectedEventId(null)}>✕</button>
-          </div>
-          <p className="preview-summary">{currentSelectedObj.summary}</p>
-          {currentSelectedObj.key_verse && (
-            <p className="preview-verse">
-              "{currentSelectedObj.key_verse.text}" — <strong>{currentSelectedObj.key_verse.reference}</strong>
-            </p>
+          {selectedEntity.type === 'event' && (
+            <>
+              <div className="preview-header">
+                <span className="preview-badge badge-event">⚡ Evento Bíblico</span>
+                <h3>{selectedEntity.data.name}</h3>
+                <span className="preview-am">AM {getEventAM(selectedEntity.data)} | {getEventRefStr(selectedEntity.data)}</span>
+                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
+                  📖 Abrir Modal Exegético ➔
+                </button>
+                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+              </div>
+              <p className="preview-summary">{getEventSummary(selectedEntity.data)}</p>
+            </>
+          )}
+
+          {selectedEntity.type === 'covenant' && (
+            <>
+              <div className="preview-header">
+                <span className="preview-badge badge-covenant">👑 Pacto Divino</span>
+                <h3>{selectedEntity.data.name}</h3>
+                <span className="preview-am">{selectedEntity.data.scriptural_reference}</span>
+                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
+                  👑 Ver Pacto Completo ➔
+                </button>
+                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+              </div>
+              <p className="preview-summary">{selectedEntity.data.description}</p>
+              {selectedEntity.data.theological_significance && (
+                <p className="preview-verse">
+                  <strong>Significado Teológico:</strong> {selectedEntity.data.theological_significance}
+                </p>
+              )}
+            </>
+          )}
+
+          {selectedEntity.type === 'block' && (
+            <>
+              <div className="preview-header">
+                <span className="preview-badge badge-block">📍 Bloque Narrativo</span>
+                <h3>{selectedEntity.data.name}</h3>
+                <span className="preview-am">Génesis Caps. {selectedEntity.data.chapters_start}-{selectedEntity.data.chapters_end}</span>
+                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
+                  📍 Ver Bloque Completo ➔
+                </button>
+                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+              </div>
+              <p className="preview-summary">{selectedEntity.data.summary}</p>
+            </>
+          )}
+
+          {selectedEntity.type === 'era' && (
+            <>
+              <div className="preview-header">
+                <span className="preview-badge badge-era">🌐 Era Teológica</span>
+                <h3>{selectedEntity.data.name} ({selectedEntity.data.subtitle})</h3>
+                <span className="preview-am">Caps. {selectedEntity.data.chapters_start}-{selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} - {selectedEntity.data.am_end}</span>
+                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
+                  🌐 Ver Era Completa ➔
+                </button>
+                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+              </div>
+              <p className="preview-summary">{selectedEntity.data.description}</p>
+            </>
           )}
         </div>
       )}
 
-      {/* Modal de Detalle Completo del Evento */}
-      <EventPanel
-        event={currentSelectedObj}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        peopleMap={peopleMap}
-        locationsMap={locationsMap}
-        onSelectPerson={onSelectPerson}
-      />
+      {/* Modal Genérico de Detalle Exegético */}
+      {isModalOpen && selectedEntity && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={
+            selectedEntity.type === 'event' ? `⚡ ${selectedEntity.data.name}` :
+            selectedEntity.type === 'covenant' ? `👑 ${selectedEntity.data.name}` :
+            selectedEntity.type === 'block' ? `📍 ${selectedEntity.data.name}` :
+            `🌐 ${selectedEntity.data.name}`
+          }
+        >
+          {selectedEntity.type === 'event' && (
+            <EventPanel
+              event={selectedEntity.data}
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              peopleMap={peopleMap}
+              locationsMap={locationsMap}
+              onSelectPerson={onSelectPerson}
+            />
+          )}
+
+          {selectedEntity.type === 'covenant' && (
+            <div className="entity-modal-content">
+              <div className="covenant-modal-badge">Pacto Divino Solemnizado</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
+              <p className="entity-modal-ref">📜 Cita Bíblica: {selectedEntity.data.scriptural_reference}</p>
+              <div className="entity-modal-section">
+                <h3>📖 Descripción del Pacto</h3>
+                <p>{selectedEntity.data.description}</p>
+              </div>
+              {selectedEntity.data.parties && (
+                <div className="entity-modal-section">
+                  <h3>🤝 Partes Involucradas</h3>
+                  <p><strong>Dios:</strong> {selectedEntity.data.parties.divine}</p>
+                  <p><strong>Humano / Representante:</strong> {selectedEntity.data.parties.human}</p>
+                </div>
+              )}
+              {selectedEntity.data.theological_significance && (
+                <div className="entity-modal-section">
+                  <h3>🕊️ Significado Teológico & Redentor</h3>
+                  <p>{selectedEntity.data.theological_significance}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {selectedEntity.type === 'block' && (
+            <div className="entity-modal-content">
+              <div className="block-modal-badge">Bloque Narrativo del Génesis</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
+              <p className="entity-modal-ref">📖 Capítulos: Génesis {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</p>
+              {selectedEntity.data.toledot_reference && (
+                <p className="entity-modal-toledot">
+                  ✨ <em>Sección Toledot:</em> "{selectedEntity.data.toledot_text}" ({selectedEntity.data.toledot_reference})
+                </p>
+              )}
+              <div className="entity-modal-section">
+                <h3>📜 Resumen Narrativo</h3>
+                <p>{selectedEntity.data.summary}</p>
+              </div>
+              {selectedEntity.data.theological_significance && (
+                <div className="entity-modal-section">
+                  <h3>🕊️ Enfoque Teológico</h3>
+                  <p>{selectedEntity.data.theological_significance}</p>
+                </div>
+              )}
+              {selectedEntity.data.messianic_connection && (
+                <div className="entity-modal-section messianic-box">
+                  <h3>✝️ Conexión Mesiánica con Jesucristo</h3>
+                  <p>{selectedEntity.data.messianic_connection}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {selectedEntity.type === 'era' && (
+            <div className="entity-modal-content">
+              <div className="era-modal-badge">Gran Era de la Historia Sagrada</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name} — {selectedEntity.data.subtitle}</h2>
+              <p className="entity-modal-ref">📖 Génesis Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
+              <div className="entity-modal-section">
+                <h3>📜 Panorama General de la Era</h3>
+                <p>{selectedEntity.data.description}</p>
+              </div>
+            </div>
+          )}
+        </Modal>
+      )}
     </div>
   );
 }
-
