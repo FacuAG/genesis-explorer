@@ -1,69 +1,335 @@
-/* TimelineView CSS Vanilla */
+/* TimelineView CSS Vanilla — Genesis Explorer */
 
-.timeline-container {
+.timeline-view-wrapper {
   padding: 1.5rem;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.timeline-placeholder-card {
-  background: rgba(30, 32, 41, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 2rem;
-  backdrop-filter: blur(12px);
-}
-
-.timeline-header-info h2 {
-  margin: 0 0 0.5rem 0;
-  color: #f1f5f9;
-  font-size: 1.5rem;
-}
-
-.timeline-header-info p {
-  margin: 0 0 1.5rem 0;
-  color: #94a3b8;
-  font-size: 0.95rem;
-}
-
-.eras-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.era-badge-card {
-  background: rgba(15, 23, 42, 0.6);
+/* Toolbar de Controles Superior */
+.timeline-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(30, 32, 41, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 1rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  padding: 0.85rem 1.25rem;
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.era-badge-card:hover {
-  transform: translateY(-2px);
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toolbar-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.toolbar-category-select {
+  background: #181920;
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toolbar-category-select:hover {
   border-color: #c084fc;
 }
 
-.era-chapter-tag {
-  background: rgba(192, 132, 252, 0.15);
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.control-btn-accent {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.25) 0%, rgba(99, 102, 241, 0.25) 100%);
   color: #c084fc;
-  font-size: 0.75rem;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+}
+
+.control-btn-accent:hover {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
+  box-shadow: 0 0 12px rgba(170, 59, 255, 0.2);
+}
+
+/* Contenedor del montaje de vis-timeline */
+.vis-timeline-mount {
+  background: rgba(22, 23, 29, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  min-height: 480px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Sobrescrituras CSS para vis-timeline */
+.vis-timeline {
+  border: none !important;
+  font-family: inherit !important;
+  color: #e2e8f0 !important;
+}
+
+.vis-panel.vis-background,
+.vis-panel.vis-center,
+.vis-panel.vis-left,
+.vis-panel.vis-right,
+.vis-panel.vis-top,
+.vis-panel.vis-bottom {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.vis-labelset .vis-label {
+  background: #181920 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+  color: #94a3b8 !important;
   font-weight: 700;
-  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem !important;
+}
+
+.group-label {
+  font-size: 0.82rem;
+  color: #c084fc;
+}
+
+.vis-text {
+  color: #94a3b8 !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+}
+
+.vis-grid.vis-minor {
+  border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.vis-grid.vis-major {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Estilos de Tarjetas de Eventos dentro de vis-timeline */
+.vis-item {
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: #1e2029 !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.vis-item.vis-selected {
+  border-color: #c084fc !important;
+  box-shadow: 0 0 16px rgba(192, 132, 252, 0.4) !important;
+  background: #2a2238 !important;
+}
+
+.vis-event-card {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.event-icon {
+  font-size: 0.95rem;
+}
+
+.event-title {
+  font-weight: 600;
+  color: #f8fafc;
+  white-space: nowrap;
+}
+
+.event-am-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #c084fc;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
   border-radius: 4px;
 }
 
-.era-title {
-  margin: 0.5rem 0 0.25rem 0;
-  font-size: 1.05rem;
+/* Bloques Narrativos en la línea superior */
+.vis-item-narrative-block {
+  background: rgba(99, 102, 241, 0.15) !important;
+  border: 1px solid rgba(129, 140, 248, 0.3) !important;
+  color: #a5b4fc !important;
+}
+
+.vis-block-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.chap-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.vis-item-covenant {
+  background: rgba(234, 179, 8, 0.15) !important;
+  border-color: rgba(234, 179, 8, 0.3) !important;
+  color: #fde047 !important;
+}
+
+.vis-covenant-card {
+  padding: 0.3rem 0.6rem;
+  font-weight: 700;
+}
+
+/* Estilos de Tooltip HTML */
+.vis-tooltip-box {
+  max-width: 320px;
+  padding: 0.5rem;
+}
+
+.vis-tooltip-box h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.95rem;
   color: #f8fafc;
 }
 
-.era-summary {
-  margin: 0;
+.tooltip-am {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.78rem;
+  color: #c084fc;
+}
+
+.tooltip-summary {
+  margin: 0 0 0.5rem 0;
   font-size: 0.82rem;
-  color: #94a3b8;
+  color: #cbd5e1;
   line-height: 1.4;
+}
+
+.tooltip-verse {
+  margin: 0;
+  padding: 0.4rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-left: 2px solid #c084fc;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+}
+
+/* Barra de Previsualización de Evento Seleccionado en la parte inferior */
+.selected-event-preview-bar {
+  background: rgba(30, 32, 41, 0.9);
+  border: 1px solid #c084fc;
+  border-radius: 14px;
+  padding: 1.25rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 24px rgba(170, 59, 255, 0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.preview-badge {
+  background: linear-gradient(135deg, #aa3bff 0%, #6366f1 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.preview-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f8fafc;
+  flex: 1;
+}
+
+.preview-am {
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.preview-close-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.preview-close-btn:hover {
+  color: #ffffff;
+}
+
+.preview-summary {
+  margin: 0 0 0.6rem 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.preview-verse {
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-left: 3px solid #fde047;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #fef08a;
 }

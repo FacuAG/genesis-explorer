@@ -102,6 +102,7 @@ export function App() {
               events={genesis.timelineEvents}
               eras={genesis.eras}
               narrativeBlocks={genesis.narrativeBlocks}
+              covenants={genesis.covenants}
             />
           )}
 
