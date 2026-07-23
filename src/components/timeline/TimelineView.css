@@ -222,24 +222,47 @@
 
 /* Barra de Previsualización de Evento Seleccionado en la parte inferior */
 .selected-event-preview-bar {
-  background: rgba(30, 32, 41, 0.9);
+  background: rgba(30, 32, 41, 0.92);
   border: 1px solid #c084fc;
   border-radius: 14px;
-  padding: 1.25rem;
+  padding: 1.1rem 1.35rem;
   backdrop-filter: blur(16px);
-  box-shadow: 0 0 24px rgba(170, 59, 255, 0.2);
-  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 0 24px rgba(170, 59, 255, 0.25);
+  animation: slideDown 0.3s ease-out;
 }
 
-@keyframes slideUp {
+.top-preview {
+  margin-bottom: -0.25rem;
+  border-left: 4px solid #c084fc;
+}
+
+@keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.preview-detail-btn {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+  border: 1px solid #c084fc;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preview-detail-btn:hover {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+  transform: translateY(-1px);
 }
 
 .preview-header {

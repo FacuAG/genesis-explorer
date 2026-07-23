@@ -257,12 +257,9 @@ export function TimelineView({
         onFitAll={handleFitAll}
       />
 
-      {/* Contenedor Principal de la Línea de Tiempo vis-timeline */}
-      <div className="vis-timeline-mount" ref={containerRef} />
-
-      {/* Previsualizador Rápido Inferior según la entidad seleccionada */}
+      {/* Previsualizador Rápido SUPERIOR (Ubicado justo ARRIBA de la línea de tiempo para visibilidad 100% inmediata) */}
       {selectedEntity && (
-        <div className="selected-event-preview-bar">
+        <div className="selected-event-preview-bar top-preview">
           {selectedEntity.type === 'event' && (
             <>
               <div className="preview-header">
@@ -270,7 +267,7 @@ export function TimelineView({
                 <h3>{selectedEntity.data.name}</h3>
                 <span className="preview-am">AM {getEventAM(selectedEntity.data)} | {getEventRefStr(selectedEntity.data)}</span>
                 <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-                  📖 Abrir Modal Exegético ➔
+                  📖 Ver Modal Completo ➔
                 </button>
                 <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
               </div>
@@ -290,11 +287,6 @@ export function TimelineView({
                 <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
               </div>
               <p className="preview-summary">{selectedEntity.data.description}</p>
-              {selectedEntity.data.theological_significance && (
-                <p className="preview-verse">
-                  <strong>Significado Teológico:</strong> {selectedEntity.data.theological_significance}
-                </p>
-              )}
             </>
           )}
 
@@ -330,7 +322,10 @@ export function TimelineView({
         </div>
       )}
 
-      {/* Modal Genérico de Detalle Exegético */}
+      {/* Contenedor Principal de la Línea de Tiempo vis-timeline */}
+      <div className="vis-timeline-mount" ref={containerRef} />
+
+      {/* Modal Genérico de Detalle Exegético Centrado */}
       {isModalOpen && selectedEntity && (
         <Modal
           isOpen={isModalOpen}
