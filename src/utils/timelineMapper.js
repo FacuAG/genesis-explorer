@@ -36,8 +36,11 @@ export function amToDate(yearAM) {
  */
 export function dateToAM(date) {
   if (!date) return 0;
+  if (date instanceof Date) return date.getUTCFullYear() - 1000;
+  if (typeof date.year === 'function') return date.year() - 1000;
+  if (typeof date.getFullYear === 'function') return date.getFullYear() - 1000;
   const d = new Date(date);
-  return d.getUTCFullYear() - 1000;
+  return (isNaN(d.getTime()) ? 0 : d.getUTCFullYear()) - 1000;
 }
 
 /**

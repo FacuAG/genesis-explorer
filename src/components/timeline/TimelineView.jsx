@@ -88,11 +88,25 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       end: amToDate(2369),
       format: {
         minorLabels: function(date, scale) {
-          const am = date.getUTCFullYear() - 1000;
+          let yr = 1000;
+          if (date) {
+            if (date instanceof Date) yr = date.getUTCFullYear();
+            else if (typeof date.year === 'function') yr = date.year();
+            else if (typeof date.getFullYear === 'function') yr = date.getFullYear();
+            else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
+          }
+          const am = yr - 1000;
           return `AM ${am}`;
         },
         majorLabels: function(date, scale) {
-          const am = date.getUTCFullYear() - 1000;
+          let yr = 1000;
+          if (date) {
+            if (date instanceof Date) yr = date.getUTCFullYear();
+            else if (typeof date.year === 'function') yr = date.year();
+            else if (typeof date.getFullYear === 'function') yr = date.getFullYear();
+            else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
+          }
+          const am = yr - 1000;
           return `Anno Mundi (AM ${am})`;
         }
       },
