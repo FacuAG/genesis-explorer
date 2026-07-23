@@ -23,6 +23,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
   const [selectedBlockId, setSelectedBlockId] = useState('all');
   const [selectedChapter, setSelectedChapter] = useState('all');
   const [filterText, setFilterText] = useState('');
+  const [detailLevel, setDetailLevel] = useState(2); // Default Nivel 2: Limpio & Estructurado
 
   // Filtrado multi-criterio de eventos
   const filteredEvents = useMemo(() => {
@@ -33,8 +34,9 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       // 2. Filtro por Bloque Narrativo
       if (selectedBlockId !== 'all') {
         const block = narrativeBlocks.find(b => b.id === selectedBlockId);
-        if (block && block.chapters_range) {
-          const [startCh, endCh] = block.chapters_range.split('-').map(Number);
+        if (block) {
+          const startCh = block.chapters_start ?? 1;
+          const endCh = block.chapters_end ?? 50;
           const eventCh = e.scriptural_reference?.chapter;
           if (eventCh && (eventCh < startCh || eventCh > endCh)) return false;
         }
@@ -61,8 +63,8 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Transform data for vis-timeline
-    const { groups, items } = mapGenesisToVisData(filteredEvents, narrativeBlocks, covenants);
+    // Transform data for vis-timeline with Semantic Zoom Level of Detail (LOD)
+    const { groups, items } = mapGenesisToVisData(filteredEvents, narrativeBlocks, covenants, eras, detailLevel);
 
     const visGroups = new DataSet(groups);
     const visItems = new DataSet(items);
@@ -75,8 +77,8 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
       selectable: true,
       showCurrentTime: false,
       margin: {
-        item: 12,
-        axis: 18
+        item: 16,
+        axis: 22
       },
       orientation: {
         axis: 'top',
@@ -123,7 +125,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
-        if (!itemId.startsWith('block_') && !itemId.startsWith('cov_')) {
+        if (!itemId.startsWith('block_') && !itemId.startsWith('cov_') && !itemId.startsWith('era_')) {
           setSelectedEventId(itemId);
           if (onSelectEvent) {
             const eventObj = events.find(e => e.id === itemId);
@@ -135,7 +137,7 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
 
     // Manejador de doble clic para abrir el modal de detalle directamente
     timeline.on('doubleClick', function (properties) {
-      if (properties.item && !properties.item.startsWith('block_') && !properties.item.startsWith('cov_')) {
+      if (properties.item && !properties.item.startsWith('block_') && !properties.item.startsWith('cov_') && !properties.item.startsWith('era_')) {
         setSelectedEventId(properties.item);
         setIsModalOpen(true);
       }
@@ -147,11 +149,15 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
         timelineInstanceRef.current = null;
       }
     };
-  }, [filteredEvents, narrativeBlocks, covenants, onSelectEvent, events]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, onSelectEvent, events]);
 
   // Funciones de navegación de zoom y salto de ventana Anno Mundi
   const handleZoomIn = () => {
-    if (timelineInstanceRef.current) timelineInstanceRef.current.zoomIn(0.4);
+    if (timelineInstanceRef.current) {
+      timelineInstanceRef.current.zoomIn(0.4);
+      // Auto-escalar a Nivel 3 (Detalle Completo) al hacer zoom in
+      if (detailLevel < 3) setDetailLevel(3);
+    }
   };
 
   const handleZoomOut = () => {
@@ -167,6 +173,8 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
   const handleJumpToAM = (startAM, endAM) => {
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
+      // Al saltar a una ventana pequeña, cambiar automáticamente a Nivel 3 para ver los eventos locales
+      setDetailLevel(3);
     }
   };
 
@@ -186,6 +194,8 @@ export function TimelineView({ events = [], eras = [], narrativeBlocks = [], cov
         setSelectedChapter={setSelectedChapter}
         filterText={filterText}
         setFilterText={setFilterText}
+        detailLevel={detailLevel}
+        setDetailLevel={setDetailLevel}
         narrativeBlocks={narrativeBlocks}
         onJumpToAM={handleJumpToAM}
         onZoomIn={handleZoomIn}

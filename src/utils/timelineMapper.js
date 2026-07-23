@@ -1,6 +1,6 @@
 /**
  * Utilidad profesional para transformar el dataset de Génesis (Schema 3.0)
- * a los objetos DataSet requeridos por vis-timeline.
+ * a los objetos DataSet requeridos por vis-timeline con jerarquía semántica de Zoom (LOD).
  */
 
 // Categorías de eventos y sus esquemas de color/icono en CSS
@@ -18,15 +18,12 @@ export const EVENT_CATEGORIES = {
 
 /**
  * Convierte un año Anno Mundi (AM) a un objeto Date falso de escala uniforme
- * para que vis-timeline pueda renderizar el eje cronológico Anno Mundi sin distorsión.
  * AM 0 se mapea al año 1000-01-01, AM 2369 al año 3369-01-01.
  */
 export function amToDate(yearAM) {
   const baseYear = 1000;
   const am = typeof yearAM === 'number' ? yearAM : 0;
   const targetYear = baseYear + am;
-  
-  // Usar formato YYYY-01-01 con padStart de 4 dígitos
   const yearStr = String(targetYear).padStart(4, '0');
   return new Date(`${yearStr}-01-01T00:00:00Z`);
 }
@@ -44,62 +41,145 @@ export function dateToAM(date) {
 }
 
 /**
- * Transforma los eventos, bloques narrativos y pactos de genesis.json en ítems y grupos para vis-timeline.
+ * Transforma los eventos, bloques narrativos, eras y pactos de genesis.json
+ * en ítems y grupos para vis-timeline según el nivel de detalle semántico (LOD).
+ * 
+ * @param {Array} events - Lista de eventos bíblicos
+ * @param {Array} narrativeBlocks - Lista de bloques narrativos
+ * @param {Array} covenants - Lista de pactos
+ * @param {Array} eras - Lista de eras teológicas
+ * @param {number} detailLevel - 1: Macro (Eras/Pactos), 2: Medio (Bloques), 3: Completo (82 Eventos)
  */
-export function mapGenesisToVisData(events = [], narrativeBlocks = [], covenants = []) {
-  // 1. Definición de Grupos de la Timeline
+export function mapGenesisToVisData(
+  events = [],
+  narrativeBlocks = [],
+  covenants = [],
+  eras = [],
+  detailLevel = 3
+) {
+  // 1. Grupos Jerárquicos de la Timeline
   const groups = [
+    {
+      id: 'eras_group',
+      content: '<span class="group-label">🌐 Eras Teológicas</span>',
+      order: 1,
+      className: 'vis-group-eras'
+    },
     {
       id: 'blocks_group',
       content: '<span class="group-label">📍 Bloques Narrativos</span>',
-      order: 1,
+      order: 2,
       className: 'vis-group-blocks'
     },
     {
-      id: 'events_group',
-      content: '<span class="group-label">⚡ Eventos Bíblicos</span>',
-      order: 2,
-      className: 'vis-group-events'
-    },
-    {
       id: 'covenants_group',
-      content: '<span class="group-label">👑 Pactos & Promesas</span>',
+      content: '<span class="group-label">👑 Pactos Divinos</span>',
       order: 3,
       className: 'vis-group-covenants'
     }
   ];
 
+  // Agregar grupo de eventos solo si estamos en nivel de detalle 2 o 3
+  if (detailLevel >= 2) {
+    groups.push({
+      id: 'events_group',
+      content: '<span class="group-label">⚡ Eventos Bíblicos</span>',
+      order: 4,
+      className: 'vis-group-events'
+    });
+  }
+
   const items = [];
 
-  // 2. Mapear Bloques Narrativos como Rangos (Background / Box)
-  narrativeBlocks.forEach(block => {
-    // Estimación de rango de años AM para cada bloque narrativo
-    let startAM = 0;
-    let endAM = 100;
+  // 2. Mapear Eras Teológicas (Nivel 1, 2 y 3)
+  eras.forEach(era => {
+    const startAM = era.am_start ?? 0;
+    const endAM = era.am_end ?? 2369;
 
-    if (block.id === 'nb_creation') { startAM = 0; endAM = 2; }
-    else if (block.id === 'nb_fall') { startAM = 2; endAM = 1056; }
-    else if (block.id === 'nb_flood') { startAM = 1056; endAM = 1700; }
-    else if (block.id === 'nb_babel') { startAM = 1700; endAM = 1948; }
-    else if (block.id === 'nb_abraham') { startAM = 1948; endAM = 2048; }
-    else if (block.id === 'nb_isaac') { startAM = 2048; endAM = 2168; }
-    else if (block.id === 'nb_jacob') { startAM = 2168; endAM = 2259; }
-    else if (block.id === 'nb_joseph') { startAM = 2259; endAM = 2369; }
+    items.push({
+      id: `era_${era.id}`,
+      group: 'eras_group',
+      content: `
+        <div class="vis-era-item">
+          <strong>🏛️ ${era.name}</strong>
+          <span class="era-chap-tag">Caps. ${era.chapters_start}-${era.chapters_end}</span>
+          <span class="era-am-range">AM ${startAM} – ${endAM}</span>
+        </div>
+      `,
+      start: amToDate(startAM),
+      end: amToDate(endAM),
+      type: 'range',
+      className: `vis-item-era era-${era.id}`,
+      title: `<strong>${era.name}</strong> (${era.subtitle}): ${era.description}`
+    });
+  });
+
+  // 3. Mapear Bloques Narrativos (Nivel 1, 2 y 3)
+  narrativeBlocks.forEach(block => {
+    const startAM = block.am_start ?? 0;
+    const endAM = block.am_end ?? (startAM + 10);
+    const chapRange = block.chapters_range || `${block.chapters_start ?? ''}-${block.chapters_end ?? ''}`;
 
     items.push({
       id: `block_${block.id}`,
       group: 'blocks_group',
-      content: `<div class="vis-block-item"><strong>${block.name}</strong> <span class="chap-badge">Caps. ${block.chapters_range}</span></div>`,
+      content: `
+        <div class="vis-block-item">
+          <span class="block-icon">${block.icon || '📍'}</span>
+          <strong>${block.name}</strong>
+          <span class="chap-badge">Caps. ${chapRange}</span>
+        </div>
+      `,
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
       className: `vis-item-narrative-block block-${block.id}`,
-      title: `${block.name} (Génesis Caps. ${block.chapters_range})`
+      title: `<strong>${block.name}</strong> (Génesis Caps. ${chapRange})<br/>${block.summary ? block.summary.substring(0, 180) + '...' : ''}`
     });
   });
 
-  // 3. Mapear Eventos Bíblicos en el grupo events_group
-  events.forEach(e => {
+  // 4. Mapear Pactos en covenants_group
+  covenants.forEach(cov => {
+    let covAM = 0;
+    if (cov.id === 'edenic_covenant') covAM = 0;
+    if (cov.id === 'adamic_covenant') covAM = 2;
+    if (cov.id === 'noahic_covenant') covAM = 1657;
+    if (cov.id === 'abrahamic_covenant') covAM = 2033;
+    if (cov.id === 'circumcision_covenant') covAM = 2047;
+
+    items.push({
+      id: `cov_${cov.id}`,
+      group: 'covenants_group',
+      content: `<div class="vis-covenant-card">👑 <strong>${cov.name}</strong></div>`,
+      start: amToDate(covAM),
+      type: 'box',
+      className: 'vis-item-covenant',
+      title: `<strong>${cov.name}</strong>: ${cov.description}`
+    });
+  });
+
+  // 5. Mapear Eventos Bíblicos (Filtrados por Nivel de Detalle Semantic Zoom)
+  let visibleEvents = events;
+
+  if (detailLevel === 1) {
+    // Nivel 1: Ocultar eventos individuales por completo (solo Eras, Bloques y Pactos)
+    visibleEvents = [];
+  } else if (detailLevel === 2) {
+    // Nivel 2: Mostrar solo eventos clave (Pactos, Creación, Juicios globales)
+    visibleEvents = events.filter(e =>
+      e.category === 'covenant' ||
+      e.category === 'creation' ||
+      e.category === 'judgment' ||
+      e.year_am === 0 ||
+      e.year_am === 1656 ||
+      e.year_am === 1750 ||
+      e.year_am === 2023 ||
+      e.year_am === 2288
+    );
+  }
+  // Nivel 3: Mostrar el 100% de los eventos (82 eventos)
+
+  visibleEvents.forEach(e => {
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };
     const amYear = e.year_am ?? 0;
     const refStr = e.scriptural_reference ? `Gén. ${e.scriptural_reference.chapter}:${e.scriptural_reference.verse_start}` : '';
@@ -129,26 +209,6 @@ export function mapGenesisToVisData(events = [], narrativeBlocks = [], covenants
       type: 'box',
       className: `vis-item-event cat-${e.category}`,
       title: tooltipHtml
-    });
-  });
-
-  // 4. Mapear Pactos en covenants_group
-  covenants.forEach(cov => {
-    let covAM = 0;
-    if (cov.id === 'edenic_covenant') covAM = 0;
-    if (cov.id === 'adamic_covenant') covAM = 2;
-    if (cov.id === 'noahic_covenant') covAM = 1657;
-    if (cov.id === 'abrahamic_covenant') covAM = 2033;
-    if (cov.id === 'circumcision_covenant') covAM = 2047;
-
-    items.push({
-      id: `cov_${cov.id}`,
-      group: 'covenants_group',
-      content: `<div class="vis-covenant-card">👑 <strong>${cov.name}</strong></div>`,
-      start: amToDate(covAM),
-      type: 'box',
-      className: 'vis-item-covenant',
-      title: `<strong>${cov.name}</strong>: ${cov.description}`
     });
   });
 

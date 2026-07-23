@@ -15,6 +15,8 @@ export function TimelineControls({
   setSelectedChapter,
   filterText,
   setFilterText,
+  detailLevel = 3,
+  setDetailLevel,
   narrativeBlocks = [],
   onJumpToAM,
   onZoomIn,
@@ -49,6 +51,34 @@ export function TimelineControls({
           )}
         </div>
 
+        {/* Selector de Nivel de Detalle Semántico (LOD) */}
+        <div className="filter-group lod-selector-group">
+          <label className="filter-label">🔍 Nivel de Zoom:</label>
+          <div className="lod-buttons-toggle">
+            <button
+              className={`lod-btn ${detailLevel === 1 ? 'active' : ''}`}
+              onClick={() => setDetailLevel(1)}
+              title="Nivel 1: Muestra únicamente Eras Teológicas y Pactos Divinos (Visión limpia macro)"
+            >
+              1. Eras & Pactos
+            </button>
+            <button
+              className={`lod-btn ${detailLevel === 2 ? 'active' : ''}`}
+              onClick={() => setDetailLevel(2)}
+              title="Nivel 2: Muestra Bloques Narrativos y Hitos Bíblicos Principales"
+            >
+              2. Bloques
+            </button>
+            <button
+              className={`lod-btn ${detailLevel === 3 ? 'active' : ''}`}
+              onClick={() => setDetailLevel(3)}
+              title="Nivel 3: Detalle Completo de los 82 Eventos Bíblicos"
+            >
+              3. Eventos (Detalle)
+            </button>
+          </div>
+        </div>
+
         {/* Selector de Categoría */}
         <div className="filter-group">
           <label className="filter-label">Categoría:</label>
@@ -75,11 +105,14 @@ export function TimelineControls({
             onChange={(e) => setSelectedBlockId(e.target.value)}
           >
             <option value="all">Todos los Bloques Narrativos</option>
-            {narrativeBlocks.map(b => (
-              <option key={b.id} value={b.id}>
-                📍 {b.name} (Caps. {b.chapters_range})
-              </option>
-            ))}
+            {narrativeBlocks.map(b => {
+              const chapRange = b.chapters_range || `${b.chapters_start ?? ''}-${b.chapters_end ?? ''}`;
+              return (
+                <option key={b.id} value={b.id}>
+                  📍 {b.name} (Caps. {chapRange})
+                </option>
+              );
+            })}
           </select>
         </div>
 

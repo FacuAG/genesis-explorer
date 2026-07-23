@@ -111,6 +111,38 @@
   margin-left: auto;
 }
 
+/* LOD Level Selector Buttons */
+.lod-buttons-toggle {
+  display: flex;
+  background: #181920;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lod-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lod-btn:hover {
+  color: #ffffff;
+}
+
+.lod-btn.active {
+  background: linear-gradient(135deg, #aa3bff 0%, #6366f1 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(170, 59, 255, 0.4);
+}
+
 /* Fila 2: Saltos Rápido y Zoom */
 .controls-row-jumps {
   display: flex;
