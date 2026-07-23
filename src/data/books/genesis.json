@@ -4691,1519 +4691,1511 @@
       }
     },
     {
-  "id": "birth_esau_jacob",
-  "depth_level": 2,
-  "parent_id": "nb_isaac",
-  "name": "Oración por Esterilidad, la Lucha en el Vientre de Rebeca y Nacimiento de Esaú y Jacob",
-  "short_name": "Nacimiento de Esaú y Jacob",
-  "category": "patriarch",
-  "importance": "critical",
-  "chronology": {
-    "approx_year_am": 2168,
-    "exact_date_note": "Año 60 de Isaac (AM 2168, Abraham 160 años)",
-    "duration_days": 270,
-    "duration_note": "20 años de oraciones perseverantes por la esterilidad de Rebeca"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 25,
-  "verse_start_ref": 19,
-  "chapter_end": 25,
-  "verse_end_ref": 26,
-  "narrative": "Isaac oró a Jehová por su mujer Rebeca, que era estéril; y lo oyó Jehová, y concibió Rebeca. Durante su embarazo, los dos hijos luchaban fuertemente dentro de su vientre, y ella consulta a Jehová: 'Si es así, ¿para qué vivo yo?'. Jehová le responde con una profecía de soberana elección: **'Dos naciones hay en tu seno, y dos pueblos serán divididos desde tus entrañas; un pueblo será más fuerte que el otro pueblo, y el mayor servirá al menor'**. Al nacer, el primero sale rubio y todo velludo como una pelliza, y llaman su nombre **Esaú** ('Velludo'); luego sale su hermano, trabada su mano al calcañar de Esaú, y llaman su nombre **Jacob** ('Suplantador' / 'El que toma del calcañar'). Isaac tenía 60 años cuando nacieron los gemelos.",
-  "historical_context": "La lucha intrauterina prefigura el conflicto histórico milenario entre las dos naciones que descenderían de ellos: Israel (descendientes de Jacob) y Edom (descendientes de Esaú en el monte de Seir).",
-  "theological_teaching": "Constituye la prueba magistral de la **Elección Incondicional Divina**: Dios eligió al menor (Jacob) sobre el mayor (Esaú) antes de que nacieran o hubieran hecho bien o mal, para que el propósito de Dios conforme a la elección permaneciese, no por las obras sino por el que llama.",
-  "messianic_connection": "Romanos 9:10-13 cita expresamente la profecía 'El mayor servirá al menor' y 'A Jacob amé, mas a Esaú aborrecí' para fundamentar la doctrina del Nuevo Testamento sobre la gracia soberana y la elección de los hijos de la promesa en Cristo.",
-  "key_people": [
-    "isaac",
-    "rebekah",
-    "jacob",
-    "esau"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_election",
-    "theme_covenant",
-    "theme_providence"
-  ],
-  "question_ids": [],
-  "references": [
+      "id": "birth_esau_jacob",
+      "depth_level": 2,
+      "parent_id": "nb_isaac",
+      "name": "Oración por Esterilidad, la Lucha en el Vientre de Rebeca y Nacimiento de Esaú y Jacob",
+      "short_name": "Nacimiento de Esaú y Jacob",
+      "category": "patriarch",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2168,
+        "exact_date_note": "Año 60 de Isaac (AM 2168, Abraham 160 años)",
+        "duration_days": 270,
+        "duration_note": "20 años de oraciones perseverantes por la esterilidad de Rebeca"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 25,
+      "verse_start_ref": 19,
+      "chapter_end": 25,
+      "verse_end_ref": 26,
+      "narrative": "Isaac oró a Jehová por su mujer Rebeca, que era estéril; y lo oyó Jehová, y concibió Rebeca. Durante su embarazo, los dos hijos luchaban fuertemente dentro de su vientre, y ella consulta a Jehová: 'Si es así, ¿para qué vivo yo?'. Jehová le responde con una profecía de soberana elección: **'Dos naciones hay en tu seno, y dos pueblos serán divididos desde tus entrañas; un pueblo será más fuerte que el otro pueblo, y el mayor servirá al menor'**. Al nacer, el primero sale rubio y todo velludo como una pelliza, y llaman su nombre **Esaú** ('Velludo'); luego sale su hermano, trabada su mano al calcañar de Esaú, y llaman su nombre **Jacob** ('Suplantador' / 'El que toma del calcañar'). Isaac tenía 60 años cuando nacieron los gemelos.",
+      "historical_context": "La lucha intrauterina prefigura el conflicto histórico milenario entre las dos naciones que descenderían de ellos: Israel (descendientes de Jacob) y Edom (descendientes de Esaú en el monte de Seir).",
+      "theological_teaching": "Constituye la prueba magistral de la **Elección Incondicional Divina**: Dios eligió al menor (Jacob) sobre el mayor (Esaú) antes de que nacieran o hubieran hecho bien o mal, para que el propósito de Dios conforme a la elección permaneciese, no por las obras sino por el que llama.",
+      "messianic_connection": "Romanos 9:10-13 cita expresamente la profecía 'El mayor servirá al menor' y 'A Jacob amé, mas a Esaú aborrecí' para fundamentar la doctrina del Nuevo Testamento sobre la gracia soberana y la elección de los hijos de la promesa en Cristo.",
+      "key_people": [
+        "isaac",
+        "rebekah",
+        "jacob",
+        "esau"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_election",
+        "theme_covenant",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 19,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 25:23",
+        "text": "Y le respondió Jehová: Dos naciones hay en tu seno, y dos pueblos serán divididos desde tus entrañas; un pueblo será más fuerte que el otro pueblo, y el mayor servirá al menor."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 25:21",
+          "text": "Y oró Isaac a Jehová por su mujer, que era estéril; y lo oyó Jehová, y concibió Rebeca su mujer."
+        }
+      ],
+      "cross_references_nt": [
+        "Romanos 9:10-13",
+        "Malaquías 1:2-3",
+        "Hebreos 11:20"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Esaú y Jacob",
+        "icon": "👶",
+        "color_category": "patriarch"
+      }
+    },
     {
-      "book": "Génesis",
-      "chapter": 25,
-      "verse_start": 19,
-      "verse_end": 26
+      "id": "birthright_sold",
+      "depth_level": 3,
+      "parent_id": "nb_isaac",
+      "name": "Esaú Vende su Primogenitura a Jacob por un Plato de Lentejas Rojas",
+      "short_name": "Venta de la Primogenitura",
+      "category": "sin",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2188,
+        "exact_date_note": "Juventud de los gemelos (~AM 2188, ~20 años de edad)",
+        "duration_days": 1,
+        "duration_note": "Desprecio impío de Esaú por las bendiciones espirituales del pacto abrahámico"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 25,
+      "verse_start_ref": 27,
+      "chapter_end": 25,
+      "verse_end_ref": 34,
+      "narrative": "Crecen los niños: Esaú llega a ser diestro en la caza y hombre del campo, mientras Jacob es un varón quieto que habita en tiendas. Isaac ama a Esaú porque comía de su caza, pero Rebeca ama a Jacob. Un día, Jacob guisa un potaje de lentejas rojas. Esaú regresa cansado y hambriento del campo y le dice: 'Te ruego que me des a comer de ese potaje rojo'. Jacob responde oportunamente: 'Véndeme este día tu primogenitura'. Esaú replica con desprecio impío: 'He aquí yo me voy a morir; ¿para qué, pues, me servirá la primogenitura?'. Jacob exige juramento; Esaú le jura y vende su primogenitura por pan y un guisado de lentejas. Comió, bebió, se levantó y se fue. **Así menospreció Esaú la primogenitura**.",
+      "historical_context": "La Primogenitura (hebreo: bekoráh, בְּכוֹרָה) otorgaba la jefatura espiritual de la familia, el papel de sacerdote del hogar, la doble porción de la herencia material y, en la casa de Abraham, el derecho exclusivo de transmitir la promesa mesiánica.",
+      "theological_teaching": "Revela la actitud de la mente impía y profana: valorar el apetito carnal momentáneo por encima de la herencia eterna de Dios. Muestra que Jacob valoraba profundamente la primogenitura espiritual, aunque usó un método oportunista para obtenerla.",
+      "messianic_connection": "Hebreos 12:16-17 advierte a los creyentes contra el peligro de ser profanos como Esaú: 'No sea que haya algún fornicario, o profano, como Esaú, que por una sola comida vendió su primogenitura... pues no halló lugar para el arrepentimiento, aunque la procuró con lágrimas'.",
+      "key_people": [
+        "jacob",
+        "esau"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_sin",
+        "theme_election",
+        "theme_faith"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 25,
+          "verse_start": 27,
+          "verse_end": 34
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 25:34",
+        "text": "Entonces Jacob dio a Esaú pan y del guisado de las lentejas; y él comió y bebió, y se levantó y se fue. Así menospreció Esaú la primogenitura."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 25:32",
+          "text": "Entonces dijo Esaú: He aquí yo me voy a morir; ¿para qué, pues, me servirá la primogenitura?"
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 12:16-17",
+        "Gálatas 6:7-8"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Venta de Primogenitura",
+        "icon": "🍲",
+        "color_category": "sin"
+      }
+    },
+    {
+      "id": "isaac_gerar_covenant",
+      "depth_level": 2,
+      "parent_id": "nb_isaac",
+      "name": "Isaac en Gerar, la Renovación Personal del Pacto Abrahámico y la Engañosa Mentira sobre Rebeca",
+      "short_name": "Isaac en Gerar",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2200,
+        "exact_date_note": "Hambruna en Canaán (~AM 2200, Isaac ~92 años)",
+        "duration_days": 365,
+        "duration_note": "Aparición divina directa a Isaac prohibiendo descender a Egipto"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 26,
+      "verse_start_ref": 1,
+      "chapter_end": 26,
+      "verse_end_ref": 11,
+      "narrative": "Hay otra hambruna en la tierra (además de la de Abraham). Isaac va a Abimelec rey de los filisteos en Gerar. Jehová se le aparece a Isaac y le ordena: 'No desciendas a Egipto; habita en la tierra que yo te diré. Habita como forastero en esta tierra, y estaré contigo y te bendeciré; **porque a ti y a tu descendencia daré todas estas tierras, y confirmaré el juramento que hice a Abraham tu padre**'. Dios le renueva la promesa mesiánica: 'En tu simiente serán benditas todas las naciones de la tierra'. Sin embargo, al llegar los hombres del lugar preguntando por Rebeca, Isaac miente diciendo: 'Es mi hermana', por temor a ser asesinado. Abimelec mira por una ventana y ve a Isaac jugando amorosamente con su mujer Rebeca; lo confronta, reprende su engaño y emite un edicto real protegiendo a la pareja bajo pena de muerte.",
+      "historical_context": "Es la primera vez que Dios ratifica personalmente a Isaac el Pacto Abrahámico sin la presencia física de su padre Abraham. 'Abimelec' era el título dinástico real de los gobernantes filisteos en la costa sur de Canaán.",
+      "theological_teaching": "Demuestra la continuidad incondicional del pacto generacional: la bendición de Abraham pasa directamente a Isaac no por los méritos de Isaac, sino por la fidelidad divina al juramento. Muestra también que las debilidades del padre (el temor y el engaño de decir 'es mi hermana') pueden repetirse en el hijo si no se confía plenamente en la protección de Dios.",
+      "messianic_connection": "La frase 'En tu simiente serán benditas todas las naciones de la tierra' (Gén 26:4) ratifica la línea pura del Mesías a través de Isaac (Hebreos 11:18, Romanos 9:7).",
+      "key_people": [
+        "isaac",
+        "rebekah"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_covenant",
+        "theme_faith",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 26,
+          "verse_start": 1,
+          "verse_end": 11
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 26:3-4",
+        "text": "Habita como forastero en esta tierra, y estaré contigo, y te bendeciré; porque a ti y a tu descendencia daré todas estas tierras, y confirmaré el juramento que hice a Abraham tu padre. Multiplicaré tu descendencia como las estrellas del cielo... y todas las naciones de la tierra serán benditas en tu simiente."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 26:7",
+          "text": "Y los hombres de aquel lugar le preguntaron acerca de su mujer; y él respondió: Es mi hermana; porque tuvo miedo de decir: Es mi mujer..."
+        }
+      ],
+      "cross_references_nt": [
+        "Gálatas 3:16",
+        "Hebreos 11:18",
+        "Romanos 9:7"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Pacto Renovado a Isaac",
+        "icon": "⭐",
+        "color_category": "covenant"
+      }
+    },
+    {
+      "id": "isaac_wells",
+      "depth_level": 3,
+      "parent_id": "nb_isaac",
+      "name": "Prosperidad Cien por Uno de Isaac, Envidia Filistea y la Contienda por los Pozos",
+      "short_name": "Los Pozos de Isaac",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2201,
+        "exact_date_note": "Período en el valle de Gerar (~AM 2201)",
+        "duration_days": 365,
+        "duration_note": "Apertura de los pozos de Abraham y pacificación pacificadora ante la envidia"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 26,
+      "verse_start_ref": 12,
+      "chapter_end": 26,
+      "verse_end_ref": 25,
+      "narrative": "Sembró Isaac en aquella tierra, y cosechó aquel año **al ciento por uno**; y le bendijo Jehová. El varón se enriqueció y fue prosperado cada vez más hasta hacerse muy poderoso, despertando la envidia de los filisteos. Los filisteos enceguecen y ciegan con tierra todos los pozos que los siervos de su padre Abraham habían cavado. Abimelec le pide irse: 'Apártate de nosotros, porque eres mucho más poderoso que nosotros'. Isaac se retira pacíficamente al valle de Gerar. Vuelve a abrir los pozos de su padre y cavan siervos de Isaac pozos de agua viva. Los pastores de Gerar contienden por el primer pozo; Isaac llama su nombre **Esek** ('Contienda'). Cava otro pozo y vuelven a reñir; llama su nombre **Sitna** ('Enemistad'). Se aparta de allí y cava otro pozo por el cual no riñen; llama su nombre **Rehobot** ('Espacios anchos'), diciendo: 'Porque ahora Jehová nos ha hecho espacio, y fructificaremos en la tierra'.",
+      "historical_context": "Cosechar 'al ciento por uno' en una región semiárida como el Neguev durante un año de sequía general era un milagro agrícola absoluto demostrado por la bendición de Dios. Reabrir los pozos de su padre respetando sus nombres originales demostró su fidelidad a la herencia patriarcal.",
+      "theological_teaching": "Muestra la paciencia pacifista de Isaac: en lugar de pelear violentamente por los pozos robados, se apartó pacíficamente cediendo el terreno hasta que Dios le dio **Rehobot** ('amplitud y espacio'). Enseña que los que buscan la paz perseverando en Dios finalmente heredan la tierra sin contienda.",
+      "messianic_connection": "La fuente de agua viva brotando de los pozos reabiertos prefigura el Evangelio del Espíritu Santo dando ríos de agua viva para refrescar al creyente (Juan 4:14, Juan 7:37-38).",
+      "key_people": [
+        "isaac"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_faith"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 26,
+          "verse_start": 12,
+          "verse_end": 25
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 26:22",
+        "text": "Y se apartó de allí, y cavó otro pozo, y no riñeron sobre él; y llamó su nombre Rehobot, y dijo: Porque ahora Jehová nos ha hecho espacio, y fructificaremos en la tierra."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 26:12",
+          "text": "Y sembró Isaac en aquella tierra, y cosechó aquel año al ciento por uno; y le bendijo Jehová."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 5:9",
+        "Romanos 12:18",
+        "Juan 7:37-38"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Pozos de Rehobot",
+        "icon": "💧",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "isaac_beersheba_covenant",
+      "depth_level": 3,
+      "parent_id": "nb_isaac",
+      "name": "El Pacto de Paz en Beerseba entre Isaac y el Rey Abimelec",
+      "short_name": "Pacto de Paz en Beerseba",
+      "category": "covenant",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 2202,
+        "exact_date_note": "Asentamiento en Beerseba (~AM 2202)",
+        "duration_days": 1,
+        "duration_note": "Reconocimiento pagano de la bendición inconfundible de Jehová sobre Isaac"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 26,
+      "verse_start_ref": 26,
+      "chapter_end": 26,
+      "verse_end_ref": 33,
+      "narrative": "De Gerar viene a él Abimelec con Ahuzat su amigo y Ficol el general de su ejército. Isaac los cuestiona: '¿Por qué venís a mí, pues que me habéis aborrecido y me echasteis de entre vosotros?'. Ellos responden: **'Hemos visto claramente que Jehová está contigo'**. Piden hacer un pacto jurado de paz para no hacerse mal recíproco, afirmando: 'Tú eres ahora bendito de Jehová'. Isaac les hace un gran banquete; comen, beben y madrugan al día siguiente jurando paz mutuamente. Ese mismo día, los siervos de Isaac le dan la noticia: 'Hemos hallado agua'. Isaac llama al pozo **Seba**; por esta razón el nombre de la ciudad es **Beerseba** hasta el día de hoy.",
+      "historical_context": "Es la ratificación en la segunda generación patriarcal del mismo pacto de no agresión alcanzado por Abraham en el mismo sitio (Génesis 21:22-34), afirmando el testimonio intachable del hogar de Isaac ante los reyes extranjeros.",
+      "theological_teaching": "Muestra que cuando los caminos del hombre son agradables a Jehová, aun a sus enemigos hace estar en paz con él (Proverbios 16:7). El testimonio de bendición de Isaac obligó a los reyes paganos a humillarse y buscar su amistad.",
+      "messianic_connection": "La paz de Isaac con los reyes paganos prefigura el impacto del Reino de Cristo, donde los reyes de la tierra se humillarán y reconocerán que la bendición de Dios descansa sobre el Mesías.",
+      "key_people": [
+        "isaac"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_covenant",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 26,
+          "verse_start": 26,
+          "verse_end": 33
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 26:28",
+        "text": "Y ellos respondieron: Hemos visto claramente que Jehová está contigo; y dijimos: Haya ahora juramento entre nosotros, entre nosotros y ti, y haremos pacto contigo."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 26:29",
+          "text": "que no nos hagas mal... como no te hemos tocado, y como sólo te hemos hecho bien... tú eres ahora bendito de Jehová."
+        }
+      ],
+      "cross_references_nt": [
+        "Proverbios 16:7",
+        "Apocalipsis 21:24"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Pacto en Beerseba",
+        "icon": "🕊️",
+        "color_category": "covenant"
+      }
+    },
+    {
+      "id": "jacob_blessing_stolen",
+      "depth_level": 2,
+      "parent_id": "nb_isaac",
+      "name": "El Engaño de la Bendición Patriarcal: Jacob, Rebeca y la Conseguida Bendición de Isaac (Génesis 27)",
+      "short_name": "La Bendición Suplantada",
+      "category": "sin",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2245,
+        "exact_date_note": "Año 137 de Isaac, 77 de Jacob (AM 2245)",
+        "duration_days": 1,
+        "duration_note": "Artimaña humana para asegurar la bendición profética decretada por Dios antes de nacer"
+      },
+      "location_id": "beersheba",
+      "chapter_start": 27,
+      "verse_start_ref": 1,
+      "chapter_end": 27,
+      "verse_end_ref": 45,
+      "narrative": "Isaac, viejo y ciego de los ojos, llama a Esaú para bendecirlo antes de morir tras comer de su caza favorida. Rebeca oye y urde un plan: envía a Jacob a traer dos cabritos, cocina un guisado sabroso, viste a Jacob con las ropas olorosas de Esaú y cubre sus manos y cuello con las pieles de los cabritos. Jacob se presenta a su padre ciego fingiendo ser Esaú ('Yo soy Esaú tu primogénito'). Isaac toca las manos velludas, huele las ropas y pronuncia la **bendición irreversible del pacto**: 'Dios, pues, te dé del rocío del cielo... sírvante pueblos, y naciones se inclinen a ti... benditos los que te bendijeren'. Al regresar Esaú de la caza, la verdad sale a la luz; Isaac tiembla con gran estremecimiento pero confirma: **'Y él será bendito'**. Esaú clama con amarga exclamación y planea matar a Jacob en cuanto muera su padre. Rebeca envía a Jacob a huir a Padan-aram en casa de su hermano Labán.",
+      "historical_context": "La bendición profética testamentaria en la época patriarcal era un acto jurídico-espiritual obligatorio dictado bajo la inspiración de Dios. Una vez pronunciada la bendición con imposición de manos sobre la persona, no podía ser revocada ni anulada.",
+      "theological_teaching": "Revela la tragedia de la manipulación humana: ni el favoritismo carnal de Isaac por Esaú (pretendiendo alterar la profecía divina de Gén 25:23) ni el engaño mentiroso de Jacob y Rebeca agradaron a Dios. Aunque la bendición recayó soberanamente sobre Jacob conforme a la elección de Dios, Jacob y Rebeca sufrieron dolorosas consecuencias (Jacob tuvo que huir al exilio y Rebeca jamás volvió a ver a su hijo amado).",
+      "messianic_connection": "Hebreos 11:20 afirma: 'Por la fe bendijo Isaac a Jacob y a Esaú respecto a cosas venideras'. A pesar de la ceguera física y la confusión inicial, la fe de Isaac finalmente aceptó el veredicto de Dios reconociendo que Jacob era el legítimo heredero del Pacto Mesiánico.",
+      "key_people": [
+        "isaac",
+        "rebekah",
+        "jacob",
+        "esau"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_election",
+        "theme_sin",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 27,
+          "verse_start": 1,
+          "verse_end": 45
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 27:33",
+        "text": "Y se estremeció Isaac grandemente con un muy grande estremecimiento, y dijo: ¿Quién es el que vino aquí, que trajo caza, y me dio de comer de todo antes que tú vinieses? Yo le bendije, y él será bendito."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 27:28-29",
+          "text": "Dios, pues, te dé del rocío del cielo, y de las grosuras de la tierra... Sírvante pueblos, y naciones se inclinen a ti; sé señor de tus hermanos... Benditos los que te bendijeren, y malditos los que te maldijeren."
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 11:20",
+        "Hebreos 12:17",
+        "Romanos 9:11-12"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Bendición Suplantada",
+        "icon": "🐑",
+        "color_category": "sin"
+      }
+    },
+    {
+      "id": "jacob_ladder_bethel",
+      "depth_level": 2,
+      "parent_id": "nb_jacob",
+      "name": "El Sueño de la Escalera en Luz (Betel): Teofanía Divina y Voto Patriarcal",
+      "short_name": "Escalera de Betel",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2245,
+        "exact_date_note": "Viaje de huida de Jacob a los 77 años (AM 2245)",
+        "duration_days": 1,
+        "duration_note": "Primera teofanía personal a Jacob en su huida hacia Harán"
+      },
+      "location_id": "bethel",
+      "chapter_start": 28,
+      "verse_start_ref": 10,
+      "chapter_end": 28,
+      "verse_end_ref": 22,
+      "narrative": "Jacob sale de Beerseba y va a Harán. Llegando a un cierto lugar (Luz), toma una piedra como cabecera y se duerme. Sueña con **una escalera asentada en la tierra y su cabeza tocaba el cielo**, y ángeles de Dios subían y bajaban por ella. Jehová está en lo alto diciéndole: 'Yo soy Jehová, el Dios de Abraham tu padre, y el Dios de Isaac; la tierra en que estás acostado te la daré a ti y a tu descendencia... **y todas las familias de la tierra serán benditas en ti y en tu simiente**... no te dejaré hasta que haya hecho lo que te he dicho'. Jacob despierta con pavor: '¡Ciertamente Jehová está en este lugar, y yo no lo sabía! No es otra cosa que **casa de Dios y puerta del cielo**'. Jacob erige la piedra como señal, vierte aceite sobre ella, llama la ciudad **Betel** ('Casa de Dios') y hace voto de dar a Dios los diezmos.",
+      "historical_context": "La ciudad se llamaba originalmente Luz (Gén 28:19). La piedra ungida con aceite (matzebáh) fue el primer altar de consagración levantado por Jacob en su vida personal de fe fuera de la tienda paterna.",
+      "theological_teaching": "Muestra que la gracia incondicional de Dios persigue al fugitivo. En lugar de abandonar al pecador manipulador, Dios se le revela como el Guardián de la promesa que conecta el cielo con la tierra. Betel enseña la reverencia santa ante la presencia divina en el lugar de adoración.",
+      "messianic_connection": "JESUCRISTO DECLARA SER EL CUMPLIMIENTO EXPLICITO DE LA ESCALERA DE BETEL en Juan 1:51: 'De cierto, de cierto os digo: De aquí en adelante veréis el cielo abierto, y a los ángeles de Dios que suben y descienden sobre el Hijo del Hombre'. Cristo es el único Mediador que conecta el cielo y la tierra.",
+      "key_people": [
+        "jacob"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_covenant",
+        "theme_faith",
+        "theme_messianic_promise",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 28,
+          "verse_start": 10,
+          "verse_end": 22
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 28:16-17",
+        "text": "Y despertó Jacob de su sueño, y dijo: Ciertamente Jehová está en este lugar, y yo no lo sabía. Y tuvo miedo, y dijo: ¡Cuán terrible es este lugar! No es otra cosa que casa de Dios, y puerta del cielo."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 28:12",
+          "text": "Y soñó: y he aquí una escalera que estaba asentada en tierra, y su cabeza tocaba en el cielo; y he aquí ángeles de Dios que subían y descendían por ella."
+        },
+        {
+          "reference": "Génesis 28:15",
+          "text": "He aquí, yo estoy contigo, y te guardaré por dondequiera que fueres, y volveré a traerte a esta tierra; porque no te dejaré hasta que haya hecho lo que te he dicho."
+        }
+      ],
+      "cross_references_nt": [
+        "Juan 1:51",
+        "1 Timoteo 2:5",
+        "Hebreos 10:19-20"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Escalera de Betel",
+        "icon": "🪜",
+        "color_category": "miracle"
+      }
+    },
+    {
+      "id": "jacob_marries_leah_rachel",
+      "depth_level": 3,
+      "parent_id": "nb_jacob",
+      "name": "Llegada de Jacob a Padan-aram, Servicio a Labán y Matrimonios con Lea y Raquel",
+      "short_name": "Matrimonios con Lea y Raquel",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2245,
+        "exact_date_note": "AM 2245 a AM 2259 (servidumbre de 14 años por las dos esposas)",
+        "duration_days": 5110,
+        "duration_note": "Engaño de Labán entregando a Lea en la noche de bodas y 7 años más por Raquel"
+      },
+      "location_id": "haran",
+      "chapter_start": 29,
+      "verse_start_ref": 1,
+      "chapter_end": 29,
+      "verse_end_ref": 30,
+      "narrative": "Jacob llega a la tierra de los orientales y se encuentra con Raquel, hija de su tío Labán, apacentando las ovejas de su padre junto al pozo. Jacob remueve la piedra del pozo, abreva el rebaño, besa a Raquel y llora. Labán lo recibe en su casa. Tras un mes, acuerdan su salario: Jacob trabajará siete años por la hija menor Raquel, a quien amaba. 'Así sirvió Jacob por Raquel siete años; **y le parecieron como pocos días, porque la amaba**'. En la noche de la boda, Labán engaña a Jacob introduciendo en la tienda a su hija mayor **Lea** (de ojos delicados). Al amanecer, Jacob descubre el engaño; Labán se justifica diciendo que en su tierra no se entrega la menor antes que la mayor. Cumplida la semana nupcial, Labán le entrega también a **Raquel**, a cambio de servirle otros siete años.",
+      "historical_context": "Jacob el engañador experimenta la justicia retributiva providencial al ser engañado por su propio tío Labán (un maestro de la astucia mercantil). La velada nupcial a oscuras y el velo matrimonial impidieron a Jacob reconocer a Lea hasta la mañana siguiente.",
+      "theological_teaching": "Muestra el poder purificador de la disciplina divina: Dios usa las injusticias de Labán para disciplinar el carácter de Jacob durante 20 años de duro trabajo. Enseña también la gracia de Dios hacia la aborrecida Lea, sosteniéndola en medio del favoritismo conyugal.",
+      "messianic_connection": "Aunque Jacob amaba a Raquel, fue de la repudiada **Lea** de quien nació Judá, el antepasado directo de Jesucristo, demostrando la elección soberana de la gracia de Dios sobre los despreciados (1 Corintios 1:27-29).",
+      "key_people": [
+        "jacob",
+        "leah",
+        "rachel",
+        "laban"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_election"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 1,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 29:20",
+        "text": "Así sirvió Jacob por Raquel siete años; y le parecieron como pocos días, porque la amaba."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 29:25",
+          "text": "Venida la mañana, he aquí que era Lea; y él dijo a Labán: ¿Qué es esto que me has hecho? ¿No te he servido por Raquel? ¿Por qué, pues, me has engañado?"
+        }
+      ],
+      "cross_references_nt": [
+        "1 Corintios 1:27-29",
+        "Rut 4:11"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Lea y Raquel",
+        "icon": "💍",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "birth_12_tribes",
+      "depth_level": 2,
+      "parent_id": "nb_jacob",
+      "name": "El Nacimiento de los 12 Hijos de Jacob: El Establecimiento de las Tribus de Israel",
+      "short_name": "Nacimiento de los 12 Hijos",
+      "category": "genealogy",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2252,
+        "exact_date_note": "Abarca desde AM 2252 hasta AM 2264 (7 años en Padan-aram)",
+        "duration_days": 2555,
+        "duration_note": "Nacimiento de 11 hijos y una hija en Harán y Benjamín posteriormente en Canaán"
+      },
+      "location_id": "haran",
+      "chapter_start": 29,
+      "verse_start_ref": 31,
+      "chapter_end": 30,
+      "verse_end_ref": 24,
+      "narrative": "Viendo Jehová que Lea era menospreciada, le concedió hijos, mientras Raquel era estéril. Lea da a luz sucesivamente a **Rubén** ('Jehová ha visto mi aflicción'), **Simeón** ('Jehová ha oído'), **Leví** ('Unido') y **Judá** ('Alabaré a Jehová'). Raquel, celosa, entrega a su sierva Bilha a Jacob, naciendo **Dan** y **Naptalí**. Lea entrega a su sierva Zilpa, naciendo **Gad** y **Aser**. Lea vuelve a concebir dando a luz a **Isacar**, **Zabulón** y a su hija **Dina**. Finalmente, 'se acordó Dios de Raquel... e hizo concebir a Raquel, y dio a luz un hijo y dijo: Añádame Jehová otro hijo', llamando su nombre **José** ('Añadir').",
+      "historical_context": "Los nombres de los 12 hijos expresan las luchas emocionales, la fe y los anhelos de las madres. Los 12 hijos de Jacob constituyeron la estructura nacional insustituible de las 12 Tribus de Israel.",
+      "theological_teaching": "Muestra cómo la gracia soberana de Dios actúa a través del drama familiar imperfecto para edificar la Casa de Israel. De las cuatro mujeres (Lea, Raquel, Bilha y Zilpa) Dios levanta el pueblo escogido del pacto.",
+      "messianic_connection": "Al nacer **Judá** (Gén 29:35), Lea exclama: 'Esta vez alabaré a Jehová'. De la tribu de Judá nacerá el Rey David y el Mesías Jesucristo (León de la tribu de Judá, Apocalipsis 5:5). En Mateo 1:2 y Lucas 3:33 se registra esta línea mesiánica.",
+      "key_people": [
+        "jacob",
+        "leah",
+        "rachel",
+        "judah",
+        "joseph"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_election",
+        "theme_messianic_promise",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 29,
+          "verse_start": 31,
+          "verse_end": 35
+        },
+        {
+          "book": "Génesis",
+          "chapter": 30,
+          "verse_start": 1,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 29:35",
+        "text": "Concibió otra vez, y dio a luz un hijo, y dijo: Esta vez alabaré a Jehová; por esto llamó su nombre Judá; y dejó de dar a luz."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 30:22-24",
+          "text": "Y se acordó Dios de Raquel, y la oyó Dios, y le abrió el seno. Y concibió, y dio a luz un hijo... y llamó su nombre José, diciendo: Añádame Jehová otro hijo."
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 7:14",
+        "Apocalipsis 5:5",
+        "Apocalipsis 7:4-8"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Las 12 Tribus",
+        "icon": "👑",
+        "color_category": "genealogy"
+      }
+    },
+    {
+      "id": "jacob_flees_laban",
+      "depth_level": 3,
+      "parent_id": "nb_jacob",
+      "name": "La Prosperidad Agrícola de Jacob, la Huida de Padan-aram y el Pacto en Mizpa (Galaad)",
+      "short_name": "Huida y Pacto con Labán",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2265,
+        "exact_date_note": "Año 20 de estancia de Jacob en Harán (AM 2265, Jacob 97 años)",
+        "duration_days": 10,
+        "duration_note": "Persecución de Labán de 7 días alcanzando a Jacob en los montes de Galaad"
+      },
+      "location_id": "gilead",
+      "chapter_start": 30,
+      "verse_start_ref": 25,
+      "chapter_end": 31,
+      "verse_end_ref": 55,
+      "narrative": "Jacob sirve 6 años más a Labán por el ganado (varas descortezadas de álamo y avellano), y el Señor prospera a Jacob grandemente en rebaños, siervas, siervos y camellos a pesar de que Labán cambió su salario diez veces. Dios le ordena en visión: 'Vuélvete a la tierra de tus padres'. Jacob reúne a sus mujeres e hijos y huye secretamente hacia Canaán mientras Labán esquilaba sus ovejas (Raquel hurta los ídolos familiares terantines de su padre). Labán persigue a Jacob durante 7 días y lo alcanza en los montes de Galaad. Dios le advierte a Labán en sueños de noche: 'Guárdate que no hables a Jacob descomedidamente'. Tras buscar en vano sus ídolos, Labán e Isaac hacen un pacto de no agresión erigiendo un majano de piedras llamado **Galaad** / **Mizpa** ('Atalaya'): 'Atalaya la de Jehová entre tú y yo, cuando nos apartemos el uno del otro'. Se despiden y Labán regresa a su lugar.",
+      "historical_context": "Los terafines (ídolos domésticos) otorgaban el derecho legal a la jefatura de la herencia familiar en Mesopotamia, razón por la cual Raquel los hurtó. El pacto de Galaad fijó la frontera nororiental entre los arameos y la casa de Israel.",
+      "theological_teaching": "Enseña la protección soberana de Dios sobre su siervo: a pesar del fraude de Labán y su persecución militar, Dios le prohíbe tocar a Jacob y convierte la amenaza en un pacto de separación pacífica.",
+      "messianic_connection": "La bendición de Dios multiplicando el rebaño de Jacob y librándolo del opresor arameo se celebra en la confesión litúrgica de Israel: 'Un arameo a punto de perecer fue mi padre' (Deuteronomio 26:5).",
+      "key_people": [
+        "jacob",
+        "laban",
+        "rachel",
+        "leah"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_faith"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 30,
+          "verse_start": 25,
+          "verse_end": 43
+        },
+        {
+          "book": "Génesis",
+          "chapter": 31,
+          "verse_start": 1,
+          "verse_end": 55
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 31:49",
+        "text": "y Mizpa, por cuanto dijo: Atalaye Jehová entre mí y ti, cuando nos apartemos el uno del otro."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 31:24",
+          "text": "Y vino Dios a Labán arameo en sueños aquella noche, y le dijo: Guárdate que no hables a Jacob descomedidamente."
+        }
+      ],
+      "cross_references_nt": [
+        "Deuteronomio 26:5",
+        "Salmo 121:7-8"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Pacto en Galaad",
+        "icon": "⛰️",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "wrestling_at_peniel",
+      "depth_level": 2,
+      "parent_id": "nb_jacob",
+      "name": "La Lucha Mística en el Jaboc, la Herida en el Muslo y el Cambio de Nombre a Israel (Peniel)",
+      "short_name": "Lucha en Peniel",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2265,
+        "exact_date_note": "Noche previa al encuentro con Esaú (AM 2265, Jacob 97 años)",
+        "duration_days": 1,
+        "duration_note": "El encuentro espiritual decisivo que transforma al suplantador en príncipe de Dios"
+      },
+      "location_id": "peniel",
+      "chapter_start": 32,
+      "verse_start_ref": 1,
+      "chapter_end": 32,
+      "verse_end_ref": 32,
+      "narrative": "Jacob envía mensajeros a su hermano Esaú al monte de Seir, y estos regresan avisando que Esaú viene a su encuentro con 400 hombres. Atemorizado y angustiado, Jacob divide su campamento en dos y clama a Dios en su famosa oración de humildad: 'Menor soy que todas las misericordias y de toda la verdad que has usado para con tu siervo'. Envía un regalo masivo de cientos de animales para apaciguar a Esaú. Esa noche hace cruzar a su familia el vado de Jaboc, **y se queda Jacob solo; y luchó con él un varón hasta que rayaba el alba**. Al ver que no podía con Jacob, toca la coyuntura de su muslo y se descoyuntó. El Varón le dice: 'Déjame, porque raya el alba'. Jacob responde con perseverancia santa: **'No te dejaré, si no me bendices'**. El Varón pregunta su nombre y le declara: **'No se llamará más tu nombre Jacob, sino Israel (El que lucha con Dios); porque has luchado con Dios y con los hombres, y has vencido'**. Jacob llama aquel lugar **Peniel** ('Rostro de Dios'): 'Porque vi a Dios cara a cara, y fue librada mi alma'. Al salir el sol, cojeaba de su muslo.",
+      "historical_context": "La lucha nocturna ocurrió junto al arroyo de Jaboc (Wadi Zerqa en Jordania). El 'Varón' que luchó con Jacob es una manifestación teofánica / cristofánica del Ángel de Jehová (Oseas 12:3-5 aclara que Jacob luchó con el Ángel y venció mediante llanto y suplicas).",
+      "theological_teaching": "Es la experiencia de quebrantamiento y transformación espiritual más profunda del AT. El hombre que durante toda su vida se apoyó en su astucia humana ('suplantador') es invalidador físicamente en su muslo para aprender a depender solo de la fuerza divina, recibiendo un nuevo nombre y una nueva identidad espiritual como **Israel** (Príncipe de Dios).",
+      "messianic_connection": "Oseas 12:3-4 celebra esta lucha. Jesucristo es el Varón de Peniel con quien el creyente se rinde en quebrantamiento y fe para recibir la bendición eterna.",
+      "key_people": [
+        "jacob"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_faith",
+        "theme_covenant",
+        "theme_election",
+        "theme_conversion"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 32,
+          "verse_start": 1,
+          "verse_end": 32
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 32:28",
+        "text": "Y el varón le dijo: No se llamará más tu nombre Jacob, sino Israel; porque has luchado con Dios y con los hombres, y has vencido."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 32:30",
+          "text": "Y llamó Jacob el nombre de aquel lugar, Peniel; porque dijo: Vi a Dios cara a cara, y fue librada mi alma."
+        },
+        {
+          "reference": "Génesis 32:26",
+          "text": "Y dijo: Déjame, porque raya el alba. Y Jacob le respondió: No te dejaré, si no me bendices."
+        }
+      ],
+      "cross_references_nt": [
+        "Oseas 12:3-5",
+        "2 Corintios 12:9-10",
+        "Hebreos 11:21"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Lucha en Peniel",
+        "icon": "🤼",
+        "color_category": "miracle"
+      }
+    },
+    {
+      "id": "jacob_meets_esau",
+      "depth_level": 3,
+      "parent_id": "nb_jacob",
+      "name": "El Reencuentro Emotivo y la Reconciliación entre Jacob y Esaú",
+      "short_name": "Reencuentro con Esaú",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2265,
+        "exact_date_note": "Amanecer posterior a Peniel (AM 2265)",
+        "duration_days": 1,
+        "duration_note": "Respuestas providenciales a la oración disipando la ira de 20 años de Esaú"
+      },
+      "location_id": "peniel",
+      "chapter_start": 33,
+      "verse_start_ref": 1,
+      "chapter_end": 33,
+      "verse_end_ref": 20,
+      "narrative": "Alzando Jacob sus ojos, ve venir a Esaú con 400 hombres. Distribuye a los niños entre Lea, Raquel y las dos siervas, e iba él delante de ellos y se postra en tierra siete veces hasta llegar a su hermano. Pero **Esaú corre a su encuentro, lo abraza, se echa sobre su cuello y lo besa; y ambos lloran**. Esaú ve a las mujeres y a los niños y pregunta por ellos; Jacob responde: 'Son los niños que Dios ha dado graciosamente a tu siervo'. Esaú rehúsa inicialmente el regalo diciendo: 'Suficiente tengo yo, hermano mío'; pero Jacob le insiste diciendo: 'He visto tu rostro como si hubiera visto el rostro de Dios'. Esaú regresa a Seir y Jacob se traslada a Sucot (donde edifica cabañas) y luego pasa sano y salvo a Siquem en Canaán, comprando una parte del campo y edificando allí un altar llamado **El-Elohe-Israel** ('Dios, el Dios de Israel').",
+      "historical_context": "La inclinación de siete veces en tierra era el protocolo diplomático oriental de máximo respeto. La actitud de Esaú demostró que Dios había ablandado milagrosamente su corazón durante los 20 años de separación.",
+      "theological_teaching": "Enseña el poder de la oración y del arrepentimiento para romper enemistades mortales. Muestra que cuando Jacob se rindió a Dios en Peniel, Dios enderezó la relación con su hermano Esaú.",
+      "messianic_connection": "La reconciliación entre Jacob y Esaú prefigura el poder del Evangelio reconciliando a los hombres divididos con Dios y entre sí a través de la cruz (Efesios 2:14-16).",
+      "key_people": [
+        "jacob",
+        "esau"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_restoration",
+        "theme_providence",
+        "theme_mercy"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 33,
+          "verse_start": 1,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 33:4",
+        "text": "Pero Esaú corrió a su encuentro y le abrazó, y se echó sobre su cuello, y le besó; y lloraron."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 33:10",
+          "text": "Y dijo Jacob: No, yo te ruego; si he hallado ahora gracia en tus ojos, acepta mi presente... porque he visto tu rostro, como si hubiera visto el rostro de Dios, pues te has complacido en mí."
+        }
+      ],
+      "cross_references_nt": [
+        "Efesios 2:14-16",
+        "Mateo 5:23-24"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Reconciliación con Esaú",
+        "icon": "🤝",
+        "color_category": "restoration"
+      }
+    },
+    {
+      "id": "dinah_shechem_tragedy",
+      "depth_level": 3,
+      "parent_id": "nb_jacob",
+      "name": "La Deshonra de Dina en Siquem y la Venganza Sangrienta de Simeón y Leví",
+      "short_name": "Tragedia de Dina en Siquem",
+      "category": "sin",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2270,
+        "exact_date_note": "Residencia de Jacob en Siquem (~AM 2270)",
+        "duration_days": 30,
+        "duration_note": "Violación de Dina y matanza engañosa de los hombres de Siquem"
+      },
+      "location_id": "shechem",
+      "chapter_start": 34,
+      "verse_start_ref": 1,
+      "chapter_end": 34,
+      "verse_end_ref": 31,
+      "narrative": "Dina, la hija de Lea y Jacob, sale a ver a las hijas del país. Siquem, hijo de Hamor el heveo, príncipe de la tierra, la ve, la toma y se acuesta con ella deshonrándola. Siquem se enamora de ella y su padre Hamor pide a Jacob darla por esposa ofreciendo alianzas matrimoniales y comerciales. Los hijos de Jacob responden con engaño exigiéndoles como condición indispensable que todos los varones de Siquem se circunciden. Hamor y Siquem convencen a los hombres de su ciudad y todos se circuncidan. Al tercer día, cuando sentían el mayor dolor, **Simeón y Leví**, hermanos de Dina, toman sus espadas, entran audazmente en la ciudad, matan a todos los varones, ejecutan a Hamor y Siquem, rescatan a Dina y saquean la ciudad. Jacob los reprende con pánico: 'Me habéis turbado con hacerme abominable a los moradores de esta tierra... yo con pocos hombres, se juntarán contra mí y me destruirán'. Ellos responden desafiantes: '¿Había él de tratar a nuestra hermana como a una ramera?'.",
+      "historical_context": "La circuncisión, la señal sagrada del pacto de Dios, fue profanada por Simeón y Leví usándola como un instrumento de engaño militar y venganza carnal impía.",
+      "theological_teaching": "Enseña el peligro de la acomodación cultural al asentarse cerca del paganismo en Siquem sin cumplir primero el voto de volver a Betel. Muestra que la venganza violenta y el engaño piadoso manchan el nombre de Dios y traen juicio (Jacob maldecirá la violencia de Simeón y Leví en su lecho de muerte, Génesis 49:5-7).",
+      "messianic_connection": "Muestra la degradación de los hijos de Jacob sin la gracia de Dios, subrayando la necesidad de la purificación divina que Dios ordenará inmediatamente en el capítulo 35.",
+      "key_people": [
+        "jacob",
+        "dinah",
+        "simeon",
+        "levi"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_sin",
+        "theme_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 34,
+          "verse_start": 1,
+          "verse_end": 31
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 34:30",
+        "text": "Entonces dijo Jacob a Simeón y a Leví: Me habéis turbado con hacerme abominable a los moradores de esta tierra, el cananeo y el ferezeo; y teniendo yo pocos hombres, se juntarán contra mí y me atacarán, y seré destruido yo y mi casa."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 34:25",
+          "text": "Pero sucedió que al tercer día, cuando ellos sentían el mayor dolor, dos de los hijos de Jacob, Simeón y Leví, hermanos de Dina, tomaron cada uno su espada, y vinieron osadamente contra la ciudad, y mataron a todo varón."
+        }
+      ],
+      "cross_references_nt": [
+        "Génesis 49:5-7",
+        "Romanos 12:19"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Matanza de Siquem",
+        "icon": "⚔️",
+        "color_category": "sin"
+      }
+    },
+    {
+      "id": "return_to_bethel_deaths",
+      "depth_level": 2,
+      "parent_id": "nb_jacob",
+      "name": "Regreso a Betel, Limpieza de Ídolos, Nacimiento de Benjamín, Muerte de Raquel e Isaac (Génesis 35-36)",
+      "short_name": "Regreso a Betel y Muertes",
+      "category": "patriarch",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2288,
+        "exact_date_note": "Abarca desde AM 2271 (Betel) hasta AM 2288 (Muerte de Isaac a los 180 años)",
+        "duration_days": 6205,
+        "duration_note": "Purificación de la casa de Jacob y muerte de los patriarcas Isaac y Raquel"
+      },
+      "location_id": "bethel",
+      "chapter_start": 35,
+      "verse_start_ref": 1,
+      "chapter_end": 36,
+      "verse_end_ref": 43,
+      "narrative": "Dios ordena a Jacob: **'Levántate y sube a Betel, y quédate allí; y haz allí un altar al Dios que te apareció'**. Jacob ordena a su familia: 'Quitad los dioses ajenos que hay entre vosotros, y limpiaos, y mudad vuestras ropas'. Esconden los ídolos e zarcillos debajo de la encina de Siquem. El terror de Dios cae sobre las ciudades vecinas y no persiguen a los hijos de Jacob. Jacob edifica el altar **El-betel**. Muere Débora, nodriza de Rebeca. Dios se aparece de nuevo a Jacob, confirma su nombre **Israel** y le renueva las promesas del pacto abrahámico. Viajando hacia Efrata (Belén), Raquel da a luz a su segundo hijo con parto muy difícil; al exhalar su alma llama su nombre Ben-oni ('Hijo de mi dolor'), pero Jacob lo llama **Benjamín** ('Hijo de mi mano derecha'). Raquel muere y es sepultada en el camino de Efrata (Belén). Finalmente, Jacob llega a Hebrón junto a su padre Isaac. Mueó Isaac de 180 años, y lo sepultan sus hijos Esaú e Israel. Génesis 36 registra la genealogía de los reyes y duques de Edom (descendientes de Esaú).",
+      "historical_context": "La tumba de Raquel en el camino de Belén es uno de los sitios de veneración más antiguos de la Tierra Santa. El nombre Benjamín ('hijo de mi mano derecha') expresa el lugar de honra mesiánica.",
+      "theological_teaching": "Enseña la necesidad del avivamiento y la purificación interna: para volver a la 'Casa de Dios' (Betel), hay que enterrar todos los ídolos ajenos. Revela la soberanía de Dios sobre los sufrimientos del peregrinaje (muertes de Débora, Raquel e Isaac).",
+      "messianic_connection": "El nacimiento de Benjamín en **Efrata (Belén)** conecta geográficamente el linaje patriarcal con la profecía de Miqueas 5:2 sobre el nacimiento del Mesías Jesucristo en Belén de Efrata.",
+      "key_people": [
+        "jacob",
+        "rachel",
+        "benjamin",
+        "isaac",
+        "esau"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_covenant",
+        "theme_faith",
+        "theme_providence"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 35,
+          "verse_start": 1,
+          "verse_end": 29
+        },
+        {
+          "book": "Génesis",
+          "chapter": 36,
+          "verse_start": 1,
+          "verse_end": 43
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 35:2",
+        "text": "Entonces Jacob dijo a su familia y a todos los que con él estaban: Quitad los dioses ajenos que hay entre vosotros, y limpiaos, y mudad vuestras ropas."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 35:18",
+          "text": "Y aconteció que al salírsele el alma (pues murió), llamó su nombre Ben-oni; mas su padre lo llamó Benjamín."
+        },
+        {
+          "reference": "Génesis 35:29",
+          "text": "Y exhaló Isaac el espíritu, y murió, y fue reunido a su pueblo, anciano y lleno de días; y lo sepultaron Esaú y Jacob sus hijos."
+        }
+      ],
+      "cross_references_nt": [
+        "Miqueas 5:2",
+        "Mateo 2:16-18",
+        "Hebreos 11:21"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Betel y Benjamín",
+        "icon": "🕯️",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "joseph_dreams_sold",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "Los Sueños Proféticos de José, el Odio de sus Hermanos y la Venta a Egipto",
+      "short_name": "José Vendido a Egipto",
+      "category": "exile",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2276,
+        "exact_date_note": "Año 17 de José (AM 2276, Jacob 108 años)",
+        "duration_days": 1,
+        "duration_note": "Traición de sus hermanos y venta como esclavo a los mercaderes ismaelitas/madianitas"
+      },
+      "location_id": "hebron",
+      "chapter_start": 37,
+      "verse_start_ref": 1,
+      "chapter_end": 37,
+      "verse_end_ref": 36,
+      "narrative": "José, joven de 17 años, apacienta las ovejas con sus hermanos. Israel (Jacob) ama a José más que a todos sus otros hijos porque era el hijo de su vejez, y le hace una túnica de diversos colores. Sus hermanos lo aborrecen y no pueden hablarle pacíficamente. José tiene dos sueños proféticos: 1) Los manojos de trigo de sus hermanos se inclinaban ante su manojo; 2) El sol, la luna y 11 estrellas se inclinaban ante él. Sus hermanos lo envidian aún más. Enviado por Jacob desde el valle de Hebrón a Siquem y Dotán para saber del estado de sus hermanos, estos conspiran contra él diciendo: 'He aquí viene el soñador; venid ahora, y matémosle'. Rubén interviene para librarlo y sugiere echarlo en una cisterna vacía. Cuando llegan, le despojan de la túnica de colores y lo echan en la cisterna. Pasando mercaderes ismaelitas/madianitas rumbo a Egipto, Judá propone: '¿Qué ganamos con matar a nuestro hermano?... venid, vendámosle a los ismaelitas'. Lo venden por **veinte piezas de plata**. Degüellan un cabrito, tiñen la túnica de sangre y la envían a Jacob, quien llora inconsolable creyendo que una mala bestia lo devoró. En Egipto, los madianitas venden a José a Potifar, capitán de la guardia de Faraón.",
+      "historical_context": "La 'túnica de colores' (ketónet passím) era una vestidura suntuosa de mangas largas propia de la realeza o del heredero principal. El precio de 20 piezas de plata era el valor exacto de un esclavo joven en el siglo XVIII a.C. según las leyes de Hammurabi.",
+      "theological_teaching": "Ilustra la soberanía oculta de Dios: los celos y la maldad de los hombres parecen triunfar, pero Dios está orquestando la traición humana para enviar de antemano un salvador a Egipto que preservará la vida del pueblo del pacto durante la hambruna futura.",
+      "messianic_connection": "JOSÉ ES UNA DE LAS PARALELISMOS CRISTOLÓGICOS MÁS PERFECTOS DEL AT: 1) Hijo amado enviado por su padre a sus hermanos (Juan 3:16); 2) Aborrecido sin causa por sus hermanos (Juan 15:25); 3) Traicionado y vendido por piezas de plata por propuesta de Judá / Judas (Mateo 26:15); 4) Despojado de sus vestiduras y dado por muerto (Mateo 27:35); 5) Elevado a la gloria salvando a las naciones (Filipenses 2:9-11).",
+      "key_people": [
+        "joseph",
+        "jacob",
+        "judah",
+        "ruben"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_messianic_promise",
+        "theme_sin",
+        "theme_salvation"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 37,
+          "verse_start": 1,
+          "verse_end": 36
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 37:28",
+        "text": "Y cuando pasaban los madianitas mercaderes, sacaron ellos a José de la cisterna, y le trajeron arriba, y le vendieron a los ismaelitas por veinte piezas de plata. Y llevaron a José a Egipto."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 37:3-4",
+          "text": "Y amaba Israel a José más que a todos sus hijos, porque lo había tenido en su vejez; y le hizo una túnica de diversos colores. Y viendo sus hermanos que su padre lo amaba más que a todos sus hermanos, le aborrecían, y no podían hablarle pacíficamente."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:9-10",
+        "Mateo 26:15",
+        "Juan 1:11"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "José Vendido",
+        "icon": "🎨",
+        "color_category": "exile"
+      }
+    },
+    {
+      "id": "judah_tamar_sin",
+      "depth_level": 3,
+      "parent_id": "nb_joseph",
+      "name": "El Pecado de Judá con Tamar y el Nacimiento de Fares: Preservación de la Línea Mesiánica (Génesis 38)",
+      "short_name": "Judá y Tamar",
+      "category": "sin",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2280,
+        "exact_date_note": "Décadas contemporáneas al cautiverio de José (~AM 2280)",
+        "duration_days": 365,
+        "duration_note": "Incidente que revela el riesgo de asimilación cananea y la preservación del linaje mesiánico"
+      },
+      "location_id": "canaan",
+      "chapter_start": 38,
+      "verse_start_ref": 1,
+      "chapter_end": 38,
+      "verse_end_ref": 30,
+      "narrative": "Judá se aparta de sus hermanos, se casa con una cananea (hija de Súa) y engendra a Er, Onán y Sela. Er se casa con Tamar, pero siendo malo ante Jehová, Dios le quita la vida. Judá ordena a Onán cumplir el levirato con Tamar para levantar descendencia a su hermano, pero Onán derrama a tierra para no darle descendencia y Dios lo hace morir también. Judá promete a Tamar enviarla con su tercer hijo Sela cuando crezca, pero incumple su promesa. Tiempo después, muriendo la esposa de Judá, Tamar se disfraza de ramera en el camino a Timnat. Judá no la reconoce y se acuesta con ella, dejándole como prenda su sello, su cordón y su báculo. Al tercer mes informan a Judá que Tamar ha fornicado y está encinta; Judá ordena: 'Sacadla y sea quemada'. Tamar saca las prendas: 'De la persona a quien pertenecen estas cosas estoy encinta'. Judá las reconoce y confiesa: **'Más justa es ella que yo, por cuanto no la he dado a Sela mi hijo'**. Tamar da a luz gemelos: Zerah y **Fares** ('Brecha').",
+      "historical_context": "La ley del Levirato (del latín *levir*, hermano del esposo) exigía al hermano del difunto engendrar un heredero para preservar el nombre y la propiedad del fallecido. Tamar actuó desesperadamente para exigir el cumplimiento de este derecho dentro de la casa del pacto.",
+      "theological_teaching": "Contrasta la pureza moral de José en Egipto (capítulo 39) con la degradación moral y la asimilación cananea de Judá en Canaán (capítulo 38), explicando por qué Dios tuvo que trasladar a toda la familia patriarcal a Egipto para preservarlos puros. Muestra la gracia soberana de Dios obrando a través del fracaso humano para preservar la línea del Mesías.",
+      "messianic_connection": "Fares (hijo de Judá y Tamar) es el antepasado directo del Rey David y de Jesucristo. Mateo 1:3 incluye explícitamente a Tamar y Fares en la genealogía de Jesús el Mesías.",
+      "key_people": [
+        "judah"
+      ],
+      "covenant_id": "proto_gospel",
+      "theme_ids": [
+        "theme_messianic_promise",
+        "theme_sin",
+        "theme_election"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 38,
+          "verse_start": 1,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 38:26",
+        "text": "Entonces Judá los reconoció, y dijo: Más justa es ella que yo, por cuanto no la he dado a Sela mi hijo. Y nunca más la conoció."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 38:29",
+          "text": "Pero al volver él la mano, he aquí salió su hermano; y ella dijo: ¡Qué brecha te has abierto! Y llamó su nombre Fares."
+        }
+      ],
+      "cross_references_nt": [
+        "Mateo 1:3",
+        "Lucas 3:33",
+        "Rut 4:18-22"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Judá y Tamar",
+        "icon": "📜",
+        "color_category": "sin"
+      }
+    },
+    {
+      "id": "joseph_potiphar_prison",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "José en Casa de Potifar, la Tentación Resistida y su Injusto Encarcelamiento",
+      "short_name": "José en la Cárcel",
+      "category": "patriarch",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2276,
+        "exact_date_note": "AM 2276 a AM 2287 (11 años de siervo y prisionero en Egipto)",
+        "duration_days": 4015,
+        "duration_note": "Perseverancia santa e integridad incorruptible en medio de la prueba"
+      },
+      "location_id": "egypt",
+      "chapter_start": 39,
+      "verse_start_ref": 1,
+      "chapter_end": 39,
+      "verse_end_ref": 23,
+      "narrative": "José es llevado a Egipto y comprado por Potifar, oficial de Faraón y capitán de la guardia. **'Mas Jehová estaba con José'**, y fue varón próspero. Viendo Potifar que Jehová estaba con él y que todo lo que hacía lo hacía prosperar en su mano, lo nombra mayordomo de su casa y le entrega todo lo que tiene. José era de hermoso semblante y bella presencia. La mujer de Potifar pone sus ojos en José y le exige repetidamente: 'Duerme conmigo'. José se niega rotundamente declarando: **'¿Cómo, pues, haría yo este grande mal, y pecaría contra Dios?'**. Un día que no había nadie en casa, ella lo asiente por la ropa; José deja su ropa en sus manos y huye afuera. Ella lo calumnia ante su esposo; Potifar se enciende en ira y mete a José en la cárcel del rey. **Pero Jehová estaba con José en la cárcel**, le extendió su misericordia y le dio gracia ante el jefe de la cárcel, quien dejó bajo su mano a todos los presos.",
+      "historical_context": "La casa de un alto dignatario egipcio funcionaba como una gran finca administrativa. La fidelidad de José frente a la tentación sexual es el estándar bíblico de santidad práctica lejos de la vigilancia familiar.",
+      "theological_teaching": "Enseña que la presencia de Dios ('Jehová estaba con José') no exime al creyente de sufrir persecuciones ni injusticias falsas, pero le otorga la gracia para mantenerse irreprochable y prosperar en medio de la calumnia y el calabozo.",
+      "messianic_connection": "José es calumniado falsamente y condenado injustamente a prisión sin haber cometido delito alguno, sufriendo paciente y silenciosamente como tipo de Jesucristo llevado al juzgado de Pilato y al sepulcro (1 Pedro 2:22-23).",
+      "key_people": [
+        "joseph"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_faith",
+        "theme_providence",
+        "theme_salvation"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 39,
+          "verse_start": 1,
+          "verse_end": 23
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 39:9",
+        "text": "No hay otro mayor que yo en esta casa, y ninguna cosa me ha reservado sino a ti, por cuanto tú eres su mujer; ¿cómo, pues, haría yo este grande mal, y pecaría contra Dios?"
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 39:2",
+          "text": "Mas Jehová estaba con José, y fue varón próspero; y estaba en la casa de su amo el egipcio."
+        },
+        {
+          "reference": "Génesis 39:21",
+          "text": "Pero Jehová estaba con José y le extendió su misericordia, y le dio gracia en los ojos del jefe de la cárcel."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:9-10",
+        "1 Corintios 6:18",
+        "2 Timoteo 2:22"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Integridad de José",
+        "icon": "🏛️",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "joseph_interprets_pharaoh",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "Interpretación de los Sueños de Faraón y la Elección de José como Gran Visir de Egipto",
+      "short_name": "José Gran Visir de Egipto",
+      "category": "patriarch",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2289,
+        "exact_date_note": "Año 30 de José (AM 2289)",
+        "duration_days": 1,
+        "duration_note": "Elevación súbita del calabozo al trono como segundo al mando de todo Egipto"
+      },
+      "location_id": "egypt",
+      "chapter_start": 40,
+      "verse_start_ref": 1,
+      "chapter_end": 41,
+      "verse_end_ref": 57,
+      "narrative": "En la cárcel, José interpreta por don divino los sueños del jefe de los coperos (quien es restituido) y del jefe de los panaderos (quien es ahorcado), pidiendo al copero acordarse de él. Tras dos años más en prisión, Faraón sueña dos sueños inquietantes: 7 vacas gordas devoradas por 7 vacas flacas, y 7 espigas llenas devoradas por 7 espigas menudas. Ningún sabio de Egipto puede interpretarlos. El copero se acuerda de José; lo traen apresuradamente de la cárcel, se afeita y cambia sus ropas. José declara ante el monarca: **'No está en mí; Dios será el que dé respuesta propicia a Faraón'**. José interpreta que vendrán 7 años de abundancia seguidos por 7 años de hambruna extrema, y aconseja nombrar un varón prudente para almacenar el 20% del grano. Faraón impresionado dice: '¿Hallaremos a otro hombre como éste, en quien esté el espíritu de Dios?'. Faraón lo nombra **Gran Visir**, segundo sobre todo Egipto, le da su anillo de sellar, ropas de lino fino, un collar de oro, su segundo carro y lo llama **Zafnat-panea** ('Salvador del mundo' / 'Revelador de secretos'), dándole por esposa a Asenat. José tiene 30 años. Engendra a **Manasés** y **Efraín**.",
+      "historical_context": "La exaltación de un asiático/semita a la posición de Gran Visir (Tjaty) en Egipto coincide con el período histórico de los hicsos o del Reino Medio/Nuevo, donde funcionarios extranjeros de alta capacidad administrativa alcanzaban puestos supremos.",
+      "theological_teaching": "Revela la providencia divina absoluta sobre los imperios paganos y las estaciones climáticas. Muestra cómo Dios humilla a los soberbios y ensalza a los humildes al tiempo señalado.",
+      "messianic_connection": "José elevado a los 30 años al trono de Egipto para salvar al mundo de la muerte por hambre prefigura a Jesucristo iniciando su ministerio público a los 30 años (Lucas 3:23) y siendo exaltado a la diestra del Padre como Salvador y Señor del universo (Filipenses 2:9-11).",
+      "key_people": [
+        "joseph",
+        "ephraim",
+        "manasseh"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_salvation",
+        "theme_messianic_promise"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 40,
+          "verse_start": 1,
+          "verse_end": 23
+        },
+        {
+          "book": "Génesis",
+          "chapter": 41,
+          "verse_start": 1,
+          "verse_end": 57
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 41:38-40",
+        "text": "Y dijo Faraón a sus siervos: ¿Hallaremos a otro hombre como éste, en quien esté el espíritu de Dios? Y dijo Faraón a José: Pues que Dios te ha hecho saber todo esto, no hay entendido ni sabio como tú. Tú estarás sobre mi casa, y por tu palabra se gobernará todo mi pueblo; solamente en el trono seré yo mayor que tú."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 41:16",
+          "text": "Respondió José a Faraón, diciendo: No está en mí; Dios será el que dé respuesta propicia a Faraón."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:10",
+        "Filipenses 2:9-11",
+        "Lucas 3:23"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Visir de Egipto",
+        "icon": "🌾",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "brothers_first_travel",
+      "depth_level": 3,
+      "parent_id": "nb_joseph",
+      "name": "Los Viajes de los Hermanos a Egipto por Grano y la Prueba de la Copa de Plata",
+      "short_name": "Prueba a los Hermanos",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 2296,
+        "exact_date_note": "Segundo año de hambruna (AM 2296, José 37 años, Jacob 128 años)",
+        "duration_days": 365,
+        "duration_note": "Pruebas pedagógicas de José para producir el arrepentimiento genuino en sus hermanos"
+      },
+      "location_id": "egypt",
+      "chapter_start": 42,
+      "verse_start_ref": 1,
+      "chapter_end": 44,
+      "verse_end_ref": 34,
+      "narrative": "La hambruna asola Canaán. Jacob envía a sus 10 hijos a comprar grano a Egipto, reteniendo a Benjamín. Los 10 hermanos llegan y **se postran rostros en tierra ante José**, cumpliendo el sueño profético de los manojos. José los reconoce pero habla duramente haciéndose pasar por extraño; los acusa de espías. Los hermanos dicen atribulados entre sí: 'Verdaderamente hemos pecado contra nuestro hermano... por eso ha venido sobre nosotros esta angustia'. José se aparta y llora. Retiene a Simeón en prisión y envía a los demás a traer a Benjamín. Cuando el grano se acaba, Jacob accede con dolor a enviar a Benjamín bajo la fianza personal de Judá. José los recibe con banquete, llora al ver a Benjamín y dispone una prueba final: ordena poner su **copa de plata** en el saco de Benjamín. Al interceptarlos en el camino, se halla la copa en el saco de Benjamín. Regresan abatidos; **Judá** intercede apasionadamente ofreciéndose a sí mismo como esclavo en lugar del joven Benjamín para no ver el dolor de su padre Jacob.",
+      "historical_context": "La copa de adivinación (hebreo: gabíaj) era un vaso sagrado ritual. La transformación radical de Judá (quien en Génesis 37 sugirió vender a José por dinero) al ofrecerse ahora en sustitución como esclavo por Benjamín demostró un arrepentimiento genuino.",
+      "theological_teaching": "Muestra la pedagogía divina restauradora: Dios usa las pruebas y la culpa para llevar al pecador al verdadero arrepentimiento y a la restitución. Resalta la nobleza de la intercesión sustitutiva de Judá.",
+      "messianic_connection": "La oferta de Judá de entregarse como sustituto para recibir el castigo en lugar de su hermano Benjamín prefigura a Jesucristo (el León de la tribu de Judá) entregándose como sustituto redentor por nosotros.",
+      "key_people": [
+        "joseph",
+        "judah",
+        "benjamin",
+        "jacob"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_restoration",
+        "theme_salvation"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 42,
+          "verse_start": 1,
+          "verse_end": 38
+        },
+        {
+          "book": "Génesis",
+          "chapter": 43,
+          "verse_start": 1,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 44,
+          "verse_start": 1,
+          "verse_end": 34
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 44:33",
+        "text": "Ahora, pues, te ruego que quede tu siervo en lugar del joven por siervo de mi señor, y que el joven vaya con sus hermanos."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 42:21",
+          "text": "Y decían el uno al otro: Verdaderamente hemos pecado contra nuestro hermano, pues vimos la angustia de su alma cuando nos rogaba, y no le oímos; por eso ha venido sobre nosotros esta angustia."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:11-13",
+        "Juan 15:13",
+        "Romanos 5:8"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Prueba de la Copa",
+        "icon": "🍷",
+        "color_category": "patriarch"
+      }
+    },
+    {
+      "id": "joseph_reveals_himself",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "José se Revela a sus Hermanos con Llanto, Perdón Absoluto y Declaración de la Providencia Divina",
+      "short_name": "José se Revela a sus Hermanos",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2296,
+        "exact_date_note": "Segundo año de la hambruna (AM 2296)",
+        "duration_days": 1,
+        "duration_note": "El momento culminante de perdón y reconciliación familiar en la Biblia"
+      },
+      "location_id": "egypt",
+      "chapter_start": 45,
+      "verse_start_ref": 1,
+      "chapter_end": 45,
+      "verse_end_ref": 28,
+      "narrative": "No pudiendo ya José contenerse delante de todos los que estaban al lado suyo, clama: 'Haced salir de mi presencia a todos'. No queda nadie con él mientras José se da a conocer a sus hermanos. Llora a gritos de tal manera que oyen los egipcios y la casa de Faraón. José dice a sus hermanos: **'Yo soy José; ¿vive aún mi padre?'**. Sus hermanos no pueden responderle porque están turbados delante de él. José les pide acercarse y pronuncia las palabras teológicas más sublimes del libro: **'Ahora, pues, no os entristezcáis, ni os pese de haberme vendido acá; porque para preservación de vida me envió Dios delante de vosotros... No me enviasteis acá vosotros, sino Dios'**. Los abraza, besa a todos sus hermanos y llora sobre ellos. Faraón se alegra e invita a toda la casa de Jacob a venír a Egipto ofreciendo lo mejor de la tierra de Gosén. Envía carros reales. Al llegar la noticia a Canaán, el espíritu de Jacob revive exclamando: '¡Basta! José mi hijo vive todavía; iré y le veré antes que yo muera'.",
+      "historical_context": "El llanto ruidoso de José al revelar su identidad quebró los protocolos rígidos de la corte faraónica. La teología del perdón de José trasciende el resentimiento personal al contemplar el diseño soberano supremo de Dios sobre las acciones humanas.",
+      "theological_teaching": "Establece la doctrina cumbre de la **Soberana Providencia Redentora**: Dios es capaz de tomar las intenciones malvadas del pecado humano y canalizarlas milagrosamente para cumplir sus propósitos eternos de salvación y preservación de la vida.",
+      "messianic_connection": "La revelación entre lágrimas de José a sus hermanos prefigura el día futuro cuando la nación de Israel reconozca con llanto de arrepentimiento a su Hermano y Salvador Jesucristo, a quien traspasaron (Zacarías 12:10, Romanos 11:25-26).",
+      "key_people": [
+        "joseph",
+        "jacob",
+        "judah"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_providence",
+        "theme_restoration",
+        "theme_mercy",
+        "theme_salvation"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 45,
+          "verse_start": 1,
+          "verse_end": 28
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 45:5",
+        "text": "Ahora, pues, no os entristezcáis, ni os pese de haberme vendido acá; porque para preservación de vida me envió Dios delante de vosotros."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 45:7-8",
+          "text": "Y Dios me envió delante de vosotros, para preservaros posteridad en la tierra, y para daros vida por medio de gran liberación. Así, pues, no me enviasteis acá vosotros, sino Dios, que me ha puesto por padre de Faraón y por señor de toda su casa..."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:13-14",
+        "Zacarías 12:10",
+        "Romanos 11:25-26"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Reconciliación de José",
+        "icon": "😭",
+        "color_category": "restoration"
+      }
+    },
+    {
+      "id": "jacob_family_egypt",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "El Descenso de Jacob y las 70 Almas a Egipto y el Asentamiento en Gosén (Génesis 46-47)",
+      "short_name": "Entrada de Israel en Egipto",
+      "category": "exile",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2298,
+        "exact_date_note": "Año 130 de Jacob (AM 2298, José 39 años)",
+        "duration_days": 6205,
+        "duration_note": "Inicio del período de 430 años de permanencia de Israel en Egipto"
+      },
+      "location_id": "goshen",
+      "chapter_start": 46,
+      "verse_start_ref": 1,
+      "chapter_end": 47,
+      "verse_end_ref": 31,
+      "narrative": "Israel emprende su viaje con todo lo que tiene y llega a Beerseba, donde ofrece sacrificios al Dios de su padre Isaac. Dios le habla en visiones de noche: **'No temas descender a Egipto, porque allí haré de ti una gran nación. Yo descenderé contigo a Egipto, y yo también te haré volver'**. Jacob viaja con sus hijos, nietos y todas sus posesiones. El total de las personas de la casa de Jacob que entraron en Egipto fue de **70 almas** (incluyendo a José y sus dos hijos nacidos en Egipto). José sale en su carro a recibir a su padre a la tierra de Gosén; al verle, se echa sobre su cuello y llora largamente. Israel dice: 'Muera yo ahora, ya que he visto tu rostro'. Faraón recibe a la familia, les otorga la fértil tierra de Gosén para apacentar sus rebaños y Jacob bendice a Faraón. Jacob vive 17 años en Egipto, alcanzando los 147 años.",
+      "historical_context": "La tierra de Gosén (el delta oriental del Nilo en el Bajo Egipto) era la región de pastos más fértil del país. Los pastores de ovejas eran considerados una abominación para los egipcios (Gén 46:34), lo que sirvió providencialmente para mantener a Israel aislado del paganismo egipcio como una comunidad pura.",
+      "theological_teaching": "Cumple la profecía dada a Abraham en Génesis 15:13-16 sobre la estancia de su descendencia en tierra ajena. Muestra que la bajada a Egipto fue ordenada por Dios como el 'crisol' o 'incubadora' donde la pequeña familia de 70 personas se multiplicaría durante siglos hasta convertirse en una gran nación de millones.",
+      "messianic_connection": "El descenso de las 70 almas a Egipto se cita en Hechos 7:14 y Hebreos 11:21. Prefigura la travesía del pueblo redimido en el mundo antes de la gran liberación del Éxodo.",
+      "key_people": [
+        "jacob",
+        "joseph",
+        "judah"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_covenant",
+        "theme_providence",
+        "theme_election"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 46,
+          "verse_start": 1,
+          "verse_end": 34
+        },
+        {
+          "book": "Génesis",
+          "chapter": 47,
+          "verse_start": 1,
+          "verse_end": 31
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 46:3-4",
+        "text": "Y dijo: Yo soy Dios, el Dios de tu padre; no temas descender a Egipto, porque allí haré de ti una gran nación. Yo descenderé contigo a Egipto, y yo también te haré volver; y la mano de José cerrará tus ojos."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 47:27",
+          "text": "Así habitó Israel en la tierra de Egipto, en la tierra de Gosén; y tomaron posesión de ella, y se multiplicaron y se aumentaron en gran manera."
+        }
+      ],
+      "cross_references_nt": [
+        "Hechos 7:14-15",
+        "Exodo 1:5-7",
+        "Hebreos 11:21"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Israel en Gosén",
+        "icon": "🏺",
+        "color_category": "exile"
+      }
+    },
+    {
+      "id": "jacob_blesses_sons_death",
+      "depth_level": 2,
+      "parent_id": "nb_joseph",
+      "name": "Las Bendiciones Proféticas de Jacob, la Profecía de Siloh (Judá), y Muertes de Jacob y José",
+      "short_name": "Bendición de Siloh y Muertes",
+      "category": "patriarch",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 2369,
+        "exact_date_note": "AM 2315 (Muerte de Jacob a los 147 años) a AM 2369 (Muerte de José a los 110 años)",
+        "duration_days": 19710,
+        "duration_note": "Conclusión monumental del Libro del Génesis en la esperanza de la Tierra Prometida"
+      },
+      "location_id": "goshen",
+      "chapter_start": 48,
+      "verse_start_ref": 1,
+      "chapter_end": 50,
+      "verse_end_ref": 26,
+      "narrative": "Al enfermar Jacob, adopta a Efraín y Manasés como hijos propios. Cruzando sus manos intencionalmente en fe, coloca su mano derecha sobre el menor Efraín y su izquierda sobre el mayor Manasés. Luego reúne a sus 12 hijos para decirles lo que les ha de acontecer en los días venideros. Pronuncia sobre **Judá** la célebre profecía mesiánica: **'No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh (El Pacífico / El Mesías); y a él se congregarán los pueblos'** (Gén 49:10). Jacob encarga ser sepultado en la cueva de Macpela con sus padres y muere a los 147 años. Es embalsamado con grandes honores en Egipto y sepultado en Hebrón por sus hijos. Años después, a los 110 años, José siente su muerte y hace jurar a los hijos de Israel: **'Dios ciertamente os visitará, y haréis llevar de aquí mis huesos'**. José muere, es embalsamado y puesto en un ataúd en Egipto.",
+      "historical_context": "La profecía de 'Siloh' (Gén 49:10) es el hito mesiánico central de todo el Génesis: establece que la dinastía real y el Salvador prometido desde Génesis 3:15 vendrán exclusivamente de la tribu de Judá. El juramento de las osamentas de José se cumplió 400 años después cuando Moisés sacó sus huesos en el Exodo (Exodo 13:19, Josue 24:32).",
+      "theological_teaching": "Concluye el libro de Génesis con una fe inquebrantable en la resurrección y en la fidelidad futura de Dios. El ataúd de José en Egipto quedó como un monumento mudo de esperanza diciendo: 'Egipto no es nuestro hogar eterno; Dios nos visitará y nos llevará a la Tierra Prometida'.",
+      "messianic_connection": "Jesucristo es el **Siloh** de Génesis 49:10 y el León de la tribu de Judá (Apocalipsis 5:5), a quien está dada la autoridad real eterna y ante quien se congregarán todas las naciones del mundo.",
+      "key_people": [
+        "jacob",
+        "joseph",
+        "judah",
+        "ephraim",
+        "manasseh"
+      ],
+      "covenant_id": "abrahamic_covenant",
+      "theme_ids": [
+        "theme_messianic_promise",
+        "theme_covenant",
+        "theme_faith",
+        "theme_providence",
+        "theme_restoration"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Génesis",
+          "chapter": 48,
+          "verse_start": 1,
+          "verse_end": 22
+        },
+        {
+          "book": "Génesis",
+          "chapter": 49,
+          "verse_start": 1,
+          "verse_end": 33
+        },
+        {
+          "book": "Génesis",
+          "chapter": 50,
+          "verse_start": 1,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Génesis 49:10",
+        "text": "No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos."
+      },
+      "additional_verses": [
+        {
+          "reference": "Génesis 50:20",
+          "text": "Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien, para hacer lo que vemos hoy, para mantener en vida a mucho pueblo."
+        },
+        {
+          "reference": "Génesis 50:25",
+          "text": "E hizo jurar José a los hijos de Israel, diciendo: Dios ciertamente os visitará, y haréis llevar de aquí mis huesos."
+        }
+      ],
+      "cross_references_nt": [
+        "Hebreos 11:21-22",
+        "Apocalipsis 5:5",
+        "Lucas 1:32-33",
+        "Exodo 13:19"
+      ],
+      "sub_event_ids": [],
+      "timeline_display": {
+        "label": "Profecía de Siloh",
+        "icon": "👑",
+        "color_category": "patriarch"
+      }
     }
   ],
-  "key_verse": {
-    "reference": "Génesis 25:23",
-    "text": "Y le respondió Jehová: Dos naciones hay en tu seno, y dos pueblos serán divididos desde tus entrañas; un pueblo será más fuerte que el otro pueblo, y el mayor servirá al menor."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 25:21",
-      "text": "Y oró Isaac a Jehová por su mujer, que era estéril; y lo oyó Jehová, y concibió Rebeca su mujer."
-    }
-  ],
-  "cross_references_nt": [
-    "Romanos 9:10-13",
-    "Malaquías 1:2-3",
-    "Hebreos 11:20"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Esaú y Jacob",
-    "icon": "👶",
-    "color_category": "patriarch"
-  }
-},
-{
-  "id": "birthright_sold",
-  "depth_level": 3,
-  "parent_id": "nb_isaac",
-  "name": "Esaú Vende su Primogenitura a Jacob por un Plato de Lentejas Rojas",
-  "short_name": "Venta de la Primogenitura",
-  "category": "sin",
-  "importance": "high",
-  "chronology": {
-    "approx_year_am": 2188,
-    "exact_date_note": "Juventud de los gemelos (~AM 2188, ~20 años de edad)",
-    "duration_days": 1,
-    "duration_note": "Desprecio impío de Esaú por las bendiciones espirituales del pacto abrahámico"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 25,
-  "verse_start_ref": 27,
-  "chapter_end": 25,
-  "verse_end_ref": 34,
-  "narrative": "Crecen los niños: Esaú llega a ser diestro en la caza y hombre del campo, mientras Jacob es un varón quieto que habita en tiendas. Isaac ama a Esaú porque comía de su caza, pero Rebeca ama a Jacob. Un día, Jacob guisa un potaje de lentejas rojas. Esaú regresa cansado y hambriento del campo y le dice: 'Te ruego que me des a comer de ese potaje rojo'. Jacob responde oportunamente: 'Véndeme este día tu primogenitura'. Esaú replica con desprecio impío: 'He aquí yo me voy a morir; ¿para qué, pues, me servirá la primogenitura?'. Jacob exige juramento; Esaú le jura y vende su primogenitura por pan y un guisado de lentejas. Comió, bebió, se levantó y se fue. **Así menospreció Esaú la primogenitura**.",
-  "historical_context": "La Primogenitura (hebreo: bekoráh, בְּכוֹרָה) otorgaba la jefatura espiritual de la familia, el papel de sacerdote del hogar, la doble porción de la herencia material y, en la casa de Abraham, el derecho exclusivo de transmitir la promesa mesiánica.",
-  "theological_teaching": "Revela la actitud de la mente impía y profana: valorar el apetito carnal momentáneo por encima de la herencia eterna de Dios. Muestra que Jacob valoraba profundamente la primogenitura espiritual, aunque usó un método oportunista para obtenerla.",
-  "messianic_connection": "Hebreos 12:16-17 advierte a los creyentes contra el peligro de ser profanos como Esaú: 'No sea que haya algún fornicario, o profano, como Esaú, que por una sola comida vendió su primogenitura... pues no halló lugar para el arrepentimiento, aunque la procuró con lágrimas'.",
-  "key_people": [
-    "jacob",
-    "esau"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_sin",
-    "theme_election",
-    "theme_faith"
-  ],
-  "question_ids": [],
-  "references": [
-    {
-      "book": "Génesis",
-      "chapter": 25,
-      "verse_start": 27,
-      "verse_end": 34
-    }
-  ],
-  "key_verse": {
-    "reference": "Génesis 25:34",
-    "text": "Entonces Jacob dio a Esaú pan y del guisado de las lentejas; y él comió y bebió, y se levantó y se fue. Así menospreció Esaú la primogenitura."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 25:32",
-      "text": "Entonces dijo Esaú: He aquí yo me voy a morir; ¿para qué, pues, me servirá la primogenitura?"
-    }
-  ],
-  "cross_references_nt": [
-    "Hebreos 12:16-17",
-    "Gálatas 6:7-8"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Venta de Primogenitura",
-    "icon": "🍲",
-    "color_category": "sin"
-  }
-},
-{
-  "id": "isaac_gerar_covenant",
-  "depth_level": 2,
-  "parent_id": "nb_isaac",
-  "name": "Isaac en Gerar, la Renovación Personal del Pacto Abrahámico y la Engañosa Mentira sobre Rebeca",
-  "short_name": "Isaac en Gerar",
-  "category": "covenant",
-  "importance": "critical",
-  "chronology": {
-    "approx_year_am": 2200,
-    "exact_date_note": "Hambruna en Canaán (~AM 2200, Isaac ~92 años)",
-    "duration_days": 365,
-    "duration_note": "Aparición divina directa a Isaac prohibiendo descender a Egipto"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 26,
-  "verse_start_ref": 1,
-  "chapter_end": 26,
-  "verse_end_ref": 11,
-  "narrative": "Hay otra hambruna en la tierra (además de la de Abraham). Isaac va a Abimelec rey de los filisteos en Gerar. Jehová se le aparece a Isaac y le ordena: 'No desciendas a Egipto; habita en la tierra que yo te diré. Habita como forastero en esta tierra, y estaré contigo y te bendeciré; **porque a ti y a tu descendencia daré todas estas tierras, y confirmaré el juramento que hice a Abraham tu padre**'. Dios le renueva la promesa mesiánica: 'En tu simiente serán benditas todas las naciones de la tierra'. Sin embargo, al llegar los hombres del lugar preguntando por Rebeca, Isaac miente diciendo: 'Es mi hermana', por temor a ser asesinado. Abimelec mira por una ventana y ve a Isaac jugando amorosamente con su mujer Rebeca; lo confronta, reprende su engaño y emite un edicto real protegiendo a la pareja bajo pena de muerte.",
-  "historical_context": "Es la primera vez que Dios ratifica personalmente a Isaac el Pacto Abrahámico sin la presencia física de su padre Abraham. 'Abimelec' era el título dinástico real de los gobernantes filisteos en la costa sur de Canaán.",
-  "theological_teaching": "Demuestra la continuidad incondicional del pacto generacional: la bendición de Abraham pasa directamente a Isaac no por los méritos de Isaac, sino por la fidelidad divina al juramento. Muestra también que las debilidades del padre (el temor y el engaño de decir 'es mi hermana') pueden repetirse en el hijo si no se confía plenamente en la protección de Dios.",
-  "messianic_connection": "La frase 'En tu simiente serán benditas todas las naciones de la tierra' (Gén 26:4) ratifica la línea pura del Mesías a través de Isaac (Hebreos 11:18, Romanos 9:7).",
-  "key_people": [
-    "isaac",
-    "rebekah"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_covenant",
-    "theme_faith",
-    "theme_providence"
-  ],
-  "question_ids": [],
-  "references": [
-    {
-      "book": "Génesis",
-      "chapter": 26,
-      "verse_start": 1,
-      "verse_end": 11
-    }
-  ],
-  "key_verse": {
-    "reference": "Génesis 26:3-4",
-    "text": "Habita como forastero en esta tierra, y estaré contigo, y te bendeciré; porque a ti y a tu descendencia daré todas estas tierras, y confirmaré el juramento que hice a Abraham tu padre. Multiplicaré tu descendencia como las estrellas del cielo... y todas las naciones de la tierra serán benditas en tu simiente."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 26:7",
-      "text": "Y los hombres de aquel lugar le preguntaron acerca de su mujer; y él respondió: Es mi hermana; porque tuvo miedo de decir: Es mi mujer..."
-    }
-  ],
-  "cross_references_nt": [
-    "Gálatas 3:16",
-    "Hebreos 11:18",
-    "Romanos 9:7"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Pacto Renovado a Isaac",
-    "icon": "⭐",
-    "color_category": "covenant"
-  }
-},
-{
-  "id": "isaac_wells",
-  "depth_level": 3,
-  "parent_id": "nb_isaac",
-  "name": "Prosperidad Cien por Uno de Isaac, Envidia Filistea y la Contienda por los Pozos",
-  "short_name": "Los Pozos de Isaac",
-  "category": "patriarch",
-  "importance": "high",
-  "chronology": {
-    "approx_year_am": 2201,
-    "exact_date_note": "Período en el valle de Gerar (~AM 2201)",
-    "duration_days": 365,
-    "duration_note": "Apertura de los pozos de Abraham y pacificación pacificadora ante la envidia"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 26,
-  "verse_start_ref": 12,
-  "chapter_end": 26,
-  "verse_end_ref": 25,
-  "narrative": "Sembró Isaac en aquella tierra, y cosechó aquel año **al ciento por uno**; y le bendijo Jehová. El varón se enriqueció y fue prosperado cada vez más hasta hacerse muy poderoso, despertando la envidia de los filisteos. Los filisteos enceguecen y ciegan con tierra todos los pozos que los siervos de su padre Abraham habían cavado. Abimelec le pide irse: 'Apártate de nosotros, porque eres mucho más poderoso que nosotros'. Isaac se retira pacíficamente al valle de Gerar. Vuelve a abrir los pozos de su padre y cavan siervos de Isaac pozos de agua viva. Los pastores de Gerar contienden por el primer pozo; Isaac llama su nombre **Esek** ('Contienda'). Cava otro pozo y vuelven a reñir; llama su nombre **Sitna** ('Enemistad'). Se aparta de allí y cava otro pozo por el cual no riñen; llama su nombre **Rehobot** ('Espacios anchos'), diciendo: 'Porque ahora Jehová nos ha hecho espacio, y fructificaremos en la tierra'.",
-  "historical_context": "Cosechar 'al ciento por uno' en una región semiárida como el Neguev durante un año de sequía general era un milagro agrícola absoluto demostrado por la bendición de Dios. Reabrir los pozos de su padre respetando sus nombres originales demostró su fidelidad a la herencia patriarcal.",
-  "theological_teaching": "Muestra la paciencia pacifista de Isaac: en lugar de pelear violentamente por los pozos robados, se apartó pacíficamente cediendo el terreno hasta que Dios le dio **Rehobot** ('amplitud y espacio'). Enseña que los que buscan la paz perseverando en Dios finalmente heredan la tierra sin contienda.",
-  "messianic_connection": "La fuente de agua viva brotando de los pozos reabiertos prefigura el Evangelio del Espíritu Santo dando ríos de agua viva para refrescar al creyente (Juan 4:14, Juan 7:37-38).",
-  "key_people": [
-    "isaac"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_providence",
-    "theme_faith"
-  ],
-  "question_ids": [],
-  "references": [
-    {
-      "book": "Génesis",
-      "chapter": 26,
-      "verse_start": 12,
-      "verse_end": 25
-    }
-  ],
-  "key_verse": {
-    "reference": "Génesis 26:22",
-    "text": "Y se apartó de allí, y cavó otro pozo, y no riñeron sobre él; y llamó su nombre Rehobot, y dijo: Porque ahora Jehová nos ha hecho espacio, y fructificaremos en la tierra."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 26:12",
-      "text": "Y sembró Isaac en aquella tierra, y cosechó aquel año al ciento por uno; y le bendijo Jehová."
-    }
-  ],
-  "cross_references_nt": [
-    "Mateo 5:9",
-    "Romanos 12:18",
-    "Juan 7:37-38"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Pozos de Rehobot",
-    "icon": "💧",
-    "color_category": "patriarch"
-  }
-},
-{
-  "id": "isaac_beersheba_covenant",
-  "depth_level": 3,
-  "parent_id": "nb_isaac",
-  "name": "El Pacto de Paz en Beerseba entre Isaac y el Rey Abimelec",
-  "short_name": "Pacto de Paz en Beerseba",
-  "category": "covenant",
-  "importance": "medium",
-  "chronology": {
-    "approx_year_am": 2202,
-    "exact_date_note": "Asentamiento en Beerseba (~AM 2202)",
-    "duration_days": 1,
-    "duration_note": "Reconocimiento pagano de la bendición inconfundible de Jehová sobre Isaac"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 26,
-  "verse_start_ref": 26,
-  "chapter_end": 26,
-  "verse_end_ref": 33,
-  "narrative": "De Gerar viene a él Abimelec con Ahuzat su amigo y Ficol el general de su ejército. Isaac los cuestiona: '¿Por qué venís a mí, pues que me habéis aborrecido y me echasteis de entre vosotros?'. Ellos responden: **'Hemos visto claramente que Jehová está contigo'**. Piden hacer un pacto jurado de paz para no hacerse mal recíproco, afirmando: 'Tú eres ahora bendito de Jehová'. Isaac les hace un gran banquete; comen, beben y madrugan al día siguiente jurando paz mutuamente. Ese mismo día, los siervos de Isaac le dan la noticia: 'Hemos hallado agua'. Isaac llama al pozo **Seba**; por esta razón el nombre de la ciudad es **Beerseba** hasta el día de hoy.",
-  "historical_context": "Es la ratificación en la segunda generación patriarcal del mismo pacto de no agresión alcanzado por Abraham en el mismo sitio (Génesis 21:22-34), afirmando el testimonio intachable del hogar de Isaac ante los reyes extranjeros.",
-  "theological_teaching": "Muestra que cuando los caminos del hombre son agradables a Jehová, aun a sus enemigos hace estar en paz con él (Proverbios 16:7). El testimonio de bendición de Isaac obligó a los reyes paganos a humillarse y buscar su amistad.",
-  "messianic_connection": "La paz de Isaac con los reyes paganos prefigura el impacto del Reino de Cristo, donde los reyes de la tierra se humillarán y reconocerán que la bendición de Dios descansa sobre el Mesías.",
-  "key_people": [
-    "isaac"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_covenant",
-    "theme_providence"
-  ],
-  "question_ids": [],
-  "references": [
-    {
-      "book": "Génesis",
-      "chapter": 26,
-      "verse_start": 26,
-      "verse_end": 33
-    }
-  ],
-  "key_verse": {
-    "reference": "Génesis 26:28",
-    "text": "Y ellos respondieron: Hemos visto claramente que Jehová está contigo; y dijimos: Haya ahora juramento entre nosotros, entre nosotros y ti, y haremos pacto contigo."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 26:29",
-      "text": "que no nos hagas mal... como no te hemos tocado, y como sólo te hemos hecho bien... tú eres ahora bendito de Jehová."
-    }
-  ],
-  "cross_references_nt": [
-    "Proverbios 16:7",
-    "Apocalipsis 21:24"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Pacto en Beerseba",
-    "icon": "🕊️",
-    "color_category": "covenant"
-  }
-},
-{
-  "id": "jacob_blessing_stolen",
-  "depth_level": 2,
-  "parent_id": "nb_isaac",
-  "name": "El Engaño de la Bendición Patriarcal: Jacob, Rebeca y la Conseguida Bendición de Isaac (Génesis 27)",
-  "short_name": "La Bendición Suplantada",
-  "category": "sin",
-  "importance": "critical",
-  "chronology": {
-    "approx_year_am": 2245,
-    "exact_date_note": "Año 137 de Isaac, 77 de Jacob (AM 2245)",
-    "duration_days": 1,
-    "duration_note": "Artimaña humana para asegurar la bendición profética decretada por Dios antes de nacer"
-  },
-  "location_id": "beersheba",
-  "chapter_start": 27,
-  "verse_start_ref": 1,
-  "chapter_end": 27,
-  "verse_end_ref": 45,
-  "narrative": "Isaac, viejo y ciego de los ojos, llama a Esaú para bendecirlo antes de morir tras comer de su caza favorida. Rebeca oye y urde un plan: envía a Jacob a traer dos cabritos, cocina un guisado sabroso, viste a Jacob con las ropas olorosas de Esaú y cubre sus manos y cuello con las pieles de los cabritos. Jacob se presenta a su padre ciego fingiendo ser Esaú ('Yo soy Esaú tu primogénito'). Isaac toca las manos velludas, huele las ropas y pronuncia la **bendición irreversible del pacto**: 'Dios, pues, te dé del rocío del cielo... sírvante pueblos, y naciones se inclinen a ti... benditos los que te bendijeren'. Al regresar Esaú de la caza, la verdad sale a la luz; Isaac tiembla con gran estremecimiento pero confirma: **'Y él será bendito'**. Esaú clama con amarga exclamación y planea matar a Jacob en cuanto muera su padre. Rebeca envía a Jacob a huir a Padan-aram en casa de su hermano Labán.",
-  "historical_context": "La bendición profética testamentaria en la época patriarcal era un acto jurídico-espiritual obligatorio dictado bajo la inspiración de Dios. Una vez pronunciada la bendición con imposición de manos sobre la persona, no podía ser revocada ni anulada.",
-  "theological_teaching": "Revela la tragedia de la manipulación humana: ni el favoritismo carnal de Isaac por Esaú (pretendiendo alterar la profecía divina de Gén 25:23) ni el engaño mentiroso de Jacob y Rebeca agradaron a Dios. Aunque la bendición recayó soberanamente sobre Jacob conforme a la elección de Dios, Jacob y Rebeca sufrieron dolorosas consecuencias (Jacob tuvo que huir al exilio y Rebeca jamás volvió a ver a su hijo amado).",
-  "messianic_connection": "Hebreos 11:20 afirma: 'Por la fe bendijo Isaac a Jacob y a Esaú respecto a cosas venideras'. A pesar de la ceguera física y la confusión inicial, la fe de Isaac finalmente aceptó el veredicto de Dios reconociendo que Jacob era el legítimo heredero del Pacto Mesiánico.",
-  "key_people": [
-    "isaac",
-    "rebekah",
-    "jacob",
-    "esau"
-  ],
-  "covenant_id": "abrahamic_covenant",
-  "theme_ids": [
-    "theme_election",
-    "theme_sin",
-    "theme_providence"
-  ],
-  "question_ids": [],
-  "references": [
-    {
-      "book": "Génesis",
-      "chapter": 27,
-      "verse_start": 1,
-      "verse_end": 45
-    }
-  ],
-  "key_verse": {
-    "reference": "Génesis 27:33",
-    "text": "Y se estremeció Isaac grandemente con un muy grande estremecimiento, y dijo: ¿Quién es el que vino aquí, que trajo caza, y me dio de comer de todo antes que tú vinieses? Yo le bendije, y él será bendito."
-  },
-  "additional_verses": [
-    {
-      "reference": "Génesis 27:28-29",
-      "text": "Dios, pues, te dé del rocío del cielo, y de las grosuras de la tierra... Sírvante pueblos, y naciones se inclinen a ti; sé señor de tus hermanos... Benditos los que te bendijeren, y malditos los que te maldijeren."
-    }
-  ],
-  "cross_references_nt": [
-    "Hebreos 11:20",
-    "Hebreos 12:17",
-    "Romanos 9:11-12"
-  ],
-  "sub_event_ids": [],
-  "timeline_display": {
-    "label": "Bendición Suplantada",
-    "icon": "🐑",
-    "color_category": "sin"
-  }
-}
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Bendición Suplantada",
-"icon": "🐑",
-"color_category": "sin"
-}
-},
-{
-"id": "jacob_ladder_bethel",
-"depth_level": 2,
-"parent_id": "nb_jacob",
-"name": "El Sueño de la Escalera en Luz (Betel): Teofanía Divina y Voto Patriarcal",
-"short_name": "Escalera de Betel",
-"category": "miracle",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2245,
-"exact_date_note": "Viaje de huida de Jacob a los 77 años (AM 2245)",
-"duration_days": 1,
-"duration_note": "Primera teofanía personal a Jacob en su huida hacia Harán"
-},
-"location_id": "bethel",
-"chapter_start": 28,
-"verse_start_ref": 10,
-"chapter_end": 28,
-"verse_end_ref": 22,
-"narrative": "Jacob sale de Beerseba y va a Harán. Llegando a un cierto lugar (Luz), toma una piedra como cabecera y se duerme. Sueña con **una escalera asentada en la tierra y su cabeza tocaba el cielo**, y ángeles de Dios subían y bajaban por ella. Jehová está en lo alto diciéndole: 'Yo soy Jehová, el Dios de Abraham tu padre, y el Dios de Isaac; la tierra en que estás acostado te la daré a ti y a tu descendencia... **y todas las familias de la tierra serán benditas en ti y en tu simiente**... no te dejaré hasta que haya hecho lo que te he dicho'. Jacob despierta con pavor: '¡Ciertamente Jehová está en este lugar, y yo no lo sabía! No es otra cosa que **casa de Dios y puerta del cielo**'. Jacob erige la piedra como señal, vierte aceite sobre ella, llama la ciudad **Betel** ('Casa de Dios') y hace voto de dar a Dios los diezmos.",
-"historical_context": "La ciudad se llamaba originalmente Luz (Gén 28:19). La piedra ungida con aceite (matzebáh) fue el primer altar de consagración levantado por Jacob en su vida personal de fe fuera de la tienda paterna.",
-"theological_teaching": "Muestra que la gracia incondicional de Dios persigue al fugitivo. En lugar de abandonar al pecador manipulador, Dios se le revela como el Guardián de la promesa que conecta el cielo con la tierra. Betel enseña la reverencia santa ante la presencia divina en el lugar de adoración.",
-"messianic_connection": "JESUCRISTO DECLARA SER EL CUMPLIMIENTO EXPLICITO DE LA ESCALERA DE BETEL en Juan 1:51: 'De cierto, de cierto os digo: De aquí en adelante veréis el cielo abierto, y a los ángeles de Dios que suben y descienden sobre el Hijo del Hombre'. Cristo es el único Mediador que conecta el cielo y la tierra.",
-"key_people": [
-"jacob"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_covenant",
-"theme_faith",
-"theme_messianic_promise",
-"theme_providence"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 28,
-  "verse_start": 10,
-  "verse_end": 22
-}
-],
-"key_verse": {
-"reference": "Génesis 28:16-17",
-"text": "Y despertó Jacob de su sueño, y dijo: Ciertamente Jehová está en este lugar, y yo no lo sabía. Y tuvo miedo, y dijo: ¡Cuán terrible es este lugar! No es otra cosa que casa de Dios, y puerta del cielo."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 28:12",
-  "text": "Y soñó: y he aquí una escalera que estaba asentada en tierra, y su cabeza tocaba en el cielo; y he aquí ángeles de Dios que subían y descendían por ella."
-},
-{
-  "reference": "Génesis 28:15",
-  "text": "He aquí, yo estoy contigo, y te guardaré por dondequiera que fueres, y volveré a traerte a esta tierra; porque no te dejaré hasta que haya hecho lo que te he dicho."
-}
-],
-"cross_references_nt": [
-"Juan 1:51",
-"1 Timoteo 2:5",
-"Hebreos 10:19-20"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Escalera de Betel",
-"icon": "🪜",
-"color_category": "miracle"
-}
-},
-{
-"id": "jacob_marries_leah_rachel",
-"depth_level": 3,
-"parent_id": "nb_jacob",
-"name": "Llegada de Jacob a Padan-aram, Servicio a Labán y Matrimonios con Lea y Raquel",
-"short_name": "Matrimonios con Lea y Raquel",
-"category": "patriarch",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2245,
-"exact_date_note": "AM 2245 a AM 2259 (servidumbre de 14 años por las dos esposas)",
-"duration_days": 5110,
-"duration_note": "Engaño de Labán entregando a Lea en la noche de bodas y 7 años más por Raquel"
-},
-"location_id": "haran",
-"chapter_start": 29,
-"verse_start_ref": 1,
-"chapter_end": 29,
-"verse_end_ref": 30,
-"narrative": "Jacob llega a la tierra de los orientales y se encuentra con Raquel, hija de su tío Labán, apacentando las ovejas de su padre junto al pozo. Jacob remueve la piedra del pozo, abreva el rebaño, besa a Raquel y llora. Labán lo recibe en su casa. Tras un mes, acuerdan su salario: Jacob trabajará siete años por la hija menor Raquel, a quien amaba. 'Así sirvió Jacob por Raquel siete años; **y le parecieron como pocos días, porque la amaba**'. En la noche de la boda, Labán engaña a Jacob introduciendo en la tienda a su hija mayor **Lea** (de ojos delicados). Al amanecer, Jacob descubre el engaño; Labán se justifica diciendo que en su tierra no se entrega la menor antes que la mayor. Cumplida la semana nupcial, Labán le entrega también a **Raquel**, a cambio de servirle otros siete años.",
-"historical_context": "Jacob el engañador experimenta la justicia retributiva providencial al ser engañado por su propio tío Labán (un maestro de la astucia mercantil). La velada nupcial a oscuras y el velo matrimonial impidieron a Jacob reconocer a Lea hasta la mañana siguiente.",
-"theological_teaching": "Muestra el poder purificador de la disciplina divina: Dios usa las injusticias de Labán para disciplinar el carácter de Jacob durante 20 años de duro trabajo. Enseña también la gracia de Dios hacia la aborrecida Lea, sosteniéndola en medio del favoritismo conyugal.",
-"messianic_connection": "Aunque Jacob amaba a Raquel, fue de la repudiada **Lea** de quien nació Judá, el antepasado directo de Jesucristo, demostrando la elección soberana de la gracia de Dios sobre los despreciados (1 Corintios 1:27-29).",
-"key_people": [
-"jacob",
-"leah",
-"rachel",
-"laban"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_election"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 29,
-  "verse_start": 1,
-  "verse_end": 30
-}
-],
-"key_verse": {
-"reference": "Génesis 29:20",
-"text": "Así sirvió Jacob por Raquel siete años; y le parecieron como pocos días, porque la amaba."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 29:25",
-  "text": "Venida la mañana, he aquí que era Lea; y él dijo a Labán: ¿Qué es esto que me has hecho? ¿No te he servido por Raquel? ¿Por qué, pues, me has engañado?"
-}
-],
-"cross_references_nt": [
-"1 Corintios 1:27-29",
-"Rut 4:11"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Lea y Raquel",
-"icon": "💍",
-"color_category": "patriarch"
-}
-},
-{
-"id": "birth_12_tribes",
-"depth_level": 2,
-"parent_id": "nb_jacob",
-"name": "El Nacimiento de los 12 Hijos de Jacob: El Establecimiento de las Tribus de Israel",
-"short_name": "Nacimiento de los 12 Hijos",
-"category": "genealogy",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2252,
-"exact_date_note": "Abarca desde AM 2252 hasta AM 2264 (7 años en Padan-aram)",
-"duration_days": 2555,
-"duration_note": "Nacimiento de 11 hijos y una hija en Harán y Benjamín posteriormente en Canaán"
-},
-"location_id": "haran",
-"chapter_start": 29,
-"verse_start_ref": 31,
-"chapter_end": 30,
-"verse_end_ref": 24,
-"narrative": "Viendo Jehová que Lea era menospreciada, le concedió hijos, mientras Raquel era estéril. Lea da a luz sucesivamente a **Rubén** ('Jehová ha visto mi aflicción'), **Simeón** ('Jehová ha oído'), **Leví** ('Unido') y **Judá** ('Alabaré a Jehová'). Raquel, celosa, entrega a su sierva Bilha a Jacob, naciendo **Dan** y **Naptalí**. Lea entrega a su sierva Zilpa, naciendo **Gad** y **Aser**. Lea vuelve a concebir dando a luz a **Isacar**, **Zabulón** y a su hija **Dina**. Finalmente, 'se acordó Dios de Raquel... e hizo concebir a Raquel, y dio a luz un hijo y dijo: Añádame Jehová otro hijo', llamando su nombre **José** ('Añadir').",
-"historical_context": "Los nombres de los 12 hijos expresan las luchas emocionales, la fe y los anhelos de las madres. Los 12 hijos de Jacob constituyeron la estructura nacional insustituible de las 12 Tribus de Israel.",
-"theological_teaching": "Muestra cómo la gracia soberana de Dios actúa a través del drama familiar imperfecto para edificar la Casa de Israel. De las cuatro mujeres (Lea, Raquel, Bilha y Zilpa) Dios levanta el pueblo escogido del pacto.",
-"messianic_connection": "Al nacer **Judá** (Gén 29:35), Lea exclama: 'Esta vez alabaré a Jehová'. De la tribu de Judá nacerá el Rey David y el Mesías Jesucristo (León de la tribu de Judá, Apocalipsis 5:5). En Mateo 1:2 y Lucas 3:33 se registra esta línea mesiánica.",
-"key_people": [
-"jacob",
-"leah",
-"rachel",
-"judah",
-"joseph"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_election",
-"theme_messianic_promise",
-"theme_providence"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 29,
-  "verse_start": 31,
-  "verse_end": 35
-},
-{
-  "book": "Génesis",
-  "chapter": 30,
-  "verse_start": 1,
-  "verse_end": 24
-}
-],
-"key_verse": {
-"reference": "Génesis 29:35",
-"text": "Concibió otra vez, y dio a luz un hijo, y dijo: Esta vez alabaré a Jehová; por esto llamó su nombre Judá; y dejó de dar a luz."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 30:22-24",
-  "text": "Y se acordó Dios de Raquel, y la oyó Dios, y le abrió el seno. Y concibió, y dio a luz un hijo... y llamó su nombre José, diciendo: Añádame Jehová otro hijo."
-}
-],
-"cross_references_nt": [
-"Hebreos 7:14",
-"Apocalipsis 5:5",
-"Apocalipsis 7:4-8"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Las 12 Tribus",
-"icon": "👑",
-"color_category": "genealogy"
-}
-},
-{
-"id": "jacob_flees_laban",
-"depth_level": 3,
-"parent_id": "nb_jacob",
-"name": "La Prosperidad Agrícola de Jacob, la Huida de Padan-aram y el Pacto en Mizpa (Galaad)",
-"short_name": "Huida y Pacto con Labán",
-"category": "patriarch",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2265,
-"exact_date_note": "Año 20 de estancia de Jacob en Harán (AM 2265, Jacob 97 años)",
-"duration_days": 10,
-"duration_note": "Persecución de Labán de 7 días alcanzando a Jacob en los montes de Galaad"
-},
-"location_id": "gilead",
-"chapter_start": 30,
-"verse_start_ref": 25,
-"chapter_end": 31,
-"verse_end_ref": 55,
-"narrative": "Jacob sirve 6 años más a Labán por el ganado (varas descortezadas de álamo y avellano), y el Señor prospera a Jacob grandemente en rebaños, siervas, siervos y camellos a pesar de que Labán cambió su salario diez veces. Dios le ordena en visión: 'Vuélvete a la tierra de tus padres'. Jacob reúne a sus mujeres e hijos y huye secretamente hacia Canaán mientras Labán esquilaba sus ovejas (Raquel hurta los ídolos familiares terantines de su padre). Labán persigue a Jacob durante 7 días y lo alcanza en los montes de Galaad. Dios le advierte a Labán en sueños de noche: 'Guárdate que no hables a Jacob descomedidamente'. Tras buscar en vano sus ídolos, Labán e Isaac hacen un pacto de no agresión erigiendo un majano de piedras llamado **Galaad** / **Mizpa** ('Atalaya'): 'Atalaya la de Jehová entre tú y yo, cuando nos apartemos el uno del otro'. Se despiden y Labán regresa a su lugar.",
-"historical_context": "Los terafines (ídolos domésticos) otorgaban el derecho legal a la jefatura de la herencia familiar en Mesopotamia, razón por la cual Raquel los hurtó. El pacto de Galaad fijó la frontera nororiental entre los arameos y la casa de Israel.",
-"theological_teaching": "Enseña la protección soberana de Dios sobre su siervo: a pesar del fraude de Labán y su persecución militar, Dios le prohíbe tocar a Jacob y convierte la amenaza en un pacto de separación pacífica.",
-"messianic_connection": "La bendición de Dios multiplicando el rebaño de Jacob y librándolo del opresor arameo se celebra en la confesión litúrgica de Israel: 'Un arameo a punto de perecer fue mi padre' (Deuteronomio 26:5).",
-"key_people": [
-"jacob",
-"laban",
-"rachel",
-"leah"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_faith"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 30,
-  "verse_start": 25,
-  "verse_end": 43
-},
-{
-  "book": "Génesis",
-  "chapter": 31,
-  "verse_start": 1,
-  "verse_end": 55
-}
-],
-"key_verse": {
-"reference": "Génesis 31:49",
-"text": "y Mizpa, por cuanto dijo: Atalaye Jehová entre mí y ti, cuando nos apartemos el uno del otro."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 31:24",
-  "text": "Y vino Dios a Labán arameo en sueños aquella noche, y le dijo: Guárdate que no hables a Jacob descomedidamente."
-}
-],
-"cross_references_nt": [
-"Deuteronomio 26:5",
-"Salmo 121:7-8"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Pacto en Galaad",
-"icon": "⛰️",
-"color_category": "patriarch"
-}
-},
-{
-"id": "wrestling_at_peniel",
-"depth_level": 2,
-"parent_id": "nb_jacob",
-"name": "La Lucha Mística en el Jaboc, la Herida en el Muslo y el Cambio de Nombre a Israel (Peniel)",
-"short_name": "Lucha en Peniel",
-"category": "miracle",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2265,
-"exact_date_note": "Noche previa al encuentro con Esaú (AM 2265, Jacob 97 años)",
-"duration_days": 1,
-"duration_note": "El encuentro espiritual decisivo que transforma al suplantador en príncipe de Dios"
-},
-"location_id": "peniel",
-"chapter_start": 32,
-"verse_start_ref": 1,
-"chapter_end": 32,
-"verse_end_ref": 32,
-"narrative": "Jacob envía mensajeros a su hermano Esaú al monte de Seir, y estos regresan avisando que Esaú viene a su encuentro con 400 hombres. Atemorizado y angustiado, Jacob divide su campamento en dos y clama a Dios en su famosa oración de humildad: 'Menor soy que todas las misericordias y de toda la verdad que has usado para con tu siervo'. Envía un regalo masivo de cientos de animales para apaciguar a Esaú. Esa noche hace cruzar a su familia el vado de Jaboc, **y se queda Jacob solo; y luchó con él un varón hasta que rayaba el alba**. Al ver que no podía con Jacob, toca la coyuntura de su muslo y se descoyuntó. El Varón le dice: 'Déjame, porque raya el alba'. Jacob responde con perseverancia santa: **'No te dejaré, si no me bendices'**. El Varón pregunta su nombre y le declara: **'No se llamará más tu nombre Jacob, sino Israel (El que lucha con Dios); porque has luchado con Dios y con los hombres, y has vencido'**. Jacob llama aquel lugar **Peniel** ('Rostro de Dios'): 'Porque vi a Dios cara a cara, y fue librada mi alma'. Al salir el sol, cojeaba de su muslo.",
-"historical_context": "La lucha nocturna ocurrió junto al arroyo de Jaboc (Wadi Zerqa en Jordania). El 'Varón' que luchó con Jacob es una manifestación teofánica / cristofánica del Ángel de Jehová (Oseas 12:3-5 aclara que Jacob luchó con el Ángel y venció mediante llanto y suplicas).",
-"theological_teaching": "Es la experiencia de quebrantamiento y transformación espiritual más profunda del AT. El hombre que durante toda su vida se apoyó en su astucia humana ('suplantador') es invalidador físicamente en su muslo para aprender a depender solo de la fuerza divina, recibiendo un nuevo nombre y una nueva identidad espiritual como **Israel** (Príncipe de Dios).",
-"messianic_connection": "Oseas 12:3-4 celebra esta lucha. Jesucristo es el Varón de Peniel con quien el creyente se rinde en quebrantamiento y fe para recibir la bendición eterna.",
-"key_people": [
-"jacob"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_faith",
-"theme_covenant",
-"theme_election",
-"theme_conversion"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 32,
-  "verse_start": 1,
-  "verse_end": 32
-}
-],
-"key_verse": {
-"reference": "Génesis 32:28",
-"text": "Y el varón le dijo: No se llamará más tu nombre Jacob, sino Israel; porque has luchado con Dios y con los hombres, y has vencido."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 32:30",
-  "text": "Y llamó Jacob el nombre de aquel lugar, Peniel; porque dijo: Vi a Dios cara a cara, y fue librada mi alma."
-},
-{
-  "reference": "Génesis 32:26",
-  "text": "Y dijo: Déjame, porque raya el alba. Y Jacob le respondió: No te dejaré, si no me bendices."
-}
-],
-"cross_references_nt": [
-"Oseas 12:3-5",
-"2 Corintios 12:9-10",
-"Hebreos 11:21"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Lucha en Peniel",
-"icon": "🤼",
-"color_category": "miracle"
-}
-},
-{
-"id": "jacob_meets_esau",
-"depth_level": 3,
-"parent_id": "nb_jacob",
-"name": "El Reencuentro Emotivo y la Reconciliación entre Jacob y Esaú",
-"short_name": "Reencuentro con Esaú",
-"category": "restoration",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2265,
-"exact_date_note": "Amanecer posterior a Peniel (AM 2265)",
-"duration_days": 1,
-"duration_note": "Respuestas providenciales a la oración disipando la ira de 20 años de Esaú"
-},
-"location_id": "peniel",
-"chapter_start": 33,
-"verse_start_ref": 1,
-"chapter_end": 33,
-"verse_end_ref": 20,
-"narrative": "Alzando Jacob sus ojos, ve venir a Esaú con 400 hombres. Distribuye a los niños entre Lea, Raquel y las dos siervas, e iba él delante de ellos y se postra en tierra siete veces hasta llegar a su hermano. Pero **Esaú corre a su encuentro, lo abraza, se echa sobre su cuello y lo besa; y ambos lloran**. Esaú ve a las mujeres y a los niños y pregunta por ellos; Jacob responde: 'Son los niños que Dios ha dado graciosamente a tu siervo'. Esaú rehúsa inicialmente el regalo diciendo: 'Suficiente tengo yo, hermano mío'; pero Jacob le insiste diciendo: 'He visto tu rostro como si hubiera visto el rostro de Dios'. Esaú regresa a Seir y Jacob se traslada a Sucot (donde edifica cabañas) y luego pasa sano y salvo a Siquem en Canaán, comprando una parte del campo y edificando allí un altar llamado **El-Elohe-Israel** ('Dios, el Dios de Israel').",
-"historical_context": "La inclinación de siete veces en tierra era el protocolo diplomático oriental de máximo respeto. La actitud de Esaú demostró que Dios había ablandado milagrosamente su corazón durante los 20 años de separación.",
-"theological_teaching": "Enseña el poder de la oración y del arrepentimiento para romper enemistades mortales. Muestra que cuando Jacob se rindió a Dios en Peniel, Dios enderezó la relación con su hermano Esaú.",
-"messianic_connection": "La reconciliación entre Jacob y Esaú prefigura el poder del Evangelio reconciliando a los hombres divididos con Dios y entre sí a través de la cruz (Efesios 2:14-16).",
-"key_people": [
-"jacob",
-"esau"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_restoration",
-"theme_providence",
-"theme_mercy"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 33,
-  "verse_start": 1,
-  "verse_end": 20
-}
-],
-"key_verse": {
-"reference": "Génesis 33:4",
-"text": "Pero Esaú corrió a su encuentro y le abrazó, y se echó sobre su cuello, y le besó; y lloraron."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 33:10",
-  "text": "Y dijo Jacob: No, yo te ruego; si he hallado ahora gracia en tus ojos, acepta mi presente... porque he visto tu rostro, como si hubiera visto el rostro de Dios, pues te has complacido en mí."
-}
-],
-"cross_references_nt": [
-"Efesios 2:14-16",
-"Mateo 5:23-24"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Reconciliación con Esaú",
-"icon": "🤝",
-"color_category": "restoration"
-}
-},
-{
-"id": "dinah_shechem_tragedy",
-"depth_level": 3,
-"parent_id": "nb_jacob",
-"name": "La Deshonra de Dina en Siquem y la Venganza Sangrienta de Simeón y Leví",
-"short_name": "Tragedia de Dina en Siquem",
-"category": "sin",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2270,
-"exact_date_note": "Residencia de Jacob en Siquem (~AM 2270)",
-"duration_days": 30,
-"duration_note": "Violación de Dina y matanza engañosa de los hombres de Siquem"
-},
-"location_id": "shechem",
-"chapter_start": 34,
-"verse_start_ref": 1,
-"chapter_end": 34,
-"verse_end_ref": 31,
-"narrative": "Dina, la hija de Lea y Jacob, sale a ver a las hijas del país. Siquem, hijo de Hamor el heveo, príncipe de la tierra, la ve, la toma y se acuesta con ella deshonrándola. Siquem se enamora de ella y su padre Hamor pide a Jacob darla por esposa ofreciendo alianzas matrimoniales y comerciales. Los hijos de Jacob responden con engaño exigiéndoles como condición indispensable que todos los varones de Siquem se circunciden. Hamor y Siquem convencen a los hombres de su ciudad y todos se circuncidan. Al tercer día, cuando sentían el mayor dolor, **Simeón y Leví**, hermanos de Dina, toman sus espadas, entran audazmente en la ciudad, matan a todos los varones, ejecutan a Hamor y Siquem, rescatan a Dina y saquean la ciudad. Jacob los reprende con pánico: 'Me habéis turbado con hacerme abominable a los moradores de esta tierra... yo con pocos hombres, se juntarán contra mí y me destruirán'. Ellos responden desafiantes: '¿Había él de tratar a nuestra hermana como a una ramera?'.",
-"historical_context": "La circuncisión, la señal sagrada del pacto de Dios, fue profanada por Simeón y Leví usándola como un instrumento de engaño militar y venganza carnal impía.",
-"theological_teaching": "Enseña el peligro de la acomodación cultural al asentarse cerca del paganismo en Siquem sin cumplir primero el voto de volver a Betel. Muestra que la venganza violenta y el engaño piadoso manchan el nombre de Dios y traen juicio (Jacob maldecirá la violencia de Simeón y Leví en su lecho de muerte, Génesis 49:5-7).",
-"messianic_connection": "Muestra la degradación de los hijos de Jacob sin la gracia de Dios, subrayando la necesidad de la purificación divina que Dios ordenará inmediatamente en el capítulo 35.",
-"key_people": [
-"jacob",
-"dinah",
-"simeon",
-"levi"
-],
-"covenant_id": null,
-"theme_ids": [
-"theme_sin",
-"theme_judgment"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 34,
-  "verse_start": 1,
-  "verse_end": 31
-}
-],
-"key_verse": {
-"reference": "Génesis 34:30",
-"text": "Entonces dijo Jacob a Simeón y a Leví: Me habéis turbado con hacerme abominable a los moradores de esta tierra, el cananeo y el ferezeo; y teniendo yo pocos hombres, se juntarán contra mí y me atacarán, y seré destruido yo y mi casa."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 34:25",
-  "text": "Pero sucedió que al tercer día, cuando ellos sentían el mayor dolor, dos de los hijos de Jacob, Simeón y Leví, hermanos de Dina, tomaron cada uno su espada, y vinieron osadamente contra la ciudad, y mataron a todo varón."
-}
-],
-"cross_references_nt": [
-"Génesis 49:5-7",
-"Romanos 12:19"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Matanza de Siquem",
-"icon": "⚔️",
-"color_category": "sin"
-}
-},
-{
-"id": "return_to_bethel_deaths",
-"depth_level": 2,
-"parent_id": "nb_jacob",
-"name": "Regreso a Betel, Limpieza de Ídolos, Nacimiento de Benjamín, Muerte de Raquel e Isaac (Génesis 35-36)",
-"short_name": "Regreso a Betel y Muertes",
-"category": "patriarch",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2288,
-"exact_date_note": "Abarca desde AM 2271 (Betel) hasta AM 2288 (Muerte de Isaac a los 180 años)",
-"duration_days": 6205,
-"duration_note": "Purificación de la casa de Jacob y muerte de los patriarcas Isaac y Raquel"
-},
-"location_id": "bethel",
-"chapter_start": 35,
-"verse_start_ref": 1,
-"chapter_end": 36,
-"verse_end_ref": 43,
-"narrative": "Dios ordena a Jacob: **'Levántate y sube a Betel, y quédate allí; y haz allí un altar al Dios que te apareció'**. Jacob ordena a su familia: 'Quitad los dioses ajenos que hay entre vosotros, y limpiaos, y mudad vuestras ropas'. Esconden los ídolos e zarcillos debajo de la encina de Siquem. El terror de Dios cae sobre las ciudades vecinas y no persiguen a los hijos de Jacob. Jacob edifica el altar **El-betel**. Muere Débora, nodriza de Rebeca. Dios se aparece de nuevo a Jacob, confirma su nombre **Israel** y le renueva las promesas del pacto abrahámico. Viajando hacia Efrata (Belén), Raquel da a luz a su segundo hijo con parto muy difícil; al exhalar su alma llama su nombre Ben-oni ('Hijo de mi dolor'), pero Jacob lo llama **Benjamín** ('Hijo de mi mano derecha'). Raquel muere y es sepultada en el camino de Efrata (Belén). Finalmente, Jacob llega a Hebrón junto a su padre Isaac. Mueó Isaac de 180 años, y lo sepultan sus hijos Esaú e Israel. Génesis 36 registra la genealogía de los reyes y duques de Edom (descendientes de Esaú).",
-"historical_context": "La tumba de Raquel en el camino de Belén es uno de los sitios de veneración más antiguos de la Tierra Santa. El nombre Benjamín ('hijo de mi mano derecha') expresa el lugar de honra mesiánica.",
-"theological_teaching": "Enseña la necesidad del avivamiento y la purificación interna: para volver a la 'Casa de Dios' (Betel), hay que enterrar todos los ídolos ajenos. Revela la soberanía de Dios sobre los sufrimientos del peregrinaje (muertes de Débora, Raquel e Isaac).",
-"messianic_connection": "El nacimiento de Benjamín en **Efrata (Belén)** conecta geográficamente el linaje patriarcal con la profecía de Miqueas 5:2 sobre el nacimiento del Mesías Jesucristo en Belén de Efrata.",
-"key_people": [
-"jacob",
-"rachel",
-"benjamin",
-"isaac",
-"esau"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_covenant",
-"theme_faith",
-"theme_providence"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 35,
-  "verse_start": 1,
-  "verse_end": 29
-},
-{
-  "book": "Génesis",
-  "chapter": 36,
-  "verse_start": 1,
-  "verse_end": 43
-}
-],
-"key_verse": {
-"reference": "Génesis 35:2",
-"text": "Entonces Jacob dijo a su familia y a todos los que con él estaban: Quitad los dioses ajenos que hay entre vosotros, y limpiaos, y mudad vuestras ropas."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 35:18",
-  "text": "Y aconteció que al salírsele el alma (pues murió), llamó su nombre Ben-oni; mas su padre lo llamó Benjamín."
-},
-{
-  "reference": "Génesis 35:29",
-  "text": "Y exhaló Isaac el espíritu, y murió, y fue reunido a su pueblo, anciano y lleno de días; y lo sepultaron Esaú y Jacob sus hijos."
-}
-],
-"cross_references_nt": [
-"Miqueas 5:2",
-"Mateo 2:16-18",
-"Hebreos 11:21"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Betel y Benjamín",
-"icon": "🕯️",
-"color_category": "patriarch"
-}
-},
-{
-"id": "joseph_dreams_sold",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "Los Sueños Proféticos de José, el Odio de sus Hermanos y la Venta a Egipto",
-"short_name": "José Vendido a Egipto",
-"category": "exile",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2276,
-"exact_date_note": "Año 17 de José (AM 2276, Jacob 108 años)",
-"duration_days": 1,
-"duration_note": "Traición de sus hermanos y venta como esclavo a los mercaderes ismaelitas/madianitas"
-},
-"location_id": "hebron",
-"chapter_start": 37,
-"verse_start_ref": 1,
-"chapter_end": 37,
-"verse_end_ref": 36,
-"narrative": "José, joven de 17 años, apacienta las ovejas con sus hermanos. Israel (Jacob) ama a José más que a todos sus otros hijos porque era el hijo de su vejez, y le hace una túnica de diversos colores. Sus hermanos lo aborrecen y no pueden hablarle pacíficamente. José tiene dos sueños proféticos: 1) Los manojos de trigo de sus hermanos se inclinaban ante su manojo; 2) El sol, la luna y 11 estrellas se inclinaban ante él. Sus hermanos lo envidian aún más. Enviado por Jacob desde el valle de Hebrón a Siquem y Dotán para saber del estado de sus hermanos, estos conspiran contra él diciendo: 'He aquí viene el soñador; venid ahora, y matémosle'. Rubén interviene para librarlo y sugiere echarlo en una cisterna vacía. Cuando llegan, le despojan de la túnica de colores y lo echan en la cisterna. Pasando mercaderes ismaelitas/madianitas rumbo a Egipto, Judá propone: '¿Qué ganamos con matar a nuestro hermano?... venid, vendámosle a los ismaelitas'. Lo venden por **veinte piezas de plata**. Degüellan un cabrito, tiñen la túnica de sangre y la envían a Jacob, quien llora inconsolable creyendo que una mala bestia lo devoró. En Egipto, los madianitas venden a José a Potifar, capitán de la guardia de Faraón.",
-"historical_context": "La 'túnica de colores' (ketónet passím) era una vestidura suntuosa de mangas largas propia de la realeza o del heredero principal. El precio de 20 piezas de plata era el valor exacto de un esclavo joven en el siglo XVIII a.C. según las leyes de Hammurabi.",
-"theological_teaching": "Ilustra la soberanía oculta de Dios: los celos y la maldad de los hombres parecen triunfar, pero Dios está orquestando la traición humana para enviar de antemano un salvador a Egipto que preservará la vida del pueblo del pacto durante la hambruna futura.",
-"messianic_connection": "JOSÉ ES UNA DE LAS PARALELISMOS CRISTOLÓGICOS MÁS PERFECTOS DEL AT: 1) Hijo amado enviado por su padre a sus hermanos (Juan 3:16); 2) Aborrecido sin causa por sus hermanos (Juan 15:25); 3) Traicionado y vendido por piezas de plata por propuesta de Judá / Judas (Mateo 26:15); 4) Despojado de sus vestiduras y dado por muerto (Mateo 27:35); 5) Elevado a la gloria salvando a las naciones (Filipenses 2:9-11).",
-"key_people": [
-"joseph",
-"jacob",
-"judah",
-"ruben"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_messianic_promise",
-"theme_sin",
-"theme_salvation"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 37,
-  "verse_start": 1,
-  "verse_end": 36
-}
-],
-"key_verse": {
-"reference": "Génesis 37:28",
-"text": "Y cuando pasaban los madianitas mercaderes, sacaron ellos a José de la cisterna, y le trajeron arriba, y le vendieron a los ismaelitas por veinte piezas de plata. Y llevaron a José a Egipto."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 37:3-4",
-  "text": "Y amaba Israel a José más que a todos sus hijos, porque lo había tenido en su vejez; y le hizo una túnica de diversos colores. Y viendo sus hermanos que su padre lo amaba más que a todos sus hermanos, le aborrecían, y no podían hablarle pacíficamente."
-}
-],
-"cross_references_nt": [
-"Hechos 7:9-10",
-"Mateo 26:15",
-"Juan 1:11"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "José Vendido",
-"icon": "🎨",
-"color_category": "exile"
-}
-},
-{
-"id": "judah_tamar_sin",
-"depth_level": 3,
-"parent_id": "nb_joseph",
-"name": "El Pecado de Judá con Tamar y el Nacimiento de Fares: Preservación de la Línea Mesiánica (Génesis 38)",
-"short_name": "Judá y Tamar",
-"category": "sin",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2280,
-"exact_date_note": "Décadas contemporáneas al cautiverio de José (~AM 2280)",
-"duration_days": 365,
-"duration_note": "Incidente que revela el riesgo de asimilación cananea y la preservación del linaje mesiánico"
-},
-"location_id": "canaan",
-"chapter_start": 38,
-"verse_start_ref": 1,
-"chapter_end": 38,
-"verse_end_ref": 30,
-"narrative": "Judá se aparta de sus hermanos, se casa con una cananea (hija de Súa) y engendra a Er, Onán y Sela. Er se casa con Tamar, pero siendo malo ante Jehová, Dios le quita la vida. Judá ordena a Onán cumplir el levirato con Tamar para levantar descendencia a su hermano, pero Onán derrama a tierra para no darle descendencia y Dios lo hace morir también. Judá promete a Tamar enviarla con su tercer hijo Sela cuando crezca, pero incumple su promesa. Tiempo después, muriendo la esposa de Judá, Tamar se disfraza de ramera en el camino a Timnat. Judá no la reconoce y se acuesta con ella, dejándole como prenda su sello, su cordón y su báculo. Al tercer mes informan a Judá que Tamar ha fornicado y está encinta; Judá ordena: 'Sacadla y sea quemada'. Tamar saca las prendas: 'De la persona a quien pertenecen estas cosas estoy encinta'. Judá las reconoce y confiesa: **'Más justa es ella que yo, por cuanto no la he dado a Sela mi hijo'**. Tamar da a luz gemelos: Zerah y **Fares** ('Brecha').",
-"historical_context": "La ley del Levirato (del latín *levir*, hermano del esposo) exigía al hermano del difunto engendrar un heredero para preservar el nombre y la propiedad del fallecido. Tamar actuó desesperadamente para exigir el cumplimiento de este derecho dentro de la casa del pacto.",
-"theological_teaching": "Contrasta la pureza moral de José en Egipto (capítulo 39) con la degradación moral y la asimilación cananea de Judá en Canaán (capítulo 38), explicando por qué Dios tuvo que trasladar a toda la familia patriarcal a Egipto para preservarlos puros. Muestra la gracia soberana de Dios obrando a través del fracaso humano para preservar la línea del Mesías.",
-"messianic_connection": "Fares (hijo de Judá y Tamar) es el antepasado directo del Rey David y de Jesucristo. Mateo 1:3 incluye explícitamente a Tamar y Fares en la genealogía de Jesús el Mesías.",
-"key_people": [
-"judah"
-],
-"covenant_id": "proto_gospel",
-"theme_ids": [
-"theme_messianic_promise",
-"theme_sin",
-"theme_election"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 38,
-  "verse_start": 1,
-  "verse_end": 30
-}
-],
-"key_verse": {
-"reference": "Génesis 38:26",
-"text": "Entonces Judá los reconoció, y dijo: Más justa es ella que yo, por cuanto no la he dado a Sela mi hijo. Y nunca más la conoció."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 38:29",
-  "text": "Pero al volver él la mano, he aquí salió su hermano; y ella dijo: ¡Qué brecha te has abierto! Y llamó su nombre Fares."
-}
-],
-"cross_references_nt": [
-"Mateo 1:3",
-"Lucas 3:33",
-"Rut 4:18-22"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Judá y Tamar",
-"icon": "📜",
-"color_category": "sin"
-}
-},
-{
-"id": "joseph_potiphar_prison",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "José en Casa de Potifar, la Tentación Resistida y su Injusto Encarcelamiento",
-"short_name": "José en la Cárcel",
-"category": "patriarch",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2276,
-"exact_date_note": "AM 2276 a AM 2287 (11 años de siervo y prisionero en Egipto)",
-"duration_days": 4015,
-"duration_note": "Perseverancia santa e integridad incorruptible en medio de la prueba"
-},
-"location_id": "egypt",
-"chapter_start": 39,
-"verse_start_ref": 1,
-"chapter_end": 39,
-"verse_end_ref": 23,
-"narrative": "José es llevado a Egipto y comprado por Potifar, oficial de Faraón y capitán de la guardia. **'Mas Jehová estaba con José'**, y fue varón próspero. Viendo Potifar que Jehová estaba con él y que todo lo que hacía lo hacía prosperar en su mano, lo nombra mayordomo de su casa y le entrega todo lo que tiene. José era de hermoso semblante y bella presencia. La mujer de Potifar pone sus ojos en José y le exige repetidamente: 'Duerme conmigo'. José se niega rotundamente declarando: **'¿Cómo, pues, haría yo este grande mal, y pecaría contra Dios?'**. Un día que no había nadie en casa, ella lo asiente por la ropa; José deja su ropa en sus manos y huye afuera. Ella lo calumnia ante su esposo; Potifar se enciende en ira y mete a José en la cárcel del rey. **Pero Jehová estaba con José en la cárcel**, le extendió su misericordia y le dio gracia ante el jefe de la cárcel, quien dejó bajo su mano a todos los presos.",
-"historical_context": "La casa de un alto dignatario egipcio funcionaba como una gran finca administrativa. La fidelidad de José frente a la tentación sexual es el estándar bíblico de santidad práctica lejos de la vigilancia familiar.",
-"theological_teaching": "Enseña que la presencia de Dios ('Jehová estaba con José') no exime al creyente de sufrir persecuciones ni injusticias falsas, pero le otorga la gracia para mantenerse irreprochable y prosperar en medio de la calumnia y el calabozo.",
-"messianic_connection": "José es calumniado falsamente y condenado injustamente a prisión sin haber cometido delito alguno, sufriendo paciente y silenciosamente como tipo de Jesucristo llevado al juzgado de Pilato y al sepulcro (1 Pedro 2:22-23).",
-"key_people": [
-"joseph"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_faith",
-"theme_providence",
-"theme_salvation"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 39,
-  "verse_start": 1,
-  "verse_end": 23
-}
-],
-"key_verse": {
-"reference": "Génesis 39:9",
-"text": "No hay otro mayor que yo en esta casa, y ninguna cosa me ha reservado sino a ti, por cuanto tú eres su mujer; ¿cómo, pues, haría yo este grande mal, y pecaría contra Dios?"
-},
-"additional_verses": [
-{
-  "reference": "Génesis 39:2",
-  "text": "Mas Jehová estaba con José, y fue varón próspero; y estaba en la casa de su amo el egipcio."
-},
-{
-  "reference": "Génesis 39:21",
-  "text": "Pero Jehová estaba con José y le extendió su misericordia, y le dio gracia en los ojos del jefe de la cárcel."
-}
-],
-"cross_references_nt": [
-"Hechos 7:9-10",
-"1 Corintios 6:18",
-"2 Timoteo 2:22"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Integridad de José",
-"icon": "🏛️",
-"color_category": "patriarch"
-}
-},
-{
-"id": "joseph_interprets_pharaoh",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "Interpretación de los Sueños de Faraón y la Elección de José como Gran Visir de Egipto",
-"short_name": "José Gran Visir de Egipto",
-"category": "patriarch",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2289,
-"exact_date_note": "Año 30 de José (AM 2289)",
-"duration_days": 1,
-"duration_note": "Elevación súbita del calabozo al trono como segundo al mando de todo Egipto"
-},
-"location_id": "egypt",
-"chapter_start": 40,
-"verse_start_ref": 1,
-"chapter_end": 41,
-"verse_end_ref": 57,
-"narrative": "En la cárcel, José interpreta por don divino los sueños del jefe de los coperos (quien es restituido) y del jefe de los panaderos (quien es ahorcado), pidiendo al copero acordarse de él. Tras dos años más en prisión, Faraón sueña dos sueños inquietantes: 7 vacas gordas devoradas por 7 vacas flacas, y 7 espigas llenas devoradas por 7 espigas menudas. Ningún sabio de Egipto puede interpretarlos. El copero se acuerda de José; lo traen apresuradamente de la cárcel, se afeita y cambia sus ropas. José declara ante el monarca: **'No está en mí; Dios será el que dé respuesta propicia a Faraón'**. José interpreta que vendrán 7 años de abundancia seguidos por 7 años de hambruna extrema, y aconseja nombrar un varón prudente para almacenar el 20% del grano. Faraón impresionado dice: '¿Hallaremos a otro hombre como éste, en quien esté el espíritu de Dios?'. Faraón lo nombra **Gran Visir**, segundo sobre todo Egipto, le da su anillo de sellar, ropas de lino fino, un collar de oro, su segundo carro y lo llama **Zafnat-panea** ('Salvador del mundo' / 'Revelador de secretos'), dándole por esposa a Asenat. José tiene 30 años. Engendra a **Manasés** y **Efraín**.",
-"historical_context": "La exaltación de un asiático/semita a la posición de Gran Visir (Tjaty) en Egipto coincide con el período histórico de los hicsos o del Reino Medio/Nuevo, donde funcionarios extranjeros de alta capacidad administrativa alcanzaban puestos supremos.",
-"theological_teaching": "Revela la providencia divina absoluta sobre los imperios paganos y las estaciones climáticas. Muestra cómo Dios humilla a los soberbios y ensalza a los humildes al tiempo señalado.",
-"messianic_connection": "José elevado a los 30 años al trono de Egipto para salvar al mundo de la muerte por hambre prefigura a Jesucristo iniciando su ministerio público a los 30 años (Lucas 3:23) y siendo exaltado a la diestra del Padre como Salvador y Señor del universo (Filipenses 2:9-11).",
-"key_people": [
-"joseph",
-"ephraim",
-"manasseh"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_salvation",
-"theme_messianic_promise"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 40,
-  "verse_start": 1,
-  "verse_end": 23
-},
-{
-  "book": "Génesis",
-  "chapter": 41,
-  "verse_start": 1,
-  "verse_end": 57
-}
-],
-"key_verse": {
-"reference": "Génesis 41:38-40",
-"text": "Y dijo Faraón a sus siervos: ¿Hallaremos a otro hombre como éste, en quien esté el espíritu de Dios? Y dijo Faraón a José: Pues que Dios te ha hecho saber todo esto, no hay entendido ni sabio como tú. Tú estarás sobre mi casa, y por tu palabra se gobernará todo mi pueblo; solamente en el trono seré yo mayor que tú."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 41:16",
-  "text": "Respondió José a Faraón, diciendo: No está en mí; Dios será el que dé respuesta propicia a Faraón."
-}
-],
-"cross_references_nt": [
-"Hechos 7:10",
-"Filipenses 2:9-11",
-"Lucas 3:23"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Visir de Egipto",
-"icon": "🌾",
-"color_category": "patriarch"
-}
-},
-{
-"id": "brothers_first_travel",
-"depth_level": 3,
-"parent_id": "nb_joseph",
-"name": "Los Viajes de los Hermanos a Egipto por Grano y la Prueba de la Copa de Plata",
-"short_name": "Prueba a los Hermanos",
-"category": "patriarch",
-"importance": "high",
-"chronology": {
-"approx_year_am": 2296,
-"exact_date_note": "Segundo año de hambruna (AM 2296, José 37 años, Jacob 128 años)",
-"duration_days": 365,
-"duration_note": "Pruebas pedagógicas de José para producir el arrepentimiento genuino en sus hermanos"
-},
-"location_id": "egypt",
-"chapter_start": 42,
-"verse_start_ref": 1,
-"chapter_end": 44,
-"verse_end_ref": 34,
-"narrative": "La hambruna asola Canaán. Jacob envía a sus 10 hijos a comprar grano a Egipto, reteniendo a Benjamín. Los 10 hermanos llegan y **se postran rostros en tierra ante José**, cumpliendo el sueño profético de los manojos. José los reconoce pero habla duramente haciéndose pasar por extraño; los acusa de espías. Los hermanos dicen atribulados entre sí: 'Verdaderamente hemos pecado contra nuestro hermano... por eso ha venido sobre nosotros esta angustia'. José se aparta y llora. Retiene a Simeón en prisión y envía a los demás a traer a Benjamín. Cuando el grano se acaba, Jacob accede con dolor a enviar a Benjamín bajo la fianza personal de Judá. José los recibe con banquete, llora al ver a Benjamín y dispone una prueba final: ordena poner su **copa de plata** en el saco de Benjamín. Al interceptarlos en el camino, se halla la copa en el saco de Benjamín. Regresan abatidos; **Judá** intercede apasionadamente ofreciéndose a sí mismo como esclavo en lugar del joven Benjamín para no ver el dolor de su padre Jacob.",
-"historical_context": "La copa de adivinación (hebreo: gabíaj) era un vaso sagrado ritual. La transformación radical de Judá (quien en Génesis 37 sugirió vender a José por dinero) al ofrecerse ahora en sustitución como esclavo por Benjamín demostró un arrepentimiento genuino.",
-"theological_teaching": "Muestra la pedagogía divina restauradora: Dios usa las pruebas y la culpa para llevar al pecador al verdadero arrepentimiento y a la restitución. Resalta la nobleza de la intercesión sustitutiva de Judá.",
-"messianic_connection": "La oferta de Judá de entregarse como sustituto para recibir el castigo en lugar de su hermano Benjamín prefigura a Jesucristo (el León de la tribu de Judá) entregándose como sustituto redentor por nosotros.",
-"key_people": [
-"joseph",
-"judah",
-"benjamin",
-"jacob"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_restoration",
-"theme_salvation"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 42,
-  "verse_start": 1,
-  "verse_end": 38
-},
-{
-  "book": "Génesis",
-  "chapter": 43,
-  "verse_start": 1,
-  "verse_end": 34
-},
-{
-  "book": "Génesis",
-  "chapter": 44,
-  "verse_start": 1,
-  "verse_end": 34
-}
-],
-"key_verse": {
-"reference": "Génesis 44:33",
-"text": "Ahora, pues, te ruego que quede tu siervo en lugar del joven por siervo de mi señor, y que el joven vaya con sus hermanos."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 42:21",
-  "text": "Y decían el uno al otro: Verdaderamente hemos pecado contra nuestro hermano, pues vimos la angustia de su alma cuando nos rogaba, y no le oímos; por eso ha venido sobre nosotros esta angustia."
-}
-],
-"cross_references_nt": [
-"Hechos 7:11-13",
-"Juan 15:13",
-"Romanos 5:8"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Prueba de la Copa",
-"icon": "🍷",
-"color_category": "patriarch"
-}
-},
-{
-"id": "joseph_reveals_himself",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "José se Revela a sus Hermanos con Llanto, Perdón Absoluto y Declaración de la Providencia Divina",
-"short_name": "José se Revela a sus Hermanos",
-"category": "restoration",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2296,
-"exact_date_note": "Segundo año de la hambruna (AM 2296)",
-"duration_days": 1,
-"duration_note": "El momento culminante de perdón y reconciliación familiar en la Biblia"
-},
-"location_id": "egypt",
-"chapter_start": 45,
-"verse_start_ref": 1,
-"chapter_end": 45,
-"verse_end_ref": 28,
-"narrative": "No pudiendo ya José contenerse delante de todos los que estaban al lado suyo, clama: 'Haced salir de mi presencia a todos'. No queda nadie con él mientras José se da a conocer a sus hermanos. Llora a gritos de tal manera que oyen los egipcios y la casa de Faraón. José dice a sus hermanos: **'Yo soy José; ¿vive aún mi padre?'**. Sus hermanos no pueden responderle porque están turbados delante de él. José les pide acercarse y pronuncia las palabras teológicas más sublimes del libro: **'Ahora, pues, no os entristezcáis, ni os pese de haberme vendido acá; porque para preservación de vida me envió Dios delante de vosotros... No me enviasteis acá vosotros, sino Dios'**. Los abraza, besa a todos sus hermanos y llora sobre ellos. Faraón se alegra e invita a toda la casa de Jacob a venír a Egipto ofreciendo lo mejor de la tierra de Gosén. Envía carros reales. Al llegar la noticia a Canaán, el espíritu de Jacob revive exclamando: '¡Basta! José mi hijo vive todavía; iré y le veré antes que yo muera'.",
-"historical_context": "El llanto ruidoso de José al revelar su identidad quebró los protocolos rígidos de la corte faraónica. La teología del perdón de José trasciende el resentimiento personal al contemplar el diseño soberano supremo de Dios sobre las acciones humanas.",
-"theological_teaching": "Establece la doctrina cumbre de la **Soberana Providencia Redentora**: Dios es capaz de tomar las intenciones malvadas del pecado humano y canalizarlas milagrosamente para cumplir sus propósitos eternos de salvación y preservación de la vida.",
-"messianic_connection": "La revelación entre lágrimas de José a sus hermanos prefigura el día futuro cuando la nación de Israel reconozca con llanto de arrepentimiento a su Hermano y Salvador Jesucristo, a quien traspasaron (Zacarías 12:10, Romanos 11:25-26).",
-"key_people": [
-"joseph",
-"jacob",
-"judah"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_providence",
-"theme_restoration",
-"theme_mercy",
-"theme_salvation"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 45,
-  "verse_start": 1,
-  "verse_end": 28
-}
-],
-"key_verse": {
-"reference": "Génesis 45:5",
-"text": "Ahora, pues, no os entristezcáis, ni os pese de haberme vendido acá; porque para preservación de vida me envió Dios delante de vosotros."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 45:7-8",
-  "text": "Y Dios me envió delante de vosotros, para preservaros posteridad en la tierra, y para daros vida por medio de gran liberación. Así, pues, no me enviasteis acá vosotros, sino Dios, que me ha puesto por padre de Faraón y por señor de toda su casa..."
-}
-],
-"cross_references_nt": [
-"Hechos 7:13-14",
-"Zacarías 12:10",
-"Romanos 11:25-26"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Reconciliación de José",
-"icon": "😭",
-"color_category": "restoration"
-}
-},
-{
-"id": "jacob_family_egypt",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "El Descenso de Jacob y las 70 Almas a Egipto y el Asentamiento en Gosén (Génesis 46-47)",
-"short_name": "Entrada de Israel en Egipto",
-"category": "exile",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2298,
-"exact_date_note": "Año 130 de Jacob (AM 2298, José 39 años)",
-"duration_days": 6205,
-"duration_note": "Inicio del período de 430 años de permanencia de Israel en Egipto"
-},
-"location_id": "goshen",
-"chapter_start": 46,
-"verse_start_ref": 1,
-"chapter_end": 47,
-"verse_end_ref": 31,
-"narrative": "Israel emprende su viaje con todo lo que tiene y llega a Beerseba, donde ofrece sacrificios al Dios de su padre Isaac. Dios le habla en visiones de noche: **'No temas descender a Egipto, porque allí haré de ti una gran nación. Yo descenderé contigo a Egipto, y yo también te haré volver'**. Jacob viaja con sus hijos, nietos y todas sus posesiones. El total de las personas de la casa de Jacob que entraron en Egipto fue de **70 almas** (incluyendo a José y sus dos hijos nacidos en Egipto). José sale en su carro a recibir a su padre a la tierra de Gosén; al verle, se echa sobre su cuello y llora largamente. Israel dice: 'Muera yo ahora, ya que he visto tu rostro'. Faraón recibe a la familia, les otorga la fértil tierra de Gosén para apacentar sus rebaños y Jacob bendice a Faraón. Jacob vive 17 años en Egipto, alcanzando los 147 años.",
-"historical_context": "La tierra de Gosén (el delta oriental del Nilo en el Bajo Egipto) era la región de pastos más fértil del país. Los pastores de ovejas eran considerados una abominación para los egipcios (Gén 46:34), lo que sirvió providencialmente para mantener a Israel aislado del paganismo egipcio como una comunidad pura.",
-"theological_teaching": "Cumple la profecía dada a Abraham en Génesis 15:13-16 sobre la estancia de su descendencia en tierra ajena. Muestra que la bajada a Egipto fue ordenada por Dios como el 'crisol' o 'incubadora' donde la pequeña familia de 70 personas se multiplicaría durante siglos hasta convertirse en una gran nación de millones.",
-"messianic_connection": "El descenso de las 70 almas a Egipto se cita en Hechos 7:14 y Hebreos 11:21. Prefigura la travesía del pueblo redimido en el mundo antes de la gran liberación del Éxodo.",
-"key_people": [
-"jacob",
-"joseph",
-"judah"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_covenant",
-"theme_providence",
-"theme_election"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 46,
-  "verse_start": 1,
-  "verse_end": 34
-},
-{
-  "book": "Génesis",
-  "chapter": 47,
-  "verse_start": 1,
-  "verse_end": 31
-}
-],
-"key_verse": {
-"reference": "Génesis 46:3-4",
-"text": "Y dijo: Yo soy Dios, el Dios de tu padre; no temas descender a Egipto, porque allí haré de ti una gran nación. Yo descenderé contigo a Egipto, y yo también te haré volver; y la mano de José cerrará tus ojos."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 47:27",
-  "text": "Así habitó Israel en la tierra de Egipto, en la tierra de Gosén; y tomaron posesión de ella, y se multiplicaron y se aumentaron en gran manera."
-}
-],
-"cross_references_nt": [
-"Hechos 7:14-15",
-"Exodo 1:5-7",
-"Hebreos 11:21"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Israel en Gosén",
-"icon": "🏺",
-"color_category": "exile"
-}
-},
-{
-"id": "jacob_blesses_sons_death",
-"depth_level": 2,
-"parent_id": "nb_joseph",
-"name": "Las Bendiciones Proféticas de Jacob, la Profecía de Siloh (Judá), y Muertes de Jacob y José",
-"short_name": "Bendición de Siloh y Muertes",
-"category": "patriarch",
-"importance": "critical",
-"chronology": {
-"approx_year_am": 2369,
-"exact_date_note": "AM 2315 (Muerte de Jacob a los 147 años) a AM 2369 (Muerte de José a los 110 años)",
-"duration_days": 19710,
-"duration_note": "Conclusión monumental del Libro del Génesis en la esperanza de la Tierra Prometida"
-},
-"location_id": "goshen",
-"chapter_start": 48,
-"verse_start_ref": 1,
-"chapter_end": 50,
-"verse_end_ref": 26,
-"narrative": "Al enfermar Jacob, adopta a Efraín y Manasés como hijos propios. Cruzando sus manos intencionalmente en fe, coloca su mano derecha sobre el menor Efraín y su izquierda sobre el mayor Manasés. Luego reúne a sus 12 hijos para decirles lo que les ha de acontecer en los días venideros. Pronuncia sobre **Judá** la célebre profecía mesiánica: **'No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh (El Pacífico / El Mesías); y a él se congregarán los pueblos'** (Gén 49:10). Jacob encarga ser sepultado en la cueva de Macpela con sus padres y muere a los 147 años. Es embalsamado con grandes honores en Egipto y sepultado en Hebrón por sus hijos. Años después, a los 110 años, José siente su muerte y hace jurar a los hijos de Israel: **'Dios ciertamente os visitará, y haréis llevar de aquí mis huesos'**. José muere, es embalsamado y puesto en un ataúd en Egipto.",
-"historical_context": "La profecía de 'Siloh' (Gén 49:10) es el hito mesiánico central de todo el Génesis: establece que la dinastía real y el Salvador prometido desde Génesis 3:15 vendrán exclusivamente de la tribu de Judá. El juramento de las osamentas de José se cumplió 400 años después cuando Moisés sacó sus huesos en el Exodo (Exodo 13:19, Josue 24:32).",
-"theological_teaching": "Concluye el libro de Génesis con una fe inquebrantable en la resurrección y en la fidelidad futura de Dios. El ataúd de José en Egipto quedó como un monumento mudo de esperanza diciendo: 'Egipto no es nuestro hogar eterno; Dios nos visitará y nos llevará a la Tierra Prometida'.",
-"messianic_connection": "Jesucristo es el **Siloh** de Génesis 49:10 y el León de la tribu de Judá (Apocalipsis 5:5), a quien está dada la autoridad real eterna y ante quien se congregarán todas las naciones del mundo.",
-"key_people": [
-"jacob",
-"joseph",
-"judah",
-"ephraim",
-"manasseh"
-],
-"covenant_id": "abrahamic_covenant",
-"theme_ids": [
-"theme_messianic_promise",
-"theme_covenant",
-"theme_faith",
-"theme_providence",
-"theme_restoration"
-],
-"question_ids": [],
-"references": [
-{
-  "book": "Génesis",
-  "chapter": 48,
-  "verse_start": 1,
-  "verse_end": 22
-},
-{
-  "book": "Génesis",
-  "chapter": 49,
-  "verse_start": 1,
-  "verse_end": 33
-},
-{
-  "book": "Génesis",
-  "chapter": 50,
-  "verse_start": 1,
-  "verse_end": 26
-}
-],
-"key_verse": {
-"reference": "Génesis 49:10",
-"text": "No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos."
-},
-"additional_verses": [
-{
-  "reference": "Génesis 50:20",
-  "text": "Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien, para hacer lo que vemos hoy, para mantener en vida a mucho pueblo."
-},
-{
-  "reference": "Génesis 50:25",
-  "text": "E hizo jurar José a los hijos de Israel, diciendo: Dios ciertamente os visitará, y haréis llevar de aquí mis huesos."
-}
-],
-"cross_references_nt": [
-"Hebreos 11:21-22",
-"Apocalipsis 5:5",
-"Lucas 1:32-33",
-"Exodo 13:19"
-],
-"sub_event_ids": [],
-"timeline_display": {
-"label": "Profecía de Siloh",
-"icon": "👑",
-"color_category": "patriarch"
-}
-}
-],
-"people": [],
-"relationships": [],
-"locations": [],
-"covenants": [],
-"messianic_promises": [],
-"themes": [],
-"questions": [],
-"chapters_map": [],
-"notable_overlaps": []
+  "people": [],
+  "relationships": [],
+  "locations": [],
+  "covenants": [],
+  "messianic_promises": [],
+  "themes": [],
+  "questions": [],
+  "chapters_map": [],
+  "notable_overlaps": []
 }
