@@ -194,6 +194,14 @@
   transform: translateY(-1px);
 }
 
+.jump-chip-btn.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(170, 59, 255, 0.3) 100%);
+  border: 1px solid #f59e0b;
+  color: #fef08a;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
 .zoom-actions-group {
   display: flex;
   align-items: center;

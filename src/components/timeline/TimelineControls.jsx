@@ -17,6 +17,7 @@ export function TimelineControls({
   setFilterText,
   detailLevel = 3,
   setDetailLevel,
+  activeJump,
   narrativeBlocks = [],
   onJumpToAM,
   onZoomIn,
@@ -25,11 +26,11 @@ export function TimelineControls({
 }) {
   // Hitos bíblicos estratégicos para el salto rápido de ventana
   const QUICK_JUMPS = [
-    { label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación (AM 0)' },
-    { label: '🌊 El Diluvio', amStart: 1650, amEnd: 1660, title: 'Salto al Diluvio de Noé (AM 1656)' },
-    { label: '🗼 Torre de Babel', amStart: 1740, amEnd: 1770, title: 'Salto a Babel (AM 1750)' },
-    { label: '👑 Llamado Abraham', amStart: 2015, amEnd: 2035, title: 'Salto al Llamado de Abraham (AM 2023)' },
-    { label: '🌾 José en Egipto', amStart: 2280, amEnd: 2305, title: 'Salto a José Gobernador de Egipto (AM 2288)' }
+    { id: 'creation', label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación (AM 0)' },
+    { id: 'flood', label: '🌊 El Diluvio', amStart: 1650, amEnd: 1660, title: 'Salto al Diluvio de Noé (AM 1656)' },
+    { id: 'babel', label: '🗼 Torre de Babel', amStart: 1740, amEnd: 1770, title: 'Salto a Babel (AM 1750)' },
+    { id: 'abraham', label: '👑 Llamado Abraham', amStart: 2015, amEnd: 2035, title: 'Salto al Llamado de Abraham (AM 2023)' },
+    { id: 'joseph', label: '🌾 José en Egipto', amStart: 2280, amEnd: 2305, title: 'Salto a José Gobernador de Egipto (AM 2288)' }
   ];
 
   return (
@@ -142,11 +143,11 @@ export function TimelineControls({
         <div className="quick-jumps-group">
           <span className="quick-jumps-title">📍 Salto Rápido:</span>
           <div className="quick-jump-buttons">
-            {QUICK_JUMPS.map((jump, idx) => (
+            {QUICK_JUMPS.map((jump) => (
               <button
-                key={idx}
-                className="jump-chip-btn"
-                onClick={() => onJumpToAM(jump.amStart, jump.amEnd)}
+                key={jump.id}
+                className={`jump-chip-btn ${activeJump === jump.id ? 'active' : ''}`}
+                onClick={() => onJumpToAM(jump.id, jump.amStart, jump.amEnd, jump.label)}
                 title={jump.title}
               >
                 {jump.label}

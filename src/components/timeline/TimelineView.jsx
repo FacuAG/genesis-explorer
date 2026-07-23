@@ -8,7 +8,8 @@ import {
   getEventSummary,
   getEventRefStr,
   getEventChapter,
-  formatRef
+  formatRef,
+  EVENT_CATEGORIES
 } from '../../utils/timelineMapper';
 import { TimelineControls } from './TimelineControls';
 import { EventPanel } from '../panels/EventPanel';
@@ -45,7 +46,19 @@ export function TimelineView({
   const [filterText, setFilterText] = useState('');
   const [detailLevel, setDetailLevel] = useState(2); // Default Nivel 2: Limpio & Estructurado
 
-  const isFilterActive = selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0;
+  // Estado de Salto Rápido Activo
+  const [activeJump, setActiveJump] = useState(null); // { id, startAM, endAM, label }
+
+  const isFilterActive = selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
+
+  // Manejador del Salto Rápido con resalte
+  const handleJumpToAM = (jumpId, startAM, endAM, label) => {
+    setActiveJump({ id: jumpId, startAM, endAM, label });
+    if (timelineInstanceRef.current) {
+      timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
+      setDetailLevel(3);
+    }
+  };
 
   // Reset de todos los filtros
   const handleResetFilters = () => {
@@ -53,6 +66,7 @@ export function TimelineView({
     setSelectedBlockId('all');
     setSelectedChapter('all');
     setFilterText('');
+    setActiveJump(null);
     setDetailLevel(2);
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
@@ -116,9 +130,15 @@ export function TimelineView({
         if (!name.includes(q) && !summary.includes(q)) return false;
       }
 
+      // 5. Filtro por Salto Rápido Activo (si hay un rango de AM activo)
+      if (activeJump) {
+        const am = getEventAM(e);
+        if (am < activeJump.startAM || am > activeJump.endAM + 5) return false;
+      }
+
       return true;
     });
-  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, narrativeBlocks]);
+  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, narrativeBlocks]);
 
   // Auto-enfoque de ventana de vis-timeline al cambiar filtros
   useEffect(() => {
@@ -129,7 +149,6 @@ export function TimelineView({
       const minAM = Math.min(...amYears);
       const maxAM = Math.max(...amYears);
 
-      // Si todos los eventos coinciden en un único año o rango estrecho
       const padding = (maxAM - minAM < 30) ? 40 : 30;
       const startWin = amToDate(Math.max(-150, minAM - padding));
       const endWin = amToDate(Math.min(2400, maxAM + padding));
@@ -138,10 +157,9 @@ export function TimelineView({
         animation: { duration: 600, easingFunction: 'easeInOutQuad' }
       });
 
-      // Asegurar que el nivel de detalle sea 3 para mostrar las tarjetas filtradas
       setDetailLevel(3);
     }
-  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, filteredEvents, isFilterActive]);
+  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, filteredEvents, isFilterActive]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -253,7 +271,7 @@ export function TimelineView({
     };
   }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, isFilterActive, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
 
-  // Funciones de navegación de zoom y salto de ventana Anno Mundi
+  // Funciones de navegación de zoom
   const handleZoomIn = () => {
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.zoomIn(0.4);
@@ -266,17 +284,19 @@ export function TimelineView({
   };
 
   const handleFitAll = () => {
+    setActiveJump(null);
+    setSelectedCategory('all');
+    setSelectedBlockId('all');
+    setSelectedChapter('all');
+    setFilterText('');
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
     }
   };
 
-  const handleJumpToAM = (startAM, endAM) => {
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
-      setDetailLevel(3);
-    }
-  };
+  // Nombres descriptivos para chips de filtro
+  const selectedCatObj = EVENT_CATEGORIES[selectedCategory];
+  const selectedBlockObj = narrativeBlocks.find(b => b.id === selectedBlockId);
 
   return (
     <div className="timeline-view-wrapper">
@@ -293,6 +313,7 @@ export function TimelineView({
         setFilterText={setFilterText}
         detailLevel={detailLevel}
         setDetailLevel={setDetailLevel}
+        activeJump={activeJump ? activeJump.id : null}
         narrativeBlocks={narrativeBlocks}
         onJumpToAM={handleJumpToAM}
         onZoomIn={handleZoomIn}
@@ -300,22 +321,60 @@ export function TimelineView({
         onFitAll={handleFitAll}
       />
 
-      {/* Indicador de Filtro Activo con Auto-Enfoque */}
+      {/* Indicador Detallado de Filtros Activos con Desglose por Chips */}
       {isFilterActive && (
         <div className="active-filter-banner">
-          <div className="banner-info">
+          <div className="banner-left-info">
             <span className="banner-icon">🎯</span>
-            <span>
-              <strong>Enfoque Activo:</strong> {filteredEvents.length} evento{filteredEvents.length !== 1 ? 's' : ''} encontrado{filteredEvents.length !== 1 ? 's' : ''} y enfocado{filteredEvents.length !== 1 ? 's' : ''} en la línea de tiempo.
+            <span className="banner-title">
+              <strong>Filtros Combinados Activos ({filteredEvents.length} Evento{filteredEvents.length !== 1 ? 's' : ''}):</strong>
             </span>
           </div>
-          <button className="reset-filter-btn" onClick={handleResetFilters}>
-            ✕ Restablecer Filtros
-          </button>
+
+          <div className="active-chips-list">
+            {activeJump && (
+              <span className="filter-chip chip-jump">
+                Hito: {activeJump.label}
+                <button className="chip-remove-btn" onClick={() => setActiveJump(null)}>✕</button>
+              </span>
+            )}
+
+            {selectedCategory !== 'all' && selectedCatObj && (
+              <span className="filter-chip chip-category">
+                Categoría: {selectedCatObj.icon} {selectedCatObj.label}
+                <button className="chip-remove-btn" onClick={() => setSelectedCategory('all')}>✕</button>
+              </span>
+            )}
+
+            {selectedBlockId !== 'all' && selectedBlockObj && (
+              <span className="filter-chip chip-block">
+                Bloque: 📍 {selectedBlockObj.name}
+                <button className="chip-remove-btn" onClick={() => setSelectedBlockId('all')}>✕</button>
+              </span>
+            )}
+
+            {selectedChapter !== 'all' && (
+              <span className="filter-chip chip-chapter">
+                Capítulo: Génesis {selectedChapter}
+                <button className="chip-remove-btn" onClick={() => setSelectedChapter('all')}>✕</button>
+              </span>
+            )}
+
+            {filterText && (
+              <span className="filter-chip chip-search">
+                Texto: "{filterText}"
+                <button className="chip-remove-btn" onClick={() => setFilterText('')}>✕</button>
+              </span>
+            )}
+
+            <button className="reset-filter-btn" onClick={handleResetFilters}>
+              🗑️ Limpiar Todo
+            </button>
+          </div>
         </div>
       )}
 
-      {/* Previsualizador Rápido SUPERIOR (Ubicado justo ARRIBA de la línea de tiempo) */}
+      {/* Previsualizador Rápido SUPERIOR */}
       {selectedEntity && (
         <div className="selected-event-preview-bar top-preview">
           {selectedEntity.type === 'event' && (
