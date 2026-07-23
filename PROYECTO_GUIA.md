@@ -1,4 +1,4 @@
-﻿# BIBLE EXPLORER — GUIA MAESTRA DEL PROYECTO
+# BIBLE EXPLORER — GUIA MAESTRA DEL PROYECTO
 Documento de referencia para agentes IA y desarrolladores
 Version 1.0 - Julio 2026
 
@@ -1293,6 +1293,7 @@ ABSOLUTAS (no negociables):
 9. JSX + JavaScript puro. Sin TypeScript. Sin Tailwind
 10. npm run dev debe funcionar SIEMPRE antes de dar una tarea por terminada
 11. No instalar librerias adicionales sin aprobacion del usuario
+12. DESARROLLO POR SUB-BLOQUES EXHAUSTIVOS: Priorizar la máxima profundidad, precisión teológica y completitud sobre la velocidad. Cada tarea se dividirá en sub-etapas precisas y verificables, garantizando información completa y profesional sin omitir ni resumir contenido relevante. El objetivo es la producción de contenido de nivel académico/editorial, no un desarrollo rápido.
 
 PALABRAS CLAVE DE FLUJO:
 - "Analizar" → Solo analisis. No modificar archivos. Esperar confirmacion.
@@ -1319,11 +1320,12 @@ ACTUALIZAR ESTA SECCION CON CADA TAREA COMPLETADA.
 Marcar como: PENDIENTE | EN PROGRESO | COMPLETADO | Error-en-revision
 
 FASE DATOS — GENESIS:
-D-01 Estructura base JSON                                   PENDIENTE
-D-02 Eventos Bloques 1-2 (Creacion y Caida)                PENDIENTE
-D-03 Eventos Bloque 3 (Noe y Diluvio)                      PENDIENTE
-D-04 Eventos Bloques 4-5 (Babel y Abraham)                 PENDIENTE
-D-05 Eventos Bloques 6-7-8 (Isaac, Jacob y Jose)           PENDIENTE
+D-01 Estructura base JSON                                   COMPLETADO
+D-02.1 Eventos Bloque 1 (La Creacion: 8 eventos)            COMPLETADO
+D-02.2 Eventos Bloque 2 (La Caida y Set: 11 eventos)        COMPLETADO
+D-03 Eventos Bloque 3 (Noe y Diluvio: 13 eventos)          COMPLETADO
+D-04 Eventos Bloques 4-5 (Babel y Abraham: 28 eventos)     COMPLETADO
+D-05 Eventos Bloques 6-7-8 (Isaac, Jacob y José: 22 ev)    COMPLETADO
 D-06 Personajes principales (21 perfiles completos)         PENDIENTE
 D-07 Personajes secundarios + pactos + temas + preguntas   PENDIENTE
 D-08 Locations + chapters_map + notable_overlaps           PENDIENTE
@@ -1340,10 +1342,15 @@ I-07 Diseno visual premium                                 PENDIENTE
 I-08 Funcionalidades extendidas                            PENDIENTE
 
 ESTADO GLOBAL:
-- Datos Genesis: 0% (0/9 tareas)
+- Datos Genesis: 55% (5/9 tareas principales completadas)
 - Interfaz: 0% (0/8 tareas)
 - Libros: 1 en desarrollo (Genesis)
 
 NOTAS DE SESIONES ANTERIORES:
-[Agregar notas de cada sesion aqui]
+- 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).
+- 2026-07-23: Se completó la Tarea D-05 (Isaac, Jacob y José) agregando 22 eventos exhaustivos (6 de Isaac + 8 de Jacob + 8 de José). Total acumulado en genesis.json: 82 eventos completos abarcando los 50 capítulos del Génesis según el estándar Schema 3.0 (D-01 a D-05 completados).
+
+
+
+
 
