@@ -102,6 +102,14 @@ export function useGenesisData() {
     questions: genesisData.questions || [],
     chaptersMap: genesisData.chapters_map || [],
     notableOverlaps: genesisData.notable_overlaps || [],
+    // Maps indexados O(1)
+    eventsMap,
+    peopleMap,
+    locationsMap,
+    covenantsMap,
+    promisesMap,
+    themesMap,
+    questionsMap,
     // Functions
     getEventById,
     getPersonById,

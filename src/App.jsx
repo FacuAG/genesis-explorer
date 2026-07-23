@@ -103,6 +103,9 @@ export function App() {
               eras={genesis.eras}
               narrativeBlocks={genesis.narrativeBlocks}
               covenants={genesis.covenants}
+              peopleMap={genesis.peopleMap}
+              locationsMap={genesis.locationsMap}
+              onSelectPerson={() => setActiveTab('people')}
             />
           )}
 

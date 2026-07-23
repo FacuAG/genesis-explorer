@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Timeline } from 'vis-timeline/standalone';
 import { DataSet } from 'vis-data/standalone';
 import { mapGenesisToVisData, amToDate } from '../../utils/timelineMapper';
+import { EventPanel } from '../panels/EventPanel';
 import './TimelineView.css';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
@@ -10,10 +11,11 @@ import 'vis-timeline/styles/vis-timeline-graph2d.css';
  * Utiliza el motor vis-timeline con renderizado de eje Anno Mundi (AM),
  * apilamiento dinámico anti-superposición, zoom real y selección interactiva de eventos.
  */
-export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelectEvent }) {
+export function TimelineView({ events, eras, narrativeBlocks, covenants, peopleMap, locationsMap, onSelectEvent, onSelectPerson }) {
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
   const [selectedEventId, setSelectedEventId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Filtro activo por categoría de evento
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -51,7 +53,6 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
       max: amToDate(2400),
       start: amToDate(0),
       end: amToDate(2369),
-      // Formateador personalizado para la escala del eje Anno Mundi
       format: {
         minorLabels: function(date, scale) {
           const am = date.getUTCFullYear() - 1000;
@@ -75,7 +76,6 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
-        // Ignorar selecciones de bloques o pactos en el callback de evento
         if (!itemId.startsWith('block_') && !itemId.startsWith('cov_')) {
           setSelectedEventId(itemId);
           if (onSelectEvent) {
@@ -86,7 +86,14 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
       }
     });
 
-    // Cleanup al desmontar el componente o cambiar filtro
+    // Manejador de doble clic para abrir el modal de detalle directamente
+    timeline.on('doubleClick', function (properties) {
+      if (properties.item && !properties.item.startsWith('block_') && !properties.item.startsWith('cov_')) {
+        setSelectedEventId(properties.item);
+        setIsModalOpen(true);
+      }
+    });
+
     return () => {
       if (timelineInstanceRef.current) {
         timelineInstanceRef.current.destroy();
@@ -97,21 +104,15 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
 
   // Funciones de navegación de zoom
   const handleZoomIn = () => {
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.zoomIn(0.4);
-    }
+    if (timelineInstanceRef.current) timelineInstanceRef.current.zoomIn(0.4);
   };
 
   const handleZoomOut = () => {
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.zoomOut(0.4);
-    }
+    if (timelineInstanceRef.current) timelineInstanceRef.current.zoomOut(0.4);
   };
 
   const handleFitAll = () => {
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(0), amToDate(2369));
-    }
+    if (timelineInstanceRef.current) timelineInstanceRef.current.setWindow(amToDate(0), amToDate(2369));
   };
 
   // Evento actualmente seleccionado para la vista rápida inferior
@@ -131,12 +132,10 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
             <option value="all">🔍 Todas las Categorias ({events.length})</option>
             <option value="creation">✨ Creación</option>
             <option value="covenant">👑 Pacto Divino</option>
-
             <option value="judgment">🔥 Juicio Divino</option>
             <option value="miracle">⚡ Milagro / Teofanía</option>
             <option value="patriarch">👤 Ciclo Patriarcal</option>
             <option value="restoration">🕊️ Restauración / Gracia</option>
-
             <option value="exile">🏕️ Migración / Exilio</option>
             <option value="sin">⚠️ Rebelión / Pecado</option>
           </select>
@@ -165,6 +164,9 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
             <span className="preview-badge">Evento Seleccionado</span>
             <h3>{currentSelectedObj.name}</h3>
             <span className="preview-am">Anno Mundi: AM {currentSelectedObj.year_am}</span>
+            <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
+              📖 Ver Detalle Exegético ➔
+            </button>
             <button className="preview-close-btn" onClick={() => setSelectedEventId(null)}>✕</button>
           </div>
           <p className="preview-summary">{currentSelectedObj.summary}</p>
@@ -175,6 +177,17 @@ export function TimelineView({ events, eras, narrativeBlocks, covenants, onSelec
           )}
         </div>
       )}
+
+      {/* Modal de Detalle Completo del Evento */}
+      <EventPanel
+        event={currentSelectedObj}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        peopleMap={peopleMap}
+        locationsMap={locationsMap}
+        onSelectPerson={onSelectPerson}
+      />
     </div>
   );
 }
+
