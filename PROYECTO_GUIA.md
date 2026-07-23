@@ -45,15 +45,16 @@ FUNCIONALIDADES EXTENDIDAS (fases futuras):
 Cada libro de la Biblia es un universo de datos independiente.
 - Cada libro se carga solo cuando el usuario lo selecciona (lazy loading)
 - Es mas facil de mantener, corregir y enriquecer
-- El schema es identico para todos los libros
+- El schema es identico para todos los libros (Schema 3.0)
+- Para la guía paso a paso de implementación de nuevos libros (Éxodo, Mateo, etc.), ver [GUIA_NUEVO_LIBRO.md](file:///c:/Users/fgarea/Documents/genesis-explorer/GUIA_NUEVO_LIBRO.md)
 
 Estructura de archivos de datos:
 src/data/
 ├── index.json              ← Indice de todos los libros
 └── books/
-    ├── genesis.json        ← Libro 1 (en desarrollo)
-    ├── exodus.json         ← Libro 2 (futuro)
-    └── [libro].json        ← Mismo schema siempre
+    ├── genesis.json        ← Libro 1 (COMPLETADO 100%)
+    ├── exodus.json         ← Libro 2 (ver GUIA_NUEVO_LIBRO.md)
+    └── [libro].json        ← Mismo schema siempre (Schema 3.0)
 
 2.2 VIS-TIMELINE COMO MOTOR — CONFIRMADO
 - Licencia: MIT / Apache 2.0 — 100% gratuita y open-source
