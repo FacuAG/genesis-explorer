@@ -118,7 +118,8 @@ export function mapGenesisToVisData(
   narrativeBlocks = [],
   covenants = [],
   eras = [],
-  detailLevel = 3
+  detailLevel = 3,
+  isFilterActive = false
 ) {
   // 1. Grupos Jerárquicos de la Timeline
   const groups = [
@@ -142,8 +143,8 @@ export function mapGenesisToVisData(
     }
   ];
 
-  // Agregar grupo de eventos solo si estamos en nivel de detalle 2 o 3
-  if (detailLevel >= 2) {
+  // Agregar grupo de eventos si hay nivel 2/3 o si hay un filtro activo
+  if (detailLevel >= 2 || isFilterActive) {
     groups.push({
       id: 'events_group',
       content: '<span class="group-label">⚡ Eventos Bíblicos</span>',
@@ -218,27 +219,30 @@ export function mapGenesisToVisData(
     });
   });
 
-  // 5. Mapear Eventos Bíblicos (Filtrados por Nivel de Detalle Semántico)
+  // 5. Mapear Eventos Bíblicos (Con resalte especial si hay filtro activo)
   let visibleEvents = events;
 
-  if (detailLevel === 1) {
-    visibleEvents = [];
-  } else if (detailLevel === 2) {
-    visibleEvents = events.filter(e => {
-      const am = getEventAM(e);
-      return (
-        e.category === 'covenant' ||
-        e.category === 'creation' ||
-        e.category === 'judgment' ||
-        am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2288
-      );
-    });
+  if (!isFilterActive) {
+    if (detailLevel === 1) {
+      visibleEvents = [];
+    } else if (detailLevel === 2) {
+      visibleEvents = events.filter(e => {
+        const am = getEventAM(e);
+        return (
+          e.category === 'covenant' ||
+          e.category === 'creation' ||
+          e.category === 'judgment' ||
+          am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2288
+        );
+      });
+    }
   }
 
   visibleEvents.forEach(e => {
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };
     const amYear = getEventAM(e);
     const eventName = e.short_name || e.name;
+    const highlightClass = isFilterActive ? 'vis-item-highlighted' : '';
 
     const contentHtml = `
       <div class="vis-event-card category-${e.category}">
@@ -254,7 +258,7 @@ export function mapGenesisToVisData(
       content: contentHtml,
       start: amToDate(amYear),
       type: 'box',
-      className: `vis-item-event cat-${e.category}`
+      className: `vis-item-event cat-${e.category} ${highlightClass}`
     });
   });
 

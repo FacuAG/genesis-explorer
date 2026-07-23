@@ -393,3 +393,69 @@
   border-radius: 10px;
   padding: 1rem;
 }
+
+/* Banner de Filtros Activos con Auto-Enfoque */
+.active-filter-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(168, 85, 247, 0.18) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  animation: slideDown 0.3s ease-out;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #fef08a;
+}
+
+.banner-icon {
+  font-size: 1rem;
+}
+
+.reset-filter-btn {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-filter-btn:hover {
+  background: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+/* Tarjetas de Eventos Filtrados con Resalte Dorado/Lila Vibrante */
+.vis-item-highlighted {
+  border: 2px solid #f59e0b !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(168, 85, 247, 0.3) 100%) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 35px rgba(192, 132, 252, 0.5) !important;
+  animation: pulseHighlight 1.6s infinite ease-in-out !important;
+  z-index: 100 !important;
+}
+
+@keyframes pulseHighlight {
+  0% {
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.5), 0 0 20px rgba(192, 132, 252, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(245, 158, 11, 0.95), 0 0 45px rgba(192, 132, 252, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.5), 0 0 20px rgba(192, 132, 252, 0.3);
+  }
+}

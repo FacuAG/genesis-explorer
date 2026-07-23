@@ -45,6 +45,20 @@ export function TimelineView({
   const [filterText, setFilterText] = useState('');
   const [detailLevel, setDetailLevel] = useState(2); // Default Nivel 2: Limpio & Estructurado
 
+  const isFilterActive = selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0;
+
+  // Reset de todos los filtros
+  const handleResetFilters = () => {
+    setSelectedCategory('all');
+    setSelectedBlockId('all');
+    setSelectedChapter('all');
+    setFilterText('');
+    setDetailLevel(2);
+    if (timelineInstanceRef.current) {
+      timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
+    }
+  };
+
   // Maps para búsqueda $O(1)$ de Pactos, Bloques y Eras
   const covenantsMap = useMemo(() => {
     const map = new Map();
@@ -106,11 +120,41 @@ export function TimelineView({
     });
   }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, narrativeBlocks]);
 
+  // Auto-enfoque de ventana de vis-timeline al cambiar filtros
+  useEffect(() => {
+    if (!timelineInstanceRef.current || !isFilterActive) return;
+
+    if (filteredEvents.length > 0) {
+      const amYears = filteredEvents.map(getEventAM);
+      const minAM = Math.min(...amYears);
+      const maxAM = Math.max(...amYears);
+
+      // Si todos los eventos coinciden en un único año o rango estrecho
+      const padding = (maxAM - minAM < 30) ? 40 : 30;
+      const startWin = amToDate(Math.max(-150, minAM - padding));
+      const endWin = amToDate(Math.min(2400, maxAM + padding));
+
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
+      });
+
+      // Asegurar que el nivel de detalle sea 3 para mostrar las tarjetas filtradas
+      setDetailLevel(3);
+    }
+  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, filteredEvents, isFilterActive]);
+
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Transform data for vis-timeline with Semantic Zoom Level of Detail (LOD)
-    const { groups, items } = mapGenesisToVisData(filteredEvents, narrativeBlocks, covenants, eras, detailLevel);
+    // Transform data for vis-timeline with Semantic Zoom Level of Detail (LOD) and highlight flags
+    const { groups, items } = mapGenesisToVisData(
+      filteredEvents,
+      narrativeBlocks,
+      covenants,
+      eras,
+      detailLevel,
+      isFilterActive
+    );
 
     const visGroups = new DataSet(groups);
     const visItems = new DataSet(items);
@@ -132,7 +176,6 @@ export function TimelineView({
       },
       min: amToDate(-300),
       max: amToDate(2500),
-      // Inicio desfasado a AM -180 para garantizar que AM 0 quede 100% visible a la derecha del panel de grupos
       start: amToDate(-180),
       end: amToDate(2369),
       format: {
@@ -208,7 +251,7 @@ export function TimelineView({
         timelineInstanceRef.current = null;
       }
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, isFilterActive, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
 
   // Funciones de navegación de zoom y salto de ventana Anno Mundi
   const handleZoomIn = () => {
@@ -257,7 +300,22 @@ export function TimelineView({
         onFitAll={handleFitAll}
       />
 
-      {/* Previsualizador Rápido SUPERIOR (Ubicado justo ARRIBA de la línea de tiempo para visibilidad 100% inmediata) */}
+      {/* Indicador de Filtro Activo con Auto-Enfoque */}
+      {isFilterActive && (
+        <div className="active-filter-banner">
+          <div className="banner-info">
+            <span className="banner-icon">🎯</span>
+            <span>
+              <strong>Enfoque Activo:</strong> {filteredEvents.length} evento{filteredEvents.length !== 1 ? 's' : ''} encontrado{filteredEvents.length !== 1 ? 's' : ''} y enfocado{filteredEvents.length !== 1 ? 's' : ''} en la línea de tiempo.
+            </span>
+          </div>
+          <button className="reset-filter-btn" onClick={handleResetFilters}>
+            ✕ Restablecer Filtros
+          </button>
+        </div>
+      )}
+
+      {/* Previsualizador Rápido SUPERIOR (Ubicado justo ARRIBA de la línea de tiempo) */}
       {selectedEntity && (
         <div className="selected-event-preview-bar top-preview">
           {selectedEntity.type === 'event' && (
