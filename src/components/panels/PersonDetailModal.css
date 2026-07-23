@@ -1,0 +1,202 @@
+/* PersonDetailModal CSS Vanilla — Genesis Explorer */
+
+.person-detail-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.person-modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.header-top-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.person-category-tag {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.person-lifespan-tag {
+  background: rgba(192, 132, 252, 0.15);
+  color: #c084fc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.person-modal-title {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.person-modal-meaning {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.person-section-subtitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #c084fc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.biography-content p, .section-text {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.92rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.traits-badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.trait-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 20px;
+}
+
+.theology-card {
+  background: rgba(170, 59, 255, 0.08);
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  padding: 1.1rem 1.25rem;
+  border-radius: 12px;
+}
+
+.theology-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+  line-height: 1.55;
+}
+
+.person-key-verse {
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  background: rgba(15, 23, 42, 0.7);
+  border-left: 4px solid #fde047;
+  border-radius: 8px;
+}
+
+.person-key-verse p {
+  margin: 0 0 0.3rem 0;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #fef08a;
+}
+
+.person-key-verse cite {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.nt-refs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nt-ref-chip {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(93, 164, 253, 0.3);
+  color: #93c5fd;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.overlaps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.overlap-item-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.overlap-years {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.overlap-with {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.95rem;
+  color: #f1f5f9;
+}
+
+.overlap-note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.35;
+}
+
+.person-events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.person-event-chip {
+  background: rgba(30, 32, 41, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.person-event-chip:hover {
+  background: rgba(170, 59, 255, 0.2);
+  border-color: #c084fc;
+  color: #ffffff;
+}
+
+.pe-am {
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.pe-title {
+  color: #e2e8f0;
+}

@@ -1,0 +1,133 @@
+/* LifespanBar CSS Vanilla — Genesis Explorer */
+
+.lifespan-container {
+  background: rgba(30, 32, 41, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(12px);
+}
+
+.lifespan-header h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.25rem;
+  color: #f8fafc;
+}
+
+.lifespan-header p {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Escala del Eje Horizontal */
+.lifespan-axis {
+  position: relative;
+  height: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+  font-size: 0.72rem;
+  color: #c084fc;
+  font-weight: 700;
+}
+
+.lifespan-axis span {
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.lifespan-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lifespan-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lifespan-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lifespan-row.selected {
+  background: rgba(170, 59, 255, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.lifespan-person-info {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.person-bar-name {
+  font-weight: 600;
+  color: #f1f5f9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.person-bar-age {
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.lifespan-track {
+  flex: 1;
+  position: relative;
+  height: 20px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lifespan-bar-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #aa3bff 0%, #6366f1 100%);
+  box-shadow: 0 0 10px rgba(170, 59, 255, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.category-antediluvian_patriarch {
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+}
+
+.category-postdiluvian_patriarch {
+  background: linear-gradient(90deg, #10b981 0%, #14b8a6 100%);
+}
+
+.category-covenant_patriarch {
+  background: linear-gradient(90deg, #eab308 0%, #f59e0b 100%);
+}
+
+.category-savior_figure {
+  background: linear-gradient(90deg, #ec4899 0%, #f43f5e 100%);
+}
+
+.bar-label-inside {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}

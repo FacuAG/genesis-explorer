@@ -110,7 +110,12 @@ export function App() {
           )}
 
           {activeTab === 'people' && (
-            <PersonPanel people={genesis.people} />
+            <PersonPanel
+              people={genesis.people}
+              peopleMap={genesis.peopleMap}
+              eventsMap={genesis.eventsMap}
+              onSelectEvent={() => setActiveTab('timeline')}
+            />
           )}
 
           {activeTab === 'covenants' && (

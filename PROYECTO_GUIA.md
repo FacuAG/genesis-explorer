@@ -1337,14 +1337,14 @@ I-01 Setup vis-timeline + estructura de componentes        COMPLETADO
 I-02 Utils y hooks base                                    COMPLETADO
 I-03 Componente Timeline principal                         COMPLETADO
 I-04 EventPanel y subcomponentes                           COMPLETADO
-I-05 PersonPanel y LifespanBar                             EN PROGRESO
-I-06 TimelineControls y filtros                            PENDIENTE
+I-05 PersonPanel y LifespanBar                             COMPLETADO
+I-06 TimelineControls y filtros                            EN PROGRESO
 I-07 Diseno visual premium                                 PENDIENTE
 I-08 Funcionalidades extendidas                            PENDIENTE
 
 ESTADO GLOBAL: 
 - Datos Genesis: 100% (9/9 tareas principales completadas - ¡FASE DE DATOS FINALIZADA CON ÉXITO!)
-- Interfaz: 50% (4/8 tareas completadas)
+- Interfaz: 63% (5/8 tareas completadas)
 - Libros: 1 listo para interfaz (Genesis)
 
 NOTAS DE SESIONES ANTERIORES:
