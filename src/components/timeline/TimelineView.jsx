@@ -190,6 +190,16 @@ export function TimelineView({
       max: amToDate(2500),
       start: amToDate(-180),
       end: amToDate(2369),
+      format: {
+        minorLabels: function (date) {
+          const am = dateToAM(date);
+          return `AM ${am}`;
+        },
+        majorLabels: function (date) {
+          const am = dateToAM(date);
+          return `Anno Mundi (AM ${am})`;
+        }
+      },
       template: function (item) {
         return item.content;
       }
