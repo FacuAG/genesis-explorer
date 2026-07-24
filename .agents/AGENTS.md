@@ -111,20 +111,23 @@ Este archivo JSON es el **corazón del proyecto**. Está estructurado en capas (
 
 ## Estado Actual del Proyecto
 
-El proyecto se encuentra en su **estado inicial de template**. El App.jsx actual es el template por defecto de Vite + React, mostrando una pantalla de "Get Started".
+Genesis Explorer se encuentra en fase avanzada con los siguientes módulos activos y verificados al 100%:
+- **Línea de Tiempo Cronológica Anno Mundi (AM)**: Módulo unificado con Saltos Rápidos a 5 hitos, 5 filtros combinados, Niveles LOD 1-2-3, Inspector Superior y Controles de Zoom/Cámara con botón Restablecer.
+- **Sala de Estudio por Capítulos (Caps. 1 al 50)**: Lectura RVR1960 con cabecera pegajosa, resaltador multicolor, buscador e integración con la línea de tiempo.
+- **Módulos de Estudio**: Personajes, Temas Teológicos, Tratados Teológicos, Pactos, Dispensaciones, Ubicaciones y Preguntas Frecuentes.
 
-**Lo que EXISTE actualmente:**
-- Setup completo de Vite + React 19.
-- Sistema de diseño base (variables CSS en index.css): colores, tipografía, modo claro/oscuro automático.
-- Dataset bíblico completo y muy rico en genesis.json (v2.0).
-- Estructura de carpetas ordenada.
+---
 
-**Lo que AÚN NO EXISTE (está por construir):**
-- Ninguna pantalla/vista real de la app está implementada.
-- No hay routing entre vistas.
-- No hay componentes funcionales propios.
-- No se consume el genesis.json en ninguna parte del código aún.
-- No hay visualizaciones: timelines, árboles genealógicos, mapas, etc.
+## 🛡️ Punto de Restauración Estable Registrado
+
+Queda asentado en la documentación oficial del proyecto el punto de congelamiento y restauración estable de la Línea de Tiempo:
+
+- **Tag Git oficial**: `v1.0.0-stable-timeline`
+- **Rama de respaldo**: `stable-timeline-checkpoint`
+- **Commits estables**: `79ed8a4` / `22281f5`
+- **Copias locales**: `src/backup/TimelineView.jsx.bak`, `src/backup/TimelineView.css.bak`, `src/backup/timelineMapper.js.bak`
+
+**REGLA CRÍTICA:** Bajo ninguna circunstancia se deben realizar refactorizaciones destructivas ni eliminar componentes existentes de la Línea de Tiempo. Toda nueva funcionalidad debe ser aditiva.
 
 ---
 
