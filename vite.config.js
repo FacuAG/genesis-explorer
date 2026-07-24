@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Configuración recomendada para GitHub Codespaces y desarrollo local
+// Configuración de servidor para GitHub Codespaces y desarrollo local
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true, // Escucha en 0.0.0.0 para que GitHub Codespaces pueda enrutar el puerto
+    host: '0.0.0.0',
     port: 5173,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: true // Permitir subdominios de GitHub Codespaces (*.app.github.dev)
   }
 })
