@@ -75,13 +75,14 @@ export function getEventRefStr(e) {
 }
 
 /**
- * Extrae el número de capítulo entero para filtros.
+ * Extrae el número de capítulo entero para filtros de forma 100% segura.
  */
 export function getEventChapter(e) {
   if (!e) return 1;
-  if (e.scriptural_reference?.chapter) return e.scriptural_reference.chapter;
-  if (e.references && e.references.length > 0) return e.references[0].chapter;
-  if (e.chapter_start) return e.chapter_start;
+  if (typeof e.chapter === 'number') return e.chapter;
+  if (typeof e.chapter_start === 'number') return e.chapter_start;
+  if (e.scriptural_reference?.chapter) return Number(e.scriptural_reference.chapter);
+  if (e.references && e.references.length > 0 && e.references[0].chapter) return Number(e.references[0].chapter);
   return 1;
 }
 
@@ -213,31 +214,32 @@ export function mapGenesisToVisData(
   // 5. Mapear Eventos Bíblicos con Filtrado LOD Estricto
   let visibleEvents = events;
 
-  if (detailLevel === 1) {
-    // 1: Hitos Históricos Clave (~8 eventos principales)
-    visibleEvents = events.filter(e => {
-      const am = getEventAM(e);
-      return (
-        e.is_major_milestone ||
-        e.category === 'covenant' ||
-        am === 0 || am === 1656 || am === 2083 || am === 2289 || am === 2369
-      );
-    });
-  } else if (detailLevel === 2) {
-    // 2: Estructurado (~25 eventos de pactos, creación, juicios y patriarcas)
-    visibleEvents = events.filter(e => {
-      const am = getEventAM(e);
-      return (
-        e.is_major_milestone ||
-        e.category === 'covenant' ||
-        e.category === 'creation' ||
-        e.category === 'judgment' ||
-        e.category === 'patriarch' ||
-        am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2083 || am === 2289 || am === 2369
-      );
-    });
+  if (!isFilterActive) {
+    if (detailLevel === 1) {
+      // 1: Hitos Históricos Clave (~8 eventos principales)
+      visibleEvents = events.filter(e => {
+        const am = getEventAM(e);
+        return (
+          e.is_major_milestone ||
+          e.category === 'covenant' ||
+          am === 0 || am === 1656 || am === 2083 || am === 2289 || am === 2369
+        );
+      });
+    } else if (detailLevel === 2) {
+      // 2: Estructurado (~25 eventos de pactos, creación, juicios y patriarcas)
+      visibleEvents = events.filter(e => {
+        const am = getEventAM(e);
+        return (
+          e.is_major_milestone ||
+          e.category === 'covenant' ||
+          e.category === 'creation' ||
+          e.category === 'judgment' ||
+          e.category === 'patriarch' ||
+          am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2083 || am === 2289 || am === 2369
+        );
+      });
+    }
   }
-  // detailLevel === 3 muestra los 82 eventos completos
 
   // Garantizar que targetEventId esté siempre presente si fue seleccionado
   if (targetEventId && !visibleEvents.some(e => e.id === targetEventId)) {
@@ -252,10 +254,11 @@ export function mapGenesisToVisData(
     const amYear = getEventAM(e);
     const eventName = e.short_name || e.name;
     const isTarget = e.id === targetEventId;
+    const highlightClass = isFilterActive ? 'vis-item-highlighted' : '';
     const targetClass = isTarget ? 'vis-item-target-active' : '';
 
     const contentHtml = `
-      <div class="vis-event-card category-${e.category} ${targetClass}">
+      <div class="vis-event-card category-${e.category} ${targetClass} ${highlightClass}">
         <span class="event-icon">${cat.icon}</span>
         <span class="event-title">${eventName}</span>
         <span class="event-am-tag">AM ${amYear}</span>
@@ -268,7 +271,7 @@ export function mapGenesisToVisData(
       content: contentHtml,
       start: amToDate(amYear),
       type: 'box',
-      className: `vis-item-event cat-${e.category} ${targetClass}`
+      className: `vis-item-event cat-${e.category} ${highlightClass} ${targetClass}`
     });
   });
 

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline/standalone';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
-import { mapGenesisToVisData, amToDate, dateToAM, getEventAM } from '../../utils/timelineMapper';
+import { mapGenesisToVisData, amToDate, dateToAM, getEventAM, getEventChapter } from '../../utils/timelineMapper';
 import { formatScriptureRef } from '../../utils/formatters';
 import { Modal } from '../common/Modal';
 import { EventPanel } from '../panels/EventPanel';
@@ -145,27 +145,40 @@ export function TimelineView({
   // Filtrado reactivo de eventos según los controles activos
   const filteredEvents = useMemo(() => {
     return allEvents.filter(evt => {
-      // Filtro de Categoría
+      // 1. Filtro de Categoría
       if (selectedCategory !== 'all' && evt.category !== selectedCategory) return false;
 
-      // Filtro por Bloque Narrativo
-      if (selectedBlockId !== 'all' && evt.block_id !== selectedBlockId) return false;
+      // 2. Filtro por Bloque Narrativo
+      if (selectedBlockId !== 'all') {
+        const blockObj = blocksMap.get(selectedBlockId);
+        const evtCh = getEventChapter(evt);
+        const directMatch = evt.block_id === selectedBlockId ||
+          (selectedBlockId === 'nb_noah' && evt.block_id === 'nb_flood') ||
+          (selectedBlockId === 'nb_babel_nations' && evt.block_id === 'nb_babel');
+        const rangeMatch = blockObj && typeof blockObj.chapters_start === 'number' &&
+          evtCh >= blockObj.chapters_start && evtCh <= (blockObj.chapters_end || 99);
 
-      // Filtro por Capítulo
-      if (selectedChapter !== 'all' && Number(evt.chapter) !== Number(selectedChapter)) return false;
+        if (!directMatch && !rangeMatch) return false;
+      }
 
-      // Buscador Rápido de Texto
+      // 3. Filtro por Capítulo
+      if (selectedChapter !== 'all') {
+        const evtCh = getEventChapter(evt);
+        if (Number(evtCh) !== Number(selectedChapter)) return false;
+      }
+
+      // 4. Buscador Rápido de Texto
       if (filterText.trim().length > 0) {
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const name = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const summary = (evt.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const name = (evt.name || evt.short_name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const summary = (evt.summary || evt.teaching || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const ref = (evt.scriptural_reference?.display || formatRef(evt.scriptural_reference) || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         if (!name.includes(q) && !summary.includes(q) && !ref.includes(q)) return false;
       }
 
       return true;
     });
-  }, [timelineEvents, selectedCategory, selectedBlockId, selectedChapter, filterText]);
+  }, [allEvents, selectedCategory, selectedBlockId, selectedChapter, filterText, blocksMap]);
 
   const isFilterActive = useMemo(() => {
     return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
@@ -285,6 +298,23 @@ export function TimelineView({
       console.warn("No se pudo seleccionar la entidad en el canvas de timeline:", err);
     }
   }, [targetEventId, eventsMap]);
+
+  // 4. Auto-enfoque de cámara al filtrar por Categoría, Bloque, Capítulo o Búsqueda
+  useEffect(() => {
+    if (!isFilterActive || filteredEvents.length === 0 || !timelineInstanceRef.current) return;
+    try {
+      const amYears = filteredEvents.map(getEventAM);
+      const minAM = Math.min(...amYears);
+      const maxAM = Math.max(...amYears);
+      const startWin = amToDate(Math.max(-300, minAM - 100));
+      const endWin = amToDate(Math.min(2500, maxAM + 100));
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
+      });
+    } catch (err) {
+      console.warn("Error enfocando eventos filtrados:", err);
+    }
+  }, [filteredEvents, isFilterActive]);
 
   // Controladores de Zoom y Cámara
   const handleZoomIn = () => {
