@@ -295,12 +295,18 @@ export function TimelineView({
     if (timelineInstanceRef.current) timelineInstanceRef.current.zoomOut(0.4);
   };
 
-  const handleResetZoom = () => {
+  const handleResetAllState = () => {
+    setSelectedCategory('all');
+    setSelectedBlockId('all');
+    setSelectedChapter('all');
+    setFilterText('');
+    setActiveJump(null);
+    setActiveDetailLevel(2);
+    setSelectedEntity(null);
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), {
         animation: { duration: 600, easingFunction: 'easeInOutQuad' }
       });
-      setSelectedEntity(null);
     }
   };
 
@@ -571,8 +577,8 @@ export function TimelineView({
           <button className="ft-zoom-btn" onClick={handleZoomOut} title="Alejar Cronología (Zoom -)">
             ➖ <span className="ft-btn-text">Alejar</span>
           </button>
-          <button className="ft-zoom-btn ft-reset-btn" onClick={handleResetZoom} title="Restablecer Panorama Completo">
-            🌐 <span className="ft-btn-text">Panorama Completo</span>
+          <button className="ft-zoom-btn ft-reset-btn" onClick={handleResetAllState} title="Restablecer Estado Inicial de la Línea de Tiempo">
+            🔄 <span className="ft-btn-text">Restablecer</span>
           </button>
         </div>
 
