@@ -50,13 +50,13 @@ export function TimelineView({
   const [activeJump, setActiveJump] = useState(null); // { id, startAM, endAM, label }
 
   const isFilterActive = selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
+  const activeDetailLevel = isFilterActive ? 3 : detailLevel;
 
   // Manejador del Salto Rápido con resalte
   const handleJumpToAM = (jumpId, startAM, endAM, label) => {
     setActiveJump({ id: jumpId, startAM, endAM, label });
     if (timelineInstanceRef.current) {
       timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
-      setDetailLevel(3);
     }
   };
 
@@ -156,8 +156,6 @@ export function TimelineView({
       timelineInstanceRef.current.setWindow(startWin, endWin, {
         animation: { duration: 600, easingFunction: 'easeInOutQuad' }
       });
-
-      setDetailLevel(3);
     }
   }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, filteredEvents, isFilterActive]);
 
@@ -170,7 +168,7 @@ export function TimelineView({
       narrativeBlocks,
       covenants,
       eras,
-      detailLevel,
+      activeDetailLevel,
       isFilterActive
     );
 
@@ -269,7 +267,7 @@ export function TimelineView({
         timelineInstanceRef.current = null;
       }
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, detailLevel, isFilterActive, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
 
   // Funciones de navegación de zoom
   const handleZoomIn = () => {
