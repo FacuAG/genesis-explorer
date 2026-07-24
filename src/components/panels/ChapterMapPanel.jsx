@@ -8,8 +8,8 @@ import './ChapterMapPanel.css';
 
 /**
  * Componente profesional para la Sala de Estudio Exegético por Capítulo (Génesis 1 a 50).
- * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de tamaño de fuente (A-/A+),
- * resaltado individual de versículos y búsqueda rápida dentro del capítulo.
+ * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
+ * Menú Flotante de Acciones para Versículos Seleccionados (Copiar, Resaltar, Citas NT) y lectura limpia.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedChapNum, setSelectedChapNum] = useState(null);
@@ -20,8 +20,10 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   // Estados de Control de Lectura Bíblica
   const [fontSize, setFontSize] = useState(16); // 13px - 26px
   const [verseSearchText, setVerseSearchText] = useState('');
-  const [highlightedVerses, setHighlightedVerses] = useState({}); // { [verseNum]: boolean }
+  const [highlightedVerses, setHighlightedVerses] = useState({}); // { [verseNum]: colorString | true }
+  const [selectedColor, setSelectedColor] = useState('gold'); // 'gold' | 'blue' | 'green' | 'red'
   const [isFullscreenReader, setIsFullscreenReader] = useState(false);
+  const [selectionNotice, setSelectionNotice] = useState('');
 
   // Ordenar lista de 50 capítulos
   const sortedChapters = useMemo(() => {
@@ -67,12 +69,64 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     return verses;
   }, [selectedChapNum]);
 
+  // Lista de números de versículos seleccionados
+  const selectedVerseNums = useMemo(() => {
+    return Object.keys(highlightedVerses)
+      .map(Number)
+      .filter(num => Boolean(highlightedVerses[num]))
+      .sort((a, b) => a - b);
+  }, [highlightedVerses]);
+
   // Alternar resaltado individual de versículo
   const toggleVerseHighlight = (vNum) => {
-    setHighlightedVerses(prev => ({
-      ...prev,
-      [vNum]: !prev[vNum]
-    }));
+    setHighlightedVerses(prev => {
+      const current = prev[vNum];
+      if (current) {
+        const copy = { ...prev };
+        delete copy[vNum];
+        return copy;
+      } else {
+        return { ...prev, [vNum]: selectedColor };
+      }
+    });
+  };
+
+  // Copiar versículos seleccionados con cita bíblica formateada
+  const handleCopySelectedVerses = () => {
+    if (selectedVerseNums.length === 0) return;
+
+    const rangeStr = selectedVerseNums.length === 1
+      ? `${selectedVerseNums[0]}`
+      : `${selectedVerseNums[0]}-${selectedVerseNums[selectedVerseNums.length - 1]}`;
+
+    const selectedLines = selectedVerseNums.map(num => {
+      const vObj = chapterVersesList.find(v => v.number === num);
+      return `${num}. ${vObj ? vObj.text : ''}`;
+    });
+
+    const formattedText = `GÉNESIS ${selectedChapNum}:${rangeStr} (RVR1960)\n` + selectedLines.join('\n');
+
+    navigator.clipboard.writeText(formattedText);
+    setSelectionNotice(`✓ ${selectedVerseNums.length} versículo(s) copiado(s) al portapapeles!`);
+    setTimeout(() => setSelectionNotice(''), 3000);
+  };
+
+  // Cambiar color de resaltado de la selección activa
+  const handleApplyColor = (color) => {
+    setSelectedColor(color);
+    if (selectedVerseNums.length > 0) {
+      setHighlightedVerses(prev => {
+        const next = { ...prev };
+        selectedVerseNums.forEach(n => { next[n] = color; });
+        return next;
+      });
+    }
+  };
+
+  // Limpiar selección activa
+  const handleClearSelection = () => {
+    setHighlightedVerses({});
+    setSelectionNotice('');
   };
 
   // Copiar capítulo completo al portapapeles
@@ -293,7 +347,10 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 {/* Flujo de Versículos con Resaltado y Tamaño Dinámico */}
                 <div className="verses-continuous-flow">
                   {chapterVersesList.map((v) => {
-                    const isHighlighted = Boolean(highlightedVerses[v.number]);
+                    const highlightValue = highlightedVerses[v.number];
+                    const isHighlighted = Boolean(highlightValue);
+                    const colorClass = typeof highlightValue === 'string' ? `color-${highlightValue}` : 'color-gold';
+
                     const matchesSearch = verseSearchText.trim().length > 0 &&
                       v.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                         .includes(verseSearchText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
@@ -301,10 +358,10 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                     return (
                       <p
                         key={v.number}
-                        className={`verse-paragraph ${isHighlighted ? 'user-highlighted' : ''} ${matchesSearch ? 'search-match' : ''}`}
+                        className={`verse-paragraph ${isHighlighted ? `user-highlighted ${colorClass}` : ''} ${matchesSearch ? 'search-match' : ''}`}
                         style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize * 1.65}px` }}
                         onClick={() => toggleVerseHighlight(v.number)}
-                        title="Haz clic para marcar / desmarcar este versículo"
+                        title="Haz clic para seleccionar o marcar este versículo"
                       >
                         <sup className="verse-num">{v.number}</sup> {v.text}
                       </p>
@@ -406,6 +463,56 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 )}
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* MENÚ FLOTANTE CONTEXTUAL PARA VERSÍCULOS SELECCIONADOS */}
+      {selectedVerseNums.length > 0 && (
+        <div className="floating-verse-action-bar">
+          <div className="fva-info">
+            <span className="fva-count-badge">📖 {selectedVerseNums.length} Versículo{selectedVerseNums.length > 1 ? 's' : ''} Seleccionado{selectedVerseNums.length > 1 ? 's' : ''}</span>
+            <span className="fva-range-tag">Gén. {selectedChapNum}:{selectedVerseNums.join(', ')}</span>
+          </div>
+
+          {selectionNotice && (
+            <span className="fva-notice">{selectionNotice}</span>
+          )}
+
+          <div className="fva-actions">
+            {/* Paleta de Colores de Resaltado */}
+            <div className="fva-color-picker" title="Elegir color de resaltador">
+              <button
+                className={`color-dot gold ${selectedColor === 'gold' ? 'active' : ''}`}
+                onClick={() => handleApplyColor('gold')}
+                title="Amarillo / Revelación Doctrina"
+              />
+              <button
+                className={`color-dot blue ${selectedColor === 'blue' ? 'active' : ''}`}
+                onClick={() => handleApplyColor('blue')}
+                title="Azul / Pacto y Promesas"
+              />
+              <button
+                className={`color-dot green ${selectedColor === 'green' ? 'active' : ''}`}
+                onClick={() => handleApplyColor('green')}
+                title="Verde / Gracia y Vida"
+              />
+              <button
+                className={`color-dot red ${selectedColor === 'red' ? 'active' : ''}`}
+                onClick={() => handleApplyColor('red')}
+                title="Rojo / Juicio y Profecía"
+              />
+            </div>
+
+            {/* Botón Copiar Selección */}
+            <button className="fva-btn fva-copy-btn" onClick={handleCopySelectedVerses}>
+              📋 Copiar Selección Formateada
+            </button>
+
+            {/* Botón Limpiar Selección */}
+            <button className="fva-btn fva-clear-btn" onClick={handleClearSelection}>
+              ✕ Desmarcar
+            </button>
           </div>
         </div>
       )}
