@@ -1,35 +1,35 @@
 {
   "book_id": "genesis",
   "book_name": "Génesis",
-  "library_source": "La Biblia del Expositor (The Expositor's Bible) & Biblia Temática de Nave (Nave's Topical Bible)",
-  "edition_info": "Edición Teológica Evangélica de Dominio Público — Análisis Expositivo, Exégesis Léxica y Teología Sistemática",
+  "library_source": "La Biblia del Expositor (Marcus Dods), Comentario Exegético Keil & Delitzsch y Biblia Temática de Nave",
+  "edition_info": "Edición Teológica Evangélica Académica — Exégesis Gramático-Histórica y Teología Sistemática",
   "studies": {
     "theme_creation": {
       "id": "theme_creation",
       "title": "Creación, Cosmovisión y Orden Divino",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Creación de la Nada (Ex Nihilo) y el Dominio Soberano de Dios",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos I - III (W. Robertson Nicoll & Marcus Dods)",
+      "subtitle": "Tratado Expositivo y Exegético sobre la Creación Ex Nihilo y la Monarquía Absoluta de Dios",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. I-III) & Comentario Keil & Delitzsch (Génesis 1)",
       "reading_time": "20 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
           "title": "I. La Declaración Monoteísta Polemico-Teológica frente a las Cosmogonías Paganas",
-          "content": "La narración de la Creación en Génesis 1 es el portal grandioso de toda la revelación divina. No fue escrita como una especulación científica moderna ni como una adaptación de las leyendas babilónicas o egipcias del Antiguo Cercano Oriente, sino como una proclamación majestuosa del monoteísmo absoluto de Yahvé.\n\nEn las cosmogonías paganas como el Enuma Elish babilónico, el universo surge del caos violento y sangriento entre dioses limitados (teomaquia), donde la materia primordial es eterna y los astros son divinidades vivientes. Génesis 1 rompe radicalmente con toda la mitología antigua al declarar: 'En el principio creó Dios los cielos y la tierra'. No hay lucha, no hay rivales; Dios habla y la realidad obedece. El sol y la luna no son dioses (Ra o Shamash), sino meras 'lumbreras' creadas para servir al hombre y marcar los tiempos establecidos por el Creador."
+          "content": "La narración de la Creación en Génesis 1 es la portada majestuosa de toda la Biblia. Como señala el Dr. Marcus Dods en 'La Biblia del Expositor', este relato no fue concebido como un tratado científico moderno, sino como una proclamación teológica soberana del monoteísmo de Yahvé frente a las religiones del Antiguo Cercano Oriente.\n\nEn los mitos babilónicos como el 'Enuma Elish', el universo surge del conflicto sangriento entre deidades limitadas (teomaquia) y la materia es eterna. En Génesis 1:1, Dios no lucha con el caos; él lo ordena con el mero poder de su palabra. El sol y la luna no son dioses (Ra o Shamash), sino simples 'lumbreras' creadas para servir al hombre."
         },
         {
           "id": "sec_2",
-          "title": "II. Análisis Filológico del Verbo Bará (בָּרָא) y la Doctrina Ex Nihilo",
-          "content": "El análisis gramatical de Génesis 1:1 revela la profundidad inagotable de la palabra hebrea Bará (בָּרָא). En el texto masorético, este verbo se diferencia estrictamente de Asáh (עָשָׂה - hacer a partir de materiales existentes) y de Yatsar (יָצַר - moldear como el alfarero).\n\nEn toda la Biblia hebrea, Bará tiene tres características absolutas:\n1. Su sujeto gramatical es SIEMPRE Y EXCLUSIVAMENTE Dios (Elohim). Jamás se atribuye a reyes, profetas o seres creados.\n2. Denota la producción de algo absolutamente nuevo, cuya existencia depende enteramente de la omnipotencia divina.\n3. Es el cimiento de la doctrina clásica Ex Nihilo (creación de la nada). Antes del mandato divino no existía materia primordial, átomos, espacio ni tiempo. La palabra creadora del Logos (Dabar Yahvé) llamó a la existencia a lo que no existía (Romanos 4:17; Hebreos 11:3)."
+          "title": "II. Análisis Filológico de Bará (בָּרָא) y la Doctrina Ex Nihilo",
+          "content": "En la sintaxis del hebreo bíblico, el verbo Bará (בָּרָא) en Génesis 1:1 posee tres características absolutas respaldadas por el léxico exegético Keil & Delitzsch:\n1. Su sujeto gramatical es SIEMPRE Y ÚNICAMENTE Dios (Elohim). Jamás se aplica a seres humanos.\n2. Denota la producción de una realidad enteramente nueva sin precedentes.\n3. Es la base de la doctrina clásica 'Ex Nihilo' (creación a partir de la nada). Antes del decreto divino no existía materia primordial ni espacio-tiempo (Hebreos 11:3; Romanos 4:17)."
         },
         {
           "id": "sec_3",
-          "title": "III. La Trinidad en la Obra Creadora y la Simetría de los Seis Días",
-          "content": "Aunque la revelación de la Trinidad se manifiesta plenamente en la persona de Jesucristo en el Nuevo Testamento, Génesis 1 presenta ya la arquitectura trinitaria de la Creación:\n- Dios el Padre como la fuente soberana decretando el diseño del cosmos.\n- El Espíritu Santo (Rúaj Elohim - רוּחַ אֱלֹהִים) incubando y revoloteando sobre las aguas iniciales para impartir orden, energía y vida.\n- Dios el Hijo como la Palabra viva ('Y dijo Dios...'), el Logos eterno mediante el cual todo fue hecho (Juan 1:1-3; Colosenses 1:16).\n\nEl relato se organiza en una simetría literaria perfecta entre los Días de Formación (Días 1-3: separar luz, aguas y tierra) y los Días de Llenado (Días 4-6: lumbreras, peces/aves y animales/hombre), culminando en el Día Séptimo (Sabbath), el reposo triunfal donde Dios contempla su obra perfecta."
+          "title": "III. La Operación Trinitaria y la Simetría de los Seis Días",
+          "content": "El relato despliega la agencia del Dios Triuno:\n- El Padre como Fuente decretando el diseño cósmico.\n- El Espíritu Santo (Rúaj Elohim) incubando sobre las aguas iniciales para impartir orden y vida (Génesis 1:2).\n- El Hijo como la Palabra eterna (Logos), mediante la cual todo fue hecho (Juan 1:1-3; Colosenses 1:16).\n\nExiste una simetría perfecta entre los Días de Formación (Días 1-3) y los Días de Llenado (Días 4-6), culminando en el Reposo del Día Séptimo (Sabbath)."
         },
         {
           "id": "sec_4",
           "title": "IV. Cumplimiento Cristológico y la Nueva Creación",
-          "content": "La Biblia del Expositor enfatiza que la primera Creación apunta directamente a la Redención en Cristo. Así como Dios dijo en el principio 'Sea la luz' en medio del caos informe, en la regeneración espiritual el Espíritu Santo resucita el corazón del pecador impartiendo la luz del conocimiento de la gloria de Dios en la faz de Jesucristo (2 Corintios 4:6).\n\nJesucristo es el Primogénito de toda la creación y la Cabeza de la Nueva Creación (Colosenses 1:15-18). Toda la historia cósmica que comienza en el Huerto del Edén en Génesis encuentra su culminación gloriosa en Apocalipsis 21-22 con la Venida de los Nuevos Cielos y la Nueva Tierra."
+          "content": "La primera Creación prefigura la Redención en Cristo. Así como Dios ordenó la luz en la oscuridad primordial, el Espíritu Santo ilumina el corazón del creyente con la luz del Evangelio (2 Corintios 4:6). Jesucristo es la Cabeza de la Nueva Creación que se consumará en los Nuevos Cielos y la Nueva Tierra (Apocalipsis 21-22)."
         }
       ],
       "topical_index": [
@@ -38,12 +38,8 @@
           "passages": ["Génesis 1:1", "Salmo 33:6-9", "Hebreos 11:3", "Apocalipsis 4:11"]
         },
         {
-          "topic": "Soberanía y Monarquía Divina",
+          "topic": "Soberanía Divina sobre el Cosmos",
           "passages": ["Génesis 1:3-31", "Isaías 40:25-28", "Colosenses 1:16-17"]
-        },
-        {
-          "topic": "El Espíritu Santo en la Creación",
-          "passages": ["Génesis 1:2", "Salmo 104:30", "Job 33:4"]
         }
       ]
     },
@@ -51,24 +47,24 @@
     "theme_imago_dei": {
       "id": "theme_imago_dei",
       "title": "La Imagen de Dios e Identidad Humana (Imago Dei)",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Dignidad Inalienable, la Mayordomía y el Diseño Binario del Hombre",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos IV - V (Marcus Dods)",
-      "reading_time: "18 min de lectura profunda",
+      "subtitle": "Tratado Antropológico: La Dignidad Sacra, la Mayordomía y el Diseño Binario del Hombre",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. IV-V) & Teología Sistemática (Wayne Grudem, Cap. 21)",
+      "reading_time": "18 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
-          "title": "I. El Consejo Divino Trinitario y la Creación del Hombre",
-          "content": "A diferencia de las criaturas inferiores creadas por decreto indirecto ('Produzca la tierra...'), la creación del ser humano es introducida por una deliberación solemne en el Consejo Trinitario: 'Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza' (Génesis 1:26).\n\nEl hombre no es un animal evolucionado por azar ni una sombra insignificante en el cosmos; es la corona de la creación visible. Formado personalmente por Dios del polvo de la tierra (Adamah) y dotado del aliento divino de vida (Neshamah), el ser humano posee una doble naturaleza: terrenal en su cuerpo y espiritual en su alma inmortal."
+          "title": "I. El Consejo Trinitario y la Singularidad del Ser Humano",
+          "content": "Antes de la creación del hombre, la Divinidad hace una pausa deliberada en el texto sagrado: 'Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza' (Génesis 1:26). El hombre no es el producto de un azar biológico, sino la corona de la creación de Dios, formado del polvo (Adamah) e insuflado por el aliento divino (Neshamah)."
         },
         {
           "id": "sec_2",
-          "title": "II. Significado Filológico de Tselem (צֶלֶם) y Demut (דְּמוּת)",
-          "content": "La Biblia del Expositor analiza los dos términos clave de Génesis 1:26-27:\n1. Tselem (צֶלֶם - Imagen): En el mundo antiguo, los reyes colocaban estatuas (tselem) de sí mismos en sus dominios para marcar su autoridad. El ser humano es la estatua viviente y el representante oficial de Dios sobre la Tierra.\n2. Demut (דְּמוּת - Semejanza): Define la capacidad relacional, moral, intelectual y espiritual del hombre para reflejar el carácter santo de su Creador.\n\nConsecuencias Teológicas:\n- Sanctidad de la Vida Humana: Toda persona posee valor intrínseco sagrado desde la concepción. Asesinar a un ser humano es atentar contra la imagen del Rey Divino (Génesis 9:6).\n- Diseño Binario Complementario: Dios creó al hombre 'varón y hembra' (Gén. 1:27), instituyendo el matrimonio monogámico como el diseño primordial de la sociedad humana."
+          "title": "II. Análisis de Tselem (צֶלֶם) y Demut (דְּמוּת)",
+          "content": "1. Tselem (Imagen): El ser humano es la estatua viviente y el embajador de Dios sobre la Tierra.\n2. Demut (Semejanza): La capacidad moral, relacional y espiritual para reflejar el carácter divino.\n\nImplicaciones:\n- Santidad de la Vida: El asesinato es prohibido porque atenta contra la imagen del Creador (Génesis 9:6).\n- Diseño Binario y Matrimonio: Dios los creó 'varón y hembra' (Génesis 1:27), consagrando la santidad del matrimonio."
         },
         {
           "id": "sec_3",
-          "title": "III. La Restauración de la Imagen en Jesucristo",
-          "content": "La Caída en el Edén no destruyó la Imago Dei por completo, pero la corrompió y distorsionó gravemente. Jesucristo es el único hombre en quien la Imagen de Dios brilla sin mancha (2 Corintios 4:4; Colosenses 1:15). Mediante la redención, el Espíritu Santo renueva progresivamente al creyente a la imagen de Cristo (Colosenses 3:10; Romanos 8:29)."
+          "title": "III. La Restauración en Cristo",
+          "content": "La Caída manchó la Imago Dei, pero Jesucristo es la Imagen perfecta e inmaculada de Dios (Colosenses 1:15). En la salvación, los creyentes son renovados progresivamente a su imagen (Colosenses 3:10)."
         }
       ],
       "topical_index": [
@@ -86,24 +82,24 @@
     "theme_judgment": {
       "id": "theme_judgment",
       "title": "El Juicio Divino y la Fallida Rebelión Humana",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Entrada del Pecado, la Maldición y la Santa Justicia de Dios",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos VI - XI (Marcus Dods)",
+      "subtitle": "Tratado Hamartiológico: La Caída, el Pecado Original y los Juicios Históricos de Dios",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. VI-XI) & Comentario Keil & Delitzsch",
       "reading_time": "22 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
-          "title": "I. La Anatomía del Pecado Original en el Edén",
-          "content": "Génesis 3 expone la psicología y la raíz de toda rebelión humana contra Dios. La serpiente tienta a la humanidad sembrando la sospecha contra la bondad de Dios ('¿Conque Dios os ha dicho...?') y prometiendo una falsa autonomía divinizada ('Seréis como dioses'). El pecado no es mero error tropezado, sino insurrección deliberada contra la soberanía del Creador."
+          "title": "I. La Caída en el Edén y el Orgullo Humano",
+          "content": "Génesis 3 revela que el pecado no es una falla accidental, sino una rebelión voluntaria del hombre deseando ser su propio juez y Dios. La tentación ataca la veracidad y el amor de Dios, prometiendo una falsa autonomía moral."
         },
         {
           "id": "sec_2",
           "title": "II. Los Grandes Juicios Históricos del Génesis",
-          "content": "La justicia de Dios no es venganza caprichosa, sino la reacción santa de su ser contra el mal moral. Génesis registra cuatro juicios cataclísmicos:\n1. La Maldición del Edén: Separación de la presencia de Dios, muerte espiritual y corrupción física.\n2. El Diluvio Universal (AM 1656): La purificación de la tierra frente a la depravación total de la humanidad antediluviana.\n3. La Confusión de Babel (AM 1996): La dispersión del orgullo imperialista de la torre de rebelión.\n4. La Destrucción de Sodoma y Gomorra: Juicio consumidor de fuego sobre la perversión descarada."
+          "content": "Génesis registra cuatro juicios solemnes que prefiguran el Juicio Final:\n1. La Maldición del Edén: Expulsión de la presencia divina y entrada de la muerte.\n2. El Diluvio Universal (AM 1656): Purificación de la tierra frente a la depravación total (Génesis 6:5).\n3. La Confusión de Babel (AM 1996): El desmantelamiento del orgullo humano.\n4. Sodoma y Gomorra: Juicio punitivo sobre la inmoralidad perversa."
         },
         {
           "id": "sec_3",
-          "title": "III. El Juicio Sustitutivo en la Cruz del Calvario",
-          "content": "Los juicios del Génesis prefiguran el Juicio Final. Sin embargo, la teología bíblica muestra que en la Cruz de Cristo, la santa justicia de Dios cayó sobre su Hijo Unigénito, quien pagó el juicio que merecía nuestra rebelión para que nosotros recibiéramos su justicia (Romanos 5:12-21; 2 Corintios 5:21)."
+          "title": "III. La Cruz como Juicio Sustitutivo",
+          "content": "En el Golgota, la justicia santa de Dios cayó sobre su Hijo Jesucristo, quien cargó con el juicio que merecía nuestra rebelión (Romanos 5:12-21)."
         }
       ],
       "topical_index": [
@@ -121,19 +117,19 @@
     "theme_covenant": {
       "id": "theme_covenant",
       "title": "Pacto y Gracia Redentora (Teología Federal)",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Estructura de las Alianzas de Dios con la Humanidad",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos XII - XVII (Marcus Dods)",
+      "subtitle": "Tratado sobre los Pactos Divinos: La Estructura de las Alianzas de Redención",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. XII-XVII) & Teología del Pacto (O. Palmer Robertson)",
       "reading_time": "25 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
-          "title": "I. La Definición Bíblica de Pacto (Berit - בְּרִית)",
-          "content": "Un pacto bíblico (Berit) es una alianza soberana estipulada por la gracia divina en la que Dios compromete su fidelidad bajo juramento para salvar a un pueblo. En el ritual antiguo de Karat Berit ('cortar un pacto'), animales sacrificados eran cortados por la mitad y las partes caminaban entre ellos invocando la muerte si quebrantaban la promesa."
+          "title": "I. La Naturaleza del Pacto Bíblico (Berit - בְּרִית)",
+          "content": "Un pacto bíblico (Berit) es una alianza soberana de gracia estipulada por Dios donde se compromete bajo juramento con su pueblo. En el ritual de Karat Berit ('cortar pacto'), las partes caminaban entre sacrificios divididos (Génesis 15)."
         },
         {
           "id": "sec_2",
           "title": "II. El Pacto Abrahámico de Génesis 15",
-          "content": "En Génesis 15, Abraham cae en un profundo pavor. Pero únicamente la antorcha de fuego y el horno humeante (representaciones teofánicas de Dios) pasan entre las víctimas sacrificadas. Esto demuestra que el Pacto Abrahámico es incondicional y unilateral: Dios asumió sobre sí mismo la maldición si el pacto era violado, lo cual se cumplió cuando Cristo murió en el Gólgota."
+          "content": "En Génesis 15, Dios únicamente pasa entre las víctimas cortadas representadas en una antorcha de fuego. Esto demuestra que el Pacto Abrahámico es incondicional y unilateral: Dios asumió el costo de la muerte si el pacto fallaba, cumpliéndolo en la Cruz."
         }
       ],
       "topical_index": [
@@ -147,14 +143,14 @@
     "theme_election": {
       "id": "theme_election",
       "title": "Elección Divina y Gracia Soberana",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Iniciativa Inmerecida de Dios en la Historia de la Redención",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos XVIII - XXV (Marcus Dods)",
+      "subtitle": "Tratado Soteriológico: La Elección Incondicional en las Generaciones Patriarcales",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. XVIII-XXV) & Comentario a los Romanos (John Murray)",
       "reading_time": "18 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
           "title": "I. El Patrón Soberano de Elección en el Génesis",
-          "content": "A través de todo el relato patriarcal, la elección divina destruye los méritos y costumbres humanas: Dios escoge a Abel sobre Caín, a Set sobre la línea de Caín, a Sem sobre los hijos de Noé, llama a Abram desde el paganismo de Ur, escoge a Isaac sobre Ismael y a Jacob sobre Esaú antes de nacer (Romanos 9:11-13)."
+          "content": "A través de todo el relato patriarcal, la elección divina destruye las pretensiones humanas: Dios escoge a Abel sobre Caín, a Set sobre la línea de Caín, a Sem sobre los hijos de Noé, llama a Abram desde el paganismo de Ur, escoge a Isaac sobre Ismael y a Jacob sobre Esaú antes de nacer (Romanos 9:11-13)."
         }
       ],
       "topical_index": [
@@ -168,14 +164,14 @@
     "theme_providence": {
       "id": "theme_providence",
       "title": "Providencia y Gobierno Divino",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Mano Invisible de Dios en la Historia de José",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos XXXVII - L (Marcus Dods)",
+      "subtitle": "Tratado Expositivo: La Mano Invisible de Dios Encaminando el Mal para Bien",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. XXXVII-L) & La Providencia de Dios (R.C. Sproul)",
       "reading_time": "24 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
-          "title": "I. La Teodicea y Providencia en la Historia de José",
-          "content": "La vida de José (Génesis 37-50) es la cumbre bíblica de la providencia divina. A pesar de los celos de sus hermanos, la esclavitud, las falsas acusaciones y la cárcel en Egipto, Dios estaba tejiendo la salvación de la familia patriarcal. Génesis 50:20 resume la verdad del compatibilismo bíblico: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'."
+          "title": "I. La Providencia en la Historia de José",
+          "content": "La vida de José (Génesis 37-50) es la cumbre del gobierno providencial. A pesar del odio de sus hermanos, la venta como esclavo y la cárcel en Egipto, Dios tejió la salvación de la familia patriarcal. Génesis 50:20 resume el compatibilismo bíblico: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'."
         }
       ],
       "topical_index": [
@@ -189,14 +185,14 @@
     "theme_faith": {
       "id": "theme_faith",
       "title": "La Fe y la Vida de Obediencia (Sola Fide)",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: La Naturaleza de la Fe Justificadora",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos XV & XXII (Marcus Dods)",
+      "subtitle": "Tratado Soteriológico: La Justificación por la Fe en Génesis 15:6",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. XV & XXII) & Comentario a los Gálatas (Martín Lutero)",
       "reading_time": "20 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
-          "title": "I. Génesis 15:6: El Fundamento de la Justificación por la Fe",
-          "content": "Génesis 15:6 establece el pilar de toda la teología cristiana: 'Y creyó Abram a Jehová, y le fue contado por justicia'. La fe (Aman) es la confianza absoluta en la promesa de Dios. Abraham fue justificado por la fe antes de las obras y de la circuncisión, prefigurando el Evangelio de la Gracia."
+          "title": "I. Génesis 15:6: El Pilar de la Justificación por la Fe",
+          "content": "Génesis 15:6 establece la norma soteriológica de toda la Escritura: 'Y creyó Abram a Jehová, y le fue contado por justicia'. La fe (Aman) es apoyarse con todo el corazón sobre la fidelidad de Dios. Abraham fue justificado antes de las obras y de la circuncisión, prefigurando el Evangelio (Romanos 4; Gálatas 3)."
         }
       ],
       "topical_index": [
@@ -210,14 +206,14 @@
     "theme_messianic_promise": {
       "id": "theme_messianic_promise",
       "title": "La Promesa Mesiánica y Tipología de Cristo",
-      "subtitle": "Tratado Expositivo de La Biblia del Expositor: El Protoevangelio y el Hilo del Redentor",
-      "source_reference": "The Expositor's Bible: Genesis, Capítulos III, XIV, XXII & XLIX (Marcus Dods)",
+      "subtitle": "Tratado Cristológico: El Protoevangelio y la Línea del Redentor Prometido",
+      "source_reference": "La Biblia del Expositor: Génesis (Marcus Dods, Cap. III, XIV, XXII & XLIX) & Cristología del AT (E.W. Hengstenberg)",
       "reading_time": "26 min de lectura profunda",
       "sections": [
         {
           "id": "sec_1",
           "title": "I. El Protoevangelio (Génesis 3:15) y los Tipos de Cristo",
-          "content": "Desde la promesa del Protoevangelio en Génesis 3:15 (la Simiente que aplastará a la serpiente) hasta la Profecía de Siloh en Génesis 49:10 (el Cetro de Judá), el Génesis es el mapa de ruta mesiánico. Figuras como el Arca de Noé, Melquisedec, el carnero sustitutivo en Moriah y la vida de José prefiguran la persona y obra de Jesucristo."
+          "content": "Desde Génesis 3:15 (la Simiente que aplastará a la serpiente) hasta la Profecía de Siloh en Génesis 49:10 (el Cetro de Judá), el Génesis es el mapa de ruta del Redentor. Figuras como el Arca de Noé, Melquisedec, el carnero en Moriah y José prefiguran la persona y obra de Jesucristo."
         }
       ],
       "topical_index": [
