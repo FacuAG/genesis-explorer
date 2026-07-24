@@ -145,9 +145,13 @@ export function TimelineView({
 
     setSelectedEntity({ type: 'event', data: eventObj });
     try {
+      const yearAM = getEventAM(eventObj);
+      const startWin = amToDate(Math.max(-200, yearAM - 150));
+      const endWin = amToDate(Math.min(2500, yearAM + 150));
+
       timelineInstanceRef.current.setSelection([targetEventId]);
-      timelineInstanceRef.current.focus(targetEventId, {
-        animation: { duration: 700, easingFunction: 'easeInOutQuad' }
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
       });
     } catch (err) {
       console.warn("No se pudo seleccionar la entidad en el canvas de timeline:", err);
@@ -188,6 +192,8 @@ export function TimelineView({
       },
       min: amToDate(-300),
       max: amToDate(2500),
+      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años (evita repetición de años)
+      zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 3000,
       start: amToDate(-180),
       end: amToDate(2369),
       format: {
@@ -209,16 +215,24 @@ export function TimelineView({
     const timeline = new Timeline(containerRef.current, visItems, visGroups, options);
     timelineInstanceRef.current = timeline;
 
-    // Enfoque automático inicial si hay targetEventId activo
+    // Enfoque automático inicial si hay targetEventId activo (Ventana panorámica de 300 años)
     if (targetEventId) {
-      setTimeout(() => {
-        try {
-          timeline.setSelection([targetEventId]);
-          timeline.focus(targetEventId, { animation: { duration: 700, easingFunction: 'easeInOutQuad' } });
-        } catch (err) {
-          console.warn("Error en focus de targetEventId:", err);
-        }
-      }, 120);
+      const eventObj = eventsMap.get(targetEventId);
+      if (eventObj) {
+        const yearAM = getEventAM(eventObj);
+        const startWin = amToDate(Math.max(-200, yearAM - 150));
+        const endWin = amToDate(Math.min(2500, yearAM + 150));
+        setTimeout(() => {
+          try {
+            timeline.setSelection([targetEventId]);
+            timeline.setWindow(startWin, endWin, {
+              animation: { duration: 600, easingFunction: 'easeInOutQuad' }
+            });
+          } catch (err) {
+            console.warn("Error en setWindow de targetEventId:", err);
+          }
+        }, 120);
+      }
     }
 
     // Manejador del evento de selección (clic en cualquier ítem)
