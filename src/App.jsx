@@ -14,6 +14,8 @@ import './App.css';
 export function App() {
   const [activeTab, setActiveTab] = useState('timeline');
   const [searchQuery, setSearchQuery] = useState('');
+  const [targetEventId, setTargetEventId] = useState(null);
+  const [targetPersonId, setTargetPersonId] = useState(null);
 
   const genesis = useGenesisData();
 
@@ -23,6 +25,22 @@ export function App() {
     peopleCount: genesis.people.length,
     covenantsCount: genesis.covenants.length
   }), [genesis.timelineEvents, genesis.people, genesis.covenants]);
+
+  // Manejador centralizado para seleccionar un evento desde cualquier panel e ir a la línea de tiempo con foco y destello
+  const handleSelectEvent = (eventId) => {
+    if (eventId) {
+      setTargetEventId(eventId);
+    }
+    setActiveTab('timeline');
+  };
+
+  // Manejador centralizado para seleccionar un personaje desde cualquier panel e ir a Personajes
+  const handleSelectPerson = (personId) => {
+    if (personId) {
+      setTargetPersonId(personId);
+    }
+    setActiveTab('people');
+  };
 
   // Resultados del buscador global
   const searchResults = useMemo(() => {
@@ -55,7 +73,7 @@ export function App() {
                     <h3>⚡ Eventos Encontrados ({searchResults.events.length})</h3>
                     <div className="search-cards-grid">
                       {searchResults.events.map(e => (
-                        <div key={e.id} className="search-card">
+                        <div key={e.id} className="search-card" onClick={() => handleSelectEvent(e.id)}>
                           <h4>{e.name}</h4>
                           <span className="search-am-tag">Anno Mundi: AM {e.year_am ?? 'N/A'}</span>
                           <p>{e.summary}</p>
@@ -70,7 +88,7 @@ export function App() {
                     <h3>👥 Personajes Encontrados ({searchResults.people.length})</h3>
                     <div className="search-cards-grid">
                       {searchResults.people.map(p => (
-                        <div key={p.id} className="search-card">
+                        <div key={p.id} className="search-card" onClick={() => handleSelectPerson(p.id)}>
                           <h4>{p.name}</h4>
                           <p><em>{p.name_meaning}</em></p>
                           <p>{p.theological_significance}</p>
@@ -108,7 +126,8 @@ export function App() {
               covenants={genesis.covenants}
               peopleMap={genesis.peopleMap}
               locationsMap={genesis.locationsMap}
-              onSelectPerson={() => setActiveTab('people')}
+              targetEventId={targetEventId}
+              onSelectPerson={handleSelectPerson}
             />
           )}
 
@@ -117,7 +136,8 @@ export function App() {
               people={genesis.people}
               peopleMap={genesis.peopleMap}
               eventsMap={genesis.eventsMap}
-              onSelectEvent={() => setActiveTab('timeline')}
+              targetPersonId={targetPersonId}
+              onSelectEvent={handleSelectEvent}
             />
           )}
 
@@ -126,8 +146,8 @@ export function App() {
               themes={genesis.themes}
               eventsMap={genesis.eventsMap}
               peopleMap={genesis.peopleMap}
-              onSelectEvent={() => setActiveTab('timeline')}
-              onSelectPerson={() => setActiveTab('people')}
+              onSelectEvent={handleSelectEvent}
+              onSelectPerson={handleSelectPerson}
             />
           )}
 
@@ -140,7 +160,8 @@ export function App() {
               chapters={genesis.chaptersMap}
               eventsMap={genesis.eventsMap}
               peopleMap={genesis.peopleMap}
-              onSelectEvent={() => setActiveTab('timeline')}
+              onSelectEvent={handleSelectEvent}
+              onSelectPerson={handleSelectPerson}
             />
           )}
 

@@ -29,6 +29,7 @@ export function TimelineView({
   covenants = [],
   peopleMap,
   locationsMap,
+  targetEventId,
   onSelectEvent,
   onSelectPerson
 }) {
@@ -158,6 +159,27 @@ export function TimelineView({
       });
     }
   }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, filteredEvents, isFilterActive]);
+
+  // Auto-enfoque de cámara y destello de ítem cuando se selecciona un targetEventId desde cualquier panel
+  useEffect(() => {
+    if (!targetEventId || !timelineInstanceRef.current) return;
+    const eventObj = eventsMap.get(targetEventId);
+    if (!eventObj) return;
+
+    setSelectedEntity({ type: 'event', data: eventObj });
+    try {
+      timelineInstanceRef.current.setSelection([targetEventId]);
+
+      const yearAM = getEventAM(eventObj);
+      const startWin = amToDate(Math.max(-200, yearAM - 35));
+      const endWin = amToDate(Math.min(2500, yearAM + 35));
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 700, easingFunction: 'easeInOutQuad' }
+      });
+    } catch (err) {
+      console.warn("No se pudo seleccionar la entidad en el canvas de timeline:", err);
+    }
+  }, [targetEventId, eventsMap]);
 
   useEffect(() => {
     if (!containerRef.current) return;

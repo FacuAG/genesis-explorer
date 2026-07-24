@@ -1,0 +1,485 @@
+/* ChapterMapPanel CSS Vanilla — Genesis Explorer */
+
+/* Buscador de Capítulos */
+.chapter-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.4rem 0.75rem;
+  min-width: 280px;
+}
+
+.chapter-search-input {
+  background: transparent;
+  border: none;
+  color: #f8fafc;
+  font-size: 0.88rem;
+  width: 100%;
+  outline: none;
+}
+
+.clear-filter-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+/* Grilla de los 50 Capítulos */
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.chapter-card {
+  background: rgba(30, 32, 41, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-card:hover {
+  background: rgba(42, 34, 56, 0.9);
+  border-color: #c084fc;
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
+  transform: translateY(-3px);
+}
+
+.chapter-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chapter-num-badge {
+  background: rgba(168, 85, 247, 0.25);
+  color: #e9d5ff;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.chapter-block-tag {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.chapter-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f8fafc;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.chapter-card-summary {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chapter-card-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cc-stat {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.chapter-study-btn {
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid #c084fc;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapter-study-btn:hover {
+  background: rgba(168, 85, 247, 0.45);
+}
+
+/* Sala de Estudio del Capítulo */
+.chapter-study-room {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.study-room-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-grid-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-grid-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.chapter-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.nav-chap-arrow {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-chap-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.current-chap-pill {
+  background: rgba(168, 85, 247, 0.25);
+  color: #e9d5ff;
+  border: 1px solid #c084fc;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.chapter-study-header {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.csh-badge {
+  background: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.csh-titles h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.6rem;
+  color: #f8fafc;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.csh-summary {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.copy-chapter-btn {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+  border: 1px solid #c084fc;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.copy-chapter-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
+}
+
+/* Grilla en 2 Columnas */
+.chapter-study-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .chapter-study-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Columna Izquierda (Lector) */
+.chapter-left-col, .chapter-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exegesis-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exegesis-box h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f8fafc;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+/* Bosquejo */
+.outline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.outline-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+}
+
+.outline-verses {
+  background: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.outline-title {
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Lector Bíblico Continuo */
+.biblical-text-reader-box {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+}
+
+.btr-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #f8fafc;
+}
+
+.btr-tag {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+}
+
+.verses-continuous-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.verse-paragraph {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.verse-num {
+  color: #c084fc;
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-right: 0.3rem;
+}
+
+/* Columna Derecha (Ficha Exegética) */
+.box-note-sm {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.chapter-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chapter-event-chip {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapter-event-chip:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #c084fc;
+  transform: translateX(4px);
+}
+
+.cec-am {
+  background: rgba(168, 85, 247, 0.25);
+  color: #e9d5ff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.cec-name {
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.cec-arrow {
+  color: #c084fc;
+  font-size: 0.85rem;
+}
+
+.chapter-people-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chapter-person-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapter-person-chip:hover {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #c084fc;
+}
+
+.chapter-hebrew-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.chap-hebrew-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+}
+
+.ch-heb {
+  font-size: 1.2rem;
+  color: #fde047;
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.ch-trans {
+  color: #c084fc;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.ch-mean {
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  flex: 1;
+}
+
+.chap-nt-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
