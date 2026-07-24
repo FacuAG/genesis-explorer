@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline/standalone';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
-import { mapGenesisToVisData, amToDate, dateToAM, getEventAM } from '../../data/timeline/timelineMapper';
+import { mapGenesisToVisData, amToDate, dateToAM, getEventAM } from '../../utils/timelineMapper';
 import { Modal } from '../common/Modal';
 import { BibleRefLink } from '../common/BibleRefLink';
 import { PersonDetailModal } from '../panels/PersonDetailModal';
