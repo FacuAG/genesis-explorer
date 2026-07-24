@@ -180,9 +180,13 @@ export function TimelineView({
     });
   }, [allEvents, selectedCategory, selectedBlockId, selectedChapter, filterText, blocksMap]);
 
+  const isSearchOrCategoryFilterActive = useMemo(() => {
+    return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0;
+  }, [selectedCategory, selectedBlockId, selectedChapter, filterText]);
+
   const isFilterActive = useMemo(() => {
-    return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
-  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump]);
+    return isSearchOrCategoryFilterActive || activeJump !== null;
+  }, [isSearchOrCategoryFilterActive, activeJump]);
 
   // 1. Inicialización ÚNICA de vis-timeline al montar el componente
   useEffect(() => {
@@ -267,7 +271,7 @@ export function TimelineView({
       covenants,
       eras,
       activeDetailLevel,
-      isFilterActive,
+      isSearchOrCategoryFilterActive,
       activeTargetId
     );
 
@@ -276,7 +280,7 @@ export function TimelineView({
 
     visItemsRef.current.clear();
     visItemsRef.current.add(items);
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, selectedEntity]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isSearchOrCategoryFilterActive, targetEventId, selectedEntity]);
 
   // 3. Auto-enfoque de cámara si hay targetEventId activo
   useEffect(() => {
@@ -446,6 +450,22 @@ export function TimelineView({
             </button>
           )}
         </div>
+
+        {/* Fila de Control de Cámara & Zoom (ARRIBA del lienzo, 100% visible sin tapar nada) */}
+        <div className="camera-controls-row">
+          <span className="cam-controls-label">🎥 Control de Zoom & Cámara:</span>
+          <div className="cam-buttons-group">
+            <button className="cam-btn" onClick={handleZoomIn} title="Acercar Cronología (Zoom +)">
+              ➕ Acercar
+            </button>
+            <button className="cam-btn" onClick={handleZoomOut} title="Alejar Cronología (Zoom -)">
+              ➖ Alejar
+            </button>
+            <button className="cam-btn reset-cam-btn" onClick={handleResetAllState} title="Restablecer Estado Inicial">
+              🔄 Restablecer
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* 3. BANNER DE FILTROS ACTIVOS CON CHIPS DESMONTABLES INDIVIDUALES */}
@@ -597,21 +617,8 @@ export function TimelineView({
         </div>
       )}
 
-      {/* 5. LIENZO DEL MOTOR VIS-TIMELINE CON CONTROLES DE ZOOM FLOTANTES INTEGRADOS */}
-      <div className="timeline-canvas-wrapper" style={{ position: 'relative' }}>
-        {/* BOTONES DE ZOOM FLOTANTES INTEGRADOS DIRECTAMENTE EN EL LIENZO */}
-        <div className="floating-timeline-zoom-controls">
-          <button className="ft-zoom-btn" onClick={handleZoomIn} title="Acercar Cronología (Zoom +)">
-            ➕ <span className="ft-btn-text">Acercar</span>
-          </button>
-          <button className="ft-zoom-btn" onClick={handleZoomOut} title="Alejar Cronología (Zoom -)">
-            ➖ <span className="ft-btn-text">Alejar</span>
-          </button>
-          <button className="ft-zoom-btn ft-reset-btn" onClick={handleResetAllState} title="Restablecer Estado Inicial de la Línea de Tiempo">
-            🔄 <span className="ft-btn-text">Restablecer</span>
-          </button>
-        </div>
-
+      {/* 5. LIENZO DEL MOTOR VIS-TIMELINE */}
+      <div className="timeline-canvas-wrapper">
         <div ref={containerRef} className="vis-timeline-canvas" />
       </div>
 
