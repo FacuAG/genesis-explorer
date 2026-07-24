@@ -216,6 +216,7 @@ export function TimelineView({
 
   // 2. Actualización Reactiva de Ítems en memoria SIN destruir el canvas
   useEffect(() => {
+    const activeTargetId = targetEventId || (selectedEntity?.type === 'event' ? selectedEntity.data?.id : null);
     const { groups, items } = mapGenesisToVisData(
       filteredEvents,
       narrativeBlocks,
@@ -223,7 +224,7 @@ export function TimelineView({
       eras,
       activeDetailLevel,
       isFilterActive,
-      targetEventId
+      activeTargetId
     );
 
     visGroupsRef.current.clear();
@@ -231,7 +232,7 @@ export function TimelineView({
 
     visItemsRef.current.clear();
     visItemsRef.current.add(items);
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, selectedEntity]);
 
   // 3. Auto-enfoque de cámara si hay targetEventId activo
   useEffect(() => {

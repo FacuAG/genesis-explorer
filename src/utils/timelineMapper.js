@@ -210,37 +210,36 @@ export function mapGenesisToVisData(
     });
   });
 
-  // 5. Mapear Eventos Bíblicos con Filtrado LOD
+  // 5. Mapear Eventos Bíblicos con Filtrado LOD Estricto
   let visibleEvents = events;
 
-  if (!isFilterActive && !targetEventId) {
-    if (detailLevel === 1) {
-      // Hitos Históricos Clave (Eventos principales de cada era)
-      visibleEvents = events.filter(e => {
-        const am = getEventAM(e);
-        return (
-          e.category === 'covenant' ||
-          e.category === 'creation' ||
-          am === 0 || am === 1656 || am === 2083 || am === 2289 || am === 2369
-        );
-      });
-    } else if (detailLevel === 2) {
-      // Estructurado (Pactos, Creación, Juicios y Grandes Patriarcas)
-      visibleEvents = events.filter(e => {
-        const am = getEventAM(e);
-        return (
-          e.category === 'covenant' ||
-          e.category === 'creation' ||
-          e.category === 'judgment' ||
-          e.category === 'patriarch' ||
-          am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2083 || am === 2289 || am === 2369
-        );
-      });
-    }
-    // detailLevel === 3 muestra todos los eventos
+  if (detailLevel === 1) {
+    // 1: Hitos Históricos Clave (~8 eventos principales)
+    visibleEvents = events.filter(e => {
+      const am = getEventAM(e);
+      return (
+        e.is_major_milestone ||
+        e.category === 'covenant' ||
+        am === 0 || am === 1656 || am === 2083 || am === 2289 || am === 2369
+      );
+    });
+  } else if (detailLevel === 2) {
+    // 2: Estructurado (~25 eventos de pactos, creación, juicios y patriarcas)
+    visibleEvents = events.filter(e => {
+      const am = getEventAM(e);
+      return (
+        e.is_major_milestone ||
+        e.category === 'covenant' ||
+        e.category === 'creation' ||
+        e.category === 'judgment' ||
+        e.category === 'patriarch' ||
+        am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2083 || am === 2289 || am === 2369
+      );
+    });
   }
+  // detailLevel === 3 muestra los 82 eventos completos
 
-  // Garantizar que targetEventId esté siempre presente
+  // Garantizar que targetEventId esté siempre presente si fue seleccionado
   if (targetEventId && !visibleEvents.some(e => e.id === targetEventId)) {
     const targetObj = events.find(e => e.id === targetEventId);
     if (targetObj) {
@@ -253,7 +252,6 @@ export function mapGenesisToVisData(
     const amYear = getEventAM(e);
     const eventName = e.short_name || e.name;
     const isTarget = e.id === targetEventId;
-    const highlightClass = (isFilterActive || isTarget) ? 'vis-item-highlighted' : '';
     const targetClass = isTarget ? 'vis-item-target-active' : '';
 
     const contentHtml = `
@@ -270,7 +268,7 @@ export function mapGenesisToVisData(
       content: contentHtml,
       start: amToDate(amYear),
       type: 'box',
-      className: `vis-item-event cat-${e.category} ${highlightClass} ${targetClass}`
+      className: `vis-item-event cat-${e.category} ${targetClass}`
     });
   });
 
