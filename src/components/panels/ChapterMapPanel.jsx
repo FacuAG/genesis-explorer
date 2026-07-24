@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { BibleRefLink } from '../common/BibleRefLink';
@@ -9,7 +9,7 @@ import './ChapterMapPanel.css';
 /**
  * Componente profesional para la Sala de Estudio Exegético por Capítulo (Génesis 1 a 50).
  * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
- * Menú Flotante de Acciones para Versículos Seleccionados (Copiar, Resaltar, Citas NT) y lectura limpia.
+ * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales de Capítulos y Volver Arriba.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedChapNum, setSelectedChapNum] = useState(null);
@@ -24,6 +24,47 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [selectedColor, setSelectedColor] = useState('gold'); // 'gold' | 'blue' | 'green' | 'red'
   const [isFullscreenReader, setIsFullscreenReader] = useState(false);
   const [selectionNotice, setSelectionNotice] = useState('');
+  const [readingProgress, setReadingProgress] = useState(0);
+
+  // Scroll al extremo superior al cambiar de capítulo
+  useEffect(() => {
+    if (selectedChapNum !== null) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [selectedChapNum]);
+
+  // Listener para calcular la barra de progreso de lectura
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
+        setReadingProgress(progress);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handlePrevChapter = () => {
+    if (selectedChapNum > 1) {
+      setSelectedChapNum(prev => prev - 1);
+      setHighlightedVerses({});
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNextChapter = () => {
+    if (selectedChapNum < 50) {
+      setSelectedChapNum(prev => prev + 1);
+      setHighlightedVerses({});
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Ordenar lista de 50 capítulos
   const sortedChapters = useMemo(() => {
@@ -256,6 +297,14 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             </div>
           </div>
 
+          {/* Banner de Enfoque Mesiánico de Cristología */}
+          {exegesisData?.christological_theme && (
+            <div className="christological-banner">
+              <span className="cb-badge">✝️ Revelación Mesiánica & Cumplimiento en Cristo</span>
+              <p>{exegesisData.christological_theme}</p>
+            </div>
+          )}
+
           {/* Cuerpo Principal de Estudio en 2 Columnas */}
           <div className="chapter-study-grid">
             {/* COLUMNA IZQUIERDA: Lector RVR1960 & Bosquejo Homilético */}
@@ -279,6 +328,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
               <div className="biblical-text-reader-box">
                 {/* BARRA DE NAVEGACIÓN Y CONTROLES PEGAJOSA (STICKY HEADER) */}
                 <div className="sticky-reader-toolbar">
+                  <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
                   <div className="srt-left">
                     <div className="srt-chapter-navigation">
                       <button
@@ -531,6 +581,43 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             if (nextP) setModalPerson(nextP);
           }}
         />
+      )}
+      {/* CONTROLES FLOTANTES DE NAVEGACIÓN LATERAL Y VOLVER ARRIBA EN MODO LECTURA */}
+      {selectedChapNum !== null && (
+        <>
+          {/* BOTÓN FLOTANTE LATERAL IZQUIERDO: CAPÍTULO ANTERIOR */}
+          {selectedChapNum > 1 && (
+            <button
+              className="floating-side-nav-btn prev-chap"
+              onClick={handlePrevChapter}
+              title={`Ir al Capítulo ${selectedChapNum - 1}`}
+            >
+              <span className="side-nav-arrow">◀</span>
+              <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
+            </button>
+          )}
+
+          {/* BOTÓN FLOTANTE LATERAL DERECHO: CAPÍTULO SIGUIENTE */}
+          {selectedChapNum < 50 && (
+            <button
+              className="floating-side-nav-btn next-chap"
+              onClick={handleNextChapter}
+              title={`Ir al Capítulo ${selectedChapNum + 1}`}
+            >
+              <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
+              <span className="side-nav-arrow">▶</span>
+            </button>
+          )}
+
+          {/* BOTÓN FLOTANTE VOLVER ARRIBA */}
+          <button
+            className="floating-scroll-top-btn"
+            onClick={handleScrollToTop}
+            title="Volver al inicio de la página"
+          >
+            ⬆️ <span className="scroll-top-text">Arriba</span>
+          </button>
+        </>
       )}
     </div>
   );

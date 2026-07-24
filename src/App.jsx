@@ -19,6 +19,11 @@ export function App() {
 
   const genesis = useGenesisData();
 
+  // Resetear el scroll de la ventana al cambiar de pestaña principal
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab]);
+
   // Estadísticas globales para el Header
   const totalStats = useMemo(() => ({
     eventsCount: genesis.timelineEvents.length,
