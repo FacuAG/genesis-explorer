@@ -25,17 +25,30 @@ const EVENT_CATEGORIES = {
  * para un rendimiento ultra-fluido sin parpadeos ni reinicios de cámara.
  */
 export function TimelineView({
+  events = [],
   timelineEvents = [],
   narrativeBlocks = [],
   covenants = [],
   eras = [],
   peopleMap = new Map(),
   locationsMap = new Map(),
-  eventsMap = new Map(),
+  eventsMap: externalEventsMap,
   targetEventId,
   onSelectEvent,
   onSelectPerson
 }) {
+  const allEvents = useMemo(() => {
+    if (Array.isArray(events) && events.length > 0) return events;
+    if (Array.isArray(timelineEvents) && timelineEvents.length > 0) return timelineEvents;
+    return [];
+  }, [events, timelineEvents]);
+
+  const eventsMap = useMemo(() => {
+    if (externalEventsMap && externalEventsMap.size > 0) return externalEventsMap;
+    const map = new Map();
+    (allEvents || []).forEach(e => map.set(e.id, e));
+    return map;
+  }, [externalEventsMap, allEvents]);
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
 
@@ -100,7 +113,7 @@ export function TimelineView({
 
   // Filtrado reactivo de eventos según los controles activos
   const filteredEvents = useMemo(() => {
-    return timelineEvents.filter(evt => {
+    return allEvents.filter(evt => {
       // Filtro de Categoría
       if (selectedCategory !== 'all' && evt.category !== selectedCategory) return false;
 

@@ -121,11 +121,13 @@ export function App() {
           {activeTab === 'timeline' && (
             <TimelineView
               events={genesis.timelineEvents}
+              timelineEvents={genesis.timelineEvents}
               eras={genesis.eras}
               narrativeBlocks={genesis.narrativeBlocks}
               covenants={genesis.covenants}
               peopleMap={genesis.peopleMap}
               locationsMap={genesis.locationsMap}
+              eventsMap={genesis.eventsMap}
               targetEventId={targetEventId}
               onSelectPerson={handleSelectPerson}
             />
