@@ -1,33 +1,35 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline/standalone';
-import 'vis-timeline/styles/vis-timeline-graph2d.min.css';
-import {
-  mapGenesisToVisData,
-  EVENT_CATEGORIES,
-  getEventAM,
-  amToDate,
-  dateToAM,
-  getEventSummary,
-  getEventRefStr
-} from '../../utils/timelineMapper';
+import 'vis-timeline/styles/vis-timeline-graph2d.css';
+import { mapGenesisToVisData, amToDate, dateToAM, getEventAM } from '../../data/timeline/timelineMapper';
 import { Modal } from '../common/Modal';
 import { BibleRefLink } from '../common/BibleRefLink';
 import { PersonDetailModal } from '../panels/PersonDetailModal';
 import './TimelineView.css';
 
+// Diccionario de categorías de eventos
+const EVENT_CATEGORIES = {
+  creation: { label: 'Creación & Orígenes', icon: '🌱' },
+  patriarch: { label: 'Patriarcas & Vidas', icon: '👑' },
+  covenant: { label: 'Pactos Divinos', icon: '📜' },
+  judgment: { label: 'Juicio & Caída', icon: '⚡' },
+  miracle: { label: 'Milagros & Teofanías', icon: '✨' },
+  exile: { label: 'Exilio & Migración', icon: '⛺' }
+};
+
 /**
- * Componente interactivo principal de la Línea de Tiempo de Genesis Explorer.
- * Utiliza el motor vis-timeline con renderizado de eje Anno Mundi (AM),
- * apilamiento dinámico anti-superposición, zoom real y selección interactiva de eventos.
+ * Componente principal de la Línea de Tiempo Cronológica interactiva (Anno Mundi)
+ * impulsada por el motor gráfico vis-timeline.
  */
 export function TimelineView({
-  events = [],
-  eras = [],
+  timelineEvents = [],
   narrativeBlocks = [],
   covenants = [],
-  peopleMap,
-  locationsMap,
+  eras = [],
+  peopleMap = new Map(),
+  locationsMap = new Map(),
+  eventsMap = new Map(),
   targetEventId,
   onSelectEvent,
   onSelectPerson
@@ -35,48 +37,29 @@ export function TimelineView({
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
 
-  // Entidad activa seleccionada (Evento, Pacto, Bloque o Era)
-  const [selectedEntity, setSelectedEntity] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalPerson, setModalPerson] = useState(null);
-
-  // Estados de Filtro Avanzado
+  // Estados de Filtros y Nivel de Detalle (LOD)
+  const [activeDetailLevel, setActiveDetailLevel] = useState(2); // 1: Hitos, 2: Estructurado, 3: Exhaustivo
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedBlockId, setSelectedBlockId] = useState('all');
   const [selectedChapter, setSelectedChapter] = useState('all');
   const [filterText, setFilterText] = useState('');
-  const [detailLevel, setDetailLevel] = useState(2); // Default Nivel 2: Limpio & Estructurado
+  const [activeJump, setActiveJump] = useState(null); // 'adam', 'noah', 'abraham', 'joseph', 'exodus'
 
-  // Estado de Salto Rápido Activo
-  const [activeJump, setActiveJump] = useState(null); // { id, startAM, endAM, label }
+  // Estado para la entidad seleccionada en el inspector rápido superior
+  const [selectedEntity, setSelectedEntity] = useState(null);
 
-  const isFilterActive = selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
-  const activeDetailLevel = isFilterActive ? 3 : detailLevel;
+  // Estado para el modal de detalle completo de evento
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Manejador del Salto Rápido con resalte
-  const handleJumpToAM = (jumpId, startAM, endAM, label) => {
-    setActiveJump({ id: jumpId, startAM, endAM, label });
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(startAM), amToDate(endAM), { animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
-    }
-  };
+  // Estado para el modal directo de personaje
+  const [modalPerson, setModalPerson] = useState(null);
 
-  // Reset de todos los filtros
-  const handleResetFilters = () => {
-    setSelectedCategory('all');
-    setSelectedBlockId('all');
-    setSelectedChapter('all');
-    setFilterText('');
-    setActiveJump(null);
-    setDetailLevel(2);
-  };
-
-  // Mapas auxiliares para búsqueda rápida O(1)
-  const eventsMap = useMemo(() => {
+  // Mapeos rápidos para recuperación de entidades por ID
+  const covenantsMap = useMemo(() => {
     const map = new Map();
-    events.forEach(e => map.set(e.id, e));
+    covenants.forEach(c => map.set(c.id, c));
     return map;
-  }, [events]);
+  }, [covenants]);
 
   const blocksMap = useMemo(() => {
     const map = new Map();
@@ -84,58 +67,40 @@ export function TimelineView({
     return map;
   }, [narrativeBlocks]);
 
-  const covenantsMap = useMemo(() => {
-    const map = new Map();
-    covenants.forEach(c => map.set(c.id, c));
-    return map;
-  }, [covenants]);
-
   const erasMap = useMemo(() => {
     const map = new Map();
     eras.forEach(e => map.set(e.id, e));
     return map;
   }, [eras]);
 
-  // Filtrado reactivo de eventos
+  // Filtrado reactivo de eventos según los controles activos
   const filteredEvents = useMemo(() => {
-    return events.filter(evt => {
-      // Filtro 1: Categoría
+    return timelineEvents.filter(evt => {
+      // Filtro de Categoría
       if (selectedCategory !== 'all' && evt.category !== selectedCategory) return false;
 
-      // Filtro 2: Bloque Narrativo
-      if (selectedBlockId !== 'all') {
-        const block = blocksMap.get(selectedBlockId);
-        if (block) {
-          const am = getEventAM(evt);
-          if (am < block.am_start || am > block.am_end) return false;
-        }
-      }
+      // Filtro por Bloque Narrativo
+      if (selectedBlockId !== 'all' && evt.block_id !== selectedBlockId) return false;
 
-      // Filtro 3: Capítulo Bíblico
-      if (selectedChapter !== 'all') {
-        const chapNum = parseInt(selectedChapter, 10);
-        const refChap = evt.scriptural_reference?.chapter || (evt.references && evt.references[0]?.chapter) || evt.chapter_start;
-        if (refChap !== chapNum) return false;
-      }
+      // Filtro por Capítulo
+      if (selectedChapter !== 'all' && Number(evt.chapter) !== Number(selectedChapter)) return false;
 
-      // Filtro 4: Búsqueda por Texto Libre
+      // Buscador Rápido de Texto
       if (filterText.trim().length > 0) {
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const nameMatch = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
-        const summaryMatch = getEventSummary(evt).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
-        const teachingMatch = (evt.theological_teaching || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
-        if (!nameMatch && !summaryMatch && !teachingMatch) return false;
-      }
-
-      // Filtro 5: Salto Rápido Activo
-      if (activeJump) {
-        const am = getEventAM(evt);
-        if (am < activeJump.startAM || am > activeJump.endAM) return false;
+        const name = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const summary = (evt.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const ref = (evt.scriptural_reference?.display || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        if (!name.includes(q) && !summary.includes(q) && !ref.includes(q)) return false;
       }
 
       return true;
     });
-  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, blocksMap]);
+  }, [timelineEvents, selectedCategory, selectedBlockId, selectedChapter, filterText]);
+
+  const isFilterActive = useMemo(() => {
+    return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
+  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump]);
 
   // Auto-enfoque de cámara y destello de ítem cuando se selecciona un targetEventId desde cualquier panel
   useEffect(() => {
@@ -192,7 +157,7 @@ export function TimelineView({
       },
       min: amToDate(-300),
       max: amToDate(2500),
-      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años (evita repetición de años)
+      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años
       zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 3000,
       start: amToDate(-180),
       end: amToDate(2369),
@@ -256,28 +221,18 @@ export function TimelineView({
           const eventObj = eventsMap.get(itemId);
           if (eventObj) {
             setSelectedEntity({ type: 'event', data: eventObj });
-            if (onSelectEvent) onSelectEvent(eventObj);
+            if (onSelectEvent) onSelectEvent(eventObj.id);
           }
         }
       }
     });
 
-    // Manejador de doble clic para abrir el modal directamente
-    timeline.on('doubleClick', function (properties) {
-      if (properties.item) {
-        setIsModalOpen(true);
-      }
-    });
-
     return () => {
-      if (timelineInstanceRef.current) {
-        timelineInstanceRef.current.destroy();
-        timelineInstanceRef.current = null;
-      }
+      timeline.destroy();
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent]);
 
-  // Controles manuales de Zoom y Navegación
+  // Controladores de Zoom y Cámara
   const handleZoomIn = () => {
     if (timelineInstanceRef.current) timelineInstanceRef.current.zoomIn(0.4);
   };
@@ -288,27 +243,47 @@ export function TimelineView({
 
   const handleResetZoom = () => {
     if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(-100), amToDate(2400), {
-        animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+      timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), {
+        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
       });
+      setSelectedEntity(null);
     }
   };
 
+  // Limpiar todos los filtros activos
+  const handleResetFilters = () => {
+    setSelectedCategory('all');
+    setSelectedBlockId('all');
+    setSelectedChapter('all');
+    setFilterText('');
+    setActiveJump(null);
+  };
+
+  // Extraer datos auxiliares para el inspector
   const activeEventObj = selectedEntity?.type === 'event' ? selectedEntity.data : null;
   const activeBlockObj = selectedEntity?.type === 'block' ? selectedEntity.data : null;
   const activeCovenantObj = selectedEntity?.type === 'covenant' ? selectedEntity.data : null;
 
+  const getEventSummary = (evt) => evt?.summary || evt?.teaching || 'Sin resumen disponible.';
+  const getEventRefStr = (evt) => evt?.scriptural_reference?.display || (evt?.chapter ? `Génesis ${evt.chapter}` : 'Génesis');
+
   return (
-    <div className="timeline-view-container">
+    <div className="timeline-view-wrapper">
       {/* Barra de Filtros Avanzados y Controles */}
       <div className="timeline-controls-bar">
         <div className="filters-row">
           <div className="filter-group">
             <label>Nivel de Detalle (LOD):</label>
             <div className="lod-buttons">
-              <button className={`lod-btn ${detailLevel === 1 ? 'active' : ''}`} onClick={() => setDetailLevel(1)}>1: Hitos</button>
-              <button className={`lod-btn ${detailLevel === 2 ? 'active' : ''}`} onClick={() => setDetailLevel(2)}>2: Estructurado</button>
-              <button className={`lod-btn ${detailLevel === 3 ? 'active' : ''}`} onClick={() => setDetailLevel(3)}>3: Exhaustivo ({events.length})</button>
+              <button className={`lod-btn ${activeDetailLevel === 1 ? 'active' : ''}`} onClick={() => setActiveDetailLevel(1)}>
+                1: Hitos
+              </button>
+              <button className={`lod-btn ${activeDetailLevel === 2 ? 'active' : ''}`} onClick={() => setActiveDetailLevel(2)}>
+                2: Estructurado
+              </button>
+              <button className={`lod-btn ${activeDetailLevel === 3 ? 'active' : ''}`} onClick={() => setActiveDetailLevel(3)}>
+                3: Exhaustivo ({timelineEvents.length})
+              </button>
             </div>
           </div>
 
@@ -339,29 +314,17 @@ export function TimelineView({
             </button>
           )}
         </div>
-
-        {/* Botones de Cámara */}
-        <div className="camera-controls-row">
-          <button className="cam-btn" onClick={handleZoomIn} title="Acercar Zoom">🔍 +</button>
-          <button className="cam-btn" onClick={handleZoomOut} title="Alejar Zoom">🔍 -</button>
-          <button className="cam-btn" onClick={handleResetZoom} title="Restablecer Vista Completa">🌐 Restablecer</button>
-        </div>
       </div>
 
-      {/* Lienzo del Motor vis-timeline */}
-      <div className="timeline-canvas-wrapper">
-        <div ref={containerRef} className="vis-timeline-canvas" />
-      </div>
-
-      {/* Panel Inferior de Inspección Rápida de Entidad Seleccionada */}
+      {/* PANEL DE EXPLICACIÓN DEL EVENTO SELECCIONADO (AHORA UBICADO ARRIBA DE LA LÍNEA DE TIEMPO) */}
       {selectedEntity && (
-        <div className="entity-inspector-panel">
+        <div className="entity-inspector-panel top-inspector">
           <div className="inspector-header">
             <span className="inspector-badge">
               {selectedEntity.type === 'event' ? '⚡ EVENTO BÍBLICO' : selectedEntity.type === 'covenant' ? '👑 PACTO DIVINO' : '📍 BLOQUE NARRATIVO'}
             </span>
             <h3>{selectedEntity.data.name}</h3>
-            <button className="close-inspector-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+            <button className="close-inspector-btn" onClick={() => setSelectedEntity(null)}>✕ Cerrar Explicación</button>
           </div>
 
           <div className="inspector-body">
@@ -405,7 +368,7 @@ export function TimelineView({
 
                 <div className="inspector-actions">
                   <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
-                    📖 Ver Ficha Completa ➔
+                    📖 Ver Ficha Exegética Completa ➔
                   </button>
                 </div>
               </>
@@ -433,6 +396,24 @@ export function TimelineView({
         </div>
       )}
 
+      {/* LIENZO DEL MOTOR VIS-TIMELINE CON CONTROLES DE ZOOM FLOTANTES INTEGRADOS */}
+      <div className="timeline-canvas-wrapper" style={{ position: 'relative' }}>
+        {/* BOTONES DE ZOOM FLOTANTES INTEGRADOS DIRECTAMENTE EN EL LIENZO */}
+        <div className="floating-timeline-zoom-controls">
+          <button className="ft-zoom-btn" onClick={handleZoomIn} title="Acercar Cronología (Zoom +)">
+            ➕ <span className="ft-btn-text">Acercar</span>
+          </button>
+          <button className="ft-zoom-btn" onClick={handleZoomOut} title="Alejar Cronología (Zoom -)">
+            ➖ <span className="ft-btn-text">Alejar</span>
+          </button>
+          <button className="ft-zoom-btn ft-reset-btn" onClick={handleResetZoom} title="Restablecer Panorama Completo">
+            🌐 <span className="ft-btn-text">Panorama Completo</span>
+          </button>
+        </div>
+
+        <div ref={containerRef} className="vis-timeline-canvas" />
+      </div>
+
       {/* Modal de Detalle de Evento */}
       {isModalOpen && activeEventObj && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} maxWidth="780px">
@@ -440,7 +421,7 @@ export function TimelineView({
             <div className="event-modal-header">
               <span className="event-modal-am">Anno Mundi: AM {getEventAM(activeEventObj)}</span>
               <h2>{activeEventObj.name}</h2>
-              <p className="event-modal-ref">📖 Reference: {getEventRefStr(activeEventObj)}</p>
+              <p className="event-modal-ref">📖 Referencia: {getEventRefStr(activeEventObj)}</p>
             </div>
 
             <div className="event-modal-body">

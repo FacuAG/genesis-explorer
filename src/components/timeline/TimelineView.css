@@ -123,36 +123,58 @@
   background: rgba(239, 68, 68, 0.4);
 }
 
-.camera-controls-row {
+/* BOTONES DE ZOOM FLOTANTES INTEGRADOS EN EL LIENZO */
+.floating-timeline-zoom-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding-top: 0.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 0.4rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #c084fc;
+  border-radius: 30px;
+  padding: 0.35rem 0.6rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(192, 132, 252, 0.3);
+  backdrop-filter: blur(12px);
 }
 
-.cam-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #e2e8f0;
-  font-size: 0.8rem;
+.ft-zoom-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.35rem 0.75rem;
-  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 20px;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
 }
 
-.cam-btn:hover {
-  background: rgba(168, 85, 247, 0.3);
+.ft-zoom-btn:hover {
+  background: rgba(168, 85, 247, 0.4);
   border-color: #c084fc;
-  color: #ffffff;
+  transform: translateY(-1px);
 }
 
-/* Contenedor del montaje de vis-timeline */
+.ft-reset-btn {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #c084fc;
+}
+
+.ft-btn-text {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .ft-btn-text { display: none; }
+}
+
+/* Lienzo del Motor vis-timeline */
 .vis-timeline-mount, .timeline-canvas-wrapper {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -280,6 +302,17 @@
   gap: 0.85rem;
 }
 
+.entity-inspector-panel.top-inspector {
+  border-color: #f59e0b;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .inspector-header {
   display: flex;
   align-items: center;
@@ -306,14 +339,21 @@
 }
 
 .close-inspector-btn {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.close-inspector-btn:hover { color: #ffffff; }
+.close-inspector-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+  color: #ffffff;
+}
 
 .inspector-body {
   display: flex;
