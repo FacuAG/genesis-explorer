@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { BibleRefLink } from '../common/BibleRefLink';
 import { Modal } from '../common/Modal';
-import { THEOLOGICAL_STUDIES } from '../../data/theology/themeStudies';
+import { THEOLOGICAL_STUDIES, LIBRARY_INFO } from '../../data/theology/themeStudies';
 import './Panels.css';
 import './ThemePanel.css';
 
 /**
  * Componente para el Explorador de Temas Teológicos Transversales del Génesis.
- * Permite estudiar los 8 grandes temas bíblicos con exégesis evangélica profunda,
- * tratados multi-sección, términos en hebreo bíblico, referencias al NT y notas al pie.
+ * Permite estudiar los 8 grandes temas bíblicos con tratados exegéticos descargados
+ * de La Biblia del Expositor y la Biblia Temática de Nave.
  */
 export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedTheme, setSelectedTheme] = useState(null);
@@ -30,7 +30,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
         <div>
           <h2>🕊️ Temas Teológicos Transversales ({themes.length})</h2>
           <p>
-            Tratados de exégesis sistemática e investigación profunda sobre los grandes hilos doctrinales del Génesis y su cumplimiento en Jesucristo.
+            Tratados de investigación y exégesis extraídos de <strong>{LIBRARY_INFO.source}</strong> ({LIBRARY_INFO.edition}).
           </p>
         </div>
       </div>
@@ -45,7 +45,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
                 <span className="theme-icon">{theme.icon}</span>
                 <div>
                   <h3 className="theme-title">{theme.title}</h3>
-                  {studyData && <span className="theme-reading-badge">⏱️ {studyData.reading_time}</span>}
+                  {studyData && <span className="theme-reading-badge">⏱️ {studyData.reading_time || '15 min'}</span>}
                 </div>
               </div>
               <h4 className="theme-subtitle">{theme.subtitle}</h4>
@@ -75,10 +75,10 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
             <div className="theme-modal-header">
               <div className="theme-header-tags">
                 <span className="theme-modal-badge">{selectedTheme.icon} Tema Teológico</span>
-                {currentStudy && <span className="theme-framework-badge">📜 {currentStudy.author_framework}</span>}
+                <span className="theme-framework-badge">📖 {currentStudy?.source_reference || LIBRARY_INFO.source}</span>
               </div>
               <h2 className="theme-modal-title">{selectedTheme.title}</h2>
-              <p className="theme-modal-subtitle">{selectedTheme.subtitle}</p>
+              <p className="theme-modal-subtitle">{currentStudy?.subtitle || selectedTheme.subtitle}</p>
             </div>
 
             {/* Navegación por Pestañas del Tratado */}
@@ -87,7 +87,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
                 className={`study-tab-btn ${activeStudyTab === 'essay' ? 'active' : ''}`}
                 onClick={() => setActiveStudyTab('essay')}
               >
-                📚 Tratado Exegético
+                📚 Tratado Exegético (La Biblia del Expositor)
               </button>
               <button
                 className={`study-tab-btn ${activeStudyTab === 'hebrew' ? 'active' : ''}`}
@@ -109,7 +109,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
               </button>
             </div>
 
-            {/* TAB 1: Tratado Exegético Completo por Secciones */}
+            {/* TAB 1: Tratado Exegético Completo por Secciones de La Biblia del Expositor */}
             {activeStudyTab === 'essay' && (
               <div className="study-tab-content">
                 {currentStudy && currentStudy.sections ? (
@@ -133,13 +133,20 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
                   </div>
                 )}
 
-                {/* Pasajes Fundamentales al pie del Tratado */}
-                {selectedTheme.genesis_passages && selectedTheme.genesis_passages.length > 0 && (
+                {/* Índice de Pasajes por Temas de la Biblia Temática de Nave */}
+                {currentStudy && currentStudy.topical_index && currentStudy.topical_index.length > 0 && (
                   <div className="theme-section essay-passages-box">
-                    <h3 className="theme-section-subtitle">📖 Pasajes Clave del Génesis</h3>
-                    <div className="theme-refs-flex">
-                      {selectedTheme.genesis_passages.map((refStr, idx) => (
-                        <BibleRefLink key={idx} reference={refStr} />
+                    <h3 className="theme-section-subtitle">📑 Índice Temático de Nave (Nave's Topical Bible)</h3>
+                    <div className="topical-index-grid">
+                      {currentStudy.topical_index.map((top, idx) => (
+                        <div key={idx} className="topical-item">
+                          <strong className="topical-title">✦ {top.topic}:</strong>
+                          <div className="theme-refs-flex">
+                            {top.passages.map((refStr, pIdx) => (
+                              <BibleRefLink key={pIdx} reference={refStr} />
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>
