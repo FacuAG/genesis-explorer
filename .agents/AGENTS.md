@@ -1,4 +1,4 @@
-﻿# Genesis Explorer — Contexto del Proyecto para el Agente
+# Genesis Explorer — Contexto del Proyecto para el Agente
 
 ## ¿Qué es este proyecto?
 
@@ -84,6 +84,28 @@ Este archivo JSON es el **corazón del proyecto**. Está estructurado en capas (
 - **`notable_overlaps`**: Tabla de convivencias entre patriarcas (ej.: Adán convivió 243 años con Matusalén).
 - **`main_genealogy`**: Array lineal de los 63 antepasados directos de Jesús desde Adán.
 - **`messianic_promises`**: Rastrea cómo la promesa del Mesías se fue transmitiendo de generación en generación.
+
+---
+
+## 🏛️ Estándar de la Base de Datos Teológica y Escalabilidad Multilibro
+
+> **PRINCIPIO FUNDAMENTAL:** La **base de datos bíblica es el corazón y el componente MÁS IMPORTANTE** de toda la aplicación. El valor pedagógico y exegético de Genesis Explorer radica en la absoluta solidez, riqueza y fidelidad de sus datos.
+
+### 📜 Reglas de Oro para la Base de Datos:
+1. **Marcos Teológico Doctrinal:**
+   - La información debe basarse 100% en las Santas Escrituras bajo la doctrina **Cristiana Evangélica** (Hermenéutica Gramático-Histórica, Sola Scriptura, Inerrancia de la Biblia).
+   - Queda estrictamente prohibida la especulación fuera del marco bíblico evangélico o resúmenes superficiales.
+
+2. **Profundidad y Exhaustividad (Calidad sobre Rapidez):**
+   - Es preferible un trabajo de datos minucioso, profundo y bien hecho que entregas apresuradas o incompletas.
+   - Cada entidad (evento, personaje, tema, pacto) debe incluir:
+     - **Citas bíblicas exactas** (libro, capítulo, versículos de inicio y fin).
+     - **Referencias cruzadas con el Nuevo Testamento** (cumplimiento mesiánico y tipológico).
+     - **Notas al pie de página y aclaraciones léxicas** para términos difíciles o relevantes en **Hebreo/Griego bíblico** (con transliteración y etimología).
+
+3. **Arquitectura Escalable a Otros Libros Bíblicos:**
+   - La estructura de capas (`layers`, `timeline_events`, `people`, `locations`, `covenants`, `dispensations`, `themes`, `questions`, `chapters_map`) está diseñada para ser **100% modular y escalable**.
+   - El esquema debe mantenerse estandarizado para que en el futuro la aplicación pueda incorporar otros libros de la Biblia (Éxodo, Levítico, Números, Josué, Daniel, los Evangelios, etc.) reutilizando el mismo motor visual e interfaz.
 
 ---
 
