@@ -5,7 +5,7 @@ import './Panels.css';
 
 /**
  * Componente para el Explorador de Personajes de Génesis.
- * Incluye gráfico LifespanBar, filtro por categoría y modal de perfil bíblico completo.
+ * Incluye gráfico LifespanBar, catálogo de los 33 personajes, filtro por categoría y modal de perfil bíblico completo.
  */
 export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -34,8 +34,8 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
 
       <div className="panel-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
-          <h2>👥 Personajes del Génesis ({filteredPeople.length})</h2>
-          <p>Perfiles bíblicos detallados con longevidad Anno Mundi, trazas de personalidad y genealogía.</p>
+          <h2>👥 Personajes del Génesis ({filteredPeople.length} de {people.length})</h2>
+          <p>Perfiles bíblicos detallados de todos los patriarcas, matriarcas y figuras históricas documentadas en el texto.</p>
         </div>
 
         {/* Filtro por Categoría de Personaje */}
@@ -61,29 +61,42 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
 
       {/* Grilla de Tarjetas de Personajes */}
       <div className="people-grid">
-        {filteredPeople.map((person) => (
-          <div key={person.id} className="person-card">
-            <div className="person-card-header">
-              <h3 className="person-name">{person.name}</h3>
-              {person.category && <span className="person-category-badge">{person.category}</span>}
-            </div>
-            <p className="person-meaning"><em>Significado:</em> {person.name_meaning || 'No especificado'}</p>
-            {person.chronology && (
+        {filteredPeople.map((person) => {
+          const hasBirth = typeof person.chronology?.birth_am === 'number';
+          const hasDeath = typeof person.chronology?.death_am === 'number';
+          const lifespanStr = person.chronology?.lifespan ? `${person.chronology.lifespan} años` : 'No especificada';
+
+          let dateRangeStr = '';
+          if (hasBirth && hasDeath) {
+            dateRangeStr = `(AM ${person.chronology.birth_am} – AM ${person.chronology.death_am})`;
+          } else if (hasBirth) {
+            dateRangeStr = `(Nació AM ${person.chronology.birth_am})`;
+          } else {
+            dateRangeStr = `(Fechas AM no detalladas en el texto)`;
+          }
+
+          return (
+            <div key={person.id} className="person-card">
+              <div className="person-card-header">
+                <h3 className="person-name">{person.name}</h3>
+                {person.category && <span className="person-category-badge">{person.category}</span>}
+              </div>
+              <p className="person-meaning"><em>Significado:</em> {person.name_meaning || 'No especificado'}</p>
               <p className="person-lifespan">
-                ⏳ Longevidad: {person.chronology.lifespan ? `${person.chronology.lifespan} años` : 'N/A'} (AM {person.chronology.birth_am ?? '?'} – AM {person.chronology.death_am ?? '?'})
+                ⏳ Longevidad: {lifespanStr} <span className="date-range-note">{dateRangeStr}</span>
               </p>
-            )}
-            {person.theological_significance && (
-              <p className="person-theology">{person.theological_significance.substring(0, 160)}...</p>
-            )}
-            <button
-              className="person-detail-action-btn"
-              onClick={() => handleOpenPerson(person.id)}
-            >
-              📖 Ver Biografía Completa ➔
-            </button>
-          </div>
-        ))}
+              {person.theological_significance && (
+                <p className="person-theology">{person.theological_significance.substring(0, 160)}...</p>
+              )}
+              <button
+                className="person-detail-action-btn"
+                onClick={() => handleOpenPerson(person.id)}
+              >
+                📖 Ver Biografía Completa ➔
+              </button>
+            </div>
+          );
+        })}
       </div>
 
       {/* Modal de Perfil Completo del Personaje */}
@@ -98,4 +111,3 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
     </div>
   );
 }
-

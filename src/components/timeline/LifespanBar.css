@@ -131,3 +131,57 @@
   white-space: nowrap;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
+
+/* Sección de Personajes sin Fechas Exactas */
+.undated-people-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.undated-people-section h4 {
+  margin: 0 0 0.85rem 0;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+}
+
+.undated-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.undated-person-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.undated-person-chip:hover {
+  background: rgba(170, 59, 255, 0.2);
+  border-color: #c084fc;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.undated-person-chip.active {
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
+  border-color: #c084fc;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+}
+
+.chip-note {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
