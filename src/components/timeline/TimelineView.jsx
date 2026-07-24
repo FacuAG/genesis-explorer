@@ -92,16 +92,47 @@ export function TimelineView({
     return map;
   }, [eras]);
 
+  const QUICK_JUMP_EVENT_IDS = {
+    adam: 'creation_adam_eve',
+    noah: 'flood_start',
+    abraham: 'abraham_call',
+    joseph: 'joseph_interprets_pharaoh',
+    exodus: 'joseph_reveals_himself'
+  };
+
   // Handler para saltos rápidos a hitos históricos clave en la cronología
   const handleQuickJump = (jumpKey, yearAM) => {
     setActiveJump(jumpKey);
-    if (!timelineInstanceRef.current) return;
 
-    const startWin = amToDate(Math.max(-300, yearAM - 140));
-    const endWin = amToDate(Math.min(2500, yearAM + 140));
-    timelineInstanceRef.current.setWindow(startWin, endWin, {
-      animation: { duration: 700, easingFunction: 'easeInOutQuad' }
-    });
+    // Buscar el evento hito correspondiente en el dataset
+    const milestoneEventId = QUICK_JUMP_EVENT_IDS[jumpKey];
+    let milestoneEvent = milestoneEventId ? eventsMap.get(milestoneEventId) : null;
+
+    // Si no encuentra por ID directo, buscar por coincidencia aproximada de año AM
+    if (!milestoneEvent && allEvents.length > 0) {
+      milestoneEvent = allEvents.find(e => Math.abs(getEventAM(e) - yearAM) <= 15);
+    }
+
+    if (milestoneEvent) {
+      setSelectedEntity({ type: 'event', data: milestoneEvent });
+      if (onSelectEvent) onSelectEvent(milestoneEvent.id);
+
+      if (timelineInstanceRef.current) {
+        try {
+          timelineInstanceRef.current.setSelection([milestoneEvent.id]);
+        } catch (err) {
+          console.warn("No se pudo seleccionar el hito en el canvas:", err);
+        }
+      }
+    }
+
+    if (timelineInstanceRef.current) {
+      const startWin = amToDate(Math.max(-300, yearAM - 140));
+      const endWin = amToDate(Math.min(2500, yearAM + 140));
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 700, easingFunction: 'easeInOutQuad' }
+      });
+    }
   };
 
   // Helper para formatear referencias bíblicas
