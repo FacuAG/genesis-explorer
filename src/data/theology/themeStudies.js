@@ -6,8 +6,10 @@
 
 import genesisStudiesData from '../studies/genesis_studies.json';
 
-export const THEOLOGICAL_STUDIES = genesisStudiesData.studies || {};
+const rawData = (genesisStudiesData && genesisStudiesData.default) ? genesisStudiesData.default : (genesisStudiesData || {});
+
+export const THEOLOGICAL_STUDIES = rawData.studies || {};
 export const LIBRARY_INFO = {
-  source: genesisStudiesData.library_source,
-  edition: genesisStudiesData.edition_info
+  source: rawData.library_source || 'La Biblia del Expositor (Marcus Dods) & Biblia Temática de Nave',
+  edition: rawData.edition_info || 'Edición Teológica Evangélica Académica'
 };

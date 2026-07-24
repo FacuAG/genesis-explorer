@@ -21,7 +21,11 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
     setIsModalOpen(true);
   };
 
-  const currentStudy = selectedTheme ? THEOLOGICAL_STUDIES[selectedTheme.id] : null;
+  const studies = THEOLOGICAL_STUDIES || {};
+  const librarySource = LIBRARY_INFO?.source || 'La Biblia del Expositor & Biblia Temática de Nave';
+  const libraryEdition = LIBRARY_INFO?.edition || 'Edición Académica Evangélica';
+
+  const currentStudy = selectedTheme ? studies[selectedTheme.id] : null;
 
   return (
     <div className="panel-container">
@@ -30,7 +34,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
         <div>
           <h2>🕊️ Temas Teológicos Transversales ({themes.length})</h2>
           <p>
-            Tratados de investigación y exégesis extraídos de <strong>{LIBRARY_INFO.source}</strong> ({LIBRARY_INFO.edition}).
+            Tratados de investigación y exégesis extraídos de <strong>{librarySource}</strong> ({libraryEdition}).
           </p>
         </div>
       </div>
@@ -38,7 +42,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
       {/* Grilla de Tarjetas de Temas Teológicos */}
       <div className="themes-grid">
         {themes.map((theme) => {
-          const studyData = THEOLOGICAL_STUDIES[theme.id];
+          const studyData = studies[theme.id];
           return (
             <div key={theme.id} className="theme-card" onClick={() => handleOpenTheme(theme)}>
               <div className="theme-card-header">
@@ -75,7 +79,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new
             <div className="theme-modal-header">
               <div className="theme-header-tags">
                 <span className="theme-modal-badge">{selectedTheme.icon} Tema Teológico</span>
-                <span className="theme-framework-badge">📖 {currentStudy?.source_reference || LIBRARY_INFO.source}</span>
+                <span className="theme-framework-badge">📖 {currentStudy?.source_reference || librarySource}</span>
               </div>
               <h2 className="theme-modal-title">{selectedTheme.title}</h2>
               <p className="theme-modal-subtitle">{currentStudy?.subtitle || selectedTheme.subtitle}</p>
