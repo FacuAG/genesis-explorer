@@ -8,14 +8,20 @@ import './ChapterMapPanel.css';
 
 /**
  * Componente profesional para la Sala de Estudio Exegético por Capítulo (Génesis 1 a 50).
- * Integra lectura continua en Reina-Valera 1960, bosquejo homilético, lección doctrinal,
- * términos en hebreo bíblico, referencias al NT y modal directo de biografías de personajes.
+ * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de tamaño de fuente (A-/A+),
+ * resaltado individual de versículos y búsqueda rápida dentro del capítulo.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedChapNum, setSelectedChapNum] = useState(null);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
+
+  // Estados de Control de Lectura Bíblica
+  const [fontSize, setFontSize] = useState(16); // 13px - 26px
+  const [verseSearchText, setVerseSearchText] = useState('');
+  const [highlightedVerses, setHighlightedVerses] = useState({}); // { [verseNum]: boolean }
+  const [isFullscreenReader, setIsFullscreenReader] = useState(false);
 
   // Ordenar lista de 50 capítulos
   const sortedChapters = useMemo(() => {
@@ -49,7 +55,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const chapterVersesList = useMemo(() => {
     if (!selectedChapNum) return [];
     const verses = [];
-    for (let v = 1; v <= 60; v++) {
+    for (let v = 1; v <= 65; v++) {
       const vText = getVerseTextRVR1960('Génesis', selectedChapNum, v);
       if (vText && !vText.includes('Santa Biblia Reina-Valera') && vText.startsWith(`${v}.`)) {
         verses.push({
@@ -60,6 +66,14 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     }
     return verses;
   }, [selectedChapNum]);
+
+  // Alternar resaltado individual de versículo
+  const toggleVerseHighlight = (vNum) => {
+    setHighlightedVerses(prev => ({
+      ...prev,
+      [vNum]: !prev[vNum]
+    }));
+  };
 
   // Copiar capítulo completo al portapapeles
   const handleCopyChapter = () => {
@@ -119,7 +133,11 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 <div
                   key={c.chapter}
                   className="chapter-card"
-                  onClick={() => setSelectedChapNum(c.chapter)}
+                  onClick={() => {
+                    setSelectedChapNum(c.chapter);
+                    setHighlightedVerses({});
+                    setVerseSearchText('');
+                  }}
                 >
                   <div className="chapter-card-header">
                     <span className="chapter-num-badge">Cap. {c.chapter}</span>
@@ -139,18 +157,21 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
         </>
       ) : (
         /* VISTA 2: Sala de Estudio Exegético de Capítulo (Pantalla Dividida) */
-        <div className="chapter-study-room">
+        <div className={`chapter-study-room ${isFullscreenReader ? 'fullscreen-mode' : ''}`}>
           {/* Navegación y Cabecera del Capítulo */}
           <div className="study-room-topbar">
             <button className="back-grid-btn" onClick={() => setSelectedChapNum(null)}>
-              ⬅️ Volver a la Rejilla de 50 Capítulos
+              ⬅️ Volver a los 50 Capítulos
             </button>
 
             <div className="chapter-nav-controls">
               <button
                 className="nav-chap-arrow"
                 disabled={selectedChapNum <= 1}
-                onClick={() => setSelectedChapNum(prev => Math.max(1, prev - 1))}
+                onClick={() => {
+                  setSelectedChapNum(prev => Math.max(1, prev - 1));
+                  setHighlightedVerses({});
+                }}
               >
                 ◀ Cap. {selectedChapNum - 1}
               </button>
@@ -158,7 +179,10 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
               <button
                 className="nav-chap-arrow"
                 disabled={selectedChapNum >= 50}
-                onClick={() => setSelectedChapNum(prev => Math.min(50, prev + 1))}
+                onClick={() => {
+                  setSelectedChapNum(prev => Math.min(50, prev + 1));
+                  setHighlightedVerses({});
+                }}
               >
                 Cap. {selectedChapNum + 1} ▶
               </button>
@@ -173,7 +197,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             </div>
             <div className="csh-actions">
               <button className="copy-chapter-btn" onClick={handleCopyChapter}>
-                {copySuccess ? '✓ ¡Capítulo Copiado!' : '📋 Copiar Capítulo RVR1960'}
+                {copySuccess ? '✓ ¡Capítulo Copiado!' : '📋 Copiar RVR1960'}
               </button>
             </div>
           </div>
@@ -183,7 +207,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             {/* COLUMNA IZQUIERDA: Lector RVR1960 & Bosquejo Homilético */}
             <div className="chapter-left-col">
               {/* Bosquejo Homilético / Estructura del Capítulo */}
-              {exegesisData?.outline && (
+              {exegesisData?.outline && !isFullscreenReader && (
                 <div className="exegesis-box outline-box">
                   <h3>📑 Bosquejo Homilético y Estructura Literaria</h3>
                   <div className="outline-list">
@@ -197,113 +221,191 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 </div>
               )}
 
-              {/* Lector de Texto Bíblico Completo RVR1960 */}
+              {/* Lector de Texto Bíblico Completo RVR1960 con Header Pegajoso (Sticky Header) */}
               <div className="biblical-text-reader-box">
-                <div className="btr-header">
-                  <h3>📜 Texto Sagrado Reina-Valera 1960 ({chapterVersesList.length} Versículos)</h3>
-                  <span className="btr-tag">RVR1960</span>
+                {/* BARRA DE NAVEGACIÓN Y CONTROLES PEGAJOSA (STICKY HEADER) */}
+                <div className="sticky-reader-toolbar">
+                  <div className="srt-left">
+                    <div className="srt-chapter-navigation">
+                      <button
+                        className="srt-nav-btn"
+                        disabled={selectedChapNum <= 1}
+                        onClick={() => setSelectedChapNum(prev => Math.max(1, prev - 1))}
+                        title="Capítulo Anterior"
+                      >
+                        ◀
+                      </button>
+                      <span className="srt-title-badge">📖 GÉNESIS {selectedChapNum}</span>
+                      <button
+                        className="srt-nav-btn"
+                        disabled={selectedChapNum >= 50}
+                        onClick={() => setSelectedChapNum(prev => Math.min(50, prev + 1))}
+                        title="Capítulo Siguiente"
+                      >
+                        ▶
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Búsqueda dentro del Capítulo */}
+                  <div className="srt-search-box">
+                    <span className="srt-search-icon">🔍</span>
+                    <input
+                      type="text"
+                      className="srt-search-input"
+                      placeholder="Buscar palabra en versículos..."
+                      value={verseSearchText}
+                      onChange={(e) => setVerseSearchText(e.target.value)}
+                    />
+                    {verseSearchText && (
+                      <button className="srt-clear-btn" onClick={() => setVerseSearchText('')}>✕</button>
+                    )}
+                  </div>
+
+                  {/* Controles de Tamaño de Letra (A- / A+) y Pantalla Completa */}
+                  <div className="srt-font-controls">
+                    <button
+                      className="srt-font-btn"
+                      onClick={() => setFontSize(prev => Math.max(13, prev - 1.5))}
+                      title="Disminuir tamaño de letra"
+                    >
+                      A-
+                    </button>
+                    <span className="srt-font-size-label">{fontSize}px</span>
+                    <button
+                      className="srt-font-btn"
+                      onClick={() => setFontSize(prev => Math.min(26, prev + 1.5))}
+                      title="Agrandar tamaño de letra"
+                    >
+                      A+
+                    </button>
+
+                    <button
+                      className={`srt-fullscreen-btn ${isFullscreenReader ? 'active' : ''}`}
+                      onClick={() => setIsFullscreenReader(!isFullscreenReader)}
+                      title={isFullscreenReader ? 'Salir de lectura enfocada' : 'Modo Lectura Enfocada / Pantalla Completa'}
+                    >
+                      {isFullscreenReader ? '🗗 Restaurar' : '⛶ Lectura Limpia'}
+                    </button>
+                  </div>
                 </div>
 
+                {/* Flujo de Versículos con Resaltado y Tamaño Dinámico */}
                 <div className="verses-continuous-flow">
-                  {chapterVersesList.map((v) => (
-                    <p key={v.number} className="verse-paragraph">
-                      <sup className="verse-num" title="Número de Versículo">{v.number}</sup> {v.text}
-                    </p>
-                  ))}
+                  {chapterVersesList.map((v) => {
+                    const isHighlighted = Boolean(highlightedVerses[v.number]);
+                    const matchesSearch = verseSearchText.trim().length > 0 &&
+                      v.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                        .includes(verseSearchText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+
+                    return (
+                      <p
+                        key={v.number}
+                        className={`verse-paragraph ${isHighlighted ? 'user-highlighted' : ''} ${matchesSearch ? 'search-match' : ''}`}
+                        style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize * 1.65}px` }}
+                        onClick={() => toggleVerseHighlight(v.number)}
+                        title="Haz clic para marcar / desmarcar este versículo"
+                      >
+                        <sup className="verse-num">{v.number}</sup> {v.text}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
             {/* COLUMNA DERECHA: Ficha Exegética & Conexiones Interactivas */}
-            <div className="chapter-right-col">
-              {/* Lección Doctrinal Principal */}
-              {exegesisData?.theological_teaching && (
-                <div className="exegesis-box doctrine-box">
-                  <h3>🏛️ Lección Doctrinal Principal</h3>
-                  <p>{exegesisData.theological_teaching}</p>
-                </div>
-              )}
+            {!isFullscreenReader && (
+              <div className="chapter-right-col">
+                {/* Lección Doctrinal Principal */}
+                {exegesisData?.theological_teaching && (
+                  <div className="exegesis-box doctrine-box">
+                    <h3>🏛️ Lección Doctrinal Principal</h3>
+                    <p>{exegesisData.theological_teaching}</p>
+                  </div>
+                )}
 
-              {/* Eventos Bíblicos en este Capítulo (Con lazo a la Línea de Tiempo) */}
-              {selectedChapterObj.key_events && selectedChapterObj.key_events.length > 0 && (
-                <div className="exegesis-box events-box">
-                  <h3>⚡ Eventos Bíblicos en este Capítulo ({selectedChapterObj.key_events.length})</h3>
-                  <p className="box-note-sm">Haz clic en un evento para ir a la Línea de Tiempo y enfocar su ítem:</p>
-                  <div className="chapter-events-list">
-                    {selectedChapterObj.key_events.map(eventId => {
-                      const evt = eventsMap.get(eventId);
-                      if (!evt) return null;
-                      return (
-                        <div
-                          key={eventId}
-                          className="chapter-event-chip"
-                          onClick={() => {
-                            if (onSelectEvent) onSelectEvent(eventId);
-                          }}
-                        >
-                          <span className="cec-am" title={`Año del Mundo ${evt.year_am ?? 'N/A'}`}>
-                            AM {evt.year_am ?? 'N/A'}
-                          </span>
-                          <span className="cec-name">{evt.name}</span>
-                          <span className="cec-arrow">➔</span>
+                {/* Eventos Bíblicos en este Capítulo (Con lazo a la Línea de Tiempo) */}
+                {selectedChapterObj.key_events && selectedChapterObj.key_events.length > 0 && (
+                  <div className="exegesis-box events-box">
+                    <h3>⚡ Eventos Bíblicos en este Capítulo ({selectedChapterObj.key_events.length})</h3>
+                    <p className="box-note-sm">Haz clic en un evento para ir a la Línea de Tiempo y enfocar su ítem:</p>
+                    <div className="chapter-events-list">
+                      {selectedChapterObj.key_events.map(eventId => {
+                        const evt = eventsMap.get(eventId);
+                        if (!evt) return null;
+                        return (
+                          <div
+                            key={eventId}
+                            className="chapter-event-chip"
+                            onClick={() => {
+                              if (onSelectEvent) onSelectEvent(eventId);
+                            }}
+                          >
+                            <span className="cec-am" title={`Año del Mundo ${evt.year_am ?? 'N/A'}`}>
+                              AM {evt.year_am ?? 'N/A'}
+                            </span>
+                            <span className="cec-name">{evt.name}</span>
+                            <span className="cec-arrow">➔</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Personajes Participantes (Abre modal directo sin salir del capítulo) */}
+                {selectedChapterObj.key_people && selectedChapterObj.key_people.length > 0 && (
+                  <div className="exegesis-box people-box">
+                    <h3>👥 Personajes en este Capítulo ({selectedChapterObj.key_people.length})</h3>
+                    <p className="box-note-sm">Haz clic en un personaje para abrir su perfil completo y relaciones familiares:</p>
+                    <div className="chapter-people-list">
+                      {selectedChapterObj.key_people.map(personId => {
+                        const p = peopleMap.get(personId);
+                        if (!p) return null;
+                        return (
+                          <div
+                            key={personId}
+                            className="chapter-person-chip"
+                            onClick={() => handleOpenPersonModal(personId)}
+                          >
+                            👤 <strong>{p.name}</strong> <em>({p.name_meaning || 'Patriarca'})</em>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Glosario de Hebreo Bíblico del Capítulo */}
+                {exegesisData?.hebrew_terms && exegesisData.hebrew_terms.length > 0 && (
+                  <div className="exegesis-box hebrew-box">
+                    <h3>🔤 Glosario de Términos en Hebreo</h3>
+                    <div className="chapter-hebrew-list">
+                      {exegesisData.hebrew_terms.map((term, idx) => (
+                        <div key={idx} className="chap-hebrew-item">
+                          <span className="ch-heb">{term.hebrew}</span>
+                          <span className="ch-trans"><em>{term.transliteration}</em></span>
+                          <span className="ch-mean">{term.meaning}</span>
                         </div>
-                      );
-                    })}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Personajes Participantes (Abre modal directo sin salir del capítulo) */}
-              {selectedChapterObj.key_people && selectedChapterObj.key_people.length > 0 && (
-                <div className="exegesis-box people-box">
-                  <h3>👥 Personajes en este Capítulo ({selectedChapterObj.key_people.length})</h3>
-                  <p className="box-note-sm">Haz clic en un personaje para abrir su perfil completo y relaciones familiares:</p>
-                  <div className="chapter-people-list">
-                    {selectedChapterObj.key_people.map(personId => {
-                      const p = peopleMap.get(personId);
-                      if (!p) return null;
-                      return (
-                        <div
-                          key={personId}
-                          className="chapter-person-chip"
-                          onClick={() => handleOpenPersonModal(personId)}
-                        >
-                          👤 <strong>{p.name}</strong> <em>({p.name_meaning || 'Patriarca'})</em>
-                        </div>
-                      );
-                    })}
+                {/* Cumplimiento Mesiánico & Nuevo Testamento */}
+                {exegesisData?.nt_cross_references && exegesisData.nt_cross_references.length > 0 && (
+                  <div className="exegesis-box nt-box">
+                    <h3>✝️ Citas y Cumplimiento en el NT</h3>
+                    <div className="chap-nt-refs">
+                      {exegesisData.nt_cross_references.map((refStr, idx) => (
+                        <BibleRefLink key={idx} reference={refStr} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-
-              {/* Glosario de Hebreo Bíblico del Capítulo */}
-              {exegesisData?.hebrew_terms && exegesisData.hebrew_terms.length > 0 && (
-                <div className="exegesis-box hebrew-box">
-                  <h3>🔤 Glosario de Términos en Hebreo</h3>
-                  <div className="chapter-hebrew-list">
-                    {exegesisData.hebrew_terms.map((term, idx) => (
-                      <div key={idx} className="chap-hebrew-item">
-                        <span className="ch-heb">{term.hebrew}</span>
-                        <span className="ch-trans"><em>{term.transliteration}</em></span>
-                        <span className="ch-mean">{term.meaning}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Cumplimiento Mesiánico & Nuevo Testamento */}
-              {exegesisData?.nt_cross_references && exegesisData.nt_cross_references.length > 0 && (
-                <div className="exegesis-box nt-box">
-                  <h3>✝️ Citas y Cumplimiento en el NT</h3>
-                  <div className="chap-nt-refs">
-                    {exegesisData.nt_cross_references.map((refStr, idx) => (
-                      <BibleRefLink key={idx} reference={refStr} />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}
