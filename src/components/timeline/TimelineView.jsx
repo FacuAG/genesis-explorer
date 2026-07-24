@@ -3,8 +3,9 @@ import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline/standalone';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 import { mapGenesisToVisData, amToDate, dateToAM, getEventAM } from '../../utils/timelineMapper';
+import { formatScriptureRef } from '../../utils/formatters';
 import { Modal } from '../common/Modal';
-import { BibleRefLink } from '../common/BibleRefLink';
+import { EventPanel } from '../panels/EventPanel';
 import { PersonDetailModal } from '../panels/PersonDetailModal';
 import './TimelineView.css';
 
@@ -20,7 +21,8 @@ const EVENT_CATEGORIES = {
 
 /**
  * Componente principal de la Línea de Tiempo Cronológica interactiva (Anno Mundi)
- * impulsada por el motor gráfico vis-timeline.
+ * impulsada por el motor gráfico vis-timeline con todas las funcionalidades avanzadas de filtrado,
+ * inspector superior, saltos rápidos y modales exegéticos.
  */
 export function TimelineView({
   timelineEvents = [],
@@ -73,6 +75,18 @@ export function TimelineView({
     return map;
   }, [eras]);
 
+  // Handler para saltos rápidos a hitos históricos clave
+  const handleQuickJump = (jumpKey, yearAM) => {
+    setActiveJump(jumpKey);
+    if (!timelineInstanceRef.current) return;
+
+    const startWin = amToDate(Math.max(-300, yearAM - 140));
+    const endWin = amToDate(Math.min(2500, yearAM + 140));
+    timelineInstanceRef.current.setWindow(startWin, endWin, {
+      animation: { duration: 800, easingFunction: 'easeInOutQuad' }
+    });
+  };
+
   // Filtrado reactivo de eventos según los controles activos
   const filteredEvents = useMemo(() => {
     return timelineEvents.filter(evt => {
@@ -90,7 +104,7 @@ export function TimelineView({
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const name = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const summary = (evt.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const ref = (evt.scriptural_reference?.display || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const ref = (evt.scriptural_reference?.display || formatScriptureRef(evt.scriptural_reference) || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         if (!name.includes(q) && !summary.includes(q) && !ref.includes(q)) return false;
       }
 
@@ -259,17 +273,46 @@ export function TimelineView({
     setActiveJump(null);
   };
 
+  // Helper para referencias en string
+  const formatRef = (ref) => {
+    if (!ref) return 'Génesis';
+    if (typeof ref === 'string') return ref;
+    return formatScriptureRef(ref) || 'Génesis';
+  };
+
   // Extraer datos auxiliares para el inspector
   const activeEventObj = selectedEntity?.type === 'event' ? selectedEntity.data : null;
   const activeBlockObj = selectedEntity?.type === 'block' ? selectedEntity.data : null;
   const activeCovenantObj = selectedEntity?.type === 'covenant' ? selectedEntity.data : null;
 
   const getEventSummary = (evt) => evt?.summary || evt?.teaching || 'Sin resumen disponible.';
-  const getEventRefStr = (evt) => evt?.scriptural_reference?.display || (evt?.chapter ? `Génesis ${evt.chapter}` : 'Génesis');
+  const getEventRefStr = (evt) => evt?.scriptural_reference?.display || formatRef(evt?.scriptural_reference) || (evt?.chapter ? `Génesis ${evt.chapter}` : 'Génesis');
 
   return (
     <div className="timeline-view-wrapper">
-      {/* Barra de Filtros Avanzados y Controles */}
+      {/* 1. BARRA DE SALTOS RÁPIDOS A HITOS ANNO MUNDI */}
+      <div className="quick-jump-bar">
+        <span className="qj-label">🚀 Saltos Rápidos:</span>
+        <div className="qj-buttons">
+          <button className={`qj-btn ${activeJump === 'adam' ? 'active' : ''}`} onClick={() => handleQuickJump('adam', 0)}>
+            🌟 Adán & Creación (AM 0)
+          </button>
+          <button className={`qj-btn ${activeJump === 'noah' ? 'active' : ''}`} onClick={() => handleQuickJump('noah', 1656)}>
+            🌊 Diluvio (AM 1656)
+          </button>
+          <button className={`qj-btn ${activeJump === 'abraham' ? 'active' : ''}`} onClick={() => handleQuickJump('abraham', 2083)}>
+            📜 Llamado de Abram (AM 2083)
+          </button>
+          <button className={`qj-btn ${activeJump === 'joseph' ? 'active' : ''}`} onClick={() => handleQuickJump('joseph', 2289)}>
+            🌾 José en Egipto (AM 2289)
+          </button>
+          <button className={`qj-btn ${activeJump === 'exodus' ? 'active' : ''}`} onClick={() => handleQuickJump('exodus', 2369)}>
+            ⛺ Muerte de José (AM 2369)
+          </button>
+        </div>
+      </div>
+
+      {/* 2. BARRA DE FILTROS AVANZADOS Y CONTROLES */}
       <div className="timeline-controls-bar">
         <div className="filters-row">
           <div className="filter-group">
@@ -298,6 +341,26 @@ export function TimelineView({
           </div>
 
           <div className="filter-group">
+            <label>Bloque Narrativo:</label>
+            <select value={selectedBlockId} onChange={(e) => setSelectedBlockId(e.target.value)} className="timeline-select">
+              <option value="all">Todos los Bloques Narrativos</option>
+              {narrativeBlocks.map(b => (
+                <option key={b.id} value={b.id}>{b.name} (Caps. {b.chapters_start}-{b.chapters_end})</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label>Capítulo:</label>
+            <select value={selectedChapter} onChange={(e) => setSelectedChapter(e.target.value)} className="timeline-select">
+              <option value="all">Todos los Capítulos (1-50)</option>
+              {Array.from({ length: 50 }, (_, i) => i + 1).map(cNum => (
+                <option key={cNum} value={cNum}>Capítulo {cNum}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
             <label>Buscador Rápido:</label>
             <input
               type="text"
@@ -316,12 +379,56 @@ export function TimelineView({
         </div>
       </div>
 
-      {/* PANEL DE EXPLICACIÓN DEL EVENTO SELECCIONADO (AHORA UBICADO ARRIBA DE LA LÍNEA DE TIEMPO) */}
+      {/* 3. BANNER DE FILTROS ACTIVOS CON CHIPS DESMONTABLES INDIVIDUALES */}
+      {isFilterActive && (
+        <div className="active-filter-banner">
+          <div className="banner-left-info">
+            <span>✨ Filtros Activos ({filteredEvents.length} eventos visibles):</span>
+            <div className="active-chips-list">
+              {activeJump && (
+                <span className="filter-chip chip-jump">
+                  🚀 Salto: {activeJump.toUpperCase()}
+                  <button className="chip-remove-btn" onClick={() => setActiveJump(null)}>✕</button>
+                </span>
+              )}
+              {selectedCategory !== 'all' && (
+                <span className="filter-chip chip-category">
+                  🏷️ {EVENT_CATEGORIES[selectedCategory]?.label}
+                  <button className="chip-remove-btn" onClick={() => setSelectedCategory('all')}>✕</button>
+                </span>
+              )}
+              {selectedBlockId !== 'all' && (
+                <span className="filter-chip chip-block">
+                  📍 {blocksMap.get(selectedBlockId)?.name}
+                  <button className="chip-remove-btn" onClick={() => setSelectedBlockId('all')}>✕</button>
+                </span>
+              )}
+              {selectedChapter !== 'all' && (
+                <span className="filter-chip chip-chapter">
+                  📖 Cap. {selectedChapter}
+                  <button className="chip-remove-btn" onClick={() => setSelectedChapter('all')}>✕</button>
+                </span>
+              )}
+              {filterText.trim().length > 0 && (
+                <span className="filter-chip chip-search">
+                  🔍 "{filterText}"
+                  <button className="chip-remove-btn" onClick={() => setFilterText('')}>✕</button>
+                </span>
+              )}
+            </div>
+          </div>
+          <button className="reset-filters-btn-sm" onClick={handleResetFilters}>
+            Restablecer Todo
+          </button>
+        </div>
+      )}
+
+      {/* 4. PANEL DE EXPLICACIÓN DEL EVENTO SELECCIONADO (UBICADO ARRIBA DE LA LÍNEA) */}
       {selectedEntity && (
         <div className="entity-inspector-panel top-inspector">
           <div className="inspector-header">
             <span className="inspector-badge">
-              {selectedEntity.type === 'event' ? '⚡ EVENTO BÍBLICO' : selectedEntity.type === 'covenant' ? '👑 PACTO DIVINO' : '📍 BLOQUE NARRATIVO'}
+              {selectedEntity.type === 'event' ? '⚡ EVENTO BÍBLICO' : selectedEntity.type === 'covenant' ? '👑 PACTO DIVINO' : selectedEntity.type === 'block' ? '📍 BLOQUE NARRATIVO' : '🌐 ERA TEOLÓGICA'}
             </span>
             <h3>{selectedEntity.data.name}</h3>
             <button className="close-inspector-btn" onClick={() => setSelectedEntity(null)}>✕ Cerrar Explicación</button>
@@ -379,7 +486,12 @@ export function TimelineView({
                 <p className="inspector-summary">{activeBlockObj.summary}</p>
                 <div className="inspector-meta-row">
                   <span>⏳ Duración AM: AM {activeBlockObj.am_start} - AM {activeBlockObj.am_end}</span>
-                  <span>📖 Capítulos: {activeBlockObj.chapters_range}</span>
+                  <span>📖 Capítulos: {activeBlockObj.chapters_range || `${activeBlockObj.chapters_start}-${activeBlockObj.chapters_end}`}</span>
+                </div>
+                <div className="inspector-actions">
+                  <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
+                    📍 Ver Bloque Completo ➔
+                  </button>
                 </div>
               </>
             )}
@@ -390,13 +502,33 @@ export function TimelineView({
                 <div className="inspector-doctrine-box">
                   <strong>📜 Significado Teológico:</strong> {activeCovenantObj.theological_significance}
                 </div>
+                <div className="inspector-actions">
+                  <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
+                    👑 Ver Pacto Completo ➔
+                  </button>
+                </div>
+              </>
+            )}
+
+            {selectedEntity.type === 'era' && (
+              <>
+                <p className="inspector-summary">{selectedEntity.data.description}</p>
+                <div className="inspector-meta-row">
+                  <span>📖 Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</span>
+                  <span>⏳ AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</span>
+                </div>
+                <div className="inspector-actions">
+                  <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
+                    🌐 Ver Era Completa ➔
+                  </button>
+                </div>
               </>
             )}
           </div>
         </div>
       )}
 
-      {/* LIENZO DEL MOTOR VIS-TIMELINE CON CONTROLES DE ZOOM FLOTANTES INTEGRADOS */}
+      {/* 5. LIENZO DEL MOTOR VIS-TIMELINE CON CONTROLES DE ZOOM FLOTANTES INTEGRADOS */}
       <div className="timeline-canvas-wrapper" style={{ position: 'relative' }}>
         {/* BOTONES DE ZOOM FLOTANTES INTEGRADOS DIRECTAMENTE EN EL LIENZO */}
         <div className="floating-timeline-zoom-controls">
@@ -414,41 +546,103 @@ export function TimelineView({
         <div ref={containerRef} className="vis-timeline-canvas" />
       </div>
 
-      {/* Modal de Detalle de Evento */}
-      {isModalOpen && activeEventObj && (
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} maxWidth="780px">
-          <div className="event-detail-modal">
-            <div className="event-modal-header">
-              <span className="event-modal-am">Anno Mundi: AM {getEventAM(activeEventObj)}</span>
-              <h2>{activeEventObj.name}</h2>
-              <p className="event-modal-ref">📖 Referencia: {getEventRefStr(activeEventObj)}</p>
-            </div>
+      {/* 6. MODAL GENÉRICO DE DETALLE COMPLETO */}
+      {isModalOpen && selectedEntity && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={
+            selectedEntity.type === 'event' ? `⚡ ${selectedEntity.data.name}` :
+            selectedEntity.type === 'covenant' ? `👑 ${selectedEntity.data.name}` :
+            selectedEntity.type === 'block' ? `📍 ${selectedEntity.data.name}` :
+            `🌐 ${selectedEntity.data.name}`
+          }
+        >
+          {selectedEntity.type === 'event' && (
+            <EventPanel
+              event={selectedEntity.data}
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              peopleMap={peopleMap}
+              locationsMap={locationsMap}
+              onSelectPerson={(pId) => {
+                const pObj = peopleMap.get(pId);
+                if (pObj) setModalPerson(pObj);
+              }}
+            />
+          )}
 
-            <div className="event-modal-body">
-              <div className="em-section">
-                <h3>📜 Narrativa Bíblica</h3>
-                <p>{getEventSummary(activeEventObj)}</p>
+          {selectedEntity.type === 'covenant' && (
+            <div className="entity-modal-content">
+              <div className="covenant-modal-badge">Pacto Divino Solemnizado</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
+              <p className="entity-modal-ref">📜 Cita Bíblica: {formatRef(selectedEntity.data.scriptural_reference)}</p>
+              <div className="entity-modal-section">
+                <h3>📖 Descripción del Pacto</h3>
+                <p>{selectedEntity.data.description}</p>
               </div>
-
-              {activeEventObj.theological_teaching && (
-                <div className="em-section em-doctrine-card">
-                  <h3>🏛️ Enseñanza Teológica Evangélica</h3>
-                  <p>{activeEventObj.theological_teaching}</p>
+              {selectedEntity.data.parties && (
+                <div className="entity-modal-section">
+                  <h3>🤝 Partes Involucradas</h3>
+                  <p><strong>Dios:</strong> {selectedEntity.data.parties.god || selectedEntity.data.parties.divine || 'Jehová Dios'}</p>
+                  <p><strong>Humano / Representante:</strong> {selectedEntity.data.parties.human_representative || selectedEntity.data.parties.human || 'La Humanidad'}</p>
                 </div>
               )}
-
-              {activeEventObj.scriptural_verse && (
-                <div className="em-section em-verse-box">
-                  <h3>💬 Texto de la Escritura</h3>
-                  <blockquote>
-                    <p>"{activeEventObj.scriptural_verse.text}"</p>
-                    <cite>— {activeEventObj.scriptural_verse.reference}</cite>
-                  </blockquote>
-                  <BibleRefLink reference={activeEventObj.scriptural_verse.reference} label="Abrir Versículo Completo RVR1960" />
+              {selectedEntity.data.theological_significance && (
+                <div className="entity-modal-section">
+                  <h3>🕊️ Significado Teológico & Redentor</h3>
+                  <p>{selectedEntity.data.theological_significance}</p>
+                </div>
+              )}
+              {selectedEntity.data.fulfillment_in_christ && (
+                <div className="entity-modal-section messianic-box">
+                  <h3>✝️ Cumplimiento en Jesucristo</h3>
+                  <p>{selectedEntity.data.fulfillment_in_christ}</p>
                 </div>
               )}
             </div>
-          </div>
+          )}
+
+          {selectedEntity.type === 'block' && (
+            <div className="entity-modal-content">
+              <div className="block-modal-badge">Bloque Narrativo del Génesis</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
+              <p className="entity-modal-ref">📖 Capítulos: Génesis {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</p>
+              {selectedEntity.data.toledot_reference && (
+                <p className="entity-modal-toledot">
+                  ✨ <em>Sección Toledot:</em> "{selectedEntity.data.toledot_text}" ({selectedEntity.data.toledot_reference})
+                </p>
+              )}
+              <div className="entity-modal-section">
+                <h3>📜 Resumen Narrativo</h3>
+                <p>{selectedEntity.data.summary}</p>
+              </div>
+              {selectedEntity.data.theological_significance && (
+                <div className="entity-modal-section">
+                  <h3>🕊️ Enfoque Teológico</h3>
+                  <p>{selectedEntity.data.theological_significance}</p>
+                </div>
+              )}
+              {selectedEntity.data.messianic_connection && (
+                <div className="entity-modal-section messianic-box">
+                  <h3>✝️ Conexión Mesiánica con Jesucristo</h3>
+                  <p>{selectedEntity.data.messianic_connection}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {selectedEntity.type === 'era' && (
+            <div className="entity-modal-content">
+              <div className="era-modal-badge">Gran Era de la Historia Sagrada</div>
+              <h2 className="entity-modal-title">{selectedEntity.data.name} — {selectedEntity.data.subtitle}</h2>
+              <p className="entity-modal-ref">📖 Génesis Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
+              <div className="entity-modal-section">
+                <h3>📜 Panorama General de la Era</h3>
+                <p>{selectedEntity.data.description}</p>
+              </div>
+            </div>
+          )}
         </Modal>
       )}
 
