@@ -33,9 +33,13 @@ export function VerseModal({ isOpen, onClose, referenceString, refObj }) {
     ? `${book} ${chapter}:${verseStart}-${verseEnd}`
     : `${book} ${chapter}:${verseStart}`;
 
-  // Obtener texto bíblico RVR1960
-  const verseText = getVerseTextRVR1960(book, chapter, verseStart, verseEnd) ||
-    `"Texto bíblico de ${displayRefStr} (Santa Biblia Reina-Valera 1960)."`;
+  // Obtener texto bíblico RVR1960 limpio de comillas encadenadas
+  let verseText = getVerseTextRVR1960(book, chapter, verseStart, verseEnd);
+  if (verseText) {
+    verseText = verseText.replace(/^"|"$/g, '');
+  } else {
+    verseText = `Texto bíblico de ${displayRefStr} (Santa Biblia Reina-Valera 1960).`;
+  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(`"${verseText}" — ${displayRefStr} (RVR1960)`);
