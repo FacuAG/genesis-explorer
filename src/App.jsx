@@ -3,6 +3,7 @@ import { useGenesisData } from './hooks/useGenesisData';
 import { Header } from './components/navigation/Header';
 import { TimelineView } from './components/timeline/TimelineView';
 import { PersonPanel } from './components/panels/PersonPanel';
+import { ThemePanel } from './components/panels/ThemePanel';
 import { CovenantPanel } from './components/panels/CovenantPanel';
 import { LocationPanel } from './components/panels/LocationPanel';
 import { DispensationPanel } from './components/panels/DispensationPanel';
@@ -44,7 +45,7 @@ export function App() {
         <main className="app-main-content">
           <div className="search-results-container">
             <h2>🔍 Resultados de Búsqueda para "{searchQuery}"</h2>
-            
+
             {searchResults.events.length === 0 && searchResults.people.length === 0 && searchResults.locations.length === 0 ? (
               <p className="no-results-msg">No se encontraron coincidencias en el libro del Génesis.</p>
             ) : (
@@ -56,7 +57,7 @@ export function App() {
                       {searchResults.events.map(e => (
                         <div key={e.id} className="search-card">
                           <h4>{e.name}</h4>
-                          <span className="search-am-tag">AM {e.year_am ?? 'N/A'}</span>
+                          <span className="search-am-tag">Anno Mundi: AM {e.year_am ?? 'N/A'}</span>
                           <p>{e.summary}</p>
                         </div>
                       ))}
@@ -120,6 +121,16 @@ export function App() {
             />
           )}
 
+          {activeTab === 'themes' && (
+            <ThemePanel
+              themes={genesis.themes}
+              eventsMap={genesis.eventsMap}
+              peopleMap={genesis.peopleMap}
+              onSelectEvent={() => setActiveTab('timeline')}
+              onSelectPerson={() => setActiveTab('people')}
+            />
+          )}
+
           {activeTab === 'dispensations' && (
             <DispensationPanel dispensations={genesis.dispensations} />
           )}
@@ -153,7 +164,7 @@ export function App() {
       {/* Pie de Página */}
       <footer className="app-footer">
         <p>
-          <strong>Genesis Explorer</strong> — Basado en el sistema de cronología Anno Mundi (AM) y el estándar bíblico Reina-Valera.
+          <strong>Genesis Explorer</strong> — Basado en el sistema de cronología Anno Mundi (AM) y el estándar bíblico Reina-Valera 1960.
         </p>
       </footer>
     </div>

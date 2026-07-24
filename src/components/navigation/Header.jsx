@@ -69,10 +69,16 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
             <span className="tab-icon">👤</span> Personajes & Vidas
           </button>
           <button
+            className={`nav-tab-btn ${activeTab === 'themes' ? 'active' : ''}`}
+            onClick={() => setActiveTab('themes')}
+          >
+            <span className="tab-icon">🕊️</span> Temas Teológicos
+          </button>
+          <button
             className={`nav-tab-btn ${activeTab === 'dispensations' ? 'active' : ''}`}
             onClick={() => setActiveTab('dispensations')}
           >
-            <span className="tab-icon">🕊️</span> Dispensaciones
+            <span className="tab-icon">👑</span> Dispensaciones
           </button>
           <button
             className={`nav-tab-btn ${activeTab === 'chapters' ? 'active' : ''}`}
@@ -84,13 +90,13 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
             className={`nav-tab-btn ${activeTab === 'covenants' ? 'active' : ''}`}
             onClick={() => setActiveTab('covenants')}
           >
-            <span className="tab-icon">👑</span> Pactos & Promesas
+            <span className="tab-icon">📜</span> Pactos & Promesas
           </button>
           <button
             className={`nav-tab-btn ${activeTab === 'locations' ? 'active' : ''}`}
             onClick={() => setActiveTab('locations')}
           >
-            <span className="tab-icon">📍</span> Mapa & Geografía
+            <span className="tab-icon">📍</span> Ubicaciones
           </button>
           <button
             className={`nav-tab-btn ${activeTab === 'questions' ? 'active' : ''}`}

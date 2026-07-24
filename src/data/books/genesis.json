@@ -10484,5 +10484,379 @@
       "years_together": 56,
       "historical_note": "Jacob convivió 17 años en Canaán y 17 años en Egipto con su hijo José (AM 2259 – 2315), experimentando el gozo de la restauración familiar."
     }
+  ],
+  "themes": [
+    {
+      "id": "theme_creation",
+      "icon": "✨",
+      "title": "Creación, Cosmovisión y Orden Divino",
+      "subtitle": "La Creación Ex Nihilo y la Monarquía Absoluta del Creador",
+      "description": "Establece la monarquía divina absoluta y la creación de la nada (ex nihilo) mediante el mandato soberano de la Palabra de Dios. Dios no forma el universo a partir de materia preexistente o mediante el conflicto de deidades (como en el politeísmo pagano), sino por la libre e incondicionada voluntad de su poder omnipotente.",
+      "theological_doctrine": "Teología Propiamente Dicha y Cosmología Bíblica. Dios es el único Creador trascendente e inmanente. La creación original es intrínsecamente buena, perfectamente estructurada y ordenada para manifestar la gloria divina.",
+      "genesis_passages": [
+        "Génesis 1:1-31",
+        "Génesis 2:1-25",
+        "Salmo 33:6-9"
+      ],
+      "cross_references_nt": [
+        "Juan 1:1-3",
+        "Colosenses 1:15-17",
+        "Hebreos 11:3",
+        "Apocalipsis 4:11"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּרָא",
+          "transliteration": "Bará",
+          "meaning": "Crear de la nada (utilizado exclusivamente con Dios como sujeto)"
+        },
+        {
+          "hebrew": "תֹּהוּ וָבֹהוּ",
+          "transliteration": "Tohu va-Bohu",
+          "meaning": "Desordenada y vacía / Caos y vacuidad primordial antes de la estructuración divina"
+        }
+      ],
+      "footnotes": [
+        "Ex nihilo: Término teológico latino que indica la creación a partir de la nada, sin materia primordial preexistente.",
+        "Raqía (רָקִיעַ): El firmamento o expansión atmosférica y cósmica diseñada por Dios para separar las aguas."
+      ],
+      "key_event_ids": [
+        "creation_day1",
+        "creation_day2",
+        "creation_day3",
+        "creation_day4",
+        "creation_day5",
+        "creation_day6",
+        "sabbath_institution"
+      ],
+      "key_people_ids": [
+        "adam",
+        "eve"
+      ]
+    },
+    {
+      "id": "theme_imago_dei",
+      "icon": "👤",
+      "title": "La Imagen de Dios e Identidad Humana",
+      "subtitle": "Imago Dei: Dignidad, Diseño y Mayordomía del Hombre",
+      "description": "El ser humano es la corona de la creación divina, formado del polvo de la tierra y dotado del aliento de vida (neshamah) directamente impetrado por Dios. Constituido a la Imagen y Semejanza de Dios (Imago Dei), posee valor e identidad sagrada inalienable, vocación mayordómica y diseño binario complementario (varón y hembra).",
+      "theological_doctrine": "Antropología Bíblica y Ética de la Vida. La dignidad del ser humano no proviene de su utilidad social o capacidades físicas, sino de llevar la impronta del Creador. El matrimonio entre un hombre y una mujer es la institución sagrada primordial dada por Dios.",
+      "genesis_passages": [
+        "Génesis 1:26-28",
+        "Génesis 2:7, 18-25",
+        "Génesis 9:6"
+      ],
+      "cross_references_nt": [
+        "Mateo 19:4-6",
+        "1 Corintios 11:7",
+        "Colosenses 3:10",
+        "Santiago 3:9"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "צֶלֶם",
+          "transliteration": "Tselem (Imago Dei)",
+          "meaning": "Imagen o estatua representativa / Reflejo moral y relacional de Dios"
+        },
+        {
+          "hebrew": "נְשָׁמָה",
+          "transliteration": "Neshamah",
+          "meaning": "Aliento o soplo de vida impertido por Dios directamente al ser humano"
+        }
+      ],
+      "footnotes": [
+        "Imago Dei: Término latino para 'Imagen de Dios'. Define la dignidad intrínseca de todo ser humano desde la concepción.",
+        "Mayordomía: El mandato cultural (Gén. 1:28) de sojuzgar y cuidar la creación como administradores responsables bajo la autoridad de Dios."
+      ],
+      "key_event_ids": [
+        "creation_day6",
+        "creation_adam_eva",
+        "marriage_institution"
+      ],
+      "key_people_ids": [
+        "adam",
+        "eve"
+      ]
+    },
+    {
+      "id": "theme_judgment",
+      "icon": "🔥",
+      "title": "El Juicio Divino y la Fallida Rebelión Humana",
+      "subtitle": "La Caída, el Pecado y la Santa Justicia de Dios",
+      "description": "Trata la realidad histórica de la Caída en el Edén, la entrada del pecado (hamartia) y la muerte al mundo. Revela la respuesta justa y santa de Dios ante la rebelión del hombre mediante veredictos históricos: la Maldición del Edén, el Diluvio Universal sobre la corrupción moral, la Confusión de Lenguas en Babel y la destrucción consumidora de Sodoma.",
+      "theological_doctrine": "Hamartiología (Doctrina del Pecado) y Justo Juicio de Dios. El pecado es una infracción contra la santidad infinita de Dios. Dios es paciente, pero no dará por inocente al culpable; sus juicios en la historia prefiguran el Juicio Final.",
+      "genesis_passages": [
+        "Génesis 3:1-24",
+        "Génesis 6:5-7",
+        "Génesis 11:1-9",
+        "Génesis 19:1-29"
+      ],
+      "cross_references_nt": [
+        "Romanos 5:12-21",
+        "2 Pedro 2:4-9",
+        "Judas 1:7",
+        "Hechos 17:30-31"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּלַל",
+          "transliteration": "Balal",
+          "meaning": "Confundir / Raíz del nombre Babel"
+        },
+        {
+          "hebrew": "חַטָּאָת",
+          "transliteration": "Jattat",
+          "meaning": "Pecado / Errar el blanco de la santidad divina"
+        }
+      ],
+      "footnotes": [
+        "Hamartia (ἁμαρτία): Término griego del NT para el pecado como rebelión contra el diseño y la ley de Dios.",
+        "Depravación Total: Doctrina que afirma que el pecado afectó todas las facultades del hombre (mente, voluntad, emociones)."
+      ],
+      "key_event_ids": [
+        "fall_judgment",
+        "first_murder",
+        "flood_start",
+        "tower_of_babel",
+        "sodom_destruction"
+      ],
+      "key_people_ids": [
+        "adam",
+        "cain",
+        "noah",
+        "lot"
+      ]
+    },
+    {
+      "id": "theme_covenant",
+      "icon": "👑",
+      "title": "Pacto y Gracia Redentora",
+      "subtitle": "La Teología de los Pactos y la Fidelidad de Dios",
+      "description": "El marco pactual es la columna vertebral de la historia de la salvación (Teología Federal o de Pactos). Muestra cómo Dios se relaciona con la humanidad caída mediante alianzas solemnes selladas con su promesa jurada: El Pacto Edénico, Adámico, Noéico, Abrahámico y de la Circuncisión.",
+      "theological_doctrine": "Teología del Pacto (Covenant Theology). Un pacto bíblico es una disposición soberana de Dios basada en la gracia donde él compromete su fidelidad inmutable para salvar a un pueblo para su gloria.",
+      "genesis_passages": [
+        "Génesis 2:16-17",
+        "Génesis 3:15",
+        "Génesis 9:8-17",
+        "Génesis 15:1-21",
+        "Génesis 17:1-14"
+      ],
+      "cross_references_nt": [
+        "Gálatas 3:15-18",
+        "Hebreos 6:13-18",
+        "Hebreos 8:6-13",
+        "Lucas 22:20"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בְּרִית",
+          "transliteration": "Berit",
+          "meaning": "Pacto / Alianza solemne divinamente sellada"
+        },
+        {
+          "hebrew": "כָּרַת בְּרִית",
+          "transliteration": "Karat Berit",
+          "meaning": "Cortar un pacto / Ceremonia de división de víctimas sacrificiales"
+        }
+      ],
+      "footnotes": [
+        "Karat Berit: Literalmente 'cortar un pacto'. Hace referencia al ritual bíblico antiguo (Gén. 15) donde las partes caminaban entre animales sacrificados.",
+        "Pacto de Gracia: La alianza eterna por la cual Dios ofrece salvación gratuita en Cristo a los creyentes."
+      ],
+      "key_event_ids": [
+        "noahic_covenant",
+        "abrahamic_covenant",
+        "covenant_circumcision"
+      ],
+      "key_people_ids": [
+        "noah",
+        "abraham",
+        "isaac",
+        "jacob"
+      ]
+    },
+    {
+      "id": "theme_election",
+      "icon": "🙌",
+      "title": "Elección Divina y Gracia Soberana",
+      "subtitle": "La Elección Incondicional y el Amor Soberano de Dios",
+      "description": "Demuestra la libre iniciativa inmerecida de Dios al escoger una línea piadosa a lo largo de la historia de la redención: La preferencia por Abel sobre Caín, Set sobre la línea de Caín, Sem sobre los hijos de Noé, el llamado incondicional de Abram en Ur, la elección de Isaac sobre Ismael y de Jacob sobre Esaú.",
+      "theological_doctrine": "Soteriología (Doctrina de la Salvación) y Elección Soberana. La elección de Dios no se fundamenta en méritos, virtudes o presciencia de obras humanas, sino exclusivamente en su beneplácito y gracia soberana (Romanos 9).",
+      "genesis_passages": [
+        "Génesis 4:4-5",
+        "Génesis 12:1-3",
+        "Génesis 21:12",
+        "Génesis 25:23"
+      ],
+      "cross_references_nt": [
+        "Romanos 9:6-16",
+        "Efesios 1:4-5",
+        "1 Pedro 1:1-2",
+        "1 Corintios 1:26-29"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּחַר",
+          "transliteration": "Bahor",
+          "meaning": "Escoger / Elegir soberanamente con deleite"
+        }
+      ],
+      "footnotes": [
+        "Monergismo: Doctrina reformada que enseña que la salvación es una obra enteramente ejecutada por el poder de Dios.",
+        "Sola Gratia: La salvación es concedida al hombre de forma 100% inmerecida."
+      ],
+      "key_event_ids": [
+        "abraham_call",
+        "jacob_esau_birth",
+        "isaac_birth"
+      ],
+      "key_people_ids": [
+        "seth",
+        "shem",
+        "abraham",
+        "isaac",
+        "jacob"
+      ]
+    },
+    {
+      "id": "theme_providence",
+      "icon": "🕊️",
+      "title": "Providencia y Gobierno Divino",
+      "subtitle": "El Gobierno Invisible de Dios Encaminando el Mal para Bien",
+      "description": "Muestra cómo Dios preserva y gobierna todas las criaturas, circunstancias y acciones humanas (incluso las perversas decisiones humanas) para cumplir sus sabios propósitos eternos. Su expresión cumbre resuena en las palabras de José: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'.",
+      "theological_doctrine": "Providencia General y Especial. Nada ocurre por azar o casualidad blindada. Dios ejerce un control absoluto sobre el hilo de la historia, haciendo que todas las cosas cooperen para el bien de sus escogidos.",
+      "genesis_passages": [
+        "Génesis 24:12-27",
+        "Génesis 45:4-8",
+        "Génesis 50:19-21"
+      ],
+      "cross_references_nt": [
+        "Romanos 8:28",
+        "Efesios 1:11",
+        "Hechos 2:23",
+        "Filipenses 2:13"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "חֶסֶד",
+          "transliteration": "Hesed",
+          "meaning": "Amor leal / Fidelidad inagotable y misericordia pactual de Dios"
+        }
+      ],
+      "footnotes": [
+        "Providencia: Del latín providentia, la preservación activa y el continuo gobierno de Dios sobre el cosmos.",
+        "Compatibilismo Bíblico: La verdad de que la responsabilidad humana y la soberanía de Dios operan juntas sin que Dios sea autor del pecado."
+      ],
+      "key_event_ids": [
+        "joseph_sold_slavery",
+        "joseph_prime_minister",
+        "joseph_reveals_himself",
+        "joseph_forgives_brothers"
+      ],
+      "key_people_ids": [
+        "joseph",
+        "jacob",
+        "judah"
+      ]
+    },
+    {
+      "id": "theme_faith",
+      "icon": "🛡️",
+      "title": "La Fe y la Vida de Obediencia",
+      "subtitle": "Justificación por la Fe y Caminar con Dios",
+      "description": "Explora la verdadera naturaleza de la fe salvadora que cree en la palabra invisible de Dios y se acredita como justicia (Génesis 15:6). Muestra cómo los verdaderos creyentes (Enoc, Noé, Abraham) 'caminan con Dios' y obedecen su llamado a través de pruebas de fe extremas.",
+      "theological_doctrine": "Soteriología (Justificación por la Fe Sola - Sola Fide) y Santificación. La fe verdadera no es mero asentimiento intelectual, sino una confianza firme que produce frutos visibles de santidad y obediencia de corazón.",
+      "genesis_passages": [
+        "Génesis 5:24",
+        "Génesis 6:9",
+        "Génesis 15:6",
+        "Génesis 22:1-18"
+      ],
+      "cross_references_nt": [
+        "Romanos 4:1-5",
+        "Gálatas 3:6-9",
+        "Hebreos 11:1-19",
+        "Santiago 2:21-23"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "אָמַן",
+          "transliteration": "Aman",
+          "meaning": "Creer / Confiar con firmeza (raíz de la palabra Amén)"
+        },
+        {
+          "hebrew": "צָדַק",
+          "transliteration": "Tsadaq",
+          "meaning": "Ser declarado justo / Imputación de justicia divina"
+        }
+      ],
+      "footnotes": [
+        "Sola Fide: La doctrina de que somos declarados justos delante de Dios únicamente por la fe en sus promesas, sin méritos de obras.",
+        "Akedáh (עֲקֵידָה): El término hebreo para el 'atamiento' o prueba del sacrificio de Isaac en el Monte Moriah."
+      ],
+      "key_event_ids": [
+        "enoch_walked_god",
+        "abrahamic_covenant",
+        "binding_of_isaac"
+      ],
+      "key_people_ids": [
+        "enoch",
+        "noah",
+        "abraham"
+      ]
+    },
+    {
+      "id": "theme_messianic_promise",
+      "icon": "✝️",
+      "title": "La Promesa Mesiánica y Tipología de Cristo",
+      "subtitle": "El Protoevangelio y la Línea del Redentor Prometido",
+      "description": "Sigue el hilo de la revelación progresiva del Mesías desde la primera promesa en el Edén (Protoevangelio, Gén. 3:15: la Simiente que aplastará a la serpiente) hasta la bendición patriarcal a la tribu de Judá (Gén. 49:10: el Cetro de Siloh). Muestra los grandes prototipos de Cristo como el Arca de Noé, Melquisedec, el Cordero provisto en Moriah y la vida de José.",
+      "theological_doctrine": "Cristología en el Antiguo Testamento. Jesucristo es el centro unificador de todas las Escrituras. Las promesas y figuras del Génesis son sombras que encuentran su realidad radiante en el Nuevo Testamento.",
+      "genesis_passages": [
+        "Génesis 3:15",
+        "Génesis 14:18-20",
+        "Génesis 22:13-14",
+        "Génesis 49:8-10"
+      ],
+      "cross_references_nt": [
+        "Lucas 24:27, 44",
+        "Juan 8:56",
+        "Gálatas 3:16",
+        "Hebreos 7:1-17",
+        "Apocalipsis 5:5"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "שִׁילֹה",
+          "transliteration": "Siloh / Shiloh",
+          "meaning": "Aquel a quien pertenece el gobierno / El Pacificador (Título Mesiánico)"
+        },
+        {
+          "hebrew": "זֶרַע",
+          "transliteration": "Zera",
+          "meaning": "Simiente / Descendencia prometida"
+        }
+      ],
+      "footnotes": [
+        "Protoevangelio: Término teológico que significa 'el primer Evangelio' (Génesis 3:15).",
+        "Tipología Bíblica: El estudio de personas, eventos o instituciones del AT diseñadas divinamente para prefigurar la persona y obra de Cristo."
+      ],
+      "key_event_ids": [
+        "fall_judgment",
+        "melchizedek",
+        "binding_of_isaac",
+        "jacob_blesses_sons_death"
+      ],
+      "key_people_ids": [
+        "eve",
+        "shem",
+        "abraham",
+        "isaac",
+        "jacob",
+        "judah",
+        "joseph",
+        "jesus"
+      ]
+    }
   ]
 }
