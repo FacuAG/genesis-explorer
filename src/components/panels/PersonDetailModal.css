@@ -16,6 +16,7 @@
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .person-category-tag {
@@ -23,6 +24,16 @@
   color: #818cf8;
   font-size: 0.75rem;
   font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.person-gen-tag {
+  background: rgba(234, 179, 8, 0.2);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  font-size: 0.75rem;
+  font-weight: 800;
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
 }
@@ -55,6 +66,70 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* 👨‍👩‍👧‍👦 Tarjeta de Relaciones Familiares */
+.family-card-box {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+
+.family-tree-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.fam-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fam-label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.fam-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.fam-chip {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.fam-chip:hover {
+  background: rgba(168, 85, 247, 0.3);
+  border-color: #c084fc;
+  transform: translateY(-1px);
+}
+
+.father-chip { border-color: rgba(99, 102, 241, 0.4); }
+.mother-chip { border-color: rgba(236, 72, 153, 0.4); }
+.spouse-chip { border-color: rgba(245, 158, 11, 0.4); }
+.child-chip { border-color: rgba(16, 185, 129, 0.4); }
+
+.fam-none {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: italic;
 }
 
 .biography-content p, .section-text {
@@ -140,6 +215,17 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 0.75rem 1rem;
+}
+
+.overlap-person-btn {
+  background: transparent;
+  border: none;
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
 }
 
 .overlap-years {

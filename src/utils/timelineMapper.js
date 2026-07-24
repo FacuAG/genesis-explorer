@@ -86,8 +86,8 @@ export function getEventChapter(e) {
 }
 
 /**
- * Convierte un año Anno Mundi (AM) a un objeto Date falso de escala uniforme
- * AM 0 se mapea al año 1000-01-01, AM 2369 al año 3369-01-01.
+ * Convierte un año Anno Mundi (AM) a un objeto Date falso de escala uniforme.
+ * AM 0 se mapea al año 1000-01-01.
  */
 export function amToDate(yearAM) {
   const baseYear = 1000;
@@ -111,7 +111,7 @@ export function dateToAM(date) {
 
 /**
  * Transforma los eventos, bloques narrativos, eras y pactos de genesis.json
- * en ítems y grupos para vis-timeline según el nivel de detalle semántico (LOD).
+ * en ítems y grupos para vis-timeline asegurando inclusión del targetEventId.
  */
 export function mapGenesisToVisData(
   events = [],
@@ -119,7 +119,8 @@ export function mapGenesisToVisData(
   covenants = [],
   eras = [],
   detailLevel = 3,
-  isFilterActive = false
+  isFilterActive = false,
+  targetEventId = null
 ) {
   // 1. Grupos Jerárquicos de la Timeline
   const groups = [
@@ -140,40 +141,30 @@ export function mapGenesisToVisData(
       content: '<span class="group-label">👑 Pactos Divinos</span>',
       order: 3,
       className: 'vis-group-covenants'
-    }
-  ];
-
-  // Agregar grupo de eventos si hay nivel 2/3 o si hay un filtro activo
-  if (detailLevel >= 2 || isFilterActive) {
-    groups.push({
+    },
+    {
       id: 'events_group',
-      content: '<span class="group-label">⚡ Eventos Bíblicos</span>',
+      content: '<span class="group-label">⚡ Eventos Históricos (AM)</span>',
       order: 4,
       className: 'vis-group-events'
-    });
-  }
+    }
+  ];
 
   const items = [];
 
   // 2. Mapear Eras Teológicas
   eras.forEach(era => {
     const startAM = era.am_start ?? 0;
-    const endAM = era.am_end ?? 2369;
+    const endAM = era.am_end ?? (startAM + 500);
 
     items.push({
       id: `era_${era.id}`,
       group: 'eras_group',
-      content: `
-        <div class="vis-era-item">
-          <strong>🏛️ ${era.name}</strong>
-          <span class="era-chap-tag">Caps. ${era.chapters_start}-${era.chapters_end}</span>
-          <span class="era-am-range">AM ${startAM} – ${endAM}</span>
-        </div>
-      `,
+      content: `<div class="vis-era-badge" style="background: ${era.color || '#6366f1'}22; border-color: ${era.color || '#6366f1'}">🌐 <strong>${era.name}</strong></div>`,
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
-      className: `vis-item-era era-${era.id}`
+      className: 'vis-item-era'
     });
   });
 
@@ -200,7 +191,7 @@ export function mapGenesisToVisData(
     });
   });
 
-  // 4. Mapear Pactos en covenants_group
+  // 4. Mapear Pactos
   covenants.forEach(cov => {
     let covAM = 0;
     if (cov.id === 'edenic_covenant' || cov.id === 'eden_covenant') covAM = 0;
@@ -219,10 +210,10 @@ export function mapGenesisToVisData(
     });
   });
 
-  // 5. Mapear Eventos Bíblicos (Con resalte especial si hay filtro activo)
+  // 5. Mapear Eventos Bíblicos (Inclusión garantizada de targetEventId)
   let visibleEvents = events;
 
-  if (!isFilterActive) {
+  if (!isFilterActive && !targetEventId) {
     if (detailLevel === 1) {
       visibleEvents = [];
     } else if (detailLevel === 2) {
@@ -238,14 +229,24 @@ export function mapGenesisToVisData(
     }
   }
 
+  // Garantizar que targetEventId esté siempre presente
+  if (targetEventId && !visibleEvents.some(e => e.id === targetEventId)) {
+    const targetObj = events.find(e => e.id === targetEventId);
+    if (targetObj) {
+      visibleEvents = [targetObj, ...visibleEvents];
+    }
+  }
+
   visibleEvents.forEach(e => {
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };
     const amYear = getEventAM(e);
     const eventName = e.short_name || e.name;
-    const highlightClass = isFilterActive ? 'vis-item-highlighted' : '';
+    const isTarget = e.id === targetEventId;
+    const highlightClass = (isFilterActive || isTarget) ? 'vis-item-highlighted' : '';
+    const targetClass = isTarget ? 'vis-item-target-active' : '';
 
     const contentHtml = `
-      <div class="vis-event-card category-${e.category}">
+      <div class="vis-event-card category-${e.category} ${targetClass}">
         <span class="event-icon">${cat.icon}</span>
         <span class="event-title">${eventName}</span>
         <span class="event-am-tag">AM ${amYear}</span>
@@ -258,7 +259,7 @@ export function mapGenesisToVisData(
       content: contentHtml,
       start: amToDate(amYear),
       type: 'box',
-      className: `vis-item-event cat-${e.category} ${highlightClass}`
+      className: `vis-item-event cat-${e.category} ${highlightClass} ${targetClass}`
     });
   });
 

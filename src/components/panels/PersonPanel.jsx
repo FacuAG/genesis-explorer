@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { LifespanBar } from '../timeline/LifespanBar';
 import { PersonDetailModal } from './PersonDetailModal';
 import './Panels.css';
 
 /**
  * Componente para el Explorador de Personajes de Génesis.
- * Incluye gráfico LifespanBar, catálogo de los 33 personajes, filtro por categoría y modal de perfil bíblico completo.
+ * Incluye gráfico LifespanBar, catálogo de todos los personajes, relaciones familiares directas,
+ * filtro por categoría y modal de perfil bíblico completo.
  */
-export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }) {
+export function PersonPanel({ people = [], peopleMap, eventsMap, targetPersonId, onSelectEvent }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [activePersonId, setActivePersonId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (targetPersonId) {
+      setActivePersonId(targetPersonId);
+      setIsModalOpen(true);
+    }
+  }, [targetPersonId]);
 
   const handleOpenPerson = (personId) => {
     setActivePersonId(personId);
@@ -21,7 +29,7 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
     ? people
     : people.filter(p => p.category === selectedCategory);
 
-  const activePersonObj = people.find(p => p.id === activePersonId);
+  const activePersonObj = people.find(p => p.id === activePersonId) || (peopleMap ? peopleMap.get(activePersonId) : null);
 
   return (
     <div className="panel-container">
@@ -35,7 +43,7 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
       <div className="panel-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <h2>👥 Personajes del Génesis ({filteredPeople.length} de {people.length})</h2>
-          <p>Perfiles bíblicos detallados de todos los patriarcas, matriarcas y figuras históricas documentadas en el texto.</p>
+          <p>Perfiles bíblicos detallados, genealogía y relaciones familiares de todos los patriarcas, matriarcas y figuras históricas.</p>
         </div>
 
         {/* Filtro por Categoría de Personaje */}
@@ -75,6 +83,11 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
             dateRangeStr = `(Fechas AM no detalladas en el texto)`;
           }
 
+          const fatherId = person.father || person.family?.father;
+          const fatherObj = fatherId && peopleMap ? peopleMap.get(fatherId) : null;
+          const spouseId = Array.isArray(person.spouses) ? person.spouses[0] : (person.spouse || person.family?.spouse);
+          const spouseObj = spouseId && peopleMap ? peopleMap.get(spouseId) : null;
+
           return (
             <div key={person.id} className="person-card">
               <div className="person-card-header">
@@ -85,29 +98,41 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, onSelectEvent }
               <p className="person-lifespan">
                 ⏳ Longevidad: {lifespanStr} <span className="date-range-note">{dateRangeStr}</span>
               </p>
+
+              {/* Muestra de Relaciones Familiares Clave */}
+              {(fatherObj || spouseObj) && (
+                <div style={{ fontSize: '0.78rem', color: '#cbd5e1', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  {fatherObj && <span>👨 Padre: <strong>{fatherObj.name}</strong></span>}
+                  {spouseObj && <span>💍 Esposa: <strong>{spouseObj.name}</strong></span>}
+                </div>
+              )}
+
               {person.theological_significance && (
-                <p className="person-theology">{person.theological_significance.substring(0, 160)}...</p>
+                <p className="person-theology">{person.theological_significance.substring(0, 150)}...</p>
               )}
               <button
                 className="person-detail-action-btn"
                 onClick={() => handleOpenPerson(person.id)}
               >
-                📖 Ver Biografía Completa ➔
+                📖 Ver Biografía y Árbol Familiar ➔
               </button>
             </div>
           );
         })}
       </div>
 
-      {/* Modal de Perfil Completo del Personaje */}
-      <PersonDetailModal
-        person={activePersonObj}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        peopleMap={peopleMap}
-        eventsMap={eventsMap}
-        onSelectEvent={onSelectEvent}
-      />
+      {/* Modal de Detalle Completo de Personaje */}
+      {isModalOpen && activePersonObj && (
+        <PersonDetailModal
+          person={activePersonObj}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          peopleMap={peopleMap}
+          eventsMap={eventsMap}
+          onSelectEvent={onSelectEvent}
+          onSelectPerson={(nextPersonId) => handleOpenPerson(nextPersonId)}
+        />
+      )}
     </div>
   );
 }

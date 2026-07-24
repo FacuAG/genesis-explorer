@@ -1,21 +1,20 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
+import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline/standalone';
-import { DataSet } from 'vis-data/standalone';
+import 'vis-timeline/styles/vis-timeline-graph2d.min.css';
 import {
   mapGenesisToVisData,
-  amToDate,
+  EVENT_CATEGORIES,
   getEventAM,
+  amToDate,
+  dateToAM,
   getEventSummary,
-  getEventRefStr,
-  getEventChapter,
-  formatRef,
-  EVENT_CATEGORIES
+  getEventRefStr
 } from '../../utils/timelineMapper';
-import { TimelineControls } from './TimelineControls';
-import { EventPanel } from '../panels/EventPanel';
 import { Modal } from '../common/Modal';
+import { BibleRefLink } from '../common/BibleRefLink';
+import { PersonDetailModal } from '../panels/PersonDetailModal';
 import './TimelineView.css';
-import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
 /**
  * Componente interactivo principal de la Línea de Tiempo de Genesis Explorer.
@@ -39,6 +38,7 @@ export function TimelineView({
   // Entidad activa seleccionada (Evento, Pacto, Bloque o Era)
   const [selectedEntity, setSelectedEntity] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalPerson, setModalPerson] = useState(null);
 
   // Estados de Filtro Avanzado
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -69,17 +69,14 @@ export function TimelineView({
     setFilterText('');
     setActiveJump(null);
     setDetailLevel(2);
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
-    }
   };
 
-  // Maps para búsqueda $O(1)$ de Pactos, Bloques y Eras
-  const covenantsMap = useMemo(() => {
+  // Mapas auxiliares para búsqueda rápida O(1)
+  const eventsMap = useMemo(() => {
     const map = new Map();
-    covenants.forEach(c => map.set(c.id, c));
+    events.forEach(e => map.set(e.id, e));
     return map;
-  }, [covenants]);
+  }, [events]);
 
   const blocksMap = useMemo(() => {
     const map = new Map();
@@ -87,78 +84,58 @@ export function TimelineView({
     return map;
   }, [narrativeBlocks]);
 
+  const covenantsMap = useMemo(() => {
+    const map = new Map();
+    covenants.forEach(c => map.set(c.id, c));
+    return map;
+  }, [covenants]);
+
   const erasMap = useMemo(() => {
     const map = new Map();
     eras.forEach(e => map.set(e.id, e));
     return map;
   }, [eras]);
 
-  const eventsMap = useMemo(() => {
-    const map = new Map();
-    events.forEach(e => map.set(e.id, e));
-    return map;
-  }, [events]);
-
-  // Filtrado multi-criterio de eventos
+  // Filtrado reactivo de eventos
   const filteredEvents = useMemo(() => {
-    return events.filter(e => {
-      // 1. Filtro por Categoría
-      if (selectedCategory !== 'all' && e.category !== selectedCategory) return false;
+    return events.filter(evt => {
+      // Filtro 1: Categoría
+      if (selectedCategory !== 'all' && evt.category !== selectedCategory) return false;
 
-      // 2. Filtro por Bloque Narrativo
+      // Filtro 2: Bloque Narrativo
       if (selectedBlockId !== 'all') {
-        const block = narrativeBlocks.find(b => b.id === selectedBlockId);
+        const block = blocksMap.get(selectedBlockId);
         if (block) {
-          const startCh = block.chapters_start ?? 1;
-          const endCh = block.chapters_end ?? 50;
-          const eventCh = getEventChapter(e);
-          if (eventCh && (eventCh < startCh || eventCh > endCh)) return false;
+          const am = getEventAM(evt);
+          if (am < block.am_start || am > block.am_end) return false;
         }
       }
 
-      // 3. Filtro por Capítulo Específico
+      // Filtro 3: Capítulo Bíblico
       if (selectedChapter !== 'all') {
-        const targetCh = Number(selectedChapter);
-        const eventCh = getEventChapter(e);
-        if (eventCh !== targetCh) return false;
+        const chapNum = parseInt(selectedChapter, 10);
+        const refChap = evt.scriptural_reference?.chapter || (evt.references && evt.references[0]?.chapter) || evt.chapter_start;
+        if (refChap !== chapNum) return false;
       }
 
-      // 4. Filtro por Texto / Palabra clave
-      if (filterText && filterText.trim().length > 0) {
+      // Filtro 4: Búsqueda por Texto Libre
+      if (filterText.trim().length > 0) {
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const name = (e.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const summary = getEventSummary(e).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        if (!name.includes(q) && !summary.includes(q)) return false;
+        const nameMatch = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
+        const summaryMatch = getEventSummary(evt).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
+        const teachingMatch = (evt.theological_teaching || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q);
+        if (!nameMatch && !summaryMatch && !teachingMatch) return false;
       }
 
-      // 5. Filtro por Salto Rápido Activo (si hay un rango de AM activo)
+      // Filtro 5: Salto Rápido Activo
       if (activeJump) {
-        const am = getEventAM(e);
-        if (am < activeJump.startAM || am > activeJump.endAM + 5) return false;
+        const am = getEventAM(evt);
+        if (am < activeJump.startAM || am > activeJump.endAM) return false;
       }
 
       return true;
     });
-  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, narrativeBlocks]);
-
-  // Auto-enfoque de ventana de vis-timeline al cambiar filtros
-  useEffect(() => {
-    if (!timelineInstanceRef.current || !isFilterActive) return;
-
-    if (filteredEvents.length > 0) {
-      const amYears = filteredEvents.map(getEventAM);
-      const minAM = Math.min(...amYears);
-      const maxAM = Math.max(...amYears);
-
-      const padding = (maxAM - minAM < 30) ? 40 : 30;
-      const startWin = amToDate(Math.max(-150, minAM - padding));
-      const endWin = amToDate(Math.min(2400, maxAM + padding));
-
-      timelineInstanceRef.current.setWindow(startWin, endWin, {
-        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
-      });
-    }
-  }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, filteredEvents, isFilterActive]);
+  }, [events, selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump, blocksMap]);
 
   // Auto-enfoque de cámara y destello de ítem cuando se selecciona un targetEventId desde cualquier panel
   useEffect(() => {
@@ -169,11 +146,7 @@ export function TimelineView({
     setSelectedEntity({ type: 'event', data: eventObj });
     try {
       timelineInstanceRef.current.setSelection([targetEventId]);
-
-      const yearAM = getEventAM(eventObj);
-      const startWin = amToDate(Math.max(-200, yearAM - 35));
-      const endWin = amToDate(Math.min(2500, yearAM + 35));
-      timelineInstanceRef.current.setWindow(startWin, endWin, {
+      timelineInstanceRef.current.focus(targetEventId, {
         animation: { duration: 700, easingFunction: 'easeInOutQuad' }
       });
     } catch (err) {
@@ -184,14 +157,15 @@ export function TimelineView({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Transform data for vis-timeline with Semantic Zoom Level of Detail (LOD) and highlight flags
+    // Transformar datos para vis-timeline asegurando targetEventId
     const { groups, items } = mapGenesisToVisData(
       filteredEvents,
       narrativeBlocks,
       covenants,
       eras,
       activeDetailLevel,
-      isFilterActive
+      isFilterActive,
+      targetEventId
     );
 
     const visGroups = new DataSet(groups);
@@ -216,30 +190,6 @@ export function TimelineView({
       max: amToDate(2500),
       start: amToDate(-180),
       end: amToDate(2369),
-      format: {
-        minorLabels: function(date, scale) {
-          let yr = 1000;
-          if (date) {
-            if (date instanceof Date) yr = date.getUTCFullYear();
-            else if (typeof date.year === 'function') yr = date.year();
-            else if (typeof date.getFullYear === 'function') yr = date.getFullYear();
-            else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
-          }
-          const am = yr - 1000;
-          return am < 0 ? `Antes de AM 0` : `AM ${am}`;
-        },
-        majorLabels: function(date, scale) {
-          let yr = 1000;
-          if (date) {
-            if (date instanceof Date) yr = date.getUTCFullYear();
-            else if (typeof date.year === 'function') yr = date.year();
-            else if (typeof date.getFullYear === 'function') yr = date.getFullYear();
-            else { const d = new Date(date); if (!isNaN(d.getTime())) yr = d.getUTCFullYear(); }
-          }
-          const am = yr - 1000;
-          return am < 0 ? `Período Inicial` : `Anno Mundi (AM ${am})`;
-        }
-      },
       template: function (item) {
         return item.content;
       }
@@ -248,6 +198,18 @@ export function TimelineView({
     // Inicialización del motor vis-timeline
     const timeline = new Timeline(containerRef.current, visItems, visGroups, options);
     timelineInstanceRef.current = timeline;
+
+    // Enfoque automático inicial si hay targetEventId activo
+    if (targetEventId) {
+      setTimeout(() => {
+        try {
+          timeline.setSelection([targetEventId]);
+          timeline.focus(targetEventId, { animation: { duration: 700, easingFunction: 'easeInOutQuad' } });
+        } catch (err) {
+          console.warn("Error en focus de targetEventId:", err);
+        }
+      }, 120);
+    }
 
     // Manejador del evento de selección (clic en cualquier ítem)
     timeline.on('select', function (properties) {
@@ -289,276 +251,215 @@ export function TimelineView({
         timelineInstanceRef.current = null;
       }
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, onSelectEvent, erasMap, blocksMap, covenantsMap, eventsMap]);
 
-  // Funciones de navegación de zoom
+  // Controles manuales de Zoom y Navegación
   const handleZoomIn = () => {
-    if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.zoomIn(0.4);
-      if (detailLevel < 3) setDetailLevel(3);
-    }
+    if (timelineInstanceRef.current) timelineInstanceRef.current.zoomIn(0.4);
   };
 
   const handleZoomOut = () => {
     if (timelineInstanceRef.current) timelineInstanceRef.current.zoomOut(0.4);
   };
 
-  const handleFitAll = () => {
-    setActiveJump(null);
-    setSelectedCategory('all');
-    setSelectedBlockId('all');
-    setSelectedChapter('all');
-    setFilterText('');
+  const handleResetZoom = () => {
     if (timelineInstanceRef.current) {
-      timelineInstanceRef.current.setWindow(amToDate(-180), amToDate(2369), { animation: true });
+      timelineInstanceRef.current.setWindow(amToDate(-100), amToDate(2400), {
+        animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+      });
     }
   };
 
-  // Nombres descriptivos para chips de filtro
-  const selectedCatObj = EVENT_CATEGORIES[selectedCategory];
-  const selectedBlockObj = narrativeBlocks.find(b => b.id === selectedBlockId);
+  const activeEventObj = selectedEntity?.type === 'event' ? selectedEntity.data : null;
+  const activeBlockObj = selectedEntity?.type === 'block' ? selectedEntity.data : null;
+  const activeCovenantObj = selectedEntity?.type === 'covenant' ? selectedEntity.data : null;
 
   return (
-    <div className="timeline-view-wrapper">
-      {/* Panel Flotante de Controles y Filtros Avanzados */}
-      <TimelineControls
-        eventsCount={filteredEvents.length}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        selectedBlockId={selectedBlockId}
-        setSelectedBlockId={setSelectedBlockId}
-        selectedChapter={selectedChapter}
-        setSelectedChapter={setSelectedChapter}
-        filterText={filterText}
-        setFilterText={setFilterText}
-        detailLevel={detailLevel}
-        setDetailLevel={setDetailLevel}
-        activeJump={activeJump ? activeJump.id : null}
-        narrativeBlocks={narrativeBlocks}
-        onJumpToAM={handleJumpToAM}
-        onZoomIn={handleZoomIn}
-        onZoomOut={handleZoomOut}
-        onFitAll={handleFitAll}
-      />
-
-      {/* Indicador Detallado de Filtros Activos con Desglose por Chips */}
-      {isFilterActive && (
-        <div className="active-filter-banner">
-          <div className="banner-left-info">
-            <span className="banner-icon">🎯</span>
-            <span className="banner-title">
-              <strong>Filtros Combinados Activos ({filteredEvents.length} Evento{filteredEvents.length !== 1 ? 's' : ''}):</strong>
-            </span>
+    <div className="timeline-view-container">
+      {/* Barra de Filtros Avanzados y Controles */}
+      <div className="timeline-controls-bar">
+        <div className="filters-row">
+          <div className="filter-group">
+            <label>Nivel de Detalle (LOD):</label>
+            <div className="lod-buttons">
+              <button className={`lod-btn ${detailLevel === 1 ? 'active' : ''}`} onClick={() => setDetailLevel(1)}>1: Hitos</button>
+              <button className={`lod-btn ${detailLevel === 2 ? 'active' : ''}`} onClick={() => setDetailLevel(2)}>2: Estructurado</button>
+              <button className={`lod-btn ${detailLevel === 3 ? 'active' : ''}`} onClick={() => setDetailLevel(3)}>3: Exhaustivo ({events.length})</button>
+            </div>
           </div>
 
-          <div className="active-chips-list">
-            {activeJump && (
-              <span className="filter-chip chip-jump">
-                Hito: {activeJump.label}
-                <button className="chip-remove-btn" onClick={() => setActiveJump(null)}>✕</button>
-              </span>
-            )}
-
-            {selectedCategory !== 'all' && selectedCatObj && (
-              <span className="filter-chip chip-category">
-                Categoría: {selectedCatObj.icon} {selectedCatObj.label}
-                <button className="chip-remove-btn" onClick={() => setSelectedCategory('all')}>✕</button>
-              </span>
-            )}
-
-            {selectedBlockId !== 'all' && selectedBlockObj && (
-              <span className="filter-chip chip-block">
-                Bloque: 📍 {selectedBlockObj.name}
-                <button className="chip-remove-btn" onClick={() => setSelectedBlockId('all')}>✕</button>
-              </span>
-            )}
-
-            {selectedChapter !== 'all' && (
-              <span className="filter-chip chip-chapter">
-                Capítulo: Génesis {selectedChapter}
-                <button className="chip-remove-btn" onClick={() => setSelectedChapter('all')}>✕</button>
-              </span>
-            )}
-
-            {filterText && (
-              <span className="filter-chip chip-search">
-                Texto: "{filterText}"
-                <button className="chip-remove-btn" onClick={() => setFilterText('')}>✕</button>
-              </span>
-            )}
-
-            <button className="reset-filter-btn" onClick={handleResetFilters}>
-              🗑️ Limpiar Todo
-            </button>
+          <div className="filter-group">
+            <label>Categoría:</label>
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="timeline-select">
+              <option value="all">Todas las Categorías</option>
+              {Object.entries(EVENT_CATEGORIES).map(([key, cat]) => (
+                <option key={key} value={key}>{cat.icon} {cat.label}</option>
+              ))}
+            </select>
           </div>
-        </div>
-      )}
 
-      {/* Previsualizador Rápido SUPERIOR */}
-      {selectedEntity && (
-        <div className="selected-event-preview-bar top-preview">
-          {selectedEntity.type === 'event' && (
-            <>
-              <div className="preview-header">
-                <span className="preview-badge badge-event">⚡ Evento Bíblico</span>
-                <h3>{selectedEntity.data.name}</h3>
-                <span className="preview-am" title={`Año del Mundo ${getEventAM(selectedEntity.data)} (Años transcurridos desde la Creación del Mundo)`}>
-                  Año del Mundo: AM {getEventAM(selectedEntity.data)} | {getEventRefStr(selectedEntity.data)}
-                </span>
-                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-                  📖 Ver Modal Completo ➔
-                </button>
-                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
-              </div>
-              <p className="preview-summary">{getEventSummary(selectedEntity.data)}</p>
-            </>
-          )}
-
-          {selectedEntity.type === 'covenant' && (
-            <>
-              <div className="preview-header">
-                <span className="preview-badge badge-covenant">👑 Pacto Divino</span>
-                <h3>{selectedEntity.data.name}</h3>
-                <span className="preview-am">{formatRef(selectedEntity.data.scriptural_reference)}</span>
-                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-                  👑 Ver Pacto Completo ➔
-                </button>
-                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
-              </div>
-              <p className="preview-summary">{selectedEntity.data.description}</p>
-            </>
-          )}
-
-          {selectedEntity.type === 'block' && (
-            <>
-              <div className="preview-header">
-                <span className="preview-badge badge-block">📍 Bloque Narrativo</span>
-                <h3>{selectedEntity.data.name}</h3>
-                <span className="preview-am">Génesis Caps. {selectedEntity.data.chapters_start}-{selectedEntity.data.chapters_end}</span>
-                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-                  📍 Ver Bloque Completo ➔
-                </button>
-                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
-              </div>
-              <p className="preview-summary">{selectedEntity.data.summary}</p>
-            </>
-          )}
-
-          {selectedEntity.type === 'era' && (
-            <>
-              <div className="preview-header">
-                <span className="preview-badge badge-era">🌐 Era Teológica</span>
-                <h3>{selectedEntity.data.name} ({selectedEntity.data.subtitle})</h3>
-                <span className="preview-am">Caps. {selectedEntity.data.chapters_start}-{selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} - {selectedEntity.data.am_end}</span>
-                <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
-                  🌐 Ver Era Completa ➔
-                </button>
-                <button className="preview-close-btn" onClick={() => setSelectedEntity(null)}>✕</button>
-              </div>
-              <p className="preview-summary">{selectedEntity.data.description}</p>
-            </>
-          )}
-        </div>
-      )}
-
-      {/* Contenedor Principal de la Línea de Tiempo vis-timeline */}
-      <div className="vis-timeline-mount" ref={containerRef} />
-
-      {/* Modal Genérico de Detalle Exegético Centrado */}
-      {isModalOpen && selectedEntity && (
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          title={
-            selectedEntity.type === 'event' ? `⚡ ${selectedEntity.data.name}` :
-            selectedEntity.type === 'covenant' ? `👑 ${selectedEntity.data.name}` :
-            selectedEntity.type === 'block' ? `📍 ${selectedEntity.data.name}` :
-            `🌐 ${selectedEntity.data.name}`
-          }
-        >
-          {selectedEntity.type === 'event' && (
-            <EventPanel
-              event={selectedEntity.data}
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-              peopleMap={peopleMap}
-              locationsMap={locationsMap}
-              onSelectPerson={onSelectPerson}
+          <div className="filter-group">
+            <label>Buscador Rápido:</label>
+            <input
+              type="text"
+              placeholder="Buscar evento (ej. Abram, Diluvio)..."
+              value={filterText}
+              onChange={(e) => setFilterText(e.target.value)}
+              className="timeline-search-input"
             />
-          )}
+          </div>
 
-          {selectedEntity.type === 'covenant' && (
-            <div className="entity-modal-content">
-              <div className="covenant-modal-badge">Pacto Divino Solemnizado</div>
-              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
-              <p className="entity-modal-ref">📜 Cita Bíblica: {formatRef(selectedEntity.data.scriptural_reference)}</p>
-              <div className="entity-modal-section">
-                <h3>📖 Descripción del Pacto</h3>
-                <p>{selectedEntity.data.description}</p>
+          {isFilterActive && (
+            <button className="reset-filters-btn" onClick={handleResetFilters}>
+              🔄 Limpiar Filtros
+            </button>
+          )}
+        </div>
+
+        {/* Botones de Cámara */}
+        <div className="camera-controls-row">
+          <button className="cam-btn" onClick={handleZoomIn} title="Acercar Zoom">🔍 +</button>
+          <button className="cam-btn" onClick={handleZoomOut} title="Alejar Zoom">🔍 -</button>
+          <button className="cam-btn" onClick={handleResetZoom} title="Restablecer Vista Completa">🌐 Restablecer</button>
+        </div>
+      </div>
+
+      {/* Lienzo del Motor vis-timeline */}
+      <div className="timeline-canvas-wrapper">
+        <div ref={containerRef} className="vis-timeline-canvas" />
+      </div>
+
+      {/* Panel Inferior de Inspección Rápida de Entidad Seleccionada */}
+      {selectedEntity && (
+        <div className="entity-inspector-panel">
+          <div className="inspector-header">
+            <span className="inspector-badge">
+              {selectedEntity.type === 'event' ? '⚡ EVENTO BÍBLICO' : selectedEntity.type === 'covenant' ? '👑 PACTO DIVINO' : '📍 BLOQUE NARRATIVO'}
+            </span>
+            <h3>{selectedEntity.data.name}</h3>
+            <button className="close-inspector-btn" onClick={() => setSelectedEntity(null)}>✕</button>
+          </div>
+
+          <div className="inspector-body">
+            {activeEventObj && (
+              <>
+                <div className="inspector-meta-row">
+                  <span className="inspector-am-tag">⏳ Anno Mundi: AM {getEventAM(activeEventObj)}</span>
+                  <span className="inspector-ref-tag">📖 {getEventRefStr(activeEventObj)}</span>
+                  <span className="inspector-cat-tag">
+                    {EVENT_CATEGORIES[activeEventObj.category]?.icon} {EVENT_CATEGORIES[activeEventObj.category]?.label}
+                  </span>
+                </div>
+                <p className="inspector-summary">{getEventSummary(activeEventObj)}</p>
+
+                {activeEventObj.theological_teaching && (
+                  <div className="inspector-doctrine-box">
+                    <strong>🏛️ Enfoque Exegético:</strong> {activeEventObj.theological_teaching}
+                  </div>
+                )}
+
+                {/* Personajes Vinculados */}
+                {activeEventObj.key_people && activeEventObj.key_people.length > 0 && (
+                  <div className="inspector-people-row">
+                    <strong>👥 Personajes:</strong>
+                    {activeEventObj.key_people.map(pId => {
+                      const pObj = peopleMap?.get(pId);
+                      return (
+                        <button
+                          key={pId}
+                          className="inspector-person-chip"
+                          onClick={() => {
+                            if (pObj) setModalPerson(pObj);
+                          }}
+                        >
+                          👤 {pObj ? pObj.name : pId}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                <div className="inspector-actions">
+                  <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
+                    📖 Ver Ficha Completa ➔
+                  </button>
+                </div>
+              </>
+            )}
+
+            {activeBlockObj && (
+              <>
+                <p className="inspector-summary">{activeBlockObj.summary}</p>
+                <div className="inspector-meta-row">
+                  <span>⏳ Duración AM: AM {activeBlockObj.am_start} - AM {activeBlockObj.am_end}</span>
+                  <span>📖 Capítulos: {activeBlockObj.chapters_range}</span>
+                </div>
+              </>
+            )}
+
+            {activeCovenantObj && (
+              <>
+                <p className="inspector-summary">{activeCovenantObj.description}</p>
+                <div className="inspector-doctrine-box">
+                  <strong>📜 Significado Teológico:</strong> {activeCovenantObj.theological_significance}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Modal de Detalle de Evento */}
+      {isModalOpen && activeEventObj && (
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} maxWidth="780px">
+          <div className="event-detail-modal">
+            <div className="event-modal-header">
+              <span className="event-modal-am">Anno Mundi: AM {getEventAM(activeEventObj)}</span>
+              <h2>{activeEventObj.name}</h2>
+              <p className="event-modal-ref">📖 Reference: {getEventRefStr(activeEventObj)}</p>
+            </div>
+
+            <div className="event-modal-body">
+              <div className="em-section">
+                <h3>📜 Narrativa Bíblica</h3>
+                <p>{getEventSummary(activeEventObj)}</p>
               </div>
-              {selectedEntity.data.parties && (
-                <div className="entity-modal-section">
-                  <h3>🤝 Partes Involucradas</h3>
-                  <p><strong>Dios:</strong> {selectedEntity.data.parties.god || selectedEntity.data.parties.divine || 'Jehová Dios'}</p>
-                  <p><strong>Humano / Representante:</strong> {selectedEntity.data.parties.human_representative || selectedEntity.data.parties.human || 'La Humanidad'}</p>
+
+              {activeEventObj.theological_teaching && (
+                <div className="em-section em-doctrine-card">
+                  <h3>🏛️ Enseñanza Teológica Evangélica</h3>
+                  <p>{activeEventObj.theological_teaching}</p>
                 </div>
               )}
-              {selectedEntity.data.theological_significance && (
-                <div className="entity-modal-section">
-                  <h3>🕊️ Significado Teológico & Redentor</h3>
-                  <p>{selectedEntity.data.theological_significance}</p>
-                </div>
-              )}
-              {selectedEntity.data.fulfillment_in_christ && (
-                <div className="entity-modal-section messianic-box">
-                  <h3>✝️ Cumplimiento en Jesucristo</h3>
-                  <p>{selectedEntity.data.fulfillment_in_christ}</p>
+
+              {activeEventObj.scriptural_verse && (
+                <div className="em-section em-verse-box">
+                  <h3>💬 Texto de la Escritura</h3>
+                  <blockquote>
+                    <p>"{activeEventObj.scriptural_verse.text}"</p>
+                    <cite>— {activeEventObj.scriptural_verse.reference}</cite>
+                  </blockquote>
+                  <BibleRefLink reference={activeEventObj.scriptural_verse.reference} label="Abrir Versículo Completo RVR1960" />
                 </div>
               )}
             </div>
-          )}
-
-          {selectedEntity.type === 'block' && (
-            <div className="entity-modal-content">
-              <div className="block-modal-badge">Bloque Narrativo del Génesis</div>
-              <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
-              <p className="entity-modal-ref">📖 Capítulos: Génesis {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</p>
-              {selectedEntity.data.toledot_reference && (
-                <p className="entity-modal-toledot">
-                  ✨ <em>Sección Toledot:</em> "{selectedEntity.data.toledot_text}" ({selectedEntity.data.toledot_reference})
-                </p>
-              )}
-              <div className="entity-modal-section">
-                <h3>📜 Resumen Narrativo</h3>
-                <p>{selectedEntity.data.summary}</p>
-              </div>
-              {selectedEntity.data.theological_significance && (
-                <div className="entity-modal-section">
-                  <h3>🕊️ Enfoque Teológico</h3>
-                  <p>{selectedEntity.data.theological_significance}</p>
-                </div>
-              )}
-              {selectedEntity.data.messianic_connection && (
-                <div className="entity-modal-section messianic-box">
-                  <h3>✝️ Conexión Mesiánica con Jesucristo</h3>
-                  <p>{selectedEntity.data.messianic_connection}</p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {selectedEntity.type === 'era' && (
-            <div className="entity-modal-content">
-              <div className="era-modal-badge">Gran Era de la Historia Sagrada</div>
-              <h2 className="entity-modal-title">{selectedEntity.data.name} — {selectedEntity.data.subtitle}</h2>
-              <p className="entity-modal-ref">📖 Génesis Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
-              <div className="entity-modal-section">
-                <h3>📜 Panorama General de la Era</h3>
-                <p>{selectedEntity.data.description}</p>
-              </div>
-            </div>
-          )}
+          </div>
         </Modal>
+      )}
+
+      {/* Modal Directo de Personaje */}
+      {modalPerson && (
+        <PersonDetailModal
+          person={modalPerson}
+          isOpen={Boolean(modalPerson)}
+          onClose={() => setModalPerson(null)}
+          peopleMap={peopleMap}
+          eventsMap={eventsMap}
+          onSelectPerson={(nextPersonId) => {
+            const nextP = peopleMap.get(nextPersonId);
+            if (nextP) setModalPerson(nextP);
+          }}
+        />
       )}
     </div>
   );

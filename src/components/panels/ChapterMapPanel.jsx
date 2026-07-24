@@ -2,18 +2,20 @@ import React, { useState, useMemo } from 'react';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { BibleRefLink } from '../common/BibleRefLink';
+import { PersonDetailModal } from './PersonDetailModal';
 import './Panels.css';
 import './ChapterMapPanel.css';
 
 /**
  * Componente profesional para la Sala de Estudio Exegético por Capítulo (Génesis 1 a 50).
  * Integra lectura continua en Reina-Valera 1960, bosquejo homilético, lección doctrinal,
- * términos en hebreo bíblico, referencias al NT e interacción con foco en la Línea de Tiempo.
+ * términos en hebreo bíblico, referencias al NT y modal directo de biografías de personajes.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedChapNum, setSelectedChapNum] = useState(null);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
+  const [modalPerson, setModalPerson] = useState(null);
 
   // Ordenar lista de 50 capítulos
   const sortedChapters = useMemo(() => {
@@ -47,10 +49,8 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const chapterVersesList = useMemo(() => {
     if (!selectedChapNum) return [];
     const verses = [];
-    // Los capítulos de Génesis varían de 20 a 50 versículos. Leemos hasta 60.
     for (let v = 1; v <= 60; v++) {
       const vText = getVerseTextRVR1960('Génesis', selectedChapNum, v);
-      // getVerseTextRVR1960 devuelve "v. texto" si existe, o string de fallo si no existe
       if (vText && !vText.includes('Santa Biblia Reina-Valera') && vText.startsWith(`${v}.`)) {
         verses.push({
           number: v,
@@ -71,6 +71,14 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     navigator.clipboard.writeText(fullText);
     setCopySuccess(true);
     setTimeout(() => setCopySuccess(false), 2500);
+  };
+
+  // Abrir modal de biografía y relaciones familiares del personaje
+  const handleOpenPersonModal = (personId) => {
+    const p = peopleMap.get(personId);
+    if (p) {
+      setModalPerson(p);
+    }
   };
 
   return (
@@ -245,10 +253,11 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 </div>
               )}
 
-              {/* Personajes Participantes */}
+              {/* Personajes Participantes (Abre modal directo sin salir del capítulo) */}
               {selectedChapterObj.key_people && selectedChapterObj.key_people.length > 0 && (
                 <div className="exegesis-box people-box">
                   <h3>👥 Personajes en este Capítulo ({selectedChapterObj.key_people.length})</h3>
+                  <p className="box-note-sm">Haz clic en un personaje para abrir su perfil completo y relaciones familiares:</p>
                   <div className="chapter-people-list">
                     {selectedChapterObj.key_people.map(personId => {
                       const p = peopleMap.get(personId);
@@ -257,9 +266,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                         <div
                           key={personId}
                           className="chapter-person-chip"
-                          onClick={() => {
-                            if (onSelectPerson) onSelectPerson(personId);
-                          }}
+                          onClick={() => handleOpenPersonModal(personId)}
                         >
                           👤 <strong>{p.name}</strong> <em>({p.name_meaning || 'Patriarca'})</em>
                         </div>
@@ -299,6 +306,22 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             </div>
           </div>
         </div>
+      )}
+
+      {/* Modal de Biografía y Relaciones Familiares */}
+      {modalPerson && (
+        <PersonDetailModal
+          person={modalPerson}
+          isOpen={Boolean(modalPerson)}
+          onClose={() => setModalPerson(null)}
+          peopleMap={peopleMap}
+          eventsMap={eventsMap}
+          onSelectEvent={onSelectEvent}
+          onSelectPerson={(nextPersonId) => {
+            const nextP = peopleMap.get(nextPersonId);
+            if (nextP) setModalPerson(nextP);
+          }}
+        />
       )}
     </div>
   );

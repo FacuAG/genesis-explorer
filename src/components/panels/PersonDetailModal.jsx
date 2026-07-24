@@ -6,8 +6,9 @@ import './PersonDetailModal.css';
 
 /**
  * Componente modal de perfil completo para cualquier personaje bíblico de Génesis.
+ * Incluye navegación de relaciones familiares (Padre, Madre, Cónyuge e Hijos).
  */
-export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map(), eventsMap = new Map(), onSelectEvent }) {
+export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map(), eventsMap = new Map(), onSelectEvent, onSelectPerson }) {
   if (!person) return null;
 
   const birth = person.chronology?.birth_am;
@@ -15,13 +16,30 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
   const lifespan = person.chronology?.lifespan;
   const lifespanStr = formatLifespan(birth, death, lifespan);
 
-  // Obtener la información de convivencias patriarcales notables
+  // Obtener convivencias patriarcales notables
   const overlapsList = person.notable_overlaps || [];
 
-  // Obtener la lista de eventos bíblicos asociados
+  // Obtener eventos bíblicos asociados
   const eventObjects = (person.event_ids || [])
     .map(id => eventsMap.get(id))
     .filter(Boolean);
+
+  // Normalizar datos de relaciones familiares
+  const fatherId = person.father || person.family?.father || person.parents?.father;
+  const fatherObj = fatherId ? (peopleMap.get(fatherId) || { name: fatherId }) : null;
+
+  const motherId = person.mother || person.family?.mother || person.parents?.mother;
+  const motherObj = motherId ? (peopleMap.get(motherId) || { name: motherId }) : null;
+
+  const spousesList = Array.isArray(person.spouses)
+    ? person.spouses
+    : (person.spouse ? [person.spouse] : (person.family?.spouse ? [person.family.spouse] : []));
+
+  const childrenList = Array.isArray(person.children)
+    ? person.children
+    : (person.family?.children || []);
+
+  const genFromAdam = person.generation_from_adam || person.generation || person.chronology?.generation;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="880px">
@@ -30,12 +48,91 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
         <div className="person-modal-header">
           <div className="header-top-info">
             <span className="person-category-tag">{person.category || 'Personaje'}</span>
+            {genFromAdam && (
+              <span className="person-gen-tag" title="Generación en la línea lineal desde Adán">
+                👑 Gen. #{genFromAdam} desde Adán
+              </span>
+            )}
             <span className="person-lifespan-tag" title="Años Anno Mundi (Contados desde la Creación del Mundo)">⏳ {lifespanStr}</span>
           </div>
           <h2 className="person-modal-title">{person.name}</h2>
           <p className="person-modal-meaning">
             <strong>Hebreo:</strong> {person.name_origin || person.name} — <em>"{person.name_meaning || 'Sin especificar'}"</em>
           </p>
+        </div>
+
+        {/* 👨‍👩‍👧‍👦 Sección de Relaciones Familiares Directas */}
+        <div className="person-section family-card-box">
+          <h3 className="person-section-subtitle">👨‍👩‍👧‍👦 Relaciones Familiares Directas</h3>
+          <div className="family-tree-grid">
+            {/* Padre y Madre */}
+            <div className="fam-group">
+              <span className="fam-label">Padres:</span>
+              <div className="fam-chips">
+                {fatherObj ? (
+                  <button
+                    className="fam-chip father-chip"
+                    onClick={() => onSelectPerson && fatherObj.id && onSelectPerson(fatherObj.id)}
+                  >
+                    👨 <strong>Padre:</strong> {fatherObj.name}
+                  </button>
+                ) : (
+                  <span className="fam-none">Padre no documentado</span>
+                )}
+
+                {motherObj && (
+                  <button
+                    className="fam-chip mother-chip"
+                    onClick={() => onSelectPerson && motherObj.id && onSelectPerson(motherObj.id)}
+                  >
+                    👩 <strong>Madre:</strong> {motherObj.name}
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Cónyuge(s) */}
+            {spousesList.length > 0 && (
+              <div className="fam-group">
+                <span className="fam-label">Cónyuge(s):</span>
+                <div className="fam-chips">
+                  {spousesList.map((spId, idx) => {
+                    const spObj = typeof spId === 'string' ? (peopleMap.get(spId) || { name: spId, id: spId }) : spId;
+                    return (
+                      <button
+                        key={idx}
+                        className="fam-chip spouse-chip"
+                        onClick={() => onSelectPerson && spObj.id && onSelectPerson(spObj.id)}
+                      >
+                        💍 {spObj.name}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Hijos */}
+            {childrenList.length > 0 && (
+              <div className="fam-group">
+                <span className="fam-label">Descendientes / Hijos ({childrenList.length}):</span>
+                <div className="fam-chips">
+                  {childrenList.map((chId, idx) => {
+                    const chObj = typeof chId === 'string' ? (peopleMap.get(chId) || { name: chId, id: chId }) : chId;
+                    return (
+                      <button
+                        key={idx}
+                        className="fam-chip child-chip"
+                        onClick={() => onSelectPerson && chObj.id && onSelectPerson(chObj.id)}
+                      >
+                        👶 {chObj.name}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Biografía Completa */}
@@ -116,11 +213,21 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
             <h3 className="person-section-subtitle">🤝 Convivencia Contemporánea con otros Patriarcas</h3>
             <div className="overlaps-grid">
               {overlapsList.map((ov, idx) => {
-                const otherPerson = peopleMap.get(ov.with_person_id || ov.person2_id || ov.person1_id);
+                const otherPersonId = ov.with_person_id || ov.person2_id || ov.person1_id;
+                const otherPerson = peopleMap.get(otherPersonId);
                 return (
                   <div key={idx} className="overlap-item-card">
                     <span className="overlap-years">{ov.years_together} Años Compartidos</span>
-                    <h4 className="overlap-with">con {otherPerson ? otherPerson.name : ov.with_person_id}</h4>
+                    <h4 className="overlap-with">
+                      con {otherPerson ? (
+                        <button
+                          className="overlap-person-btn"
+                          onClick={() => onSelectPerson && onSelectPerson(otherPersonId)}
+                        >
+                          {otherPerson.name}
+                        </button>
+                      ) : otherPersonId}
+                    </h4>
                     <p className="overlap-note">{ov.note || ov.historical_note}</p>
                   </div>
                 );
