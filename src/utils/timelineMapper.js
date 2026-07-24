@@ -111,7 +111,7 @@ export function dateToAM(date) {
 
 /**
  * Transforma los eventos, bloques narrativos, eras y pactos de genesis.json
- * en ítems y grupos para vis-timeline asegurando inclusión del targetEventId.
+ * en ítems y grupos para vis-timeline asegurando inclusión del targetEventId y filtrado LOD.
  */
 export function mapGenesisToVisData(
   events = [],
@@ -210,23 +210,34 @@ export function mapGenesisToVisData(
     });
   });
 
-  // 5. Mapear Eventos Bíblicos (Inclusión garantizada de targetEventId)
+  // 5. Mapear Eventos Bíblicos con Filtrado LOD
   let visibleEvents = events;
 
   if (!isFilterActive && !targetEventId) {
     if (detailLevel === 1) {
-      visibleEvents = [];
+      // Hitos Históricos Clave (Eventos principales de cada era)
+      visibleEvents = events.filter(e => {
+        const am = getEventAM(e);
+        return (
+          e.category === 'covenant' ||
+          e.category === 'creation' ||
+          am === 0 || am === 1656 || am === 2083 || am === 2289 || am === 2369
+        );
+      });
     } else if (detailLevel === 2) {
+      // Estructurado (Pactos, Creación, Juicios y Grandes Patriarcas)
       visibleEvents = events.filter(e => {
         const am = getEventAM(e);
         return (
           e.category === 'covenant' ||
           e.category === 'creation' ||
           e.category === 'judgment' ||
-          am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2288
+          e.category === 'patriarch' ||
+          am === 0 || am === 1656 || am === 1750 || am === 2023 || am === 2083 || am === 2289 || am === 2369
         );
       });
     }
+    // detailLevel === 3 muestra todos los eventos
   }
 
   // Garantizar que targetEventId esté siempre presente

@@ -20,10 +20,9 @@ const EVENT_CATEGORIES = {
 };
 
 /**
- * Componente principal de la Línea de Tiempo Cronológica interactiva (Anno Mundi)
- * Módulo unificado definitivo con el 100% de las funcionalidades avanzadas:
- * Saltos Rápidos, Filtros de 5 dimensiones, Banner con chips desmontables,
- * Inspector Superior, Zoom Flotante sobre el lienzo y Fichas Exegéticas Completas.
+ * Componente principal de la Línea de Tiempo Cronológica interactiva (Anno Mundi).
+ * Módulo unificado sin destrucción de canvas (actualización in-memory con DataSet reactivo)
+ * para un rendimiento ultra-fluido sin parpadeos ni reinicios de cámara.
  */
 export function TimelineView({
   timelineEvents = [],
@@ -40,6 +39,10 @@ export function TimelineView({
   const containerRef = useRef(null);
   const timelineInstanceRef = useRef(null);
 
+  // DataSets persistentes para actualizar ítems sin destruir vis-timeline
+  const visGroupsRef = useRef(new DataSet());
+  const visItemsRef = useRef(new DataSet());
+
   // Estados de Filtros y Nivel de Detalle (LOD)
   const [activeDetailLevel, setActiveDetailLevel] = useState(2); // 1: Hitos, 2: Estructurado, 3: Exhaustivo
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -51,10 +54,10 @@ export function TimelineView({
   // Estado para la entidad seleccionada en el inspector rápido superior
   const [selectedEntity, setSelectedEntity] = useState(null);
 
-  // Estado para la apertura del modal de detalle exegético completo
+  // Estado para el modal de detalle exegético completo
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Estado para la apertura directa del modal de biografía y relaciones familiares del personaje
+  // Estado para el modal directo de personaje
   const [modalPerson, setModalPerson] = useState(null);
 
   // Mapeos rápidos para recuperación de entidades por ID
@@ -84,7 +87,7 @@ export function TimelineView({
     const startWin = amToDate(Math.max(-300, yearAM - 140));
     const endWin = amToDate(Math.min(2500, yearAM + 140));
     timelineInstanceRef.current.setWindow(startWin, endWin, {
-      animation: { duration: 800, easingFunction: 'easeInOutQuad' }
+      animation: { duration: 700, easingFunction: 'easeInOutQuad' }
     });
   };
 
@@ -124,45 +127,10 @@ export function TimelineView({
     return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0 || activeJump !== null;
   }, [selectedCategory, selectedBlockId, selectedChapter, filterText, activeJump]);
 
-  // Auto-enfoque de cámara y destello de ítem cuando se selecciona un targetEventId desde cualquier panel
-  useEffect(() => {
-    if (!targetEventId || !timelineInstanceRef.current) return;
-    const eventObj = eventsMap.get(targetEventId);
-    if (!eventObj) return;
-
-    setSelectedEntity({ type: 'event', data: eventObj });
-    try {
-      const yearAM = getEventAM(eventObj);
-      const startWin = amToDate(Math.max(-200, yearAM - 150));
-      const endWin = amToDate(Math.min(2500, yearAM + 150));
-
-      timelineInstanceRef.current.setSelection([targetEventId]);
-      timelineInstanceRef.current.setWindow(startWin, endWin, {
-        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
-      });
-    } catch (err) {
-      console.warn("No se pudo seleccionar la entidad en el canvas de timeline:", err);
-    }
-  }, [targetEventId, eventsMap]);
-
+  // 1. Inicialización ÚNICA de vis-timeline al montar el componente
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Transformar datos para vis-timeline asegurando targetEventId
-    const { groups, items } = mapGenesisToVisData(
-      filteredEvents,
-      narrativeBlocks,
-      covenants,
-      eras,
-      activeDetailLevel,
-      isFilterActive,
-      targetEventId
-    );
-
-    const visGroups = new DataSet(groups);
-    const visItems = new DataSet(items);
-
-    // Opciones avanzadas del motor vis-timeline
     const options = {
       stack: true,
       zoomable: true,
@@ -179,7 +147,7 @@ export function TimelineView({
       },
       min: amToDate(-300),
       max: amToDate(2500),
-      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años (evita duplicación de etiquetas)
+      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años
       zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 3000,
       start: amToDate(-180),
       end: amToDate(2369),
@@ -198,31 +166,10 @@ export function TimelineView({
       }
     };
 
-    // Inicialización del motor vis-timeline
-    const timeline = new Timeline(containerRef.current, visItems, visGroups, options);
+    const timeline = new Timeline(containerRef.current, visItemsRef.current, visGroupsRef.current, options);
     timelineInstanceRef.current = timeline;
 
-    // Enfoque automático inicial si hay targetEventId activo (Ventana panorámica de 300 años)
-    if (targetEventId) {
-      const eventObj = eventsMap.get(targetEventId);
-      if (eventObj) {
-        const yearAM = getEventAM(eventObj);
-        const startWin = amToDate(Math.max(-200, yearAM - 150));
-        const endWin = amToDate(Math.min(2500, yearAM + 150));
-        setTimeout(() => {
-          try {
-            timeline.setSelection([targetEventId]);
-            timeline.setWindow(startWin, endWin, {
-              animation: { duration: 600, easingFunction: 'easeInOutQuad' }
-            });
-          } catch (err) {
-            console.warn("Error en setWindow de targetEventId:", err);
-          }
-        }, 120);
-      }
-    }
-
-    // Manejador del evento de selección (clic en cualquier ítem)
+    // Manejador de selección de ítems
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
@@ -252,7 +199,47 @@ export function TimelineView({
     return () => {
       timeline.destroy();
     };
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId, eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent]);
+  }, [eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent]);
+
+  // 2. Actualización Reactiva de Ítems en memoria SIN destruir el canvas
+  useEffect(() => {
+    const { groups, items } = mapGenesisToVisData(
+      filteredEvents,
+      narrativeBlocks,
+      covenants,
+      eras,
+      activeDetailLevel,
+      isFilterActive,
+      targetEventId
+    );
+
+    visGroupsRef.current.clear();
+    visGroupsRef.current.add(groups);
+
+    visItemsRef.current.clear();
+    visItemsRef.current.add(items);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isFilterActive, targetEventId]);
+
+  // 3. Auto-enfoque de cámara si hay targetEventId activo
+  useEffect(() => {
+    if (!targetEventId || !timelineInstanceRef.current) return;
+    const eventObj = eventsMap.get(targetEventId);
+    if (!eventObj) return;
+
+    setSelectedEntity({ type: 'event', data: eventObj });
+    try {
+      const yearAM = getEventAM(eventObj);
+      const startWin = amToDate(Math.max(-200, yearAM - 150));
+      const endWin = amToDate(Math.min(2500, yearAM + 150));
+
+      timelineInstanceRef.current.setSelection([targetEventId]);
+      timelineInstanceRef.current.setWindow(startWin, endWin, {
+        animation: { duration: 600, easingFunction: 'easeInOutQuad' }
+      });
+    } catch (err) {
+      console.warn("No se pudo seleccionar la entidad en el canvas de timeline:", err);
+    }
+  }, [targetEventId, eventsMap]);
 
   // Controladores de Zoom y Cámara
   const handleZoomIn = () => {
