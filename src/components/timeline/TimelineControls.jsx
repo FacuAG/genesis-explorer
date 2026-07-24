@@ -24,13 +24,13 @@ export function TimelineControls({
   onZoomOut,
   onFitAll
 }) {
-  // Hitos bíblicos estratégicos para el salto rápido de ventana
+  // Hitos bíblicos estratégicos auditados con cronología exacta Anno Mundi (AM)
   const QUICK_JUMPS = [
-    { id: 'creation', label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación (AM 0)' },
-    { id: 'flood', label: '🌊 El Diluvio', amStart: 1650, amEnd: 1660, title: 'Salto al Diluvio de Noé (AM 1656)' },
-    { id: 'babel', label: '🗼 Torre de Babel', amStart: 1740, amEnd: 1770, title: 'Salto a Babel (AM 1750)' },
-    { id: 'abraham', label: '👑 Llamado Abraham', amStart: 2015, amEnd: 2035, title: 'Salto al Llamado de Abraham (AM 2023)' },
-    { id: 'joseph', label: '🌾 José en Egipto', amStart: 2280, amEnd: 2305, title: 'Salto a José Gobernador de Egipto (AM 2288)' }
+    { id: 'creation', label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación y el Edén (AM 0)' },
+    { id: 'flood', label: '🌊 El Diluvio', amStart: 1650, amEnd: 1665, title: 'Salto al Diluvio de Noé (AM 1656)' },
+    { id: 'babel', label: '🗼 Torre de Babel', amStart: 1745, amEnd: 1770, title: 'Salto a Babel y la Confusión de Lenguas (AM 1757)' },
+    { id: 'abraham', label: '👑 Llamado Abraham', amStart: 2075, amEnd: 2110, title: 'Salto al Llamado de Abraham a los 75 años (AM 2083) y el Pacto' },
+    { id: 'joseph', label: '🌾 José en Egipto', amStart: 2270, amEnd: 2310, title: 'Salto a José Gobernador de Egipto (AM 2289) y reunión familiar' }
   ];
 
   return (
