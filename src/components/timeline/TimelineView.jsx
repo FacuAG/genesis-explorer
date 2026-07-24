@@ -9,7 +9,7 @@ import { EventPanel } from '../panels/EventPanel';
 import { PersonDetailModal } from '../panels/PersonDetailModal';
 import './TimelineView.css';
 
-// Diccionario de categorías de eventos
+// Diccionario de categorías de eventos bíblicos
 const EVENT_CATEGORIES = {
   creation: { label: 'Creación & Orígenes', icon: '🌱' },
   patriarch: { label: 'Patriarcas & Vidas', icon: '👑' },
@@ -21,8 +21,9 @@ const EVENT_CATEGORIES = {
 
 /**
  * Componente principal de la Línea de Tiempo Cronológica interactiva (Anno Mundi)
- * impulsada por el motor gráfico vis-timeline con todas las funcionalidades avanzadas de filtrado,
- * inspector superior, saltos rápidos y modales exegéticos.
+ * Módulo unificado definitivo con el 100% de las funcionalidades avanzadas:
+ * Saltos Rápidos, Filtros de 5 dimensiones, Banner con chips desmontables,
+ * Inspector Superior, Zoom Flotante sobre el lienzo y Fichas Exegéticas Completas.
  */
 export function TimelineView({
   timelineEvents = [],
@@ -50,10 +51,10 @@ export function TimelineView({
   // Estado para la entidad seleccionada en el inspector rápido superior
   const [selectedEntity, setSelectedEntity] = useState(null);
 
-  // Estado para el modal de detalle completo de evento
+  // Estado para la apertura del modal de detalle exegético completo
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Estado para el modal directo de personaje
+  // Estado para la apertura directa del modal de biografía y relaciones familiares del personaje
   const [modalPerson, setModalPerson] = useState(null);
 
   // Mapeos rápidos para recuperación de entidades por ID
@@ -75,7 +76,7 @@ export function TimelineView({
     return map;
   }, [eras]);
 
-  // Handler para saltos rápidos a hitos históricos clave
+  // Handler para saltos rápidos a hitos históricos clave en la cronología
   const handleQuickJump = (jumpKey, yearAM) => {
     setActiveJump(jumpKey);
     if (!timelineInstanceRef.current) return;
@@ -85,6 +86,13 @@ export function TimelineView({
     timelineInstanceRef.current.setWindow(startWin, endWin, {
       animation: { duration: 800, easingFunction: 'easeInOutQuad' }
     });
+  };
+
+  // Helper para formatear referencias bíblicas
+  const formatRef = (ref) => {
+    if (!ref) return 'Génesis';
+    if (typeof ref === 'string') return ref;
+    return formatScriptureRef(ref) || 'Génesis';
   };
 
   // Filtrado reactivo de eventos según los controles activos
@@ -104,7 +112,7 @@ export function TimelineView({
         const q = filterText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const name = (evt.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const summary = (evt.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const ref = (evt.scriptural_reference?.display || formatScriptureRef(evt.scriptural_reference) || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const ref = (evt.scriptural_reference?.display || formatRef(evt.scriptural_reference) || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         if (!name.includes(q) && !summary.includes(q) && !ref.includes(q)) return false;
       }
 
@@ -171,7 +179,7 @@ export function TimelineView({
       },
       min: amToDate(-300),
       max: amToDate(2500),
-      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años
+      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años (evita duplicación de etiquetas)
       zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 3000,
       start: amToDate(-180),
       end: amToDate(2369),
@@ -273,13 +281,6 @@ export function TimelineView({
     setActiveJump(null);
   };
 
-  // Helper para referencias en string
-  const formatRef = (ref) => {
-    if (!ref) return 'Génesis';
-    if (typeof ref === 'string') return ref;
-    return formatScriptureRef(ref) || 'Génesis';
-  };
-
   // Extraer datos auxiliares para el inspector
   const activeEventObj = selectedEntity?.type === 'event' ? selectedEntity.data : null;
   const activeBlockObj = selectedEntity?.type === 'block' ? selectedEntity.data : null;
@@ -312,7 +313,7 @@ export function TimelineView({
         </div>
       </div>
 
-      {/* 2. BARRA DE FILTROS AVANZADOS Y CONTROLES */}
+      {/* 2. BARRA DE FILTROS AVANZADOS DE 5 DIMENSIONES */}
       <div className="timeline-controls-bar">
         <div className="filters-row">
           <div className="filter-group">
@@ -423,7 +424,7 @@ export function TimelineView({
         </div>
       )}
 
-      {/* 4. PANEL DE EXPLICACIÓN DEL EVENTO SELECCIONADO (UBICADO ARRIBA DE LA LÍNEA) */}
+      {/* 4. PANEL DE EXPLICACIÓN DE ENTIDAD SELECCIONADA (UBICADO ARRIBA DE LA LÍNEA) */}
       {selectedEntity && (
         <div className="entity-inspector-panel top-inspector">
           <div className="inspector-header">
@@ -452,7 +453,7 @@ export function TimelineView({
                   </div>
                 )}
 
-                {/* Personajes Vinculados */}
+                {/* Personajes Vinculados con opción de clic directo a biografía */}
                 {activeEventObj.key_people && activeEventObj.key_people.length > 0 && (
                   <div className="inspector-people-row">
                     <strong>👥 Personajes:</strong>
@@ -546,7 +547,7 @@ export function TimelineView({
         <div ref={containerRef} className="vis-timeline-canvas" />
       </div>
 
-      {/* 6. MODAL GENÉRICO DE DETALLE COMPLETO */}
+      {/* 6. MODAL GENÉRICO DE DETALLE EXEGÉTICO COMPLETO */}
       {isModalOpen && selectedEntity && (
         <Modal
           isOpen={isModalOpen}
@@ -646,7 +647,7 @@ export function TimelineView({
         </Modal>
       )}
 
-      {/* Modal Directo de Personaje */}
+      {/* 7. MODAL DIRECTO DE PERSONAJE (BIOGRAFÍA & RELACIONES FAMILIARES) */}
       {modalPerson && (
         <PersonDetailModal
           person={modalPerson}
