@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal } from '../common/Modal';
 import { formatLifespan } from '../../utils/formatters';
+import { BibleRefLink } from '../common/BibleRefLink';
 import './PersonDetailModal.css';
 
 /**
@@ -29,7 +30,7 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
         <div className="person-modal-header">
           <div className="header-top-info">
             <span className="person-category-tag">{person.category || 'Personaje'}</span>
-            <span className="person-lifespan-tag">⏳ {lifespanStr}</span>
+            <span className="person-lifespan-tag" title="Años Anno Mundi (Contados desde la Creación del Mundo)">⏳ {lifespanStr}</span>
           </div>
           <h2 className="person-modal-title">{person.name}</h2>
           <p className="person-modal-meaning">
@@ -89,7 +90,10 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
             <h3 className="person-section-subtitle">💬 Versículo Clave</h3>
             <blockquote className="person-key-verse">
               <p>"{person.key_verse.text}"</p>
-              <cite>— {person.key_verse.reference}</cite>
+              <div className="verse-citation-row">
+                <cite>— {person.key_verse.reference}</cite>
+                <BibleRefLink reference={person.key_verse.reference} label="Leer Versículo RVR1960" />
+              </div>
             </blockquote>
           </div>
         )}
@@ -97,10 +101,10 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
         {/* Referencias al Nuevo Testamento */}
         {person.cross_references_nt && person.cross_references_nt.length > 0 && (
           <div className="person-section">
-            <h3 className="person-section-subtitle">✝ Conexión con el Nuevo Testamento</h3>
+            <h3 className="person-section-subtitle">✝ Conexión con el Nuevo Testamento ({person.cross_references_nt.length})</h3>
             <div className="nt-refs-list">
-              {person.cross_references_nt.map((ref, idx) => (
-                <span key={idx} className="nt-ref-chip">📖 {ref}</span>
+              {person.cross_references_nt.map((refStr, idx) => (
+                <BibleRefLink key={idx} reference={refStr} />
               ))}
             </div>
           </div>
@@ -132,7 +136,7 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
             <div className="person-events-grid">
               {eventObjects.map(evt => (
                 <div key={evt.id} className="person-event-chip" onClick={() => { if (onSelectEvent) onSelectEvent(evt.id); }}>
-                  <span className="pe-am">AM {evt.year_am ?? 'N/A'}</span>
+                  <span className="pe-am" title={`Año del Mundo ${evt.year_am ?? 'N/A'}`}>AM {evt.year_am ?? 'N/A'}</span>
                   <span className="pe-title">{evt.name}</span>
                 </div>
               ))}

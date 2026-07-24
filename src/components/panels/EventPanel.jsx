@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal } from '../common/Modal';
 import { EVENT_CATEGORIES } from '../../utils/timelineMapper';
 import { formatScriptureRef } from '../../utils/formatters';
+import { BibleRefLink } from '../common/BibleRefLink';
 import './EventPanel.css';
 
 /**
@@ -30,13 +31,11 @@ export function EventPanel({ event, isOpen, onClose, peopleMap = new Map(), loca
             <span className={`event-cat-badge cat-${event.category}`}>
               {categoryInfo.icon} {categoryInfo.label}
             </span>
-            <span className="event-am-year-badge">
-              Anno Mundi: AM {event.year_am ?? 'N/A'}
+            <span className="event-am-year-badge" title={`Año del Mundo ${event.year_am ?? 'N/A'} (Años desde la Creación del Mundo)`}>
+              Año del Mundo: AM {event.year_am ?? 'N/A'}
             </span>
             {scriptureRef && (
-              <span className="event-scripture-badge">
-                📖 {scriptureRef}
-              </span>
+              <BibleRefLink reference={event.scriptural_reference || scriptureRef} label={scriptureRef} />
             )}
           </div>
           <h2 className="event-detail-title">{event.name}</h2>
@@ -54,8 +53,23 @@ export function EventPanel({ event, isOpen, onClose, peopleMap = new Map(), loca
             <h3 className="section-subtitle">💬 Versículo Clave</h3>
             <blockquote className="event-key-verse-box">
               <p className="verse-text">"{event.key_verse.text}"</p>
-              <cite className="verse-citation">— {event.key_verse.reference}</cite>
+              <div className="verse-citation-row">
+                <cite className="verse-citation">— {event.key_verse.reference}</cite>
+                <BibleRefLink reference={event.key_verse.reference} label="Leer Versículo RVR1960" />
+              </div>
             </blockquote>
+          </div>
+        )}
+
+        {/* Referencias Cruzadas del Nuevo Testamento */}
+        {event.cross_references_nt && event.cross_references_nt.length > 0 && (
+          <div className="event-section">
+            <h3 className="section-subtitle">✝️ Cumplimiento & Referencias Cruzadas en el NT ({event.cross_references_nt.length})</h3>
+            <div className="cross-refs-grid">
+              {event.cross_references_nt.map((refStr, idx) => (
+                <BibleRefLink key={idx} reference={refStr} />
+              ))}
+            </div>
           </div>
         )}
 

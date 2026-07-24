@@ -1,0 +1,76 @@
+/* VerseModal CSS Vanilla — Genesis Explorer */
+
+.verse-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.verse-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.verse-version-badge {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.verse-ref-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f8fafc;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.verse-body-card {
+  background: rgba(15, 23, 42, 0.75);
+  border-left: 4px solid #fde047;
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.verse-text-content {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #fef08a;
+  font-style: italic;
+}
+
+.verse-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copy-verse-btn {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+  border: 1px solid #c084fc;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-verse-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+  transform: translateY(-1px);
+}
+
+.copy-verse-btn.copied {
+  background: rgba(16, 185, 129, 0.3);
+  border-color: #10b981;
+  color: #a7f3d0;
+}

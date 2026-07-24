@@ -380,7 +380,9 @@ export function TimelineView({
               <div className="preview-header">
                 <span className="preview-badge badge-event">⚡ Evento Bíblico</span>
                 <h3>{selectedEntity.data.name}</h3>
-                <span className="preview-am">AM {getEventAM(selectedEntity.data)} | {getEventRefStr(selectedEntity.data)}</span>
+                <span className="preview-am" title={`Año del Mundo ${getEventAM(selectedEntity.data)} (Años transcurridos desde la Creación del Mundo)`}>
+                  Año del Mundo: AM {getEventAM(selectedEntity.data)} | {getEventRefStr(selectedEntity.data)}
+                </span>
                 <button className="preview-detail-btn" onClick={() => setIsModalOpen(true)}>
                   📖 Ver Modal Completo ➔
                 </button>
