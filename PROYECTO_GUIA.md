@@ -1350,10 +1350,112 @@ ESTADO GLOBAL:
 NOTAS DE SESIONES ANTERIORES:
 - 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).
 - 2026-07-23: Se completó la Tarea D-05 (Isaac, Jacob y José) agregando 22 eventos exhaustivos (6 de Isaac + 8 de Jacob + 8 de José). Total acumulado en genesis.json: 82 eventos completos abarcando los 50 capítulos del Génesis según el estándar Schema 3.0 (D-01 a D-05 completados).
-- 2026-07-23: Se completó la Tarea D-06 (Personajes Principales) poblando los 21 perfiles bíblicos exhaustivos divididos en 3 sub-fases (D-06.1, D-06.2, D-06.3) siguiendo estrictamente el estándar Schema 3.0.
+- 2026-07-23: Se completó la Tarea D-06 (Personajes Principales) poblando los 21 perfiles bíblicos exhaustivos divididos en 3 sub-fases (D-06.1, D-06.2, D-06.3) siguiendo strictly el estándar Schema 3.0.
 - 2026-07-23: Se completó la Tarea D-07 poblando 12 personajes secundarios clave (llegando a 33 personas), 5 pactos bíblicos (`covenants`), 7 promesas mesiánicas (`messianic_promises`), 8 temas teológicos (`themes`) y 8 preguntas teológicas frecuentes (`questions`).
 - 2026-07-23: Se completó la Tarea D-08 poblando 15 ubicaciones geográficas (`locations`), el mapeo estructurado de los 50 capítulos (`chapters_map`) y la matriz de convivencias patriarcales reales (`notable_overlaps`).
 - 2026-07-23: Se completó la Tarea D-09 (Validación Final). Se auditó el 100% de la base de datos `src/data/books/genesis.json` (532,172 bytes) confirmando la integridad total de 82 eventos, 33 personajes, 15 ubicaciones, 5 pactos, 7 promesas mesiánicas, 8 temas, 8 preguntas, 50 capítulos y 11 convivencias patriarcales. ¡FASE DE DATOS 100% FINALIZADA CON ÉXITO!
+
+=======================================================================
+## 15. ESPECIFICACIÓN ARQUITECTÓNICA Y PLAN EN ETAPAS: CUADERNO DE NOTAS, MARCADORES Y WORKSPACE HOMILÉTICO DE PRÉDICAS
+=======================================================================
+
+### 🎯 Propósito del Módulo
+Convertir Genesis Explorer (y la futura suite Bible Explorer) en un **Entorno de Trabajo Homilético y Personal (Homiletics & Study Workspace)** donde predicadores, pastores, profesores y estudiantes bíblicos no solo lean el texto sagrado, sino que puedan almacenar sus meditaciones, estructurar sus propios sermones con herramientas tipográficas avanzadas (Rich Text), asociar etiquetas temáticas y exportar sus bosquejos listos para el púlpito o la clase.
+
+---
+
+### 🏛️ Reglas de Arquitectura y Escalabilidad Multilibro
+1. **Persistencia Unificada (Local & Client-Side)**:
+   - Todo se almacena localmente en `localStorage` con claves prefijadas por libro: `[book]_user_notes` y `[book]_user_sermons` (ej. `genesis_user_notes`, `genesis_user_sermons`).
+   - Cero dependencias de servidor o login en esta fase. Máxima privacidad, velocidad y resiliencia offline.
+2. **Compatibilidad Estricta con el Stack Tecnológico**:
+   - React 19 + JavaScript (JSX) + Vanilla CSS (variables CSS de `index.css`).
+   - Sin librerías externas pesadas. Manipulación limpia de DOM / Rich Text mediante APIs nativas (`document.execCommand` / `contentEditable` o componentes controlados).
+3. **Integración Cruzada con los 5 Pilares Exegéticos**:
+   - Las notas personales se conectan directamente con los versículos de la RVR1960, el léxico interlineal hebreo/griego, las citas del NT y la línea de tiempo.
+
+---
+
+### 🗺️ PLAN DE IMPLEMENTACIÓN EN 5 ETAPAS Y SUB-ETAPAS DETALLADAS
+
+#### 📦 ETAPA 1: Capa de Gestión de Datos y Persistencia Local (`src/data/notesStorage.js`)
+- **Sub-etapa 1.1: Esquema de Datos de Notas por Versículo (`VerseNote`)**
+  - Definir estructura normalizada:
+    ```javascript
+    {
+      id: "note_gen_15_6",
+      book: "genesis",
+      chapter: 15,
+      verse: 6,
+      content: "La justificación por la fe prefigurada...",
+      color: "gold", // gold | blue | green | red
+      tags: ["#Predicación", "#Justificación", "#Pacto"],
+      updatedAt: "2026-07-25T10:00:00Z"
+    }
+    ```
+- **Sub-etapa 1.2: Esquema de Datos de Sermones y Bosquejos (`SermonOutline`)**
+  - Definir estructura de sermón escrito por el usuario:
+    ```javascript
+    {
+      id: "sermon_178491000",
+      title: "La Fe Probada en el Monte Moriah",
+      passage: "Génesis 22:1-19",
+      proposition: "Dios prueba la fe de sus siervos para revelar su provisión redentora.",
+      contentHtml: "<h1>I. El Mandato Incomprensible</h1><p>...</p>",
+      tags: ["#Predicación", "#Tipología", "#Prueba"],
+      createdAt: "2026-07-25T10:00:00Z",
+      updatedAt: "2026-07-25T10:30:00Z"
+    }
+    ```
+- **Sub-etapa 1.3: Servicio de Importación/Exportación de Respaldo (`Backup/Restore`)**
+  - Métodos `exportUserDataToJson()` y `importUserDataFromJson(fileContent)` para salvaguardar todo el cuaderno de notas y sermones en un archivo descargable.
+
+---
+
+#### 📱 ETAPA 2: Panel Principal de Navegación del Cuaderno (`UserNotesPanel.jsx` & `UserNotesPanel.css`)
+- **Sub-etapa 2.1: Estructura del Layout de Doble Vista (Pestañas)**
+  - Pestaña A: **"📖 Mis Notas & Apuntes Bíblicos"** (Fichero de consulta de todas las notas escritas en el texto).
+  - Pestaña B: **"🎤 Mi Cuaderno de Bosquejos & Prédicas"** (Workspace de redacción de mensajes).
+- **Sub-etapa 2.2: Motor de Búsqueda y Filtros Combinados**
+  - Buscador de texto libre en notas personales.
+  - Filtro selector por Capítulo (Génesis 1 al 50).
+  - Filtro selector por Categoría de Color (Dorado, Azul, Verde, Rojo).
+  - Filtro por Etiquetas (#Predicación, #Ilustración, #AplicaciónPráctica, #LazoCristológico).
+- **Sub-etapa 2.3: Tarjetas de Notas con Cita RVR1960 Integrada y Salto al Versículo**
+  - Cada tarjeta muestra la cita, el texto bíblico oficial RVR1960, la nota personal, la fecha y el botón **"🎯 Ir al Versículo"** (que abre el lector posicionado exactamente en ese versículo).
+
+---
+
+#### ✍️ ETAPA 3: Editor Homilético de Sermones con Herramientas Rich Text (`SermonEditor.jsx`)
+- **Sub-etapa 3.1: Barra de Herramientas de Formato Tipográfico**
+  - Estilos de Encabezado: `H1` (Título Principal), `H2` (Puntos I, II, III), `H3` (Subpuntos).
+  - Estilos de Texto: **`B` Negrita** (`Ctrl+B`), *`I` Cursiva* (`Ctrl+I`), <u>`U` Subrayado</u> (`Ctrl+U`).
+  - Resaltador de Texto Multicolor: Amarillo (Doctrina), Azul (Promesa), Verde (Vida), Rojo (Profecía).
+  - Listas Estructuradas: Viñetas (`•`) y Listas Numeradas (`1, 2, 3`).
+  - Bloque de Cita Bíblica Destacada (`Quote block`).
+- **Sub-etapa 3.2: Panel Lateral Desplegable de Apuntes ("Mis Citas de Génesis")**
+  - Columna lateral a la derecha del editor que muestra todas las notas y versículos guardados por el usuario.
+  - Botón **"📋 Insertar Pasaje en 1 Clic"**: Copia e inserta automáticamente la cita bíblica formateada en el cursor del bosquejo.
+- **Sub-etapa 3.3: Asistente Exegético para el Púlpito (Sugerencias Automáticas)**
+  - Al ingresar el pasaje base (ej. *Génesis 15*), despliega sugerencias exegéticas del capítulo: el Bosquejo Homilético del texto, las palabras hebreas clave (*Aman*, *Tsedaqah*) y las citas de cumplimiento en el Nuevo Testamento.
+
+---
+
+#### 🎤 ETAPA 4: Modo Púlpito y Exportación de Mensajes (`SermonPulpitView.jsx`)
+- **Sub-etapa 4.1: Vista "Modo Púlpito / Lectura de Sermón"**
+  - Vista limpia a pantalla completa para tablets o móviles.
+  - Tipografía en contraste alto con tamaño de letra ajustable.
+  - Temporizador de predicación (cronómetro de sermón integrado).
+- **Sub-etapa 4.2: Exportador e Impresor de Sermones (PDF / Formato A4)**
+  - Generador de documento imprimible Maquetado en A4 listo para llevar en papel al altar o clase.
+
+---
+
+#### 🔗 ETAPA 5: Integración en la Navegación Global (`App.jsx` y `Header.jsx`)
+- **Sub-etapa 5.1: Registro de la Nueva Pestaña Principal**
+  - Agregar el botón **`📝 Cuaderno & Prédicas`** en el menú de la barra superior `Header.jsx`.
+- **Sub-etapa 5.2: Auditoría, ESLint y Verificación de Compilación**
+  - Comprobación de compilación sin errores (`npm run build`), linting limpio (`npm run lint`) y pruebas de persistencia en `localStorage`.
 
 
 
