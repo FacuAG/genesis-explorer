@@ -1078,43 +1078,45 @@
   font-style: italic;
 }
 
-/* Subíndices Interlineales y Resaltado de Palabras Hebreas en Versículos */
+/* Subíndices e Íconos Interlineales Sutiles y Modernos */
 .lexicon-word-wrap {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.18rem;
-  background: rgba(245, 158, 11, 0.12);
-  border-bottom: 2px solid #f59e0b;
-  padding: 0 0.2rem;
-  border-radius: 4px;
-  margin: 0 0.15rem;
+  display: inline;
+  position: relative;
+  cursor: pointer;
 }
 
 .lexicon-matched-word {
+  color: inherit;
+  border-bottom: 1.5px dotted #c084fc;
+  transition: all 0.2s ease;
+}
+
+.lexicon-word-wrap:hover .lexicon-matched-word {
   color: #fde047;
-  font-weight: 700;
+  border-bottom-color: #fde047;
 }
 
 .lexicon-sub-badge {
+  font-size: 0.65rem;
   color: #c084fc;
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 900;
+  vertical-align: super;
+  margin-left: 2px;
+  opacity: 0.85;
   cursor: pointer;
-  padding: 0.05rem 0.35rem;
-  border-radius: 4px;
-  background: rgba(192, 132, 252, 0.2);
-  border: 1px solid rgba(192, 132, 252, 0.4);
   transition: all 0.2s ease;
   user-select: none;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.lexicon-sub-badge:hover,
+.lexicon-word-wrap:hover .lexicon-sub-badge,
 .lexicon-sub-badge.active-highlight {
-  background: #f59e0b;
-  color: #0f172a;
-  border-color: #fde047;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
-  transform: scale(1.08);
+  color: #fde047;
+  opacity: 1;
+  transform: scale(1.25);
+  text-shadow: 0 0 8px rgba(253, 224, 71, 0.8);
 }
 
 /* Modal Exegético de Término Hebreo */

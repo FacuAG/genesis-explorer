@@ -632,18 +632,19 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                             const matchedText = textStr.substring(matchPos, matchPos + targetWord.length);
 
                             elements.push(
-                              <span key={`heb-${verseObj.number}-${idx}`} className="lexicon-word-wrap">
-                                <strong className="lexicon-matched-word">{matchedText}</strong>
-                                <sub
-                                  className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setSelectedLexiconTerm(term);
-                                  }}
-                                  title={`Clic para ver análisis exegético en hebreo de ${term.transliteration}`}
-                                >
-                                  [🔤 {term.transliteration}]
-                                </sub>
+                              <span
+                                key={`heb-${verseObj.number}-${idx}`}
+                                className="lexicon-word-wrap"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedLexiconTerm(term);
+                                }}
+                                title={`Léxico: ${term.transliteration} (${term.hebrew}) — Clic para ver exégesis`}
+                              >
+                                <span className="lexicon-matched-word">{matchedText}</span>
+                                <sup className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}>
+                                  ✦
+                                </sup>
                               </span>
                             );
 
@@ -652,21 +653,21 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                           }
                         }
 
-                        // Fallback: si coincide el versículo pero no la palabra exacta, adjuntar la llamada al final del versículo
+                        // Fallback: si coincide el versículo pero no la palabra exacta, adjuntar ícono sutil al final del versículo
                         if (Number(term.target_verse) === Number(verseObj.number)) {
                           elements.push(
-                            <sub
+                            <sup
                               key={`heb-fallback-${verseObj.number}-${idx}`}
                               className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
-                              style={{ marginLeft: '6px' }}
+                              style={{ marginLeft: '4px', cursor: 'pointer' }}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setSelectedLexiconTerm(term);
                               }}
-                              title={`Clic para ver exégesis en hebreo de ${term.transliteration}`}
+                              title={`Léxico: ${term.transliteration} (${term.hebrew}) — Clic para ver exégesis`}
                             >
-                              [🔤 {term.hebrew} {term.transliteration}]
-                            </sub>
+                              [🔤 {term.transliteration}]
+                            </sup>
                           );
                         }
                       });
