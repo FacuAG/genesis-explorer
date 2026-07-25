@@ -87,6 +87,12 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
             <span className="tab-icon">📖</span> Capítulos (1-50)
           </button>
           <button
+            className={`nav-tab-btn ${activeTab === 'notes' ? 'active' : ''}`}
+            onClick={() => setActiveTab('notes')}
+          >
+            <span className="tab-icon">📝</span> Cuaderno & Prédicas
+          </button>
+          <button
             className={`nav-tab-btn ${activeTab === 'covenants' ? 'active' : ''}`}
             onClick={() => setActiveTab('covenants')}
           >

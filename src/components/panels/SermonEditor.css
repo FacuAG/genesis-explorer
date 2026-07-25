@@ -1,0 +1,314 @@
+/* SermonEditor.css — Genesis Explorer */
+
+.sermon-editor-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: #f8fafc;
+}
+
+/* Barra Superior */
+.se-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.se-btn {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.se-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+.se-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.se-save-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.se-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.5);
+}
+
+/* Tarjeta de Metadatos */
+.se-metadata-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.se-input-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.se-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.se-input-group.flex-1 { flex: 1; min-width: 240px; }
+.se-input-group.flex-2 { flex: 2; min-width: 320px; }
+
+.se-input-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #c084fc;
+}
+
+.se-input {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.se-input.main-title-input {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fde047;
+}
+
+/* Layout de Trabajo */
+.se-workspace-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .se-workspace-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Columna Izquierda: Editor */
+.se-editor-column {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Barra de Herramientas Tipográficas */
+.se-toolbar {
+  background: rgba(30, 41, 59, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.tb-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tb-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tb-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-right: 0.2rem;
+}
+
+.tb-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tb-btn:hover {
+  background: rgba(168, 85, 247, 0.3);
+  border-color: #c084fc;
+  color: #fde047;
+}
+
+.tb-color-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.tb-color-dot.gold { background: #fde047; }
+.tb-color-dot.blue { background: #93c5fd; }
+.tb-color-dot.green { background: #86efac; }
+.tb-color-dot.red { background: #fca5a5; }
+
+/* Área Editable Rich Text */
+.se-rich-editor {
+  padding: 1.5rem;
+  min-height: 480px;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f8fafc;
+  overflow-y: auto;
+}
+
+.se-rich-editor h1 {
+  font-size: 1.6rem;
+  color: #fde047;
+  border-bottom: 1px solid rgba(253, 224, 71, 0.3);
+  padding-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+.se-rich-editor h2 {
+  font-size: 1.3rem;
+  color: #c084fc;
+  margin-top: 1rem;
+}
+
+.se-rich-editor blockquote.inserted-bible-quote {
+  background: rgba(168, 85, 247, 0.12);
+  border-left: 4px solid #c084fc;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+}
+
+/* Columna Derecha: Asistente */
+.se-sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.se-sidebar-box {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+
+.se-sidebar-box h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #fde047;
+}
+
+.sea-subtext {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0 0 0.85rem 0;
+}
+
+.sea-section {
+  margin-bottom: 1rem;
+}
+
+.sea-section h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.82rem;
+  color: #c084fc;
+}
+
+.sea-item-chip {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+}
+
+.sea-item-chip:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #fde047;
+}
+
+.sea-notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.sea-note-item {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.65rem;
+  border-radius: 8px;
+}
+
+.sni-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.sni-ref {
+  color: #fde047;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.sni-insert-btn {
+  background: rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #e9d5ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sni-insert-btn:hover {
+  background: rgba(168, 85, 247, 0.5);
+  color: #ffffff;
+}
+
+.sni-text {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  font-style: italic;
+}

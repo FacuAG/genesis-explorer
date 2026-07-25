@@ -9,6 +9,7 @@ import { LocationPanel } from './components/panels/LocationPanel';
 import { DispensationPanel } from './components/panels/DispensationPanel';
 import { ChapterMapPanel } from './components/panels/ChapterMapPanel';
 import { QuestionPanel } from './components/panels/QuestionPanel';
+import UserNotesPanel from './components/panels/UserNotesPanel';
 import './App.css';
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [targetEventId, setTargetEventId] = useState(null);
   const [targetPersonId, setTargetPersonId] = useState(null);
+  const [targetChapterNum, setTargetChapterNum] = useState(null);
 
   const genesis = useGenesisData();
 
@@ -169,6 +171,17 @@ export function App() {
               peopleMap={genesis.peopleMap}
               onSelectEvent={handleSelectEvent}
               onSelectPerson={handleSelectPerson}
+              initialChapter={targetChapterNum}
+            />
+          )}
+
+          {activeTab === 'notes' && (
+            <UserNotesPanel
+              fullBibleData={genesis.fullBibleData}
+              onNavigateToChapter={(chap, verse) => {
+                setTargetChapterNum(chap);
+                setActiveTab('chapters');
+              }}
             />
           )}
 

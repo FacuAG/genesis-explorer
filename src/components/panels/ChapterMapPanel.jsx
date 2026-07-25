@@ -11,11 +11,18 @@ import './ChapterMapPanel.css';
  * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
  * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales Adaptativos de Capítulos y Volver Arriba.
  */
-export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
-  const [selectedChapNum, setSelectedChapNum] = useState(null);
+export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson, initialChapter = null }) {
+  const [selectedChapNum, setSelectedChapNum] = useState(initialChapter);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
+
+  // Responder si cambia la prop initialChapter desde afuera
+  useEffect(() => {
+    if (initialChapter !== null && initialChapter !== undefined) {
+      setSelectedChapNum(Number(initialChapter));
+    }
+  }, [initialChapter]);
 
   // Referencia a la caja del texto bíblico y al capítulo previo para scroll inteligente
   const readerBoxRef = useRef(null);
