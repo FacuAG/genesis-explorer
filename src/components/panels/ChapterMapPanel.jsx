@@ -17,8 +17,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
 
-  // Referencia a la caja del texto bíblico para scroll enfocado al inicio del lector
+  // Referencia a la caja del texto bíblico y al capítulo previo para scroll inteligente
   const readerBoxRef = useRef(null);
+  const prevChapNumRef = useRef(null);
 
   // Estados de Control de Lectura Bíblica
   const [fontSize, setFontSize] = useState(16); // 13px - 26px
@@ -125,22 +126,31 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     speakNext();
   };
 
-  // Scroll enfocado exactamente al inicio de la caja del lector librando la cabecera superior (.app-header)
+  // Lógica de Scroll Inteligente:
+  // - Si el usuario entra por 1ra vez a un capítulo desde el Centro de Estudio (prevChapNum === null): Ir ARRIBA DE TODO (top: 0).
+  // - Si el usuario ya está adentro leyendo y avanza/retrocede o salta entre capítulos: Scroll a la caja del texto bíblico.
   useEffect(() => {
     if (selectedChapNum !== null) {
-      setTimeout(() => {
-        if (readerBoxRef.current) {
-          const appHeader = document.querySelector('.app-header');
-          const headerHeight = appHeader ? appHeader.offsetHeight : 130;
-          const rect = readerBoxRef.current.getBoundingClientRect();
-          const targetY = window.pageYOffset + rect.top - headerHeight - 12;
+      if (prevChapNumRef.current === null) {
+        // Primera entrada desde el Centro de Estudio / Cuadrícula: ir al tope absoluto para ver título y bosquejo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // Navegación continua dentro del lector: scroll enfocado a la caja de versículos
+        setTimeout(() => {
+          if (readerBoxRef.current) {
+            const appHeader = document.querySelector('.app-header');
+            const headerHeight = appHeader ? appHeader.offsetHeight : 130;
+            const rect = readerBoxRef.current.getBoundingClientRect();
+            const targetY = window.pageYOffset + rect.top - headerHeight - 12;
 
-          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }, 70);
+            window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 70);
+      }
     }
+    prevChapNumRef.current = selectedChapNum;
   }, [selectedChapNum]);
 
   // Listener para calcular la barra de progreso de lectura
