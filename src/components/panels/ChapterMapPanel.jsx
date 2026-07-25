@@ -599,8 +599,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                         return verseObj.text;
                       }
 
+                      // Filtrar los términos dirigidos a este versículo (por target_verse o por coincidencia de target_word)
                       const verseTerms = exegesisData.hebrew_terms.filter(t => {
-                        if (t.target_verse) return t.target_verse === verseObj.number;
+                        if (t.target_verse && Number(t.target_verse) === Number(verseObj.number)) return true;
                         if (t.target_word) {
                           const normVerse = verseObj.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                           const normTarget = t.target_word.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -616,41 +617,61 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                       let lastIdx = 0;
 
                       verseTerms.forEach((term, idx) => {
-                        const targetWord = term.target_word || term.transliteration;
-                        if (!targetWord) return;
+                        const targetWord = term.target_word;
 
-                        const normText = textStr.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                        const normWord = targetWord.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        if (targetWord) {
+                          const normText = textStr.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                          const normWord = targetWord.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-                        const matchPos = normText.indexOf(normWord, lastIdx);
-                        if (matchPos !== -1) {
-                          if (matchPos > lastIdx) {
-                            elements.push(textStr.substring(lastIdx, matchPos));
+                          const matchPos = normText.indexOf(normWord, lastIdx);
+                          if (matchPos !== -1) {
+                            if (matchPos > lastIdx) {
+                              elements.push(textStr.substring(lastIdx, matchPos));
+                            }
+
+                            const matchedText = textStr.substring(matchPos, matchPos + targetWord.length);
+
+                            elements.push(
+                              <span key={`heb-${verseObj.number}-${idx}`} className="lexicon-word-wrap">
+                                <strong className="lexicon-matched-word">{matchedText}</strong>
+                                <sub
+                                  className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setSelectedLexiconTerm(term);
+                                  }}
+                                  title={`Clic para ver análisis exegético en hebreo de ${term.transliteration}`}
+                                >
+                                  [🔤 {term.transliteration}]
+                                </sub>
+                              </span>
+                            );
+
+                            lastIdx = matchPos + targetWord.length;
+                            return;
                           }
+                        }
 
-                          const matchedText = textStr.substring(matchPos, matchPos + targetWord.length);
-
+                        // Fallback: si coincide el versículo pero no la palabra exacta, adjuntar la llamada al final del versículo
+                        if (Number(term.target_verse) === Number(verseObj.number)) {
                           elements.push(
-                            <span key={`heb-${verseObj.number}-${idx}`} className="lexicon-word-wrap">
-                              <strong className="lexicon-matched-word">{matchedText}</strong>
-                              <sub
-                                className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  setSelectedLexiconTerm(term);
-                                }}
-                                title={`Clic para ver análisis exegético en hebreo de ${term.transliteration}`}
-                              >
-                                [🔤 {term.transliteration}]
-                              </sub>
-                            </span>
+                            <sub
+                              key={`heb-fallback-${verseObj.number}-${idx}`}
+                              className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
+                              style={{ marginLeft: '6px' }}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedLexiconTerm(term);
+                              }}
+                              title={`Clic para ver exégesis en hebreo de ${term.transliteration}`}
+                            >
+                              [🔤 {term.hebrew} {term.transliteration}]
+                            </sub>
                           );
-
-                          lastIdx = matchPos + targetWord.length;
                         }
                       });
 
-                      if (lastIdx < textStr.length) {
+                      if (lastIdx < textStr.length && elements.length > 0) {
                         elements.push(textStr.substring(lastIdx));
                       }
 

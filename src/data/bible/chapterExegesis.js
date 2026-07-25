@@ -229,7 +229,10 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Génesis 49:10 contiene la magna profecía del Mesías victorioso viniendo de la tribu de Judá: 'No será quitado el cetro de Judá... hasta que venga Shiloh'.",
     hebrew_terms: [
-      { hebrew: "שִׁילֹה", transliteration: "Shiloh", meaning: "Aquel a quien pertenece el reino / El Pacificador" }
+      { hebrew: "שִׁילֹה", transliteration: "Shiloh", strong: "H7886", target_verse: 10, target_word: "Shiloh", meaning: "El Pacificador / Aquel a quien pertenece legítimamente el reino (Jesucristo, el León de la tribu de Judá)." },
+      { hebrew: "שֵׁבֶט", transliteration: "Shebet", strong: "H7626", target_verse: 10, target_word: "cetro", meaning: "Cetro / Vara de gobierno soberano y autoridad real." },
+      { hebrew: "אַרְיֵה", transliteration: "Aryeh", strong: "H734", target_verse: 9, target_word: "Cachorro", meaning: "León victorioso / Símbolo de la majestad y fuerza real de la tribu de Judá." },
+      { hebrew: "בְּרָכָה", transliteration: "Berajah", strong: "H1293", target_verse: 28, target_word: "bendijo", meaning: "Bendición profética patriarcal transmitida por la autoridad divinamente otorgada." }
     ],
     nt_cross_references: ["Hebreos 7:14", "Apocalipsis 5:5"]
   },
@@ -243,7 +246,11 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Cierre grandioso del Génesis. José resume la clave providencial de la historia: 'Dios lo encaminó a bien' (50:20), y muere exigiendo juramento de que sus huesos saldrán hacia la Tierra Prometida.",
     hebrew_terms: [
-      { hebrew: "חָשַׁב", transliteration: "Jashab", meaning: "Pensar / Planear / Encaminar" }
+      { hebrew: "חָשַׁב", transliteration: "Jashab", strong: "H2803", target_verse: 20, target_word: "pensasteis", meaning: "Pensar / Planear intencionalmente. Vosotros pensasteis mal contra mí, mas Dios lo pensó para bien (Soberanía y providencia divina)." },
+      { hebrew: "חָנַט", transliteration: "Janat", strong: "H2590", target_verse: 2, target_word: "embalsamaron", meaning: "Embalsamar / Preservar el cuerpo con especias y bálsamos según la dignidad real en Egipto." },
+      { hebrew: "פָּקַד", transliteration: "Paqad", strong: "H6485", target_verse: 24, target_word: "visitará", meaning: "Visitar providencialmente / Intervenir con redención y favor divino para cumplir la promesa de regreso." },
+      { hebrew: "עֶצֶם", transliteration: "Etsem", strong: "H6106", target_verse: 25, target_word: "huesos", meaning: "Huesos / Sustancia corpórea. Testimonio de fe de José de que Egipto no era su destino final." },
+      { hebrew: "נָחַם", transliteration: "Najam", strong: "H5162", target_verse: 21, target_word: "consoló", meaning: "Consolar / Hablar al corazón con ternura y perdón restaurador." }
     ],
     nt_cross_references: ["Romanos 8:28", "Hebreos 11:22"]
   }
