@@ -424,6 +424,118 @@
   letter-spacing: 0.3px;
 }
 
+/* Selector Rápido de Capítulos (Popover Grid 1-50 en Sticky Toolbar) */
+.srt-chapter-selector-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.srt-title-badge-btn {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
+  color: #ffffff;
+  border: 1px solid #c084fc;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.srt-title-badge-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.6) 0%, rgba(245, 158, 11, 0.6) 100%);
+  border-color: #fde047;
+  color: #fde047;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.chap-select-arrow {
+  font-size: 0.75rem;
+  color: #fde047;
+}
+
+.srt-chapter-selector-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.96);
+  border: 1.5px solid #f59e0b;
+  border-radius: 12px;
+  padding: 0.85rem;
+  width: 320px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
+  backdrop-filter: blur(14px);
+  z-index: 1200;
+  animation: popoverFadeIn 0.2s ease-out;
+}
+
+@keyframes popoverFadeIn {
+  from { opacity: 0; transform: translate(-50%, -6px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.cs-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fde047;
+}
+
+.cs-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cs-popover-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.35rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.cs-num-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.3rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.cs-num-chip:hover {
+  background: rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+  border-color: #c084fc;
+}
+
+.cs-num-chip.active {
+  background: #f59e0b;
+  color: #0f172a;
+  border-color: #fde047;
+  font-weight: 900;
+}
+
 .srt-search-box {
   display: flex;
   align-items: center;

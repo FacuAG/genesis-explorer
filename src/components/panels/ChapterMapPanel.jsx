@@ -26,6 +26,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [highlightedVerses, setHighlightedVerses] = useState({}); // { [verseNum]: colorString | true }
   const [selectedColor, setSelectedColor] = useState('gold'); // 'gold' | 'blue' | 'green' | 'red'
   const [isFullscreenReader, setIsFullscreenReader] = useState(false);
+  const [isChapterSelectorOpen, setIsChapterSelectorOpen] = useState(false);
   const [selectionNotice, setSelectionNotice] = useState('');
   const [readingProgress, setReadingProgress] = useState(0);
 
@@ -124,18 +125,19 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     speakNext();
   };
 
-  // Scroll enfocado al inicio del lector del capítulo (versículo 1) al cambiar de capítulo
+  // Scroll enfocado exactamente a la cabecera pegajosa (Sticky Reader Toolbar) al cambiar de capítulo
   useEffect(() => {
     if (selectedChapNum !== null) {
       setTimeout(() => {
         if (readerBoxRef.current) {
           const rect = readerBoxRef.current.getBoundingClientRect();
-          const targetY = window.pageYOffset + rect.top - 65; // 65px offset para librar la cabecera pegajosa
+          // Posicionar el scroll de modo que el borde superior de la cabecera pegajosa quede exactamente arriba en el viewport (12px offset)
+          const targetY = window.pageYOffset + rect.top - 12;
           window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
         } else {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-      }, 60);
+      }, 70);
     }
   }, [selectedChapNum]);
 
@@ -444,7 +446,42 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                       >
                         ◀ Cap. {selectedChapNum - 1}
                       </button>
-                      <span className="srt-title-badge">📖 GÉNESIS {selectedChapNum}</span>
+
+                      {/* SELECTOR RÁPIDO DE CAPÍTULOS DE GÉNESIS (1 AL 50) */}
+                      <div className="srt-chapter-selector-wrapper">
+                        <button
+                          className="srt-title-badge-btn"
+                          onClick={() => setIsChapterSelectorOpen(!isChapterSelectorOpen)}
+                          title="Haz clic para abrir el menú de salto rápido a cualquier capítulo de Génesis (1 al 50)"
+                        >
+                          📖 GÉNESIS {selectedChapNum} <span className="chap-select-arrow">▾</span>
+                        </button>
+
+                        {isChapterSelectorOpen && (
+                          <div className="srt-chapter-selector-popover">
+                            <div className="cs-popover-header">
+                              <span>⚡ Salto Rápido a Capítulo de Génesis</span>
+                              <button className="cs-close-btn" onClick={() => setIsChapterSelectorOpen(false)}>✕</button>
+                            </div>
+                            <div className="cs-popover-grid">
+                              {Array.from({ length: 50 }, (_, i) => i + 1).map((cNum) => (
+                                <button
+                                  key={cNum}
+                                  className={`cs-num-chip ${selectedChapNum === cNum ? 'active' : ''}`}
+                                  onClick={() => {
+                                    setSelectedChapNum(cNum);
+                                    setHighlightedVerses({});
+                                    setIsChapterSelectorOpen(false);
+                                  }}
+                                >
+                                  {cNum}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
                       <button
                         className="srt-nav-btn"
                         disabled={selectedChapNum >= 50}
