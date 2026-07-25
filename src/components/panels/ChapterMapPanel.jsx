@@ -38,7 +38,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [editingNoteVerseNum, setEditingNoteVerseNum] = useState(null);
   const [noteInputText, setNoteInputText] = useState('');
 
-  // Posicionamiento adaptativo de los botones flotantes de navegación lateral (Acompañan el scroll al costado de la caja bíblica)
+  // Posicionamiento adaptativo de los botones flotantes de navegación lateral (SOLO al costado de la caja bíblica)
   useEffect(() => {
     if (!selectedChapNum) return;
 
@@ -49,11 +49,21 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
       const btnWidth = 70; // Ancho del botón compacto
       const leftX = Math.max(6, rect.left - btnWidth - 6);
       const rightX = Math.max(6, window.innerWidth - rect.right - btnWidth - 6);
-      const isVisible = rect.bottom > 80 && rect.top < window.innerHeight - 80;
+
+      // Los botones SOLO se muestran si la caja de versículos (.biblical-text-reader-box) ha alcanzado el área de lectura
+      // Y su posición Y se limita estrictamente a estar dentro de la caja de versículos [rect.top + 60, rect.bottom - 40]
+      const screenMidY = window.innerHeight / 2;
+      const minY = rect.top + 60;
+      const maxY = rect.bottom - 40;
+
+      // Solo es visible si el usuario ha scrolleado hasta la caja de versículos y la caja está en pantalla
+      const isVisible = rect.top < screenMidY + 100 && rect.bottom > 120 && minY < maxY;
+      const clampedY = Math.max(minY, Math.min(maxY, screenMidY));
 
       setNavPos({
         left: leftX,
         right: rightX,
+        top: clampedY,
         isVisible
       });
     };
@@ -815,14 +825,14 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           }}
         />
       )}
-      {/* BOTONES FLOTANTES LATERALES ADAPTATIVOS DE NAVEGACIÓN DE CAPÍTULO */}
+      {/* BOTONES FLOTANTES LATERALES ADAPTATIVOS DE NAVEGACIÓN DE CAPÍTULO (SOLO AL COSTADO DE LA CAJA BÍBLICA) */}
       {selectedChapNum !== null && navPos.isVisible && (
         <>
           {/* BOTÓN LATERAL IZQUIERDO: CAPÍTULO ANTERIOR */}
           {selectedChapNum > 1 && (
             <button
               className="adaptive-side-nav-btn prev-chap"
-              style={{ left: `${navPos.left}px` }}
+              style={{ left: `${navPos.left}px`, top: `${navPos.top}px` }}
               onClick={handlePrevChapter}
               title={`Ir al Capítulo ${selectedChapNum - 1}`}
             >
@@ -835,7 +845,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           {selectedChapNum < 50 && (
             <button
               className="adaptive-side-nav-btn next-chap"
-              style={{ right: `${navPos.right}px` }}
+              style={{ right: `${navPos.right}px`, top: `${navPos.top}px` }}
               onClick={handleNextChapter}
               title={`Ir al Capítulo ${selectedChapNum + 1}`}
             >
@@ -846,14 +856,15 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
         </>
       )}
 
-      {/* BOTÓN FLOTANTE VOLVER ARRIBA EN CUALQUIER PUNTO DE LA PÁGINA */}
+      {/* BOTÓN FLOTANTE VOLVER ARRIBA CON ÍCONO LIMPIO Y TEXTO 'SUBIR' */}
       {selectedChapNum !== null && (
         <button
           className="floating-scroll-top-btn"
           onClick={handleScrollToTop}
           title="Volver al inicio de la página"
         >
-          ⬆️ <span className="scroll-top-text">Volver al Inicio</span>
+          <span className="scroll-top-arrow">▲</span>
+          <span className="scroll-top-text">Subir</span>
         </button>
       )}
     </div>
