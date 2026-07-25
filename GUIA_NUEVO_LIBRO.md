@@ -148,6 +148,23 @@ Para validar cualquier libro `[book_id].json`, se puede ejecutar el script de au
 
 ---
 
+## 🌟 Los 5 Pilares Estándar de la Sala de Estudio por Capítulo
+
+Todos los libros de la suite deben enriquecer la experiencia de lectura implementando las 5 capacidades exegéticas estandarizadas:
+
+1. **✝️ Revelación Mesiánica & Cristológica**:
+   - Todo capítulo debe incluir `christological_theme` en su objeto de datos y versículos con lazo tipológico al Nuevo Testamento.
+2. **📜 Glosario & Léxico Interlineal**:
+   - Todo capítulo debe incluir `hebrew_terms` (para Antiguo Testamento) o `greek_terms` (para Nuevo Testamento) con transliteración y significado.
+3. **📍 Geografía y Contexto de Ubicaciones**:
+   - Mapear las ubicaciones mencionadas en el capítulo hacia el registro de `locations`.
+4. **📝 Cuaderno de Notas Personales**:
+   - Soporte automático de notas por versículo persistidas en `localStorage` (`[book]_notes_ch_[chap]`).
+5. **🎧 Lectura de Voz y Audio Sintético (TTS)**:
+   - Integración nativa con `window.speechSynthesis` y resalte visual síncrono del versículo hablado.
+
+---
+
 ## ✅ Resumen para Desarrolladores o IAs Futuras
 
 Cuando un usuario solicite **"Agregar el libro de X"**:

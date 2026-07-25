@@ -89,12 +89,12 @@ Este archivo JSON es el **corazón del proyecto**. Está estructurado en capas (
 
 ## 🏛️ Estándar de la Base de Datos Teológica y Escalabilidad Multilibro
 
-> **PRINCIPIO FUNDAMENTAL:** La **base de datos bíblica es el corazón y el componente MÁS IMPORTANTE** de toda la aplicación. El valor pedagógico y exegético de Genesis Explorer radica en la absoluta solidez, riqueza y fidelidad de sus datos.
+> **PRINCIPIO FUNDAMENTAL:** La **base de datos bíblica es el corazón y el componente MÁS IMPORTANTE** de toda la aplicación. El valor pedagógico y exegético de Genesis Explorer (y la futura Suite Bible Explorer) radica en la absoluta solidez, riqueza y fidelidad de sus datos.
 
 ### 📜 Reglas de Oro para la Base de Datos:
 1. **Marcos Teológico Doctrinal:**
    - La información debe basarse 100% en las Santas Escrituras bajo la doctrina **Cristiana Evangélica** (Hermenéutica Gramático-Histórica, Sola Scriptura, Inerrancia de la Biblia).
-   - Queda estrictamente prohibida la especulación fuera del marco bíblico evangélico o resúmenes superficiales.
+   - Queda strictly prohibida la especulación fuera del marco bíblico evangélico o resúmenes superficiales.
 
 2. **Profundidad y Exhaustividad (Calidad sobre Rapidez):**
    - Es preferible un trabajo de datos minucioso, profundo y bien hecho que entregas apresuradas o incompletas.
@@ -103,9 +103,13 @@ Este archivo JSON es el **corazón del proyecto**. Está estructurado en capas (
      - **Referencias cruzadas con el Nuevo Testamento** (cumplimiento mesiánico y tipológico).
      - **Notas al pie de página y aclaraciones léxicas** para términos difíciles o relevantes en **Hebreo/Griego bíblico** (con transliteración y etimología).
 
-3. **Arquitectura Escalable a Otros Libros Bíblicos:**
-   - La estructura de capas (`layers`, `timeline_events`, `people`, `locations`, `covenants`, `dispensations`, `themes`, `questions`, `chapters_map`) está diseñada para ser **100% modular y escalable**.
-   - El esquema debe mantenerse estandarizado para que en el futuro la aplicación pueda incorporar otros libros de la Biblia (Éxodo, Levítico, Números, Josué, Daniel, los Evangelios, etc.) reutilizando el mismo motor visual e interfaz.
+3. **Arquitectura Escalable a Otros Libros Bíblicos (5 Pilares de Lectura):**
+   - Todos los libros futuros (Éxodo, Levítico, Números, Josué, Daniel, los Evangelios, etc.) heredan de forma 100% estandarizada los **5 Pilares de la Sala de Estudio por Capítulo**:
+     1. **✝️ Revelación Mesiánica y Tipología Cristológica** (`christological_theme` y versículos con lazo al NT).
+     2. **📜 Glosario y Léxico Hebreo/Griego Interlineal** (`hebrew_terms` / `greek_terms`).
+     3. **📍 Ubicaciones Geográficas y Contexto Territorial** (`locations`).
+     4. **📝 Cuaderno de Notas Personales por Versículo** (persistencia en `localStorage` con clave `[book]_notes_ch_[chap]`).
+     5. **🎧 Lector de Audio Sintético Asistido (TTS)** (`window.speechSynthesis` con sincronización de versículo).
 
 ---
 

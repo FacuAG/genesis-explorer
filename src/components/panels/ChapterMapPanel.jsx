@@ -26,6 +26,100 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [selectionNotice, setSelectionNotice] = useState('');
   const [readingProgress, setReadingProgress] = useState(0);
 
+  // Estados de Audio TTS, Léxico Hebreo y Notas Personales
+  const [isHebrewLexiconActive, setIsHebrewLexiconActive] = useState(false);
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [currentAudioVerseNum, setCurrentAudioVerseNum] = useState(null);
+  const [userNotes, setUserNotes] = useState({}); // { [verseNum]: noteString }
+  const [editingNoteVerseNum, setEditingNoteVerseNum] = useState(null);
+  const [noteInputText, setNoteInputText] = useState('');
+
+  // Cargar notas personales de localStorage cuando cambia el capítulo
+  useEffect(() => {
+    if (!selectedChapNum) return;
+    try {
+      const saved = localStorage.getItem(`genesis_notes_ch_${selectedChapNum}`);
+      if (saved) {
+        setUserNotes(JSON.parse(saved));
+      } else {
+        setUserNotes({});
+      }
+    } catch (err) {
+      console.warn("Error leyendo notas personales:", err);
+    }
+  }, [selectedChapNum]);
+
+  // Cancelar reproducción de voz sintética si se sale o cambia de capítulo
+  useEffect(() => {
+    return () => {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, [selectedChapNum]);
+
+  // Guardar nota personal en localStorage
+  const handleSaveUserNote = (verseNum, text) => {
+    const updated = { ...userNotes, [verseNum]: text };
+    if (!text.trim()) delete updated[verseNum];
+    setUserNotes(updated);
+    try {
+      localStorage.setItem(`genesis_notes_ch_${selectedChapNum}`, JSON.stringify(updated));
+    } catch (err) {
+      console.warn("Error guardando nota personal:", err);
+    }
+    setEditingNoteVerseNum(null);
+    setNoteInputText('');
+  };
+
+  // Lector de Audio TTS asistido en voz alta
+  const handleToggleAudioTTS = () => {
+    if (!('speechSynthesis' in window)) {
+      alert("Tu navegador no soporta voz sintética (TTS).");
+      return;
+    }
+
+    if (isPlayingAudio) {
+      window.speechSynthesis.cancel();
+      setIsPlayingAudio(false);
+      setCurrentAudioVerseNum(null);
+      return;
+    }
+
+    if (chapterVersesList.length === 0) return;
+
+    window.speechSynthesis.cancel();
+    setIsPlayingAudio(true);
+
+    let idx = 0;
+    const speakNext = () => {
+      if (idx >= chapterVersesList.length) {
+        setIsPlayingAudio(false);
+        setCurrentAudioVerseNum(null);
+        return;
+      }
+      const v = chapterVersesList[idx];
+      setCurrentAudioVerseNum(v.number);
+
+      const utterance = new SpeechSynthesisUtterance(`Versículo ${v.number}. ${v.text}`);
+      utterance.lang = 'es-ES';
+      utterance.rate = 0.92;
+
+      utterance.onend = () => {
+        idx++;
+        speakNext();
+      };
+      utterance.onerror = () => {
+        setIsPlayingAudio(false);
+        setCurrentAudioVerseNum(null);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    };
+
+    speakNext();
+  };
+
   // Scroll al extremo superior al cambiar de capítulo
   useEffect(() => {
     if (selectedChapNum !== null) {
@@ -366,8 +460,24 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                     )}
                   </div>
 
-                  {/* Controles de Tamaño de Letra (A- / A+) y Pantalla Completa */}
+                  {/* Controles de Tamaño de Letra (A- / A+), Audio TTS, Léxico y Pantalla Completa */}
                   <div className="srt-font-controls">
+                    <button
+                      className={`srt-font-btn ${isPlayingAudio ? 'active' : ''}`}
+                      onClick={handleToggleAudioTTS}
+                      title={isPlayingAudio ? 'Pausar Audio' : 'Escuchar Capítulo en Voz Alta (Audio TTS)'}
+                    >
+                      {isPlayingAudio ? '⏸️ Audio' : '▶ Escuchar'}
+                    </button>
+
+                    <button
+                      className={`srt-font-btn ${isHebrewLexiconActive ? 'active' : ''}`}
+                      onClick={() => setIsHebrewLexiconActive(!isHebrewLexiconActive)}
+                      title="Mostrar u Ocultar Glosario Hebreo Interlineal"
+                    >
+                      📜 Léxico
+                    </button>
+
                     <button
                       className="srt-font-btn"
                       onClick={() => setFontSize(prev => Math.max(13, prev - 1.5))}
@@ -394,27 +504,71 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                   </div>
                 </div>
 
-                {/* Flujo de Versículos con Resaltado y Tamaño Dinámico */}
+                {/* Flujo de Versículos con Resaltado, Audio TTS y Notas Personales */}
                 <div className="verses-continuous-flow">
                   {chapterVersesList.map((v) => {
                     const highlightValue = highlightedVerses[v.number];
                     const isHighlighted = Boolean(highlightValue);
                     const colorClass = typeof highlightValue === 'string' ? `color-${highlightValue}` : 'color-gold';
+                    const isAudioPlayingThis = currentAudioVerseNum === v.number;
+                    const hasUserNote = Boolean(userNotes[v.number]);
 
                     const matchesSearch = verseSearchText.trim().length > 0 &&
                       v.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                         .includes(verseSearchText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
 
                     return (
-                      <p
-                        key={v.number}
-                        className={`verse-paragraph ${isHighlighted ? `user-highlighted ${colorClass}` : ''} ${matchesSearch ? 'search-match' : ''}`}
-                        style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize * 1.65}px` }}
-                        onClick={() => toggleVerseHighlight(v.number)}
-                        title="Haz clic para seleccionar o marcar este versículo"
-                      >
-                        <sup className="verse-num">{v.number}</sup> {v.text}
-                      </p>
+                      <div key={v.number} className="verse-container-block">
+                        <p
+                          className={`verse-paragraph verse-line ${isHighlighted ? `user-highlighted ${colorClass}` : ''} ${matchesSearch ? 'search-match' : ''} ${isAudioPlayingThis ? 'verse-audio-playing' : ''}`}
+                          style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize * 1.65}px` }}
+                          onClick={() => toggleVerseHighlight(v.number)}
+                          title="Haz clic para seleccionar o marcar este versículo"
+                        >
+                          <sup className="verse-num">{v.number}</sup> {v.text}
+                          {hasUserNote && (
+                            <span
+                              className="user-note-badge"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setEditingNoteVerseNum(v.number);
+                                setNoteInputText(userNotes[v.number] || '');
+                              }}
+                              title="Ver / Editar Nota Personal"
+                            >
+                              ✏️ Nota
+                            </span>
+                          )}
+                        </p>
+
+                        {/* Muestra de Nota Personal Existente */}
+                        {hasUserNote && editingNoteVerseNum !== v.number && (
+                          <div className="existing-note-pill" onClick={() => { setEditingNoteVerseNum(v.number); setNoteInputText(userNotes[v.number]); }}>
+                            💬 <strong>Mi Nota (v.{v.number}):</strong> {userNotes[v.number]}
+                          </div>
+                        )}
+
+                        {/* Editor Inline de Nota Personal */}
+                        {editingNoteVerseNum === v.number && (
+                          <div className="inline-note-editor" onClick={(e) => e.stopPropagation()}>
+                            <strong>📝 Nota Personal en Génesis {selectedChapNum}:{v.number}</strong>
+                            <textarea
+                              className="inline-note-textarea"
+                              placeholder="Escribe tu reflexión devocional, comentario o idea de estudio..."
+                              value={noteInputText}
+                              onChange={(e) => setNoteInputText(e.target.value)}
+                            />
+                            <div className="inline-note-actions">
+                              <button className="save-note-btn" onClick={() => handleSaveUserNote(v.number, noteInputText)}>
+                                💾 Guardar Nota
+                              </button>
+                              <button className="cancel-note-btn" onClick={() => setEditingNoteVerseNum(null)}>
+                                Cancelar
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     );
                   })}
                 </div>
@@ -553,6 +707,20 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 title="Rojo / Juicio y Profecía"
               />
             </div>
+
+            {/* Botón Escribir Nota Personal */}
+            <button
+              className="fva-btn fva-note-btn"
+              onClick={() => {
+                const targetV = selectedVerseNums[0];
+                if (targetV) {
+                  setEditingNoteVerseNum(targetV);
+                  setNoteInputText(userNotes[targetV] || '');
+                }
+              }}
+            >
+              📝 Nota Personal
+            </button>
 
             {/* Botón Copiar Selección */}
             <button className="fva-btn fva-copy-btn" onClick={handleCopySelectedVerses}>
