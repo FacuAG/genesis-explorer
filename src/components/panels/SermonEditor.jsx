@@ -53,15 +53,45 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
   };
 
   const insertQuoteBlock = () => {
-    executeCommand('formatBlock', 'blockquote');
+    if (editorRef.current) {
+      editorRef.current.focus();
+    }
+    const selection = window.getSelection();
+    if (selection && selection.rangeCount > 0) {
+      let node = selection.anchorNode;
+      if (node.nodeType === 3) node = node.parentNode;
+
+      const existingQuote = node.closest('blockquote');
+      if (existingQuote) {
+        // Toggle OFF: revertir cita a párrafo normal <p>
+        document.execCommand('formatBlock', false, 'p');
+        return;
+      }
+    }
+    document.execCommand('formatBlock', false, 'blockquote');
   };
 
   const removeQuoteBlock = () => {
-    executeCommand('formatBlock', 'p');
+    executeCommand('formatBlock', false, 'p');
   };
 
   const insertHeading = (level) => {
-    executeCommand('formatBlock', `h${level}`);
+    if (editorRef.current) {
+      editorRef.current.focus();
+    }
+    const selection = window.getSelection();
+    if (selection && selection.rangeCount > 0) {
+      let node = selection.anchorNode;
+      if (node.nodeType === 3) node = node.parentNode;
+
+      const existingHeading = node.closest('h1, h2, h3');
+      if (existingHeading && existingHeading.tagName.toLowerCase() === `h${level}`) {
+        // Toggle OFF: si ya tiene H1/H2/H3 del mismo nivel, revertir a párrafo normal <p>
+        document.execCommand('formatBlock', false, 'p');
+        return;
+      }
+    }
+    document.execCommand('formatBlock', false, `h${level}`);
   };
 
   // Insertar una cita bíblica / nota del usuario directamente en la posición del cursor del editor
@@ -70,14 +100,17 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     const verseText = getVerseTextRVR1960(noteObj.book || 'genesis', noteObj.chapter, noteObj.verse, fullBibleData);
     const htmlToInsert = `
       <blockquote class="inserted-bible-quote">
-        <strong>📖 ${bName} ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong><br/>
+        <span class="quote-header-row">
+          <strong>📖 ${bName} ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong>
+          <button type="button" class="remove-quote-floating-btn no-print" title="Quitar formato de cita conservando el texto" onclick="this.closest('blockquote').outerHTML = this.closest('blockquote').innerHTML.replace(/<button[\\s\\S]*?<\\/button>/, '')">✕ Quitar Cita</button>
+        </span><br/>
         <em>"${verseText}"</em><br/>
         ${noteObj.content ? `<span class="note-comment">💡 Nota: ${noteObj.content}</span>` : ''}
       </blockquote>
       <p><br/></p>
     `;
 
-    executeCommand('insertHTML', htmlToInsert);
+    executeCommand('insertHTML', false, htmlToInsert);
   };
 
   // Insertar sugerencia exegética (ej. Bosquejo o Término Hebreo) en el editor
@@ -216,7 +249,8 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             className="se-rich-editor"
             contentEditable
             suppressContentEditableWarning
-            dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '<p>Escribe aquí tu introducción y puntos principales de la predicación...</p>' }}
+            data-placeholder="Escribe aquí tu introducción y puntos principales de la predicación..."
+            dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '' }}
           />
         </div>
 

@@ -104,7 +104,7 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
       title: 'Nuevo Bosquejo Homilético',
       passage: 'Génesis 1:1',
       proposition: '',
-      contentHtml: '<p>Escribe aquí tu introducción y puntos principales de la predicación...</p>',
+      contentHtml: '',
       tags: ['#Predicación']
     };
     setActiveSermon(newSermonObj);
