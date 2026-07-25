@@ -300,12 +300,13 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
           ) : (
             <div className="unp-notes-grid">
               {filteredNotes.map(n => {
-                const verseText = getVerseTextRVR1960('genesis', n.chapter, n.verse, fullBibleData);
+                const bookTitle = n.book ? (n.book.charAt(0).toUpperCase() + n.book.slice(1)) : 'Génesis';
+                const verseText = getVerseTextRVR1960(n.book || 'genesis', n.chapter, n.verse, fullBibleData);
                 return (
                   <div key={n.id} className={`unp-note-card color-border-${n.color}`}>
                     <div className="unc-header">
                       <div className="unc-verse-tag">
-                        <span className="unc-chap-badge">Génesis {n.chapter}:{n.verse}</span>
+                        <span className="unc-chap-badge">{bookTitle} {n.chapter}:{n.verse}</span>
                         <span className={`unc-color-dot ${n.color}`} />
                       </div>
                       <span className="unc-date">

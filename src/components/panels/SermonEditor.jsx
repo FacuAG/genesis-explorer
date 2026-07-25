@@ -12,23 +12,35 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
   // Referencia al div editable (contentEditable) para Rich Text
   const editorRef = useRef(null);
 
-  // Intentar deducir el número de capítulo del pasaje introducido (ej. "Génesis 22:1-19" -> 22)
-  const detectedChapNum = useMemo(() => {
-    const match = passage.match(/\d+/);
-    return match ? Number(match[0]) : 1;
+  // Deducir dinámicamente el libro y número de capítulo del pasaje introducido (ej. "Génesis 22:1-19", "Éxodo 3:14", "Mateo 5")
+  const { detectedBookName, detectedChapNum } = useMemo(() => {
+    if (!passage) return { detectedBookName: 'Génesis', detectedChapNum: 1 };
+    
+    const match = passage.match(/^([a-záéíóúñ\s]+)\s+(\d+)/i);
+    if (match) {
+      return {
+        detectedBookName: match[1].trim(),
+        detectedChapNum: Number(match[2])
+      };
+    }
+    const numOnly = passage.match(/\d+/);
+    return {
+      detectedBookName: 'Génesis',
+      detectedChapNum: numOnly ? Number(numOnly[0]) : 1
+    };
   }, [passage]);
 
   const currentExegesis = getChapterExegesisData(detectedChapNum);
 
   // ----------------------------------------------------------------------
-  // HERRAMIENTAS DE FORMATO RICH TEXT (document.execCommand / DOM)
+  // HERRAMIENTAS DE FORMATO RICH TEXT (Aplica sobre texto seleccionado)
   // ----------------------------------------------------------------------
 
   const executeCommand = (command, value = null) => {
-    document.execCommand(command, false, value);
     if (editorRef.current) {
       editorRef.current.focus();
     }
+    document.execCommand(command, false, value);
   };
 
   const applyHighlightColor = (colorHex) => {
@@ -45,10 +57,11 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
 
   // Insertar una cita bíblica / nota del usuario directamente en la posición del cursor del editor
   const handleInsertNoteToEditor = (noteObj) => {
-    const verseText = getVerseTextRVR1960('genesis', noteObj.chapter, noteObj.verse, fullBibleData);
+    const bName = noteObj.book ? (noteObj.book.charAt(0).toUpperCase() + noteObj.book.slice(1)) : detectedBookName;
+    const verseText = getVerseTextRVR1960(noteObj.book || 'genesis', noteObj.chapter, noteObj.verse, fullBibleData);
     const htmlToInsert = `
       <blockquote class="inserted-bible-quote">
-        <strong>📖 Génesis ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong><br/>
+        <strong>📖 ${bName} ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong><br/>
         <em>"${verseText}"</em><br/>
         ${noteObj.content ? `<span class="note-comment">💡 Nota: ${noteObj.content}</span>` : ''}
       </blockquote>
@@ -192,7 +205,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             className="se-rich-editor"
             contentEditable
             suppressContentEditableWarning
-            dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '<h1>I. Introducción</h1><p>Escribe aquí tu sermón...</p>' }}
+            dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '<p>Escribe aquí tu introducción y puntos principales de la predicación...</p>' }}
           />
         </div>
 
@@ -201,7 +214,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
           {/* ASISTENTE EXEGÉTICO AUTOMÁTICO */}
           {currentExegesis && (
             <div className="se-sidebar-box exegesis-assistant">
-              <h3>⚡ Asistente Exegético para Génesis {detectedChapNum}</h3>
+              <h3>⚡ Asistente Exegético para {detectedBookName} {detectedChapNum}</h3>
 
               {currentExegesis.outline && (
                 <div className="sea-section">
