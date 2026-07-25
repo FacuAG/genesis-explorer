@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import './SermonEditor.css';
@@ -12,6 +12,13 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
   // Referencia al div editable (contentEditable) para Rich Text y guardar posicion del cursor
   const editorRef = useRef(null);
   const savedRangeRef = useRef(null);
+
+  // Inicializar contenido una sola vez al cargar o cambiar el sermón (sin sobreescribir mientras se tipea)
+  useEffect(() => {
+    if (editorRef.current) {
+      editorRef.current.innerHTML = sermon?.contentHtml || '';
+    }
+  }, [sermon?.id]);
 
   // Deducir dinámicamente el libro y número de capítulo del pasaje introducido (ej. "Génesis 22:1-19", "Éxodo 3:14", "Mateo 5")
   const { detectedBookName, detectedChapNum } = useMemo(() => {
@@ -320,7 +327,6 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             contentEditable
             suppressContentEditableWarning
             data-placeholder="Escribe aquí tu introducción y puntos principales de la predicación..."
-            dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '' }}
             onKeyUp={updateActiveFormats}
             onMouseUp={updateActiveFormats}
             onBlur={updateActiveFormats}

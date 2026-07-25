@@ -11,6 +11,7 @@ import {
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import SermonEditor from './SermonEditor';
 import SermonPulpitView from './SermonPulpitView';
+import { exportSermonToPDF } from '../../utils/pdfExporter';
 import './UserNotesPanel.css';
 
 export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
@@ -417,8 +418,8 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
                     </button>
                     <button
                       className="usc-btn usc-print-btn"
-                      onClick={() => setPulpitSermon(s)}
-                      title="Imprimir o Exportar PDF Pastoral en 1-Clic"
+                      onClick={() => exportSermonToPDF(s)}
+                      title="Descargar archivo PDF Pastoral directamente en 1-Clic"
                     >
                       🖨️ PDF
                     </button>
