@@ -154,8 +154,19 @@ Todos los libros de la suite deben enriquecer la experiencia de lectura implemen
 
 1. **✝️ Revelación Mesiánica & Cristológica**:
    - Todo capítulo debe incluir `christological_theme` en su objeto de datos y versículos con lazo tipológico al Nuevo Testamento.
-2. **📜 Glosario & Léxico Interlineal**:
-   - Todo capítulo debe incluir `hebrew_terms` (para Antiguo Testamento) o `greek_terms` (para Nuevo Testamento) con transliteración y significado.
+2. **📜 Glosario & Léxico Interlineal con Subíndices en Versículos**:
+   - Todo capítulo debe incluir de 5 a 10 entradas en `hebrew_terms` (Antiguo Testamento) o `greek_terms` (Nuevo Testamento) con el esquema estandarizado:
+     ```json
+     {
+       "hebrew": "בָּרָא",
+       "transliteration": "Bará",
+       "strong": "H1254",
+       "target_verse": 1,
+       "target_word": "crió",
+       "meaning": "Crear de la nada (Ex-Nihilo, atributo exclusivo de Dios)"
+     }
+     ```
+   - Esto activa automáticamente las llamadas interlineales clicables `[🔤 Bará]` en los versículos y la ventana modal con código Strong.
 3. **📍 Geografía y Contexto de Ubicaciones**:
    - Mapear las ubicaciones mencionadas en el capítulo hacia el registro de `locations`.
 4. **📝 Cuaderno de Notas Personales**:

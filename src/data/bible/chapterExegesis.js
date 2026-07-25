@@ -101,7 +101,9 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Revela la depravación total del pecado humano y la gracia inmerecida de Dios. Noé es salvado no por mérito propio sino por la gracia hallada ante los ojos de Jehová.",
     hebrew_terms: [
-      { hebrew: "חֵן", transliteration: "Jen", meaning: "Gracia / Favor inmerecido" }
+      { hebrew: "חֵן", transliteration: "Jen", strong: "H2580", target_verse: 8, target_word: "gracia", meaning: "Gracia / Favor inmerecido otorgado soberanamente por Dios." },
+      { hebrew: "תֵּבָה", transliteration: "Tebah", strong: "H8504", target_verse: 14, target_word: "arca", meaning: "Arca / Embarcación de rescate y refugio providencial." },
+      { hebrew: "תָּמִים", transliteration: "Tamim", strong: "H8549", target_verse: 9, target_word: "perfecto", meaning: "Integro / Íntegro en su conducta e inscripto en la fe." }
     ],
     nt_cross_references: ["Mateo 24:37-39", "Hebreos 11:7", "1 Pedro 3:20", "2 Pedro 2:5"]
   },
@@ -115,7 +117,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "El Diluvio es un prototipo del Juicio Final. Dios es el único que juzga la maldad pero también el único que provee una puerta de salvación y la cierra con seguridad.",
     hebrew_terms: [
-      { hebrew: "מַבּוּל", transliteration: "Mabbul", meaning: "Diluvio cataclísmico" }
+      { hebrew: "מַבּוּל", transliteration: "Mabbul", strong: "H4399", target_verse: 6, target_word: "diluvio", meaning: "Diluvio cataclísmico universal para purificar la tierra del pecado." },
+      { hebrew: "סָגַר", transliteration: "Sagar", strong: "H5462", target_verse: 16, target_word: "cerró", meaning: "Cerrar / Sellar con protección inquebrantable." }
     ],
     nt_cross_references: ["Lucas 17:26-27", "2 Pedro 3:5-7"]
   },
@@ -129,7 +132,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Demuestra la fidelidad pactual de Dios al 'acordarse' de sus siervos. El sacrificio de olor grato de Noé abre la era de preservación del orden cósmico.",
     hebrew_terms: [
-      { hebrew: "זָכַר", transliteration: "Zakar", meaning: "Acordarse con fidelidad pactual" }
+      { hebrew: "זָכַר", transliteration: "Zakar", strong: "H2142", target_verse: 1, target_word: "acordó", meaning: "Acordarse con fiel amor de pacto para actuar en salvación." },
+      { hebrew: "מִזְבֵּחַ", transliteration: "Mizbeaj", strong: "H4196", target_verse: 20, target_word: "altar", meaning: "Altar de adoración y sacrificio santo." }
     ],
     nt_cross_references: ["Efesios 5:2", "Hebreos 13:15"]
   },
@@ -143,7 +147,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Establece el valor inviolable de la vida humana mediante la institución del gobierno civil y la pena capital (Génesis 9:6), y garantiza la estabilidad de la tierra mediante el Arco Iris.",
     hebrew_terms: [
-      { hebrew: "קֶשֶׁת", transliteration: "Qeshet", meaning: "Arco iris / Arco de guerra colgado" }
+      { hebrew: "קֶשֶׁת", transliteration: "Qeshet", strong: "H7198", target_verse: 13, target_word: "arco", meaning: "Arco iris / Señal del pacto incondicional de preservar la tierra." },
+      { hebrew: "בְּרִית", transliteration: "Berit", strong: "H1285", target_verse: 9, target_word: "pacto", meaning: "Pacto / Alianza solemne e inviolable prometida por Dios." }
     ],
     nt_cross_references: ["Hechos 15:20", "Apocalipsis 4:3"]
   },
@@ -156,7 +161,7 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "La Tabla de las 70 Naciones demuestra la unidad biológica de toda la raza humana derivando de Noé y el poblamiento providencial del globo.",
     hebrew_terms: [
-      { hebrew: "גּוֹיִם", transliteration: "Goyim", meaning: "Naciones / Pueblos" }
+      { hebrew: "גּוֹיִם", transliteration: "Goyim", strong: "H1471", target_verse: 5, target_word: "naciones", meaning: "Naciones / Pueblos dispersados sobre la superficie terrestre." }
     ],
     nt_cross_references: ["Hechos 17:26"]
   },
@@ -170,7 +175,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Demuestra la inutilidad del orgullo humano tratando de alcanzar el cielo por sus propios medios. Dios confunde la babel humana para dar paso al llamado del hombre de fe (Abram).",
     hebrew_terms: [
-      { hebrew: "בָּבֶל", transliteration: "Babel", meaning: "Confusión" }
+      { hebrew: "בָּבֶל", transliteration: "Babel", strong: "H894", target_verse: 9, target_word: "Babel", meaning: "Confusión / Puerta de dioses falsos frustrada por Jehová." },
+      { hebrew: "מִגְדָּל", transliteration: "Migdal", strong: "H4026", target_verse: 4, target_word: "torre", meaning: "Torre / Zigurat arrogante de rebelión humana." }
     ],
     nt_cross_references: ["Hechos 2:1-11", "Apocalipsis 17:5"]
   },
@@ -183,7 +189,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "El inicio de la historia patriarcal. La salvación del mundo se canaliza a través del llamado incondicional de Abram: 'en ti serán benditas todas las familias de la tierra'.",
     hebrew_terms: [
-      { hebrew: "בְּרָכָה", transliteration: "Berakah", meaning: "Bendición" }
+      { hebrew: "בְּרָכָה", transliteration: "Berakah", strong: "H1293", target_verse: 2, target_word: "bendición", meaning: "Bendición divina multiplicadora." },
+      { hebrew: "מִשְׁפָּחָה", transliteration: "Mishpajah", strong: "H4940", target_verse: 3, target_word: "familias", meaning: "Familias / Linajes étnicos del planeta." }
     ],
     nt_cross_references: ["Hechos 7:2-4", "Gálatas 3:8-9", "Hebreos 11:8"]
   },
@@ -197,8 +204,8 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Génesis 15:6 es la piedra angular de la Soteriología: 'Creyó Abram a Jehová, y le fue contado por justicia'. Dios ratifica el pacto unilaterally garantizando la heredad de la tierra.",
     hebrew_terms: [
-      { hebrew: "אָמַן", transliteration: "Aman", meaning: "Creer / Confiar firmemente" },
-      { hebrew: "צְדָקָה", transliteration: "Tsedaqah", meaning: "Justicia declarada" }
+      { hebrew: "אָמַן", transliteration: "Aman", strong: "H539", target_verse: 6, target_word: "creyó", meaning: "Creer / Confiar plenamente afianzándose en la verdad del Señor." },
+      { hebrew: "צְדָקָה", transliteration: "Tsedaqah", strong: "H6666", target_verse: 6, target_word: "justicia", meaning: "Justicia / Estatus de rectitud concedido al creyente." }
     ],
     nt_cross_references: ["Romanos 4:1-5", "Gálatas 3:6", "Santiago 2:23"]
   },
@@ -213,9 +220,11 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "La cumbre de la tipología mesiánica en el Antiguo Testamento. El único hijo entregado por el padre prefigura el sacrificio del Padre Celestial entregando a Jesucristo en el Calvario.",
     hebrew_terms: [
-      { hebrew: "יְהוָה יִרְאֶה", transliteration: "Jehová-Jireh", meaning: "El Señor Proveerá" },
-      { hebrew: "עֲקֵידָה", transliteration: "Akedáh", meaning: "Atamiento de Isaac" }
+      { hebrew: "יְהוָה יִרְאֶה", transliteration: "Jehová-Jireh", strong: "H3070", target_verse: 14, target_word: "Jehová proveerá", meaning: "El Señor Proveerá / Jehová ve y suple el sacrificio redentor." },
+      { hebrew: "עֲקֵידָה", transliteration: "Akedáh", strong: "H6123", target_verse: 9, target_word: "ató", meaning: "Atamiento de Isaac sobre el altar de sacrificio en el monte Moriah." }
     ],
+    nt_cross_references: ["Juan 3:16", "Juan 8:56", "Hebreos 11:17-19", "Santiago 2:21-22"]
+  },
     nt_cross_references: ["Juan 3:16", "Juan 8:56", "Hebreos 11:17-19", "Santiago 2:21-22"]
   },
 

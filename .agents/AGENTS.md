@@ -103,10 +103,10 @@ Este archivo JSON es el **corazón del proyecto**. Está estructurado en capas (
      - **Referencias cruzadas con el Nuevo Testamento** (cumplimiento mesiánico y tipológico).
      - **Notas al pie de página y aclaraciones léxicas** para términos difíciles o relevantes en **Hebreo/Griego bíblico** (con transliteración y etimología).
 
-3. **Arquitectura Escalable a Otros Libros Bíblicos (5 Pilares de Lectura):**
+3. **Arquitectura Escalable a Otros Libros Bíblicos (5 Pilares de Lectura por Capítulo):**
    - Todos los libros futuros (Éxodo, Levítico, Números, Josué, Daniel, los Evangelios, etc.) heredan de forma 100% estandarizada los **5 Pilares de la Sala de Estudio por Capítulo**:
      1. **✝️ Revelación Mesiánica y Tipología Cristológica** (`christological_theme` y versículos con lazo al NT).
-     2. **📜 Glosario y Léxico Hebreo/Griego Interlineal** (`hebrew_terms` / `greek_terms`).
+     2. **📜 Glosario y Léxico Interlineal en Versículos** (`hebrew_terms` / `greek_terms`): Cada capítulo de cualquier libro DEBE incluir de 5 a 10 términos clave con subíndices clicables `[🔤 Bará]` integrados directamente en el texto del versículo. Cada término debe especificar obligatoriamente: `hebrew`/`greek`, `transliteration`, `strong` (código Strong H/G), `target_verse` (número de versículo), `target_word` (palabra exacta en español RVR1960) y `meaning` (análisis gramatical-histórico).
      3. **📍 Ubicaciones Geográficas y Contexto Territorial** (`locations`).
      4. **📝 Cuaderno de Notas Personales por Versículo** (persistencia en `localStorage` con clave `[book]_notes_ch_[chap]`).
      5. **🎧 Lector de Audio Sintético Asistido (TTS)** (`window.speechSynthesis` con sincronización de versículo).
