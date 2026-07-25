@@ -11,7 +11,7 @@ import {
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import SermonEditor from './SermonEditor';
 import SermonPulpitView from './SermonPulpitView';
-import { exportSermonToPDF } from '../../utils/pdfExporter';
+import { downloadSermonPDFDirect } from '../../utils/directPdfExporter';
 import './UserNotesPanel.css';
 
 export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
@@ -418,8 +418,8 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
                     </button>
                     <button
                       className="usc-btn usc-print-btn"
-                      onClick={() => setPulpitSermon(s)}
-                      title="Abrir vista para exportar o guardar en PDF"
+                      onClick={() => downloadSermonPDFDirect(s)}
+                      title="Descargar archivo PDF directo idéntico a la pantalla"
                     >
                       🖨️ PDF
                     </button>

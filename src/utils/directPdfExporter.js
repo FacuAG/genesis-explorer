@@ -1,248 +1,92 @@
-// Helper para cargar pdfmake y vfs_fonts dinámicamente desde CDN de forma transparente
-const loadPdfMake = () => {
+// Helper para cargar html2pdf.js dinámicamente desde CDN de forma transparente
+const loadHtml2Pdf = () => {
   return new Promise((resolve, reject) => {
-    if (window.pdfMake && window.pdfMake.vfs) {
-      resolve(window.pdfMake);
+    if (window.html2pdf) {
+      resolve(window.html2pdf);
       return;
     }
-
-    const scriptPdfMake = document.createElement('script');
-    scriptPdfMake.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js';
-    scriptPdfMake.onload = () => {
-      const scriptFonts = document.createElement('script');
-      scriptFonts.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.js';
-      scriptFonts.onload = () => resolve(window.pdfMake);
-      scriptFonts.onerror = () => reject(new Error('No se pudieron cargar las fuentes de pdfmake'));
-      document.body.appendChild(scriptFonts);
-    };
-    scriptPdfMake.onerror = () => reject(new Error('No se pudo cargar pdfmake'));
-    document.body.appendChild(scriptPdfMake);
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+    script.onload = () => resolve(window.html2pdf);
+    script.onerror = () => reject(new Error('No se pudo cargar la librería html2pdf.js'));
+    document.body.appendChild(script);
   });
 };
 
-// Helper para convertir el HTML limpio del editor TipTap/ContentEditable en la estructura vectorial de pdfmake
-const convertHtmlToPdfMakeContent = (htmlString) => {
-  if (!htmlString) return [{ text: 'Bosquejo sin contenido.', fontSize: 10.5, margin: [0, 5, 0, 5] }];
-
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlString, 'text/html');
-  const nodes = Array.from(doc.body.childNodes);
-  const pdfContent = [];
-
-  const parseTextRuns = (element) => {
-    const runs = [];
-    const children = Array.from(element.childNodes);
-
-    if (children.length === 0 && element.textContent) {
-      return [{ text: element.textContent }];
-    }
-
-    children.forEach((child) => {
-      if (child.nodeType === Node.TEXT_NODE) {
-        if (child.textContent) runs.push({ text: child.textContent });
-      } else if (child.nodeType === Node.ELEMENT_NODE) {
-        const tag = child.tagName.toLowerCase();
-        const styleAttr = child.getAttribute('style') || '';
-        const runText = child.textContent;
-        if (!runText) return;
-
-        let bgHex = null;
-        if (styleAttr.includes('221, 199, 36') || styleAttr.includes('221 199 36') || styleAttr.includes('yellow')) {
-          bgHex = '#ddc724';
-        } else if (styleAttr.includes('63, 128, 163') || styleAttr.includes('63 128 163') || styleAttr.includes('blue')) {
-          bgHex = '#3f80a3';
-        } else if (styleAttr.includes('85, 189, 122') || styleAttr.includes('85 189 122') || styleAttr.includes('green')) {
-          bgHex = '#55bd7a';
-        } else if (styleAttr.includes('183, 84, 116') || styleAttr.includes('183 84 116') || styleAttr.includes('red')) {
-          bgHex = '#b75474';
-        }
-
-        const runObj = {
-          text: runText,
-          bold: tag === 'strong' || tag === 'b' || !!bgHex,
-          italics: tag === 'em' || tag === 'i',
-          decoration: tag === 'u' ? 'underline' : undefined,
-        };
-
-        if (bgHex) {
-          runObj.background = bgHex;
-          runObj.color = '#ffffff';
-        }
-
-        runs.push(runObj);
-      }
-    });
-
-    return runs.length > 0 ? runs : [{ text: element.textContent }];
-  };
-
-  nodes.forEach((node) => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      const text = node.textContent?.trim();
-      if (text) pdfContent.push({ text, fontSize: 10.5, margin: [0, 4, 0, 6] });
-      return;
-    }
-
-    if (node.nodeType !== Node.ELEMENT_NODE) return;
-
-    const tag = node.tagName.toLowerCase();
-
-    if (tag === 'h1') {
-      pdfContent.push({
-        text: node.textContent,
-        fontSize: 16,
-        bold: true,
-        color: '#0f172a',
-        margin: [0, 14, 0, 6],
-        keepWithNext: true,
-      });
-    } else if (tag === 'h2') {
-      pdfContent.push({
-        text: node.textContent,
-        fontSize: 13.5,
-        bold: true,
-        color: '#581c87',
-        margin: [0, 12, 0, 4],
-        keepWithNext: true,
-      });
-    } else if (tag === 'h3') {
-      pdfContent.push({
-        text: node.textContent,
-        fontSize: 11.5,
-        bold: true,
-        color: '#1e3a8a',
-        margin: [0, 10, 0, 3],
-        keepWithNext: true,
-      });
-    } else if (tag === 'blockquote') {
-      pdfContent.push({
-        table: {
-          widths: ['*'],
-          body: [
-            [
-              {
-                text: node.textContent,
-                italics: true,
-                fontSize: 10,
-                color: '#334155',
-                fillColor: '#f8fafc',
-                margin: [8, 6, 8, 6],
-              },
-            ],
-          ],
-        },
-        layout: {
-          hLineWidth: () => 0,
-          vLineWidth: (i) => (i === 0 ? 3.5 : 0),
-          vLineColor: () => '#7c3aed',
-        },
-        margin: [0, 8, 0, 10],
-      });
-    } else if (tag === 'ul' || tag === 'ol') {
-      const lis = Array.from(node.querySelectorAll('li'));
-      const listItems = lis.map((li) => parseTextRuns(li));
-      if (tag === 'ol') {
-        pdfContent.push({ ol: listItems, fontSize: 10.5, margin: [10, 4, 0, 6] });
-      } else {
-        pdfContent.push({ ul: listItems, fontSize: 10.5, margin: [10, 4, 0, 6] });
-      }
-    } else if (tag === 'p' || tag === 'div') {
-      pdfContent.push({
-        text: parseTextRuns(node),
-        fontSize: 10.5,
-        lineHeight: 1.35,
-        margin: [0, 3, 0, 5],
-      });
-    }
-  });
-
-  return pdfContent;
-};
-
-// Función principal exportable para descargar el PDF directo a 1-Clic
+// Función principal exportable para descargar el PDF 100% idéntico a la pantalla a 1-Clic
 export async function downloadSermonPDFDirect(sermon) {
   try {
-    const pdfMake = await loadPdfMake();
-    const formattedDate = sermon.updatedAt
-      ? new Date(sermon.updatedAt).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })
-      : new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
+    const html2pdf = await loadHtml2Pdf();
+    
+    // Obtener el nodo visual de la hoja editorial `#sermon-pdf-paper`
+    let element = document.getElementById('sermon-pdf-paper');
+    
+    // Si el usuario presiona el botón desde la tarjeta y el modal no está montado, creamos un contenedor temporal idéntico
+    let tempContainer = null;
+    if (!element) {
+      const formattedDate = sermon.updatedAt 
+        ? new Date(sermon.updatedAt).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })
+        : new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
 
-    const docDefinition = {
-      pageSize: 'A4',
-      // Márgenes simétricos estrictos [Izquierda, Arriba, Derecha, Abajo] en todas las hojas
-      pageMargins: [42, 48, 42, 48],
-      header: (currentPage) => {
-        if (currentPage === 1) return null;
-        return {
-          text: sermon.title || 'Bosquejo Homilético',
-          alignment: 'right',
-          fontSize: 8,
-          color: '#94a3b8',
-          margin: [42, 20, 42, 0],
-        };
-      },
-      footer: (currentPage, pageCount) => {
-        return {
-          columns: [
-            { text: 'Genesis Explorer — Suite Bible Explorer', fontSize: 8, color: '#94a3b8' },
-            { text: `Página ${currentPage} de ${pageCount}`, alignment: 'right', fontSize: 8, color: '#94a3b8' },
-          ],
-          margin: [42, 15, 42, 0],
-        };
-      },
-      content: [
-        // Etiqueta superior
-        { text: 'DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL', fontSize: 8, bold: true, color: '#64748b', margin: [0, 0, 0, 4] },
-        // Título Principal
-        { text: sermon.title || 'Bosquejo Homilético', fontSize: 20, bold: true, color: '#0f172a', margin: [0, 0, 0, 6] },
-        // Fila de metadatos
-        {
-          columns: [
-            { text: [{ text: 'PASAJE CLAVE: ', bold: true, color: '#334155' }, sermon.passage || 'Génesis'], fontSize: 9.5, color: '#475569' },
-            { text: [{ text: 'FECHA: ', bold: true, color: '#334155' }, formattedDate], fontSize: 9.5, color: '#475569', alignment: 'right' },
-          ],
-          margin: [0, 0, 0, 8],
-        },
-        // Línea divisoria de cabecera
-        { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 511, y2: 0, lineWidth: 1.5, lineColor: '#cbd5e1' }], margin: [0, 0, 0, 12] },
-        // Proposición / Idea Central
-        sermon.proposition
-          ? {
-              table: {
-                widths: ['*'],
-                body: [
-                  [
-                    {
-                      stack: [
-                        { text: 'PROPOSICIÓN / IDEA CENTRAL:', fontSize: 7.5, bold: true, color: '#0369a1', margin: [0, 0, 0, 2] },
-                        { text: `"${sermon.proposition}"`, fontSize: 10.5, italics: true, color: '#0f172a' },
-                      ],
-                      fillColor: '#f8fafc',
-                      margin: [10, 8, 10, 8],
-                    },
-                  ],
-                ],
-              },
-              layout: {
-                hLineWidth: () => 0,
-                vLineWidth: (i) => (i === 0 ? 3.5 : 0),
-                vLineColor: () => '#0284c7',
-              },
-              margin: [0, 0, 0, 14],
-            }
-          : null,
-        // Cuerpo del sermón procesado
-        ...convertHtmlToPdfMakeContent(sermon.contentHtml),
-      ].filter(Boolean),
-      defaultStyle: {
-        font: 'Roboto',
-      },
-    };
+      tempContainer = document.createElement('div');
+      tempContainer.style.position = 'absolute';
+      tempContainer.style.left = '-9999px';
+      tempContainer.style.top = '-9999px';
+      tempContainer.style.width = '800px';
+
+      tempContainer.innerHTML = `
+        <div id="temp-sermon-pdf-paper" className="pdf-paper-wrapper" style="background:#ffffff; color:#0f172a; padding:2.5rem 3rem; font-family:Georgia, 'Times New Roman', serif; line-height:1.75;">
+          <header style="border-bottom:2px solid #e2e8f0; padding-bottom:1.25rem; margin-bottom:1.75rem;">
+            <div style="font-size:0.78rem; font-weight:800; color:#64748b; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0.5rem; font-family:system-ui, sans-serif;">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
+            <h1 style="margin:0 0 0.85rem 0; font-size:2.2em; font-weight:800; color:#0f172a; font-family:Georgia, serif; line-height:1.25;">${sermon.title || 'Bosquejo Homilético'}</h1>
+            <div style="display:flex; justify-content:space-between; color:#475569; font-size:0.9em; margin-bottom:1.2rem; font-family:system-ui, sans-serif;">
+              <div><strong>PASAJE CLAVE:</strong> ${sermon.passage || 'Génesis'}</div>
+              <div><strong>FECHA:</strong> ${formattedDate}</div>
+            </div>
+            ${sermon.proposition ? `
+              <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:0.85rem 1.2rem; border-radius:0 8px 8px 0; margin-top:0.85rem;">
+                <span style="display:block; font-size:0.75rem; font-weight:800; color:#0369a1; letter-spacing:1px; text-transform:uppercase; font-family:system-ui, sans-serif;">PROPOSICIÓN / IDEA CENTRAL:</span>
+                <p style="margin:0.3rem 0 0 0; color:#0f172a; font-style:italic; font-size:1.05em;">"${sermon.proposition}"</p>
+              </div>
+            ` : ''}
+          </header>
+          <div className="spv-doc-body" style="font-size:1em; color:#0f172a;">
+            ${sermon.contentHtml || '<p>Bosquejo sin contenido.</p>'}
+          </div>
+          <footer style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:1rem; border-top:1px solid #e2e8f0; font-size:0.82rem; color:#94a3b8; font-family:system-ui, sans-serif;">
+            <div>Genesis Explorer — Suite Bible Explorer</div>
+            <div>Documento de Estudio Pastoral</div>
+          </footer>
+        </div>
+      `;
+      document.body.appendChild(tempContainer);
+      element = tempContainer.firstElementChild;
+    }
 
     const sanitizedTitle = (sermon.title || 'Predicacion').replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_]/g, '_');
-    pdfMake.createPdf(docDefinition).download(`${sanitizedTitle}_Documento_Pastoral.pdf`);
+
+    // Configuración exacta para PDF de alta fidelidad 300 DPI 100% idéntico a la pantalla
+    const opt = {
+      margin:       [12, 14, 14, 14], // [arriba, izquierda, abajo, derecha] en mm
+      filename:     `${sanitizedTitle}_Documento_Pastoral.pdf`,
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { 
+        scale: 2.5, 
+        useCORS: true, 
+        logging: false,
+        letterRendering: true
+      },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    await html2pdf().set(opt).from(element).save();
+
+    if (tempContainer) {
+      document.body.removeChild(tempContainer);
+    }
   } catch (err) {
-    console.error('Error al generar PDF directo con pdfmake, recurriendo a impresión nativa:', err);
+    console.error('Error al generar PDF directo, recurriendo a impresión de navegador:', err);
     window.print();
   }
 }
