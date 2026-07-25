@@ -257,13 +257,24 @@
   margin: 0.65rem 0 0.3rem 0 !important;
 }
 
+.se-rich-editor ul,
+.se-rich-editor ol {
+  padding-left: 2rem !important;
+  margin: 0.8rem 0 0.8rem 0.5rem !important;
+}
+
+.se-rich-editor li {
+  margin-bottom: 0.35rem !important;
+  line-height: 1.6 !important;
+}
+
 .se-rich-editor blockquote,
 .se-rich-editor blockquote.inserted-bible-quote {
   position: relative;
   background: rgba(168, 85, 247, 0.15) !important;
   border-left: 4px solid #c084fc !important;
   padding: 0.9rem 1.2rem !important;
-  margin: 1rem 0 !important;
+  margin: 1rem 0 1rem 0.5rem !important;
   border-radius: 0 10px 10px 0 !important;
   font-size: 1rem !important;
   color: #e2e8f0 !important;

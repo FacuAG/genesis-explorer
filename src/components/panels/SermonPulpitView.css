@@ -261,12 +261,23 @@
   color: #0f172a !important;
 }
 
+.spv-doc-body ul,
+.spv-doc-body ol {
+  padding-left: 2.2rem !important;
+  margin: 0.85rem 0 0.85rem 0.5rem !important;
+}
+
+.spv-doc-body li {
+  margin-bottom: 0.4rem !important;
+  line-height: 1.6 !important;
+}
+
 .spv-doc-body blockquote,
 .spv-doc-body blockquote.inserted-bible-quote {
   background: #f8fafc !important;
   border-left: 4px solid #7c3aed !important;
-  padding: 0.9rem 1.2rem !important;
-  margin: 1.25rem 0 !important;
+  padding: 0.9rem 1.25rem !important;
+  margin: 1.25rem 0 1.25rem 0.5rem !important;
   border-radius: 0 8px 8px 0 !important;
   font-size: 0.98em !important;
   color: #334155 !important;

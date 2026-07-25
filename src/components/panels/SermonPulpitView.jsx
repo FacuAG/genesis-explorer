@@ -56,7 +56,7 @@ export default function SermonPulpitView({ sermon, onClose }) {
 
       const sanitizedTitle = (sermon.title || 'Predicacion').replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_]/g, '_');
       const opt = {
-        margin:       [12, 12, 12, 12],
+        margin:       [16, 16, 16, 16],
         filename:     `${sanitizedTitle}_Documento_Pastoral.pdf`,
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2, useCORS: true, logging: false },
