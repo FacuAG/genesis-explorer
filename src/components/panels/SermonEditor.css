@@ -214,10 +214,10 @@
   border-color: #ffffff;
 }
 
-.tb-color-dot.gold { background: #fde047; }
-.tb-color-dot.blue { background: #93c5fd; }
-.tb-color-dot.green { background: #86efac; }
-.tb-color-dot.red { background: #fca5a5; }
+.tb-color-dot.gold { background: rgb(221, 199, 36); }
+.tb-color-dot.blue { background: rgb(63, 128, 163); }
+.tb-color-dot.green { background: rgb(85, 189, 122); }
+.tb-color-dot.red { background: rgb(183, 84, 116); }
 
 /* Área Editable Rich Text y Jerarquía Tipográfica de Sermón */
 .se-rich-editor {
@@ -240,15 +240,14 @@
 
 .se-rich-editor span[style*="background"],
 .se-rich-editor mark {
-  padding: 0.2rem 0.5rem !important;
-  border-radius: 6px !important;
+  padding: 0rem 0.2rem !important;
+  border-radius: 4px !important;
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
-  margin: 0 0.15rem !important;
-  display: inline-block !important;
-  color: #0f172a !important;
+  margin: 0 0.1rem !important;
+  display: inline !important;
+  color: #ffffff !important;
   font-weight: 700 !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 }
 
 .se-rich-editor h1 {
