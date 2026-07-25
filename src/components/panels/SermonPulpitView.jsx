@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { downloadSermonPDFDirect } from '../../utils/directPdfExporter';
 import './SermonPulpitView.css';
 
 // Helper para cargar html2pdf de forma transparente
@@ -119,8 +120,8 @@ export default function SermonPulpitView({ sermon, onClose }) {
 
           <button
             className="spv-btn spv-print-btn"
-            onClick={() => window.print()}
-            title="Imprimir o Descargar como PDF"
+            onClick={() => downloadSermonPDFDirect(sermon)}
+            title="Descargar archivo PDF vectorial directo en 1-Clic"
           >
             🖨️ Descargar PDF
           </button>
