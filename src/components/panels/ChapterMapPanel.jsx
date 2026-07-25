@@ -125,19 +125,18 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     speakNext();
   };
 
-  // Scroll enfocado exactamente a la cabecera pegajosa (Sticky Reader Toolbar) al cambiar de capítulo
+  // Scroll enfocado exactamente al inicio de la caja del lector (biblical-text-reader-box) al cambiar de capítulo
   useEffect(() => {
     if (selectedChapNum !== null) {
-      setTimeout(() => {
-        if (readerBoxRef.current) {
-          const rect = readerBoxRef.current.getBoundingClientRect();
-          // Posicionar el scroll de modo que el borde superior de la cabecera pegajosa quede exactamente arriba en el viewport (12px offset)
-          const targetY = window.pageYOffset + rect.top - 12;
-          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }, 70);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          if (readerBoxRef.current) {
+            readerBoxRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 80);
+      });
     }
   }, [selectedChapNum]);
 
