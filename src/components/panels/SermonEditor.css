@@ -238,8 +238,25 @@
   display: block;
 }
 
+.se-rich-editor p[style*="background"],
+.se-rich-editor div[style*="background"],
+.se-rich-editor h1[style*="background"],
+.se-rich-editor h2[style*="background"],
+.se-rich-editor h3[style*="background"],
+.se-rich-editor li[style*="background"],
+.se-rich-editor blockquote[style*="background"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.se-rich-editor p {
+  line-height: 1.85 !important;
+  margin-bottom: 0.85rem !important;
+}
+
 .se-rich-editor span[style*="background"],
-.se-rich-editor mark {
+.se-rich-editor mark,
+.se-rich-editor font[style*="background"] {
   padding: 0rem 0.2rem !important;
   border-radius: 4px !important;
   box-decoration-break: clone !important;
@@ -248,6 +265,7 @@
   display: inline !important;
   color: #ffffff !important;
   font-weight: 700 !important;
+  line-height: 1.85 !important;
 }
 
 .se-rich-editor h1 {

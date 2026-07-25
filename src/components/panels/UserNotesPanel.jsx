@@ -419,9 +419,9 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
                     <button
                       className="usc-btn usc-print-btn"
                       onClick={() => setPulpitSermon(s)}
-                      title="Abrir vista de impresión y exportación PDF"
+                      title="Abrir vista para exportar o guardar en PDF"
                     >
-                      🖨️ PDF / Imprimir
+                      🖨️ PDF
                     </button>
                     <button
                       className="usc-btn usc-del-btn"
