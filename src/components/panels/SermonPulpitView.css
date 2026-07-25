@@ -45,6 +45,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  transition: all 0.2s ease;
 }
 
 .spv-close-btn {
@@ -132,6 +133,10 @@
   color: #ffffff;
 }
 
+.spv-print-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
 /* Documento Imprimible / Vista Púlpito */
 .spv-document-container {
   max-width: 900px;
@@ -174,6 +179,10 @@
   font-size: 0.95em;
 }
 
+.spv-doc-proposition strong {
+  color: #fde047;
+}
+
 .spv-doc-proposition p {
   margin: 0.3rem 0 0 0;
   color: #fde047;
@@ -198,26 +207,178 @@
   margin-top: 1.2rem;
 }
 
-/* Reglas de Impresión A4 */
+.spv-doc-body h3 {
+  font-size: 1.1em;
+  color: #93c5fd;
+  margin-top: 1rem;
+}
+
+.spv-doc-body blockquote,
+.spv-doc-body blockquote.inserted-bible-quote {
+  background: rgba(168, 85, 247, 0.12);
+  border-left: 4px solid #c084fc;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95em;
+  font-style: italic;
+}
+
+.print-only {
+  display: none;
+}
+
+/* ==========================================================================
+   REGLAS DE IMPRESIÓN A4 EDITORIAL PASTORAL PROFESIONAL (@media print)
+   ========================================================================== */
 @media print {
-  .no-print { display: none !important; }
-  .sermon-pulpit-view-overlay {
-    position: static;
-    background: #ffffff !important;
-    color: #000000 !important;
+  /* Ocultar toda la navegación global, barras de herramientas, popups y botones */
+  header, footer, nav, .app-header, .app-footer, .no-print, .spv-toolbar, .unp-header, .unp-tabs-bar, .se-top-bar, .se-toolbar {
+    display: none !important;
   }
+
+  @page {
+    size: A4 portrait;
+    margin: 2cm 1.8cm 2cm 1.8cm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    font-family: 'Times New Roman', Times, Georgia, serif !important;
+    line-height: 1.55 !important;
+  }
+
+  .sermon-pulpit-view-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    overflow: visible !important;
+  }
+
   .spv-document-container {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     background: #ffffff !important;
-    color: #000000 !important;
+    color: #0f172a !important;
     border: none !important;
     box-shadow: none !important;
-    font-size: 12pt !important;
+    font-size: 11pt !important;
   }
-  .spv-doc-title { color: #000000 !important; }
-  .spv-doc-body h1, .spv-doc-body h2 { color: #000000 !important; border-color: #000000 !important; }
-  .spv-doc-proposition { background: #f3f4f6 !important; border-color: #000000 !important; color: #000000 !important; }
-  .spv-doc-proposition p { color: #000000 !important; }
+
+  /* Encabezado Elegante del Documento Pastoral */
+  .spv-doc-header {
+    border-bottom: 2.5pt solid #d97706 !important;
+    padding-bottom: 12pt !important;
+    margin-bottom: 16pt !important;
+  }
+
+  .spv-doc-title {
+    margin: 0 0 8pt 0 !important;
+    font-size: 24pt !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    font-family: 'Outfit', 'Segoe UI', Georgia, serif !important;
+    line-height: 1.25 !important;
+  }
+
+  .spv-doc-meta {
+    display: flex !important;
+    gap: 20pt !important;
+    color: #475569 !important;
+    font-size: 10pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .spv-doc-meta strong {
+    color: #0f172a !important;
+  }
+
+  .spv-doc-proposition {
+    background: #fffbebf5 !important;
+    border-left: 4pt solid #d97706 !important;
+    padding: 9pt 14pt !important;
+    margin-top: 10pt !important;
+    border-radius: 0 6pt 6pt 0 !important;
+  }
+
+  .spv-doc-proposition strong {
+    color: #78350f !important;
+    font-size: 9.5pt !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5pt !important;
+  }
+
+  .spv-doc-proposition p {
+    color: #92400e !important;
+    font-size: 11pt !important;
+    font-style: italic !important;
+    margin-top: 3pt !important;
+  }
+
+  /* Jerarquía de Texto del Mensaje */
+  .spv-doc-body h1 {
+    font-size: 15pt !important;
+    font-weight: 800 !important;
+    color: #1e3a8a !important;
+    border-bottom: 1.5pt solid #d97706 !important;
+    padding-bottom: 3pt !important;
+    margin-top: 18pt !important;
+    margin-bottom: 6pt !important;
+    page-break-after: avoid !important;
+    font-family: 'Outfit', Georgia, serif !important;
+  }
+
+  .spv-doc-body h2 {
+    font-size: 12.5pt !important;
+    font-weight: 700 !important;
+    color: #581c87 !important;
+    margin-top: 14pt !important;
+    margin-bottom: 4pt !important;
+    page-break-after: avoid !important;
+    font-family: 'Outfit', Georgia, serif !important;
+  }
+
+  .spv-doc-body h3 {
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin-top: 10pt !important;
+    margin-bottom: 3pt !important;
+    page-break-after: avoid !important;
+  }
+
+  .spv-doc-body blockquote,
+  .spv-doc-body blockquote.inserted-bible-quote {
+    background: #f8fafc !important;
+    border-left: 3.5pt solid #7c3aed !important;
+    padding: 8pt 12pt !important;
+    margin: 10pt 0 !important;
+    border-radius: 0 6pt 6pt 0 !important;
+    font-size: 10.5pt !important;
+    color: #334155 !important;
+    font-style: italic !important;
+  }
+
+  .spv-doc-body blockquote strong {
+    color: #4c1d95 !important;
+  }
+
+  /* Pie de Página Imprimible */
+  .print-only {
+    display: block !important;
+    margin-top: 30pt !important;
+    padding-top: 10pt !important;
+    border-top: 1pt solid #cbd5e1 !important;
+    text-align: center !important;
+    font-size: 8.5pt !important;
+    color: #64748b !important;
+  }
 }

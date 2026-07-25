@@ -71,10 +71,6 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     document.execCommand('formatBlock', false, 'blockquote');
   };
 
-  const removeQuoteBlock = () => {
-    executeCommand('formatBlock', false, 'p');
-  };
-
   const insertHeading = (level) => {
     if (editorRef.current) {
       editorRef.current.focus();
@@ -100,10 +96,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     const verseText = getVerseTextRVR1960(noteObj.book || 'genesis', noteObj.chapter, noteObj.verse, fullBibleData);
     const htmlToInsert = `
       <blockquote class="inserted-bible-quote">
-        <span class="quote-header-row">
-          <strong>📖 ${bName} ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong>
-          <button type="button" class="remove-quote-floating-btn no-print" title="Quitar formato de cita conservando el texto" onclick="this.closest('blockquote').outerHTML = this.closest('blockquote').innerHTML.replace(/<button[\\s\\S]*?<\\/button>/, '')">✕ Quitar Cita</button>
-        </span><br/>
+        <strong>📖 ${bName} ${noteObj.chapter}:${noteObj.verse} (RVR1960)</strong><br/>
         <em>"${verseText}"</em><br/>
         ${noteObj.content ? `<span class="note-comment">💡 Nota: ${noteObj.content}</span>` : ''}
       </blockquote>
@@ -239,7 +232,6 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
               <button className="tb-btn" onClick={() => executeCommand('insertUnorderedList')} title="Lista con Viñetas">• Lista</button>
               <button className="tb-btn" onClick={() => executeCommand('insertOrderedList')} title="Lista Numerada">1. Lista</button>
               <button className="tb-btn" onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
-              <button className="tb-btn tb-remove-quote" onClick={removeQuoteBlock} title="Quitar formato de cita conservando el texto">🚫 Quitar Cita</button>
             </div>
           </div>
 
