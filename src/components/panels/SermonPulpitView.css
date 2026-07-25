@@ -362,6 +362,34 @@
     color: #0f172a !important;
   }
 
+  /* Margen simétrico uniforme de 15mm en la parte superior e inferior de TODAS las hojas */
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm !important;
+  }
+
+  /* Control estricto para evitar títulos huérfanos */
+  #sermon-pdf-paper h1,
+  #sermon-pdf-paper h2,
+  #sermon-pdf-paper h3 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Evitar que párrafos, viñetas, citas o notas se corten a la mitad entre dos hojas */
+  #sermon-pdf-paper p,
+  #sermon-pdf-paper li,
+  #sermon-pdf-paper blockquote,
+  #sermon-pdf-paper .spv-doc-proposition-box,
+  #sermon-pdf-paper .inserted-bible-quote {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
   /* Prevenir que párrafos, divisiones o listas completas se conviertan en bloques gigantes con fondo */
   #sermon-pdf-paper p[style*="background"],
   #sermon-pdf-paper div[style*="background"],
@@ -397,10 +425,5 @@
     margin: 0 0.1rem !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-  }
-
-  @page {
-    size: A4 portrait;
-    margin: 10mm;
   }
 }
