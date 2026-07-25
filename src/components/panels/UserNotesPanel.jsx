@@ -102,9 +102,9 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
     const newSermonObj = {
       id: `sermon_${Date.now()}`,
       title: 'Nuevo Bosquejo Homilético',
-      passage: 'Génesis 1:1-31',
-      proposition: 'La verdad central de este mensaje es...',
-      contentHtml: '<h1>Título de la Predicación</h1><p>Escribe aquí tu introducción y puntos principales...</p>',
+      passage: 'Génesis 1:1',
+      proposition: '',
+      contentHtml: '<p>Escribe aquí tu introducción y puntos principales de la predicación...</p>',
       tags: ['#Predicación']
     };
     setActiveSermon(newSermonObj);

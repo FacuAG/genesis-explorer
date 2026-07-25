@@ -47,8 +47,17 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     executeCommand('hiliteColor', colorHex);
   };
 
+  const removeHighlightColor = () => {
+    executeCommand('hiliteColor', 'transparent');
+    executeCommand('backColor', 'transparent');
+  };
+
   const insertQuoteBlock = () => {
     executeCommand('formatBlock', 'blockquote');
+  };
+
+  const removeQuoteBlock = () => {
+    executeCommand('formatBlock', 'p');
   };
 
   const insertHeading = (level) => {
@@ -187,6 +196,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
               <button className="tb-color-dot blue" onClick={() => applyHighlightColor('#93c5fd')} title="Resaltar en Azul (Promesa)" />
               <button className="tb-color-dot green" onClick={() => applyHighlightColor('#86efac')} title="Resaltar en Verde (Vida)" />
               <button className="tb-color-dot red" onClick={() => applyHighlightColor('#fca5a5')} title="Resaltar en Rojo (Juicio/Profecía)" />
+              <button className="tb-btn tb-clear-highlight" onClick={removeHighlightColor} title="Quitar resaltado del texto seleccionado">🚫 Sin Color</button>
             </div>
 
             <span className="tb-divider" />
@@ -195,7 +205,8 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             <div className="tb-group">
               <button className="tb-btn" onClick={() => executeCommand('insertUnorderedList')} title="Lista con Viñetas">• Lista</button>
               <button className="tb-btn" onClick={() => executeCommand('insertOrderedList')} title="Lista Numerada">1. Lista</button>
-              <button className="tb-btn" onClick={insertQuoteBlock} title="Bloque de Cita Bíblica">💬 Cita</button>
+              <button className="tb-btn" onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
+              <button className="tb-btn tb-remove-quote" onClick={removeQuoteBlock} title="Quitar formato de cita conservando el texto">🚫 Quitar Cita</button>
             </div>
           </div>
 

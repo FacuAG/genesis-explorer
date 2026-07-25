@@ -167,6 +167,31 @@
   transform: translateY(-1px);
 }
 
+.tb-clear-highlight {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  margin-left: 0.3rem;
+}
+
+.tb-clear-highlight:hover {
+  background: rgba(239, 68, 68, 0.35);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.tb-remove-quote {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fde047;
+}
+
+.tb-remove-quote:hover {
+  background: rgba(245, 158, 11, 0.35);
+  border-color: #f59e0b;
+  color: #ffffff;
+}
+
 .tb-color-dot {
   width: 22px;
   height: 22px;
