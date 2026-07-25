@@ -52,10 +52,10 @@ function normalizeBookName(bookStr) {
   if (b.startsWith('hag')) return 'Hageo';
   if (b.startsWith('zac')) return 'Zacarías';
   if (b.startsWith('mal')) return 'Malaquías';
-  if (b.startsWith('mat')) return 'Mateo';
-  if (b.startsWith('mar')) return 'Marcos';
-  if (b.startsWith('luc')) return 'Lucas';
-  if (b.startsWith('jua') || b.startsWith('john') || b === 'jn') return 'Juan';
+  if (b.startsWith('mat')) return 'San Mateo';
+  if (b.startsWith('mar')) return 'San Marcos';
+  if (b.startsWith('luc')) return 'San Lucas';
+  if (b.startsWith('jua') || b.startsWith('john') || b === 'jn') return 'San Juan';
   if (b.startsWith('hec') || b.startsWith('act')) return 'Hechos';
   if (b.startsWith('rom')) return 'Romanos';
   if (b.startsWith('1 cor') || b.startsWith('1cor')) return '1 Corintios';
@@ -113,11 +113,15 @@ export function parseBiblicalRefString(refStr) {
 export function getVerseTextRVR1960(book, chapter, verseStart = 1, verseEnd = null) {
   const normBook = normalizeBookName(book);
 
-  // Intentar obtener el libro desde la base de datos completa de 66 libros
-  const bookData = fullBibleData[normBook] || fullBibleData[book];
+  // Intentar obtener el libro desde la base de datos completa de 66 libros con fallbacks flexibles
+  const bookData = fullBibleData[normBook] ||
+                   fullBibleData[`San ${normBook}`] ||
+                   fullBibleData[book] ||
+                   fullBibleData[`San ${book}`] ||
+                   (normBook.startsWith('San ') ? fullBibleData[normBook.replace('San ', '')] : null);
 
   if (!bookData) {
-    return `${normBook} capítulo ${chapter}, versículo(s) ${verseStart}${verseEnd ? '-' + verseEnd : ''} (Santa Biblia Reina-Valera 1960).`;
+    return `${normBook} ${chapter}:${verseStart}${verseEnd ? '-' + verseEnd : ''} (Santa Biblia Reina-Valera 1960).`;
   }
 
   const chapData = bookData[String(chapter)];

@@ -527,6 +527,29 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                   </div>
                 </div>
 
+                {/* BANNER DE LÉXICO INTERLINEAL Y TÉRMINOS EN HEBREO (Desplegado con el botón 📜 Léxico) */}
+                {isHebrewLexiconActive && (
+                  <div className="inline-lexicon-banner">
+                    <div className="ilb-header">
+                      <h4>📜 Glosario & Léxico Hebreo Interlineal de Génesis {selectedChapNum}</h4>
+                      <button className="close-lexicon-btn" onClick={() => setIsHebrewLexiconActive(false)}>✕ Ocultar Léxico</button>
+                    </div>
+                    {exegesisData?.hebrew_terms && exegesisData.hebrew_terms.length > 0 ? (
+                      <div className="ilb-grid">
+                        {exegesisData.hebrew_terms.map((term, idx) => (
+                          <div key={idx} className="ilb-card">
+                            <span className="ilb-hebrew">{term.hebrew}</span>
+                            <span className="ilb-trans"><em>{term.transliteration}</em></span>
+                            <p className="ilb-meaning">{term.meaning}</p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="ilb-empty">📜 Este capítulo se enfoca en la narrativa histórica general. Revisa el bosquejo y las lecciones doctrinales asociadas.</p>
+                    )}
+                  </div>
+                )}
+
                 {/* Flujo de Versículos con Resaltado, Audio TTS y Notas Personales */}
                 <div className="verses-continuous-flow">
                   {chapterVersesList.map((v) => {
