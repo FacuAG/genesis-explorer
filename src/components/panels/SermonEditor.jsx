@@ -9,8 +9,9 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
   const [proposition, setProposition] = useState(sermon?.proposition || '');
   const [tagInput, setTagInput] = useState(sermon?.tags ? sermon.tags.join(' ') : '#Predicación');
 
-  // Referencia al div editable (contentEditable) para Rich Text
+  // Referencia al div editable (contentEditable) para Rich Text y guardar posicion del cursor
   const editorRef = useRef(null);
+  const savedRangeRef = useRef(null);
 
   // Deducir dinámicamente el libro y número de capítulo del pasaje introducido (ej. "Génesis 22:1-19", "Éxodo 3:14", "Mateo 5")
   const { detectedBookName, detectedChapNum } = useMemo(() => {
@@ -32,15 +33,38 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
 
   const currentExegesis = getChapterExegesisData(detectedChapNum);
 
-  // ----------------------------------------------------------------------
-  // HERRAMIENTAS DE FORMATO RICH TEXT (Aplica sobre texto seleccionado)
-  // ----------------------------------------------------------------------
+  // Guardar la posición exacta del cursor en el editor
+  const saveSelection = () => {
+    const sel = window.getSelection();
+    if (sel && sel.rangeCount > 0) {
+      const node = sel.anchorNode;
+      if (node && editorRef.current && editorRef.current.contains(node)) {
+        savedRangeRef.current = sel.getRangeAt(0);
+      }
+    }
+  };
 
-  const executeCommand = (command, value = null) => {
+  // Restaurar la posición del cursor antes de ejecutar un comando o insertar HTML
+  const restoreSelection = () => {
     if (editorRef.current) {
       editorRef.current.focus();
     }
+    const savedRange = savedRangeRef.current;
+    if (savedRange) {
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(savedRange);
+    }
+  };
+
+  // ----------------------------------------------------------------------
+  // HERRAMIENTAS DE FORMATO RICH TEXT (Aplica sobre la posición del cursor)
+  // ----------------------------------------------------------------------
+
+  const executeCommand = (command, value = null) => {
+    restoreSelection();
     document.execCommand(command, false, value);
+    saveSelection();
   };
 
   const applyHighlightColor = (colorHex) => {
@@ -243,6 +267,10 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             suppressContentEditableWarning
             data-placeholder="Escribe aquí tu introducción y puntos principales de la predicación..."
             dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '' }}
+            onKeyUp={saveSelection}
+            onMouseUp={saveSelection}
+            onBlur={saveSelection}
+            onSelect={saveSelection}
           />
         </div>
 
