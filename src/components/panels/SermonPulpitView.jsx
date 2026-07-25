@@ -119,11 +119,18 @@ export default function SermonPulpitView({ sermon, onClose }) {
 
           <button
             className="spv-btn spv-print-btn"
+            onClick={() => window.print()}
+            title="Abrir cuadro de diálogo nativo de impresión o Guardar como PDF"
+          >
+            🖨️ Imprimir / Guardar PDF
+          </button>
+          <button
+            className="spv-btn spv-download-btn"
             onClick={handleExportPDF}
             disabled={isExportingPDF}
-            title="Descargar archivo PDF vectorial en alta resolución (300 DPI)"
+            title="Descargar archivo PDF directo (300 DPI)"
           >
-            {isExportingPDF ? '⌛ Generando PDF...' : '📄 Descargar PDF Pastoral (1-Clic)'}
+            {isExportingPDF ? '⌛ Generando...' : '📄 Descargar PDF (1-Clic)'}
           </button>
         </div>
       </div>

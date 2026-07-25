@@ -313,30 +313,33 @@
 }
 
 /* ==========================================================================
-   REGLAS DE IMPRESIÓN A4 (@media print)
+   REGLAS DE IMPRESIÓN PASTORAL A4 NATIVA (@media print)
    ========================================================================== */
 @media print {
-  header, footer, nav, .app-header, .app-footer, .no-print, .spv-toolbar, .unp-header, .unp-tabs-bar {
-    display: none !important;
+  body * {
+    visibility: hidden !important;
   }
 
-  @page {
-    size: A4 portrait;
-    margin: 20mm 15mm 20mm 15mm;
+  #sermon-pdf-paper,
+  #sermon-pdf-paper * {
+    visibility: visible !important;
   }
 
-  body, html {
+  #sermon-pdf-paper {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15mm 15mm !important;
+    box-shadow: none !important;
+    border: none !important;
     background: #ffffff !important;
     color: #0f172a !important;
   }
 
-  .sermon-pulpit-view-overlay {
-    position: static !important;
-    background: #ffffff !important;
-  }
-
-  .pdf-paper-wrapper {
-    box-shadow: none !important;
-    padding: 0 !important;
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
   }
 }
