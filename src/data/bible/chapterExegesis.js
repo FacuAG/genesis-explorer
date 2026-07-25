@@ -225,8 +225,6 @@ export const CHAPTER_EXEGESIS = {
     ],
     nt_cross_references: ["Juan 3:16", "Juan 8:56", "Hebreos 11:17-19", "Santiago 2:21-22"]
   },
-    nt_cross_references: ["Juan 3:16", "Juan 8:56", "Hebreos 11:17-19", "Santiago 2:21-22"]
-  },
 
   49: {
     outline: [

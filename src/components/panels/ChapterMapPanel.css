@@ -1260,6 +1260,85 @@
   cursor: pointer;
 }
 
+/* Navegación Inferior de Capítulo al Pie de la Caja de Versículos */
+.chapter-reader-footer-nav {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cr-footer-btn {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(99, 102, 241, 0.25) 100%);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  color: #f8fafc;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cr-footer-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+  border-color: #fde047;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.cr-footer-arrow {
+  color: #fde047;
+  font-size: 0.95rem;
+}
+
+.cr-footer-center-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.cr-footer-badge {
+  color: #fde047;
+  font-size: 0.88rem;
+  font-weight: 800;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.cr-footer-subtext {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.cr-footer-spacer {
+  min-width: 120px;
+}
+
+@media (max-width: 640px) {
+  .chapter-reader-footer-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .cr-footer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cr-footer-spacer { display: none; }
+}
+
 @media (max-width: 768px) {
   .floating-side-nav-btn .side-nav-text { display: none; }
   .floating-side-nav-btn { padding: 0.6rem 0.6rem; }

@@ -17,9 +17,8 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
 
-  // Referencia a la caja del texto bíblico para cálculo exacto de posición adaptativa de botones laterales
+  // Referencia a la caja del texto bíblico para scroll enfocado al inicio del lector
   const readerBoxRef = useRef(null);
-  const [navPos, setNavPos] = useState({ left: 16, right: 16, isVisible: false });
 
   // Estados de Control de Lectura Bíblica
   const [fontSize, setFontSize] = useState(16); // 13px - 26px
@@ -38,53 +37,6 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [userNotes, setUserNotes] = useState({}); // { [verseNum]: noteString }
   const [editingNoteVerseNum, setEditingNoteVerseNum] = useState(null);
   const [noteInputText, setNoteInputText] = useState('');
-
-  // Posicionamiento adaptativo de los botones flotantes de navegación lateral (SOLO al costado de la caja bíblica)
-  useEffect(() => {
-    if (!selectedChapNum) return;
-
-    const updateSideNavPos = () => {
-      if (!readerBoxRef.current) return;
-      const rect = readerBoxRef.current.getBoundingClientRect();
-
-      const btnWidth = 70; // Ancho del botón compacto
-      const leftX = Math.max(6, rect.left - btnWidth - 6);
-      const rightX = Math.max(6, window.innerWidth - rect.right - btnWidth - 6);
-
-      // Los botones SOLO se muestran si la caja de versículos (.biblical-text-reader-box) ha alcanzado el área de lectura
-      // Y su posición Y se limita estrictamente a estar dentro de la caja de versículos [rect.top + 60, rect.bottom - 40]
-      const screenMidY = window.innerHeight / 2;
-      const minY = rect.top + 60;
-      const maxY = rect.bottom - 40;
-
-      // Solo es visible si el usuario ha scrolleado hasta la caja de versículos y la caja está en pantalla
-      const isVisible = rect.top < screenMidY + 100 && rect.bottom > 120 && minY < maxY;
-      const clampedY = Math.max(minY, Math.min(maxY, screenMidY));
-
-      setNavPos({
-        left: leftX,
-        right: rightX,
-        top: clampedY,
-        isVisible
-      });
-    };
-
-    updateSideNavPos();
-    window.addEventListener('resize', updateSideNavPos);
-    window.addEventListener('scroll', updateSideNavPos, { passive: true });
-
-    let observer = null;
-    if (window.ResizeObserver && readerBoxRef.current) {
-      observer = new ResizeObserver(updateSideNavPos);
-      observer.observe(readerBoxRef.current);
-    }
-
-    return () => {
-      window.removeEventListener('resize', updateSideNavPos);
-      window.removeEventListener('scroll', updateSideNavPos);
-      if (observer) observer.disconnect();
-    };
-  }, [selectedChapNum, isFullscreenReader]);
 
   // Cargar notas personales de localStorage cuando cambia el capítulo
   useEffect(() => {
@@ -172,10 +124,18 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     speakNext();
   };
 
-  // Scroll al extremo superior al cambiar de capítulo
+  // Scroll enfocado al inicio del lector del capítulo (versículo 1) al cambiar de capítulo
   useEffect(() => {
     if (selectedChapNum !== null) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        if (readerBoxRef.current) {
+          const rect = readerBoxRef.current.getBoundingClientRect();
+          const targetY = window.pageYOffset + rect.top - 65; // 65px offset para librar la cabecera pegajosa
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 60);
     }
   }, [selectedChapNum]);
 
@@ -196,7 +156,6 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     if (selectedChapNum > 1) {
       setSelectedChapNum(prev => prev - 1);
       setHighlightedVerses({});
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -204,7 +163,6 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     if (selectedChapNum < 50) {
       setSelectedChapNum(prev => prev + 1);
       setHighlightedVerses({});
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -734,6 +692,36 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                     );
                   })}
                 </div>
+
+                {/* NAVEGACIÓN INFERIOR DE CAPÍTULO AL PIE DE PÁGINA (Al terminar la caja de versículos) */}
+                <div className="chapter-reader-footer-nav">
+                  {selectedChapNum > 1 ? (
+                    <button
+                      className="cr-footer-btn prev-chap-btn"
+                      onClick={handlePrevChapter}
+                      title={`Ir al Capítulo ${selectedChapNum - 1}`}
+                    >
+                      <span className="cr-footer-arrow">◀</span>
+                      <span className="cr-footer-label">Capítulo {selectedChapNum - 1}</span>
+                    </button>
+                  ) : <div className="cr-footer-spacer" />}
+
+                  <div className="cr-footer-center-info">
+                    <span className="cr-footer-badge">📖 Génesis Capítulo {selectedChapNum} de 50</span>
+                    <span className="cr-footer-subtext">Fin de lectura del capítulo</span>
+                  </div>
+
+                  {selectedChapNum < 50 ? (
+                    <button
+                      className="cr-footer-btn next-chap-btn"
+                      onClick={handleNextChapter}
+                      title={`Ir al Capítulo ${selectedChapNum + 1}`}
+                    >
+                      <span className="cr-footer-label">Capítulo {selectedChapNum + 1}</span>
+                      <span className="cr-footer-arrow">▶</span>
+                    </button>
+                  ) : <div className="cr-footer-spacer" />}
+                </div>
               </div>
             </div>
 
@@ -912,36 +900,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           }}
         />
       )}
-      {/* BOTONES FLOTANTES LATERALES ADAPTATIVOS DE NAVEGACIÓN DE CAPÍTULO (SOLO AL COSTADO DE LA CAJA BÍBLICA) */}
-      {selectedChapNum !== null && navPos.isVisible && (
-        <>
-          {/* BOTÓN LATERAL IZQUIERDO: CAPÍTULO ANTERIOR */}
-          {selectedChapNum > 1 && (
-            <button
-              className="adaptive-side-nav-btn prev-chap"
-              style={{ left: `${navPos.left}px`, top: `${navPos.top}px` }}
-              onClick={handlePrevChapter}
-              title={`Ir al Capítulo ${selectedChapNum - 1}`}
-            >
-              <span className="side-nav-arrow">◀</span>
-              <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
-            </button>
-          )}
 
-          {/* BOTÓN LATERAL DERECHO: CAPÍTULO SIGUIENTE */}
-          {selectedChapNum < 50 && (
-            <button
-              className="adaptive-side-nav-btn next-chap"
-              style={{ right: `${navPos.right}px`, top: `${navPos.top}px` }}
-              onClick={handleNextChapter}
-              title={`Ir al Capítulo ${selectedChapNum + 1}`}
-            >
-              <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
-              <span className="side-nav-arrow">▶</span>
-            </button>
-          )}
-        </>
-      )}
 
       {/* MODAL / DRAWER INTERACTIVO DE ANÁLISIS LÉXICO Y CÓDIGO STRONG */}
       {selectedLexiconTerm && (
