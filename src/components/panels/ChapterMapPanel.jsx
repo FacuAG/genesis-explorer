@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { BibleRefLink } from '../common/BibleRefLink';
@@ -9,13 +9,17 @@ import './ChapterMapPanel.css';
 /**
  * Componente profesional para la Sala de Estudio Exegético por Capítulo (Génesis 1 a 50).
  * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
- * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales de Capítulos y Volver Arriba.
+ * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales Adaptativos de Capítulos y Volver Arriba.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
   const [selectedChapNum, setSelectedChapNum] = useState(null);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
+
+  // Referencia a la caja del texto bíblico para cálculo exacto de posición adaptativa de botones laterales
+  const readerBoxRef = useRef(null);
+  const [navPos, setNavPos] = useState({ left: 16, right: 16, isVisible: false });
 
   // Estados de Control de Lectura Bíblica
   const [fontSize, setFontSize] = useState(16); // 13px - 26px
@@ -33,6 +37,43 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const [userNotes, setUserNotes] = useState({}); // { [verseNum]: noteString }
   const [editingNoteVerseNum, setEditingNoteVerseNum] = useState(null);
   const [noteInputText, setNoteInputText] = useState('');
+
+  // Posicionamiento adaptativo de los botones flotantes de navegación lateral (Acompañan el scroll al costado de la caja bíblica)
+  useEffect(() => {
+    if (!selectedChapNum) return;
+
+    const updateSideNavPos = () => {
+      if (!readerBoxRef.current) return;
+      const rect = readerBoxRef.current.getBoundingClientRect();
+
+      const btnWidth = 70; // Ancho del botón compacto
+      const leftX = Math.max(6, rect.left - btnWidth - 6);
+      const rightX = Math.max(6, window.innerWidth - rect.right - btnWidth - 6);
+      const isVisible = rect.bottom > 80 && rect.top < window.innerHeight - 80;
+
+      setNavPos({
+        left: leftX,
+        right: rightX,
+        isVisible
+      });
+    };
+
+    updateSideNavPos();
+    window.addEventListener('resize', updateSideNavPos);
+    window.addEventListener('scroll', updateSideNavPos, { passive: true });
+
+    let observer = null;
+    if (window.ResizeObserver && readerBoxRef.current) {
+      observer = new ResizeObserver(updateSideNavPos);
+      observer.observe(readerBoxRef.current);
+    }
+
+    return () => {
+      window.removeEventListener('resize', updateSideNavPos);
+      window.removeEventListener('scroll', updateSideNavPos);
+      if (observer) observer.disconnect();
+    };
+  }, [selectedChapNum, isFullscreenReader]);
 
   // Cargar notas personales de localStorage cuando cambia el capítulo
   useEffect(() => {
@@ -419,29 +460,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
               )}
 
               {/* Lector de Texto Bíblico Completo RVR1960 con Header Pegajoso (Sticky Header) */}
-              <div className="biblical-text-reader-box">
-                {/* Botones Flotantes Laterales Adjuntos al Contenedor de Lectura */}
-                {selectedChapNum > 1 && (
-                  <button
-                    className="reader-side-nav-btn prev-chap"
-                    onClick={handlePrevChapter}
-                    title={`Ir al Capítulo ${selectedChapNum - 1}`}
-                  >
-                    <span className="side-nav-arrow">◀</span>
-                    <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
-                  </button>
-                )}
-
-                {selectedChapNum < 50 && (
-                  <button
-                    className="reader-side-nav-btn next-chap"
-                    onClick={handleNextChapter}
-                    title={`Ir al Capítulo ${selectedChapNum + 1}`}
-                  >
-                    <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
-                    <span className="side-nav-arrow">▶</span>
-                  </button>
-                )}
+              <div className="biblical-text-reader-box" ref={readerBoxRef}>
 
                 {/* BARRA DE NAVEGACIÓN Y CONTROLES PEGAJOSA (STICKY HEADER) */}
                 <div className="sticky-reader-toolbar">
@@ -796,6 +815,37 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           }}
         />
       )}
+      {/* BOTONES FLOTANTES LATERALES ADAPTATIVOS DE NAVEGACIÓN DE CAPÍTULO */}
+      {selectedChapNum !== null && navPos.isVisible && (
+        <>
+          {/* BOTÓN LATERAL IZQUIERDO: CAPÍTULO ANTERIOR */}
+          {selectedChapNum > 1 && (
+            <button
+              className="adaptive-side-nav-btn prev-chap"
+              style={{ left: `${navPos.left}px` }}
+              onClick={handlePrevChapter}
+              title={`Ir al Capítulo ${selectedChapNum - 1}`}
+            >
+              <span className="side-nav-arrow">◀</span>
+              <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
+            </button>
+          )}
+
+          {/* BOTÓN LATERAL DERECHO: CAPÍTULO SIGUIENTE */}
+          {selectedChapNum < 50 && (
+            <button
+              className="adaptive-side-nav-btn next-chap"
+              style={{ right: `${navPos.right}px` }}
+              onClick={handleNextChapter}
+              title={`Ir al Capítulo ${selectedChapNum + 1}`}
+            >
+              <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
+              <span className="side-nav-arrow">▶</span>
+            </button>
+          )}
+        </>
+      )}
+
       {/* BOTÓN FLOTANTE VOLVER ARRIBA EN CUALQUIER PUNTO DE LA PÁGINA */}
       {selectedChapNum !== null && (
         <button

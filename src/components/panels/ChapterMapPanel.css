@@ -832,36 +832,39 @@
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 35px rgba(245, 158, 11, 0.9);
 }
 
-/* Botones Flotantes Laterales de Navegación entre Capítulos (Más cerca del texto) */
-.floating-side-nav-btn {
+/* Botones Flotantes Laterales Adaptativos que Acompañan el Scroll al Costado de la Caja Bíblica */
+.adaptive-side-nav-btn {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 980;
+  z-index: 985;
   background: rgba(15, 23, 42, 0.92);
   border: 1px solid rgba(192, 132, 252, 0.5);
   color: #f8fafc;
-  font-size: 0.85rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  padding: 0.8rem 1.1rem;
+  padding: 0.42rem 0.65rem;
+  border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(192, 132, 252, 0.25);
   backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  transition: all 0.25s ease;
+  gap: 0.35rem;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
 }
 
-/* Posicionamiento adaptativo más cercano al contenido central */
-@media (min-width: 1280px) {
-  .floating-side-nav-btn.prev-chap { left: calc(50% - 620px); border-radius: 16px; }
-  .floating-side-nav-btn.next-chap { right: calc(50% - 620px); border-radius: 16px; }
+.adaptive-side-nav-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+  border-color: #f59e0b;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(245, 158, 11, 0.5);
+  transform: translateY(-50%) scale(1.06);
 }
 
-@media (max-width: 1279px) {
-  .floating-side-nav-btn.prev-chap { left: 16px; border-radius: 0 16px 16px 0; }
-  .floating-side-nav-btn.next-chap { right: 16px; border-radius: 16px 0 0 16px; }
+@media (max-width: 768px) {
+  .adaptive-side-nav-btn .side-nav-text { display: none; }
+  .adaptive-side-nav-btn { padding: 0.4rem 0.4rem; }
 }
 
 .floating-side-nav-btn:hover {
