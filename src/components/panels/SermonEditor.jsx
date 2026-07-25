@@ -33,6 +33,16 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
 
   const currentExegesis = getChapterExegesisData(detectedChapNum);
 
+  const [activeFormats, setActiveFormats] = useState({
+    h1: false,
+    h2: false,
+    h3: false,
+    bold: false,
+    italic: false,
+    underline: false,
+    quote: false,
+  });
+
   // Guardar la posición exacta del cursor en el editor
   const saveSelection = () => {
     const sel = window.getSelection();
@@ -42,6 +52,42 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
         savedRangeRef.current = sel.getRangeAt(0);
       }
     }
+  };
+
+  // Detectar y actualizar dinámicamente qué formato tiene el texto donde se posiciona el cursor
+  const updateActiveFormats = () => {
+    saveSelection();
+    const sel = window.getSelection();
+    if (!sel || !sel.rangeCount) return;
+    let node = sel.anchorNode;
+    if (node && node.nodeType === 3) node = node.parentNode;
+    if (!node || !editorRef.current || !editorRef.current.contains(node)) return;
+
+    const isH1 = !!node.closest('h1');
+    const isH2 = !!node.closest('h2');
+    const isH3 = !!node.closest('h3');
+    const isQuote = !!node.closest('blockquote');
+
+    let isBold = false;
+    let isItalic = false;
+    let isUnderline = false;
+    try {
+      isBold = document.queryCommandState('bold');
+      isItalic = document.queryCommandState('italic');
+      isUnderline = document.queryCommandState('underline');
+    } catch {
+      // Fallback si queryCommandState no es soportado
+    }
+
+    setActiveFormats({
+      h1: isH1,
+      h2: isH2,
+      h3: isH3,
+      bold: isBold,
+      italic: isItalic,
+      underline: isUnderline,
+      quote: isQuote,
+    });
   };
 
   // Restaurar la posición del cursor antes de ejecutar un comando o insertar HTML
@@ -230,29 +276,29 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
           <div className="se-toolbar">
             {/* Títulos / Jerarquía */}
             <div className="tb-group">
-              <button className="tb-btn" onClick={() => insertHeading(1)} title="Título H1 (Punto Principal)">H1</button>
-              <button className="tb-btn" onClick={() => insertHeading(2)} title="Título H2 (Subpunto)">H2</button>
-              <button className="tb-btn" onClick={() => insertHeading(3)} title="Título H3">H3</button>
+              <button className={`tb-btn ${activeFormats.h1 ? 'active' : ''}`} onClick={() => insertHeading(1)} title="Título H1 (Punto Principal)">H1</button>
+              <button className={`tb-btn ${activeFormats.h2 ? 'active' : ''}`} onClick={() => insertHeading(2)} title="Título H2 (Subpunto)">H2</button>
+              <button className={`tb-btn ${activeFormats.h3 ? 'active' : ''}`} onClick={() => insertHeading(3)} title="Título H3">H3</button>
             </div>
 
             <span className="tb-divider" />
 
             {/* Formato Básico */}
             <div className="tb-group">
-              <button className="tb-btn bold" onClick={() => executeCommand('bold')} title="Negrita (Ctrl+B)">B</button>
-              <button className="tb-btn italic" onClick={() => executeCommand('italic')} title="Cursiva (Ctrl+I)"><em>I</em></button>
-              <button className="tb-btn underline" onClick={() => executeCommand('underline')} title="Subrayado (Ctrl+U)"><u>U</u></button>
+              <button className={`tb-btn bold ${activeFormats.bold ? 'active' : ''}`} onClick={() => executeCommand('bold')} title="Negrita (Ctrl+B)">B</button>
+              <button className={`tb-btn italic ${activeFormats.italic ? 'active' : ''}`} onClick={() => executeCommand('italic')} title="Cursiva (Ctrl+I)"><em>I</em></button>
+              <button className={`tb-btn underline ${activeFormats.underline ? 'active' : ''}`} onClick={() => executeCommand('underline')} title="Subrayado (Ctrl+U)"><u>U</u></button>
             </div>
 
             <span className="tb-divider" />
 
-            {/* Resaltador de Texto Multicolor */}
+            {/* Resaltador de Texto Multicolor (Ultra-Soft Delicados) */}
             <div className="tb-group">
               <span className="tb-label">Resaltar:</span>
-              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('rgba(253, 224, 71, 0.45)')} title="Resaltar en Amarillo Pastel (Doctrina)" />
-              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('rgba(147, 197, 253, 0.45)')} title="Resaltar en Azul Pastel (Promesa)" />
-              <button className="tb-color-dot green" onClick={() => applyHighlightColor('rgba(134, 239, 172, 0.45)')} title="Resaltar en Verde Pastel (Vida)" />
-              <button className="tb-color-dot red" onClick={() => applyHighlightColor('rgba(254, 202, 202, 0.45)')} title="Resaltar en Rosa Pastel (Profecía)" />
+              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('rgba(254, 240, 138, 0.28)')} title="Resaltar en Amarillo Suave (Doctrina)" />
+              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('rgba(186, 230, 253, 0.28)')} title="Resaltar en Azul Suave (Promesa)" />
+              <button className="tb-color-dot green" onClick={() => applyHighlightColor('rgba(187, 247, 208, 0.28)')} title="Resaltar en Verde Suave (Vida)" />
+              <button className="tb-color-dot red" onClick={() => applyHighlightColor('rgba(254, 205, 211, 0.28)')} title="Resaltar en Rosa Suave (Profecía)" />
               <button className="tb-btn tb-clear-highlight" onClick={removeHighlightColor} title="Quitar resaltado del texto seleccionado">🚫 Sin Color</button>
             </div>
 
@@ -262,7 +308,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             <div className="tb-group">
               <button className="tb-btn" onClick={() => executeCommand('insertUnorderedList')} title="Lista con Viñetas">• Lista</button>
               <button className="tb-btn" onClick={() => executeCommand('insertOrderedList')} title="Lista Numerada">1. Lista</button>
-              <button className="tb-btn" onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
+              <button className={`tb-btn ${activeFormats.quote ? 'active' : ''}`} onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
               <button className="tb-btn tb-clean-format" onClick={() => executeCommand('removeFormat')} title="Limpiar todo el formato del texto seleccionado">🧹 Limpiar Formato</button>
             </div>
           </div>
@@ -275,10 +321,11 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             suppressContentEditableWarning
             data-placeholder="Escribe aquí tu introducción y puntos principales de la predicación..."
             dangerouslySetInnerHTML={{ __html: sermon?.contentHtml || '' }}
-            onKeyUp={saveSelection}
-            onMouseUp={saveSelection}
-            onBlur={saveSelection}
-            onSelect={saveSelection}
+            onKeyUp={updateActiveFormats}
+            onMouseUp={updateActiveFormats}
+            onBlur={updateActiveFormats}
+            onSelect={updateActiveFormats}
+            onClick={updateActiveFormats}
             onPaste={handlePaste}
           />
         </div>

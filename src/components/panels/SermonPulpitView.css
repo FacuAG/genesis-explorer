@@ -261,6 +261,18 @@
   color: #0f172a !important;
 }
 
+.spv-doc-body span[style*="background"],
+.spv-doc-body mark {
+  padding: 0.18rem 0.45rem !important;
+  border-radius: 6px !important;
+  box-decoration-break: clone !important;
+  -webkit-box-decoration-break: clone !important;
+  margin: 0 0.15rem !important;
+  display: inline !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
 .spv-doc-body ul,
 .spv-doc-body ol {
   padding-left: 2.2rem !important;
