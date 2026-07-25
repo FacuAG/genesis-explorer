@@ -114,6 +114,13 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     document.execCommand('formatBlock', false, `h${level}`);
   };
 
+  // Limpiar estilos externos al pegar texto (Paste en Texto Plano)
+  const handlePaste = (e) => {
+    e.preventDefault();
+    const plainText = e.clipboardData.getData('text/plain');
+    executeCommand('insertText', plainText);
+  };
+
   // Insertar una cita bíblica / nota del usuario directamente en la posición del cursor del editor
   const handleInsertNoteToEditor = (noteObj) => {
     const bName = noteObj.book ? (noteObj.book.charAt(0).toUpperCase() + noteObj.book.slice(1)) : detectedBookName;
@@ -127,7 +134,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
       <p><br/></p>
     `;
 
-    executeCommand('insertHTML', false, htmlToInsert);
+    executeCommand('insertHTML', htmlToInsert);
   };
 
   // Insertar sugerencia exegética (ej. Bosquejo o Término Hebreo) en el editor
@@ -242,10 +249,10 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             {/* Resaltador de Texto Multicolor */}
             <div className="tb-group">
               <span className="tb-label">Resaltar:</span>
-              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('#fde047')} title="Resaltar en Amarillo (Doctrina)" />
-              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('#93c5fd')} title="Resaltar en Azul (Promesa)" />
-              <button className="tb-color-dot green" onClick={() => applyHighlightColor('#86efac')} title="Resaltar en Verde (Vida)" />
-              <button className="tb-color-dot red" onClick={() => applyHighlightColor('#fca5a5')} title="Resaltar en Rojo (Juicio/Profecía)" />
+              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('rgba(253, 224, 71, 0.45)')} title="Resaltar en Amarillo Pastel (Doctrina)" />
+              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('rgba(147, 197, 253, 0.45)')} title="Resaltar en Azul Pastel (Promesa)" />
+              <button className="tb-color-dot green" onClick={() => applyHighlightColor('rgba(134, 239, 172, 0.45)')} title="Resaltar en Verde Pastel (Vida)" />
+              <button className="tb-color-dot red" onClick={() => applyHighlightColor('rgba(254, 202, 202, 0.45)')} title="Resaltar en Rosa Pastel (Profecía)" />
               <button className="tb-btn tb-clear-highlight" onClick={removeHighlightColor} title="Quitar resaltado del texto seleccionado">🚫 Sin Color</button>
             </div>
 
@@ -256,6 +263,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
               <button className="tb-btn" onClick={() => executeCommand('insertUnorderedList')} title="Lista con Viñetas">• Lista</button>
               <button className="tb-btn" onClick={() => executeCommand('insertOrderedList')} title="Lista Numerada">1. Lista</button>
               <button className="tb-btn" onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
+              <button className="tb-btn tb-clean-format" onClick={() => executeCommand('removeFormat')} title="Limpiar todo el formato del texto seleccionado">🧹 Limpiar Formato</button>
             </div>
           </div>
 
@@ -271,6 +279,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             onMouseUp={saveSelection}
             onBlur={saveSelection}
             onSelect={saveSelection}
+            onPaste={handlePaste}
           />
         </div>
 

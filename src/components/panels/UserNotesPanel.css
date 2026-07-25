@@ -381,29 +381,80 @@
 
 .usc-actions {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 0.4rem;
-  padding-top: 0.65rem;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+  padding-top: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.usc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.65rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
 .usc-edit-btn {
-  background: rgba(245, 158, 11, 0.2);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(217, 119, 6, 0.25) 100%);
   color: #fde047;
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  border: 1px solid rgba(253, 224, 71, 0.4);
   flex: 1;
+}
+
+.usc-edit-btn:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.45) 0%, rgba(217, 119, 6, 0.45) 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .usc-pulpit-btn {
-  background: rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.25) 100%);
   color: #6ee7b7;
-  border: 1px solid rgba(16, 185, 129, 0.4);
+  border: 1px solid rgba(110, 231, 183, 0.4);
   flex: 1;
 }
 
+.usc-pulpit-btn:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.45) 0%, rgba(5, 150, 105, 0.45) 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.usc-print-btn {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(3, 105, 161, 0.25) 100%);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  flex: 1;
+}
+
+.usc-print-btn:hover {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.45) 0%, rgba(3, 105, 161, 0.45) 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .usc-del-btn {
-  background: rgba(239, 68, 68, 0.2);
-  color: #f87171;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.4rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.usc-del-btn:hover {
+  background: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+  border-color: #ef4444;
 }
 
 /* Estado Vacío */

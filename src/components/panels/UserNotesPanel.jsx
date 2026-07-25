@@ -404,14 +404,23 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
                     <button
                       className="usc-btn usc-edit-btn"
                       onClick={() => setActiveSermon(s)}
+                      title="Editar este bosquejo"
                     >
-                      ✏️ Editar Mensaje
+                      ✏️ Editar
                     </button>
                     <button
                       className="usc-btn usc-pulpit-btn"
                       onClick={() => setPulpitSermon(s)}
+                      title="Ver en Modo Púlpito para el Altar"
                     >
-                      🎤 Modo Púlpito
+                      🎤 Púlpito
+                    </button>
+                    <button
+                      className="usc-btn usc-print-btn"
+                      onClick={() => setPulpitSermon(s)}
+                      title="Imprimir o Exportar PDF Pastoral en 1-Clic"
+                    >
+                      🖨️ PDF
                     </button>
                     <button
                       className="usc-btn usc-del-btn"
