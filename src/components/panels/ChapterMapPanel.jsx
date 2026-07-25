@@ -420,6 +420,29 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
 
               {/* Lector de Texto Bíblico Completo RVR1960 con Header Pegajoso (Sticky Header) */}
               <div className="biblical-text-reader-box">
+                {/* Botones Flotantes Laterales Adjuntos al Contenedor de Lectura */}
+                {selectedChapNum > 1 && (
+                  <button
+                    className="reader-side-nav-btn prev-chap"
+                    onClick={handlePrevChapter}
+                    title={`Ir al Capítulo ${selectedChapNum - 1}`}
+                  >
+                    <span className="side-nav-arrow">◀</span>
+                    <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
+                  </button>
+                )}
+
+                {selectedChapNum < 50 && (
+                  <button
+                    className="reader-side-nav-btn next-chap"
+                    onClick={handleNextChapter}
+                    title={`Ir al Capítulo ${selectedChapNum + 1}`}
+                  >
+                    <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
+                    <span className="side-nav-arrow">▶</span>
+                  </button>
+                )}
+
                 {/* BARRA DE NAVEGACIÓN Y CONTROLES PEGAJOSA (STICKY HEADER) */}
                 <div className="sticky-reader-toolbar">
                   <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
@@ -428,19 +451,19 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                       <button
                         className="srt-nav-btn"
                         disabled={selectedChapNum <= 1}
-                        onClick={() => setSelectedChapNum(prev => Math.max(1, prev - 1))}
-                        title="Capítulo Anterior"
+                        onClick={handlePrevChapter}
+                        title={`Capítulo Anterior (Cap. ${selectedChapNum - 1})`}
                       >
-                        ◀
+                        ◀ Cap. {selectedChapNum - 1}
                       </button>
                       <span className="srt-title-badge">📖 GÉNESIS {selectedChapNum}</span>
                       <button
                         className="srt-nav-btn"
                         disabled={selectedChapNum >= 50}
-                        onClick={() => setSelectedChapNum(prev => Math.min(50, prev + 1))}
-                        title="Capítulo Siguiente"
+                        onClick={handleNextChapter}
+                        title={`Capítulo Siguiente (Cap. ${selectedChapNum + 1})`}
                       >
-                        ▶
+                        Cap. {selectedChapNum + 1} ▶
                       </button>
                     </div>
                   </div>
@@ -750,42 +773,15 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           }}
         />
       )}
-      {/* CONTROLES FLOTANTES DE NAVEGACIÓN LATERAL Y VOLVER ARRIBA EN MODO LECTURA */}
+      {/* BOTÓN FLOTANTE VOLVER ARRIBA EN CUALQUIER PUNTO DE LA PÁGINA */}
       {selectedChapNum !== null && (
-        <>
-          {/* BOTÓN FLOTANTE LATERAL IZQUIERDO: CAPÍTULO ANTERIOR */}
-          {selectedChapNum > 1 && (
-            <button
-              className="floating-side-nav-btn prev-chap"
-              onClick={handlePrevChapter}
-              title={`Ir al Capítulo ${selectedChapNum - 1}`}
-            >
-              <span className="side-nav-arrow">◀</span>
-              <span className="side-nav-text">Cap. {selectedChapNum - 1}</span>
-            </button>
-          )}
-
-          {/* BOTÓN FLOTANTE LATERAL DERECHO: CAPÍTULO SIGUIENTE */}
-          {selectedChapNum < 50 && (
-            <button
-              className="floating-side-nav-btn next-chap"
-              onClick={handleNextChapter}
-              title={`Ir al Capítulo ${selectedChapNum + 1}`}
-            >
-              <span className="side-nav-text">Cap. {selectedChapNum + 1}</span>
-              <span className="side-nav-arrow">▶</span>
-            </button>
-          )}
-
-          {/* BOTÓN FLOTANTE VOLVER ARRIBA */}
-          <button
-            className="floating-scroll-top-btn"
-            onClick={handleScrollToTop}
-            title="Volver al inicio de la página"
-          >
-            ⬆️ <span className="scroll-top-text">Arriba</span>
-          </button>
-        </>
+        <button
+          className="floating-scroll-top-btn"
+          onClick={handleScrollToTop}
+          title="Volver al inicio de la página"
+        >
+          ⬆️ <span className="scroll-top-text">Volver al Inicio</span>
+        </button>
       )}
     </div>
   );
