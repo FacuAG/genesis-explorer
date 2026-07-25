@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { chapterExegesis } from '../../data/bible/chapterExegesis';
+import React, { useState, useRef, useMemo } from 'react';
+import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import './SermonEditor.css';
 
@@ -18,7 +18,7 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
     return match ? Number(match[0]) : 1;
   }, [passage]);
 
-  const currentExegesis = chapterExegesis[detectedChapNum] || null;
+  const currentExegesis = getChapterExegesisData(detectedChapNum);
 
   // ----------------------------------------------------------------------
   // HERRAMIENTAS DE FORMATO RICH TEXT (document.execCommand / DOM)
