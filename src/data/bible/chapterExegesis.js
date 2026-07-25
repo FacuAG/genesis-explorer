@@ -17,10 +17,11 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Génesis 1 revela la monarquía absoluta de Dios sobre el universo mediante la creación Ex Nihilo. Dios no forma el mundo del caos preexistente sino por la voz todopoderosa de su Logos (la Palabra), estableciendo al ser humano como su representante con dignidad inalienable.",
     hebrew_terms: [
-      { hebrew: "בָּרָא", transliteration: "Bará", meaning: "Crear de la nada (utilizado únicamente con Dios)" },
-      { hebrew: "תֹּהוּ וָבֹהוּ", transliteration: "Tohu va-Bohu", meaning: "Desordenada y vacía / Caos inicial" },
-      { hebrew: "רָקִיעַ", transliteration: "Raqía", meaning: "Firmamento / Expansión celestial" },
-      { hebrew: "צֶלֶם", transliteration: "Tselem", meaning: "Imagen / Estatua representativa del Rey" }
+      { hebrew: "בָּרָא", transliteration: "Bará", strong: "H1254", target_verse: 1, target_word: "crió", meaning: "Crear de la nada (Ex-Nihilo, atributo exclusivo de Dios)" },
+      { hebrew: "תֹּהוּ וָבֹהוּ", transliteration: "Tohu va-Bohu", strong: "H8414", target_verse: 2, target_word: "desordenada", meaning: "Sin forma y vacía / Estado primordial antes del orden divino" },
+      { hebrew: "רָקִיעַ", transliteration: "Raqía", strong: "H7549", target_verse: 6, target_word: "expansión", meaning: "Firmamento / Expansión de los cielos" },
+      { hebrew: "צֶלֶם", transliteration: "Tselem", strong: "H6754", target_verse: 26, target_word: "imagen", meaning: "Imagen / Estatua o representante real de Dios" },
+      { hebrew: "רӯחַ", transliteration: "Rúaj", strong: "H7307", target_verse: 2, target_word: "Espíritu", meaning: "Soplo, aliento o viento Santo de Dios" }
     ],
     nt_cross_references: ["Juan 1:1-3", "Colosenses 1:16-17", "Hebreos 11:3", "Apocalipsis 4:11"]
   },
@@ -36,8 +37,10 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Establece el diseño antropológico del matrimonio binario monogámico e indisoluble entre un hombre y una mujer, y el marco de responsabilidad moral del hombre bajo la prueba de la obediencia en el Edén.",
     hebrew_terms: [
-      { hebrew: "נְשָׁמָה", transliteration: "Neshamah", meaning: "Aliento de vida impertido por Dios" },
-      { hebrew: "עֵזֶר כְּנֶגְדּוֹ", transliteration: "Ezer Kenegdo", meaning: "Ayuda idónea / Rescate complementario" }
+      { hebrew: "שַׁבָּת", transliteration: "Shabbat", strong: "H7673", target_verse: 2, target_word: "reposó", meaning: "Cesar de trabajar / Reposo y santificación divina" },
+      { hebrew: "נְשָׁמָה", transliteration: "Neshamah", strong: "H5397", target_verse: 7, target_word: "soplo", meaning: "Aliento de vida imparted directamente por el Creador" },
+      { hebrew: "עֵזֶר כְּנֶגְדּוֹ", transliteration: "Ezer Kenegdo", strong: "H5828", target_verse: 18, target_word: "ayuda idónea", meaning: "Compañera complementaria y rescate idóneo" },
+      { hebrew: "אֲדָמָה", transliteration: "Adamah", strong: "H127", target_verse: 7, target_word: "polvo", meaning: "Tierra arable de donde fue tomado el ser humano" }
     ],
     nt_cross_references: ["Mateo 19:4-6", "1 Corintios 11:7-9", "Efesios 5:31-32"]
   },
@@ -53,8 +56,9 @@ export const CHAPTER_EXEGESIS = {
     ],
     theological_teaching: "Génesis 3 es la explicación histórica de la entrada del pecado original y la muerte en el mundo. En medio de la condenación, brilla el Protoevangelio (Génesis 3:15), anunciando la victoria futura de la Simiente de la mujer sobre Satanás.",
     hebrew_terms: [
-      { hebrew: "זֶרַע", transliteration: "Zera", meaning: "Simiente / Descendencia prometida" },
-      { hebrew: "הָעָרוּם", transliteration: "Ha-Arum", meaning: "Astuto / Sagaz" }
+      { hebrew: "נָחָשׁ", transliteration: "Najash", strong: "H5175", target_verse: 1, target_word: "serpiente", meaning: "Serpiente / Criatura tentadora astuta" },
+      { hebrew: "זֶרַע", transliteration: "Zera", strong: "H2233", target_verse: 15, target_word: "simiente", meaning: "Descendencia prometida / El Mesías libertador" },
+      { hebrew: "הָעָרוּם", transliteration: "Ha-Arum", strong: "H6175", target_verse: 1, target_word: "astuta", meaning: "Sagaz, astuta y engañosa" }
     ],
     nt_cross_references: ["Romanos 5:12-21", "2 Corintios 11:3", "Gálatas 4:4", "Apocalipsis 12:9"]
   },

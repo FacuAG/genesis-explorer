@@ -1078,6 +1078,186 @@
   font-style: italic;
 }
 
+/* Subíndices Interlineales y Resaltado de Palabras Hebreas en Versículos */
+.lexicon-word-wrap {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.18rem;
+  background: rgba(245, 158, 11, 0.12);
+  border-bottom: 2px solid #f59e0b;
+  padding: 0 0.2rem;
+  border-radius: 4px;
+  margin: 0 0.15rem;
+}
+
+.lexicon-matched-word {
+  color: #fde047;
+  font-weight: 700;
+}
+
+.lexicon-sub-badge {
+  color: #c084fc;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(192, 132, 252, 0.2);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.lexicon-sub-badge:hover,
+.lexicon-sub-badge.active-highlight {
+  background: #f59e0b;
+  color: #0f172a;
+  border-color: #fde047;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+  transform: scale(1.08);
+}
+
+/* Modal Exegético de Término Hebreo */
+.lexicon-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeInLexModal 0.25s ease-out;
+}
+
+@keyframes fadeInLexModal {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lexicon-modal-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lmc-header {
+  background: rgba(245, 158, 11, 0.15);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lmc-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lmc-hebrew-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fde047;
+  font-family: 'Times New Roman', serif;
+}
+
+.lmc-strong-badge {
+  background: #c084fc;
+  color: #0f172a;
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+}
+
+.lmc-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lmc-body {
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.lmc-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lmc-row.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.lmc-label {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.lmc-val {
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.lmc-meaning-text {
+  margin: 0;
+  color: #f1f5f9;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  width: 100%;
+}
+
+.lmc-footer {
+  padding: 0.9rem 1.4rem;
+  background: rgba(15, 23, 42, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lmc-done-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .floating-side-nav-btn .side-nav-text { display: none; }
   .floating-side-nav-btn { padding: 0.6rem 0.6rem; }

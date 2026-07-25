@@ -32,6 +32,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
 
   // Estados de Audio TTS, Léxico Hebreo y Notas Personales
   const [isHebrewLexiconActive, setIsHebrewLexiconActive] = useState(false);
+  const [selectedLexiconTerm, setSelectedLexiconTerm] = useState(null);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [currentAudioVerseNum, setCurrentAudioVerseNum] = useState(null);
   const [userNotes, setUserNotes] = useState({}); // { [verseNum]: noteString }
@@ -592,6 +593,70 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                       v.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                         .includes(verseSearchText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
 
+                    // Función Helper para inyectar llamadas léxicas con subíndices [🔤 Bará] en las palabras clave del versículo
+                    const renderVerseContentWithLexicon = (verseObj) => {
+                      if (!exegesisData?.hebrew_terms || exegesisData.hebrew_terms.length === 0) {
+                        return verseObj.text;
+                      }
+
+                      const verseTerms = exegesisData.hebrew_terms.filter(t => {
+                        if (t.target_verse) return t.target_verse === verseObj.number;
+                        if (t.target_word) {
+                          const normVerse = verseObj.text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                          const normTarget = t.target_word.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                          return normVerse.includes(normTarget);
+                        }
+                        return false;
+                      });
+
+                      if (verseTerms.length === 0) return verseObj.text;
+
+                      let textStr = verseObj.text;
+                      let elements = [];
+                      let lastIdx = 0;
+
+                      verseTerms.forEach((term, idx) => {
+                        const targetWord = term.target_word || term.transliteration;
+                        if (!targetWord) return;
+
+                        const normText = textStr.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        const normWord = targetWord.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+                        const matchPos = normText.indexOf(normWord, lastIdx);
+                        if (matchPos !== -1) {
+                          if (matchPos > lastIdx) {
+                            elements.push(textStr.substring(lastIdx, matchPos));
+                          }
+
+                          const matchedText = textStr.substring(matchPos, matchPos + targetWord.length);
+
+                          elements.push(
+                            <span key={`heb-${verseObj.number}-${idx}`} className="lexicon-word-wrap">
+                              <strong className="lexicon-matched-word">{matchedText}</strong>
+                              <sub
+                                className={`lexicon-sub-badge ${isHebrewLexiconActive ? 'active-highlight' : ''}`}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedLexiconTerm(term);
+                                }}
+                                title={`Clic para ver análisis exegético en hebreo de ${term.transliteration}`}
+                              >
+                                [🔤 {term.transliteration}]
+                              </sub>
+                            </span>
+                          );
+
+                          lastIdx = matchPos + targetWord.length;
+                        }
+                      });
+
+                      if (lastIdx < textStr.length) {
+                        elements.push(textStr.substring(lastIdx));
+                      }
+
+                      return elements.length > 0 ? elements : verseObj.text;
+                    };
+
                     return (
                       <div key={v.number} className="verse-container-block">
                         <p
@@ -600,7 +665,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                           onClick={() => toggleVerseHighlight(v.number)}
                           title="Haz clic para seleccionar o marcar este versículo"
                         >
-                          <sup className="verse-num">{v.number}</sup> {v.text}
+                          <sup className="verse-num">{v.number}</sup> {renderVerseContentWithLexicon(v)}
                           {hasUserNote && (
                             <span
                               className="user-note-badge"
@@ -854,6 +919,44 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
             </button>
           )}
         </>
+      )}
+
+      {/* MODAL / DRAWER INTERACTIVO DE ANÁLISIS LÉXICO Y CÓDIGO STRONG */}
+      {selectedLexiconTerm && (
+        <div className="lexicon-modal-overlay" onClick={() => setSelectedLexiconTerm(null)}>
+          <div className="lexicon-modal-card" onClick={(e) => e.stopPropagation()}>
+            <div className="lmc-header">
+              <div className="lmc-title-group">
+                <span className="lmc-hebrew-title">{selectedLexiconTerm.hebrew}</span>
+                {selectedLexiconTerm.strong && <span className="lmc-strong-badge">Strong {selectedLexiconTerm.strong}</span>}
+              </div>
+              <button className="lmc-close-btn" onClick={() => setSelectedLexiconTerm(null)}>✕</button>
+            </div>
+
+            <div className="lmc-body">
+              <div className="lmc-row">
+                <span className="lmc-label">🗣️ Transliteración & Pronunciación:</span>
+                <span className="lmc-val"><em>{selectedLexiconTerm.transliteration}</em></span>
+              </div>
+
+              {selectedLexiconTerm.target_word && (
+                <div className="lmc-row">
+                  <span className="lmc-label">📖 Palabra en el Texto (RVR1960):</span>
+                  <span className="lmc-val">"{selectedLexiconTerm.target_word}"</span>
+                </div>
+              )}
+
+              <div className="lmc-row vertical">
+                <span className="lmc-label">📜 Significado Exegético & Gramatical:</span>
+                <p className="lmc-meaning-text">{selectedLexiconTerm.meaning}</p>
+              </div>
+            </div>
+
+            <div className="lmc-footer">
+              <button className="lmc-done-btn" onClick={() => setSelectedLexiconTerm(null)}>Cerrar Análisis Léxico</button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* BOTÓN FLOTANTE VOLVER ARRIBA CON ÍCONO LIMPIO Y TEXTO 'SUBIR' */}
