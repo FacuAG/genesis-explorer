@@ -125,18 +125,21 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     speakNext();
   };
 
-  // Scroll enfocado exactamente al inicio de la caja del lector (biblical-text-reader-box) al cambiar de capítulo
+  // Scroll enfocado exactamente al inicio de la caja del lector librando la cabecera superior (.app-header)
   useEffect(() => {
     if (selectedChapNum !== null) {
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          if (readerBoxRef.current) {
-            readerBoxRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }, 80);
-      });
+      setTimeout(() => {
+        if (readerBoxRef.current) {
+          const appHeader = document.querySelector('.app-header');
+          const headerHeight = appHeader ? appHeader.offsetHeight : 130;
+          const rect = readerBoxRef.current.getBoundingClientRect();
+          const targetY = window.pageYOffset + rect.top - headerHeight - 12;
+
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 70);
     }
   }, [selectedChapNum]);
 
