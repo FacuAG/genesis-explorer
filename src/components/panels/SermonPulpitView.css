@@ -263,14 +263,14 @@
 
 .spv-doc-body span[style*="background"],
 .spv-doc-body mark {
-  padding: 0.18rem 0.45rem !important;
+  padding: 0.2rem 0.5rem !important;
   border-radius: 6px !important;
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
   margin: 0 0.15rem !important;
-  display: inline !important;
+  display: inline-block !important;
   color: #0f172a !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 .spv-doc-body ul,

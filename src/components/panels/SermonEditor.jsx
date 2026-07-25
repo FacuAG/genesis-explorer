@@ -302,10 +302,10 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
             {/* Resaltador de Texto Multicolor (Ultra-Soft Delicados) */}
             <div className="tb-group">
               <span className="tb-label">Resaltar:</span>
-              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('rgba(254, 240, 138, 0.28)')} title="Resaltar en Amarillo Suave (Doctrina)" />
-              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('rgba(186, 230, 253, 0.28)')} title="Resaltar en Azul Suave (Promesa)" />
-              <button className="tb-color-dot green" onClick={() => applyHighlightColor('rgba(187, 247, 208, 0.28)')} title="Resaltar en Verde Suave (Vida)" />
-              <button className="tb-color-dot red" onClick={() => applyHighlightColor('rgba(254, 205, 211, 0.28)')} title="Resaltar en Rosa Suave (Profecía)" />
+              <button className="tb-color-dot gold" onClick={() => applyHighlightColor('#fef08a')} title="Resaltar en Amarillo Pastel Sólido (Doctrina)" />
+              <button className="tb-color-dot blue" onClick={() => applyHighlightColor('#bae6fd')} title="Resaltar en Azul Pastel Sólido (Promesa)" />
+              <button className="tb-color-dot green" onClick={() => applyHighlightColor('#bbf7d0')} title="Resaltar en Verde Pastel Sólido (Vida)" />
+              <button className="tb-color-dot red" onClick={() => applyHighlightColor('#fecacd')} title="Resaltar en Rosa Pastel Sólido (Profecía)" />
               <button className="tb-btn tb-clear-highlight" onClick={removeHighlightColor} title="Quitar resaltado del texto seleccionado">🚫 Sin Color</button>
             </div>
 
