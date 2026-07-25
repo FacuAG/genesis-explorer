@@ -362,10 +362,10 @@
     color: #0f172a !important;
   }
 
-  /* Margen simétrico uniforme de 15mm en la parte superior e inferior de TODAS las hojas */
+  /* Margen simétrico uniforme de 22mm en la parte superior e inferior de TODAS las hojas */
   @page {
     size: A4 portrait;
-    margin: 15mm 15mm 15mm 15mm !important;
+    margin: 22mm 16mm 22mm 16mm !important;
   }
 
   /* Control estricto para evitar títulos huérfanos */
