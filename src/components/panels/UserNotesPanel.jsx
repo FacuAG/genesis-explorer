@@ -339,8 +339,9 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
                       <button
                         className="unc-btn unc-go-btn"
                         onClick={() => onNavigateToChapter(n.chapter, n.verse)}
+                        title="Abrir este versículo en la Sala de Lectura de la Biblia"
                       >
-                        🎯 Ir al Versículo en el Lector
+                        📖 Abrir Pasaje
                       </button>
                       <button
                         className="unc-btn unc-del-btn"
