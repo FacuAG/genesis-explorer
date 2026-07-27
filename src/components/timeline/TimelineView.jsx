@@ -139,6 +139,21 @@ export function TimelineView({
     }
   };
 
+  // Helper para vincular un evento bíblico a su Bloque Narrativo del Génesis correspondiente
+  const getBlockForEvent = (evt) => {
+    if (!evt) return null;
+    if (evt.block_id && blocksMap.has(evt.block_id)) {
+      return blocksMap.get(evt.block_id);
+    }
+    const evtCh = getEventChapter(evt);
+    for (const block of narrativeBlocks) {
+      if (typeof block.chapters_start === 'number' && evtCh >= block.chapters_start && evtCh <= (block.chapters_end || 99)) {
+        return block;
+      }
+    }
+    return null;
+  };
+
   // Helper para formatear referencias bíblicas
   const formatRef = (ref) => {
     if (!ref) return 'Génesis';
@@ -261,7 +276,7 @@ export function TimelineView({
       }
     });
 
-    // 2. Doble Clic: Abre DIRECTAMENTE el Modal de Detalle Exegético Completo
+    // 2. Doble Clic: Abre DIRECTAMENTE el Modal del Bloque Narrativo del Génesis o Entidad
     timeline.on('doubleClick', function (properties) {
       if (properties.item) {
         const itemId = properties.item;
@@ -290,7 +305,12 @@ export function TimelineView({
         } else {
           const eventObj = eventsMap.get(itemId);
           if (eventObj) {
-            setSelectedEntity({ type: 'event', data: eventObj });
+            const linkedBlock = getBlockForEvent(eventObj);
+            if (linkedBlock) {
+              setSelectedEntity({ type: 'block', data: linkedBlock });
+            } else {
+              setSelectedEntity({ type: 'event', data: eventObj });
+            }
             if (onSelectEvent) onSelectEvent(eventObj.id);
             setIsModalOpen(true);
           }
@@ -301,7 +321,40 @@ export function TimelineView({
     return () => {
       timeline.destroy();
     };
-  }, [eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent]);
+  }, [eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent, narrativeBlocks]);
+
+  // Mantener referencia sincronizada para el manejador de Doble Clic DOM nativo
+  const selectedEntityRef = useRef(selectedEntity);
+  useEffect(() => {
+    selectedEntityRef.current = selectedEntity;
+  }, [selectedEntity]);
+
+  // Manejador DOM de Doble Clic Nativo (Garantiza respuesta instantánea en 100% de los casos)
+  useEffect(() => {
+    const containerEl = containerRef.current;
+    if (!containerEl) return;
+
+    const handleNativeDblClick = (e) => {
+      const itemEl = e.target.closest('.vis-item');
+      if (!itemEl) return;
+
+      const current = selectedEntityRef.current;
+      if (current) {
+        if (current.type === 'event') {
+          const linkedBlock = getBlockForEvent(current.data);
+          if (linkedBlock) {
+            setSelectedEntity({ type: 'block', data: linkedBlock });
+          }
+        }
+        setIsModalOpen(true);
+      }
+    };
+
+    containerEl.addEventListener('dblclick', handleNativeDblClick);
+    return () => {
+      containerEl.removeEventListener('dblclick', handleNativeDblClick);
+    };
+  }, [narrativeBlocks, blocksMap]);
 
   // Manejador UX Opción 1: Liberar el scroll de la página y requerir Ctrl + Rueda del mouse para hacer Zoom
   useEffect(() => {
@@ -642,9 +695,22 @@ export function TimelineView({
                   </div>
                 )}
 
-                <div className="inspector-actions">
+                <div className="inspector-actions" style={{ gap: '0.6rem', flexWrap: 'wrap' }}>
+                  {getBlockForEvent(activeEventObj) && (
+                    <button
+                      className="open-modal-btn"
+                      style={{ background: 'rgba(59, 130, 246, 0.35)', borderColor: '#60a5fa' }}
+                      onClick={() => {
+                        const linkedB = getBlockForEvent(activeEventObj);
+                        if (linkedB) setSelectedEntity({ type: 'block', data: linkedB });
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      📍 Ver Bloque Narrativo ➔
+                    </button>
+                  )}
                   <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>
-                    📖 Ver Ficha Exegética Completa ➔
+                    📖 Ver Ficha Exegética ➔
                   </button>
                 </div>
               </>
