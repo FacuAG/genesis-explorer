@@ -3,16 +3,13 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  // Cargar tema guardado o usar 'dark' como valor predeterminado
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('genesis_explorer_theme') || 'dark';
-  });
+  // El tema se mantiene estrictamente en 'dark' (Oscuro) por defecto
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Aplicar el atributo data-theme al elemento <html> raíz de la aplicación
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('genesis_explorer_theme', theme);
-  }, [theme]);
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('genesis_explorer_theme', 'dark');
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

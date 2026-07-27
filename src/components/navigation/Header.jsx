@@ -1,10 +1,9 @@
 import React from 'react';
-import { ThemeToggle } from './ThemeToggle';
 import './Header.css';
 
 /**
  * Componente Header profesional para Genesis Explorer.
- * Incluye título de la aplicación, selector de tema visual, selector de libro activo, barra de búsqueda global y navegación por pestañas de estudio.
+ * Incluye título de la aplicación, selector de libro activo, barra de búsqueda global y navegación por pestañas de estudio.
  */
 export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, totalStats }) {
   return (
@@ -25,9 +24,6 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
         </div>
 
         <div className="header-actions">
-          {/* Selector de Tema Visual (Oscuro / Sepia / Claro) */}
-          <ThemeToggle />
-
           {/* Selector de Libro Multi-Libro (Preparado para expansión) */}
           <div className="book-selector-container">
             <label htmlFor="book-select" className="book-select-label">Libro Activo:</label>
