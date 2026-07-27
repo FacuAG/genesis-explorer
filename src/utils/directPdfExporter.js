@@ -13,61 +13,162 @@ const loadHtml2Pdf = () => {
   });
 };
 
-// Función principal exportable para descargar el PDF 100% idéntico a la pantalla a 1-Clic
+/**
+ * MÓDULO ÚNICO DE EXPORTACIÓN PASTORAL EN PDF (Fuente Única de Verdad)
+ * Usado idénticamente por:
+ * 1. El botón "🖨️ Descargar PDF" de la vista de Púlpito (SermonPulpitView)
+ * 2. El botón "🖨️ PDF" de las tarjetas de sermones (UserNotesPanel)
+ */
 export async function downloadSermonPDFDirect(sermon) {
   try {
     const html2pdf = await loadHtml2Pdf();
-    
-    // Obtener el nodo visual de la hoja editorial `#sermon-pdf-paper`
-    let element = document.getElementById('sermon-pdf-paper');
-    
-    // Si el usuario presiona el botón desde la tarjeta y el modal no está montado, creamos un contenedor temporal idéntico
-    let tempContainer = null;
-    if (!element) {
-      const formattedDate = sermon.updatedAt 
-        ? new Date(sermon.updatedAt).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })
-        : new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
+    const formattedDate = sermon.updatedAt 
+      ? new Date(sermon.updatedAt).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })
+      : new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
 
-      tempContainer = document.createElement('div');
-      tempContainer.style.position = 'absolute';
-      tempContainer.style.left = '-9999px';
-      tempContainer.style.top = '-9999px';
-      tempContainer.style.width = '800px';
+    // Contenedor temporal estandarizado con la Plantilla Editorial Pastoral Oficial
+    const tempContainer = document.createElement('div');
+    tempContainer.style.position = 'absolute';
+    tempContainer.style.left = '-9999px';
+    tempContainer.style.top = '-9999px';
+    tempContainer.style.width = '794px'; // Ancho A4 exacto a 96 DPI (210mm)
 
-      tempContainer.innerHTML = `
-        <div id="temp-sermon-pdf-paper" className="pdf-paper-wrapper" style="background:#ffffff; color:#0f172a; padding:2.5rem 3rem; font-family:Georgia, 'Times New Roman', serif; line-height:1.75;">
-          <header style="border-bottom:2px solid #e2e8f0; padding-bottom:1.25rem; margin-bottom:1.75rem;">
-            <div style="font-size:0.78rem; font-weight:800; color:#64748b; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0.5rem; font-family:system-ui, sans-serif;">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
-            <h1 style="margin:0 0 0.85rem 0; font-size:2.2em; font-weight:800; color:#0f172a; font-family:Georgia, serif; line-height:1.25;">${sermon.title || 'Bosquejo Homilético'}</h1>
-            <div style="display:flex; justify-content:space-between; color:#475569; font-size:0.9em; margin-bottom:1.2rem; font-family:system-ui, sans-serif;">
-              <div><strong>PASAJE CLAVE:</strong> ${sermon.passage || 'Génesis'}</div>
-              <div><strong>FECHA:</strong> ${formattedDate}</div>
-            </div>
-            ${sermon.proposition ? `
-              <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:0.85rem 1.2rem; border-radius:0 8px 8px 0; margin-top:0.85rem;">
-                <span style="display:block; font-size:0.75rem; font-weight:800; color:#0369a1; letter-spacing:1px; text-transform:uppercase; font-family:system-ui, sans-serif;">PROPOSICIÓN / IDEA CENTRAL:</span>
-                <p style="margin:0.3rem 0 0 0; color:#0f172a; font-style:italic; font-size:1.05em;">"${sermon.proposition}"</p>
-              </div>
-            ` : ''}
-          </header>
-          <div className="spv-doc-body" style="font-size:1em; color:#0f172a;">
-            ${sermon.contentHtml || '<p>Bosquejo sin contenido.</p>'}
+    tempContainer.innerHTML = `
+      <div id="unified-sermon-pdf-paper" style="
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 20mm 18mm 20mm 18mm !important;
+        font-family: Georgia, 'Times New Roman', serif !important;
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+        box-sizing: border-box !important;
+      ">
+        <style>
+          #unified-sermon-pdf-paper h1 {
+            font-size: 1.6em !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            border-bottom: 2px solid #2563eb !important;
+            padding-bottom: 0.35rem !important;
+            margin-top: 1.5rem !important;
+            margin-bottom: 0.75rem !important;
+            font-family: Georgia, serif !important;
+            break-after: avoid !important;
+            page-break-after: avoid !important;
+          }
+          #unified-sermon-pdf-paper h2 {
+            font-size: 1.3em !important;
+            font-weight: 700 !important;
+            color: #581c87 !important;
+            margin-top: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+            font-family: Georgia, serif !important;
+            break-after: avoid !important;
+            page-break-after: avoid !important;
+          }
+          #unified-sermon-pdf-paper h3 {
+            font-size: 1.15em !important;
+            font-weight: 700 !important;
+            color: #1e3a8a !important;
+            margin-top: 1.1rem !important;
+            margin-bottom: 0.4rem !important;
+            break-after: avoid !important;
+            page-break-after: avoid !important;
+          }
+          #unified-sermon-pdf-paper p {
+            margin-bottom: 0.85rem !important;
+            color: #0f172a !important;
+            line-height: 1.8 !important;
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+            orphans: 3 !important;
+            widows: 3 !important;
+          }
+          #unified-sermon-pdf-paper ul, #unified-sermon-pdf-paper ol {
+            padding-left: 2.2rem !important;
+            margin: 0.85rem 0 !important;
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          #unified-sermon-pdf-paper li {
+            margin-bottom: 0.4rem !important;
+            line-height: 1.8 !important;
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          #unified-sermon-pdf-paper blockquote {
+            background: #f8fafc !important;
+            border-left: 4px solid #7c3aed !important;
+            padding: 0.85rem 1.2rem !important;
+            margin: 1.1rem 0 !important;
+            border-radius: 0 8px 8px 0 !important;
+            font-size: 0.98em !important;
+            color: #334155 !important;
+            font-style: italic !important;
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          #unified-sermon-pdf-paper blockquote strong {
+            color: #4c1d95 !important;
+            font-style: normal !important;
+          }
+          #unified-sermon-pdf-paper p[style*="background"],
+          #unified-sermon-pdf-paper div[style*="background"],
+          #unified-sermon-pdf-paper h1[style*="background"],
+          #unified-sermon-pdf-paper h2[style*="background"],
+          #unified-sermon-pdf-paper h3[style*="background"],
+          #unified-sermon-pdf-paper li[style*="background"],
+          #unified-sermon-pdf-paper blockquote[style*="background"] {
+            background: transparent !important;
+            background-color: transparent !important;
+          }
+          #unified-sermon-pdf-paper span[style*="background"],
+          #unified-sermon-pdf-paper mark,
+          #unified-sermon-pdf-paper font[style*="background"] {
+            display: inline !important;
+            box-decoration-break: clone !important;
+            -webkit-box-decoration-break: clone !important;
+            padding: 0rem 0.2rem !important;
+            border-radius: 3px !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            line-height: 1.85 !important;
+            margin: 0 0.1rem !important;
+          }
+        </style>
+
+        <header style="border-bottom: 2px solid #cbd5e1; padding-bottom: 1.2rem; margin-bottom: 1.6rem;">
+          <div style="font-size: 0.75rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.4rem; font-family: system-ui, sans-serif;">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
+          <h1 style="margin: 0 0 0.75rem 0; font-size: 2.1em; font-weight: 800; color: #0f172a; font-family: Georgia, serif; line-height: 1.25; border: none; padding: 0;">${sermon.title || 'Bosquejo Homilético'}</h1>
+          <div style="display: flex; justify-content: space-between; color: #475569; font-size: 0.88em; font-family: system-ui, sans-serif;">
+            <div><strong style="color: #0f172a;">PASAJE CLAVE:</strong> ${sermon.passage || 'Génesis'}</div>
+            <div><strong style="color: #0f172a;">FECHA:</strong> ${formattedDate}</div>
           </div>
-          <footer style="display:flex; justify-content:space-between; margin-top:3rem; padding-top:1rem; border-top:1px solid #e2e8f0; font-size:0.82rem; color:#94a3b8; font-family:system-ui, sans-serif;">
-            <div>Genesis Explorer — Suite Bible Explorer</div>
-            <div>Documento de Estudio Pastoral</div>
-          </footer>
-        </div>
-      `;
-      document.body.appendChild(tempContainer);
-      element = tempContainer.firstElementChild;
-    }
+          ${sermon.proposition ? `
+            <div style="background: #f8fafc; border-left: 4px solid #0284c7; padding: 0.8rem 1.1rem; border-radius: 0 8px 8px 0; margin-top: 0.85rem;">
+              <span style="display: block; font-size: 0.72rem; font-weight: 800; color: #0369a1; letter-spacing: 1px; text-transform: uppercase; font-family: system-ui, sans-serif;">PROPOSICIÓN / IDEA CENTRAL:</span>
+              <p style="margin: 0.25rem 0 0 0; color: #0f172a; font-style: italic; font-size: 1.02em; line-height: 1.5;">"${sermon.proposition}"</p>
+            </div>
+          ` : ''}
+        </header>
 
+        <div className="spv-doc-body">
+          ${sermon.contentHtml || '<p>Bosquejo sin contenido.</p>'}
+        </div>
+
+        <footer style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; font-family: system-ui, sans-serif;">
+          <div>Genesis Explorer — Suite Bible Explorer</div>
+          <div>Documento de Estudio Pastoral</div>
+        </footer>
+      </div>
+    `;
+
+    document.body.appendChild(tempContainer);
+    const element = tempContainer.firstElementChild;
     const sanitizedTitle = (sermon.title || 'Predicacion').replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_]/g, '_');
 
-    // Configuración exacta para PDF de alta fidelidad 300 DPI 100% idéntico a la pantalla
     const opt = {
-      margin:       [12, 14, 14, 14], // [arriba, izquierda, abajo, derecha] en mm
+      margin:       [18, 16, 18, 16], // [arriba, izquierda, abajo, derecha] en mm (márgenes simétricos profesionales)
       filename:     `${sanitizedTitle}_Documento_Pastoral.pdf`,
       image:        { type: 'jpeg', quality: 0.98 },
       html2canvas:  { 
@@ -81,12 +182,9 @@ export async function downloadSermonPDFDirect(sermon) {
     };
 
     await html2pdf().set(opt).from(element).save();
-
-    if (tempContainer) {
-      document.body.removeChild(tempContainer);
-    }
+    document.body.removeChild(tempContainer);
   } catch (err) {
-    console.error('Error al generar PDF directo, recurriendo a impresión de navegador:', err);
+    console.error('Error al generar PDF unificado:', err);
     window.print();
   }
 }

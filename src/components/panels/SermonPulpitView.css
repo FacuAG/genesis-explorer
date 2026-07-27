@@ -156,7 +156,8 @@
   border-radius: 12px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
   font-family: Georgia, 'Times New Roman', serif !important;
-  line-height: 1.65 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
 }
 
 .spv-doc-header {
