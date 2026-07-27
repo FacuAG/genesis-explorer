@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0.4rem 0.75rem;
   min-width: 280px;
@@ -15,7 +15,7 @@
 .chapter-search-input {
   background: transparent;
   border: none;
-  color: #f8fafc;
+  color: var(--text-main);
   font-size: 0.88rem;
   width: 100%;
   outline: none;
@@ -24,7 +24,7 @@
 .clear-filter-btn {
   background: transparent;
   border: none;
-  color: #94a3b8;
+  color: var(--text-muted);
   cursor: pointer;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .chapter-card {
-  background: rgba(30, 32, 41, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 14px;
   padding: 1.2rem;
   display: flex;
@@ -47,13 +47,13 @@
   cursor: pointer;
   backdrop-filter: blur(10px);
   transition: all 0.25s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-card);
 }
 
 .chapter-card:hover {
-  background: rgba(42, 34, 56, 0.9);
-  border-color: #c084fc;
-  box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
+  background: var(--bg-card-hover);
+  border-color: var(--accent-lila);
+  box-shadow: var(--shadow-glow);
   transform: translateY(-3px);
 }
 
@@ -64,9 +64,9 @@
 }
 
 .chapter-num-badge {
-  background: rgba(168, 85, 247, 0.25);
-  color: #e9d5ff;
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: rgba(168, 85, 247, 0.2);
+  color: var(--accent-lila);
+  border: 1px solid var(--border-bright);
   font-size: 0.8rem;
   font-weight: 800;
   padding: 0.2rem 0.6rem;
@@ -75,7 +75,7 @@
 
 .chapter-block-tag {
   font-size: 0.7rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -83,7 +83,7 @@
 .chapter-card-title {
   margin: 0;
   font-size: 1.1rem;
-  color: #f8fafc;
+  color: var(--text-main);
   font-family: 'Outfit', system-ui, sans-serif;
 }
 

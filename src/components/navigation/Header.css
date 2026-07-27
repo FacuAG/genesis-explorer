@@ -1,15 +1,15 @@
 /* Header CSS Vanilla — Genesis Explorer */
 
 .app-header {
-  background: rgba(22, 23, 29, 0.85);
+  background: var(--bg-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border-subtle);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 0.85rem 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
@@ -54,13 +54,13 @@
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--text-main);
   line-height: 1.2;
 }
 
 .brand-title-accent {
-  color: #c084fc;
-  background: linear-gradient(90deg, #c084fc 0%, #e879f9 100%);
+  color: var(--accent-lila);
+  background: linear-gradient(90deg, var(--accent-lila) 0%, var(--accent-purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -68,7 +68,7 @@
 .brand-subtitle {
   margin: 0;
   font-size: 0.78rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-weight: 400;
 }
 
@@ -87,14 +87,14 @@
 
 .book-select-label {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
 .select-wrapper select {
-  background: #1e2029;
-  color: #e2e8f0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 0.45rem 0.8rem;
   font-size: 0.85rem;
@@ -105,7 +105,7 @@
 }
 
 .select-wrapper select:hover {
-  border-color: #c084fc;
+  border-color: var(--accent-lila);
 }
 
 .stats-badges-container {
@@ -115,12 +115,12 @@
 }
 
 .stat-badge {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   padding: 0.35rem 0.65rem;
   border-radius: 6px;
   font-size: 0.75rem;
-  color: #cbd5e1;
+  color: var(--text-main);
 }
 
 .stat-badge-gold {
@@ -152,8 +152,8 @@
 
 .nav-tab-btn {
   background: transparent;
-  border: none;
-  color: #94a3b8;
+  border: 1px solid transparent;
+  color: var(--text-muted);
   padding: 0.5rem 0.85rem;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -167,15 +167,15 @@
 }
 
 .nav-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: #f1f5f9;
+  background: var(--bg-card-hover);
+  color: var(--text-main);
 }
 
 .nav-tab-btn.active {
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
-  color: #c084fc;
-  border: 1px solid rgba(192, 132, 252, 0.3);
-  box-shadow: 0 0 12px rgba(170, 59, 255, 0.15);
+  background: var(--bg-card);
+  color: var(--accent-lila);
+  border: 1px solid var(--border-bright);
+  box-shadow: var(--shadow-glow);
 }
 
 .search-box {
@@ -189,17 +189,17 @@
   position: absolute;
   left: 0.75rem;
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-dim);
 }
 
 .search-input {
   width: 100%;
-  background: #181920;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 0.45rem 0.75rem 0.45rem 2.2rem;
   font-size: 0.85rem;
-  color: #f8fafc;
+  color: var(--text-main);
   outline: none;
   transition: all 0.2s ease;
 }

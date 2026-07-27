@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-:root {
-  /* Color Palette - Premium Dark Theme Default */
+:root, html[data-theme="dark"] {
+  /* Color Palette - 🌙 Modo Oscuro (Noche Teológica - Default) */
   --bg-main: #121318;
   --bg-surface: #191b22;
-  --bg-card: rgba(30, 32, 42, 0.75);
-  --bg-card-hover: rgba(38, 41, 54, 0.9);
+  --bg-card: rgba(30, 32, 42, 0.85);
+  --bg-card-hover: rgba(38, 41, 54, 0.95);
   --bg-glass: rgba(22, 24, 33, 0.85);
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.1);
   --border-bright: rgba(192, 132, 252, 0.4);
 
   --text-main: #f8fafc;
@@ -35,6 +35,60 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme="sepia"] {
+  /* Color Palette - 📜 Modo Sepia (Pergamino Warm - Estándar Apple Books / Bible.com) */
+  --bg-main: #f4ecd8;
+  --bg-surface: #fbf7ee;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fffdf9;
+  --bg-glass: rgba(251, 247, 238, 0.92);
+
+  --border-subtle: rgba(100, 70, 30, 0.14);
+  --border-bright: rgba(124, 58, 237, 0.5);
+
+  --text-main: #2d2218;
+  --text-muted: #6b553e;
+  --text-dim: #947a61;
+
+  --accent-purple: #7c3aed;
+  --accent-lila: #6d28d9;
+  --accent-gold: #b45309;
+  --accent-blue: #0284c7;
+  --accent-emerald: #059669;
+
+  --shadow-glow: 0 0 25px rgba(124, 58, 237, 0.15);
+  --shadow-card: 0 6px 20px rgba(80, 50, 20, 0.08);
+
+  color-scheme: light;
+}
+
+html[data-theme="light"] {
+  /* Color Palette - ☀️ Modo Claro (Lumina Editorial - Estándar Notion / GitHub Light) */
+  --bg-main: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-bright: rgba(124, 58, 237, 0.4);
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+
+  --accent-purple: #7c3aed;
+  --accent-lila: #6d28d9;
+  --accent-gold: #d97706;
+  --accent-blue: #0284c7;
+  --accent-emerald: #059669;
+
+  --shadow-glow: 0 0 25px rgba(124, 58, 237, 0.15);
+  --shadow-card: 0 6px 20px rgba(15, 23, 42, 0.06);
+
+  color-scheme: light;
 }
 
 * {
