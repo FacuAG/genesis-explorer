@@ -398,28 +398,28 @@
   min-height: 520px;
 }
 
-/* Cartel Indicador Discreto (Option 1 UX Standard) */
+/* Cartel Indicador Discreto en el Borde Inferior de la Pantalla (Option 1 UX Standard) */
 .timeline-zoom-hint-pill {
-  position: absolute;
-  top: 1.25rem;
+  position: fixed;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(15, 23, 42, 0.94);
+  background: rgba(15, 23, 42, 0.95);
   border: 1px solid var(--accent-lila);
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(192, 132, 252, 0.3);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
+  padding: 0.6rem 1.35rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(192, 132, 252, 0.35);
+  backdrop-filter: blur(14px);
+  z-index: 9999;
   pointer-events: none;
-  animation: hintPillFadeIn 0.25s ease-out;
+  animation: hintPillSlideUp 0.25s ease-out;
 }
 
-@keyframes hintPillFadeIn {
-  from { opacity: 0; transform: translate(-50%, -8px); }
+@keyframes hintPillSlideUp {
+  from { opacity: 0; transform: translate(-50%, 12px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
 
