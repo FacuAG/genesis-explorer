@@ -157,15 +157,17 @@ export function mapGenesisToVisData(
   eras.forEach(era => {
     const startAM = era.am_start ?? 0;
     const endAM = era.am_end ?? (startAM + 500);
+    const isTarget = targetEventId === `era_${era.id}` || targetEventId === era.id;
+    const targetClass = isTarget ? 'vis-item-target-active' : '';
 
     items.push({
       id: `era_${era.id}`,
       group: 'eras_group',
-      content: `<div class="vis-era-badge" style="background: ${era.color || '#6366f1'}22; border-color: ${era.color || '#6366f1'}">🌐 <strong>${era.name}</strong></div>`,
+      content: `<div class="vis-era-badge ${targetClass}" style="background: ${era.color || '#6366f1'}22; border-color: ${era.color || '#6366f1'}">🌐 <strong>${era.name}</strong></div>`,
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
-      className: 'vis-item-era'
+      className: `vis-item-era ${targetClass}`
     });
   });
 
@@ -174,12 +176,14 @@ export function mapGenesisToVisData(
     const startAM = block.am_start ?? 0;
     const endAM = block.am_end ?? (startAM + 10);
     const chapRange = block.chapters_range || `${block.chapters_start ?? ''}-${block.chapters_end ?? ''}`;
+    const isTarget = targetEventId === `block_${block.id}` || targetEventId === block.id;
+    const targetClass = isTarget ? 'vis-item-target-active' : '';
 
     items.push({
       id: `block_${block.id}`,
       group: 'blocks_group',
       content: `
-        <div class="vis-block-item">
+        <div class="vis-block-item ${targetClass}">
           <span class="block-icon">${block.icon || '📍'}</span>
           <strong>${block.name}</strong>
           <span class="chap-badge">Caps. ${chapRange}</span>
@@ -188,7 +192,7 @@ export function mapGenesisToVisData(
       start: amToDate(startAM),
       end: amToDate(endAM),
       type: 'range',
-      className: `vis-item-narrative-block block-${block.id}`
+      className: `vis-item-narrative-block block-${block.id} ${targetClass}`
     });
   });
 
@@ -201,13 +205,16 @@ export function mapGenesisToVisData(
     if (cov.id === 'abrahamic_covenant') covAM = 2033;
     if (cov.id === 'circumcision_covenant') covAM = 2047;
 
+    const isTarget = targetEventId === `cov_${cov.id}` || targetEventId === cov.id;
+    const targetClass = isTarget ? 'vis-item-target-active' : '';
+
     items.push({
       id: `cov_${cov.id}`,
       group: 'covenants_group',
-      content: `<div class="vis-covenant-card">👑 <strong>${cov.name}</strong></div>`,
+      content: `<div class="vis-covenant-card ${targetClass}">👑 <strong>${cov.name}</strong></div>`,
       start: amToDate(covAM),
       type: 'box',
-      className: 'vis-item-covenant'
+      className: `vis-item-covenant ${targetClass}`
     });
   });
 
@@ -253,7 +260,7 @@ export function mapGenesisToVisData(
     const cat = EVENT_CATEGORIES[e.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };
     const amYear = getEventAM(e);
     const eventName = e.short_name || e.name;
-    const isTarget = e.id === targetEventId;
+    const isTarget = e.id === targetEventId || `event_${e.id}` === targetEventId;
     const highlightClass = isFilterActive ? 'vis-item-highlighted' : '';
     const targetClass = isTarget ? 'vis-item-target-active' : '';
 

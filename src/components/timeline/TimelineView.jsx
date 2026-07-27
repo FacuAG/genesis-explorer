@@ -336,7 +336,15 @@ export function TimelineView({
 
   // 2. Actualización Reactiva de Ítems en memoria SIN destruir el canvas
   useEffect(() => {
-    const activeTargetId = targetEventId || (selectedEntity?.type === 'event' ? selectedEntity.data?.id : null);
+    const activeTargetId = targetEventId || (
+      selectedEntity ? (
+        selectedEntity.type === 'event' ? selectedEntity.data?.id :
+        selectedEntity.type === 'block' ? `block_${selectedEntity.data?.id}` :
+        selectedEntity.type === 'covenant' ? `cov_${selectedEntity.data?.id}` :
+        selectedEntity.type === 'era' ? `era_${selectedEntity.data?.id}` : null
+      ) : null
+    );
+
     const { groups, items } = mapGenesisToVisData(
       filteredEvents,
       narrativeBlocks,

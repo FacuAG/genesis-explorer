@@ -485,13 +485,26 @@
 
 /* Resalte Dorado Activo Universal (Eventos, Pactos, Bloques, Eras) */
 .vis-item.vis-selected,
+.vis-item.vis-item-target-active,
 .vis-item-target-active,
-.vis-item-highlighted {
+.vis-item-highlighted,
+.vis-covenant-card.vis-item-target-active,
+.vis-block-item.vis-item-target-active,
+.vis-era-badge.vis-item-target-active,
+.vis-event-card.vis-item-target-active {
   border: 2px solid #f59e0b !important;
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.45) 0%, rgba(168, 85, 247, 0.45) 100%) !important;
   box-shadow: 0 0 24px rgba(245, 158, 11, 0.9), 0 0 40px rgba(192, 132, 252, 0.7) !important;
   animation: pulseGoldHighlight 1.5s infinite ease-in-out !important;
   z-index: 1000 !important;
+}
+
+/* Línea vertical dorada apuntando al eje cronológico para cajas seleccionadas */
+.vis-item.vis-box.vis-selected .vis-line,
+.vis-item.vis-box.vis-item-target-active .vis-line,
+.vis-item-covenant.vis-item-target-active .vis-line {
+  border-left: 2px solid #f59e0b !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.9) !important;
 }
 
 @keyframes pulseGoldHighlight {
