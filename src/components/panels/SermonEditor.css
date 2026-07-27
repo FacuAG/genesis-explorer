@@ -118,15 +118,20 @@
   overflow: hidden;
 }
 
-/* Barra de Herramientas Tipográficas */
+/* Barra de Herramientas Tipográficas (Pegajosa / Sticky al hacer scroll) */
 .se-toolbar {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .tb-group {

@@ -316,7 +316,6 @@ export default function SermonEditor({ sermon, onSave, onCancel, userNotes = [],
               <button className="tb-btn" onClick={() => executeCommand('insertUnorderedList')} title="Lista con Viñetas">• Lista</button>
               <button className="tb-btn" onClick={() => executeCommand('insertOrderedList')} title="Lista Numerada">1. Lista</button>
               <button className={`tb-btn ${activeFormats.quote ? 'active' : ''}`} onClick={insertQuoteBlock} title="Convertir texto seleccionado en Bloque de Cita">💬 Cita</button>
-              <button className="tb-btn tb-clean-format" onClick={() => executeCommand('removeFormat')} title="Limpiar todo el formato del texto seleccionado">🧹 Limpiar Formato</button>
             </div>
           </div>
 
