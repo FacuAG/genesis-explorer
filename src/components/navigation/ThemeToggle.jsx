@@ -7,8 +7,8 @@ export function ThemeToggle() {
 
   const themes = [
     { id: 'dark', label: 'Oscuro', icon: '🌙' },
-    { id: 'sepia', label: 'Sepia', icon: '📜' },
-    { id: 'light', label: 'Claro', icon: '☀️' }
+    { id: 'light', label: 'Claro', icon: '☀️' },
+    { id: 'dim', label: 'Atenuado', icon: '🌫️' }
   ];
 
   return (

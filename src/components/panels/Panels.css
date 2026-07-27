@@ -13,12 +13,12 @@
 .panel-header h2 {
   margin: 0 0 0.4rem 0;
   font-size: 1.6rem;
-  color: #f8fafc;
+  color: var(--text-main);
 }
 
 .panel-header p {
   margin: 0;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
@@ -30,18 +30,19 @@
 }
 
 .person-card {
-  background: rgba(30, 32, 41, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 14px;
   padding: 1.25rem;
   backdrop-filter: blur(12px);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-card);
 }
 
 .person-card:hover {
   transform: translateY(-3px);
-  border-color: #c084fc;
-  box-shadow: 0 8px 24px rgba(170, 59, 255, 0.15);
+  border-color: var(--accent-lila);
+  box-shadow: var(--shadow-glow);
 }
 
 .person-card-header {
@@ -55,36 +56,36 @@
 .person-name {
   margin: 0;
   font-size: 1.2rem;
-  color: #f1f5f9;
+  color: var(--text-main);
 }
 
 .person-category-badge {
   background: rgba(99, 102, 241, 0.15);
-  color: #818cf8;
+  color: var(--accent-lila);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
-  border: 1px solid rgba(129, 140, 248, 0.2);
+  border: 1px solid var(--border-subtle);
 }
 
 .person-meaning {
   margin: 0 0 0.5rem 0;
   font-size: 0.85rem;
-  color: #cbd5e1;
+  color: var(--text-muted);
 }
 
 .person-lifespan {
   margin: 0 0 0.75rem 0;
   font-size: 0.82rem;
-  color: #c084fc;
+  color: var(--accent-lila);
   font-weight: 600;
 }
 
 .person-theology {
   margin: 0;
   font-size: 0.83rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.45;
 }
 
@@ -97,11 +98,12 @@
 }
 
 .covenant-card, .promise-card {
-  background: rgba(30, 32, 41, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 14px;
   padding: 1.25rem;
   backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
 }
 
 .covenant-header {
@@ -114,12 +116,12 @@
 .covenant-header h3, .promise-card h3 {
   margin: 0;
   font-size: 1.15rem;
-  color: #f8fafc;
+  color: var(--text-main);
 }
 
 .covenant-nature-tag {
   background: rgba(234, 179, 8, 0.15);
-  color: #fde047;
+  color: var(--accent-gold);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.2rem 0.5rem;
@@ -128,7 +130,7 @@
 
 .covenant-desc, .promise-explanation {
   font-size: 0.86rem;
-  color: #cbd5e1;
+  color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 0.75rem;
 }
@@ -136,11 +138,11 @@
 .covenant-verse {
   margin: 0.75rem 0;
   padding: 0.6rem 0.8rem;
-  background: rgba(15, 23, 42, 0.6);
-  border-left: 3px solid #c084fc;
+  background: var(--bg-surface);
+  border-left: 3px solid var(--accent-lila);
   font-style: italic;
   font-size: 0.83rem;
-  color: #e2e8f0;
+  color: var(--text-main);
 }
 
 .christ-fulfillment {
