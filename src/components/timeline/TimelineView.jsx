@@ -234,7 +234,7 @@ export function TimelineView({
     const timeline = new Timeline(containerRef.current, visItemsRef.current, visGroupsRef.current, options);
     timelineInstanceRef.current = timeline;
 
-    // Manejador de selección de ítems
+    // 1. Un solo Clic: Selecciona el ítem y actualiza el Inspector Rápido Superior
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
@@ -256,6 +256,43 @@ export function TimelineView({
           if (eventObj) {
             setSelectedEntity({ type: 'event', data: eventObj });
             if (onSelectEvent) onSelectEvent(eventObj.id);
+          }
+        }
+      }
+    });
+
+    // 2. Doble Clic: Abre DIRECTAMENTE el Modal de Detalle Exegético Completo
+    timeline.on('doubleClick', function (properties) {
+      if (properties.item) {
+        const itemId = properties.item;
+
+        if (itemId.startsWith('era_')) {
+          const eraId = itemId.replace('era_', '');
+          const eraObj = erasMap.get(eraId);
+          if (eraObj) {
+            setSelectedEntity({ type: 'era', data: eraObj });
+            setIsModalOpen(true);
+          }
+        } else if (itemId.startsWith('block_')) {
+          const blockId = itemId.replace('block_', '');
+          const blockObj = blocksMap.get(blockId);
+          if (blockObj) {
+            setSelectedEntity({ type: 'block', data: blockObj });
+            setIsModalOpen(true);
+          }
+        } else if (itemId.startsWith('cov_')) {
+          const covId = itemId.replace('cov_', '');
+          const covObj = covenantsMap.get(covId);
+          if (covObj) {
+            setSelectedEntity({ type: 'covenant', data: covObj });
+            setIsModalOpen(true);
+          }
+        } else {
+          const eventObj = eventsMap.get(itemId);
+          if (eventObj) {
+            setSelectedEntity({ type: 'event', data: eventObj });
+            if (onSelectEvent) onSelectEvent(eventObj.id);
+            setIsModalOpen(true);
           }
         }
       }

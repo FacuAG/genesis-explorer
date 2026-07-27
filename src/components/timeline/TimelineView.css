@@ -483,16 +483,12 @@
   white-space: nowrap !important;
 }
 
-.vis-item.vis-selected {
-  border-color: #c084fc !important;
-  box-shadow: 0 0 20px rgba(192, 132, 252, 0.5) !important;
-  background: #2e1065 !important;
-}
-
-/* Resalte Dorado Activo */
-.vis-item-target-active, .vis-item-highlighted {
+/* Resalte Dorado Activo Universal (Eventos, Pactos, Bloques, Eras) */
+.vis-item.vis-selected,
+.vis-item-target-active,
+.vis-item-highlighted {
   border: 2px solid #f59e0b !important;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%) !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.45) 0%, rgba(168, 85, 247, 0.45) 100%) !important;
   box-shadow: 0 0 24px rgba(245, 158, 11, 0.9), 0 0 40px rgba(192, 132, 252, 0.7) !important;
   animation: pulseGoldHighlight 1.5s infinite ease-in-out !important;
   z-index: 1000 !important;
