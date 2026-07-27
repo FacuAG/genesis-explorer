@@ -382,20 +382,45 @@
   .ft-btn-text { display: none; }
 }
 
-/* Lienzo del Motor vis-timeline */
 .vis-timeline-mount, .timeline-canvas-wrapper {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 16px;
   min-height: 520px;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  box-shadow: var(--shadow-card);
 }
 
 .vis-timeline-canvas {
   width: 100%;
   min-height: 520px;
+}
+
+/* Cartel Indicador Discreto (Option 1 UX Standard) */
+.timeline-zoom-hint-pill {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid var(--accent-lila);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(192, 132, 252, 0.3);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  pointer-events: none;
+  animation: hintPillFadeIn 0.25s ease-out;
+}
+
+@keyframes hintPillFadeIn {
+  from { opacity: 0; transform: translate(-50%, -8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 /* Sobrescrituras CSS para vis-timeline */

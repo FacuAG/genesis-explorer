@@ -73,6 +73,10 @@ export function TimelineView({
   // Estado para el modal directo de personaje
   const [modalPerson, setModalPerson] = useState(null);
 
+  // Estado y Timer para la ayuda de Zoom con Ctrl + Rueda del mouse (Opción 1 UX)
+  const [showZoomHint, setShowZoomHint] = useState(false);
+  const hintTimerRef = useRef(null);
+
   // Mapeos rápidos para recuperación de entidades por ID
   const covenantsMap = useMemo(() => {
     const map = new Map();
@@ -261,6 +265,37 @@ export function TimelineView({
       timeline.destroy();
     };
   }, [eventsMap, blocksMap, covenantsMap, erasMap, onSelectEvent]);
+
+  // Manejador UX Opción 1: Liberar el scroll de la página y requerir Ctrl + Rueda del mouse para hacer Zoom
+  useEffect(() => {
+    const containerEl = containerRef.current;
+    if (!containerEl) return;
+
+    const handleWheelCapture = (e) => {
+      // Si el usuario presiona Ctrl o Cmd (en Mac), dejamos que vis-timeline procese el Zoom
+      if (e.ctrlKey || e.metaKey) {
+        return;
+      }
+
+      // Si NO presiona Ctrl: Detener que vis-timeline intercepte el wheel o haga zoom
+      e.stopPropagation();
+
+      // Mostrar cartel informativo discreto durante 1.8 segundos
+      setShowZoomHint(true);
+      if (hintTimerRef.current) clearTimeout(hintTimerRef.current);
+      hintTimerRef.current = setTimeout(() => {
+        setShowZoomHint(false);
+      }, 1800);
+    };
+
+    // Escuchar wheel en la fase de captura (capture: true)
+    containerEl.addEventListener('wheel', handleWheelCapture, { capture: true });
+
+    return () => {
+      containerEl.removeEventListener('wheel', handleWheelCapture, { capture: true });
+      if (hintTimerRef.current) clearTimeout(hintTimerRef.current);
+    };
+  }, []);
 
   // 2. Actualización Reactiva de Ítems en memoria SIN destruir el canvas
   useEffect(() => {
@@ -620,6 +655,11 @@ export function TimelineView({
       {/* 5. LIENZO DEL MOTOR VIS-TIMELINE */}
       <div className="timeline-canvas-wrapper">
         <div ref={containerRef} className="vis-timeline-canvas" />
+        {showZoomHint && (
+          <div className="timeline-zoom-hint-pill">
+            💡 Mantén <strong>Ctrl + Rueda del mouse</strong> para hacer Zoom en la cronología
+          </div>
+        )}
       </div>
 
       {/* 6. MODAL GENÉRICO DE DETALLE EXEGÉTICO COMPLETO */}
