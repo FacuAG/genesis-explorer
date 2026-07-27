@@ -12,6 +12,12 @@
   min-width: 280px;
 }
 
+.chapter-search-box .search-icon {
+  position: static !important;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
 .chapter-search-input {
   background: transparent;
   border: none;
