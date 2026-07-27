@@ -115,13 +115,16 @@
   border-radius: 14px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 /* Barra de Herramientas Tipográficas (Pegajosa / Sticky al hacer scroll) */
 .se-toolbar {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
@@ -130,8 +133,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
 .tb-group {
