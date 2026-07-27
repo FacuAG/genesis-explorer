@@ -122,16 +122,27 @@ Genesis Explorer se encuentra en fase avanzada con los siguientes módulos activ
 
 ---
 
-## 🛡️ Punto de Restauración Estable Registrado
+## 🛡️ Puntos de Restauración Estables Registrados
 
-Queda asentado en la documentación oficial del proyecto el punto de congelamiento y restauración estable de la Línea de Tiempo:
+Quedan asentados en la documentación oficial del proyecto los puntos de congelamiento y restauración estable:
 
+### 1. Línea de Tiempo Cronológica (Checkpoint v1.0.0)
 - **Tag Git oficial**: `v1.0.0-stable-timeline`
 - **Rama de respaldo**: `stable-timeline-checkpoint`
 - **Commits estables**: `79ed8a4` / `22281f5`
 - **Copias locales**: `src/backup/TimelineView.jsx.bak`, `src/backup/TimelineView.css.bak`, `src/backup/timelineMapper.js.bak`
 
-**REGLA CRÍTICA:** Bajo ninguna circunstancia se deben realizar refactorizaciones destructivas ni eliminar componentes existentes de la Línea de Tiempo. Toda nueva funcionalidad debe ser aditiva.
+### 2. Generador PDF Pastoral & Editor Homilético (Checkpoint v1.2.0)
+- **Tag Git oficial**: `v1.2.0-stable-pdf-editor`
+- **Rama de respaldo**: `stable-pdf-editor-checkpoint`
+- **Commit estable**: `91fe599`
+- **Módulos verificados 100%**:
+  - Exportador directo de PDF a 1-Clic (`src/utils/directPdfExporter.js`) con motor unificado (0% código duplicado).
+  - Tipografía editorial 14px (10.5pt), márgenes simétricos A4, emojis teológicos e íconos en Hebreo intactos.
+  - Editor con barra de herramientas fijada (`top: 130px; position: sticky;`).
+  - Tarjetas de notas modernizadas con botones `📖 Abrir Pasaje` y `🗑️ Eliminar`.
+
+**REGLA CRÍTICA:** Bajo ninguna circunstancia se deben realizar refactorizaciones destructivas ni eliminar componentes existentes de la Línea de Tiempo ni del Editor/PDF. Toda nueva funcionalidad debe ser aditiva.
 
 ---
 
