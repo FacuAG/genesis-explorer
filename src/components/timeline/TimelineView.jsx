@@ -77,6 +77,10 @@ export function TimelineView({
   const [showZoomHint, setShowZoomHint] = useState(false);
   const hintTimerRef = useRef(null);
 
+  // Referencias para detección infalible de Doble Clic (en milisegundos)
+  const lastClickTimeRef = useRef(0);
+  const lastClickItemIdRef = useRef(null);
+
   // Mapeos rápidos para recuperación de entidades por ID
   const covenantsMap = useMemo(() => {
     const map = new Map();
@@ -249,72 +253,70 @@ export function TimelineView({
     const timeline = new Timeline(containerRef.current, visItemsRef.current, visGroupsRef.current, options);
     timelineInstanceRef.current = timeline;
 
-    // 1. Un solo Clic: Selecciona el ítem y actualiza el Inspector Rápido Superior
+    // Manejador Unificado de Clic y Doble Clic con Detección Infalible de Delta Time
+    const handleEntityActivation = (itemId, isDblClick = false) => {
+      let targetEntity = null;
+
+      if (itemId.startsWith('era_')) {
+        const eraId = itemId.replace('era_', '');
+        const eraObj = erasMap.get(eraId);
+        if (eraObj) targetEntity = { type: 'era', data: eraObj };
+      } else if (itemId.startsWith('block_')) {
+        const blockId = itemId.replace('block_', '');
+        const blockObj = blocksMap.get(blockId);
+        if (blockObj) targetEntity = { type: 'block', data: blockObj };
+      } else if (itemId.startsWith('cov_')) {
+        const covId = itemId.replace('cov_', '');
+        const covObj = covenantsMap.get(covId);
+        if (covObj) targetEntity = { type: 'covenant', data: covObj };
+      } else {
+        const eventObj = eventsMap.get(itemId);
+        if (eventObj) {
+          targetEntity = { type: 'event', data: eventObj };
+          if (onSelectEvent) onSelectEvent(eventObj.id);
+        }
+      }
+
+      if (!targetEntity) return;
+
+      if (isDblClick) {
+        // DOBLE CLIC: Abre el Modal del Bloque Narrativo del Génesis o Entidad directamente
+        if (targetEntity.type === 'event') {
+          const linkedBlock = getBlockForEvent(targetEntity.data);
+          if (linkedBlock) {
+            setSelectedEntity({ type: 'block', data: linkedBlock });
+          } else {
+            setSelectedEntity(targetEntity);
+          }
+        } else {
+          setSelectedEntity(targetEntity);
+        }
+        setIsModalOpen(true);
+      } else {
+        // UN SOLO CLIC: Selecciona el ítem y actualiza la vista previa del inspector superior
+        setSelectedEntity(targetEntity);
+      }
+    };
+
+    // 1. Manejador de Selección Clic / Doble Clic por Intervalo de Tiempo
     timeline.on('select', function (properties) {
       if (properties.items && properties.items.length > 0) {
         const itemId = properties.items[0];
+        const now = Date.now();
+        const delta = now - lastClickTimeRef.current;
+        const isFastDblClick = delta < 500 && lastClickItemIdRef.current === itemId;
 
-        if (itemId.startsWith('era_')) {
-          const eraId = itemId.replace('era_', '');
-          const eraObj = erasMap.get(eraId);
-          if (eraObj) setSelectedEntity({ type: 'era', data: eraObj });
-        } else if (itemId.startsWith('block_')) {
-          const blockId = itemId.replace('block_', '');
-          const blockObj = blocksMap.get(blockId);
-          if (blockObj) setSelectedEntity({ type: 'block', data: blockObj });
-        } else if (itemId.startsWith('cov_')) {
-          const covId = itemId.replace('cov_', '');
-          const covObj = covenantsMap.get(covId);
-          if (covObj) setSelectedEntity({ type: 'covenant', data: covObj });
-        } else {
-          const eventObj = eventsMap.get(itemId);
-          if (eventObj) {
-            setSelectedEntity({ type: 'event', data: eventObj });
-            if (onSelectEvent) onSelectEvent(eventObj.id);
-          }
-        }
+        lastClickTimeRef.current = now;
+        lastClickItemIdRef.current = itemId;
+
+        handleEntityActivation(itemId, isFastDblClick);
       }
     });
 
-    // 2. Doble Clic: Abre DIRECTAMENTE el Modal del Bloque Narrativo del Génesis o Entidad
+    // 2. Manejador de Evento doubleClick de Vis-Timeline
     timeline.on('doubleClick', function (properties) {
       if (properties.item) {
-        const itemId = properties.item;
-
-        if (itemId.startsWith('era_')) {
-          const eraId = itemId.replace('era_', '');
-          const eraObj = erasMap.get(eraId);
-          if (eraObj) {
-            setSelectedEntity({ type: 'era', data: eraObj });
-            setIsModalOpen(true);
-          }
-        } else if (itemId.startsWith('block_')) {
-          const blockId = itemId.replace('block_', '');
-          const blockObj = blocksMap.get(blockId);
-          if (blockObj) {
-            setSelectedEntity({ type: 'block', data: blockObj });
-            setIsModalOpen(true);
-          }
-        } else if (itemId.startsWith('cov_')) {
-          const covId = itemId.replace('cov_', '');
-          const covObj = covenantsMap.get(covId);
-          if (covObj) {
-            setSelectedEntity({ type: 'covenant', data: covObj });
-            setIsModalOpen(true);
-          }
-        } else {
-          const eventObj = eventsMap.get(itemId);
-          if (eventObj) {
-            const linkedBlock = getBlockForEvent(eventObj);
-            if (linkedBlock) {
-              setSelectedEntity({ type: 'block', data: linkedBlock });
-            } else {
-              setSelectedEntity({ type: 'event', data: eventObj });
-            }
-            if (onSelectEvent) onSelectEvent(eventObj.id);
-            setIsModalOpen(true);
-          }
-        }
+        handleEntityActivation(properties.item, true);
       }
     });
 
@@ -387,7 +389,7 @@ export function TimelineView({
     };
   }, []);
 
-  // 2. Actualización Reactiva de Ítems en memoria SIN destruir el canvas
+  // 2. Actualización Reactiva de Ítems en memoria (Solo cuando cambian los eventos o filtros principales)
   useEffect(() => {
     const activeTargetId = targetEventId || (
       selectedEntity ? (
@@ -413,7 +415,7 @@ export function TimelineView({
 
     visItemsRef.current.clear();
     visItemsRef.current.add(items);
-  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isSearchOrCategoryFilterActive, targetEventId, selectedEntity]);
+  }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isSearchOrCategoryFilterActive, targetEventId]);
 
   // 3. Auto-enfoque de cámara si hay targetEventId activo
   useEffect(() => {
