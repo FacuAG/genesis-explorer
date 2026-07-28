@@ -6,7 +6,7 @@ import './GenealogyTreePanel.css';
 /**
  * Componente profesional perfeccionado para el Visualizador Interactivo del Árbol Genealógico y Convivencias Patriarcales.
  * Incluye diagrama jerárquico por generaciones (Adán ➔ Jesucristo), fichas de relaciones familiares completas
- * y gráfico de superposición de vidas (Anno Mundi) con auto-scroll y salto a la Línea de Tiempo.
+ * y gráfico de superposición de vidas (Anno Mundi) con lectura exacta de datos y navegación 100% interactiva.
  */
 export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notableOverlaps = [], eventsMap = new Map(), onSelectEvent, onSelectPerson, onSelectChapter }) {
   const [activeTab, setActiveTab] = useState('tree'); // 'tree' | 'overlaps'
@@ -29,14 +29,47 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     'jacob_matthan', 'joseph', 'jesus'
   ]), []);
 
+  // Helper para extraer las fechas Anno Mundi de cualquier personaje sin undefined
+  const getPersonDates = (p) => {
+    if (!p) return { birth: 0, death: 100, lifespan: 100 };
+
+    const birth = p.chronology?.birth_am ?? p.birth_am ?? 0;
+    const lifespan = p.chronology?.lifespan ?? p.lifespan;
+    const death = p.chronology?.death_am ?? p.death_am ?? (birth + (lifespan || 100));
+
+    return { birth, death, lifespan: lifespan || (death - birth) };
+  };
+
   // Filtrado de personajes según período y buscador
   const filteredPeople = useMemo(() => {
     return people.filter(p => {
+      const dates = getPersonDates(p);
+      const cat = p.category || '';
+
       // 1. Filtro por Período
-      if (periodFilter === 'antediluvian' && p.category !== 'antediluvian') return false;
-      if (periodFilter === 'postdiluvian' && p.category !== 'postdiluvian') return false;
-      if (periodFilter === 'patriarchs' && p.category !== 'patriarch' && p.category !== 'twelve_tribes') return false;
-      if (periodFilter === 'messianic_line' && !messianicIds.has(p.id)) return false;
+      if (periodFilter === 'antediluvian') {
+        const isAntediluvian = cat.includes('antediluvian') ||
+          ['first_man', 'first_woman', 'cainite_line', 'first_martyr', 'flood_survivor'].includes(cat) ||
+          dates.birth < 1056;
+        if (!isAntediluvian) return false;
+      }
+
+      if (periodFilter === 'postdiluvian') {
+        const isPostdiluvian = cat.includes('postdiluvian') ||
+          ['shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah'].includes(p.id) ||
+          (dates.birth >= 1056 && dates.birth < 1948);
+        if (!isPostdiluvian) return false;
+      }
+
+      if (periodFilter === 'patriarchs') {
+        const isPatriarch = ['covenant_patriarch', 'covenant_matriarch', 'tribal_patriarch', 'matriarch_secondary', 'savior_figure', 'patriarch_relative'].includes(cat) ||
+          dates.birth >= 1948;
+        if (!isPatriarch) return false;
+      }
+
+      if (periodFilter === 'messianic_line') {
+        if (!messianicIds.has(p.id)) return false;
+      }
 
       // 2. Buscador en vivo
       if (searchQuery.trim().length > 0) {
@@ -54,7 +87,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
   const generationTiers = useMemo(() => {
     const map = new Map();
     filteredPeople.forEach(p => {
-      const genNum = p.generation_from_adam || p.generation || 99;
+      const genNum = p.generation_from_adam || p.generation || p.chronology?.generation || 99;
       if (!map.has(genNum)) {
         map.set(genNum, []);
       }
@@ -75,10 +108,15 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     return keyIds.map(id => peopleMap.get(id)).filter(Boolean);
   }, [peopleMap]);
 
-  // Convivencia actualmente seleccionada
+  // Convivencia actualmente seleccionada (Soporta esquemas flexibles de datos)
   const activeOverlap = notableOverlaps[selectedOverlapIndex] || notableOverlaps[0];
-  const activeOverlapPersonFrom = activeOverlap ? peopleMap.get(activeOverlap.from) : null;
-  const activeOverlapPersonTo = activeOverlap ? peopleMap.get(activeOverlap.to) : null;
+  const activeFromId = activeOverlap ? (activeOverlap.person1_id || activeOverlap.from) : null;
+  const activeToId = activeOverlap ? (activeOverlap.person2_id || activeOverlap.to) : null;
+  const activeYears = activeOverlap ? (activeOverlap.years_together || activeOverlap.years_overlap) : 0;
+  const activeDescription = activeOverlap ? (activeOverlap.historical_note || activeOverlap.description || activeOverlap.note) : '';
+
+  const activeOverlapPersonFrom = activeFromId ? peopleMap.get(activeFromId) : null;
+  const activeOverlapPersonTo = activeToId ? peopleMap.get(activeToId) : null;
 
   // Auto-scroll suave en el gráfico al seleccionar un chip de convivencia
   useEffect(() => {
@@ -92,10 +130,10 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
 
   // Helper para renderizar los botones de relaciones familiares
   const renderFamilyChips = (person) => {
-    const fatherId = person.father_id || person.father || person.parents?.father;
-    const motherId = person.mother_id || person.mother || person.parents?.mother;
-    const spouseId = Array.isArray(person.spouses) ? person.spouses[0] : (person.spouse_id || person.spouse);
-    const childrenList = Array.isArray(person.children_ids) ? person.children_ids : (Array.isArray(person.children) ? person.children : []);
+    const fatherId = person.father_id || person.father || person.family?.father || person.parents?.father;
+    const motherId = person.mother_id || person.mother || person.family?.mother || person.parents?.mother;
+    const spouseId = Array.isArray(person.spouses) ? person.spouses[0] : (person.spouse_id || person.spouse || person.family?.spouse);
+    const childrenList = Array.isArray(person.children_ids) ? person.children_ids : (Array.isArray(person.children) ? person.children : (person.family?.children || []));
 
     const fatherObj = fatherId ? peopleMap.get(fatherId) : null;
     const motherObj = motherId ? peopleMap.get(motherId) : null;
@@ -153,17 +191,18 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             <span className="rel-label">👶 Hijos ({childrenList.length}):</span>
             <div className="children-chips-wrap">
               {childrenList.slice(0, 4).map(cId => {
-                const childObj = peopleMap.get(cId);
+                const childObj = typeof cId === 'string' ? peopleMap.get(cId) : cId;
+                const childName = childObj ? childObj.name : (typeof cId === 'string' ? cId : 'Hijo');
                 return (
                   <button
-                    key={cId}
+                    key={typeof cId === 'string' ? cId : childName}
                     className="rel-chip child-chip"
                     onClick={(e) => {
                       e.stopPropagation();
                       if (childObj) setSelectedPerson(childObj);
                     }}
                   >
-                    {childObj ? childObj.name : cId}
+                    {childName}
                   </button>
                 );
               })}
@@ -293,6 +332,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                   <div className="tier-cards-row">
                     {genPeople.map(person => {
                       const isMessianic = messianicIds.has(person.id);
+                      const dates = getPersonDates(person);
 
                       return (
                         <div
@@ -311,8 +351,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                           )}
 
                           <div className="gcard-lifespan-row">
-                            <span>⏳ AM {person.birth_am ?? '?'} - AM {person.death_am ?? '?'}</span>
-                            {person.lifespan && <strong>({person.lifespan} años)</strong>}
+                            <span>⏳ AM {dates.birth} - AM {dates.death}</span>
+                            {dates.lifespan && <strong>({dates.lifespan} años)</strong>}
                           </div>
 
                           {/* RELACIONES FAMILIARES CONECTADAS */}
@@ -341,6 +381,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             <div className="genealogy-cards-grid">
               {filteredPeople.map((person, index) => {
                 const isMessianic = messianicIds.has(person.id);
+                const dates = getPersonDates(person);
 
                 return (
                   <div
@@ -359,8 +400,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                     )}
 
                     <div className="gcard-lifespan-row">
-                      <span>⏳ AM {person.birth_am ?? '?'} - AM {person.death_am ?? '?'}</span>
-                      {person.lifespan && <strong>({person.lifespan} años)</strong>}
+                      <span>⏳ AM {dates.birth} - AM {dates.death}</span>
+                      {dates.lifespan && <strong>({dates.lifespan} años)</strong>}
                     </div>
 
                     {/* RELACIONES FAMILIARES CONECTADAS */}
@@ -388,11 +429,14 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
         <div className="genealogy-overlaps-view">
           {/* SELECTOR DE HISTORIAS DE CONVIVENCIA DESTACADAS */}
           <div className="overlaps-selector-bar">
-            <h3>⚡ 5 Convivencias Bíblicas Clave (Transmisión Oral Directa)</h3>
+            <h3>⚡ Convivencias Bíblicas Clave (Transmisión Oral Directa)</h3>
             <div className="overlap-chips-row">
               {notableOverlaps.map((overlap, idx) => {
-                const p1 = peopleMap.get(overlap.from);
-                const p2 = peopleMap.get(overlap.to);
+                const p1Id = overlap.person1_id || overlap.from;
+                const p2Id = overlap.person2_id || overlap.to;
+                const p1 = peopleMap.get(p1Id);
+                const p2 = peopleMap.get(p2Id);
+                const years = overlap.years_together || overlap.years_overlap;
                 const isSelected = idx === selectedOverlapIndex;
 
                 return (
@@ -401,8 +445,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                     className={`overlap-select-chip ${isSelected ? 'active' : ''}`}
                     onClick={() => setSelectedOverlapIndex(idx)}
                   >
-                    <span>🤝 {p1?.name || overlap.from} & {p2?.name || overlap.to}</span>
-                    <strong>({overlap.years_overlap} años)</strong>
+                    <span>🤝 {p1?.name || p1Id} & {p2?.name || p2Id}</span>
+                    <strong>({years} años)</strong>
                   </button>
                 );
               })}
@@ -414,22 +458,22 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             <div className="overlap-detail-card">
               <div className="odc-badge">🕊️ Hermenéutica de Transmisión Oral Directa</div>
               <h2 className="odc-title">
-                {activeOverlapPersonFrom?.name} & {activeOverlapPersonTo?.name} convivieron durante {activeOverlap.years_overlap} años
+                {activeOverlapPersonFrom?.name || activeFromId} & {activeOverlapPersonTo?.name || activeToId} convivieron durante {activeYears} años
               </h2>
-              <p className="odc-description">{activeOverlap.description}</p>
+              <p className="odc-description">{activeDescription}</p>
               
               <div className="odc-stats-row">
                 <div className="odc-stat-item">
-                  <span className="label">Nacimiento de {activeOverlapPersonFrom?.name}:</span>
-                  <span className="val">AM {activeOverlapPersonFrom?.birth_am}</span>
+                  <span className="label">Nacimiento de {activeOverlapPersonFrom?.name || activeFromId}:</span>
+                  <span className="val">AM {getPersonDates(activeOverlapPersonFrom).birth}</span>
                 </div>
                 <div className="odc-stat-item">
-                  <span className="label">Nacimiento de {activeOverlapPersonTo?.name}:</span>
-                  <span className="val">AM {activeOverlapPersonTo?.birth_am}</span>
+                  <span className="label">Nacimiento de {activeOverlapPersonTo?.name || activeToId}:</span>
+                  <span className="val">AM {getPersonDates(activeOverlapPersonTo).birth}</span>
                 </div>
                 <div className="odc-stat-item highlight">
                   <span className="label">Años de Convivencia Simultánea:</span>
-                  <span className="val">{activeOverlap.years_overlap} AÑOS</span>
+                  <span className="val">{activeYears} AÑOS</span>
                 </div>
               </div>
             </div>
@@ -448,12 +492,11 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
 
             <div className="chart-bars-list">
               {overlapPatriarchs.map(p => {
-                const birth = p.birth_am ?? 0;
-                const death = p.death_am ?? birth + (p.lifespan || 100);
+                const dates = getPersonDates(p);
                 
                 // Mapear AM 0 a 2400 a porcentaje 0% - 100%
-                const leftPct = Math.max(0, Math.min(100, (birth / 2369) * 100));
-                const widthPct = Math.max(1.5, Math.min(100 - leftPct, ((death - birth) / 2369) * 100));
+                const leftPct = Math.max(0, Math.min(100, (dates.birth / 2369) * 100));
+                const widthPct = Math.max(1.5, Math.min(100 - leftPct, ((dates.death - dates.birth) / 2369) * 100));
 
                 const isFromActive = activeOverlapPersonFrom?.id === p.id;
                 const isToActive = activeOverlapPersonTo?.id === p.id;
@@ -471,7 +514,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                       title={`Ver biografía de ${p.name}`}
                     >
                       <strong>{p.name}</strong>
-                      <small>AM {birth} - {death}</small>
+                      <small>AM {dates.birth} - {dates.death}</small>
                     </button>
 
                     <div className="bar-track">
@@ -479,9 +522,9 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                         className={`bar-fill ${isHighlightedInOverlap ? 'fill-gold-glow' : ''}`}
                         style={{ left: `${leftPct}%`, width: `${widthPct}%` }}
                         onClick={() => setSelectedPerson(p)}
-                        title={`${p.name}: AM ${birth} a AM ${death} (${p.lifespan || '?'} años)`}
+                        title={`${p.name}: AM ${dates.birth} a AM ${dates.death} (${dates.lifespan || '?'} años)`}
                       >
-                        <span className="bar-inner-text">{p.name} ({p.lifespan}a)</span>
+                        <span className="bar-inner-text">{p.name} ({dates.lifespan}a)</span>
                       </div>
                     </div>
                   </div>

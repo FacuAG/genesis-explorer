@@ -242,7 +242,14 @@ export function PersonDetailModal({ person, isOpen, onClose, peopleMap = new Map
             <h3 className="person-section-subtitle">⚡ Eventos Bíblicos donde Participa ({eventObjects.length})</h3>
             <div className="person-events-grid">
               {eventObjects.map(evt => (
-                <div key={evt.id} className="person-event-chip" onClick={() => { if (onSelectEvent) onSelectEvent(evt.id); }}>
+                <div
+                  key={evt.id}
+                  className="person-event-chip"
+                  onClick={() => {
+                    if (onClose) onClose();
+                    if (onSelectEvent) onSelectEvent(evt.id);
+                  }}
+                >
                   <span className="pe-am" title={`Año del Mundo ${evt.year_am ?? 'N/A'}`}>AM {evt.year_am ?? 'N/A'}</span>
                   <span className="pe-title">{evt.name}</span>
                 </div>

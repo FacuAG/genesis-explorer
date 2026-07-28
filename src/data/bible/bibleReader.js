@@ -107,14 +107,35 @@ export function parseBiblicalRefString(refStr) {
   };
 }
 
+const EnglishBookAliases = {
+  'Génesis': 'Génesis', 'Éxodo': 'Éxodo', 'Levítico': 'Levítico', 'Números': 'Numbers', 'Deuteronomio': 'Deuteronomio',
+  'Josué': 'Joshua', 'Jueces': 'Jueces', 'Rut': 'Rut', '1 Samuel': '1 Samuel', '2 Samuel': '2 Samuel',
+  '1 Reyes': '1 Kings', '2 Reyes': '2 Kings', '1 Crónicas': '1 Crónicas', '2 Crónicas': '2 Crónicas',
+  'Esdras': 'Esdras', 'Nehemías': 'Nehemías', 'Ester': 'Esther', 'Job': 'Job', 'Salmos': 'Salmos',
+  'Proverbios': 'Proverbs', 'Eclesiastés': 'Eclesiastés', 'Cantar de los Cantares': 'Cantar de los Cantares',
+  'Isaías': 'Isaías', 'Jeremías': 'Jeremías', 'Lamentaciones': 'Lamentations', 'Ezequiel': 'Ezekiel',
+  'Daniel': 'Daniel', 'Oseas': 'Oseas', 'Joel': 'Joel', 'Amós': 'Amós', 'Abdías': 'Abdías', 'Jonás': 'Juan',
+  'Miqueas': 'Micah', 'Nahúm': 'Nahúm', 'Habacuc': 'Habacuc', 'Sofonías': 'Sofonías', 'Hageo': 'Hageo',
+  'Zacarías': 'Zacarías', 'Malaquías': 'Malachi', 'Mateo': 'Mateo', 'San Mateo': 'Mateo', 'Marcos': 'Marcos',
+  'San Marcos': 'Marcos', 'Lucas': 'Lucas', 'San Lucas': 'Lucas', 'Juan': 'John', 'San Juan': 'John',
+  'Hechos': 'Hechos', 'Romanos': 'Romanos', '1 Corintios': '1 Corintios', '2 Corintios': '2 Corintios',
+  'Gálatas': 'Galatians', 'Efesios': 'Efesios', 'Filipenses': 'Philippians', 'Colosenses': 'Colossians',
+  '1 Tesalonicenses': '1 Thessalonians', '2 Tesalonicenses': '2 Thessalonians', '1 Timoteo': '1 Timothy',
+  '2 Timoteo': '2 Timothy', 'Tito': 'Titus', 'Filemón': 'Filemón', 'Hebreos': 'Hebrews', 'Santiago': 'James',
+  '1 Pedro': '1 Pedro', '2 Pedro': '2 Pedro', '1 Juan': '1 John', '2 Juan': '2 John', '3 Juan': '3 John',
+  'Judas': 'Judas', 'Apocalipsis': 'Revelation'
+};
+
 /**
  * Consulta el texto RVR1960 exacto de CUALQUIER pasaje bíblico de los 66 libros de la Biblia.
  */
 export function getVerseTextRVR1960(book, chapter, verseStart = 1, verseEnd = null) {
   const normBook = normalizeBookName(book);
+  const englishAlias = EnglishBookAliases[normBook] || EnglishBookAliases[book];
 
   // Intentar obtener el libro desde la base de datos completa de 66 libros con fallbacks flexibles
   const bookData = fullBibleData[normBook] ||
+                   (englishAlias ? fullBibleData[englishAlias] : null) ||
                    fullBibleData[`San ${normBook}`] ||
                    fullBibleData[book] ||
                    fullBibleData[`San ${book}`] ||
