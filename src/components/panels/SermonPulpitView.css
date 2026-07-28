@@ -276,15 +276,14 @@
 .spv-doc-body span[style*="background"],
 .spv-doc-body mark,
 .spv-doc-body font[style*="background"] {
-  padding: 0rem 0.2rem !important;
-  border-radius: 4px !important;
+  padding: 0.1rem 0.3rem !important;
+  border-radius: 3px !important;
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
   margin: 0 0.1rem !important;
   display: inline !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  line-height: 1.85 !important;
+  line-height: inherit !important;
+  vertical-align: baseline !important;
 }
 
 .spv-doc-body ul,

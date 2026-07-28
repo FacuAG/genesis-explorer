@@ -22,7 +22,7 @@ const loadHtml2Pdf = () => {
 export async function downloadSermonPDFDirect(sermon) {
   try {
     const html2pdf = await loadHtml2Pdf();
-    const formattedDate = sermon.updatedAt 
+    const formattedDate = sermon.updatedAt
       ? new Date(sermon.updatedAt).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })
       : new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
 
@@ -128,11 +128,10 @@ export async function downloadSermonPDFDirect(sermon) {
             display: inline !important;
             box-decoration-break: clone !important;
             -webkit-box-decoration-break: clone !important;
-            padding: 0rem 0.2rem !important;
+            padding: 0.1rem 0.3rem !important;
             border-radius: 3px !important;
-            color: #ffffff !important;
-            font-weight: 700 !important;
-            line-height: 1.8 !important;
+            line-height: inherit !important;
+            vertical-align: baseline !important;
             margin: 0 0.1rem !important;
           }
         </style>
@@ -168,17 +167,17 @@ export async function downloadSermonPDFDirect(sermon) {
     const sanitizedTitle = (sermon.title || 'Predicacion').replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_]/g, '_');
 
     const opt = {
-      margin:       [18, 16, 18, 16], // [arriba, izquierda, abajo, derecha] en mm (márgenes simétricos profesionales)
-      filename:     `${sanitizedTitle}_Documento_Pastoral.pdf`,
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { 
-        scale: 2.5, 
-        useCORS: true, 
+      margin: [18, 16, 18, 16], // [arriba, izquierda, abajo, derecha] en mm (márgenes simétricos profesionales)
+      filename: `${sanitizedTitle}_Documento_Pastoral.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2.5,
+        useCORS: true,
         logging: false,
         letterRendering: true
       },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
 
     await html2pdf().set(opt).from(element).save();
