@@ -77,28 +77,39 @@
 .header-global-nav {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
 .global-tab-btn {
   font-size: 0.82rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.42rem 0.85rem;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 }
 
 .global-tab-btn:hover {
   background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
   border-color: rgba(192, 132, 252, 0.3);
+  transform: translateY(-2px);
 }
 
 .global-tab-btn.active {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(99, 102, 241, 0.25) 100%);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(99, 102, 241, 0.28) 100%);
   border-color: var(--accent-lila);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);
 }
 
 /* 2. FILA INFERIOR: LIBRO ACTIVO, ESTADÍSTICAS Y NAVEGACIÓN DE LIBRO */
@@ -135,8 +146,8 @@
   background: var(--bg-surface);
   color: var(--text-main);
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 0.4rem 0.75rem;
+  border-radius: 10px;
+  padding: 0.42rem 0.8rem;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -157,44 +168,71 @@
 .stat-badge {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.76rem;
   color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .stat-badge-gold {
   background: rgba(234, 179, 8, 0.12);
-  border-color: rgba(234, 179, 8, 0.25);
+  border-color: rgba(234, 179, 8, 0.3);
   color: #fde047;
 }
 
 .header-v-divider {
-  color: var(--border-subtle);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
   font-weight: 300;
   user-select: none;
   margin: 0 0.1rem;
 }
 
+/* NAVEGACIÓN MODERNA Y PROFESIONAL DEL LIBRO ACTIVO */
 .header-book-nav {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.35rem;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .book-tab-btn {
   font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.45rem 0.8rem;
-  border-radius: 8px;
+  padding: 0.45rem 0.95rem;
+  border-radius: 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.book-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(192, 132, 252, 0.25);
+  transform: translateY(-2px);
 }
 
 .book-tab-btn.active {
-  background: var(--accent-lila);
-  color: #0f172a;
-  border-color: var(--accent-lila);
-  box-shadow: 0 4px 14px rgba(192, 132, 252, 0.3);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(99, 102, 241, 0.35) 100%);
+  color: #ffffff;
+  border: 1px solid var(--accent-lila);
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.3), 0 0 10px rgba(192, 132, 252, 0.25);
+  font-weight: 800;
+  transform: translateY(-1px);
 }
 
 /* BUSCADOR GLOBAL */
@@ -216,8 +254,8 @@
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 0.42rem 0.75rem 0.42rem 2.2rem;
+  border-radius: 10px;
+  padding: 0.45rem 0.75rem 0.45rem 2.2rem;
   font-size: 0.85rem;
   color: var(--text-main);
   outline: none;
@@ -226,7 +264,7 @@
 
 .search-input:focus {
   border-color: var(--accent-lila);
-  box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
 }
 
 .search-clear-btn {
