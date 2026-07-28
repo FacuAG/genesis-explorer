@@ -255,35 +255,10 @@
   margin-bottom: 0.4rem !important;
 }
 
-/* Prevenir que bloques enteros tengan color de fondo */
-.spv-doc-body p[style*="background"],
-.spv-doc-body div[style*="background"],
-.spv-doc-body h1[style*="background"],
-.spv-doc-body h2[style*="background"],
-.spv-doc-body h3[style*="background"],
-.spv-doc-body li[style*="background"],
-.spv-doc-body blockquote[style*="background"] {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
 .spv-doc-body p {
   margin-bottom: 1rem !important;
   color: #0f172a !important;
   line-height: 1.85 !important;
-}
-
-.spv-doc-body span[style*="background"],
-.spv-doc-body mark,
-.spv-doc-body font[style*="background"] {
-  padding: 0.1rem 0.3rem !important;
-  border-radius: 3px !important;
-  box-decoration-break: clone !important;
-  -webkit-box-decoration-break: clone !important;
-  margin: 0 0.1rem !important;
-  display: inline !important;
-  line-height: inherit !important;
-  vertical-align: baseline !important;
 }
 
 .spv-doc-body ul,

@@ -112,28 +112,6 @@ export async function downloadSermonPDFDirect(sermon) {
             color: #4c1d95 !important;
             font-style: normal !important;
           }
-          #unified-sermon-pdf-paper p[style*="background"],
-          #unified-sermon-pdf-paper div[style*="background"],
-          #unified-sermon-pdf-paper h1[style*="background"],
-          #unified-sermon-pdf-paper h2[style*="background"],
-          #unified-sermon-pdf-paper h3[style*="background"],
-          #unified-sermon-pdf-paper li[style*="background"],
-          #unified-sermon-pdf-paper blockquote[style*="background"] {
-            background: transparent !important;
-            background-color: transparent !important;
-          }
-          #unified-sermon-pdf-paper span[style*="background"],
-          #unified-sermon-pdf-paper mark,
-          #unified-sermon-pdf-paper font[style*="background"] {
-            display: inline !important;
-            box-decoration-break: clone !important;
-            -webkit-box-decoration-break: clone !important;
-            padding: 0.1rem 0.3rem !important;
-            border-radius: 3px !important;
-            line-height: inherit !important;
-            vertical-align: baseline !important;
-            margin: 0 0.1rem !important;
-          }
         </style>
 
         <header style="border-bottom: 2px solid #cbd5e1; padding-bottom: 1.2rem; margin-bottom: 1.6rem;">
