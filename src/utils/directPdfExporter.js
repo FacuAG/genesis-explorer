@@ -39,13 +39,13 @@ export async function downloadSermonPDFDirect(sermon) {
         color: #0f172a !important;
         padding: 20mm 18mm 20mm 18mm !important;
         font-family: Georgia, 'Times New Roman', serif !important;
-        font-size: 14px !important;
-        line-height: 1.75 !important;
+        font-size: 18px !important;
+        line-height: 1.7 !important;
         box-sizing: border-box !important;
       ">
         <style>
           #unified-sermon-pdf-paper h1 {
-            font-size: 1.6em !important;
+            font-size: 1.4em !important;
             font-weight: 800 !important;
             color: #0f172a !important;
             border-bottom: 2px solid #2563eb !important;
@@ -57,7 +57,7 @@ export async function downloadSermonPDFDirect(sermon) {
             page-break-after: avoid !important;
           }
           #unified-sermon-pdf-paper h2 {
-            font-size: 1.3em !important;
+            font-size: 1.22em !important;
             font-weight: 700 !important;
             color: #581c87 !important;
             margin-top: 1.25rem !important;
@@ -67,7 +67,7 @@ export async function downloadSermonPDFDirect(sermon) {
             page-break-after: avoid !important;
           }
           #unified-sermon-pdf-paper h3 {
-            font-size: 1.15em !important;
+            font-size: 1.1em !important;
             font-weight: 700 !important;
             color: #1e3a8a !important;
             margin-top: 1.1rem !important;
@@ -78,7 +78,7 @@ export async function downloadSermonPDFDirect(sermon) {
           #unified-sermon-pdf-paper p {
             margin-bottom: 0.85rem !important;
             color: #0f172a !important;
-            line-height: 1.8 !important;
+            line-height: 1.7 !important;
             break-inside: avoid !important;
             page-break-inside: avoid !important;
             orphans: 3 !important;
@@ -92,7 +92,7 @@ export async function downloadSermonPDFDirect(sermon) {
           }
           #unified-sermon-pdf-paper li {
             margin-bottom: 0.4rem !important;
-            line-height: 1.8 !important;
+            line-height: 1.7 !important;
             break-inside: avoid !important;
             page-break-inside: avoid !important;
           }
@@ -102,7 +102,7 @@ export async function downloadSermonPDFDirect(sermon) {
             padding: 0.85rem 1.2rem !important;
             margin: 1.1rem 0 !important;
             border-radius: 0 8px 8px 0 !important;
-            font-size: 0.98em !important;
+            font-size: 0.96em !important;
             color: #334155 !important;
             font-style: italic !important;
             break-inside: avoid !important;
@@ -132,22 +132,22 @@ export async function downloadSermonPDFDirect(sermon) {
             border-radius: 3px !important;
             color: #ffffff !important;
             font-weight: 700 !important;
-            line-height: 1.85 !important;
+            line-height: 1.8 !important;
             margin: 0 0.1rem !important;
           }
         </style>
 
         <header style="border-bottom: 2px solid #cbd5e1; padding-bottom: 1.2rem; margin-bottom: 1.6rem;">
-          <div style="font-size: 0.75rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.4rem; font-family: system-ui, sans-serif;">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
-          <h1 style="margin: 0 0 0.75rem 0; font-size: 2.1em; font-weight: 800; color: #0f172a; font-family: Georgia, serif; line-height: 1.25; border: none; padding: 0;">${sermon.title || 'Bosquejo Homilético'}</h1>
-          <div style="display: flex; justify-content: space-between; color: #475569; font-size: 0.88em; font-family: system-ui, sans-serif;">
+          <div style="font-size: 0.78rem; font-weight: 800; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.4rem; font-family: system-ui, sans-serif;">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
+          <h1 style="margin: 0 0 0.75rem 0; font-size: 1.65em; font-weight: 800; color: #0f172a; font-family: Georgia, serif; line-height: 1.25; border: none; padding: 0;">${sermon.title || 'Bosquejo Homilético'}</h1>
+          <div style="display: flex; justify-content: space-between; color: #475569; font-size: 0.9em; font-family: system-ui, sans-serif;">
             <div><strong style="color: #0f172a;">PASAJE CLAVE:</strong> ${sermon.passage || 'Génesis'}</div>
             <div><strong style="color: #0f172a;">FECHA:</strong> ${formattedDate}</div>
           </div>
           ${sermon.proposition ? `
             <div style="background: #f8fafc; border-left: 4px solid #0284c7; padding: 0.8rem 1.1rem; border-radius: 0 8px 8px 0; margin-top: 0.85rem;">
-              <span style="display: block; font-size: 0.72rem; font-weight: 800; color: #0369a1; letter-spacing: 1px; text-transform: uppercase; font-family: system-ui, sans-serif;">PROPOSICIÓN / IDEA CENTRAL:</span>
-              <p style="margin: 0.25rem 0 0 0; color: #0f172a; font-style: italic; font-size: 1.02em; line-height: 1.5;">"${sermon.proposition}"</p>
+              <span style="display: block; font-size: 0.75rem; font-weight: 800; color: #0369a1; letter-spacing: 1px; text-transform: uppercase; font-family: system-ui, sans-serif;">PROPOSICIÓN / IDEA CENTRAL:</span>
+              <p style="margin: 0.25rem 0 0 0; color: #0f172a; font-style: italic; font-size: 1em; line-height: 1.5;">"${sermon.proposition}"</p>
             </div>
           ` : ''}
         </header>
