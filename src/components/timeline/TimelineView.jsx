@@ -158,6 +158,32 @@ export function TimelineView({
     return null;
   };
 
+  // Helper para formatear párrafos con espaciado limpio y saltos de línea (enters)
+  const renderFormattedParagraphs = (text) => {
+    if (!text) return null;
+    const paragraphs = text.split(/\n+/).filter(Boolean);
+    if (paragraphs.length > 1) {
+      return paragraphs.map((p, idx) => (
+        <p key={idx} style={{ marginBottom: idx === paragraphs.length - 1 ? 0 : '0.85rem' }}>
+          {p.trim()}
+        </p>
+      ));
+    }
+    const sentences = text.split(/(?<=\. )\s+/);
+    if (sentences.length >= 4) {
+      const mid = Math.ceil(sentences.length / 2);
+      const p1 = sentences.slice(0, mid).join(' ');
+      const p2 = sentences.slice(mid).join(' ');
+      return (
+        <>
+          <p style={{ marginBottom: '0.85rem' }}>{p1.trim()}</p>
+          <p>{p2.trim()}</p>
+        </>
+      );
+    }
+    return <p>{text}</p>;
+  };
+
   // Helper para formatear referencias bíblicas
   const formatRef = (ref) => {
     if (!ref) return 'Génesis';
@@ -844,18 +870,18 @@ export function TimelineView({
               )}
               <div className="entity-modal-section">
                 <h3>📜 Resumen Narrativo</h3>
-                <p>{selectedEntity.data.summary}</p>
+                {renderFormattedParagraphs(selectedEntity.data.summary)}
               </div>
               {selectedEntity.data.theological_significance && (
                 <div className="entity-modal-section">
                   <h3>🕊️ Enfoque Teológico</h3>
-                  <p>{selectedEntity.data.theological_significance}</p>
+                  {renderFormattedParagraphs(selectedEntity.data.theological_significance)}
                 </div>
               )}
               {selectedEntity.data.messianic_connection && (
                 <div className="entity-modal-section messianic-box">
                   <h3>✝️ Conexión Mesiánica con Jesucristo</h3>
-                  <p>{selectedEntity.data.messianic_connection}</p>
+                  {renderFormattedParagraphs(selectedEntity.data.messianic_connection)}
                 </div>
               )}
             </div>
@@ -868,7 +894,7 @@ export function TimelineView({
               <p className="entity-modal-ref">📖 Génesis Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
               <div className="entity-modal-section">
                 <h3>📜 Panorama General de la Era</h3>
-                <p>{selectedEntity.data.description}</p>
+                {renderFormattedParagraphs(selectedEntity.data.description)}
               </div>
             </div>
           )}
