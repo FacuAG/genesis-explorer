@@ -81,92 +81,87 @@
   "dispensations": [
     {
       "id": "disp_innocence",
-      "name": "Inocencia",
-      "name_en": "Innocence",
-      "order": 1,
-      "description": "El período en que el hombre vivía en perfecta comunión con Dios, sin conocimiento del mal, en el Jardín del Edén. La responsabilidad del hombre era obediencia simple: no comer del árbol del conocimiento del bien y del mal. Terminó con la Caída.",
-      "am_start": 0,
-      "am_end": 1,
-      "start_event_id": "creation_day6",
-      "end_event_id": "fall_judgment",
-      "start_reference": "Génesis 1:28-2:17",
-      "end_reference": "Génesis 3:6-24",
-      "responsibility": "Obediencia: no comer del árbol del conocimiento del bien y del mal",
-      "failure": "Desobediencia a la orden directa de Dios bajo tentación de la serpiente",
-      "judgment": "Maldición sobre la serpiente, la mujer, el hombre y la tierra. Expulsión del Edén.",
-      "color": "rgba(45, 106, 79, 0.15)",
-      "color_accent": "#2d6a4f",
-      "key_verse": {
-        "reference": "Génesis 2:16-17",
-        "text": "Y mandó Jehová Dios al hombre, diciendo: De todo árbol del huerto podrás comer; mas del árbol de la ciencia del bien y del mal no comerás; porque el día que de él comieres, ciertamente morirás."
-      }
+      "number": 1,
+      "name": "Dispensación de la Inocencia",
+      "chapters_range": "Génesis 1:28 – 3:6",
+      "in_genesis": true,
+      "steward": "Adán y Eva en el Edén",
+      "responsibility": "Llenar la tierra, sojuzgarla y no comer del Árbol del Conocimiento del Bien y del Mal.",
+      "failure": "Desobediencia a la orden divina comiendo del fruto prohibido tentados por la serpiente.",
+      "judgment": "Muerte espiritual, expulsión del Jardín del Edén y maldición sobre la creación.",
+      "grace": "El Protoevangelio (Génesis 3:15) y vestiduras de piel provistas por Dios."
     },
     {
       "id": "disp_conscience",
-      "name": "Conciencia",
-      "name_en": "Conscience",
-      "order": 2,
-      "description": "Después de la Caída, el hombre ahora conocía el bien y el mal. La responsabilidad era vivir según la conciencia que Dios había puesto en él. Sin ley escrita, sin gobierno institucional. Terminó con el Diluvio.",
-      "am_start": 1,
-      "am_end": 1657,
-      "start_event_id": "fall_expulsion",
-      "end_event_id": "noahic_covenant",
-      "start_reference": "Génesis 3:22-24",
-      "end_reference": "Génesis 8:20-9:17",
-      "responsibility": "Hacer el bien según la conciencia moral implantada por Dios",
-      "failure": "Corrupción total: 'Todo designio de los pensamientos del corazón de él era de continuo solamente el mal' (Gén. 6:5)",
-      "judgment": "Diluvio universal — destrucción de toda carne excepto Noé y su familia",
-      "color": "rgba(192, 57, 43, 0.12)",
-      "color_accent": "#c0392b",
-      "key_verse": {
-        "reference": "Génesis 6:5",
-        "text": "Y vio Jehová que la maldad de los hombres era mucha en la tierra, y que todo designio de los pensamientos del corazón de ellos era de continuo solamente el mal."
-      }
+      "number": 2,
+      "name": "Dispensación de la Conciencia",
+      "chapters_range": "Génesis 3:7 – 8:14",
+      "in_genesis": true,
+      "steward": "La Humanidad Post-Caída (Set a Noé)",
+      "responsibility": "Hacer el bien guiados por la conciencia moral interna y acercarse a Dios mediante sacrificios.",
+      "failure": "Corrupción universal, violencia desbordada e iniquidad continua en los pensamientos del hombre.",
+      "judgment": "El Cataclismo del Diluvio Universal que destruyó a toda la humanidad impenitente.",
+      "grace": "Preservación de Noé y su familia en el Arca y preservación de la vida animal."
     },
     {
       "id": "disp_human_government",
-      "name": "Gobierno Humano",
-      "name_en": "Human Government",
-      "order": 3,
-      "description": "Después del Diluvio, Dios delegó en el hombre la responsabilidad de gobernar la tierra y administrar la justicia, incluyendo la pena capital para el asesino. El hombre debía multiplicarse y poblar la tierra. En cambio, se unió en Babel para desafiar a Dios. Terminó con la confusión de lenguas.",
-      "am_start": 1657,
-      "am_end": 2083,
-      "start_event_id": "noahic_covenant",
-      "end_event_id": "babel_tower_judgment",
-      "start_reference": "Génesis 9:1-17",
-      "end_reference": "Génesis 11:1-9",
-      "responsibility": "Gobernar la tierra, administrar justicia, multiplicarse y llenar la tierra",
-      "failure": "Unión rebelde en Babel para construir una ciudad-torre y hacerse un nombre propio, en lugar de dispersarse",
-      "judgment": "Confusión de lenguas y dispersión forzada de las naciones",
-      "color": "rgba(41, 128, 185, 0.12)",
-      "color_accent": "#2980b9",
-      "key_verse": {
-        "reference": "Génesis 9:6",
-        "text": "El que derramare sangre de hombre, por el hombre su sangre será derramada; porque a imagen de Dios es hecho el hombre."
-      }
+      "number": 3,
+      "name": "Dispensación del Gobierno Humano",
+      "chapters_range": "Génesis 8:15 – 11:32",
+      "in_genesis": true,
+      "steward": "Noé y sus descendientes (Sem, Cam, Jafet)",
+      "responsibility": "Fructificar, multiplicar, poblar la tierra y administrar la justicia humana (pena capital).",
+      "failure": "Rebelión abierta en Babel bajo Nimrod, negándose a dispersarse y buscando auto-exaltación.",
+      "judgment": "Confusión de las lenguas en la Torre de Babel y dispersión forzada por toda la tierra.",
+      "grace": "Elección soberana de Abram de Ur de los Caldeos para originar una nación bendita."
     },
     {
       "id": "disp_promise",
-      "name": "Promesa",
-      "name_en": "Promise",
-      "order": 4,
-      "description": "Dios llama a un hombre específico, Abraham, y establece con él un pacto incondicional de promesas: tierra, descendencia innumerable, y bendición universal. El hombre ya no es juzgado por la humanidad en general, sino por la fe en las promesas de Dios. Esta dispensación abarca todo el período patriarcal hasta el Sinaí (Éxodo).",
-      "am_start": 2083,
-      "am_end": 2513,
-      "start_event_id": "abraham_call",
-      "end_event_id": null,
-      "note": "Esta dispensación continúa en el libro del Éxodo hasta el Sinaí (AM ~2513)",
-      "start_reference": "Génesis 12:1-3",
-      "end_reference": "Éxodo 19:1-8",
-      "responsibility": "Fe en las promesas de Dios y obediencia al pacto",
-      "failure": "Incredulidad, engaño, y confianza en medios humanos en lugar de esperar las promesas",
-      "judgment": "Disciplina familiar — no juicio colectivo sobre la nación todavía",
-      "color": "rgba(212, 172, 13, 0.12)",
-      "color_accent": "#d4ac0d",
-      "key_verse": {
-        "reference": "Génesis 12:1-3",
-        "text": "Pero Jehová había dicho a Abram: Vete de tu tierra y de tu parentela, y de la casa de tu padre, a la tierra que te mostraré. Y haré de ti una nación grande, y te bendeciré, y engrandeceré tu nombre, y serás bendición. Bendeciré a los que te bendijeren, y a los que te maldijeren maldeciré; y serán benditas en ti todas las familias de la tierra."
-      }
+      "number": 4,
+      "name": "Dispensación de la Promesa",
+      "chapters_range": "Génesis 12:1 – Éxodo 1:7",
+      "in_genesis": true,
+      "steward": "Los Patriarcas (Abraham, Isaac, Jacob, José)",
+      "responsibility": "Permanecer en la Tierra Prometida de Canaán confiando en el pacto incondicional de Dios.",
+      "failure": "Descensos periódicos a Egipto por hambrunas, faltas de fe y rivalidad tribal.",
+      "judgment": "Esclavitud prolongada en Egipto bajo un Faraón que no conocía a José.",
+      "grace": "Preservación de la descendencia patriarcal en Goshen y promesa de la gran Redención del Éxodo."
+    },
+    {
+      "id": "disp_law",
+      "number": 5,
+      "name": "Dispensación de la Ley",
+      "chapters_range": "Éxodo 19:1 – Hechos 1:26",
+      "in_genesis": false,
+      "steward": "La Nación de Israel (Moisés a los Profetas)",
+      "responsibility": "Guardar la Ley Mosaica y los 613 mandamientos para ser nación santa y luz a los gentiles.",
+      "failure": "Rebelión constante, idolatría, apostasía y rechazo del Mesías prometido.",
+      "judgment": "Cautiverios (Asiria y Babilonia), destrucción del Templo y dispersión mundial (Diáspora).",
+      "grace": "La Venida de Cristo, la Cruz del Calvario y el establecimiento del Nuevo Pacto."
+    },
+    {
+      "id": "disp_grace",
+      "number": 6,
+      "name": "Dispensación de la Gracia / Iglesia",
+      "chapters_range": "Hechos 2:1 – Apocalipsis 19:21",
+      "in_genesis": false,
+      "steward": "La Iglesia Global (Judíos y Gentiles unidos)",
+      "responsibility": "Creer en el Evangelio de Jesucristo y predicar la Gran Comisión a todas las naciones.",
+      "failure": "Apostasía del tiempo del fin, tibieza espiritual y rechazo de la verdad bíblica.",
+      "judgment": "La Gran Tribulación y el juicio sobre el sistema del Anticristo.",
+      "grace": "El Arrebatamiento de la Iglesia y la Segunda Venida Gloriosa de Cristo."
+    },
+    {
+      "id": "disp_kingdom",
+      "number": 7,
+      "name": "Dispensación del Reino Milenial",
+      "chapters_range": "Apocalipsis 20:1 – 20:15",
+      "in_genesis": false,
+      "steward": "Cristo el Rey de Reyes y los Santos Resucitados",
+      "responsibility": "Obediencia total al gobierno teocrático perfecto de Jesucristo reinando desde Jerusalén.",
+      "failure": "Rebelión final de los nacidos en el Milenio al ser Satanás liberado por breve tiempo.",
+      "judgment": "Fuego del cielo sobre la rebelión y el Juicio Final del Gran Trono Blanco.",
+      "grace": "Creación de Cielos Nuevos y Tierra Nueva por toda la eternidad."
     }
   ],
   "narrative_blocks": [
@@ -7807,7 +7802,7 @@
         "birth_am": 2168,
         "death_am": 2315,
         "lifespan": 147,
-        "notable_age": "Nació cuando Isaac tenía 60 años (AM 2168); huyó a Harán a los 77 años (AM 2245); luchó en Peniel a los 97 años; descendió a Egipto a los 130 años (AM 2298); murió a los 147 años (AM 2315)",
+        "notable_age": "Nació cuando Isaac tenía 60 años (AM 2168); huyó a Harán a los 77 años (AM 2245); luchó en Peniel a los 97 años (AM 2265); descendió a Egipto a los 130 años (AM 2298); murió a los 147 años (AM 2315)",
         "first_mention": {
           "chapter": 25,
           "verse": 26
@@ -10816,7 +10811,7 @@
       "person1_id": "shem",
       "person2_id": "jacob",
       "years_together": 50,
-      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2168, Sem murió en AM 2158... Sem murió en AM 2158 cuando Jacob tenía 50 años en AM 2108 / 2158)."
+      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2168; Sem murió en AM 2158 cuando Jacob tenía 50 años en AM 2158)."
     },
     {
       "person1_id": "abraham",
@@ -10828,13 +10823,13 @@
       "person1_id": "abraham",
       "person2_id": "jacob",
       "years_together": 15,
-      "historical_note": "Abraham convivió 15 años con su nieto Jacob (nacido en AM 2108, Abraham murió en AM 2123), dejando una impronta indeleble en su juventud."
+      "historical_note": "Abraham convivió 15 años con su nieto Jacob (nacido en AM 2168, Abraham murió en AM 2183), dejando una impronta indeleble en su juventud."
     },
     {
       "person1_id": "isaac",
       "person2_id": "jacob",
       "years_together": 120,
-      "historical_note": "Isaac convivió 120 años con su hijo Jacob (AM 2108 – 2228), hasta poco antes del descenso de la familia a Egipto."
+      "historical_note": "Isaac convivió 120 años con su hijo Jacob (AM 2168 – 2288), hasta poco antes del descenso de la familia a Egipto."
     },
     {
       "person1_id": "jacob",

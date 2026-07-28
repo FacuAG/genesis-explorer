@@ -56,66 +56,79 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
       {/* Barra de Búsqueda y Navegación Principal */}
       <div className="header-bottom-row">
         <nav className="header-nav-tabs">
-          <button
-            className={`nav-tab-btn ${activeTab === 'timeline' ? 'active' : ''}`}
-            onClick={() => setActiveTab('timeline')}
-          >
-            <span className="tab-icon">⏳</span> Línea de Tiempo
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'genealogy' ? 'active' : ''}`}
-            onClick={() => setActiveTab('genealogy')}
-          >
-            <span className="tab-icon">🌳</span> Árbol & Convivencias
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'people' ? 'active' : ''}`}
-            onClick={() => setActiveTab('people')}
-          >
-            <span className="tab-icon">👤</span> Personajes & Vidas
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'themes' ? 'active' : ''}`}
-            onClick={() => setActiveTab('themes')}
-          >
-            <span className="tab-icon">🕊️</span> Temas Teológicos
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'dispensations' ? 'active' : ''}`}
-            onClick={() => setActiveTab('dispensations')}
-          >
-            <span className="tab-icon">👑</span> Dispensaciones
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'chapters' ? 'active' : ''}`}
-            onClick={() => setActiveTab('chapters')}
-          >
-            <span className="tab-icon">📖</span> Capítulos (1-50)
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'notes' ? 'active' : ''}`}
-            onClick={() => setActiveTab('notes')}
-          >
-            <span className="tab-icon">📝</span> Cuaderno & Prédicas
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'covenants' ? 'active' : ''}`}
-            onClick={() => setActiveTab('covenants')}
-          >
-            <span className="tab-icon">📜</span> Pactos & Promesas
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'locations' ? 'active' : ''}`}
-            onClick={() => setActiveTab('locations')}
-          >
-            <span className="tab-icon">📍</span> Ubicaciones
-          </button>
-          <button
-            className={`nav-tab-btn ${activeTab === 'questions' ? 'active' : ''}`}
-            onClick={() => setActiveTab('questions')}
-          >
-            <span className="tab-icon">❓</span> Preguntas Teológicas
-          </button>
+          {/* GRUPO 1: ESTUDIO DEL LIBRO ACTIVO */}
+          <div className="nav-group book-group">
+            <span className="nav-group-title">📖 LIBRO ACTIVO (GÉNESIS)</span>
+            <div className="nav-group-buttons">
+              <button
+                className={`nav-tab-btn ${activeTab === 'timeline' ? 'active' : ''}`}
+                onClick={() => setActiveTab('timeline')}
+              >
+                <span className="tab-icon">⏳</span> Línea de Tiempo
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'chapters' ? 'active' : ''}`}
+                onClick={() => setActiveTab('chapters')}
+              >
+                <span className="tab-icon">📖</span> Capítulos (1-50)
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'people' ? 'active' : ''}`}
+                onClick={() => setActiveTab('people')}
+              >
+                <span className="tab-icon">👤</span> Personajes
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'locations' ? 'active' : ''}`}
+                onClick={() => setActiveTab('locations')}
+              >
+                <span className="tab-icon">📍</span> Ubicaciones
+              </button>
+            </div>
+          </div>
+
+          {/* GRUPO 2: HERRAMIENTAS Y MÓDULOS TRANSVERSALES (SUITE BÍBLICA GLOBAL) */}
+          <div className="nav-group global-group">
+            <span className="nav-group-title">🌐 SUITE BÍBLICA TRANSVERSAL</span>
+            <div className="nav-group-buttons">
+              <button
+                className={`nav-tab-btn ${activeTab === 'genealogy' ? 'active' : ''}`}
+                onClick={() => setActiveTab('genealogy')}
+              >
+                <span className="tab-icon">🌳</span> Árbol & Convivencias
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'covenants' ? 'active' : ''}`}
+                onClick={() => setActiveTab('covenants')}
+              >
+                <span className="tab-icon">✝️</span> Hilo Mesiánico & Pactos
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'dispensations' ? 'active' : ''}`}
+                onClick={() => setActiveTab('dispensations')}
+              >
+                <span className="tab-icon">👑</span> 7 Dispensaciones
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'themes' ? 'active' : ''}`}
+                onClick={() => setActiveTab('themes')}
+              >
+                <span className="tab-icon">🕊️</span> Temas Teológicos
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'questions' ? 'active' : ''}`}
+                onClick={() => setActiveTab('questions')}
+              >
+                <span className="tab-icon">❓</span> Preguntas Teológicas
+              </button>
+              <button
+                className={`nav-tab-btn ${activeTab === 'notes' ? 'active' : ''}`}
+                onClick={() => setActiveTab('notes')}
+              >
+                <span className="tab-icon">📝</span> Cuaderno & Prédicas
+              </button>
+            </div>
+          </div>
         </nav>
 
         {/* Buscador Global */}

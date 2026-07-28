@@ -142,12 +142,37 @@
 .header-nav-tabs {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1.25rem;
   overflow-x: auto;
-
-  /* Estilo scrollbar horizontal para pestañas */
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.nav-group.book-group {
+  border-right: 1px solid var(--border-subtle);
+  padding-right: 1.25rem;
+}
+
+.nav-group-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--accent-lila);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.nav-group-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .nav-tab-btn {
