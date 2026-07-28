@@ -113,9 +113,9 @@ export default function SermonPulpitView({ sermon, onClose }) {
         {/* CONTROLES DE LECTURA E IMPRESIÓN */}
         <div className="spv-right">
           <div className="spv-font-controls">
-            <button className="spv-btn-sm" onClick={() => setFontSize(prev => Math.max(14, prev - 2))}>A-</button>
+            <button className="spv-btn-sm" onClick={() => setFontSize(prev => Math.max(12, prev - 2))} title="Disminuir tamaño de fuente">A-</button>
             <span className="spv-font-label">{fontSize}px</span>
-            <button className="spv-btn-sm" onClick={() => setFontSize(prev => Math.min(28, prev + 2))}>A+</button>
+            <button className="spv-btn-sm" onClick={() => setFontSize(prev => Math.min(38, prev + 2))} title="Agrandar tamaño de fuente">A+</button>
           </div>
 
           <button
@@ -129,8 +129,12 @@ export default function SermonPulpitView({ sermon, onClose }) {
       </div>
 
       {/* HOJA EDITORIAL TEOLÓGICA EN PANTALLA Y EXPORTACIÓN PDF */}
-      <div className="spv-document-container" style={{ fontSize: `${fontSize}px` }}>
-        <div id="sermon-pdf-paper" className="pdf-paper-wrapper">
+      <div className="spv-document-container">
+        <div
+          id="sermon-pdf-paper"
+          className="pdf-paper-wrapper"
+          style={{ fontSize: `${fontSize}px`, lineHeight: `${Math.round(fontSize * 1.6)}px` }}
+        >
           {/* Cabecera Académica / Pastoral */}
           <header className="spv-doc-header">
             <div className="spv-doc-top-tag">DOCUMENTO DE ESTUDIO & HOMILÉTICA PASTORAL</div>
