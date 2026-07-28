@@ -547,7 +547,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
 
                     <button
                       className="srt-font-btn"
-                      onClick={() => setFontSize(prev => Math.max(13, prev - 1.5))}
+                      onClick={() => setFontSize(prev => Math.max(12, prev - 2))}
                       title="Disminuir tamaño de letra"
                     >
                       A-
@@ -555,7 +555,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                     <span className="srt-font-size-label">{fontSize}px</span>
                     <button
                       className="srt-font-btn"
-                      onClick={() => setFontSize(prev => Math.min(26, prev + 1.5))}
+                      onClick={() => setFontSize(prev => Math.min(38, prev + 2))}
                       title="Agrandar tamaño de letra"
                     >
                       A+

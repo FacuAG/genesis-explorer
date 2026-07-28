@@ -592,11 +592,16 @@
 
 .verse-paragraph {
   margin: 0;
-  color: #e2e8f0;
+  color: var(--text-main);
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.verse-paragraph * {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .verse-paragraph:hover {
