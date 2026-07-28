@@ -63,6 +63,12 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
             <span className="tab-icon">⏳</span> Línea de Tiempo
           </button>
           <button
+            className={`nav-tab-btn ${activeTab === 'genealogy' ? 'active' : ''}`}
+            onClick={() => setActiveTab('genealogy')}
+          >
+            <span className="tab-icon">🌳</span> Árbol & Convivencias
+          </button>
+          <button
             className={`nav-tab-btn ${activeTab === 'people' ? 'active' : ''}`}
             onClick={() => setActiveTab('people')}
           >

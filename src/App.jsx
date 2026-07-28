@@ -9,6 +9,7 @@ import { LocationPanel } from './components/panels/LocationPanel';
 import { DispensationPanel } from './components/panels/DispensationPanel';
 import { ChapterMapPanel } from './components/panels/ChapterMapPanel';
 import { QuestionPanel } from './components/panels/QuestionPanel';
+import { GenealogyTreePanel } from './components/panels/GenealogyTreePanel';
 import UserNotesPanel from './components/panels/UserNotesPanel';
 import './App.css';
 
@@ -137,6 +138,21 @@ export function App() {
               eventsMap={genesis.eventsMap}
               targetEventId={targetEventId}
               onSelectPerson={handleSelectPerson}
+            />
+          )}
+
+          {activeTab === 'genealogy' && (
+            <GenealogyTreePanel
+              people={genesis.people}
+              peopleMap={genesis.peopleMap}
+              notableOverlaps={genesis.notableOverlaps}
+              eventsMap={genesis.eventsMap}
+              onSelectEvent={handleSelectEvent}
+              onSelectPerson={handleSelectPerson}
+              onSelectChapter={(chapNum) => {
+                setTargetChapterNum(chapNum);
+                setActiveTab('chapters');
+              }}
             />
           )}
 
