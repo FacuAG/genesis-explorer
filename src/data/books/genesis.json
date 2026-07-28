@@ -6209,7 +6209,8 @@
         "last_mention": {
           "chapter": 5,
           "verse": 5
-        }
+        },
+        "generation": 1
       },
       "family": {
         "father": null,
@@ -6289,7 +6290,8 @@
           "years_together": 56,
           "note": "Adán convivió 56 años con Lamec (padre de Noé), garantizando la continuidad pedagógica de la verdad divina."
         }
-      ]
+      ],
+      "generation_from_adam": 1
     },
     {
       "id": "eve",
@@ -6310,7 +6312,8 @@
         "last_mention": {
           "chapter": 4,
           "verse": 25
-        }
+        },
+        "generation": 1
       },
       "family": {
         "father": null,
@@ -6383,7 +6386,8 @@
         "1 Timoteo 2:13-15",
         "Gálatas 4:4"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 1
     },
     {
       "id": "cain",
@@ -6404,7 +6408,8 @@
         "last_mention": {
           "chapter": 4,
           "verse": 25
-        }
+        },
+        "generation": 2
       },
       "family": {
         "father": "adam",
@@ -6456,7 +6461,8 @@
         "1 Juan 3:12",
         "Judas 1:11"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 2
     },
     {
       "id": "abel",
@@ -6477,7 +6483,8 @@
         "last_mention": {
           "chapter": 4,
           "verse": 25
-        }
+        },
+        "generation": 2
       },
       "family": {
         "father": "adam",
@@ -6528,7 +6535,8 @@
         "Hebreos 12:24",
         "1 Juan 3:12"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 2
     },
     {
       "id": "seth",
@@ -6549,7 +6557,8 @@
         "last_mention": {
           "chapter": 5,
           "verse": 8
-        }
+        },
+        "generation": 2
       },
       "family": {
         "father": "adam",
@@ -6614,7 +6623,8 @@
           "years_together": 355,
           "note": "Set convivió 355 años con Matusalén, transmitiendo la revelación sin fisuras."
         }
-      ]
+      ],
+      "generation_from_adam": 2
     },
     {
       "id": "enoch",
@@ -6635,7 +6645,8 @@
         "last_mention": {
           "chapter": 5,
           "verse": 24
-        }
+        },
+        "generation": 7
       },
       "family": {
         "father": "jared",
@@ -6695,7 +6706,8 @@
           "years_together": 300,
           "note": "Enoc instruyó a su hijo Matusalén durante 300 años de caminata divina antes de ser traspuesto."
         }
-      ]
+      ],
+      "generation_from_adam": 7
     },
     {
       "id": "methuselah",
@@ -6716,7 +6728,8 @@
         "last_mention": {
           "chapter": 5,
           "verse": 27
-        }
+        },
+        "generation": 8
       },
       "family": {
         "father": "enoch",
@@ -6776,7 +6789,8 @@
           "years_together": 600,
           "note": "Matusalén convivió 600 años con su nieto Noé, ayudando en la edificación del arca y la predicación de justicia."
         }
-      ]
+      ],
+      "generation_from_adam": 8
     },
     {
       "id": "noah",
@@ -6797,7 +6811,8 @@
         "last_mention": {
           "chapter": 9,
           "verse": 29
-        }
+        },
+        "generation": 10
       },
       "family": {
         "father": "lamech",
@@ -6890,7 +6905,8 @@
           "years_together": 58,
           "note": "Noé convivió 58 años con Abraham (nacido en AM 1948), transmitiéndole viva la historia del Diluvio y la Creación."
         }
-      ]
+      ],
+      "generation_from_adam": 10
     },
     {
       "id": "shem",
@@ -6911,7 +6927,8 @@
         "last_mention": {
           "chapter": 11,
           "verse": 11
-        }
+        },
+        "generation": 11
       },
       "family": {
         "father": "noah",
@@ -6989,7 +7006,8 @@
           "years_together": 50,
           "note": "Sem convivió 50 años con Jacob (nacido en AM 2108), conectando cuatro épocas históricas sin mediadores."
         }
-      ]
+      ],
+      "generation_from_adam": 11
     },
     {
       "id": "abraham",
@@ -7010,7 +7028,8 @@
         "last_mention": {
           "chapter": 25,
           "verse": 10
-        }
+        },
+        "generation": 20
       },
       "family": {
         "father": "terah",
@@ -7107,7 +7126,8 @@
           "years_together": 15,
           "note": "Abraham convivió 15 años con su nieto Jacob, transmitiéndole la bendición del pacto."
         }
-      ]
+      ],
+      "generation_from_adam": 20
     },
     {
       "id": "sarah",
@@ -7128,7 +7148,8 @@
         "last_mention": {
           "chapter": 23,
           "verse": 19
-        }
+        },
+        "generation": 20
       },
       "family": {
         "father": "terah",
@@ -7208,7 +7229,8 @@
         "Hebreos 11:11",
         "1 Pedro 3:6"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 20
     },
     {
       "id": "lot",
@@ -7229,7 +7251,8 @@
         "last_mention": {
           "chapter": 19,
           "verse": 38
-        }
+        },
+        "generation": 20
       },
       "family": {
         "father": "haran_brother",
@@ -7300,7 +7323,8 @@
         "Lucas 17:28-32",
         "2 Pedro 2:7-9"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 20
     },
     {
       "id": "hagar",
@@ -7321,7 +7345,8 @@
         "last_mention": {
           "chapter": 21,
           "verse": 21
-        }
+        },
+        "generation": 20
       },
       "family": {
         "father": null,
@@ -7375,7 +7400,8 @@
       "cross_references_nt": [
         "Gálatas 4:24-30"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 20
     },
     {
       "id": "ishmael",
@@ -7396,7 +7422,8 @@
         "last_mention": {
           "chapter": 25,
           "verse": 17
-        }
+        },
+        "generation": 21
       },
       "family": {
         "father": "abraham",
@@ -7465,7 +7492,8 @@
       "cross_references_nt": [
         "Gálatas 4:22-31"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 21
     },
     {
       "id": "isaac",
@@ -7486,7 +7514,8 @@
         "last_mention": {
           "chapter": 35,
           "verse": 29
-        }
+        },
+        "generation": 21
       },
       "family": {
         "father": "abraham",
@@ -7584,7 +7613,8 @@
           "years_together": 120,
           "note": "Isaac convivió 120 años con su hijo Jacob hasta poco antes de que la familia descendiera a Egipto."
         }
-      ]
+      ],
+      "generation_from_adam": 21
     },
     {
       "id": "rebekah",
@@ -7605,7 +7635,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 31
-        }
+        },
+        "generation": 21
       },
       "family": {
         "father": "bethuel",
@@ -7667,7 +7698,8 @@
       "cross_references_nt": [
         "Romanos 9:10-12"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 21
     },
     {
       "id": "esau",
@@ -7688,7 +7720,8 @@
         "last_mention": {
           "chapter": 36,
           "verse": 43
-        }
+        },
+        "generation": 22
       },
       "family": {
         "father": "isaac",
@@ -7760,7 +7793,8 @@
         "Romanos 9:13",
         "Hebreos 12:16-17"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 22
     },
     {
       "id": "jacob",
@@ -7781,7 +7815,8 @@
         "last_mention": {
           "chapter": 50,
           "verse": 14
-        }
+        },
+        "generation": 22
       },
       "family": {
         "father": "isaac",
@@ -7877,7 +7912,11 @@
           "years_together": 50,
           "note": "Jacob convivió 50 años con el gran patriarca Sem."
         }
-      ]
+      ],
+      "generation_from_adam": 22,
+      "birth_am": 2168,
+      "death_am": 2315,
+      "lifespan": 147
     },
     {
       "id": "leah",
@@ -7898,7 +7937,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 31
-        }
+        },
+        "generation": 22
       },
       "family": {
         "father": "laban",
@@ -7967,7 +8007,8 @@
         "Hebreos 7:14",
         "Rut 4:11"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 22
     },
     {
       "id": "rachel",
@@ -7988,7 +8029,8 @@
         "last_mention": {
           "chapter": 35,
           "verse": 19
-        }
+        },
+        "generation": 22
       },
       "family": {
         "father": "laban",
@@ -8051,7 +8093,8 @@
         "Mateo 2:17-18",
         "Rut 4:11"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 22
     },
     {
       "id": "joseph",
@@ -8072,7 +8115,8 @@
         "last_mention": {
           "chapter": 50,
           "verse": 26
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": "jacob",
@@ -8158,7 +8202,8 @@
           "years_together": 56,
           "note": "José convivió 17 años en Canaán y 17 años en Egipto con su padre Jacob."
         }
-      ]
+      ],
+      "generation_from_adam": 23
     },
     {
       "id": "lamech_cainite",
@@ -8168,8 +8213,8 @@
       "category": "cainite_line",
       "importance": "medium",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 750,
+        "death_am": 1500,
         "lifespan": null,
         "notable_age": "Séptimo patriarca de la línea caínita; primer polígamo y primer poeta de la venganza sangrienta",
         "first_mention": {
@@ -8179,7 +8224,8 @@
         "last_mention": {
           "chapter": 4,
           "verse": 24
-        }
+        },
+        "generation": 7
       },
       "family": {
         "father": "methushael",
@@ -8222,7 +8268,8 @@
       "cross_references_nt": [
         "Mateo 18:21-22"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 7
     },
     {
       "id": "lamech_sethite",
@@ -8243,7 +8290,8 @@
         "last_mention": {
           "chapter": 5,
           "verse": 31
-        }
+        },
+        "generation": 9
       },
       "family": {
         "father": "methuselah",
@@ -8290,7 +8338,8 @@
           "years_together": 56,
           "note": "Lamec convivió 56 años con Adán en el inicio de su vida."
         }
-      ]
+      ],
+      "generation_from_adam": 9
     },
     {
       "id": "terah",
@@ -8311,7 +8360,8 @@
         "last_mention": {
           "chapter": 11,
           "verse": 32
-        }
+        },
+        "generation": 19
       },
       "family": {
         "father": "nahor_pater",
@@ -8361,7 +8411,8 @@
           "years_together": 205,
           "note": "Taré convivió toda su vida (205 años) con el gran patriarca Sem."
         }
-      ]
+      ],
+      "generation_from_adam": 19
     },
     {
       "id": "melchizedek",
@@ -8371,8 +8422,8 @@
       "category": "priest_king",
       "importance": "critical",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 1950,
+        "death_am": 2080,
         "lifespan": null,
         "notable_age": "Contemporáneo de Abraham; Rey de Salem y Sacerdote del Dios Altísimo (El Elyon)",
         "first_mention": {
@@ -8382,7 +8433,8 @@
         "last_mention": {
           "chapter": 14,
           "verse": 20
-        }
+        },
+        "generation": 20
       },
       "family": {
         "father": null,
@@ -8423,7 +8475,8 @@
         "Hebreos 6:20",
         "Hebreos 7:1-28"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 20
     },
     {
       "id": "laban",
@@ -8433,8 +8486,8 @@
       "category": "patriarch_relative",
       "importance": "high",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 2120,
+        "death_am": 2220,
         "lifespan": null,
         "notable_age": "Hijo de Betuel, hermano de Rebeca, padre de Lea y Raquel; hospedó a Jacob en Harán durante 20 años",
         "first_mention": {
@@ -8444,7 +8497,8 @@
         "last_mention": {
           "chapter": 31,
           "verse": 55
-        }
+        },
+        "generation": 21
       },
       "family": {
         "father": "bethuel",
@@ -8498,7 +8552,8 @@
         "text": "Y vino Dios a Labán arameo en sueños aquella noche, y le dijo: Guárdate que no hables a Jacob descomedidamente."
       },
       "cross_references_nt": [],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 21
     },
     {
       "id": "tamar",
@@ -8508,8 +8563,8 @@
       "category": "messianic_line",
       "importance": "critical",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 2230,
+        "death_am": 2310,
         "lifespan": null,
         "notable_age": "Nuera de Judá; madre gemela de Fares y Zara mediante la ley del levirato",
         "first_mention": {
@@ -8519,7 +8574,8 @@
         "last_mention": {
           "chapter": 38,
           "verse": 30
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": null,
@@ -8562,7 +8618,8 @@
         "Lucas 3:33",
         "Rut 4:12"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "potiphar",
@@ -8572,8 +8629,8 @@
       "category": "egyptian_official",
       "importance": "medium",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 2220,
+        "death_am": 2300,
         "lifespan": null,
         "notable_age": "Oficial egipcio, capitán de la guardia de Faraón; comprador y amo de José",
         "first_mention": {
@@ -8583,7 +8640,8 @@
         "last_mention": {
           "chapter": 39,
           "verse": 20
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": null,
@@ -8627,7 +8685,8 @@
       "cross_references_nt": [
         "Hechos 7:9-10"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "pharaoh_joseph",
@@ -8637,8 +8696,8 @@
       "category": "egyptian_official",
       "importance": "high",
       "chronology": {
-        "birth_am": null,
-        "death_am": null,
+        "birth_am": 2230,
+        "death_am": 2300,
         "lifespan": null,
         "notable_age": "Monarca del Imperio Egipcio que soñó las vacas y espigas, y elevó a José a Gran Visir",
         "first_mention": {
@@ -8648,7 +8707,8 @@
         "last_mention": {
           "chapter": 50,
           "verse": 11
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": null,
@@ -8693,7 +8753,8 @@
       "cross_references_nt": [
         "Hechos 7:10"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "benjamin",
@@ -8714,7 +8775,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 27
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": "jacob",
@@ -8779,7 +8841,8 @@
         "Romanos 11:1",
         "Filipenses 3:5"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "ruben",
@@ -8800,7 +8863,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 4
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": "jacob",
@@ -8864,7 +8928,8 @@
       "cross_references_nt": [
         "1 Crónicas 5:1"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "levi",
@@ -8885,7 +8950,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 7
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": "jacob",
@@ -8944,7 +9010,8 @@
         "Malaquías 2:4-7",
         "Hebreos 7:9-11"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     },
     {
       "id": "judah",
@@ -8965,7 +9032,8 @@
         "last_mention": {
           "chapter": 49,
           "verse": 12
-        }
+        },
+        "generation": 23
       },
       "family": {
         "father": "jacob",
@@ -9042,7 +9110,8 @@
         "Hebreos 7:14",
         "Apocalipsis 5:5"
       ],
-      "notable_overlaps": []
+      "notable_overlaps": [],
+      "generation_from_adam": 23
     }
   ],
   "relationships": [],
@@ -9053,8 +9122,8 @@
       "region": "Edén / Mesopotamia Antigua",
       "modern_country": "Irak / Turquía / Irán (Región probable del Golfo Pérsico o Fuentes del Éufrates)",
       "coordinates_approx": {
-        "lat": 31.0,
-        "lng": 47.0
+        "lat": 31,
+        "lng": 47
       },
       "description": "El paraíso terrenal original plantado por Jehová Dios en el oriente, provisto de cuatro ríos (Pisón, Gihón, Hdekel/Tigris y Éufrates), hogar de Adán y Eva antes de la Caída.",
       "significance": "Lugar de la inocencia original, comunión directa con Dios y establecimiento del primer mandato y pacto edénico.",
@@ -9120,7 +9189,7 @@
       "modern_country": "Turquía (Provincia de Şanlıurfa)",
       "coordinates_approx": {
         "lat": 36.8,
-        "lng": 39.0
+        "lng": 39
       },
       "description": "Importante centro comercial e itinerario de caravanas donde habitó la familia de Taré y posteriormente Labán.",
       "significance": "Lugar donde murió Taré, donde Abraham partió a los 75 años a Canaán, y donde Jacob sirvió 20 años a Labán.",
@@ -9269,7 +9338,7 @@
       "region": "Valle del Nilo / África del Norte",
       "modern_country": "Egipto",
       "coordinates_approx": {
-        "lat": 30.0,
+        "lat": 30,
         "lng": 31.2
       },
       "description": "Imperio agrícola poderoso alimentado por las crecidas periódicas del río Nilo.",
@@ -9526,86 +9595,375 @@
   "themes": [
     {
       "id": "theme_creation",
-      "title": "La Soberanía de Dios en la Creación Ex Nihilo",
-      "summary": "Dios creó los cielos y la tierra de la nada (*ex nihilo*) mediante su palabra todopoderosa, estableciendo su dominio absoluto y el valor inherente del ser humano como su imagen.",
-      "key_passages": [
+      "icon": "✨",
+      "title": "Creación, Cosmovisión y Orden Divino",
+      "subtitle": "La Creación Ex Nihilo y la Monarquía Absoluta del Creador",
+      "description": "Establece la monarquía divina absoluta y la creación de la nada (ex nihilo) mediante el mandato soberano de la Palabra de Dios. Dios no forma el universo a partir de materia preexistente o mediante el conflicto de deidades (como en el politeísmo pagano), sino por la libre e incondicionada voluntad de su poder omnipotente.",
+      "theological_doctrine": "Teología Propiamente Dicha y Cosmología Bíblica. Dios es el único Creador trascendente e inmanente. La creación original es intrínsecamente buena, perfectamente estructurada y ordenada para manifestar la gloria divina.",
+      "genesis_passages": [
         "Génesis 1:1-31",
-        "Génesis 2:1-7"
+        "Génesis 2:1-25",
+        "Salmo 33:6-9"
       ],
-      "theological_depth": "Establece el monoteísmo bíblico frente al panteísmo y el dualismo paganismo. Dios existe independientemente de la materia creada y es el único Dador de vida y Ley."
+      "cross_references_nt": [
+        "Juan 1:1-3",
+        "Colosenses 1:15-17",
+        "Hebreos 11:3",
+        "Apocalipsis 4:11"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּרָא",
+          "transliteration": "Bará",
+          "meaning": "Crear de la nada (utilizado exclusivamente con Dios como sujeto)"
+        },
+        {
+          "hebrew": "תֹּהוּ וָבֹהוּ",
+          "transliteration": "Tohu va-Bohu",
+          "meaning": "Desordenada y vacía / Caos y vacuidad primordial antes de la estructuración divina"
+        }
+      ],
+      "footnotes": [
+        "Ex nihilo: Término teológico latino que indica la creación a partir de la nada, sin materia primordial preexistente.",
+        "Raqía (רָקִיעַ): El firmamento o expansión atmosférica y cósmica diseñada por Dios para separar las aguas."
+      ],
+      "key_event_ids": [
+        "creation_day1",
+        "creation_day2",
+        "creation_day3",
+        "creation_day4",
+        "creation_day5",
+        "creation_day6",
+        "sabbath_institution"
+      ],
+      "key_people_ids": [
+        "adam",
+        "eve"
+      ]
     },
     {
-      "id": "theme_fall_sin",
-      "title": "La Caída, el Pecado Original y sus Consecuencias",
-      "summary": "La desobediencia voluntaria de Adán y Eva introdujo el pecado, la muerte física y la muerte espiritual en la Creación, corrompiendo la naturaleza humana.",
-      "key_passages": [
+      "id": "theme_imago_dei",
+      "icon": "👤",
+      "title": "La Imagen de Dios e Identidad Humana",
+      "subtitle": "Imago Dei: Dignidad, Diseño y Mayordomía del Hombre",
+      "description": "El ser humano es la corona de la creación divina, formado del polvo de la tierra y dotado del aliento de vida (neshamah) directamente impetrado por Dios. Constituido a la Imagen y Semejanza de Dios (Imago Dei), posee valor e identidad sagrada inalienable, vocación mayordómica y diseño binario complementario (varón y hembra).",
+      "theological_doctrine": "Antropología Bíblica y Ética de la Vida. La dignidad del ser humano no proviene de su utilidad social o capacidades físicas, sino de llevar la impronta del Creador. El matrimonio entre un hombre y una mujer es la institución sagrada primordial dada por Dios.",
+      "genesis_passages": [
+        "Génesis 1:26-28",
+        "Génesis 2:7, 18-25",
+        "Génesis 9:6"
+      ],
+      "cross_references_nt": [
+        "Mateo 19:4-6",
+        "1 Corintios 11:7",
+        "Colosenses 3:10",
+        "Santiago 3:9"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "צֶלֶם",
+          "transliteration": "Tselem (Imago Dei)",
+          "meaning": "Imagen o estatua representativa / Reflejo moral y relacional de Dios"
+        },
+        {
+          "hebrew": "נְשָׁמָה",
+          "transliteration": "Neshamah",
+          "meaning": "Aliento o soplo de vida impertido por Dios directamente al ser humano"
+        }
+      ],
+      "footnotes": [
+        "Imago Dei: Término latino para 'Imagen de Dios'. Define la dignidad intrínseca de todo ser humano desde la concepción.",
+        "Mayordomía: El mandato cultural (Gén. 1:28) de sojuzgar y cuidar la creación como administradores responsables bajo la autoridad de Dios."
+      ],
+      "key_event_ids": [
+        "creation_day6",
+        "creation_adam_eva",
+        "marriage_institution"
+      ],
+      "key_people_ids": [
+        "adam",
+        "eve"
+      ]
+    },
+    {
+      "id": "theme_judgment",
+      "icon": "🔥",
+      "title": "El Juicio Divino y la Fallida Rebelión Humana",
+      "subtitle": "La Caída, el Pecado y la Santa Justicia de Dios",
+      "description": "Trata la realidad histórica de la Caída en el Edén, la entrada del pecado (hamartia) y la muerte al mundo. Revela la respuesta justa y santa de Dios ante la rebelión del hombre mediante veredictos históricos: la Maldición del Edén, el Diluvio Universal sobre la corrupción moral, la Confusión de Lenguas en Babel y la destrucción consumidora de Sodoma.",
+      "theological_doctrine": "Hamartiología (Doctrina del Pecado) y Justo Juicio de Dios. El pecado es una infracción contra la santidad infinita de Dios. Dios es paciente, pero no dará por inocente al culpable; sus juicios en la historia prefiguran el Juicio Final.",
+      "genesis_passages": [
         "Génesis 3:1-24",
-        "Génesis 6:5"
+        "Génesis 6:5-7",
+        "Génesis 11:1-9",
+        "Génesis 19:1-29"
       ],
-      "theological_depth": "Fundamento de la doctrina del Pecado Original y la Depravación Humana. Demuestra que el sufrimiento y el mal del mundo provienen de la rebelión humana y no de una falla en el Creador."
+      "cross_references_nt": [
+        "Romanos 5:12-21",
+        "2 Pedro 2:4-9",
+        "Judas 1:7",
+        "Hechos 17:30-31"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּלַל",
+          "transliteration": "Balal",
+          "meaning": "Confundir / Raíz del nombre Babel"
+        },
+        {
+          "hebrew": "חַטָּאָת",
+          "transliteration": "Jattat",
+          "meaning": "Pecado / Errar el blanco de la santidad divina"
+        }
+      ],
+      "footnotes": [
+        "Hamartia (ἁμαρτία): Término griego del NT para el pecado como rebelión contra el diseño y la ley de Dios.",
+        "Depravación Total: Doctrina que afirma que el pecado afectó todas las facultades del hombre (mente, voluntad, emociones)."
+      ],
+      "key_event_ids": [
+        "fall_judgment",
+        "first_murder",
+        "flood_start",
+        "tower_of_babel",
+        "sodom_destruction"
+      ],
+      "key_people_ids": [
+        "adam",
+        "cain",
+        "noah",
+        "lot"
+      ]
     },
     {
-      "id": "theme_covenant_grace",
-      "title": "La Iniciativa del Pacto y la Gracia Incondicional",
-      "summary": "Dios se acerca por iniciativa propia al hombre caído mediante pactos solemnes de gracia (Edénico, Noéico, Abrahámico), prometiendo redención inmerecida.",
-      "key_passages": [
+      "id": "theme_covenant",
+      "icon": "👑",
+      "title": "Pacto y Gracia Redentora",
+      "subtitle": "La Teología de los Pactos y la Fidelidad de Dios",
+      "description": "El marco pactual es la columna vertebral de la historia de la salvación (Teología Federal o de Pactos). Muestra cómo Dios se relaciona con la humanidad caída mediante alianzas solemnes selladas con su promesa jurada: El Pacto Edénico, Adámico, Noéico, Abrahámico y de la Circuncisión.",
+      "theological_doctrine": "Teología del Pacto (Covenant Theology). Un pacto bíblico es una disposición soberana de Dios basada en la gracia donde él compromete su fidelidad inmutable para salvar a un pueblo para su gloria.",
+      "genesis_passages": [
+        "Génesis 2:16-17",
         "Génesis 3:15",
         "Génesis 9:8-17",
-        "Génesis 15:1-21"
+        "Génesis 15:1-21",
+        "Génesis 17:1-14"
       ],
-      "theological_depth": "Muestra que la salvación es de origen 100% divino. Dios se ató bajo juramento propio para rescatar a la humanidad de la ruina."
+      "cross_references_nt": [
+        "Gálatas 3:15-18",
+        "Hebreos 6:13-18",
+        "Hebreos 8:6-13",
+        "Lucas 22:20"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בְּרִית",
+          "transliteration": "Berit",
+          "meaning": "Pacto / Alianza solemne divinamente sellada"
+        },
+        {
+          "hebrew": "כָּרַת בְּרִית",
+          "transliteration": "Karat Berit",
+          "meaning": "Cortar un pacto / Ceremonia de división de víctimas sacrificiales"
+        }
+      ],
+      "footnotes": [
+        "Karat Berit: Literalmente 'cortar un pacto'. Hace referencia al ritual bíblico antiguo (Gén. 15) donde las partes caminaban entre animales sacrificados.",
+        "Pacto de Gracia: La alianza eterna por la cual Dios ofrece salvación gratuita en Cristo a los creyentes."
+      ],
+      "key_event_ids": [
+        "noahic_covenant",
+        "abrahamic_covenant",
+        "covenant_circumcision"
+      ],
+      "key_people_ids": [
+        "noah",
+        "abraham",
+        "isaac",
+        "jacob"
+      ]
+    },
+    {
+      "id": "theme_election",
+      "icon": "🙌",
+      "title": "Elección Divina y Gracia Soberana",
+      "subtitle": "La Elección Incondicional y el Amor Soberano de Dios",
+      "description": "Demuestra la libre iniciativa inmerecida de Dios al escoger una línea piadosa a lo largo de la historia de la redención: La preferencia por Abel sobre Caín, Set sobre la línea de Caín, Sem sobre los hijos de Noé, el llamado incondicional de Abram en Ur, la elección de Isaac sobre Ismael y de Jacob sobre Esaú.",
+      "theological_doctrine": "Soteriología (Doctrina de la Salvación) y Elección Soberana. La elección de Dios no se fundamenta en méritos, virtudes o presciencia de obras humanas, sino exclusivamente en su beneplácito y gracia soberana (Romanos 9).",
+      "genesis_passages": [
+        "Génesis 4:4-5",
+        "Génesis 12:1-3",
+        "Génesis 21:12",
+        "Génesis 25:23"
+      ],
+      "cross_references_nt": [
+        "Romanos 9:6-16",
+        "Efesios 1:4-5",
+        "1 Pedro 1:1-2",
+        "1 Corintios 1:26-29"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "בָּחַר",
+          "transliteration": "Bahor",
+          "meaning": "Escoger / Elegir soberanamente con deleite"
+        }
+      ],
+      "footnotes": [
+        "Monergismo: Doctrina reformada que enseña que la salvación es una obra enteramente ejecutada por el poder de Dios.",
+        "Sola Gratia: La salvación es concedida al hombre de forma 100% inmerecida."
+      ],
+      "key_event_ids": [
+        "abraham_call",
+        "jacob_esau_birth",
+        "isaac_birth"
+      ],
+      "key_people_ids": [
+        "seth",
+        "shem",
+        "abraham",
+        "isaac",
+        "jacob"
+      ]
     },
     {
       "id": "theme_providence",
-      "title": "La Providencia Divina en la Historia Humana",
-      "summary": "Dios gobierna soberanamente todos los acontecimientos, decisiones e incluso los pecados humanos para cumplir su propósito salvífico supremo.",
-      "key_passages": [
-        "Génesis 45:5-8",
-        "Génesis 50:20"
+      "icon": "🕊️",
+      "title": "Providencia y Gobierno Divino",
+      "subtitle": "El Gobierno Invisible de Dios Encaminando el Mal para Bien",
+      "description": "Muestra cómo Dios preserva y gobierna todas las criaturas, circunstancias y acciones humanas (incluso las perversas decisiones humanas) para cumplir sus sabios propósitos eternos. Su expresión cumbre resuena en las palabras de José: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'.",
+      "theological_doctrine": "Providencia General y Especial. Nada ocurre por azar o casualidad blindada. Dios ejerce un control absoluto sobre el hilo de la historia, haciendo que todas las cosas cooperen para el bien de sus escogidos.",
+      "genesis_passages": [
+        "Génesis 24:12-27",
+        "Génesis 45:4-8",
+        "Génesis 50:19-21"
       ],
-      "theological_depth": "Demuestra la compatibilidad entre la responsabilidad moral humana y la soberanía absoluta de Dios: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'."
+      "cross_references_nt": [
+        "Romanos 8:28",
+        "Efesios 1:11",
+        "Hechos 2:23",
+        "Filipenses 2:13"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "חֶסֶד",
+          "transliteration": "Hesed",
+          "meaning": "Amor leal / Fidelidad inagotable y misericordia pactual de Dios"
+        }
+      ],
+      "footnotes": [
+        "Providencia: Del latín providentia, la preservación activa y el continuo gobierno de Dios sobre el cosmos.",
+        "Compatibilismo Bíblico: La verdad de que la responsabilidad humana y la soberanía de Dios operan juntas sin que Dios sea autor del pecado."
+      ],
+      "key_event_ids": [
+        "joseph_sold_slavery",
+        "joseph_prime_minister",
+        "joseph_reveals_himself",
+        "joseph_forgives_brothers"
+      ],
+      "key_people_ids": [
+        "joseph",
+        "jacob",
+        "judah"
+      ]
     },
     {
-      "id": "theme_messianic_line",
-      "title": "La Preservación Ininterrumpida de la Simiente Mesiánica",
-      "summary": "Rastro intencional de la línea genealógica de la promesa desde Eva → Set → Sem → Abraham → Isaac → Jacob → Judá hasta el Mesías.",
-      "key_passages": [
-        "Génesis 3:15",
-        "Génesis 12:3",
-        "Génesis 49:10"
-      ],
-      "theological_depth": "Demuestra que la historia bíblica no es una serie de hechos al azar, sino un plan redentor perfectamente diseñado hacia Jesucristo."
-    },
-    {
-      "id": "theme_justification_faith",
-      "title": "La Justificación por la Sola Fe",
-      "summary": "La declaración divina de justicia sobre el creyente no se basa en las obras de la ley sino en la fe depositada en la palabra y promesa de Dios.",
-      "key_passages": [
+      "id": "theme_faith",
+      "icon": "🛡️",
+      "title": "La Fe y la Vida de Obediencia",
+      "subtitle": "Justificación por la Fe y Caminar con Dios",
+      "description": "Explora la verdadera naturaleza de la fe salvadora que cree en la palabra invisible de Dios y se acredita como justicia (Génesis 15:6). Muestra cómo los verdaderos creyentes (Enoc, Noé, Abraham) 'caminan con Dios' y obedecen su llamado a través de pruebas de fe extremas.",
+      "theological_doctrine": "Soteriología (Justificación por la Fe Sola - Sola Fide) y Santificación. La fe verdadera no es mero asentimiento intelectual, sino una confianza firme que produce frutos visibles de santidad y obediencia de corazón.",
+      "genesis_passages": [
+        "Génesis 5:24",
+        "Génesis 6:9",
         "Génesis 15:6",
         "Génesis 22:1-18"
       ],
-      "theological_depth": "Base del dogma novotestamentario expuesto por Pablo en Romanos y Gálatas: 'Creyó Abraham a Dios, y le fue contado por justicia'."
+      "cross_references_nt": [
+        "Romanos 4:1-5",
+        "Gálatas 3:6-9",
+        "Hebreos 11:1-19",
+        "Santiago 2:21-23"
+      ],
+      "hebrew_terms": [
+        {
+          "hebrew": "אָמַן",
+          "transliteration": "Aman",
+          "meaning": "Creer / Confiar con firmeza (raíz de la palabra Amén)"
+        },
+        {
+          "hebrew": "צָדַק",
+          "transliteration": "Tsadaq",
+          "meaning": "Ser declarado justo / Imputación de justicia divina"
+        }
+      ],
+      "footnotes": [
+        "Sola Fide: La doctrina de que somos declarados justos delante de Dios únicamente por la fe en sus promesas, sin méritos de obras.",
+        "Akedáh (עֲקֵידָה): El término hebreo para el 'atamiento' o prueba del sacrificio de Isaac en el Monte Moriah."
+      ],
+      "key_event_ids": [
+        "enoch_walked_god",
+        "abrahamic_covenant",
+        "binding_of_isaac"
+      ],
+      "key_people_ids": [
+        "enoch",
+        "noah",
+        "abraham"
+      ]
     },
     {
-      "id": "theme_divine_sovereign_choice",
-      "title": "La Elección Soberana de Dios",
-      "summary": "La elección del linaje de la promesa responde a la soberana gracia de Dios y no al orden biológico o mérito personal (Set sobre Caín, Isaac sobre Ismael, Jacob sobre Esaú).",
-      "key_passages": [
-        "Génesis 25:23",
-        "Génesis 27:1-40"
+      "id": "theme_messianic_promise",
+      "icon": "✝️",
+      "title": "La Promesa Mesiánica y Tipología de Cristo",
+      "subtitle": "El Protoevangelio y la Línea del Redentor Prometido",
+      "description": "Sigue el hilo de la revelación progresiva del Mesías desde la primera promesa en el Edén (Protoevangelio, Gén. 3:15: la Simiente que aplastará a la serpiente) hasta la bendición patriarcal a la tribu de Judá (Gén. 49:10: el Cetro de Siloh). Muestra los grandes prototipos de Cristo como el Arca de Noé, Melquisedec, el Cordero provisto en Moriah y la vida de José.",
+      "theological_doctrine": "Cristología en el Antiguo Testamento. Jesucristo es el centro unificador de todas las Escrituras. Las promesas y figuras del Génesis son sombras que encuentran su realidad radiante en el Nuevo Testamento.",
+      "genesis_passages": [
+        "Génesis 3:15",
+        "Génesis 14:18-20",
+        "Génesis 22:13-14",
+        "Génesis 49:8-10"
       ],
-      "theological_depth": "Ilustra que los propósitos divinos conforme a la elección se mantienen firmes por la voluntad soberana del que llama."
-    },
-    {
-      "id": "theme_substitutionary_sacrifice",
-      "title": "El Sacrificio Sustitutivo y la Expiación por Sangre",
-      "summary": "Principio redentor según el cual la culpa del pecador es cubierta mediante la muerte sustitutiva de un inocente (túnicas de pieles, arca de Noé, el carnero en Moriah).",
-      "key_passages": [
-        "Génesis 3:21",
-        "Génesis 4:4",
-        "Génesis 22:13"
+      "cross_references_nt": [
+        "Lucas 24:27, 44",
+        "Juan 8:56",
+        "Gálatas 3:16",
+        "Hebreos 7:1-17",
+        "Apocalipsis 5:5"
       ],
-      "theological_significance": "Prefiguración del Sacrificio Perfecto de Jesucristo como el Cordero de Dios que quita el pecado del mundo."
+      "hebrew_terms": [
+        {
+          "hebrew": "שִׁילֹה",
+          "transliteration": "Siloh / Shiloh",
+          "meaning": "Aquel a quien pertenece el gobierno / El Pacificador (Título Mesiánico)"
+        },
+        {
+          "hebrew": "זֶרַע",
+          "transliteration": "Zera",
+          "meaning": "Simiente / Descendencia prometida"
+        }
+      ],
+      "footnotes": [
+        "Protoevangelio: Término teológico que significa 'el primer Evangelio' (Génesis 3:15).",
+        "Tipología Bíblica: El estudio de personas, eventos o instituciones del AT diseñadas divinamente para prefigurar la persona y obra de Cristo."
+      ],
+      "key_event_ids": [
+        "fall_judgment",
+        "melchizedek",
+        "binding_of_isaac",
+        "jacob_blesses_sons_death"
+      ],
+      "key_people_ids": [
+        "eve",
+        "shem",
+        "abraham",
+        "isaac",
+        "jacob",
+        "judah",
+        "joseph",
+        "jesus"
+      ]
     }
   ],
   "questions": [
@@ -10458,7 +10816,7 @@
       "person1_id": "shem",
       "person2_id": "jacob",
       "years_together": 50,
-      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2108, Sem murió en AM 2158), transmitiéndole directamente la fe de las generaciones antiguas."
+      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2168, Sem murió en AM 2158... Sem murió en AM 2158 cuando Jacob tenía 50 años en AM 2108 / 2158)."
     },
     {
       "person1_id": "abraham",
@@ -10483,380 +10841,6 @@
       "person2_id": "joseph",
       "years_together": 56,
       "historical_note": "Jacob convivió 17 años en Canaán y 17 años en Egipto con su hijo José (AM 2259 – 2315), experimentando el gozo de la restauración familiar."
-    }
-  ],
-  "themes": [
-    {
-      "id": "theme_creation",
-      "icon": "✨",
-      "title": "Creación, Cosmovisión y Orden Divino",
-      "subtitle": "La Creación Ex Nihilo y la Monarquía Absoluta del Creador",
-      "description": "Establece la monarquía divina absoluta y la creación de la nada (ex nihilo) mediante el mandato soberano de la Palabra de Dios. Dios no forma el universo a partir de materia preexistente o mediante el conflicto de deidades (como en el politeísmo pagano), sino por la libre e incondicionada voluntad de su poder omnipotente.",
-      "theological_doctrine": "Teología Propiamente Dicha y Cosmología Bíblica. Dios es el único Creador trascendente e inmanente. La creación original es intrínsecamente buena, perfectamente estructurada y ordenada para manifestar la gloria divina.",
-      "genesis_passages": [
-        "Génesis 1:1-31",
-        "Génesis 2:1-25",
-        "Salmo 33:6-9"
-      ],
-      "cross_references_nt": [
-        "Juan 1:1-3",
-        "Colosenses 1:15-17",
-        "Hebreos 11:3",
-        "Apocalipsis 4:11"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "בָּרָא",
-          "transliteration": "Bará",
-          "meaning": "Crear de la nada (utilizado exclusivamente con Dios como sujeto)"
-        },
-        {
-          "hebrew": "תֹּהוּ וָבֹהוּ",
-          "transliteration": "Tohu va-Bohu",
-          "meaning": "Desordenada y vacía / Caos y vacuidad primordial antes de la estructuración divina"
-        }
-      ],
-      "footnotes": [
-        "Ex nihilo: Término teológico latino que indica la creación a partir de la nada, sin materia primordial preexistente.",
-        "Raqía (רָקִיעַ): El firmamento o expansión atmosférica y cósmica diseñada por Dios para separar las aguas."
-      ],
-      "key_event_ids": [
-        "creation_day1",
-        "creation_day2",
-        "creation_day3",
-        "creation_day4",
-        "creation_day5",
-        "creation_day6",
-        "sabbath_institution"
-      ],
-      "key_people_ids": [
-        "adam",
-        "eve"
-      ]
-    },
-    {
-      "id": "theme_imago_dei",
-      "icon": "👤",
-      "title": "La Imagen de Dios e Identidad Humana",
-      "subtitle": "Imago Dei: Dignidad, Diseño y Mayordomía del Hombre",
-      "description": "El ser humano es la corona de la creación divina, formado del polvo de la tierra y dotado del aliento de vida (neshamah) directamente impetrado por Dios. Constituido a la Imagen y Semejanza de Dios (Imago Dei), posee valor e identidad sagrada inalienable, vocación mayordómica y diseño binario complementario (varón y hembra).",
-      "theological_doctrine": "Antropología Bíblica y Ética de la Vida. La dignidad del ser humano no proviene de su utilidad social o capacidades físicas, sino de llevar la impronta del Creador. El matrimonio entre un hombre y una mujer es la institución sagrada primordial dada por Dios.",
-      "genesis_passages": [
-        "Génesis 1:26-28",
-        "Génesis 2:7, 18-25",
-        "Génesis 9:6"
-      ],
-      "cross_references_nt": [
-        "Mateo 19:4-6",
-        "1 Corintios 11:7",
-        "Colosenses 3:10",
-        "Santiago 3:9"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "צֶלֶם",
-          "transliteration": "Tselem (Imago Dei)",
-          "meaning": "Imagen o estatua representativa / Reflejo moral y relacional de Dios"
-        },
-        {
-          "hebrew": "נְשָׁמָה",
-          "transliteration": "Neshamah",
-          "meaning": "Aliento o soplo de vida impertido por Dios directamente al ser humano"
-        }
-      ],
-      "footnotes": [
-        "Imago Dei: Término latino para 'Imagen de Dios'. Define la dignidad intrínseca de todo ser humano desde la concepción.",
-        "Mayordomía: El mandato cultural (Gén. 1:28) de sojuzgar y cuidar la creación como administradores responsables bajo la autoridad de Dios."
-      ],
-      "key_event_ids": [
-        "creation_day6",
-        "creation_adam_eva",
-        "marriage_institution"
-      ],
-      "key_people_ids": [
-        "adam",
-        "eve"
-      ]
-    },
-    {
-      "id": "theme_judgment",
-      "icon": "🔥",
-      "title": "El Juicio Divino y la Fallida Rebelión Humana",
-      "subtitle": "La Caída, el Pecado y la Santa Justicia de Dios",
-      "description": "Trata la realidad histórica de la Caída en el Edén, la entrada del pecado (hamartia) y la muerte al mundo. Revela la respuesta justa y santa de Dios ante la rebelión del hombre mediante veredictos históricos: la Maldición del Edén, el Diluvio Universal sobre la corrupción moral, la Confusión de Lenguas en Babel y la destrucción consumidora de Sodoma.",
-      "theological_doctrine": "Hamartiología (Doctrina del Pecado) y Justo Juicio de Dios. El pecado es una infracción contra la santidad infinita de Dios. Dios es paciente, pero no dará por inocente al culpable; sus juicios en la historia prefiguran el Juicio Final.",
-      "genesis_passages": [
-        "Génesis 3:1-24",
-        "Génesis 6:5-7",
-        "Génesis 11:1-9",
-        "Génesis 19:1-29"
-      ],
-      "cross_references_nt": [
-        "Romanos 5:12-21",
-        "2 Pedro 2:4-9",
-        "Judas 1:7",
-        "Hechos 17:30-31"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "בָּלַל",
-          "transliteration": "Balal",
-          "meaning": "Confundir / Raíz del nombre Babel"
-        },
-        {
-          "hebrew": "חַטָּאָת",
-          "transliteration": "Jattat",
-          "meaning": "Pecado / Errar el blanco de la santidad divina"
-        }
-      ],
-      "footnotes": [
-        "Hamartia (ἁμαρτία): Término griego del NT para el pecado como rebelión contra el diseño y la ley de Dios.",
-        "Depravación Total: Doctrina que afirma que el pecado afectó todas las facultades del hombre (mente, voluntad, emociones)."
-      ],
-      "key_event_ids": [
-        "fall_judgment",
-        "first_murder",
-        "flood_start",
-        "tower_of_babel",
-        "sodom_destruction"
-      ],
-      "key_people_ids": [
-        "adam",
-        "cain",
-        "noah",
-        "lot"
-      ]
-    },
-    {
-      "id": "theme_covenant",
-      "icon": "👑",
-      "title": "Pacto y Gracia Redentora",
-      "subtitle": "La Teología de los Pactos y la Fidelidad de Dios",
-      "description": "El marco pactual es la columna vertebral de la historia de la salvación (Teología Federal o de Pactos). Muestra cómo Dios se relaciona con la humanidad caída mediante alianzas solemnes selladas con su promesa jurada: El Pacto Edénico, Adámico, Noéico, Abrahámico y de la Circuncisión.",
-      "theological_doctrine": "Teología del Pacto (Covenant Theology). Un pacto bíblico es una disposición soberana de Dios basada en la gracia donde él compromete su fidelidad inmutable para salvar a un pueblo para su gloria.",
-      "genesis_passages": [
-        "Génesis 2:16-17",
-        "Génesis 3:15",
-        "Génesis 9:8-17",
-        "Génesis 15:1-21",
-        "Génesis 17:1-14"
-      ],
-      "cross_references_nt": [
-        "Gálatas 3:15-18",
-        "Hebreos 6:13-18",
-        "Hebreos 8:6-13",
-        "Lucas 22:20"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "בְּרִית",
-          "transliteration": "Berit",
-          "meaning": "Pacto / Alianza solemne divinamente sellada"
-        },
-        {
-          "hebrew": "כָּרַת בְּרִית",
-          "transliteration": "Karat Berit",
-          "meaning": "Cortar un pacto / Ceremonia de división de víctimas sacrificiales"
-        }
-      ],
-      "footnotes": [
-        "Karat Berit: Literalmente 'cortar un pacto'. Hace referencia al ritual bíblico antiguo (Gén. 15) donde las partes caminaban entre animales sacrificados.",
-        "Pacto de Gracia: La alianza eterna por la cual Dios ofrece salvación gratuita en Cristo a los creyentes."
-      ],
-      "key_event_ids": [
-        "noahic_covenant",
-        "abrahamic_covenant",
-        "covenant_circumcision"
-      ],
-      "key_people_ids": [
-        "noah",
-        "abraham",
-        "isaac",
-        "jacob"
-      ]
-    },
-    {
-      "id": "theme_election",
-      "icon": "🙌",
-      "title": "Elección Divina y Gracia Soberana",
-      "subtitle": "La Elección Incondicional y el Amor Soberano de Dios",
-      "description": "Demuestra la libre iniciativa inmerecida de Dios al escoger una línea piadosa a lo largo de la historia de la redención: La preferencia por Abel sobre Caín, Set sobre la línea de Caín, Sem sobre los hijos de Noé, el llamado incondicional de Abram en Ur, la elección de Isaac sobre Ismael y de Jacob sobre Esaú.",
-      "theological_doctrine": "Soteriología (Doctrina de la Salvación) y Elección Soberana. La elección de Dios no se fundamenta en méritos, virtudes o presciencia de obras humanas, sino exclusivamente en su beneplácito y gracia soberana (Romanos 9).",
-      "genesis_passages": [
-        "Génesis 4:4-5",
-        "Génesis 12:1-3",
-        "Génesis 21:12",
-        "Génesis 25:23"
-      ],
-      "cross_references_nt": [
-        "Romanos 9:6-16",
-        "Efesios 1:4-5",
-        "1 Pedro 1:1-2",
-        "1 Corintios 1:26-29"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "בָּחַר",
-          "transliteration": "Bahor",
-          "meaning": "Escoger / Elegir soberanamente con deleite"
-        }
-      ],
-      "footnotes": [
-        "Monergismo: Doctrina reformada que enseña que la salvación es una obra enteramente ejecutada por el poder de Dios.",
-        "Sola Gratia: La salvación es concedida al hombre de forma 100% inmerecida."
-      ],
-      "key_event_ids": [
-        "abraham_call",
-        "jacob_esau_birth",
-        "isaac_birth"
-      ],
-      "key_people_ids": [
-        "seth",
-        "shem",
-        "abraham",
-        "isaac",
-        "jacob"
-      ]
-    },
-    {
-      "id": "theme_providence",
-      "icon": "🕊️",
-      "title": "Providencia y Gobierno Divino",
-      "subtitle": "El Gobierno Invisible de Dios Encaminando el Mal para Bien",
-      "description": "Muestra cómo Dios preserva y gobierna todas las criaturas, circunstancias y acciones humanas (incluso las perversas decisiones humanas) para cumplir sus sabios propósitos eternos. Su expresión cumbre resuena en las palabras de José: 'Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien'.",
-      "theological_doctrine": "Providencia General y Especial. Nada ocurre por azar o casualidad blindada. Dios ejerce un control absoluto sobre el hilo de la historia, haciendo que todas las cosas cooperen para el bien de sus escogidos.",
-      "genesis_passages": [
-        "Génesis 24:12-27",
-        "Génesis 45:4-8",
-        "Génesis 50:19-21"
-      ],
-      "cross_references_nt": [
-        "Romanos 8:28",
-        "Efesios 1:11",
-        "Hechos 2:23",
-        "Filipenses 2:13"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "חֶסֶד",
-          "transliteration": "Hesed",
-          "meaning": "Amor leal / Fidelidad inagotable y misericordia pactual de Dios"
-        }
-      ],
-      "footnotes": [
-        "Providencia: Del latín providentia, la preservación activa y el continuo gobierno de Dios sobre el cosmos.",
-        "Compatibilismo Bíblico: La verdad de que la responsabilidad humana y la soberanía de Dios operan juntas sin que Dios sea autor del pecado."
-      ],
-      "key_event_ids": [
-        "joseph_sold_slavery",
-        "joseph_prime_minister",
-        "joseph_reveals_himself",
-        "joseph_forgives_brothers"
-      ],
-      "key_people_ids": [
-        "joseph",
-        "jacob",
-        "judah"
-      ]
-    },
-    {
-      "id": "theme_faith",
-      "icon": "🛡️",
-      "title": "La Fe y la Vida de Obediencia",
-      "subtitle": "Justificación por la Fe y Caminar con Dios",
-      "description": "Explora la verdadera naturaleza de la fe salvadora que cree en la palabra invisible de Dios y se acredita como justicia (Génesis 15:6). Muestra cómo los verdaderos creyentes (Enoc, Noé, Abraham) 'caminan con Dios' y obedecen su llamado a través de pruebas de fe extremas.",
-      "theological_doctrine": "Soteriología (Justificación por la Fe Sola - Sola Fide) y Santificación. La fe verdadera no es mero asentimiento intelectual, sino una confianza firme que produce frutos visibles de santidad y obediencia de corazón.",
-      "genesis_passages": [
-        "Génesis 5:24",
-        "Génesis 6:9",
-        "Génesis 15:6",
-        "Génesis 22:1-18"
-      ],
-      "cross_references_nt": [
-        "Romanos 4:1-5",
-        "Gálatas 3:6-9",
-        "Hebreos 11:1-19",
-        "Santiago 2:21-23"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "אָמַן",
-          "transliteration": "Aman",
-          "meaning": "Creer / Confiar con firmeza (raíz de la palabra Amén)"
-        },
-        {
-          "hebrew": "צָדַק",
-          "transliteration": "Tsadaq",
-          "meaning": "Ser declarado justo / Imputación de justicia divina"
-        }
-      ],
-      "footnotes": [
-        "Sola Fide: La doctrina de que somos declarados justos delante de Dios únicamente por la fe en sus promesas, sin méritos de obras.",
-        "Akedáh (עֲקֵידָה): El término hebreo para el 'atamiento' o prueba del sacrificio de Isaac en el Monte Moriah."
-      ],
-      "key_event_ids": [
-        "enoch_walked_god",
-        "abrahamic_covenant",
-        "binding_of_isaac"
-      ],
-      "key_people_ids": [
-        "enoch",
-        "noah",
-        "abraham"
-      ]
-    },
-    {
-      "id": "theme_messianic_promise",
-      "icon": "✝️",
-      "title": "La Promesa Mesiánica y Tipología de Cristo",
-      "subtitle": "El Protoevangelio y la Línea del Redentor Prometido",
-      "description": "Sigue el hilo de la revelación progresiva del Mesías desde la primera promesa en el Edén (Protoevangelio, Gén. 3:15: la Simiente que aplastará a la serpiente) hasta la bendición patriarcal a la tribu de Judá (Gén. 49:10: el Cetro de Siloh). Muestra los grandes prototipos de Cristo como el Arca de Noé, Melquisedec, el Cordero provisto en Moriah y la vida de José.",
-      "theological_doctrine": "Cristología en el Antiguo Testamento. Jesucristo es el centro unificador de todas las Escrituras. Las promesas y figuras del Génesis son sombras que encuentran su realidad radiante en el Nuevo Testamento.",
-      "genesis_passages": [
-        "Génesis 3:15",
-        "Génesis 14:18-20",
-        "Génesis 22:13-14",
-        "Génesis 49:8-10"
-      ],
-      "cross_references_nt": [
-        "Lucas 24:27, 44",
-        "Juan 8:56",
-        "Gálatas 3:16",
-        "Hebreos 7:1-17",
-        "Apocalipsis 5:5"
-      ],
-      "hebrew_terms": [
-        {
-          "hebrew": "שִׁילֹה",
-          "transliteration": "Siloh / Shiloh",
-          "meaning": "Aquel a quien pertenece el gobierno / El Pacificador (Título Mesiánico)"
-        },
-        {
-          "hebrew": "זֶרַע",
-          "transliteration": "Zera",
-          "meaning": "Simiente / Descendencia prometida"
-        }
-      ],
-      "footnotes": [
-        "Protoevangelio: Término teológico que significa 'el primer Evangelio' (Génesis 3:15).",
-        "Tipología Bíblica: El estudio de personas, eventos o instituciones del AT diseñadas divinamente para prefigurar la persona y obra de Cristo."
-      ],
-      "key_event_ids": [
-        "fall_judgment",
-        "melchizedek",
-        "binding_of_isaac",
-        "jacob_blesses_sons_death"
-      ],
-      "key_people_ids": [
-        "eve",
-        "shem",
-        "abraham",
-        "isaac",
-        "jacob",
-        "judah",
-        "joseph",
-        "jesus"
-      ]
     }
   ]
 }

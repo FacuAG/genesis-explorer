@@ -40,17 +40,34 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     return { birth, death, lifespan: lifespan || (death - birth) };
   };
 
+  // Helper para formatear nombres de personajes evitando mostrar IDs crudos como "enoch_cainite"
+  const getFormattedName = (personOrId) => {
+    if (!personOrId) return 'Desconocido';
+    if (typeof personOrId === 'object') return personOrId.name;
+
+    const pObj = peopleMap.get(personOrId);
+    if (pObj) return pObj.name;
+
+    if (personOrId === 'enoch_cainite') return 'Enoc (línea de Caín)';
+    if (personOrId === 'lamech_cainite') return 'Lamec (línea de Caín)';
+    if (personOrId === 'lamech_sethite') return 'Lamec (línea de Set)';
+    if (personOrId === 'nahor_brother') return 'Nacor (hermano de Abraham)';
+    if (personOrId === 'pharaoh_joseph') return 'Faraón (días de José)';
+
+    return personOrId.charAt(0).toUpperCase() + personOrId.slice(1).replace(/_/g, ' ');
+  };
+
   // Filtrado de personajes según período y buscador
   const filteredPeople = useMemo(() => {
     return people.filter(p => {
       const dates = getPersonDates(p);
       const cat = p.category || '';
 
-      // 1. Filtro por Período
+      // Excluir egipcios y no israelitas del filtro Antediluviano estricto
       if (periodFilter === 'antediluvian') {
-        const isAntediluvian = cat.includes('antediluvian') ||
+        const isAntediluvian = (cat.includes('antediluvian') ||
           ['first_man', 'first_woman', 'cainite_line', 'first_martyr', 'flood_survivor'].includes(cat) ||
-          dates.birth < 1056;
+          dates.birth < 1056) && !['potiphar', 'pharaoh_joseph', 'tamar'].includes(p.id);
         if (!isAntediluvian) return false;
       }
 
@@ -62,7 +79,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
       }
 
       if (periodFilter === 'patriarchs') {
-        const isPatriarch = ['covenant_patriarch', 'covenant_matriarch', 'tribal_patriarch', 'matriarch_secondary', 'savior_figure', 'patriarch_relative'].includes(cat) ||
+        const isPatriarch = ['covenant_patriarch', 'covenant_matriarch', 'tribal_patriarch', 'matriarch_secondary', 'savior_figure', 'patriarch_relative', 'egyptian_official'].includes(cat) ||
           dates.birth >= 1948;
         if (!isPatriarch) return false;
       }
@@ -87,7 +104,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
   const generationTiers = useMemo(() => {
     const map = new Map();
     filteredPeople.forEach(p => {
-      const genNum = p.generation_from_adam || p.generation || p.chronology?.generation || 99;
+      const genNum = p.generation_from_adam || p.generation || p.chronology?.generation || 1;
       if (!map.has(genNum)) {
         map.set(genNum, []);
       }
@@ -101,7 +118,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
   // Lista de Patriarcas Principales para la Gráfica de Convivencia Temporal (Anno Mundi 0 a 2369)
   const overlapPatriarchs = useMemo(() => {
     const keyIds = [
-      'adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech', 'noah',
+      'adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech_sethite', 'noah',
       'shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah',
       'abraham', 'isaac', 'jacob', 'joseph'
     ];
@@ -128,7 +145,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     }
   }, [selectedOverlapIndex, activeTab, activeOverlapPersonFrom]);
 
-  // Helper para renderizar los botones de relaciones familiares
+  // Helper para renderizar los botones de relaciones familiares con nombres limpios
   const renderFamilyChips = (person) => {
     const fatherId = person.father_id || person.father || person.family?.father || person.parents?.father;
     const motherId = person.mother_id || person.mother || person.family?.mother || person.parents?.mother;
@@ -141,47 +158,47 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
 
     return (
       <div className="gcard-relations-box">
-        {fatherObj && (
+        {fatherId && (
           <div className="gcard-rel-row">
             <span className="rel-label">🌱 Padre:</span>
             <button
               className="rel-chip"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedPerson(fatherObj);
+                if (fatherObj) setSelectedPerson(fatherObj);
               }}
             >
-              {fatherObj.name}
+              {getFormattedName(fatherObj || fatherId)}
             </button>
           </div>
         )}
 
-        {motherObj && (
+        {motherId && (
           <div className="gcard-rel-row">
             <span className="rel-label">🌸 Madre:</span>
             <button
               className="rel-chip"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedPerson(motherObj);
+                if (motherObj) setSelectedPerson(motherObj);
               }}
             >
-              {motherObj.name}
+              {getFormattedName(motherObj || motherId)}
             </button>
           </div>
         )}
 
-        {spouseObj && (
+        {spouseId && (
           <div className="gcard-rel-row">
             <span className="rel-label">💍 Cónyuge:</span>
             <button
               className="rel-chip spouse-chip"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedPerson(spouseObj);
+                if (spouseObj) setSelectedPerson(spouseObj);
               }}
             >
-              {spouseObj.name}
+              {getFormattedName(spouseObj || spouseId)}
             </button>
           </div>
         )}
@@ -192,7 +209,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             <div className="children-chips-wrap">
               {childrenList.slice(0, 4).map(cId => {
                 const childObj = typeof cId === 'string' ? peopleMap.get(cId) : cId;
-                const childName = childObj ? childObj.name : (typeof cId === 'string' ? cId : 'Hijo');
+                const childName = getFormattedName(childObj || cId);
                 return (
                   <button
                     key={typeof cId === 'string' ? cId : childName}
@@ -325,7 +342,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 <div key={genNum} className="generation-tier-block">
                   <div className="tier-header-badge">
                     <span className="tier-icon">🌿</span>
-                    <span className="tier-label">Generación #{genNum !== 99 ? genNum : 'Varias'}</span>
+                    <span className="tier-label">Generación #{genNum} desde Adán</span>
                     <span className="tier-count">({genPeople.length} {genPeople.length === 1 ? 'personaje' : 'personajes'})</span>
                   </div>
 
@@ -382,6 +399,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
               {filteredPeople.map((person, index) => {
                 const isMessianic = messianicIds.has(person.id);
                 const dates = getPersonDates(person);
+                const genNum = person.generation_from_adam || person.generation || person.chronology?.generation || 1;
 
                 return (
                   <div
@@ -390,7 +408,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                     onClick={() => setSelectedPerson(person)}
                   >
                     <div className="gcard-header">
-                      <span className="gcard-index">#{index + 1}</span>
+                      <span className="gcard-index">Gen #{genNum} (#{index + 1})</span>
                       {isMessianic && <span className="gcard-messianic-badge" title="Línea Directa del Mesías">✝️ Promesa Mesiánica</span>}
                     </div>
 
@@ -436,6 +454,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 const p2Id = overlap.person2_id || overlap.to;
                 const p1 = peopleMap.get(p1Id);
                 const p2 = peopleMap.get(p2Id);
+                const p1Name = getFormattedName(p1 || p1Id);
+                const p2Name = getFormattedName(p2 || p2Id);
                 const years = overlap.years_together || overlap.years_overlap;
                 const isSelected = idx === selectedOverlapIndex;
 
@@ -445,7 +465,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                     className={`overlap-select-chip ${isSelected ? 'active' : ''}`}
                     onClick={() => setSelectedOverlapIndex(idx)}
                   >
-                    <span>🤝 {p1?.name || p1Id} & {p2?.name || p2Id}</span>
+                    <span>🤝 {p1Name} & {p2Name}</span>
                     <strong>({years} años)</strong>
                   </button>
                 );
@@ -458,17 +478,17 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             <div className="overlap-detail-card">
               <div className="odc-badge">🕊️ Hermenéutica de Transmisión Oral Directa</div>
               <h2 className="odc-title">
-                {activeOverlapPersonFrom?.name || activeFromId} & {activeOverlapPersonTo?.name || activeToId} convivieron durante {activeYears} años
+                {getFormattedName(activeOverlapPersonFrom || activeFromId)} & {getFormattedName(activeOverlapPersonTo || activeToId)} convivieron durante {activeYears} años
               </h2>
               <p className="odc-description">{activeDescription}</p>
               
               <div className="odc-stats-row">
                 <div className="odc-stat-item">
-                  <span className="label">Nacimiento de {activeOverlapPersonFrom?.name || activeFromId}:</span>
+                  <span className="label">Nacimiento de {getFormattedName(activeOverlapPersonFrom || activeFromId)}:</span>
                   <span className="val">AM {getPersonDates(activeOverlapPersonFrom).birth}</span>
                 </div>
                 <div className="odc-stat-item">
-                  <span className="label">Nacimiento de {activeOverlapPersonTo?.name || activeToId}:</span>
+                  <span className="label">Nacimiento de {getFormattedName(activeOverlapPersonTo || activeToId)}:</span>
                   <span className="val">AM {getPersonDates(activeOverlapPersonTo).birth}</span>
                 </div>
                 <div className="odc-stat-item highlight">
