@@ -1,5 +1,9 @@
 /* Header CSS Vanilla — Genesis Explorer */
 
+:root {
+  --header-height: 125px;
+}
+
 .app-header {
   background: var(--bg-glass);
   backdrop-filter: blur(16px);
@@ -8,14 +12,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0.85rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.75rem;
+  min-height: var(--header-height);
 }
 
-/* 1. FILA SUPERIOR: MARCA (IZQUIERDA) Y MÓDULOS GLOBALES (DERECHA) */
+/* 1. FILA SUPERIOR: MARCA (IZQUIERDA) Y MÓDULOS GLOBALES TEOLÓGICOS (DERECHA) */
 .header-top-row {
   display: flex;
   align-items: center;
@@ -31,8 +36,8 @@
 }
 
 .brand-logo-badge {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   background: linear-gradient(135deg, #aa3bff 0%, #6366f1 100%);
   border-radius: 12px;
   display: flex;
@@ -42,7 +47,7 @@
 }
 
 .brand-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .brand-titles {
@@ -52,7 +57,7 @@
 
 .brand-title {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   color: var(--text-main);
@@ -68,12 +73,12 @@
 
 .brand-subtitle {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   font-weight: 400;
 }
 
-/* MENÚ DE MÓDULOS DE LA SUITE BÍBLICA GLOBAL (DERECHA) */
+/* MENÚ TRANSVERSAL GLOBAL (PALETA CÁLIDA / TEOLÓGICA / DORADA - PÚRPURA) */
 .header-global-nav {
   display: flex;
   align-items: center;
@@ -82,62 +87,64 @@
 }
 
 .global-tab-btn {
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.42rem 0.85rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.38rem 0.8rem;
+  border-radius: 16px;
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #fde047;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.38rem;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
 }
 
 .global-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(245, 158, 11, 0.5);
   color: #ffffff;
-  border-color: rgba(192, 132, 252, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 .global-tab-btn.active {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(99, 102, 241, 0.28) 100%);
-  border-color: var(--accent-lila);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.35) 0%, rgba(168, 85, 247, 0.35) 100%);
+  border-color: #f59e0b;
   color: #ffffff;
   font-weight: 800;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35), 0 0 10px rgba(168, 85, 247, 0.3);
+  transform: translateY(-1px);
 }
 
-/* 2. FILA INFERIOR: LIBRO ACTIVO, ESTADÍSTICAS Y NAVEGACIÓN DE LIBRO */
+/* 2. FILA INFERIOR: LIBRO ACTIVO, ESTADÍSTICAS Y MENÚ DE LECTURA (AZUL BÍBLICO) */
 .header-bottom-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding-top: 0.75rem;
+  padding-top: 0.65rem;
 }
 
 .header-book-context {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .book-selector-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .book-select-label {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   font-weight: 600;
 }
@@ -146,9 +153,9 @@
   background: var(--bg-surface);
   color: var(--text-main);
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 0.42rem 0.8rem;
-  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   outline: none;
@@ -156,25 +163,25 @@
 }
 
 .select-wrapper select:hover {
-  border-color: var(--accent-lila);
+  border-color: #38bdf8;
 }
 
 .stats-badges-container {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
 }
 
 .stat-badge {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  padding: 0.32rem 0.65rem;
-  border-radius: 8px;
-  font-size: 0.76rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.74rem;
   color: var(--text-main);
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
 }
 
 .stat-badge-gold {
@@ -185,52 +192,52 @@
 
 .header-v-divider {
   color: rgba(255, 255, 255, 0.15);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   user-select: none;
   margin: 0 0.1rem;
 }
 
-/* NAVEGACIÓN MODERNA Y PROFESIONAL DEL LIBRO ACTIVO */
+/* NAVEGACIÓN DEL LIBRO ACTIVO (PALETA FRÍA / AZUL BÍBLICO / TURQUESA) */
 .header-book-nav {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.25rem 0.35rem;
-  border-radius: 20px;
+  gap: 0.35rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 0.2rem 0.3rem;
+  border-radius: 18px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .book-tab-btn {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.45rem 0.95rem;
-  border-radius: 16px;
+  padding: 0.4rem 0.85rem;
+  border-radius: 14px;
   background: transparent;
   border: 1px solid transparent;
-  color: var(--text-muted);
+  color: #93c5fd;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
 }
 
 .book-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(56, 189, 248, 0.15);
   color: #ffffff;
-  border-color: rgba(192, 132, 252, 0.25);
+  border-color: rgba(56, 189, 248, 0.35);
   transform: translateY(-2px);
 }
 
 .book-tab-btn.active {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(99, 102, 241, 0.35) 100%);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.4) 0%, rgba(59, 130, 246, 0.4) 100%);
   color: #ffffff;
-  border: 1px solid var(--accent-lila);
-  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.3), 0 0 10px rgba(192, 132, 252, 0.25);
+  border: 1px solid #38bdf8;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35), 0 0 10px rgba(56, 189, 248, 0.25);
   font-weight: 800;
   transform: translateY(-1px);
 }
@@ -240,13 +247,13 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 250px;
+  min-width: 240px;
 }
 
 .search-box .search-icon {
   position: absolute;
   left: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-dim);
 }
 
@@ -254,17 +261,17 @@
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 0.45rem 0.75rem 0.45rem 2.2rem;
-  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 0.38rem 0.75rem 0.38rem 2.1rem;
+  font-size: 0.82rem;
   color: var(--text-main);
   outline: none;
   transition: all 0.2s ease;
 }
 
 .search-input:focus {
-  border-color: var(--accent-lila);
-  box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
 }
 
 .search-clear-btn {
