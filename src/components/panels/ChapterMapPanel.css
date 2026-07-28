@@ -341,7 +341,7 @@
 /* BARRA DE NAVEGACIÓN Y CONTROLES PEGAJOSA (STICKY HEADER) */
 .sticky-reader-toolbar {
   position: sticky;
-  top: 122px;
+  top: 132px;
   z-index: 900;
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(14px);
