@@ -15,6 +15,7 @@
   gap: 0.85rem;
 }
 
+/* 1. FILA SUPERIOR: MARCA (IZQUIERDA) Y MÓDULOS GLOBALES (DERECHA) */
 .header-top-row {
   display: flex;
   align-items: center;
@@ -72,10 +73,49 @@
   font-weight: 400;
 }
 
-.header-actions {
+/* MENÚ DE MÓDULOS DE LA SUITE BÍBLICA GLOBAL (DERECHA) */
+.header-global-nav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.global-tab-btn {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.global-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(192, 132, 252, 0.3);
+}
+
+.global-tab-btn.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(99, 102, 241, 0.25) 100%);
+  border-color: var(--accent-lila);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+}
+
+/* 2. FILA INFERIOR: LIBRO ACTIVO, ESTADÍSTICAS Y NAVEGACIÓN DE LIBRO */
+.header-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.75rem;
+}
+
+.header-book-context {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
   flex-wrap: wrap;
 }
 
@@ -88,7 +128,7 @@
 .book-select-label {
   font-size: 0.8rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .select-wrapper select {
@@ -96,9 +136,9 @@
   color: var(--text-main);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 0.45rem 0.8rem;
+  padding: 0.4rem 0.75rem;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease;
@@ -111,13 +151,13 @@
 .stats-badges-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .stat-badge {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  padding: 0.35rem 0.65rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
   font-size: 0.75rem;
   color: var(--text-main);
@@ -129,91 +169,46 @@
   color: #fde047;
 }
 
-.header-bottom-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 0.75rem;
+.header-v-divider {
+  color: var(--border-subtle);
+  font-size: 1rem;
+  font-weight: 300;
+  user-select: none;
+  margin: 0 0.1rem;
 }
 
-.header-nav-tabs {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
-}
-
-.nav-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  position: relative;
-}
-
-.nav-group.book-group {
-  border-right: 1px solid var(--border-subtle);
-  padding-right: 1.25rem;
-}
-
-.nav-group-title {
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: var(--accent-lila);
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  opacity: 0.85;
-}
-
-.nav-group-buttons {
+.header-book-nav {
   display: flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.nav-tab-btn {
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--text-muted);
-  padding: 0.5rem 0.85rem;
-  border-radius: 8px;
+.book-tab-btn {
   font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
 }
 
-.nav-tab-btn:hover {
-  background: var(--bg-card-hover);
-  color: var(--text-main);
+.book-tab-btn.active {
+  background: var(--accent-lila);
+  color: #0f172a;
+  border-color: var(--accent-lila);
+  box-shadow: 0 4px 14px rgba(192, 132, 252, 0.3);
 }
 
-.nav-tab-btn.active {
-  background: var(--bg-card);
-  color: var(--accent-lila);
-  border: 1px solid var(--border-bright);
-  box-shadow: var(--shadow-glow);
-}
-
+/* BUSCADOR GLOBAL */
 .search-box {
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 260px;
+  min-width: 250px;
 }
 
 .search-box .search-icon {
   position: absolute;
   left: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-dim);
 }
 
@@ -222,7 +217,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 0.45rem 0.75rem 0.45rem 2.2rem;
+  padding: 0.42rem 0.75rem 0.42rem 2.2rem;
   font-size: 0.85rem;
   color: var(--text-main);
   outline: none;
@@ -230,8 +225,8 @@
 }
 
 .search-input:focus {
-  border-color: #c084fc;
-  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.15);
+  border-color: var(--accent-lila);
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
 }
 
 .search-clear-btn {
@@ -239,11 +234,7 @@
   right: 0.6rem;
   background: transparent;
   border: none;
-  color: #64748b;
-  font-size: 0.85rem;
+  color: var(--text-muted);
   cursor: pointer;
-}
-
-.search-clear-btn:hover {
-  color: #f1f5f9;
+  font-size: 0.8rem;
 }
