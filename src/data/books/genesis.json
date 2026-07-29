@@ -6391,7 +6391,8 @@
         "Gálatas 4:4"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 1
+      "generation_from_adam": 1,
+      "generation": 1
     },
     {
       "id": "cain",
@@ -6466,7 +6467,8 @@
         "Judas 1:11"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 2
+      "generation_from_adam": 2,
+      "generation": 2
     },
     {
       "id": "abel",
@@ -6540,7 +6542,8 @@
         "1 Juan 3:12"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 2
+      "generation_from_adam": 2,
+      "generation": 2
     },
     {
       "id": "seth",
@@ -7288,7 +7291,8 @@
         "1 Pedro 3:6"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 20
+      "generation_from_adam": 20,
+      "generation": 20
     },
     {
       "id": "lot",
@@ -7382,7 +7386,8 @@
         "2 Pedro 2:7-9"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 20
+      "generation_from_adam": 20,
+      "generation": 20
     },
     {
       "id": "hagar",
@@ -7459,7 +7464,8 @@
         "Gálatas 4:24-30"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 20
+      "generation_from_adam": 20,
+      "generation": 20
     },
     {
       "id": "ishmael",
@@ -7551,7 +7557,8 @@
         "Gálatas 4:22-31"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 21
+      "generation_from_adam": 21,
+      "generation": 21
     },
     {
       "id": "isaac",
@@ -7766,7 +7773,8 @@
         "Romanos 9:10-12"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 21
+      "generation_from_adam": 21,
+      "generation": 21
     },
     {
       "id": "esau",
@@ -7861,7 +7869,8 @@
         "Hebreos 12:16-17"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 22
+      "generation_from_adam": 22,
+      "generation": 22
     },
     {
       "id": "jacob",
@@ -8081,7 +8090,8 @@
         "Rut 4:11"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 22
+      "generation_from_adam": 22,
+      "generation": 22
     },
     {
       "id": "rachel",
@@ -8167,7 +8177,8 @@
         "Rut 4:11"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 22
+      "generation_from_adam": 22,
+      "generation": 22
     },
     {
       "id": "joseph",
@@ -8352,7 +8363,8 @@
         "Mateo 18:21-22"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 7
+      "generation_from_adam": 7,
+      "generation": 7
     },
     {
       "id": "lamech_sethite",
@@ -8577,7 +8589,8 @@
         "Hebreos 7:1-28"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 20
+      "generation_from_adam": 20,
+      "generation": 20
     },
     {
       "id": "laban",
@@ -8654,7 +8667,8 @@
       },
       "cross_references_nt": [],
       "notable_overlaps": [],
-      "generation_from_adam": 21
+      "generation_from_adam": 21,
+      "generation": 21
     },
     {
       "id": "tamar",
@@ -8720,7 +8734,8 @@
         "Rut 4:12"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "potiphar",
@@ -8787,7 +8802,8 @@
         "Hechos 7:9-10"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "pharaoh_joseph",
@@ -8855,7 +8871,8 @@
         "Hechos 7:10"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "benjamin",
@@ -8943,7 +8960,8 @@
         "Filipenses 3:5"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "ruben",
@@ -9030,7 +9048,8 @@
         "1 Crónicas 5:1"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "levi",
@@ -9112,7 +9131,8 @@
         "Hebreos 7:9-11"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23
     },
     {
       "id": "judah",
@@ -9251,7 +9271,8 @@
         "death_am": 2392,
         "lifespan": 110,
         "birth_bc_ad": "1722 a.C.",
-        "death_bc_ad": "1612 a.C."
+        "death_bc_ad": "1612 a.C.",
+        "generation": 24
       }
     },
     {
@@ -9280,7 +9301,8 @@
         "death_am": 2420,
         "lifespan": 105,
         "birth_bc_ad": "1689 a.C.",
-        "death_bc_ad": "1584 a.C."
+        "death_bc_ad": "1584 a.C.",
+        "generation": 25
       }
     },
     {
@@ -9309,7 +9331,8 @@
         "death_am": 2450,
         "lifespan": 95,
         "birth_bc_ad": "1649 a.C.",
-        "death_bc_ad": "1554 a.C."
+        "death_bc_ad": "1554 a.C.",
+        "generation": 26
       }
     },
     {
@@ -9338,7 +9361,8 @@
         "death_am": 2490,
         "lifespan": 90,
         "birth_bc_ad": "1604 a.C.",
-        "death_bc_ad": "1514 a.C."
+        "death_bc_ad": "1514 a.C.",
+        "generation": 27
       }
     },
     {
@@ -9367,7 +9391,8 @@
         "death_am": 2515,
         "lifespan": 70,
         "birth_bc_ad": "1559 a.C.",
-        "death_bc_ad": "1489 a.C."
+        "death_bc_ad": "1489 a.C.",
+        "generation": 28
       }
     },
     {
@@ -9397,7 +9422,8 @@
         "death_am": 2570,
         "lifespan": 85,
         "birth_bc_ad": "1519 a.C.",
-        "death_bc_ad": "1434 a.C."
+        "death_bc_ad": "1434 a.C.",
+        "generation": 29
       }
     },
     {
@@ -9427,7 +9453,8 @@
         "death_am": 2645,
         "lifespan": 85,
         "birth_bc_ad": "1444 a.C.",
-        "death_bc_ad": "1359 a.C."
+        "death_bc_ad": "1359 a.C.",
+        "generation": 30
       }
     },
     {
@@ -9457,7 +9484,8 @@
         "death_am": 2715,
         "lifespan": 80,
         "birth_bc_ad": "1369 a.C.",
-        "death_bc_ad": "1289 a.C."
+        "death_bc_ad": "1289 a.C.",
+        "generation": 31
       }
     },
     {
@@ -9486,7 +9514,8 @@
         "death_am": 2790,
         "lifespan": 80,
         "birth_bc_ad": "1294 a.C.",
-        "death_bc_ad": "1214 a.C."
+        "death_bc_ad": "1214 a.C.",
+        "generation": 32
       }
     },
     {
@@ -9515,7 +9544,8 @@
         "death_am": 3010,
         "lifespan": 70,
         "birth_bc_ad": "1064 a.C.",
-        "death_bc_ad": "994 a.C."
+        "death_bc_ad": "994 a.C.",
+        "generation": 33
       }
     },
     {
@@ -9544,7 +9574,8 @@
         "death_am": 3040,
         "lifespan": 60,
         "birth_bc_ad": "1024 a.C.",
-        "death_bc_ad": "964 a.C."
+        "death_bc_ad": "964 a.C.",
+        "generation": 34
       }
     },
     {
@@ -9573,7 +9604,8 @@
         "death_am": 3057,
         "lifespan": 38,
         "birth_bc_ad": "985 a.C.",
-        "death_bc_ad": "947 a.C."
+        "death_bc_ad": "947 a.C.",
+        "generation": 35
       }
     },
     {
@@ -9602,7 +9634,8 @@
         "death_am": 3060,
         "lifespan": 22,
         "birth_bc_ad": "966 a.C.",
-        "death_bc_ad": "944 a.C."
+        "death_bc_ad": "944 a.C.",
+        "generation": 36
       }
     },
     {
@@ -9631,7 +9664,8 @@
         "death_am": 3101,
         "lifespan": 59,
         "birth_bc_ad": "962 a.C.",
-        "death_bc_ad": "903 a.C."
+        "death_bc_ad": "903 a.C.",
+        "generation": 37
       }
     },
     {
@@ -9660,7 +9694,8 @@
         "death_am": 3126,
         "lifespan": 50,
         "birth_bc_ad": "928 a.C.",
-        "death_bc_ad": "878 a.C."
+        "death_bc_ad": "878 a.C.",
+        "generation": 38
       }
     },
     {
@@ -9689,7 +9724,8 @@
         "death_am": 3137,
         "lifespan": 40,
         "birth_bc_ad": "907 a.C.",
-        "death_bc_ad": "867 a.C."
+        "death_bc_ad": "867 a.C.",
+        "generation": 39
       }
     },
     {
@@ -9718,7 +9754,8 @@
         "death_am": 3243,
         "lifespan": 68,
         "birth_bc_ad": "829 a.C.",
-        "death_bc_ad": "761 a.C."
+        "death_bc_ad": "761 a.C.",
+        "generation": 40
       }
     },
     {
@@ -9747,7 +9784,8 @@
         "death_am": 3257,
         "lifespan": 37,
         "birth_bc_ad": "784 a.C.",
-        "death_bc_ad": "747 a.C."
+        "death_bc_ad": "747 a.C.",
+        "generation": 41
       }
     },
     {
@@ -9776,7 +9814,8 @@
         "death_am": 3273,
         "lifespan": 36,
         "birth_bc_ad": "767 a.C.",
-        "death_bc_ad": "731 a.C."
+        "death_bc_ad": "731 a.C.",
+        "generation": 42
       }
     },
     {
@@ -9805,7 +9844,8 @@
         "death_am": 3306,
         "lifespan": 54,
         "birth_bc_ad": "752 a.C.",
-        "death_bc_ad": "698 a.C."
+        "death_bc_ad": "698 a.C.",
+        "generation": 43
       }
     },
     {
@@ -9834,7 +9874,8 @@
         "death_am": 3361,
         "lifespan": 67,
         "birth_bc_ad": "710 a.C.",
-        "death_bc_ad": "643 a.C."
+        "death_bc_ad": "643 a.C.",
+        "generation": 44
       }
     },
     {
@@ -9863,7 +9904,8 @@
         "death_am": 3363,
         "lifespan": 18,
         "birth_bc_ad": "659 a.C.",
-        "death_bc_ad": "641 a.C."
+        "death_bc_ad": "641 a.C.",
+        "generation": 45
       }
     },
     {
@@ -9892,7 +9934,8 @@
         "death_am": 3394,
         "lifespan": 39,
         "birth_bc_ad": "649 a.C.",
-        "death_bc_ad": "610 a.C."
+        "death_bc_ad": "610 a.C.",
+        "generation": 46
       }
     },
     {
@@ -9921,7 +9964,8 @@
         "death_am": 3440,
         "lifespan": 54,
         "birth_bc_ad": "618 a.C.",
-        "death_bc_ad": "564 a.C."
+        "death_bc_ad": "564 a.C.",
+        "generation": 47
       }
     },
     {
@@ -9950,7 +9994,8 @@
         "death_am": 3470,
         "lifespan": 60,
         "birth_bc_ad": "594 a.C.",
-        "death_bc_ad": "534 a.C."
+        "death_bc_ad": "534 a.C.",
+        "generation": 48
       }
     },
     {
@@ -9979,7 +10024,8 @@
         "death_am": 3515,
         "lifespan": 70,
         "birth_bc_ad": "559 a.C.",
-        "death_bc_ad": "489 a.C."
+        "death_bc_ad": "489 a.C.",
+        "generation": 49
       }
     },
     {
@@ -10008,7 +10054,8 @@
         "death_am": 3560,
         "lifespan": 70,
         "birth_bc_ad": "514 a.C.",
-        "death_bc_ad": "444 a.C."
+        "death_bc_ad": "444 a.C.",
+        "generation": 50
       }
     },
     {
@@ -10037,7 +10084,8 @@
         "death_am": 3610,
         "lifespan": 70,
         "birth_bc_ad": "464 a.C.",
-        "death_bc_ad": "394 a.C."
+        "death_bc_ad": "394 a.C.",
+        "generation": 51
       }
     },
     {
@@ -10066,7 +10114,8 @@
         "death_am": 3660,
         "lifespan": 70,
         "birth_bc_ad": "414 a.C.",
-        "death_bc_ad": "344 a.C."
+        "death_bc_ad": "344 a.C.",
+        "generation": 52
       }
     },
     {
@@ -10095,7 +10144,8 @@
         "death_am": 3710,
         "lifespan": 70,
         "birth_bc_ad": "364 a.C.",
-        "death_bc_ad": "294 a.C."
+        "death_bc_ad": "294 a.C.",
+        "generation": 53
       }
     },
     {
@@ -10124,7 +10174,8 @@
         "death_am": 3760,
         "lifespan": 70,
         "birth_bc_ad": "314 a.C.",
-        "death_bc_ad": "244 a.C."
+        "death_bc_ad": "244 a.C.",
+        "generation": 54
       }
     },
     {
@@ -10153,7 +10204,8 @@
         "death_am": 3810,
         "lifespan": 70,
         "birth_bc_ad": "264 a.C.",
-        "death_bc_ad": "194 a.C."
+        "death_bc_ad": "194 a.C.",
+        "generation": 55
       }
     },
     {
@@ -10182,7 +10234,8 @@
         "death_am": 3860,
         "lifespan": 70,
         "birth_bc_ad": "214 a.C.",
-        "death_bc_ad": "144 a.C."
+        "death_bc_ad": "144 a.C.",
+        "generation": 56
       }
     },
     {
@@ -10211,7 +10264,8 @@
         "death_am": 3910,
         "lifespan": 70,
         "birth_bc_ad": "164 a.C.",
-        "death_bc_ad": "94 a.C."
+        "death_bc_ad": "94 a.C.",
+        "generation": 57
       }
     },
     {
@@ -10240,7 +10294,8 @@
         "death_am": 3955,
         "lifespan": 65,
         "birth_bc_ad": "114 a.C.",
-        "death_bc_ad": "49 a.C."
+        "death_bc_ad": "49 a.C.",
+        "generation": 58
       }
     },
     {
@@ -10324,7 +10379,10 @@
         "reference": "Génesis 4:26",
         "text": "Y a Set también le nació un hijo, y llamó su nombre Enós. Entonces los hombres comenzaron a invocar el nombre de Jehová."
       },
-      "biography": "Hijo de Set y nieto de Adán. En su época comenzó el culto público organizado y los hombres comenzaron a invocar solemnemente el nombre del Señor."
+      "biography": "Hijo de Set y nieto de Adán. En su época comenzó el culto público organizado y los hombres comenzaron a invocar solemnemente el nombre del Señor.",
+      "chronology": {
+        "generation": 3
+      }
     },
     {
       "id": "kenan",
@@ -10346,7 +10404,10 @@
         "reference": "Génesis 5:9",
         "text": "Vivió Enós noventa años, y engendró a Cainán."
       },
-      "biography": "Cuarto patriarca desde Adán en la línea santa de Set. Preservó la adoración verdadera antes del Diluvio."
+      "biography": "Cuarto patriarca desde Adán en la línea santa de Set. Preservó la adoración verdadera antes del Diluvio.",
+      "chronology": {
+        "generation": 4
+      }
     },
     {
       "id": "mahalalel",
@@ -10368,7 +10429,10 @@
         "reference": "Génesis 5:12",
         "text": "Vivió Cainán setenta años, y engendró a Mahalaleel."
       },
-      "biography": "Quinto patriarca de la estirpe mesiánica antediluviana. Padre de Jared."
+      "biography": "Quinto patriarca de la estirpe mesiánica antediluviana. Padre de Jared.",
+      "chronology": {
+        "generation": 5
+      }
     },
     {
       "id": "jared",
@@ -10390,7 +10454,10 @@
         "reference": "Génesis 5:15",
         "text": "Vivió Mahalaleel sesenta y cinco años, y engendró a Jared."
       },
-      "biography": "Sexto patriarca antediluviano, el segundo hombre más longevo registrado en la Biblia tras Matusalén (962 años). Padre del profeta Enoc."
+      "biography": "Sexto patriarca antediluviano, el segundo hombre más longevo registrado en la Biblia tras Matusalén (962 años). Padre del profeta Enoc.",
+      "chronology": {
+        "generation": 6
+      }
     },
     {
       "id": "arpachshad",
@@ -10412,7 +10479,10 @@
         "reference": "Génesis 11:10",
         "text": "Sem, de edad de cien años, engendró a Arfaxad, dos años después del diluvio."
       },
-      "biography": "Primer patriarca nacido tras el Diluvio Universal. De su linaje desciende la rama semita que dio origen a Abraham y los hebreos."
+      "biography": "Primer patriarca nacido tras el Diluvio Universal. De su linaje desciende la rama semita que dio origen a Abraham y los hebreos.",
+      "chronology": {
+        "generation": 12
+      }
     },
     {
       "id": "shelah",
@@ -10434,7 +10504,10 @@
         "reference": "Génesis 11:12",
         "text": "Arfaxad vivió treinta y cinco años, y engendró a Sala."
       },
-      "biography": "Hijo de Arfaxad y padre de Heber. Eslabón número 13 en la línea pura desde Adán hasta Cristo."
+      "biography": "Hijo de Arfaxad y padre de Heber. Eslabón número 13 en la línea pura desde Adán hasta Cristo.",
+      "chronology": {
+        "generation": 13
+      }
     },
     {
       "id": "eber",
@@ -10456,7 +10529,10 @@
         "reference": "Génesis 10:25",
         "text": "Y a Heber nacieron dos hijos: el nombre del uno fue Peleg, porque en sus días fue repartida la tierra."
       },
-      "biography": "Patriarca insigne del que deriva la denominación histórica del pueblo 'Hebreo'. Preservó la lengua original tras la confusión de Babel."
+      "biography": "Patriarca insigne del que deriva la denominación histórica del pueblo 'Hebreo'. Preservó la lengua original tras la confusión de Babel.",
+      "chronology": {
+        "generation": 14
+      }
     },
     {
       "id": "peleg",
@@ -10478,7 +10554,10 @@
         "reference": "Génesis 10:25",
         "text": "En sus días fue repartida la tierra."
       },
-      "biography": "Patriarca durante cuyo período vital ocurrió la dispersión de las naciones y la confusión de las lenguas en la Torre de Babel."
+      "biography": "Patriarca durante cuyo período vital ocurrió la dispersión de las naciones y la confusión de las lenguas en la Torre de Babel.",
+      "chronology": {
+        "generation": 15
+      }
     },
     {
       "id": "reu",
@@ -10500,7 +10579,10 @@
         "reference": "Génesis 11:18",
         "text": "Peleg vivió treinta años, y engendró a Reu."
       },
-      "biography": "Hijo de Peleg y tatarabuelo de Abraham. Preservó la genealogía mesiánica en Mesopotamia."
+      "biography": "Hijo de Peleg y tatarabuelo de Abraham. Preservó la genealogía mesiánica en Mesopotamia.",
+      "chronology": {
+        "generation": 16
+      }
     },
     {
       "id": "serug",
@@ -10522,7 +10604,10 @@
         "reference": "Génesis 11:20",
         "text": "Reu vivió treinta y dos años, y engendró a Serug."
       },
-      "biography": "Patriarca postdiluviano, abuelo de Taré y bisabuelo de Abraham."
+      "biography": "Patriarca postdiluviano, abuelo de Taré y bisabuelo de Abraham.",
+      "chronology": {
+        "generation": 17
+      }
     },
     {
       "id": "nahor",
@@ -10544,7 +10629,10 @@
         "reference": "Génesis 11:22",
         "text": "Serug vivió treinta años, y engendró a Nacor."
       },
-      "biography": "Padre de Taré y abuelo patriarcal de Abraham de Ur de los Caldeos."
+      "biography": "Padre de Taré y abuelo patriarcal de Abraham de Ur de los Caldeos.",
+      "chronology": {
+        "generation": 18
+      }
     }
   ],
   "relationships": [],

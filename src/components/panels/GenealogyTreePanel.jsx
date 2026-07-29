@@ -307,7 +307,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
           <div className="genealogy-badge">📜 HERMENÉUTICA & LINAJE REDENTOR</div>
           <h1 className="genealogy-title">🌳 Árbol Genealógico & Convivencias Patriarcales</h1>
           <p className="genealogy-subtitle">
-            Explora las 63 generaciones desde Adán hasta Jesucristo y descubre la sorprendente transmisión oral directa de la verdad divina entre patriarcas convivientes.
+            Explora las 60 generaciones desde Adán hasta Jesucristo y descubre la sorprendente transmisión oral directa de la verdad divina entre patriarcas convivientes.
           </p>
         </div>
 
@@ -355,7 +355,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 className={`gtv-filter-chip ${periodFilter === 'gospels_line' ? 'active' : ''}`}
                 onClick={() => setPeriodFilter('gospels_line')}
               >
-                ✝️ Evangelios a Cristo (Gen #50 a #61)
+                ✝️ Evangelios a Cristo (Gen #50 a #60)
               </button>
               <button
                 className={`gtv-filter-chip ${periodFilter === 'messianic_line' ? 'active' : ''}`}
