@@ -57,13 +57,26 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     return personOrId.charAt(0).toUpperCase() + personOrId.slice(1).replace(/_/g, ' ');
   };
 
-  // Filtrado de personajes según período y buscador
+  // Filtrado de personajes según período, tramo histórico y buscador
   const filteredPeople = useMemo(() => {
     return people.filter(p => {
       const dates = getPersonDates(p);
       const cat = p.category || '';
+      const genNum = p.generation_from_adam || p.generation || p.chronology?.generation || 1;
 
-      // Excluir egipcios y no israelitas del filtro Antediluviano estricto
+      // Filtros por tramo histórico mesiánico
+      if (periodFilter === 'genesis_line') {
+        if (genNum > 23 || (p.period_era && p.period_era.startsWith('post_genesis'))) return false;
+      }
+
+      if (periodFilter === 'kings_line') {
+        if (genNum < 24 || genNum > 49) return false;
+      }
+
+      if (periodFilter === 'gospels_line') {
+        if (genNum < 50) return false;
+      }
+
       if (periodFilter === 'antediluvian') {
         const isAntediluvian = (cat.includes('antediluvian') ||
           ['first_man', 'first_woman', 'cainite_line', 'first_martyr', 'flood_survivor'].includes(cat) ||
@@ -274,6 +287,30 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 Todas las Generaciones ({people.length})
               </button>
               <button
+                className={`gtv-filter-chip ${periodFilter === 'genesis_line' ? 'active' : ''}`}
+                onClick={() => setPeriodFilter('genesis_line')}
+              >
+                🌿 Tramo Génesis (Gen #1 a #23)
+              </button>
+              <button
+                className={`gtv-filter-chip ${periodFilter === 'kings_line' ? 'active' : ''}`}
+                onClick={() => setPeriodFilter('kings_line')}
+              >
+                👑 Tramo Real (Gen #24 a #49)
+              </button>
+              <button
+                className={`gtv-filter-chip ${periodFilter === 'gospels_line' ? 'active' : ''}`}
+                onClick={() => setPeriodFilter('gospels_line')}
+              >
+                ✝️ Evangelios a Cristo (Gen #50 a #61)
+              </button>
+              <button
+                className={`gtv-filter-chip ${periodFilter === 'messianic_line' ? 'active' : ''}`}
+                onClick={() => setPeriodFilter('messianic_line')}
+              >
+                ✝️ Línea Mesiánica Completa
+              </button>
+              <button
                 className={`gtv-filter-chip ${periodFilter === 'antediluvian' ? 'active' : ''}`}
                 onClick={() => setPeriodFilter('antediluvian')}
               >
@@ -284,18 +321,6 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 onClick={() => setPeriodFilter('postdiluvian')}
               >
                 🌍 Postdiluvianos (Sem ➔ Taré)
-              </button>
-              <button
-                className={`gtv-filter-chip ${periodFilter === 'patriarchs' ? 'active' : ''}`}
-                onClick={() => setPeriodFilter('patriarchs')}
-              >
-                👑 Patriarcas & 12 Tribus
-              </button>
-              <button
-                className={`gtv-filter-chip ${periodFilter === 'messianic_line' ? 'active' : ''}`}
-                onClick={() => setPeriodFilter('messianic_line')}
-              >
-                ✝️ Línea Mesiánica a Cristo
               </button>
             </div>
 
