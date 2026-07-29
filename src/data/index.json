@@ -18,7 +18,14 @@
       "description": "El libro de los comienzos — creación, caída, diluvio, y los patriarcas",
       "icon": "📖",
       "color": "#7c3aed",
-      "key_figures": ["Adán", "Noé", "Abraham", "Isaac", "Jacob", "José"],
+      "key_figures": [
+        "Adán",
+        "Noé",
+        "Abraham",
+        "Isaac",
+        "Jacob",
+        "José"
+      ],
       "progress": {
         "data_structure": "completed",
         "events": "pending",
@@ -41,7 +48,12 @@
       "description": "La liberación de Israel de Egipto y el pacto del Sinaí",
       "icon": "🔥",
       "color": "#dc2626",
-      "key_figures": ["Moisés", "Aarón", "Faraón", "Miriam"],
+      "key_figures": [
+        "Moisés",
+        "Aarón",
+        "Faraón",
+        "Miriam"
+      ],
       "progress": {
         "data_structure": "pending",
         "events": "pending",
@@ -55,20 +67,24 @@
       "title_en": "Matthew",
       "testament": "new",
       "canonical_order": 40,
-      "status": "pending",
+      "status": "in_progress",
       "chapters": 28,
       "total_verses": 1071,
-      "am_start": null,
-      "am_end": null,
+      "am_start": 3996,
+      "am_end": 4033,
       "chronology_note": "Usa fechas históricas del Imperio Romano — requiere sistema de fechas adicional",
       "file": "books/matthew.json",
       "description": "El Evangelio del Rey — la vida, ministerio, muerte y resurrección de Jesucristo",
       "icon": "✝️",
       "color": "#0369a1",
-      "key_figures": ["Jesucristo", "Los 12 Apóstoles", "Juan el Bautista"],
+      "key_figures": [
+        "Jesucristo",
+        "Los 12 Apóstoles",
+        "Juan el Bautista"
+      ],
       "progress": {
-        "data_structure": "pending",
-        "events": "pending",
+        "data_structure": "completed",
+        "events": "in_progress",
         "people": "pending",
         "interface": "pending"
       }
@@ -88,7 +104,11 @@
       "description": "La revelación de Jesucristo — el fin de los tiempos y la restauración final",
       "icon": "🌟",
       "color": "#7c3aed",
-      "key_figures": ["Jesucristo", "Juan el Apóstol", "Los 144,000"],
+      "key_figures": [
+        "Jesucristo",
+        "Juan el Apóstol",
+        "Los 144,000"
+      ],
       "progress": {
         "data_structure": "pending",
         "events": "pending",

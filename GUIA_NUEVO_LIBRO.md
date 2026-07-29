@@ -4,19 +4,33 @@ Este documento es el **manual de procedimiento estandarizado** para crear, pobla
 
 ---
 
-## 📌 Principios Fundamentales
+## 📌 Principios Fundamentales Obligatorios
 
-1. **Un JSON por Libro (`src/data/books/[book_id].json`)**:
-   Cada libro se mantiene en un archivo JSON independiente que se carga de forma diferida (*lazy loading*) solo cuando el usuario selecciona el libro en la interfaz.
+1. **Fuente Única de Versículos (`src/data/bible/rvr1960_full.json`)**:
+   Está **estrictamente prohibido** redactar, inventar o extraer versículos de fuentes externas. Todos los textos bíblicos en español DEBEN ser leídos de forma nativa e inerrante de la base local de 66 libros `rvr1960_full.json` a través del lector O(1) `bibleReader.js`.
 
-2. **Cumplimiento Estricto de Schema 3.0**:
-   Todos los libros deben seguir exactamente el mismo esquema de 12 capas para garantizar que los componentes de la interfaz de usuario (Timeline, Paneles, Árbol Genealógico, Mapas y Filtros) funcionen sin modificaciones.
+2. **Orden Canónico Estricto de las 14 Claves Top-Level en todos los JSON**:
+   Para evitar incompatibilidades de código o desorden estructural entre libros (Génesis, Éxodo, Mateo, etc.), **TODOS los archivos `[book_id].json` DEBEN respetar exactamente el mismo orden estricto de 14 llaves principales**:
+   - `1. metadata`: Objeto con la información canónica y cronológica del libro.
+   - `2. eras`: Arreglo de grandes eras históricas.
+   - `3. dispensations`: Arreglo de dispensaciones presentes o vinculadas.
+   - `4. narrative_blocks`: Arreglo de bloques narrativos del libro.
+   - `5. timeline_events`: Arreglo de eventos cronológicos (Anno Mundi y a.C./d.C.).
+   - `6. people`: Arreglo de personajes principales y secundarios.
+   - `7. relationships`: Arreglo de relaciones explícitas adicionales.
+   - `8. locations`: Arreglo de ubicaciones geográficas.
+   - `9. covenants`: Arreglo de pactos bíblicos.
+   - `10. messianic_promises`: Arreglo de promesas o cumplimientos mesiánicos.
+   - `11. themes`: Arreglo de pilares teológicos del libro.
+   - `12. questions`: Arreglo de preguntas teológicas exegéticas.
+   - `13. chapters_map`: Arreglo de la Sala de Estudio por Capítulos (Caps. 1 al N).
+   - `14. notable_overlaps`: Arreglo de convivencias simultáneas de personajes.
 
-3. **Desarrollo por Sub-bloques Exhaustivos**:
-   No se deben resumir ni omitir datos. Cada evento, personaje y concepto debe poblarse con profundidad académica y precisión exegética.
+3. **Un JSON por Libro (`src/data/books/[book_id].json`)**:
+   Cada libro se mantiene en un archivo independiente que se carga de forma diferida (*lazy loading*) solo cuando el usuario lo selecciona en la interfaz.
 
 4. **Persistencia de IDs Globales**:
-   Los personajes o lugares que aparecen en múltiples libros (ej. `abraham`, `moses`, `david`, `jesus`, `egypt`, `jerusalem`) **deben reutilizar el mismo ID exacto en snake_case** en todos los archivos JSON para permitir conexiones transversales.
+   Los personajes o lugares que aparecen en múltiples libros (ej. `abraham`, `david`, `joseph`, `mary`, `jesus`, `jerusalem`, `egypt`) **deben reutilizar el mismo ID exacto en snake_case** en todos los archivos JSON para permitir conexiones transversales sin duplicar entidades.
 
 ---
 
@@ -158,15 +172,15 @@ Todos los libros de la suite deben enriquecer la experiencia de lectura implemen
    - Todo capítulo debe incluir de 5 a 10 entradas en `hebrew_terms` (Antiguo Testamento) o `greek_terms` (Nuevo Testamento) con el esquema estandarizado:
      ```json
      {
-       "hebrew": "בָּרָא",
-       "transliteration": "Bará",
-       "strong": "H1254",
+       "greek": "Logos",
+       "transliteration": "Lógos",
+       "strong": "G3056",
        "target_verse": 1,
-       "target_word": "crió",
-       "meaning": "Crear de la nada (Ex-Nihilo, atributo exclusivo de Dios)"
+       "target_word": "Verbo",
+       "meaning": "La Palabra Divina encarnada, expresión suprema de Dios"
      }
      ```
-   - Esto activa automáticamente las llamadas interlineales clicables `[🔤 Bará]` en los versículos y la ventana modal con código Strong.
+   - Esto activa automáticamente las llamadas interlineales clicables `[🔤 Bará / Lógos]` en los versículos y la ventana modal con código Strong.
 3. **📍 Geografía y Contexto de Ubicaciones**:
    - Mapear las ubicaciones mencionadas en el capítulo hacia el registro de `locations`.
 4. **📝 Cuaderno de Notas Personales**:
