@@ -1188,8 +1188,82 @@
       "summary": "Profecía sobre el precio en que fue tasado el Señor y la compra del campo del alfarero tras la traición de Judas Iscariote."
     }
   ],
-  "themes": [],
-  "questions": [],
+  "themes": [
+    {
+      "id": "theme_kingdom_of_heaven",
+      "title": "El Reino de los Cielos",
+      "description": "El tema central del Evangelio de Mateo. Jesús proclama el advenimiento del Reino de Dios en la Tierra, el cual se manifiesta espiritualmente en los corazones de los creyentes y se consumará con su regreso glorioso.",
+      "scriptural_reference": "Mateo 4:17, Mateo 13:1-52, Mateo 25:31-46"
+    },
+    {
+      "id": "theme_prophetic_fulfillment",
+      "title": "El Cumplimiento Profético Mesiánico",
+      "description": "Mateo demuestra minuciosamente que cada aspecto del nacimiento, vida, ministerio, milagros, pasión y resurrección de Jesús cumple con absoluta precisión las profecías del Antiguo Testamento.",
+      "scriptural_reference": "Mateo 1:22, Mateo 2:15, Mateo 8:17, Mateo 21:4"
+    },
+    {
+      "id": "theme_son_of_david",
+      "title": "Jesús, el Hijo de David y Rey Mesiánico",
+      "description": "Enfoque regio de Mateo que presenta a Jesucristo como el heredero legítimo del trono de David, el Rey humilde que viene a salvar a su pueblo y gobernar con justicia divina.",
+      "scriptural_reference": "Mateo 1:1, Mateo 9:27, Mateo 21:9"
+    },
+    {
+      "id": "theme_sermon_on_mount_righteousness",
+      "title": "La Justicia del Corazón y el Sermón del Monte",
+      "description": "Exposición de la verdadera santidad y ética del Reino. Cristo trasciende el formalismo ritual exigiendo un corazón transformado por la gracia divina.",
+      "scriptural_reference": "Mateo 5:20, Mateo 6:33, Mateo 7:24-27"
+    },
+    {
+      "id": "theme_atoning_death_resurrection",
+      "title": "La Muerte Expiatoria y Resurrección Gloriosa",
+      "description": "El clímax de la misión redentora de Jesús. Su muerte en la cruz cancela la deuda del pecado y su resurrección garantiza la victoria sobre la muerte para todos los creyentes.",
+      "scriptural_reference": "Mateo 20:28, Mateo 26:28, Mateo 28:1-10"
+    },
+    {
+      "id": "theme_great_commission",
+      "title": "La Gran Comisión y la Misión Universal",
+      "description": "El mandato soberano de Cristo a su Iglesia para ir a todas las naciones del mundo, bautizando y haciendo discípulos bajo su potestad universal.",
+      "scriptural_reference": "Mateo 28:18-20"
+    }
+  ],
+  "questions": [
+    {
+      "id": "question_matthew_genealogy_purpose",
+      "question": "¿Por qué la genealogía de Mateo comienza con Abraham y el Rey David?",
+      "answer": "Mateo escribió primariamente para un público judío. Al iniciar con Abraham y David, demuestra desde el primer versículo que Jesucristo posee los títulos legales e incontestables para ser el heredero del Pacto Abrahámico (bendición universal) y del Pacto Davídico (trono eterno).",
+      "scriptural_reference": "Mateo 1:1-17, Génesis 12:3, 2 Samuel 7:12-13"
+    },
+    {
+      "id": "question_virgin_birth_necessity",
+      "question": "¿Por qué fue teológicamente indispensable el nacimiento virginal de Jesús?",
+      "answer": "El nacimiento virginal por obra del Espíritu Santo preservó a Jesucristo de la naturaleza pecaminosa caída heredada por vía de generación adámica. Esto le permitió ser 100% hombre y 100% sin pecado, constituyéndose en el Cordero irreprensible capaz de expiar nuestros pecados.",
+      "scriptural_reference": "Mateo 1:18-25, Isaías 7:14, Lucas 1:35"
+    },
+    {
+      "id": "question_kingdom_of_heaven_vs_god",
+      "question": "¿Existe alguna diferencia entre 'Reino de los Cielos' y 'Reino de Dios'?",
+      "answer": "No hay diferencia sustancial de significado. Mateo utiliza preferentemente la frase 'Reino de los Cielos' respetando la reverencia judía tradicional de evitar nombrar directamente el Santo Nombre de Dios, mientras que Marcos y Lucas usan 'Reino de Dios'. Ambos términos describen el gobierno soberano de Dios instaurado por Cristo.",
+      "scriptural_reference": "Mateo 3:2, Mateo 4:17, Marcos 1:15"
+    },
+    {
+      "id": "question_fulfilled_law_meaning",
+      "question": "¿Qué significa que Jesús vino a 'cumplir la ley' y no a abrogarla?",
+      "answer": "Jesús cumplió perfectamente toda demanda moral de la Ley mediante su obediencia inmaculada, cumplió todos los tipos y sombras ceremoniales mediante su sacrificio en la cruz, y reveló la verdadera profundidad espiritual de los mandamientos frente al legalismo farisaico.",
+      "scriptural_reference": "Mateo 5:17-20, Romanos 10:4, Hebreos 10:1-10"
+    },
+    {
+      "id": "question_sign_of_jonah",
+      "question": "¿En qué consiste la 'Señala del Profeta Jonás' prometida por Jesucristo?",
+      "answer": "Así como Jonás estuvo tres días y tres noches en el vientre del gran pez, el Hijo del Hombre estaría tres días y tres noches en el corazón de la tierra antes de resucitar. La Resurrección de Cristo es la señal suprema e incontrovertible dada a toda generación.",
+      "scriptural_reference": "Mateo 12:38-40, Jonás 1:17"
+    },
+    {
+      "id": "question_great_commission_scope",
+      "question": "¿Qué alcance e implicaciones tiene la Gran Comisión de Mateo 28:18-20?",
+      "answer": "Es el mandato imperativo supremo de Jesucristo para su Iglesia en todo tiempo. Respaldado por 'toda potestad en el cielo y en la tierra', encomienda ir, hacer discípulos a todas las naciones, bautizarlos en el nombre del Padre, del Hijo y del Espíritu Santo, y enseñarles a guardar todo lo mandado, con la promesa de su presencia constante.",
+      "scriptural_reference": "Mateo 28:18-20, Hechos 1:8"
+    }
+  ],
   "chapters_map": [
     {
       "chapter_number": 1,
@@ -2036,5 +2110,61 @@
       ]
     }
   ],
-  "notable_overlaps": []
+  "notable_overlaps": [
+    {
+      "id": "ov_joseph_jesus",
+      "person1_id": "joseph",
+      "person2_id": "jesus",
+      "person1_name": "José (Esposo de María)",
+      "person2_name": "JESUCRISTO",
+      "years_together": 20,
+      "years_overlap": 20,
+      "era": "gospels",
+      "historical_note": "José el carpintero convivió 20 años terrenales con Jesucristo, protegiéndolo en Nazaret e instruyéndolo en el oficio hasta su juventud."
+    },
+    {
+      "id": "ov_mary_jesus",
+      "person1_id": "mary",
+      "person2_id": "jesus",
+      "person1_name": "María (Madre de Jesús)",
+      "person2_name": "JESUCRISTO",
+      "years_together": 33,
+      "years_overlap": 33,
+      "era": "gospels",
+      "historical_note": "María convivió los 33 años de la vida terrenal de Jesucristo, desde la Encarnación por el Espíritu Santo hasta la Cruz, Resurrección y Pentecostés."
+    },
+    {
+      "id": "ov_john_jesus",
+      "person1_id": "john_the_baptist",
+      "person2_id": "jesus",
+      "person1_name": "Juan el Bautista",
+      "person2_name": "JESUCRISTO",
+      "years_together": 33,
+      "years_overlap": 33,
+      "era": "gospels",
+      "historical_note": "Juan el Bautista convivió 33 años contemporáneos con Jesús desde el anuncio angélico hasta su martirio, preparando el camino del Señor."
+    },
+    {
+      "id": "ov_peter_jesus",
+      "person1_id": "peter",
+      "person2_id": "jesus",
+      "person1_name": "Simón Pedro",
+      "person2_name": "JESUCRISTO",
+      "years_together": 3,
+      "years_overlap": 3,
+      "era": "gospels",
+      "historical_note": "Simón Pedro convivió más de 3 años de discipulado directo e íntimo con Jesucristo durante su ministerio terrenal."
+    },
+    {
+      "id": "ov_matthew_jesus",
+      "person1_id": "matthew_apostle",
+      "person2_id": "jesus",
+      "person1_name": "Mateo el Publicano",
+      "person2_name": "JESUCRISTO",
+      "years_together": 3,
+      "years_overlap": 3,
+      "era": "gospels",
+      "historical_note": "Mateo convivió 3 años de seguimiento cercano con Jesús tras su llamamiento en Capernaúm, siendo testigo ocular de sus palabras y obras."
+    }
+  ]
 }

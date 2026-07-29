@@ -67,7 +67,7 @@
       "title_en": "Matthew",
       "testament": "new",
       "canonical_order": 40,
-      "status": "in_progress",
+      "status": "completed",
       "chapters": 28,
       "total_verses": 1071,
       "am_start": 3996,
@@ -84,9 +84,9 @@
       ],
       "progress": {
         "data_structure": "completed",
-        "events": "in_progress",
-        "people": "pending",
-        "interface": "pending"
+        "events": "completed",
+        "people": "completed",
+        "interface": "completed"
       }
     },
     {
