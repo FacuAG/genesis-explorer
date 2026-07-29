@@ -6205,7 +6205,9 @@
           "chapter": 5,
           "verse": 5
         },
-        "generation": 1
+        "generation": 1,
+        "birth_bc_ad": "4004 a.C.",
+        "death_bc_ad": "3074 a.C."
       },
       "family": {
         "father": null,
@@ -6288,7 +6290,12 @@
       ],
       "generation_from_adam": 1,
       "generation": 1,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 0,
+      "death_am": 930,
+      "lifespan": 930,
+      "birth_bc_ad": "4004 a.C.",
+      "death_bc_ad": "3074 a.C."
     },
     {
       "id": "eve",
@@ -6555,7 +6562,9 @@
           "chapter": 5,
           "verse": 8
         },
-        "generation": 2
+        "generation": 2,
+        "birth_bc_ad": "3874 a.C.",
+        "death_bc_ad": "2962 a.C."
       },
       "family": {
         "father": "adam",
@@ -6623,7 +6632,12 @@
       ],
       "generation_from_adam": 2,
       "generation": 2,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 130,
+      "death_am": 1042,
+      "lifespan": 912,
+      "birth_bc_ad": "3874 a.C.",
+      "death_bc_ad": "2962 a.C."
     },
     {
       "id": "enoch",
@@ -6645,7 +6659,9 @@
           "chapter": 5,
           "verse": 24
         },
-        "generation": 7
+        "generation": 7,
+        "birth_bc_ad": "3382 a.C.",
+        "death_bc_ad": "3017 a.C."
       },
       "family": {
         "father": "jared",
@@ -6708,7 +6724,12 @@
       ],
       "generation_from_adam": 7,
       "generation": 7,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 622,
+      "death_am": 987,
+      "lifespan": 365,
+      "birth_bc_ad": "3382 a.C.",
+      "death_bc_ad": "3017 a.C."
     },
     {
       "id": "methuselah",
@@ -6730,7 +6751,9 @@
           "chapter": 5,
           "verse": 27
         },
-        "generation": 8
+        "generation": 8,
+        "birth_bc_ad": "3317 a.C.",
+        "death_bc_ad": "2348 a.C."
       },
       "family": {
         "father": "enoch",
@@ -6793,7 +6816,12 @@
       ],
       "generation_from_adam": 8,
       "generation": 8,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 687,
+      "death_am": 1656,
+      "lifespan": 969,
+      "birth_bc_ad": "3317 a.C.",
+      "death_bc_ad": "2348 a.C."
     },
     {
       "id": "noah",
@@ -6815,7 +6843,9 @@
           "chapter": 9,
           "verse": 29
         },
-        "generation": 10
+        "generation": 10,
+        "birth_bc_ad": "2948 a.C.",
+        "death_bc_ad": "1998 a.C."
       },
       "family": {
         "father": "lamech",
@@ -6911,7 +6941,12 @@
       ],
       "generation_from_adam": 10,
       "generation": 10,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 1056,
+      "death_am": 2006,
+      "lifespan": 950,
+      "birth_bc_ad": "2948 a.C.",
+      "death_bc_ad": "1998 a.C."
     },
     {
       "id": "shem",
@@ -6933,7 +6968,9 @@
           "chapter": 11,
           "verse": 11
         },
-        "generation": 11
+        "generation": 11,
+        "birth_bc_ad": "2446 a.C.",
+        "death_bc_ad": "1846 a.C."
       },
       "family": {
         "father": "noah",
@@ -7014,7 +7051,12 @@
       ],
       "generation_from_adam": 11,
       "generation": 11,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 1558,
+      "death_am": 2158,
+      "lifespan": 600,
+      "birth_bc_ad": "2446 a.C.",
+      "death_bc_ad": "1846 a.C."
     },
     {
       "id": "abraham",
@@ -7036,7 +7078,9 @@
           "chapter": 25,
           "verse": 10
         },
-        "generation": 20
+        "generation": 20,
+        "birth_bc_ad": "2056 a.C.",
+        "death_bc_ad": "1881 a.C."
       },
       "family": {
         "father": "terah",
@@ -7136,7 +7180,12 @@
       ],
       "generation_from_adam": 20,
       "generation": 20,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 1948,
+      "death_am": 2123,
+      "lifespan": 175,
+      "birth_bc_ad": "2056 a.C.",
+      "death_bc_ad": "1881 a.C."
     },
     {
       "id": "sarah",
@@ -7512,8 +7561,8 @@
       "category": "covenant_patriarch",
       "importance": "critical",
       "chronology": {
-        "birth_am": 2048,
-        "death_am": 2228,
+        "birth_am": 2108,
+        "death_am": 2288,
         "lifespan": 180,
         "notable_age": "Nació cuando Abraham tenía 100 años y Sara 90 (AM 2048); atado en el monte Moriah (~25 años); se casó a los 40 años; engendró gemelos a los 60 años; murió a los 180 años (AM 2228)",
         "first_mention": {
@@ -7524,7 +7573,9 @@
           "chapter": 35,
           "verse": 29
         },
-        "generation": 21
+        "generation": 21,
+        "birth_bc_ad": "1896 a.C.",
+        "death_bc_ad": "1716 a.C."
       },
       "family": {
         "father": "abraham",
@@ -7625,7 +7676,12 @@
       ],
       "generation_from_adam": 21,
       "generation": 21,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2108,
+      "death_am": 2288,
+      "lifespan": 180,
+      "birth_bc_ad": "1896 a.C.",
+      "death_bc_ad": "1716 a.C."
     },
     {
       "id": "rebekah",
@@ -7827,7 +7883,9 @@
           "chapter": 50,
           "verse": 14
         },
-        "generation": 22
+        "generation": 22,
+        "birth_bc_ad": "1836 a.C.",
+        "death_bc_ad": "1689 a.C."
       },
       "family": {
         "father": "isaac",
@@ -7929,7 +7987,9 @@
       "death_am": 2315,
       "lifespan": 147,
       "generation": 22,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_bc_ad": "1836 a.C.",
+      "death_bc_ad": "1689 a.C."
     },
     {
       "id": "leah",
@@ -8117,9 +8177,9 @@
       "category": "messianic_line",
       "importance": "critical",
       "chronology": {
-        "birth_am": 2259,
-        "death_am": 2369,
-        "lifespan": 110,
+        "birth_am": 3950,
+        "death_am": 4020,
+        "lifespan": 70,
         "notable_age": "Nació cuando Jacob tenía 91 años (AM 2259); vendido a Egipto a los 17 años (AM 2276); exaltado a Gran Visir a los 30 años (AM 2289); se reunió con su padre a los 39 años; murió a los 110 años (AM 2369)",
         "first_mention": {
           "chapter": 30,
@@ -8129,7 +8189,9 @@
           "chapter": 50,
           "verse": 26
         },
-        "generation": 59
+        "generation": 59,
+        "birth_bc_ad": "54 a.C.",
+        "death_bc_ad": "16 d.C."
       },
       "family": {
         "father": "jacob",
@@ -8219,7 +8281,12 @@
       "spouse_id": "mary",
       "scriptural_reference": "Mateo 1:16-25, Lucas 1:27",
       "generation": 59,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3950,
+      "death_am": 4020,
+      "lifespan": 70,
+      "birth_bc_ad": "54 a.C.",
+      "death_bc_ad": "16 d.C."
     },
     {
       "id": "lamech_cainite",
@@ -8307,7 +8374,9 @@
           "chapter": 5,
           "verse": 31
         },
-        "generation": 9
+        "generation": 9,
+        "birth_bc_ad": "3130 a.C.",
+        "death_bc_ad": "2353 a.C."
       },
       "family": {
         "father": "methuselah",
@@ -8357,7 +8426,12 @@
       ],
       "generation_from_adam": 9,
       "generation": 9,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 874,
+      "death_am": 1651,
+      "lifespan": 777,
+      "birth_bc_ad": "3130 a.C.",
+      "death_bc_ad": "2353 a.C."
     },
     {
       "id": "terah",
@@ -8379,7 +8453,9 @@
           "chapter": 11,
           "verse": 32
         },
-        "generation": 19
+        "generation": 19,
+        "birth_bc_ad": "2126 a.C.",
+        "death_bc_ad": "1921 a.C."
       },
       "family": {
         "father": "nahor_pater",
@@ -8432,7 +8508,12 @@
       ],
       "generation_from_adam": 19,
       "generation": 19,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 1878,
+      "death_am": 2083,
+      "lifespan": 205,
+      "birth_bc_ad": "2126 a.C.",
+      "death_bc_ad": "1921 a.C."
     },
     {
       "id": "melchizedek",
@@ -9041,9 +9122,9 @@
       "category": "messianic_line",
       "importance": "critical",
       "chronology": {
-        "birth_am": 2229,
-        "death_am": null,
-        "lifespan": null,
+        "birth_am": 2246,
+        "death_am": 2375,
+        "lifespan": 129,
         "notable_age": "Cuarto hijo de Jacob y Lea; propuso vender a José a Egipto (17 años); arrepentido en el incidente de Tamar; fiador sustituto de Benjamín; receptor del cetro de Siloh",
         "first_mention": {
           "chapter": 29,
@@ -9053,7 +9134,9 @@
           "chapter": 49,
           "verse": 12
         },
-        "generation": 23
+        "generation": 23,
+        "birth_bc_ad": "1758 a.C.",
+        "death_bc_ad": "1629 a.C."
       },
       "family": {
         "father": "jacob",
@@ -9133,7 +9216,12 @@
       "notable_overlaps": [],
       "generation_from_adam": 23,
       "generation": 23,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2246,
+      "death_am": 2375,
+      "lifespan": 129,
+      "birth_bc_ad": "1758 a.C.",
+      "death_bc_ad": "1629 a.C."
     },
     {
       "id": "perez",
@@ -9152,7 +9240,19 @@
       },
       "biography": "Hijo de Judá y Tamar. Su nacimiento marcó la brecha soberana por la cual continuaría la simiente mesiánica de Judá hasta David y Jesucristo.",
       "generation": 24,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2282,
+      "death_am": 2392,
+      "lifespan": 110,
+      "birth_bc_ad": "1722 a.C.",
+      "death_bc_ad": "1612 a.C.",
+      "chronology": {
+        "birth_am": 2282,
+        "death_am": 2392,
+        "lifespan": 110,
+        "birth_bc_ad": "1722 a.C.",
+        "death_bc_ad": "1612 a.C."
+      }
     },
     {
       "id": "hezron",
@@ -9169,7 +9269,19 @@
       },
       "biography": "Hijo de Fares y nieto de Judá. Descendió a Egipto con la familia de Jacob y fue patriarca de la tribu de Judá.",
       "generation": 25,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2315,
+      "death_am": 2420,
+      "lifespan": 105,
+      "birth_bc_ad": "1689 a.C.",
+      "death_bc_ad": "1584 a.C.",
+      "chronology": {
+        "birth_am": 2315,
+        "death_am": 2420,
+        "lifespan": 105,
+        "birth_bc_ad": "1689 a.C.",
+        "death_bc_ad": "1584 a.C."
+      }
     },
     {
       "id": "ram",
@@ -9186,7 +9298,19 @@
       },
       "biography": "Hijo de Esrom. Preservó la línea patriarcal durante los años de permanencia de Israel en Egipto.",
       "generation": 26,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2355,
+      "death_am": 2450,
+      "lifespan": 95,
+      "birth_bc_ad": "1649 a.C.",
+      "death_bc_ad": "1554 a.C.",
+      "chronology": {
+        "birth_am": 2355,
+        "death_am": 2450,
+        "lifespan": 95,
+        "birth_bc_ad": "1649 a.C.",
+        "death_bc_ad": "1554 a.C."
+      }
     },
     {
       "id": "amminadab",
@@ -9203,7 +9327,19 @@
       },
       "biography": "Padre de Naasón y suegro del Sumo Sacerdote Aarón. Su familia unió la línea sacerdotal con la línea regia de Judá.",
       "generation": 27,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2400,
+      "death_am": 2490,
+      "lifespan": 90,
+      "birth_bc_ad": "1604 a.C.",
+      "death_bc_ad": "1514 a.C.",
+      "chronology": {
+        "birth_am": 2400,
+        "death_am": 2490,
+        "lifespan": 90,
+        "birth_bc_ad": "1604 a.C.",
+        "death_bc_ad": "1514 a.C."
+      }
     },
     {
       "id": "nahshon",
@@ -9220,7 +9356,19 @@
       },
       "biography": "Príncipe y líder principal de la tribu de Judá durante la travesía del desierto tras el Éxodo de Egipto.",
       "generation": 28,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2445,
+      "death_am": 2515,
+      "lifespan": 70,
+      "birth_bc_ad": "1559 a.C.",
+      "death_bc_ad": "1489 a.C.",
+      "chronology": {
+        "birth_am": 2445,
+        "death_am": 2515,
+        "lifespan": 70,
+        "birth_bc_ad": "1559 a.C.",
+        "death_bc_ad": "1489 a.C."
+      }
     },
     {
       "id": "salmon",
@@ -9238,7 +9386,19 @@
       },
       "biography": "Entró a la Tierra Prometida con Josué y tomó por esposa a Rahab de Jericó, incorporando la fe gentil a la genealogía del Mesías.",
       "generation": 29,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2485,
+      "death_am": 2570,
+      "lifespan": 85,
+      "birth_bc_ad": "1519 a.C.",
+      "death_bc_ad": "1434 a.C.",
+      "chronology": {
+        "birth_am": 2485,
+        "death_am": 2570,
+        "lifespan": 85,
+        "birth_bc_ad": "1519 a.C.",
+        "death_bc_ad": "1434 a.C."
+      }
     },
     {
       "id": "boaz",
@@ -9256,7 +9416,19 @@
       },
       "biography": "El pariente redentor de Belén de Judá que rescató a la moabita Rut. Es el prototipo del Mesías como Redentor de su pueblo.",
       "generation": 30,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2560,
+      "death_am": 2645,
+      "lifespan": 85,
+      "birth_bc_ad": "1444 a.C.",
+      "death_bc_ad": "1359 a.C.",
+      "chronology": {
+        "birth_am": 2560,
+        "death_am": 2645,
+        "lifespan": 85,
+        "birth_bc_ad": "1444 a.C.",
+        "death_bc_ad": "1359 a.C."
+      }
     },
     {
       "id": "obed",
@@ -9274,7 +9446,19 @@
       },
       "biography": "Hijo de Booz y Rut, criado en Belén. Fue el abuelo del Rey David.",
       "generation": 31,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2635,
+      "death_am": 2715,
+      "lifespan": 80,
+      "birth_bc_ad": "1369 a.C.",
+      "death_bc_ad": "1289 a.C.",
+      "chronology": {
+        "birth_am": 2635,
+        "death_am": 2715,
+        "lifespan": 80,
+        "birth_bc_ad": "1369 a.C.",
+        "death_bc_ad": "1289 a.C."
+      }
     },
     {
       "id": "jesse",
@@ -9291,7 +9475,19 @@
       },
       "biography": "Belenita de Judá, padre de ocho hijos entre ellos el Rey David. La profecía mesiánica de Isaías lo destaca como la raíz de Cristo.",
       "generation": 32,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2710,
+      "death_am": 2790,
+      "lifespan": 80,
+      "birth_bc_ad": "1294 a.C.",
+      "death_bc_ad": "1214 a.C.",
+      "chronology": {
+        "birth_am": 2710,
+        "death_am": 2790,
+        "lifespan": 80,
+        "birth_bc_ad": "1294 a.C.",
+        "death_bc_ad": "1214 a.C."
+      }
     },
     {
       "id": "david",
@@ -9308,7 +9504,19 @@
       },
       "biography": "El gran rey de Israel según el corazón de Dios. Recibió el Pacto Davidico incondicional de que su trono sería eterno mediante Jesucristo.",
       "generation": 33,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2940,
+      "death_am": 3010,
+      "lifespan": 70,
+      "birth_bc_ad": "1064 a.C.",
+      "death_bc_ad": "994 a.C.",
+      "chronology": {
+        "birth_am": 2940,
+        "death_am": 3010,
+        "lifespan": 70,
+        "birth_bc_ad": "1064 a.C.",
+        "death_bc_ad": "994 a.C."
+      }
     },
     {
       "id": "solomon",
@@ -9325,7 +9533,19 @@
       },
       "biography": "Hijo de David y Betsabé. Edificó el Primer Templo de Jerusalén y gobernó sobre el Reino Unido de Israel en su mayor gloria.",
       "generation": 34,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 2980,
+      "death_am": 3040,
+      "lifespan": 60,
+      "birth_bc_ad": "1024 a.C.",
+      "death_bc_ad": "964 a.C.",
+      "chronology": {
+        "birth_am": 2980,
+        "death_am": 3040,
+        "lifespan": 60,
+        "birth_bc_ad": "1024 a.C.",
+        "death_bc_ad": "964 a.C."
+      }
     },
     {
       "id": "rehoboam",
@@ -9342,7 +9562,19 @@
       },
       "biography": "Hijo de Salomón. Bajo su reinado el reino se dividió en dos: Judá en el sur e Israel en el norte.",
       "generation": 35,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3019,
+      "death_am": 3057,
+      "lifespan": 38,
+      "birth_bc_ad": "985 a.C.",
+      "death_bc_ad": "947 a.C.",
+      "chronology": {
+        "birth_am": 3019,
+        "death_am": 3057,
+        "lifespan": 38,
+        "birth_bc_ad": "985 a.C.",
+        "death_bc_ad": "947 a.C."
+      }
     },
     {
       "id": "abijah",
@@ -9359,7 +9591,19 @@
       },
       "biography": "Rey de Judá que reinó en Jerusalén y confió en Dios durante la guerra contra Jeroboam de Israel.",
       "generation": 36,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3038,
+      "death_am": 3060,
+      "lifespan": 22,
+      "birth_bc_ad": "966 a.C.",
+      "death_bc_ad": "944 a.C.",
+      "chronology": {
+        "birth_am": 3038,
+        "death_am": 3060,
+        "lifespan": 22,
+        "birth_bc_ad": "966 a.C.",
+        "death_bc_ad": "944 a.C."
+      }
     },
     {
       "id": "asa",
@@ -9376,7 +9620,19 @@
       },
       "biography": "Rey piadoso de Judá que quitó los ídolos de la tierra y restauró el culto a Jehová en Jerusalén.",
       "generation": 37,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3042,
+      "death_am": 3101,
+      "lifespan": 59,
+      "birth_bc_ad": "962 a.C.",
+      "death_bc_ad": "903 a.C.",
+      "chronology": {
+        "birth_am": 3042,
+        "death_am": 3101,
+        "lifespan": 59,
+        "birth_bc_ad": "962 a.C.",
+        "death_bc_ad": "903 a.C."
+      }
     },
     {
       "id": "jehoshaphat",
@@ -9393,7 +9649,19 @@
       },
       "biography": "Rey piadoso de Judá que envió maestros con el libro de la Ley por todas las ciudades para instruir al pueblo.",
       "generation": 38,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3076,
+      "death_am": 3126,
+      "lifespan": 50,
+      "birth_bc_ad": "928 a.C.",
+      "death_bc_ad": "878 a.C.",
+      "chronology": {
+        "birth_am": 3076,
+        "death_am": 3126,
+        "lifespan": 50,
+        "birth_bc_ad": "928 a.C.",
+        "death_bc_ad": "878 a.C."
+      }
     },
     {
       "id": "jehoram",
@@ -9410,7 +9678,19 @@
       },
       "biography": "Rey de Judá. A pesar de sus desviaciones, Dios preservó la lámpara de David en la genealogía mesiánica.",
       "generation": 39,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3097,
+      "death_am": 3137,
+      "lifespan": 40,
+      "birth_bc_ad": "907 a.C.",
+      "death_bc_ad": "867 a.C.",
+      "chronology": {
+        "birth_am": 3097,
+        "death_am": 3137,
+        "lifespan": 40,
+        "birth_bc_ad": "907 a.C.",
+        "death_bc_ad": "867 a.C."
+      }
     },
     {
       "id": "uzziah",
@@ -9427,7 +9707,19 @@
       },
       "biography": "Rey próspero de Judá que gobernó durante 52 años en Jerusalén, contemporáneo del profeta Isaías.",
       "generation": 40,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3175,
+      "death_am": 3243,
+      "lifespan": 68,
+      "birth_bc_ad": "829 a.C.",
+      "death_bc_ad": "761 a.C.",
+      "chronology": {
+        "birth_am": 3175,
+        "death_am": 3243,
+        "lifespan": 68,
+        "birth_bc_ad": "829 a.C.",
+        "death_bc_ad": "761 a.C."
+      }
     },
     {
       "id": "jotham",
@@ -9444,7 +9736,19 @@
       },
       "biography": "Rey piadoso de Judá que fortificó el Templo y prevaleció sobre sus enemigos.",
       "generation": 41,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3220,
+      "death_am": 3257,
+      "lifespan": 37,
+      "birth_bc_ad": "784 a.C.",
+      "death_bc_ad": "747 a.C.",
+      "chronology": {
+        "birth_am": 3220,
+        "death_am": 3257,
+        "lifespan": 37,
+        "birth_bc_ad": "784 a.C.",
+        "death_bc_ad": "747 a.C."
+      }
     },
     {
       "id": "ahaz",
@@ -9461,7 +9765,19 @@
       },
       "biography": "Rey de Judá durante cuyo reinado Isaías pronunció la profecía inmortal del nacimiento virginal de Emanuel.",
       "generation": 42,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3237,
+      "death_am": 3273,
+      "lifespan": 36,
+      "birth_bc_ad": "767 a.C.",
+      "death_bc_ad": "731 a.C.",
+      "chronology": {
+        "birth_am": 3237,
+        "death_am": 3273,
+        "lifespan": 36,
+        "birth_bc_ad": "767 a.C.",
+        "death_bc_ad": "731 a.C."
+      }
     },
     {
       "id": "hezekiah",
@@ -9478,7 +9794,19 @@
       },
       "biography": "Uno de los más grandes reyes reformadores de Judá. Oró con fe y Dios liberó a Jerusalén del ejército asirio de Senaquerib.",
       "generation": 43,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3252,
+      "death_am": 3306,
+      "lifespan": 54,
+      "birth_bc_ad": "752 a.C.",
+      "death_bc_ad": "698 a.C.",
+      "chronology": {
+        "birth_am": 3252,
+        "death_am": 3306,
+        "lifespan": 54,
+        "birth_bc_ad": "752 a.C.",
+        "death_bc_ad": "698 a.C."
+      }
     },
     {
       "id": "manasseh",
@@ -9495,7 +9823,19 @@
       },
       "biography": "Rey de Judá. Tras ser llevado cautivo a Babilonia, se humilló profundamente, experimentando el perdón de Dios.",
       "generation": 44,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3294,
+      "death_am": 3361,
+      "lifespan": 67,
+      "birth_bc_ad": "710 a.C.",
+      "death_bc_ad": "643 a.C.",
+      "chronology": {
+        "birth_am": 3294,
+        "death_am": 3361,
+        "lifespan": 67,
+        "birth_bc_ad": "710 a.C.",
+        "death_bc_ad": "643 a.C."
+      }
     },
     {
       "id": "amon",
@@ -9512,7 +9852,19 @@
       },
       "biography": "Rey de Judá, hijo de Manasés y padre del reformador Josías.",
       "generation": 45,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3345,
+      "death_am": 3363,
+      "lifespan": 18,
+      "birth_bc_ad": "659 a.C.",
+      "death_bc_ad": "641 a.C.",
+      "chronology": {
+        "birth_am": 3345,
+        "death_am": 3363,
+        "lifespan": 18,
+        "birth_bc_ad": "659 a.C.",
+        "death_bc_ad": "641 a.C."
+      }
     },
     {
       "id": "josiah",
@@ -9529,7 +9881,19 @@
       },
       "biography": "El gran rey niño de Judá que descubrió el Libro de la Ley en el Templo y promovió el mayor avivamiento espiritual.",
       "generation": 46,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3355,
+      "death_am": 3394,
+      "lifespan": 39,
+      "birth_bc_ad": "649 a.C.",
+      "death_bc_ad": "610 a.C.",
+      "chronology": {
+        "birth_am": 3355,
+        "death_am": 3394,
+        "lifespan": 39,
+        "birth_bc_ad": "649 a.C.",
+        "death_bc_ad": "610 a.C."
+      }
     },
     {
       "id": "jeconiah",
@@ -9546,7 +9910,19 @@
       },
       "biography": "Último rey reinante de la línea real de David antes del Cautiverio Babilónico.",
       "generation": 47,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3386,
+      "death_am": 3440,
+      "lifespan": 54,
+      "birth_bc_ad": "618 a.C.",
+      "death_bc_ad": "564 a.C.",
+      "chronology": {
+        "birth_am": 3386,
+        "death_am": 3440,
+        "lifespan": 54,
+        "birth_bc_ad": "618 a.C.",
+        "death_bc_ad": "564 a.C."
+      }
     },
     {
       "id": "shealtiel",
@@ -9563,7 +9939,19 @@
       },
       "biography": "Líder judío en el Exilio Babilónico, padre de Zorobabel.",
       "generation": 48,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3410,
+      "death_am": 3470,
+      "lifespan": 60,
+      "birth_bc_ad": "594 a.C.",
+      "death_bc_ad": "534 a.C.",
+      "chronology": {
+        "birth_am": 3410,
+        "death_am": 3470,
+        "lifespan": 60,
+        "birth_bc_ad": "594 a.C.",
+        "death_bc_ad": "534 a.C."
+      }
     },
     {
       "id": "zerubbabel",
@@ -9580,7 +9968,19 @@
       },
       "biography": "Gobernador judío que lideró el primer retorno del cautiverio babilónico y reedificó el Segundo Templo de Jerusalén.",
       "generation": 49,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3445,
+      "death_am": 3515,
+      "lifespan": 70,
+      "birth_bc_ad": "559 a.C.",
+      "death_bc_ad": "489 a.C.",
+      "chronology": {
+        "birth_am": 3445,
+        "death_am": 3515,
+        "lifespan": 70,
+        "birth_bc_ad": "559 a.C.",
+        "death_bc_ad": "489 a.C."
+      }
     },
     {
       "id": "abiud",
@@ -9597,7 +9997,19 @@
       },
       "biography": "Hijo de Zorobabel, preservó la descendencia davídica durante el período intertestamentario.",
       "generation": 50,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3490,
+      "death_am": 3560,
+      "lifespan": 70,
+      "birth_bc_ad": "514 a.C.",
+      "death_bc_ad": "444 a.C.",
+      "chronology": {
+        "birth_am": 3490,
+        "death_am": 3560,
+        "lifespan": 70,
+        "birth_bc_ad": "514 a.C.",
+        "death_bc_ad": "444 a.C."
+      }
     },
     {
       "id": "eliakim",
@@ -9614,7 +10026,19 @@
       },
       "biography": "Descendiente de David en la línea que conduce al Salvador.",
       "generation": 51,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3540,
+      "death_am": 3610,
+      "lifespan": 70,
+      "birth_bc_ad": "464 a.C.",
+      "death_bc_ad": "394 a.C.",
+      "chronology": {
+        "birth_am": 3540,
+        "death_am": 3610,
+        "lifespan": 70,
+        "birth_bc_ad": "464 a.C.",
+        "death_bc_ad": "394 a.C."
+      }
     },
     {
       "id": "azor",
@@ -9631,7 +10055,19 @@
       },
       "biography": "Patriarca intertestamentario de la tribu de Judá.",
       "generation": 52,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3590,
+      "death_am": 3660,
+      "lifespan": 70,
+      "birth_bc_ad": "414 a.C.",
+      "death_bc_ad": "344 a.C.",
+      "chronology": {
+        "birth_am": 3590,
+        "death_am": 3660,
+        "lifespan": 70,
+        "birth_bc_ad": "414 a.C.",
+        "death_bc_ad": "344 a.C."
+      }
     },
     {
       "id": "zadok",
@@ -9648,7 +10084,19 @@
       },
       "biography": "Descendiente regio de David en el período intertestamentario.",
       "generation": 53,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3640,
+      "death_am": 3710,
+      "lifespan": 70,
+      "birth_bc_ad": "364 a.C.",
+      "death_bc_ad": "294 a.C.",
+      "chronology": {
+        "birth_am": 3640,
+        "death_am": 3710,
+        "lifespan": 70,
+        "birth_bc_ad": "364 a.C.",
+        "death_bc_ad": "294 a.C."
+      }
     },
     {
       "id": "achim",
@@ -9665,7 +10113,19 @@
       },
       "biography": "Antepasado de José en el Evangelio según San Mateo.",
       "generation": 54,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3690,
+      "death_am": 3760,
+      "lifespan": 70,
+      "birth_bc_ad": "314 a.C.",
+      "death_bc_ad": "244 a.C.",
+      "chronology": {
+        "birth_am": 3690,
+        "death_am": 3760,
+        "lifespan": 70,
+        "birth_bc_ad": "314 a.C.",
+        "death_bc_ad": "244 a.C."
+      }
     },
     {
       "id": "eliud",
@@ -9682,7 +10142,19 @@
       },
       "biography": "Patriarca judaico previo al advenimiento del Mesías.",
       "generation": 55,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3740,
+      "death_am": 3810,
+      "lifespan": 70,
+      "birth_bc_ad": "264 a.C.",
+      "death_bc_ad": "194 a.C.",
+      "chronology": {
+        "birth_am": 3740,
+        "death_am": 3810,
+        "lifespan": 70,
+        "birth_bc_ad": "264 a.C.",
+        "death_bc_ad": "194 a.C."
+      }
     },
     {
       "id": "eleazar",
@@ -9699,7 +10171,19 @@
       },
       "biography": "Bisabuelo de José según el registro de Mateo.",
       "generation": 56,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3790,
+      "death_am": 3860,
+      "lifespan": 70,
+      "birth_bc_ad": "214 a.C.",
+      "death_bc_ad": "144 a.C.",
+      "chronology": {
+        "birth_am": 3790,
+        "death_am": 3860,
+        "lifespan": 70,
+        "birth_bc_ad": "214 a.C.",
+        "death_bc_ad": "144 a.C."
+      }
     },
     {
       "id": "matthan",
@@ -9716,7 +10200,19 @@
       },
       "biography": "Abuelo de José en la genealogía real de Belén.",
       "generation": 57,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3840,
+      "death_am": 3910,
+      "lifespan": 70,
+      "birth_bc_ad": "164 a.C.",
+      "death_bc_ad": "94 a.C.",
+      "chronology": {
+        "birth_am": 3840,
+        "death_am": 3910,
+        "lifespan": 70,
+        "birth_bc_ad": "164 a.C.",
+        "death_bc_ad": "94 a.C."
+      }
     },
     {
       "id": "jacob_matthan",
@@ -9733,7 +10229,19 @@
       },
       "biography": "Padre biológico de José en Belén de Judea.",
       "generation": 58,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3890,
+      "death_am": 3955,
+      "lifespan": 65,
+      "birth_bc_ad": "114 a.C.",
+      "death_bc_ad": "49 a.C.",
+      "chronology": {
+        "birth_am": 3890,
+        "death_am": 3955,
+        "lifespan": 65,
+        "birth_bc_ad": "114 a.C.",
+        "death_bc_ad": "49 a.C."
+      }
     },
     {
       "id": "mary",
@@ -9750,7 +10258,19 @@
       },
       "biography": "Virgen bienaventurada de la estirpe de David. Concibió al Hijo de Dios por obra del Espíritu Santo (cumplimiento de Isaías 7:14).",
       "generation": 60,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 3984,
+      "death_am": 4052,
+      "lifespan": 68,
+      "birth_bc_ad": "20 a.C.",
+      "death_bc_ad": "48 d.C.",
+      "chronology": {
+        "birth_am": 3984,
+        "death_am": 4052,
+        "lifespan": 68,
+        "birth_bc_ad": "20 a.C.",
+        "death_bc_ad": "48 d.C."
+      }
     },
     {
       "id": "jesus",
@@ -9768,7 +10288,19 @@
       },
       "biography": "El Hijo Eterno de Dios hecho carne. El Mesías prometido desde el Protoevangelio de Génesis 3:15, Salvador del mundo y Señor de señores.",
       "generation": 61,
-      "is_messianic_line": true
+      "is_messianic_line": true,
+      "birth_am": 4000,
+      "death_am": 4033,
+      "lifespan": 33,
+      "birth_bc_ad": "4 a.C.",
+      "death_bc_ad": "33 d.C.",
+      "chronology": {
+        "birth_am": 4000,
+        "death_am": 4033,
+        "lifespan": 33,
+        "birth_bc_ad": "4 a.C.",
+        "death_bc_ad": "33 d.C."
+      }
     }
   ],
   "relationships": [],
