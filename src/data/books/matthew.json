@@ -1190,6 +1190,477 @@
   ],
   "themes": [],
   "questions": [],
-  "chapters_map": [],
+  "chapters_map": [
+    {
+      "chapter_number": 1,
+      "title": "La Genealogía y el Nacimiento Virginal de Cristo",
+      "summary": "Mateo registra la genealogía legal del Rey Mesías desde Abraham y David, seguida del anuncio angélico a José y el nacimiento virginal en cumplimiento de Isaías 7:14.",
+      "christological_theme": "Jesús es Emanuel (Dios con nosotros), el Hijo de David legalmente investido con el derecho al trono eterno.",
+      "location_id": "bethlehem_judea",
+      "greek_terms": [
+        {
+          "greek": "Χριστός",
+          "transliteration": "Christós",
+          "strong": "G5547",
+          "target_verse": 1,
+          "target_word": "Jesucristo",
+          "meaning": "El Ungido de Dios (equivalente al término hebreo Mashíaj), supremo Rey, Sacerdote y Profeta."
+        },
+        {
+          "greek": "Ἰησοῦς",
+          "transliteration": "Iesoús",
+          "strong": "G2424",
+          "target_verse": 21,
+          "target_word": "JESÚS",
+          "meaning": "Nombre divino revelado a José que significa 'Jehová es Salvación', proclamando la misión expiatoria de salvar a su pueblo."
+        },
+        {
+          "greek": "Ἐμμανουήλ",
+          "transliteration": "Emmanouél",
+          "strong": "G1694",
+          "target_verse": 23,
+          "target_word": "Emanuel",
+          "meaning": "Dios con nosotros; afirmación ontológica de la plena Deidad encarnada en la persona de Cristo."
+        },
+        {
+          "greek": "παρθένος",
+          "transliteration": "Parthénos",
+          "strong": "G3933",
+          "target_verse": 23,
+          "target_word": "virgen",
+          "meaning": "Doncella pura que jamás ha conocido varón; cumplimiento literal de la Profecía Mesiánica de Isaías 7:14."
+        }
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "title": "La Adoración de los Magos y la Huida a Egipto",
+      "summary": "Los sabios de Oriente son guiados por la estrella para adorar al recién nacido Rey de los Judíos; José huye providencialmente con su familia a Egipto escapando de la ira de Herodes.",
+      "christological_theme": "Jesús es el Rey de las naciones gentiles y el Hijo de Dios preservado de la masacre.",
+      "location_id": "bethlehem_judea",
+      "greek_terms": [
+        {
+          "greek": "βασιλεύς",
+          "transliteration": "Basileús",
+          "strong": "G935",
+          "target_verse": 2,
+          "target_word": "Rey",
+          "meaning": "Soberano supremo dotado de autoridad regia absoluta sobre el pueblo de Dios."
+        },
+        {
+          "greek": "προσκυνέω",
+          "transliteration": "Proskuneó",
+          "strong": "G4352",
+          "target_verse": 2,
+          "target_word": "adorarle",
+          "meaning": "Postrarse con reverencia sagrada, tributando adoración divina exclusiva al Hijo."
+        },
+        {
+          "greek": "Ναζωραῖος",
+          "transliteration": "Nazoraíos",
+          "strong": "G3480",
+          "target_verse": 23,
+          "target_word": "nazareno",
+          "meaning": "Habitante de Nazaret; conectado con el término hebreo Netzer (el Renuevo mesiánico de Isaías 11:1)."
+        }
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "title": "El Ministerio del Bautista y el Bautismo del Mesías",
+      "summary": "Juan el Bautista predica el arrepentimiento en el desierto de Judea. Jesús acude al río Jordán para ser bautizado, donde se manifiesta la Santísima Trinidad.",
+      "christological_theme": "El Hijo amado en quien el Padre tiene complacencia, consagrado por el Espíritu Santo.",
+      "location_id": "jordan_river",
+      "greek_terms": [
+        {
+          "greek": "μετάνοια",
+          "transliteration": "Metánoia",
+          "strong": "G3341",
+          "target_verse": 2,
+          "target_word": "Arrepentíos",
+          "meaning": "Cambio radical de mente y de corazón que se traduce en un giro total lejos del pecado y hacia Dios."
+        },
+        {
+          "greek": "βάπτισμα",
+          "transliteration": "Báptisma",
+          "strong": "G908",
+          "target_verse": 7,
+          "target_word": "bautismo",
+          "meaning": "Inmersión ritual en agua que simboliza la purificación, la consagración y la identificación pública."
+        },
+        {
+          "greek": "πνεῦμα",
+          "transliteration": "Pneúma",
+          "strong": "G4151",
+          "target_verse": 16,
+          "target_word": "Espíritu",
+          "meaning": "La tercera persona de la Deidad que desciende en forma corporal como paloma sobre Cristo."
+        }
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "title": "La Tentación en el Desierto y el Llamamiento de los Discípulos",
+      "summary": "Jesús vence al diablo en el desierto usando las Escrituras, establece su sede ministerial en Capernaúm y llama a Pedro, Andrés, Jacobo y Juan.",
+      "christological_theme": "El Postrer Adán victorioso sobre la tentación que proclama la luz del evangelio.",
+      "location_id": "judean_wilderness",
+      "greek_terms": [
+        {
+          "greek": "διάβολος",
+          "transliteration": "Diábolos",
+          "strong": "G1228",
+          "target_verse": 1,
+          "target_word": "diablo",
+          "meaning": "El acusador y calumniador por excelencia, adversario supremo de Dios y de su Cristo."
+        },
+        {
+          "greek": "εὐαγγέλιον",
+          "transliteration": "Euangélion",
+          "strong": "G2098",
+          "target_verse": 23,
+          "target_word": "evangelio",
+          "meaning": "Las buenas nuevas de salvación y la proclamación del advenimiento del Reino de Dios."
+        },
+        {
+          "greek": "ἁλιεύς",
+          "transliteration": "Halieús",
+          "strong": "G231",
+          "target_verse": 19,
+          "target_word": "pescadores",
+          "meaning": "Pescador de oficio; transformado por Cristo en proclamador y conquistador de almas para el Reino."
+        }
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "title": "El Sermón del Monte: Las Bienaventuranzas y la Ley",
+      "summary": "Jesús proclama el carácter espiritual de los ciudadanos del Reino a través de las Bienaventuranzas y demuestra que Él no vino a abolir la Ley, sino a cumplirla.",
+      "christological_theme": "El Legislador Divino que revela la plenitud perfecta y espiritual de la Ley santa.",
+      "location_id": "mount_of_beatitudes",
+      "greek_terms": [
+        {
+          "greek": "μακάριος",
+          "transliteration": "Makários",
+          "strong": "G3107",
+          "target_verse": 3,
+          "target_word": "Bienaventurados",
+          "meaning": "Plenamente dichoso y favorecido con el beneplácito y la bendición celestial inalterable."
+        },
+        {
+          "greek": "δικαιοσύνη",
+          "transliteration": "Dikaiosúne",
+          "strong": "G1343",
+          "target_verse": 6,
+          "target_word": "justicia",
+          "meaning": "La rectitud interior alineada con la santidad de Dios que supera la apariencia externa de los fariseos."
+        },
+        {
+          "greek": "πληρόω",
+          "transliteration": "Pleróo",
+          "strong": "G4137",
+          "target_verse": 17,
+          "target_word": "cumplir",
+          "meaning": "Llevar a su plena realización, significado consumado y perfección la Ley y los Profetas."
+        }
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "title": "La Oración Sincera, el Padre Nuestro y la Providencia",
+      "summary": "Instrucciones sobre la limosna, la oración interior sin vanas repeticiones (el Padre Nuestro), el ayuno y la confianza filial en la providencia divina frente al afán.",
+      "christological_theme": "El Hijo Unigénito que revela al Padre celestial y nos enseña a confiar en su providencia.",
+      "location_id": "mount_of_beatitudes",
+      "greek_terms": [
+        {
+          "greek": "προσευχή",
+          "transliteration": "Proseuché",
+          "strong": "G4335",
+          "target_verse": 5,
+          "target_word": "orar",
+          "meaning": "Comunión y petición reverente dirigida exclusivamente a Dios con un corazón sincero."
+        },
+        {
+          "greek": "πατήρ",
+          "transliteration": "Patér",
+          "strong": "G3962",
+          "target_verse": 9,
+          "target_word": "Padre",
+          "meaning": "Dios en su relación entrañable y soberana de Padre amoroso para con sus hijos redimidos."
+        },
+        {
+          "greek": "μεριμνάω",
+          "transliteration": "Merimnáo",
+          "strong": "G3309",
+          "target_verse": 25,
+          "target_word": "afanéis",
+          "meaning": "Estar ansioso, preocupado o dividido internamente por las necesidades materiales."
+        }
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "title": "El Juicio Recto, la Regla de Oro y los Dos Fundamentos",
+      "summary": "Jesús advierte contra el juicio hipócrita, enseña sobre la oración perseverante, la puerta estrecha y concluye el sermón con la parábola de los dos cimientos.",
+      "christological_theme": "La Roca eterna e inconmovible sobre la cual se edifica la vida sabia que resiste el juicio.",
+      "location_id": "mount_of_beatitudes",
+      "greek_terms": [
+        {
+          "greek": "κρίνω",
+          "transliteration": "Kríno",
+          "strong": "G2919",
+          "target_verse": 1,
+          "target_word": "juzguéis",
+          "meaning": "Emitir juicio condenatorio severo e hipócrita sobre los demás ignorando los propios fallos."
+        },
+        {
+          "greek": "πύλη",
+          "transliteration": "Púle",
+          "strong": "G4407",
+          "target_verse": 13,
+          "target_word": "puerta",
+          "meaning": "Punto de entrada; la puerta estrecha que exige arrepentimiento y fe genuina para entrar a la vida."
+        },
+        {
+          "greek": "πέτρα",
+          "transliteration": "Pétra",
+          "strong": "G4073",
+          "target_verse": 24,
+          "target_word": "roca",
+          "meaning": "Masa rocosa sólida e inmovible; metáfora de Cristo y sus palabras como el cimiento seguro."
+        }
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "title": "Manifestación del Poder Mesiánico sobre Enfermedades y Naturaleza",
+      "summary": "Sanidad del leproso, del siervo del centurión y de la suegra de Pedro. Jesús calma la gran tempestad en el mar y libera a los endemoniados gadarenos.",
+      "christological_theme": "El Señor de la creación y Sanador divino que tomó sobre sí nuestras dolencias.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "καθαρίζω",
+          "transliteration": "Katharízo",
+          "strong": "G2511",
+          "target_verse": 3,
+          "target_word": "limpio",
+          "meaning": "Purificar, curar de la lepra y remover la contaminación moral y física."
+        },
+        {
+          "greek": "πίστις",
+          "transliteration": "Pístis",
+          "strong": "G4102",
+          "target_verse": 10,
+          "target_word": "fe",
+          "meaning": "Confianza sólida y convicción absoluta en el poder y la palabra de Jesucristo."
+        },
+        {
+          "greek": "ἐξουσία",
+          "transliteration": "Exousía",
+          "strong": "G1849",
+          "target_verse": 9,
+          "target_word": "autoridad",
+          "meaning": "Derecho soberano y potestad delegada para gobernar sobre personas, fuerzas y naturaleza."
+        }
+      ]
+    },
+    {
+      "chapter_number": 9,
+      "title": "Perdón de Pecados, Llamamiento de Mateo y Milagros de Misericordia",
+      "summary": "Jesús perdona y sana al paralítico, llama a Mateo el cobrador de impuestos, sana a la mujer con flujo de sangre y resucita a la hija de Jairo.",
+      "christological_theme": "El Médico de almas que tiene potestad en la Tierra para perdonar pecados.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "ἁμαρτία",
+          "transliteration": "Hamartía",
+          "strong": "G266",
+          "target_verse": 2,
+          "target_word": "pecados",
+          "meaning": "Errar el blanco de la santidad de Dios; rebelión moral que requiere perdón expiatorio."
+        },
+        {
+          "greek": "ἔλεος",
+          "transliteration": "Éleos",
+          "strong": "G1656",
+          "target_verse": 13,
+          "target_word": "Misericordia",
+          "meaning": "Compasión entrañable en acción para socorrer al necesitado y perdonar al culpable."
+        },
+        {
+          "greek": "σώζω",
+          "transliteration": "Sózo",
+          "strong": "G4982",
+          "target_verse": 22,
+          "target_word": "salvado",
+          "meaning": "Rescatar de la destrucción, sanar integralmente y otorgar la salvación eterna."
+        }
+      ]
+    },
+    {
+      "chapter_number": 10,
+      "title": "Elección y Comisión Misionera de los Doce Apóstoles",
+      "summary": "Jesús reúne a sus doce discípulos, les concede autoridad sobre espíritus inmundos y los envía a predicar que el Reino de los Cielos se ha acercado.",
+      "christological_theme": "El Señor de la mies que envía y respalda a sus embajadores con autoridad celestial.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "ἀπόστολος",
+          "transliteration": "Apóstolos",
+          "strong": "G652",
+          "target_verse": 2,
+          "target_word": "apóstoles",
+          "meaning": "Mensajero enviado oficialmente con plena delegación de la autoridad de quien lo envía."
+        },
+        {
+          "greek": "μαθητής",
+          "transliteration": "Mathetés",
+          "strong": "G3101",
+          "target_verse": 1,
+          "target_word": "discípulos",
+          "meaning": "Aprendiz, seguidor comprometido que adopta la enseñanza y vida de su Maestro."
+        },
+        {
+          "greek": "μισθός",
+          "transliteration": "Misthós",
+          "strong": "G3408",
+          "target_verse": 41,
+          "target_word": "recompensa",
+          "meaning": "Galardón o pago concedido por Dios a los que sirven con fidelidad en su nombre."
+        }
+      ]
+    },
+    {
+      "chapter_number": 11,
+      "title": "El Testimonio sobre Juan el Bautista y el Yugo Fácil de Cristo",
+      "summary": "Jesús responde a los mensajeros de Juan el Bautista, denuncia la incredulidad de las ciudades no arrepentidas y hace el glorioso llamamiento al descanso del alma.",
+      "christological_theme": "El Mesías manso y humilde de corazón que otorga descanso verdadero al alma fatigada.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "ἀνάπαυσις",
+          "transliteration": "Anápausis",
+          "strong": "G372",
+          "target_verse": 29,
+          "target_word": "descanso",
+          "meaning": "Reposo profundo y refrigerio espiritual que calma el cansancio del alma atribulada."
+        },
+        {
+          "greek": "πραΰς",
+          "transliteration": "Praús",
+          "strong": "G4239",
+          "target_verse": 29,
+          "target_word": "manso",
+          "meaning": "Ternura, fuerza bajo control perfecto y mansedumbre espiritual delante de Dios."
+        },
+        {
+          "greek": "ζυγός",
+          "transliteration": "Zugós",
+          "strong": "G2218",
+          "target_verse": 30,
+          "target_word": "yugo",
+          "meaning": "Instrumento de sujeción; el yugo del discípulo con Cristo es ligero y lleno de gracia."
+        }
+      ]
+    },
+    {
+      "chapter_number": 12,
+      "title": "Jesús, Señor del Día de Reposo y el Juicio a la Blaspemia",
+      "summary": "Los fariseos acusan a Jesús por sanar en sábado. Jesús se proclama Señor del día de reposo, expulsa demonios y advierte sobre la blasfemia contra el Espíritu Santo.",
+      "christological_theme": "Aquel que es mayor que el Templo, mayor que Jonás y Señor absoluto del reposo.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "σάββατον",
+          "transliteration": "Sábbaton",
+          "strong": "G4521",
+          "target_verse": 8,
+          "target_word": "día de reposo",
+          "meaning": "Día sagrado de descanso instituido por Dios; Cristo es el dueño y cumplimiento del Sábado."
+        },
+        {
+          "greek": "μείζων",
+          "transliteration": "Meízon",
+          "strong": "G3173",
+          "target_verse": 6,
+          "target_word": "mayor",
+          "meaning": "Superior en dignidad, autoridad y gloria infinita sobre las instituciones del Antiguo Pacto."
+        },
+        {
+          "greek": "καρπός",
+          "transliteration": "Karpós",
+          "strong": "G2590",
+          "target_verse": 33,
+          "target_word": "fruto",
+          "meaning": "Resultado visible de la vida interior; el árbol bueno produce frutos de rectitud."
+        }
+      ]
+    },
+    {
+      "chapter_number": 13,
+      "title": "Las Parábolas del Reino de los Cielos",
+      "summary": "Jesús enseña desde la barca las 7 parábolas del Reino: el sembrador, la cizaña, la semilla de mostaza, la levadura, el tesoro escondido, la perla y la red.",
+      "christological_theme": "El Sembrador divino que revela los misterios celestiales del Reino a sus escogidos.",
+      "location_id": "sea_of_galilee",
+      "greek_terms": [
+        {
+          "greek": "παραβολή",
+          "transliteration": "Parabolé",
+          "strong": "G3850",
+          "target_verse": 3,
+          "target_word": "parábolas",
+          "meaning": "Comparación o narrativa terrenal colocada al lado de una verdad espiritual para ilustrarla."
+        },
+        {
+          "greek": "μυστήριον",
+          "transliteration": "Mustérion",
+          "strong": "G3466",
+          "target_verse": 11,
+          "target_word": "misterios",
+          "meaning": "Verdad secreta de Dios antes oculta que ahora es revelada por el Espíritu a los creyentes."
+        },
+        {
+          "greek": "σπέρμα",
+          "transliteration": "Spérma",
+          "strong": "G4690",
+          "target_verse": 24,
+          "target_word": "semilla",
+          "meaning": "La buena semilla que es la Palabra del Reino y los hijos del Reino sembrados por Cristo."
+        }
+      ]
+    },
+    {
+      "chapter_number": 14,
+      "title": "Muerte del Bautista, Multiplicación de los Panes y Marcha sobre el Mar",
+      "summary": "Herodes decapita a Juan el Bautista. Jesús se retira, alimenta a más de 5,000 personas con 5 panes y 2 peces, y camina sobre las olas del mar socorriendo a Pedro.",
+      "christological_theme": "El Pan de Vida que sacia al hambriento y el Dios todopoderoso sobre la tempestad.",
+      "location_id": "sea_of_galilee",
+      "greek_terms": [
+        {
+          "greek": "σπλαγχνίζομαι",
+          "transliteration": "Splanchnízomai",
+          "strong": "G4697",
+          "target_verse": 14,
+          "target_word": "misericordia",
+          "meaning": "Sentir compasión desde lo más profundo de las entrañas, movido a la acción redentora."
+        },
+        {
+          "greek": "εὐλογέω",
+          "transliteration": "Eulogéo",
+          "strong": "G2127",
+          "target_verse": 19,
+          "target_word": "bendijo",
+          "meaning": "Alabar a Dios, dar gracias y consagrar los alimentos invocando la bendición divina."
+        },
+        {
+          "greek": "περισεύω",
+          "transliteration": "Periseúo",
+          "strong": "G4051",
+          "target_verse": 20,
+          "target_word": "sobró",
+          "meaning": "Abundar en sobremanera; la provisión del Mesías sobrepasa con creces toda necesidad."
+        }
+      ]
+    }
+  ],
   "notable_overlaps": []
 }
