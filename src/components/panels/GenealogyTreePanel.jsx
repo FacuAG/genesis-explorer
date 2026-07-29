@@ -16,6 +16,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedOverlapIndex, setSelectedOverlapIndex] = useState(0);
   const [overlapEraFilter, setOverlapEraFilter] = useState('all'); // 'all' | 'genesis' | 'kings' | 'gospels'
+  const [customPersonAId, setCustomPersonAId] = useState('adam');
+  const [customPersonBId, setCustomPersonBId] = useState('methuselah');
 
   const chartContainerRef = useRef(null);
 
@@ -190,6 +192,37 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     const list = ids.map(id => peopleMap.get(id)).filter(Boolean);
     return { overlapPeopleList: list, chartMin: min, chartMax: max, axisTicks: ticks };
   }, [overlapEraFilter, peopleMap]);
+
+  // Cálculo matemático en tiempo real del Comparador Libre entre 2 personajes cualesquiera
+  const customCompareResult = useMemo(() => {
+    const pA = peopleMap.get(customPersonAId);
+    const pB = peopleMap.get(customPersonBId);
+
+    if (!pA || !pB || pA.id === pB.id) return null;
+
+    const datesA = getPersonDates(pA);
+    const datesB = getPersonDates(pB);
+
+    const overlapStart = Math.max(datesA.birth, datesB.birth);
+    const overlapEnd = Math.min(datesA.death, datesB.death);
+    const yearsTogether = Math.max(0, overlapEnd - overlapStart);
+    const doesOverlap = yearsTogether > 0;
+
+    const ageAAtBBirth = datesB.birth - datesA.birth;
+    const ageBAtADeath = datesA.death - datesB.birth;
+
+    return {
+      pA,
+      pB,
+      datesA,
+      datesB,
+      doesOverlap,
+      yearsTogether,
+      ageAAtBBirth,
+      ageBAtADeath,
+      gapYears: !doesOverlap ? (datesB.birth > datesA.death ? datesB.birth - datesA.death : datesA.birth - datesB.death) : 0
+    };
+  }, [customPersonAId, customPersonBId, peopleMap]);
 
   // Convivencia actualmente seleccionada (Soporta esquemas flexibles de datos)
   const activeOverlap = notableOverlaps[selectedOverlapIndex] || notableOverlaps[0];
@@ -551,6 +584,68 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
                 ✝️ Era de los Evangelios
               </button>
             </div>
+          </div>
+
+          {/* COMPARADOR LIBRE DE CONVIVENCIA PATRIARCAL Y MESIÁNICA */}
+          <div className="custom-comparator-card">
+            <div className="comp-header">
+              <span className="comp-badge">🤝 COMPARADOR BÍBLICO INTERACTIVO DE LINAJE</span>
+              <h3>Calculador Dinámico de Convivencia y Transmisión Oral</h3>
+              <p>Selecciona dos personajes cualesquiera para calcular matemáticamente si coincidieron en la Tierra, cuántos años compartieron y la brecha temporal entre sus vidas.</p>
+            </div>
+
+            <div className="comp-selectors-row">
+              <div className="comp-select-group">
+                <label>Personaje A:</label>
+                <select value={customPersonAId} onChange={(e) => setCustomPersonAId(e.target.value)}>
+                  {people.map(p => (
+                    <option key={p.id} value={p.id}>
+                      {p.name} (Gen #{p.generation_from_adam || p.generation || '?'}) — AM {getPersonDates(p).birth}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="comp-divider-vs">VS</div>
+
+              <div className="comp-select-group">
+                <label>Personaje B:</label>
+                <select value={customPersonBId} onChange={(e) => setCustomPersonBId(e.target.value)}>
+                  {people.map(p => (
+                    <option key={p.id} value={p.id}>
+                      {p.name} (Gen #{p.generation_from_adam || p.generation || '?'}) — AM {getPersonDates(p).birth}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {customCompareResult && (
+              <div className={`comp-result-box ${customCompareResult.doesOverlap ? 'overlap-yes' : 'overlap-no'}`}>
+                {customCompareResult.doesOverlap ? (
+                  <>
+                    <div className="res-status-tag">✨ ¡CONVIVIERON SIMULTÁNEAMENTE!</div>
+                    <h4 className="res-main-title">
+                      {customCompareResult.pA.name} y {customCompareResult.pB.name} compartieron <strong>{customCompareResult.yearsTogether} años</strong> de vida simultánea en la Tierra.
+                    </h4>
+                    <p className="res-detail-text">
+                      • <strong>{customCompareResult.pA.name}</strong> tenía <strong>{customCompareResult.ageAAtBBirth} años</strong> cuando nació {customCompareResult.pB.name} (AM {customCompareResult.datesB.birth}).<br/>
+                      • <strong>{customCompareResult.pB.name}</strong> tenía <strong>{customCompareResult.ageBAtADeath} años</strong> cuando falleció {customCompareResult.pA.name} (AM {customCompareResult.datesA.death}).
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="res-status-tag no-tag">⏳ DISTINTAS ÉPOCAS BÍBLICAS</div>
+                    <h4 className="res-main-title">
+                      {customCompareResult.pA.name} y {customCompareResult.pB.name} no se conocieron en la Tierra.
+                    </h4>
+                    <p className="res-detail-text">
+                      Existe una brecha temporal de <strong>{customCompareResult.gapYears} años</strong> entre las vidas de ambos personajes.
+                    </p>
+                  </>
+                )}
+              </div>
+            )}
           </div>
 
           {/* SELECTOR DE HISTORIAS DE CONVIVENCIA DESTACADAS */}
