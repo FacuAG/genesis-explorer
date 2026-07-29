@@ -29,9 +29,104 @@
     "key_people_count": 0,
     "key_events_count": 0
   },
-  "eras": [],
-  "dispensations": [],
-  "narrative_blocks": [],
+  "eras": [
+    {
+      "id": "era_gospels",
+      "name": "Era del Nuevo Testamento y Cumplimiento Mesiánico",
+      "am_start": 3996,
+      "am_end": 4033,
+      "bc_ad_start": "4 a.C.",
+      "bc_ad_end": "33 d.C.",
+      "description": "Período histórico de la Encarnación, ministerio terrenal, muerte expiatoria y gloriosa resurrección de Jesucristo, en el cual se cumplen las profecías del Antiguo Testamento.",
+      "color": "#0369a1"
+    }
+  ],
+  "dispensations": [
+    {
+      "id": "disp_grace",
+      "name": "Dispensación de la Gracia (Nuevo Pacto)",
+      "am_start": 4000,
+      "am_end": 4033,
+      "description": "Iniciada con la venida de Cristo y sellada con su muerte y resurrección. La salvación se ofrece libremente por fe mediante la gracia divina.",
+      "key_event_id": "resurrection_christ",
+      "scriptural_reference": "Mateo 26:28, Juan 1:17",
+      "in_genesis": false
+    }
+  ],
+  "narrative_blocks": [
+    {
+      "id": "nb_nativity",
+      "name": "El Nacimiento e Infancia del Rey Mesías",
+      "chapters_range": "Mateo 1 - 2",
+      "chapter_start": 1,
+      "chapter_end": 2,
+      "am_start": 3996,
+      "am_end": 4002,
+      "bc_ad_range": "4 a.C. - 2 d.C.",
+      "description": "Demostración del linaje legal de Jesús desde Abraham y David, su concepción virginal por el Espíritu Santo, la adoración de los Magos de Oriente y la preservación en Egipto.",
+      "key_theme": "Cumplimiento del linaje regio y divino de Emanuel (Dios con nosotros)."
+    },
+    {
+      "id": "nb_preparation",
+      "name": "La Preparación, Bautismo y el Sermón del Monte",
+      "chapters_range": "Mateo 3 - 7",
+      "chapter_start": 3,
+      "chapter_end": 7,
+      "am_start": 4026,
+      "am_end": 4028,
+      "bc_ad_range": "26 d.C. - 28 d.C.",
+      "description": "El ministerio precursor de Juan el Bautista, el bautismo de Jesús, la victoria en la tentación del desierto y el manifiesto ético del Reino de los Cielos (Sermón del Monte).",
+      "key_theme": "La justicia del Reino que supera a la de los escribas y fariseos."
+    },
+    {
+      "id": "nb_miracles_power",
+      "name": "Milagros y Autoridad de Jesucristo sobre la Creación",
+      "chapters_range": "Mateo 8 - 10",
+      "chapter_start": 8,
+      "chapter_end": 10,
+      "am_start": 4028,
+      "am_end": 4029,
+      "bc_ad_range": "28 d.C. - 29 d.C.",
+      "description": "La manifestación del poder mesiánico sanando leprosos, paralíticos, tempestades y demonios, junto con la elección y envío apostólico de los 12 discípulos.",
+      "key_theme": "La autoridad del Mesías como cumplimiento de Isaías 53:4."
+    },
+    {
+      "id": "nb_parables_kingdom",
+      "name": "Oposición y las Parábolas del Reino de los Cielos",
+      "chapters_range": "Mateo 11 - 18",
+      "chapter_start": 11,
+      "chapter_end": 18,
+      "am_start": 4029,
+      "am_end": 4031,
+      "bc_ad_range": "29 d.C. - 31 d.C.",
+      "description": "El rechazo de los líderes religiosos, las 7 parábolas del Sembrador y del Reino, la Transfiguración en el monte y las enseñanzas sobre la grandeza y la disciplina en la iglesia.",
+      "key_theme": "Los misterios del Reino de Dios y la confesión de Pedro en Cesarea de Filipo."
+    },
+    {
+      "id": "nb_judean_ministry",
+      "name": "Ministerio Final en Judea y Discurso del Olivar",
+      "chapters_range": "Mateo 19 - 25",
+      "chapter_start": 19,
+      "chapter_end": 25,
+      "am_start": 4031,
+      "am_end": 4033,
+      "bc_ad_range": "31 d.C. - 33 d.C.",
+      "description": "La entrada triunfal en Jerusalén, la purificación del Templo, los ayes contra los fariseos y las profecías escatológicas sobre el fin del siglo y la Segunda Venida.",
+      "key_theme": "El Rey que juzga a las naciones y advierte sobre su regreso."
+    },
+    {
+      "id": "nb_passion_resurrection",
+      "name": "La Pasión, Muerte, Resurrección y la Gran Comisión",
+      "chapters_range": "Mateo 26 - 28",
+      "chapter_start": 26,
+      "chapter_end": 28,
+      "am_start": 4033,
+      "am_end": 4033,
+      "bc_ad_range": "33 d.C.",
+      "description": "La institución del Nuevo Pacto en la Última Cena, la agonía en Getsemaní, el juicio ante el Sanedrín y Pilato, la crucifixión en el Gólgota y la gloriosa Resurrección con la Gran Comisión universal.",
+      "key_theme": "La victoria mesiánica definitiva sobre el pecado y la muerte."
+    }
+  ],
   "timeline_events": [],
   "people": [],
   "relationships": [],
