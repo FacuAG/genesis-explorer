@@ -27,7 +27,7 @@
       "la Gran Comisión universal"
     ],
     "key_people_count": 0,
-    "key_events_count": 0
+    "key_events_count": 20
   },
   "eras": [
     {
@@ -127,7 +127,547 @@
       "key_theme": "La victoria mesiánica definitiva sobre el pecado y la muerte."
     }
   ],
-  "timeline_events": [],
+  "timeline_events": [
+    {
+      "id": "genealogy_of_jesus",
+      "name": "La Genealogía Real de Jesucristo el Mesías",
+      "category": "genealogy",
+      "year_am": 3996,
+      "bc_ad_date": "4 a.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_nativity",
+      "location_id": "bethlehem_judea",
+      "key_people": [
+        "jesus",
+        "david",
+        "abraham",
+        "joseph",
+        "mary"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 17
+      },
+      "key_verse": {
+        "reference": "Mateo 1:1",
+        "text": "LIBRO de la generación de Jesucristo, hijo de David, hijo de Abraham."
+      },
+      "summary": "Registro formal que demuestra la genealogía legal y regia de Jesús descendiendo de Abraham y del Rey David a través de las 60 generaciones de la promesa.",
+      "theological_teaching": "Demuestra la fidelidad inquebrantable de Dios al cumplir el Pacto Abrahámico y el Pacto Davídico en la persona del Rey Mesías."
+    },
+    {
+      "id": "birth_of_jesus",
+      "name": "El Nacimiento Virginal de Jesucristo en Belén",
+      "category": "miracle",
+      "year_am": 3996,
+      "bc_ad_date": "4 a.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_nativity",
+      "location_id": "bethlehem_judea",
+      "key_people": [
+        "jesus",
+        "mary",
+        "joseph"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": 25
+      },
+      "key_verse": {
+        "reference": "Mateo 1:23",
+        "text": "He aquí la virgen concebirá y parirá un hijo, Y llamarás su nombre Emmanuel, que declarado, es: Con nosotros Dios."
+      },
+      "summary": "Concepción sobrenatural de Jesús por obra del Espíritu Santo en el vientre de la virgen María y su posterior nacimiento en Belén de Judea.",
+      "theological_teaching": "Cumplimiento directo de Isaías 7:14. Jesús es Emanuel (Dios con nosotros), 100% Dios y 100% Hombre."
+    },
+    {
+      "id": "adoration_of_the_magi",
+      "name": "La Adoración de los Magos de Oriente",
+      "category": "patriarch",
+      "year_am": 3998,
+      "bc_ad_date": "2 a.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_nativity",
+      "location_id": "bethlehem_judea",
+      "key_people": [
+        "jesus",
+        "mary",
+        "joseph",
+        "herod_the_great"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "key_verse": {
+        "reference": "Mateo 2:2",
+        "text": "Diciendo: ¿Dónde está el Rey de los Judíos, que ha nacido? porque su estrella hemos visto en el oriente, y venimos á adorarle."
+      },
+      "summary": "Llegada de los sabios de Oriente guiados por la estrella para adorar al recién nacido Rey de los Judíos y presentarle presentes de oro, incienso y mirra.",
+      "theological_teaching": "Prefiguración del reconocimiento universal de Cristo por todas las naciones gentiles como Rey, Dios y Sacerdote."
+    },
+    {
+      "id": "flight_to_egypt",
+      "name": "La Huida a Egipto y la Preservación Divina",
+      "category": "exile",
+      "year_am": 3998,
+      "bc_ad_date": "2 a.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_nativity",
+      "location_id": "egypt",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary",
+        "herod_the_great"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 2,
+        "verse_start": 13,
+        "verse_end": 23
+      },
+      "key_verse": {
+        "reference": "Mateo 2:15",
+        "text": "Y estuvo allá hasta la muerte de Herodes: para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: De Egipto llamé á mi Hijo."
+      },
+      "summary": "Instrucción angélica a José para huir a Egipto con el niño Jesús escapando de la masacre de Herodes, hasta regresar a habitar en Nazaret.",
+      "theological_teaching": "Cumplimiento tipológico de Oseas 11:1 ('De Egipto llamé a mi Hijo'). Jesús revive y santifica la historia del pueblo escogido."
+    },
+    {
+      "id": "baptism_of_jesus",
+      "name": "El Bautismo de Jesús y la Manifestación Trinitaria",
+      "category": "covenant",
+      "year_am": 4030,
+      "bc_ad_date": "30 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_preparation",
+      "location_id": "jordan_river",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 3,
+        "verse_start": 13,
+        "verse_end": 17
+      },
+      "key_verse": {
+        "reference": "Mateo 3:17",
+        "text": "Y he aquí una voz de los cielos que decía: Este es mi Hijo amado, en el cual tengo contentamiento."
+      },
+      "summary": "Bautismo de Jesús por Juan en el río Jordán, donde el Espíritu Santo desciende como paloma y la voz del Padre declara su complacencia divina.",
+      "theological_teaching": "Consagración pública del Mesías para cumplir toda justicia y manifestación explícita de la Santísima Trinidad."
+    },
+    {
+      "id": "temptation_in_wilderness",
+      "name": "La Victoria sobre Satanás en el Desierto",
+      "category": "judgment",
+      "year_am": 4030,
+      "bc_ad_date": "30 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_preparation",
+      "location_id": "judean_wilderness",
+      "key_people": [
+        "jesus"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "key_verse": {
+        "reference": "Mateo 4:4",
+        "text": "Mas él respondiendo, dijo: Escrito está: No con solo el pan vivirá el hombre, mas con toda palabra que sale de la boca de Dios."
+      },
+      "summary": "Ayuno de 40 días de Jesús en el desierto y su victoria total sobre las tentaciones del diablo respondiendo con la espada de las Escrituras.",
+      "theological_teaching": "El Postrer Adán triunfa sobre el pecado y el diablo mediante la obediencia perfecta a la Palabra de Dios."
+    },
+    {
+      "id": "sermon_on_the_mount",
+      "name": "El Sermón del Monte y las Bienaventuranzas",
+      "category": "restoration",
+      "year_am": 4030,
+      "bc_ad_date": "30 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_preparation",
+      "location_id": "mount_of_beatitudes",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 48
+      },
+      "key_verse": {
+        "reference": "Mateo 5:17",
+        "text": "No penséis que he venido para abrogar la ley ó los profetas: no he venido para abrogar, sino á cumplir."
+      },
+      "summary": "La magna enseñanza moral y espiritual de Cristo en la montaña, estableciendo la justicia del Reino de los Cielos.",
+      "theological_teaching": "Cristo revela la intención interna y perfecta de la Ley divina, demandando una transformación del corazón."
+    },
+    {
+      "id": "healing_the_leper",
+      "name": "Sanidad del Leproso y la Autoridad Mesiánica",
+      "category": "miracle",
+      "year_am": 4031,
+      "bc_ad_date": "31 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_miracles_power",
+      "location_id": "capernaum",
+      "key_people": [
+        "jesus"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "key_verse": {
+        "reference": "Mateo 8:3",
+        "text": "Y extendiendo Jesús su mano, le tocó, diciendo: Quiero; sé limpio. Y luego su lepra fué limpiada."
+      },
+      "summary": "Un leproso se postra ante Jesús rogando sanidad; el Señor extiende la mano, lo toca y lo purifica al instante.",
+      "theological_teaching": "Cristo toca lo inmundo para limpiarlo, demostrando su compasión y poder divino sobre la corrupción de la enfermedad."
+    },
+    {
+      "id": "stilling_the_storm",
+      "name": "Jesús Calma la Tempestad en el Mar de Galilea",
+      "category": "miracle",
+      "year_am": 4031,
+      "bc_ad_date": "31 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_miracles_power",
+      "location_id": "sea_of_galilee",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 8,
+        "verse_start": 23,
+        "verse_end": 27
+      },
+      "key_verse": {
+        "reference": "Mateo 8:27",
+        "text": "Y los hombres se maravillaron, diciendo: ¿Qué hombre es éste, que aun los vientos y la mar le obedecen?"
+      },
+      "summary": "Durante una violenta tempestad en la barca, Jesús se levanta, reprende a los vientos y al mar, y se produce una gran bonanza.",
+      "theological_teaching": "Revelación inequívoca de la Divinidad de Jesucristo como Creador y Soberano absoluto de la naturaleza."
+    },
+    {
+      "id": "calling_of_matthew",
+      "name": "Llamamiento de Mateo y la Elección Apostólica",
+      "category": "restoration",
+      "year_am": 4031,
+      "bc_ad_date": "31 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_miracles_power",
+      "location_id": "capernaum",
+      "key_people": [
+        "jesus",
+        "matthew_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 9,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "key_verse": {
+        "reference": "Mateo 9:13",
+        "text": "Andad pues, y aprended qué cosa es: Misericordia quiero, y no sacrificio: porque no he venido á llamar justos, sino pecadores á arrepentimiento."
+      },
+      "summary": "Jesús llama al cobrador de impuestos Mateo en el banco de los tributos para seguirle como apóstol y proclama el propósito de su venida.",
+      "theological_teaching": "La gracia irresistible del Redentor que busca y salva a los pecadores para hacerlos columnas de su Iglesia."
+    },
+    {
+      "id": "parables_of_the_kingdom",
+      "name": "Las Parábolas del Reino de los Cielos",
+      "category": "restoration",
+      "year_am": 4032,
+      "bc_ad_date": "32 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_parables_kingdom",
+      "location_id": "sea_of_galilee",
+      "key_people": [
+        "jesus"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 52
+      },
+      "key_verse": {
+        "reference": "Mateo 13:31",
+        "text": "Otra parábola les propuso, diciendo: El reino de los cielos es semejante al grano de mostaza, que tomándolo alguno lo sembró en su campo:"
+      },
+      "summary": "Jesús enseña a la multitud desde una barca revelando los misterios del Reino a través de parábolas proféticas.",
+      "theological_teaching": "Exposición de la naturaleza espiritual, crecimiento incesante y valor inestimable del Reino de Dios."
+    },
+    {
+      "id": "peters_confession",
+      "name": "La Confesión de Pedro en Cesarea de Filipo",
+      "category": "covenant",
+      "year_am": 4032,
+      "bc_ad_date": "32 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_parables_kingdom",
+      "location_id": "caesarea_philippi",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 16,
+        "verse_start": 13,
+        "verse_end": 20
+      },
+      "key_verse": {
+        "reference": "Mateo 16:16",
+        "text": "Y respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente."
+      },
+      "summary": "Pedro declara por revelación divina que Jesús es el Cristo, el Hijo del Dios viviente; Jesús promete edificar su Iglesia.",
+      "theological_teaching": "La deidad e identidad mesiánica de Cristo es la roca inconmovible de la fe sobre la que se asienta la Iglesia universal."
+    },
+    {
+      "id": "transfiguration_of_jesus",
+      "name": "La Transfiguración en el Monte Santo",
+      "category": "miracle",
+      "year_am": 4032,
+      "bc_ad_date": "32 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_parables_kingdom",
+      "location_id": "mount_hermon",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "key_verse": {
+        "reference": "Mateo 17:5",
+        "text": "Y estando aún él hablando, he aquí una nube de luz que los cubrió; y he aquí una voz de la nube, que dijo: Este es mi Hijo amado, en el cual tomo contentamiento: á él oíd."
+      },
+      "summary": "Jesús se transfigura en el monte resplandeciendo su rostro como el sol, apareciendo Moisés y Elías en gloria ante los apóstoles.",
+      "theological_teaching": "Anticipación de la gloria divina del Hijo de Dios como cumplimiento supremo de la Ley (Moisés) y los Profetas (Elías)."
+    },
+    {
+      "id": "triumphal_entry",
+      "name": "La Entrada Triunfal en Jerusalén",
+      "category": "patriarch",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_judean_ministry",
+      "location_id": "jerusalem",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 21,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "key_verse": {
+        "reference": "Mateo 21:5",
+        "text": "Decid á la hija de Sión: He aquí, tu Rey viene á ti, Manso, y sentado sobre una asna, Y sobre un pollino, hijo de animal de yugo."
+      },
+      "summary": "Jesús entra en Jerusalén montado sobre un pollino cumpliendo la profecía de Zacarías entre aclamaciones de '¡Hosanna al Hijo de David!'.",
+      "theological_teaching": "Presentación pública de Jesucristo como el Rey Mesías humilde que ofrece la paz eterna."
+    },
+    {
+      "id": "cleansing_the_temple",
+      "name": "La Purificación del Templo",
+      "category": "judgment",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_judean_ministry",
+      "location_id": "jerusalem",
+      "key_people": [
+        "jesus"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 21,
+        "verse_start": 12,
+        "verse_end": 17
+      },
+      "key_verse": {
+        "reference": "Mateo 21:13",
+        "text": "Y les dice: Escrito está: Mi casa, casa de oración será llamada; mas vosotros cueva de ladrones la habéis hecho."
+      },
+      "summary": "Jesús entra en el Templo de Jerusalén, vuelca las mesas de los cambistas y expulsa a los mercaderes reclamando la santidad de la Casa del Padre.",
+      "theological_teaching": "El celo santo del Mesías por la pureza de la adoración y su juicio sobre el mercantilismo religioso."
+    },
+    {
+      "id": "olivet_discourse",
+      "name": "El Discurso del Olivar y las Señales del Fin",
+      "category": "restoration",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_judean_ministry",
+      "location_id": "mount_of_olives",
+      "key_people": [
+        "jesus",
+        "peter",
+        "john_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 24,
+        "verse_start": 1,
+        "verse_end": 51
+      },
+      "key_verse": {
+        "reference": "Mateo 24:14",
+        "text": "Y será predicado este evangelio del reino en todo el mundo, por testimonio á todos los Gentiles; y entonces vendrá el fin."
+      },
+      "summary": "Jesús enseña a sus discípulos en el Monte de los Olivos sobre la destrucción del Templo, las señales de los últimos tiempos y su Segunda Venida gloriosa.",
+      "theological_teaching": "La soberanía de Cristo sobre el destino de la historia y el llamado perentorio a la vigilancia espiritual."
+    },
+    {
+      "id": "institution_of_lords_supper",
+      "name": "La Institución del Nuevo Pacto en la Santa Cena",
+      "category": "covenant",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_passion_resurrection",
+      "location_id": "jerusalem",
+      "key_people": [
+        "jesus",
+        "peter",
+        "john_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 26,
+        "verse_start": 26,
+        "verse_end": 30
+      },
+      "key_verse": {
+        "reference": "Mateo 26:28",
+        "text": "Porque esto es mi sangre del nuevo pacto, la cual es derramada por muchos para remisión de los pecados."
+      },
+      "summary": "Durante la comida pascual, Jesús bendice el pan y la copa declarándolos su cuerpo y su sangre entregados para el perdón de los pecados.",
+      "theological_teaching": "Establecimiento del Nuevo Pacto mediante el sacrificio vicario de Jesucristo."
+    },
+    {
+      "id": "agony_in_gethsemane",
+      "name": "La Agonía en Getsemaní",
+      "category": "restoration",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_passion_resurrection",
+      "location_id": "gethsemane",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 26,
+        "verse_start": 36,
+        "verse_end": 46
+      },
+      "key_verse": {
+        "reference": "Mateo 26:39",
+        "text": "Y yéndose un poco más adelante, se postró sobre su rostro, orando, y diciendo: Padre mío, si es posible, pase de mí este vaso; empero no como yo quiero, sino como tú."
+      },
+      "summary": "Jesús oraba en agonía de alma en el huerto de Getsemaní aceptando la copa del sufrimiento en obediencia total al Padre.",
+      "theological_teaching": "La perfecta sumisión del Hijo de Dios para llevar sobre sí la ira divina contra el pecado de los hombres."
+    },
+    {
+      "id": "crucifixion_of_jesus",
+      "name": "La Crucifixión y Muerte Expiatoria en el Gólgota",
+      "category": "judgment",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_passion_resurrection",
+      "location_id": "golgotha",
+      "key_people": [
+        "jesus",
+        "mary",
+        "pilate",
+        "caiaphas"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 27,
+        "verse_start": 32,
+        "verse_end": 56
+      },
+      "key_verse": {
+        "reference": "Mateo 27:50",
+        "text": "Mas Jesús, habiendo otra vez exclamado con grande voz, dió el espíritu."
+      },
+      "summary": "Jesús es entregado a la crucifixión romana, clama a gran voz y entrega el espíritu; el velo del Templo se rasga en dos de arriba abajo.",
+      "theological_teaching": "El sacrificio expiatorio sustitutivo perfecto. La muerte de Cristo elimina la barrera del pecado y abre el acceso directo al Dios Santo."
+    },
+    {
+      "id": "resurrection_and_great_commission",
+      "name": "La Gloriosa Resurrección y la Gran Comisión",
+      "category": "miracle",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "era_id": "era_gospels",
+      "block_id": "nb_passion_resurrection",
+      "location_id": "galilee_mountain",
+      "key_people": [
+        "jesus",
+        "mary",
+        "peter",
+        "john_apostle",
+        "matthew_apostle"
+      ],
+      "scriptural_reference": {
+        "book": "Mateo",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 20
+      },
+      "key_verse": {
+        "reference": "Mateo 28:18",
+        "text": "Y llegando Jesús, les habló, diciendo: Toda potestad me es dada en el cielo y en la tierra."
+      },
+      "summary": "Jesús resucita al tercer día venciendo la muerte, se aparece a las mujeres y apóstoles, y proclama la Gran Comisión de discipular a todas las naciones.",
+      "theological_teaching": "La victoria absoluta de Jesucristo sobre la muerte y el infierno, y la misión universal de la Iglesia con la promesa de la presencia de Emanuel para siempre."
+    }
+  ],
   "people": [],
   "relationships": [],
   "locations": [],
