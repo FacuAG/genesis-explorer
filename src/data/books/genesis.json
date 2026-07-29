@@ -10247,7 +10247,7 @@
       "id": "mary",
       "name": "María (Madre de Jesús)",
       "name_meaning": "Exaltada o Amada",
-      "generation_from_adam": 60,
+      "generation_from_adam": 59,
       "category": "messianic_line",
       "period_era": "post_genesis_gospels",
       "spouse_id": "joseph",
@@ -10257,7 +10257,7 @@
         "text": "Entonces María dijo: He aquí la sierva del Señor; hágase conmigo conforme a tu palabra."
       },
       "biography": "Virgen bienaventurada de la estirpe de David. Concibió al Hijo de Dios por obra del Espíritu Santo (cumplimiento de Isaías 7:14).",
-      "generation": 60,
+      "generation": 59,
       "is_messianic_line": true,
       "birth_am": 3984,
       "death_am": 4052,
@@ -10269,14 +10269,15 @@
         "death_am": 4052,
         "lifespan": 68,
         "birth_bc_ad": "20 a.C.",
-        "death_bc_ad": "48 d.C."
+        "death_bc_ad": "48 d.C.",
+        "generation": 59
       }
     },
     {
       "id": "jesus",
       "name": "JESUCRISTO",
       "name_meaning": "Jehová es Salvación - El Mesías Uncido",
-      "generation_from_adam": 61,
+      "generation_from_adam": 60,
       "category": "messianic_line",
       "period_era": "post_genesis_gospels",
       "father_id": "god",
@@ -10287,7 +10288,7 @@
         "text": "Y dará a luz un hijo, y llamarás su nombre JESÚS, porque él salvará a su pueblo de sus pecados."
       },
       "biography": "El Hijo Eterno de Dios hecho carne. El Mesías prometido desde el Protoevangelio de Génesis 3:15, Salvador del mundo y Señor de señores.",
-      "generation": 61,
+      "generation": 60,
       "is_messianic_line": true,
       "birth_am": 4000,
       "death_am": 4033,
@@ -10299,7 +10300,8 @@
         "death_am": 4033,
         "lifespan": 33,
         "birth_bc_ad": "4 a.C.",
-        "death_bc_ad": "33 d.C."
+        "death_bc_ad": "33 d.C.",
+        "generation": 60
       }
     },
     {

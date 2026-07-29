@@ -111,6 +111,10 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
       }
 
       return true;
+    }).sort((a, b) => {
+      const gA = a.generation_from_adam || a.generation || a.chronology?.generation || 1;
+      const gB = b.generation_from_adam || b.generation || b.chronology?.generation || 1;
+      return gA - gB;
     });
   }, [people, periodFilter, searchQuery, messianicIds]);
 
