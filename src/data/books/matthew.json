@@ -26,7 +26,7 @@
       "muerte expiatoria y resurrección",
       "la Gran Comisión universal"
     ],
-    "key_people_count": 0,
+    "key_people_count": 12,
     "key_events_count": 20
   },
   "eras": [
@@ -668,9 +668,375 @@
       "theological_teaching": "La victoria absoluta de Jesucristo sobre la muerte y el infierno, y la misión universal de la Iglesia con la promesa de la presencia de Emanuel para siempre."
     }
   ],
-  "people": [],
+  "people": [
+    {
+      "id": "jesus",
+      "name": "JESUCRISTO",
+      "name_meaning": "Jehová es Salvación / El Mesías Ungido",
+      "generation_from_adam": 60,
+      "generation": 60,
+      "category": "savior_figure",
+      "is_messianic_line": true,
+      "father_id": "joseph",
+      "mother_id": "mary",
+      "birth_am": 4000,
+      "death_am": 4033,
+      "lifespan": 33,
+      "birth_bc_ad": "4 a.C.",
+      "death_bc_ad": "33 d.C.",
+      "scriptural_reference": "Mateo 1:21, Mateo 16:16, Mateo 28:18-20",
+      "verse_text": "Y parirá un hijo, y llamarás su nombre JESUS, porque él salvará á su pueblo de sus pecados.",
+      "key_verse": {
+        "reference": "Mateo 1:21",
+        "text": "Y parirá un hijo, y llamarás su nombre JESUS, porque él salvará á su pueblo de sus pecados."
+      },
+      "biography": "El Hijo de Dios encarnado, el Rey Mesías prometido a Abraham y David. Vivió una vida irreprensible sin pecado, murió en sustitución vicaria en la cruz por la salvación de su pueblo y resucitó al tercer día en triunfo glorioso sobre la muerte y el infierno."
+    },
+    {
+      "id": "mary",
+      "name": "María (Madre de Jesús)",
+      "name_meaning": "Amada de Dios o Excelsa",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "covenant_matriarch",
+      "is_messianic_line": true,
+      "spouse_id": "joseph",
+      "birth_am": 3984,
+      "death_am": 4052,
+      "lifespan": 68,
+      "birth_bc_ad": "20 a.C.",
+      "death_bc_ad": "48 d.C.",
+      "scriptural_reference": "Mateo 1:18-25, Mateo 2:11, Mateo 12:46",
+      "verse_text": "Y el nacimiento de Jesucristo fué así: Que siendo María su madre desposada con José, antes que se juntasen, se halló haber concebido del Espíritu Santo.",
+      "key_verse": {
+        "reference": "Mateo 1:18",
+        "text": "Y el nacimiento de Jesucristo fué así: Que siendo María su madre desposada con José, antes que se juntasen, se halló haber concebido del Espíritu Santo."
+      },
+      "biography": "Virgen de la tribu de Judá elegida por gracia divina para concebir al Redentor del mundo por obra del Espíritu Santo, cumpliendo Isaías 7:14."
+    },
+    {
+      "id": "joseph",
+      "name": "José (Esposo de María)",
+      "name_meaning": "Dios Añadirá",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "messianic_line",
+      "is_messianic_line": true,
+      "spouse_id": "mary",
+      "birth_am": 3970,
+      "death_am": 4022,
+      "lifespan": 52,
+      "birth_bc_ad": "34 a.C.",
+      "death_bc_ad": "22 d.C.",
+      "scriptural_reference": "Mateo 1:16-25, Mateo 2:13-23",
+      "verse_text": "Y despertando José del sueño, hizo como el ángel del Señor le había mandado, y recibió á su mujer.",
+      "key_verse": {
+        "reference": "Mateo 1:24",
+        "text": "Y despertando José del sueño, hizo como el ángel del Señor le había mandado, y recibió á su mujer."
+      },
+      "biography": "Varón justo de la casa y linaje del Rey David, carpintero de Nazaret, que recibió la revelación angélica para adoptar y proteger legalmente al niño Jesús."
+    },
+    {
+      "id": "john_the_baptist",
+      "name": "Juan el Bautista",
+      "name_meaning": "Jehová ha Sido Clemente",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "prophet",
+      "is_messianic_line": false,
+      "birth_am": 3999,
+      "death_am": 4032,
+      "lifespan": 33,
+      "birth_bc_ad": "5 a.C.",
+      "death_bc_ad": "32 d.C.",
+      "scriptural_reference": "Mateo 3:1-17, Mateo 11:7-15, Mateo 14:1-12",
+      "verse_text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas.",
+      "key_verse": {
+        "reference": "Mateo 3:3",
+        "text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas."
+      },
+      "biography": "Profeta insigne del Altísimo, la voz que clama en el desierto cumpliendo Isaías 40:3 y Malaquías 3:1 para preparar el camino del Señor."
+    },
+    {
+      "id": "peter",
+      "name": "Simón Pedro",
+      "name_meaning": "Roca o Piedra",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "apostle",
+      "is_messianic_line": false,
+      "birth_am": 3995,
+      "death_am": 4068,
+      "lifespan": 73,
+      "birth_bc_ad": "9 a.C.",
+      "death_bc_ad": "68 d.C.",
+      "scriptural_reference": "Mateo 4:18-20, Mateo 16:16-19, Mateo 26:69-75",
+      "verse_text": "Y respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente.",
+      "key_verse": {
+        "reference": "Mateo 16:16",
+        "text": "Y respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente."
+      },
+      "biography": "Pescador de Galilea llamado por Jesús a ser pescador de hombres. Portavoz de los doce apóstoles que confesó a Jesús como el Cristo en Cesarea de Filipo."
+    },
+    {
+      "id": "andrew",
+      "name": "Andrés (Apóstol)",
+      "name_meaning": "Varonil o Valiente",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "apostle",
+      "is_messianic_line": false,
+      "birth_am": 3997,
+      "death_am": 4065,
+      "lifespan": 68,
+      "birth_bc_ad": "7 a.C.",
+      "death_bc_ad": "65 d.C.",
+      "scriptural_reference": "Mateo 4:18-20, Mateo 10:2",
+      "verse_text": "Y díceles: Venid en pos de mí, y os haré pescadores de hombres.",
+      "key_verse": {
+        "reference": "Mateo 4:19",
+        "text": "Y díceles: Venid en pos de mí, y os haré pescadores de hombres."
+      },
+      "biography": "Hermano de Simón Pedro y uno de los primeros cuatro discípulos llamados por el Señor junto al Mar de Galilea."
+    },
+    {
+      "id": "james_son_of_zebedee",
+      "name": "Jacobo (hijo de Zebedeo)",
+      "name_meaning": "Suplantador o Sostenido por el Talón",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "apostle",
+      "is_messianic_line": false,
+      "birth_am": 3996,
+      "death_am": 4044,
+      "lifespan": 48,
+      "birth_bc_ad": "8 a.C.",
+      "death_bc_ad": "44 d.C.",
+      "scriptural_reference": "Mateo 4:21-22, Mateo 17:1, Mateo 26:37",
+      "verse_text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó.",
+      "key_verse": {
+        "reference": "Mateo 4:21",
+        "text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó."
+      },
+      "biography": "Pescador de Galilea, hermano de Juan e hijo de Zebedeo, testigo presencial de la Transfiguración y de la agonía en Getsemaní."
+    },
+    {
+      "id": "john_apostle",
+      "name": "Juan el Apóstol",
+      "name_meaning": "Dios es Clemente",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "apostle",
+      "is_messianic_line": false,
+      "birth_am": 4004,
+      "death_am": 4100,
+      "lifespan": 96,
+      "birth_bc_ad": "1 d.C.",
+      "death_bc_ad": "100 d.C.",
+      "scriptural_reference": "Mateo 4:21-22, Mateo 17:1, Mateo 26:37",
+      "verse_text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó.",
+      "key_verse": {
+        "reference": "Mateo 4:21",
+        "text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó."
+      },
+      "biography": "El discípulo amado, hermano de Jacobo, uno del círculo íntimo de Jesús que presenció su gloria en el monte y su agonía en Getsemaní."
+    },
+    {
+      "id": "matthew_apostle",
+      "name": "Mateo el Publicano (Autor)",
+      "name_meaning": "Regalo de Dios",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "apostle",
+      "is_messianic_line": false,
+      "birth_am": 3998,
+      "death_am": 4070,
+      "lifespan": 72,
+      "birth_bc_ad": "6 a.C.",
+      "death_bc_ad": "70 d.C.",
+      "scriptural_reference": "Mateo 9:9-13, Mateo 10:3",
+      "verse_text": "Y pasando Jesús de allí, vió á un hombre que estaba sentado al banco de los públicos tributos, el cual se llamaba Mateo; y dícele: Sígueme. Y se levantó, y le siguió.",
+      "key_verse": {
+        "reference": "Mateo 9:9",
+        "text": "Y pasando Jesús de allí, vió á un hombre que estaba sentado al banco de los públicos tributos, el cual se llamaba Mateo; y dícele: Sígueme. Y se levantó, y le siguió."
+      },
+      "biography": "Recaudador de impuestos de Capernaúm llamado por Jesús para dejarlo todo y convertirse en apóstol y autor inspirado del primer Evangelio."
+    },
+    {
+      "id": "herod_the_great",
+      "name": "Herodes el Grande",
+      "name_meaning": "Héroe o Dragón",
+      "generation_from_adam": 58,
+      "generation": 58,
+      "category": "ruler",
+      "is_messianic_line": false,
+      "birth_am": 3931,
+      "death_am": 3998,
+      "lifespan": 67,
+      "birth_bc_ad": "73 a.C.",
+      "death_bc_ad": "2 a.C.",
+      "scriptural_reference": "Mateo 2:1-18",
+      "verse_text": "Herodes entonces, como se vió burlado de los magos, se enojó mucho, y envió, y mató á todos los niños que había en Bethlehem y en todos sus términos, de edad de dos años abajo, conforme al tiempo que había entendido de los magos.",
+      "key_verse": {
+        "reference": "Mateo 2:16",
+        "text": "Herodes entonces, como se vió burlado de los magos, se enojó mucho, y envió, y mató á todos los niños que había en Bethlehem y en todos sus términos, de edad de dos años abajo, conforme al tiempo que había entendido de los magos."
+      },
+      "biography": "Rey de Judea por decreto del Senado Romano que, temiendo la llegada del Rey de los Judíos, ordenó la masacre de los niños inocentes de Belén."
+    },
+    {
+      "id": "pilate",
+      "name": "Poncio Pilato",
+      "name_meaning": "Armado con Jabalina",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "ruler",
+      "is_messianic_line": false,
+      "birth_am": 3980,
+      "death_am": 4039,
+      "lifespan": 59,
+      "birth_bc_ad": "24 a.C.",
+      "death_bc_ad": "39 d.C.",
+      "scriptural_reference": "Mateo 27:11-26",
+      "verse_text": "Y viendo Pilato que nada adelantaba, antes se hacía más alboroto, tomando agua se lavó las manos delante del pueblo, diciendo: Inocente soy yo de la sangre de este justo veréis lo vosotros.",
+      "key_verse": {
+        "reference": "Mateo 27:24",
+        "text": "Y viendo Pilato que nada adelantaba, antes se hacía más alboroto, tomando agua se lavó las manos delante del pueblo, diciendo: Inocente soy yo de la sangre de este justo veréis lo vosotros."
+      },
+      "biography": "Quinto procurador romano de Judea que, sabiendo que Jesús era inocente, se lavó las manos ante el pueblo y lo entregó para ser crucificado."
+    },
+    {
+      "id": "caiaphas",
+      "name": "Caifás (Sumo Sacerdote)",
+      "name_meaning": "Depresión o Roca",
+      "generation_from_adam": 59,
+      "generation": 59,
+      "category": "priest",
+      "is_messianic_line": false,
+      "birth_am": 3986,
+      "death_am": 4046,
+      "lifespan": 60,
+      "birth_bc_ad": "18 a.C.",
+      "death_bc_ad": "46 d.C.",
+      "scriptural_reference": "Mateo 26:57-68, Mateo 27:1",
+      "verse_text": "Mas Jesús callaba. Respondiendo el pontífice, le dijo: Te conjuro por el Dios viviente, que nos digas si eres tú el Cristo, Hijo de Dios.",
+      "key_verse": {
+        "reference": "Mateo 26:63",
+        "text": "Mas Jesús callaba. Respondiendo el pontífice, le dijo: Te conjuro por el Dios viviente, que nos digas si eres tú el Cristo, Hijo de Dios."
+      },
+      "biography": "Sumo Sacerdote judío durante el juicio religioso contra Jesús que acusó al Señor de blasfemia y demandó su condena a muerte."
+    }
+  ],
   "relationships": [],
-  "locations": [],
+  "locations": [
+    {
+      "id": "bethlehem_judea",
+      "name": "Belén de Judea",
+      "region": "Judea",
+      "latitude": 31.7054,
+      "longitude": 35.2024,
+      "description": "Ciudad natal del Rey David y lugar exacto del nacimiento de Jesucristo, en cumplimiento de Miqueas 5:2.",
+      "biblical_importance": "Lugar de la Encarnación divina y adoración de los Magos de Oriente (Mateo 2:1-6)."
+    },
+    {
+      "id": "nazareth",
+      "name": "Nazaret de Galilea",
+      "region": "Galilea",
+      "latitude": 32.7019,
+      "longitude": 35.3033,
+      "description": "Poblado de Galilea donde creció y vivió Jesús hasta su ministerio público, llamado por ello el Nazareno.",
+      "biblical_importance": "Cumplimiento profético de Mateo 2:23 ('había de ser llamado nazareno')."
+    },
+    {
+      "id": "jordan_river",
+      "name": "Río Jordán",
+      "region": "Judea / Perea",
+      "latitude": 31.8389,
+      "longitude": 35.5444,
+      "description": "Río sagrado donde Juan el Bautista predicaba el bautismo de arrepentimiento y donde fue bautizado el Señor.",
+      "biblical_importance": "Escenario de la consagración pública de Jesucristo y manifestación de la Trinidad (Mateo 3:13-17)."
+    },
+    {
+      "id": "judean_wilderness",
+      "name": "Desierto de Judea",
+      "region": "Judea",
+      "latitude": 31.65,
+      "longitude": 35.4,
+      "description": "Zona desértica al oeste del Mar Muerto donde Jesús ayunó 40 días y venció las tentaciones del diablo.",
+      "biblical_importance": "Escenario de la victoria de Cristo sobre Satanás (Mateo 4:1-11)."
+    },
+    {
+      "id": "mount_of_beatitudes",
+      "name": "Monte de las Bienaventuranzas",
+      "region": "Galilea",
+      "latitude": 32.8806,
+      "longitude": 35.5558,
+      "description": "Monte junto al Mar de Galilea donde Jesús pronunció el Sermón del Monte ante sus discípulos.",
+      "biblical_importance": "Proclamación del Manifiesto ético del Reino de los Cielos (Mateo 5-7)."
+    },
+    {
+      "id": "capernaum",
+      "name": "Capernaúm",
+      "region": "Galilea",
+      "latitude": 32.8811,
+      "longitude": 35.575,
+      "description": "Ciudad costera del Mar de Galilea elegida por Jesús como su centro de operaciones en Galilea.",
+      "biblical_importance": "Escenario de múltiples sanidades, milagros y del llamamiento del apóstol Mateo (Mateo 4:13, 9:9)."
+    },
+    {
+      "id": "sea_of_galilee",
+      "name": "Mar de Galilea",
+      "region": "Galilea",
+      "latitude": 32.8333,
+      "longitude": 35.5833,
+      "description": "Lago de agua dulce donde los primeros apóstoles pescaban y donde Jesús caminó sobre las aguas.",
+      "biblical_importance": "Escenario del apaciguamiento de la tempestad y pesca milagrosa (Mateo 8:23-27, 14:22-33)."
+    },
+    {
+      "id": "caesarea_philippi",
+      "name": "Cesarea de Filipo",
+      "region": "Galilea del Norte / Iturea",
+      "latitude": 33.2472,
+      "longitude": 35.6931,
+      "description": "Región al pie del Monte Hermón donde Pedro declaró su famosa confesión de fe.",
+      "biblical_importance": "Lugar de la confesión 'Tú eres el Cristo' y la promesa de la edificación de la Iglesia (Mateo 16:13-20)."
+    },
+    {
+      "id": "mount_hermon",
+      "name": "Monte Hermón (Monte de la Transfiguración)",
+      "region": "Norte de Israel",
+      "latitude": 33.4167,
+      "longitude": 35.85,
+      "description": "Elevada montaña donde Jesús se transfiguró delante de Pedro, Jacobo y Juan.",
+      "biblical_importance": "Manifestación de la gloria majestuosa del Hijo de Dios junto a Moisés y Elías (Mateo 17:1-9)."
+    },
+    {
+      "id": "jerusalem",
+      "name": "Jerusalén",
+      "region": "Judea",
+      "latitude": 31.7683,
+      "longitude": 35.2137,
+      "description": "Ciudad Santa donde Cristo realizó su entrada triunfal, purificó el Templo y fue juzgado.",
+      "biblical_importance": "Centro dramático de la Pasión, juicio ante el Sanedrín y la Última Cena (Mateo 21-26)."
+    },
+    {
+      "id": "mount_of_olives",
+      "name": "Monte de los Olivos",
+      "region": "Judea / Jerusalén",
+      "latitude": 31.7781,
+      "longitude": 35.2447,
+      "description": "Monte al oriente de Jerusalén donde Jesús enseñó el Discurso Escatológico y sufrió la agonía en Getsemaní.",
+      "biblical_importance": "Lugar de la profecía de la Segunda Venida y la oración en Getsemaní (Mateo 24-26)."
+    },
+    {
+      "id": "golgotha",
+      "name": "Gólgota (Lugar de la Calavera)",
+      "region": "Jerusalén",
+      "latitude": 31.7836,
+      "longitude": 35.2297,
+      "description": "Colina fuera de las murallas de Jerusalén donde Jesús fue crucificado entre dos ladrones.",
+      "biblical_importance": "Escenario de la muerte expiatoria del Lamb de Dios por los pecados del mundo (Mateo 27:33-50)."
+    }
+  ],
   "covenants": [],
   "messianic_promises": [],
   "themes": [],
