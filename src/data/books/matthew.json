@@ -1660,6 +1660,380 @@
           "meaning": "Abundar en sobremanera; la provisión del Mesías sobrepasa con creces toda necesidad."
         }
       ]
+    },
+    {
+      "chapter_number": 15,
+      "title": "Las Tradiciones de los Hombres y la Fe de la Cananea",
+      "summary": "Jesús confronta el legalismo farisaico demostrando que la contaminación sale del corazón, y atiende la fe perseverante de la mujer cananea sanando a su hija.",
+      "christological_theme": "El Salvador cuyo poder sanador se extiende por fe a los gentiles.",
+      "location_id": "sea_of_galilee",
+      "greek_terms": [
+        {
+          "greek": "καρδία",
+          "transliteration": "Kardía",
+          "strong": "G2588",
+          "target_verse": 18,
+          "target_word": "corazón",
+          "meaning": "Centro de la voluntad, intelecto y emociones; fuente real de donde emana la contaminación moral."
+        },
+        {
+          "greek": "κυνάριον",
+          "transliteration": "Kunárion",
+          "strong": "G2952",
+          "target_verse": 26,
+          "target_word": "perrillos",
+          "meaning": "Perrito doméstico; término usado por Jesús para probar la fe humilde de la mujer cananea."
+        },
+        {
+          "greek": "ἴαμα",
+          "transliteration": "Íama",
+          "strong": "G2392",
+          "target_verse": 28,
+          "target_word": "sanada",
+          "meaning": "Restauración milagrosa efectuada en respuesta a una fe constante e inquebrantable."
+        }
+      ]
+    },
+    {
+      "chapter_number": 16,
+      "title": "La Confesión de Pedro y la Promesa de la Iglesia",
+      "summary": "En Cesarea de Filipo, Pedro declara que Jesús es el Cristo; el Señor promete edificar su Iglesia sobre esa verdad e instruye sobre el camino de la cruz.",
+      "christological_theme": "El Cristo, Hijo del Dios viviente, cimiento inquebrantable de la Iglesia.",
+      "location_id": "caesarea_philippi",
+      "greek_terms": [
+        {
+          "greek": "ἐκκλησία",
+          "transliteration": "Ekklesía",
+          "strong": "G1577",
+          "target_verse": 18,
+          "target_word": "iglesia",
+          "meaning": "Asamblea de los llamados fuera del mundo; el cuerpo de creyentes edificado directamente por Cristo."
+        },
+        {
+          "greek": "κλείς",
+          "transliteration": "Kleís",
+          "strong": "G2807",
+          "target_verse": 19,
+          "target_word": "llaves",
+          "meaning": "Símbolo de autoridad apostólica para abrir y proclamar la entrada al Reino de los Cielos."
+        },
+        {
+          "greek": "ψυχή",
+          "transliteration": "Psyché",
+          "strong": "G5590",
+          "target_verse": 26,
+          "target_word": "alma",
+          "meaning": "La vida del ser humano; el valor supremo del alma supera todo el tesoro del mundo material."
+        }
+      ]
+    },
+    {
+      "chapter_number": 17,
+      "title": "La Transfiguración y el Poder sobre el Espíritu Inmundo",
+      "summary": "Jesús se transfigura en gloria en el monte ante Pedro, Jacobo y Juan. Al descender, sana al muchacho con epilepsia demoníaca enseñando sobre la fe.",
+      "christological_theme": "El Rey celestíal glorificado cuya palabra posee autoridad suprema.",
+      "location_id": "mount_hermon",
+      "greek_terms": [
+        {
+          "greek": "μεταμορφtarget",
+          "transliteration": "Metamorphóo",
+          "strong": "G3339",
+          "target_verse": 2,
+          "target_word": "transfiguró",
+          "meaning": "Transformación o metamorfosis de la apariencia externa manifestando la gloria interior de su Divinidad."
+        },
+        {
+          "greek": "δόξα",
+          "transliteration": "Dóxa",
+          "strong": "G1391",
+          "target_verse": 5,
+          "target_word": "resplandeciente",
+          "meaning": "La majestad divina, resplandor e iluminación suprema de la presencia de Dios."
+        }
+      ]
+    },
+    {
+      "chapter_number": 18,
+      "title": "La Grandeza en el Reino, los Tropiezos y el Perdón Fraterno",
+      "summary": "Jesús enseña que la verdadera grandeza exige volverse como niños, advierte contra el tropiezo y proclama la parábola del siervo no perdonador.",
+      "christological_theme": "El Pastor que busca a la oveja descarriada e instruye en la reconciliación ilimitada.",
+      "location_id": "capernaum",
+      "greek_terms": [
+        {
+          "greek": "ταπεινόω",
+          "transliteration": "Tapeinóo",
+          "strong": "G5013",
+          "target_verse": 4,
+          "target_word": "humille",
+          "meaning": "Reconocer con humildad la propia pequeñez sin orgullo ni pretensión de superioridad."
+        },
+        {
+          "greek": "σκάνδαλον",
+          "transliteration": "Skándalon",
+          "strong": "G4625",
+          "target_verse": 7,
+          "target_word": "tropiezos",
+          "meaning": "Trampa, lazo o causa de caída espiritual que induce al pecado a los débiles."
+        },
+        {
+          "greek": "ἀφίημι",
+          "transliteration": "Aphíemi",
+          "strong": "G863",
+          "target_verse": 21,
+          "target_word": "perdonaré",
+          "meaning": "Remitir, cancelar una deuda por completo y dejar ir la ofensa de corazón."
+        }
+      ]
+    },
+    {
+      "chapter_number": 19,
+      "title": "El Pacto Matrimonial, los Niños y el Joven Rico",
+      "summary": "Jesús afirma la santidad indisoluble del matrimonio instituido por Dios en la creación, bendice a los niños y demuestra las exigencias del Reino al joven rico.",
+      "christological_theme": "El Creador que restaura el diseño del matrimonio y exige la entrega total del corazón.",
+      "location_id": "judea",
+      "greek_terms": [
+        {
+          "greek": "κολλάω",
+          "transliteration": "Kolláo",
+          "strong": "G2853",
+          "target_verse": 5,
+          "target_word": "unirá",
+          "meaning": "Unir estrechamente como con pegamento; el lazo sagrado del matrimonio unificado por Dios."
+        },
+        {
+          "greek": "τέλειος",
+          "transliteration": "Téleios",
+          "strong": "G5046",
+          "target_verse": 21,
+          "target_word": "perfecto",
+          "meaning": "Maduro, completo, que alcanza el fin diseñado sin reservarle nada a Dios."
+        }
+      ]
+    },
+    {
+      "chapter_number": 20,
+      "title": "Los Obreros de la Viña y el Hijo del Hombre como Rescate",
+      "summary": "Parábola de los obreros de la viña que reciben el mismo salario por la gracia del señor. Jesús predice su muerte e instruye que el mayor debe ser servidor.",
+      "christological_theme": "El Hijo del Hombre que no vino para ser servido, sino para dar su vida en rescate por muchos.",
+      "location_id": "jerusalem",
+      "greek_terms": [
+        {
+          "greek": "λύτρον",
+          "transliteration": "Lútron",
+          "strong": "G3083",
+          "target_verse": 28,
+          "target_word": "rescate",
+          "meaning": "Precio de redención pagado por la liberación del esclavo; la sangre expiatoria de Cristo."
+        },
+        {
+          "greek": "διακονέω",
+          "transliteration": "Diakonéo",
+          "strong": "G1247",
+          "target_verse": 28,
+          "target_word": "servir",
+          "meaning": "Ministrar con abnegación atenta atendiendo la necesidad de los demás."
+        }
+      ]
+    },
+    {
+      "chapter_number": 21,
+      "title": "La Entrada Triunfal y la Purificación del Templo",
+      "summary": "Jesús entra a Jerusalén como Rey manso montado en un asno, purifica el Templo expulsando a los mercaderes y maldice la higuera sin fruto.",
+      "christological_theme": "El Rey de Sion humilde y la Piedra Angular desechada por los edificadores.",
+      "location_id": "jerusalem",
+      "greek_terms": [
+        {
+          "greek": "ὡσαννά",
+          "transliteration": "Hosanná",
+          "strong": "G5614",
+          "target_verse": 9,
+          "target_word": "¡Hosanna!",
+          "meaning": "Aclamación de triunfo hebrea que significa '¡Salva ahora, te rogamos, Oh Señor!'."
+        },
+        {
+          "greek": "κεφαλή γωνίας",
+          "transliteration": "Kephalé gonías",
+          "strong": "G2776",
+          "target_verse": 42,
+          "target_word": "cabeza de esquina",
+          "meaning": "La piedra angular principal que sostiene e integra toda la estructura del edificio de Dios."
+        }
+      ]
+    },
+    {
+      "chapter_number": 22,
+      "title": "La Parábola de las Bodas, el Tributo al César y el Gran Mandamiento",
+      "summary": "Parábola del banquete de bodas del hijo del rey. Jesús responde a los fariseos sobre el tributo, contesta a los saduceos y proclama el Gran Mandamiento del Amor.",
+      "christological_theme": "El Hijo del Rey a quien pertenece toda adoración y el Señor de David.",
+      "location_id": "jerusalem",
+      "greek_terms": [
+        {
+          "greek": "γάμος",
+          "transliteration": "Gámos",
+          "strong": "G1062",
+          "target_verse": 2,
+          "target_word": "bodas",
+          "meaning": "Banquete nupcial mesiánico que celebra la unión del Esposo celestial con su pueblo redimido."
+        },
+        {
+          "greek": "ἀγάπη",
+          "transliteration": "Agápe",
+          "strong": "G26",
+          "target_verse": 37,
+          "target_word": "Amarás",
+          "meaning": "Amor abnegado, supremo y voluntario hacia Dios con todo el corazón, alma y mente."
+        }
+      ]
+    },
+    {
+      "chapter_number": 23,
+      "title": "Los Siete Ayes contra los Escribas y Fariseos Hipócritas",
+      "summary": "Jesús pronuncia solemnes denuncias contra la religiosidad ostentosa e hipócrita de los escribas y fariseos, y se lamenta sobre Jerusalén.",
+      "christological_theme": "El Juez Santo que aborrece la hipocresía y anhela cobijar a sus hijos con amor maternal.",
+      "location_id": "jerusalem",
+      "greek_terms": [
+        {
+          "greek": "ὑποκριτής",
+          "transliteration": "Hypokrités",
+          "strong": "G5273",
+          "target_verse": 13,
+          "target_word": "hipócritas",
+          "meaning": "Actor que lleva una máscara; persona que aparenta piedad exterior mientras su corazón está corrupto."
+        },
+        {
+          "greek": "οὐαί",
+          "transliteration": "Ouaí",
+          "strong": "G3759",
+          "target_verse": 13,
+          "target_word": "¡Ay!",
+          "meaning": "Exclamación solemne de lamento y juicio divino decretado sobre los desobedientes."
+        }
+      ]
+    },
+    {
+      "chapter_number": 24,
+      "title": "El Discurso del Olivar: Señales del Fin y la Segunda Venida",
+      "summary": "Jesús revela las señales precursoras del fin del siglo, la abominación desoladora, la gran tribulación y su venida gloriosa sobre las nubes del cielo.",
+      "christological_theme": "El Rey que regresa en majestad e impone el fin de la historia humana.",
+      "location_id": "mount_of_olives",
+      "greek_terms": [
+        {
+          "greek": "παρουσία",
+          "transliteration": "Parousía",
+          "strong": "G3952",
+          "target_verse": 3,
+          "target_word": "venida",
+          "meaning": "Presencia visible y advenimiento glorioso de Jesucristo en su Segunda Venida."
+        },
+        {
+          "greek": "συντέλεια",
+          "transliteration": "Syntéleia",
+          "strong": "G4930",
+          "target_verse": 3,
+          "target_word": "fin del siglo",
+          "meaning": "Consumación final y conclusión definitiva de la era presente de la historia."
+        }
+      ]
+    },
+    {
+      "chapter_number": 25,
+      "title": "Las Diez Vírgenes, los Talentos y el Juicio Final de las Naciones",
+      "summary": "Parábolas de la vigilancia y responsabilidad espiritual (las diez vírgenes y los talentos), concluyendo con el gran juicio del Rey dividiendo ovejas y cabritos.",
+      "christological_theme": "El Rey y Juez Supremo que recompensa a los fieles y juzga a las naciones.",
+      "location_id": "mount_of_olives",
+      "greek_terms": [
+        {
+          "greek": "φρόνιμος",
+          "transliteration": "Phrónimos",
+          "strong": "G5429",
+          "target_verse": 2,
+          "target_word": "prudentes",
+          "meaning": "Prudente, velador, provisto del aceite de la gracia para esperar al Esposo."
+        },
+        {
+          "greek": "τάλαντον",
+          "transliteration": "Tálanton",
+          "strong": "G5007",
+          "target_verse": 15,
+          "target_word": "talentos",
+          "meaning": "Unidad de peso y moneda de enorme valor; dones y recursos confiados por el Señor para ser administrados."
+        }
+      ]
+    },
+    {
+      "chapter_number": 26,
+      "title": "La Cena del Señor, la Agonía en Getsemaní y el Juicio ante el Sanedrín",
+      "summary": "Jesús instituye la Santa Cena del Nuevo Pacto, angustia su alma en Getsemaní en oración, es entregado por Judas y condenado por Caifás.",
+      "christological_theme": "El Cordero Pascual que ofrece su sangre en rescate y bebe la copa de la ira divina.",
+      "location_id": "jerusalem",
+      "greek_terms": [
+        {
+          "greek": "διαθήκη",
+          "transliteration": "Diathéke",
+          "strong": "G1242",
+          "target_verse": 28,
+          "target_word": "nuevo pacto",
+          "meaning": "Testamento o pacto soberano incondicional garantizado por la sangre de Cristo."
+        },
+        {
+          "greek": "ποτήριον",
+          "transliteration": "Potérion",
+          "strong": "G4221",
+          "target_verse": 39,
+          "target_word": "copa",
+          "meaning": "Metáfora bíblica del juicio e ira de Dios que Jesús asumió y bebió voluntariamente."
+        }
+      ]
+    },
+    {
+      "chapter_number": 27,
+      "title": "El Juicio ante Pilato, la Crucifixión en el Gólgota y la Sepultura",
+      "summary": "Pilato entrega a Jesús tras lavarse las manos. El Señor es azotado, escarnecido y crucificado en el Gólgota. El velo se rasga y es sepultado en una tumba nueva.",
+      "christological_theme": "El Redentor crucificado que abre el acceso al Lugar Santísimo mediante su muerte expiatoria.",
+      "location_id": "golgotha",
+      "greek_terms": [
+        {
+          "greek": "σταυρός",
+          "transliteration": "Staurós",
+          "strong": "G4716",
+          "target_verse": 32,
+          "target_word": "cruz",
+          "meaning": "Madero de ejecución romana; altar sagrado donde Cristo ofreció el sacrificio perfecto por el pecado."
+        },
+        {
+          "greek": "καταπέτασμα",
+          "transliteration": "Katapétasma",
+          "strong": "G2665",
+          "target_verse": 51,
+          "target_word": "velo",
+          "meaning": "La cortina del Templo que separaba el Lugar Santo del Santísimo, rasgada de arriba abajo al morir Jesús."
+        }
+      ]
+    },
+    {
+      "chapter_number": 28,
+      "title": "La Gloriosa Resurrección del Mesías y la Gran Comisión Universal",
+      "summary": "Al amanecer del primer día de la semana, Jesús resucita victorioso dejando la tumba vacía. Aparece a sus discípulos en Galilea y les encomienda la Gran Comisión.",
+      "christological_theme": "El Señor Resucitado victorioso sobre la muerte a quien le ha sido dada toda potestad en el cielo y la tierra.",
+      "location_id": "galilee_mountain",
+      "greek_terms": [
+        {
+          "greek": "ἐγείρω",
+          "transliteration": "Egeíro",
+          "strong": "G1453",
+          "target_verse": 6,
+          "target_word": "ha resucitado",
+          "meaning": "Levantarse de entre los muertos en victoria sobre la sepultura y el imperio de la muerte."
+        },
+        {
+          "greek": "μαθητεύω",
+          "transliteration": "Matheteúo",
+          "strong": "G3100",
+          "target_verse": 19,
+          "target_word": "haced discípulos",
+          "meaning": "Hacer discípulos comprometidos, enseñando y bautizando en todas las naciones del mundo."
+        }
+      ]
     }
   ],
   "notable_overlaps": []
