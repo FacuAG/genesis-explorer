@@ -1,11 +1,15 @@
 import { useMemo } from 'react';
 import genesisData from '../data/books/genesis.json';
+import matthewData from '../data/books/matthew.json';
 
 /**
- * Custom Hook profesional para el consumo desacoplado y optimizado del dataset bíblico de Génesis (Schema 3.0).
- * Proporciona colecciones pre-indexadas con useMemo para garantizar rendimiento de velocidad extrema.
+ * Custom Hook profesional para el consumo desacoplado y optimizado del dataset bíblico (Schema 3.0).
+ * Soporta alternar dinámicamente entre Génesis y Mateo.
  */
-export function useGenesisData() {
+export function useGenesisData(bookId = 'genesis') {
+  const currentData = useMemo(() => {
+    return bookId === 'matthew' || bookId === 'mateo' ? matthewData : genesisData;
+  }, [bookId]);
   // Indexación O(1) de entidades para búsquedas instantáneas en la UI
   const {
     eventsMap,
@@ -18,28 +22,28 @@ export function useGenesisData() {
     chaptersMap
   } = useMemo(() => {
     const eMap = new Map();
-    (genesisData.timeline_events || []).forEach(item => eMap.set(item.id, item));
+    (currentData.timeline_events || []).forEach(item => eMap.set(item.id, item));
 
     const pMap = new Map();
-    (genesisData.people || []).forEach(item => pMap.set(item.id, item));
+    (currentData.people || []).forEach(item => pMap.set(item.id, item));
 
     const lMap = new Map();
-    (genesisData.locations || []).forEach(item => lMap.set(item.id, item));
+    (currentData.locations || []).forEach(item => lMap.set(item.id, item));
 
     const cMap = new Map();
-    (genesisData.covenants || []).forEach(item => cMap.set(item.id, item));
+    (currentData.covenants || []).forEach(item => cMap.set(item.id, item));
 
     const prMap = new Map();
-    (genesisData.messianic_promises || []).forEach(item => prMap.set(item.id, item));
+    (currentData.messianic_promises || []).forEach(item => prMap.set(item.id, item));
 
     const thMap = new Map();
-    (genesisData.themes || []).forEach(item => thMap.set(item.id, item));
+    (currentData.themes || []).forEach(item => thMap.set(item.id, item));
 
     const qMap = new Map();
-    (genesisData.questions || []).forEach(item => qMap.set(item.id, item));
+    (currentData.questions || []).forEach(item => qMap.set(item.id, item));
 
     const chMap = new Map();
-    (genesisData.chapters_map || []).forEach(item => chMap.set(item.chapter, item));
+    (currentData.chapters_map || []).forEach(item => chMap.set(item.chapter_number || item.chapter, item));
 
     return {
       eventsMap: eMap,
@@ -51,7 +55,7 @@ export function useGenesisData() {
       questionsMap: qMap,
       chaptersMap: chMap
     };
-  }, []);
+  }, [currentData]);
 
   // Helper functions exportadas para el resto de la aplicación
   const getEventById = (id) => eventsMap.get(id) || null;
@@ -68,19 +72,19 @@ export function useGenesisData() {
     if (!query || query.trim().length === 0) return { events: [], people: [], locations: [] };
     const q = query.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-    const events = (genesisData.timeline_events || []).filter(e => {
+    const events = (currentData.timeline_events || []).filter(e => {
       const name = (e.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const summary = (e.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       return name.includes(q) || summary.includes(q);
     });
 
-    const people = (genesisData.people || []).filter(p => {
+    const people = (currentData.people || []).filter(p => {
       const name = (p.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const meaning = (p.name_meaning || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       return name.includes(q) || meaning.includes(q);
     });
 
-    const locations = (genesisData.locations || []).filter(l => {
+    const locations = (currentData.locations || []).filter(l => {
       const name = (l.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const region = (l.region || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       return name.includes(q) || region.includes(q);
@@ -90,19 +94,19 @@ export function useGenesisData() {
   };
 
   return {
-    bookInfo: genesisData.book_info,
-    eras: genesisData.eras || [],
-    narrativeBlocks: genesisData.narrative_blocks || [],
-    timelineEvents: genesisData.timeline_events || [],
-    people: genesisData.people || [],
-    locations: genesisData.locations || [],
-    covenants: genesisData.covenants || [],
-    messianicPromises: genesisData.messianic_promises || [],
-    themes: genesisData.themes || [],
-    questions: genesisData.questions || [],
-    dispensations: genesisData.dispensations || [],
-    chaptersMap: genesisData.chapters_map || [],
-    notableOverlaps: genesisData.notable_overlaps || [],
+    bookInfo: currentData.metadata || currentData.book_info,
+    eras: currentData.eras || [],
+    narrativeBlocks: currentData.narrative_blocks || [],
+    timelineEvents: currentData.timeline_events || [],
+    people: currentData.people || [],
+    locations: currentData.locations || [],
+    covenants: currentData.covenants || [],
+    messianicPromises: currentData.messianic_promises || [],
+    themes: currentData.themes || [],
+    questions: currentData.questions || [],
+    dispensations: currentData.dispensations || [],
+    chaptersMap: currentData.chapters_map || [],
+    notableOverlaps: currentData.notable_overlaps || [],
     // Maps indexados O(1)
     eventsMap,
     peopleMap,

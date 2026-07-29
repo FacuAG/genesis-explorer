@@ -6,7 +6,7 @@ import './Header.css';
  * - Fila Superior: Marca + Módulos de la Suite Bíblica Global en el margen derecho.
  * - Fila Inferior: Contexto del Libro Activo (Selector, Estadísticas, Menú de Génesis y Buscador).
  */
-export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, totalStats }) {
+export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, totalStats, activeBookId, setActiveBookId }) {
   return (
     <header className="app-header">
       {/* 1. FILA SUPERIOR: MARCA (IZQUIERDA) Y MÓDULOS GLOBALES (DERECHA) */}
@@ -17,10 +17,10 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
           </div>
           <div className="brand-titles">
             <h1 className="brand-title">
-              GENESIS <span className="brand-title-accent">EXPLORER</span>
+              BIBLE <span className="brand-title-accent">EXPLORER</span>
             </h1>
             <p className="brand-subtitle">
-              Estudio Bíblico Visual & Cronología Patriarcal Anno Mundi (AM)
+              Estudio Bíblico Visual & Cronología Mesiánica (Adán a Cristo)
             </p>
           </div>
         </div>
@@ -79,10 +79,15 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
           <div className="book-selector-container">
             <label htmlFor="book-select" className="book-select-label">Libro Activo:</label>
             <div className="select-wrapper">
-              <select id="book-select" className="book-select-input" defaultValue="genesis">
+              <select
+                id="book-select"
+                className="book-select-input"
+                value={activeBookId || 'genesis'}
+                onChange={(e) => setActiveBookId && setActiveBookId(e.target.value)}
+              >
                 <option value="genesis">📖 Génesis (50 Caps - 82 Eventos)</option>
+                <option value="matthew">✝️ San Mateo (28 Caps - 20 Eventos)</option>
                 <option value="exodus" disabled>📖 Éxodo (Próximamente)</option>
-                <option value="matthew" disabled>📖 Mateo (Próximamente)</option>
               </select>
             </div>
           </div>
@@ -116,7 +121,7 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
               className={`nav-tab-btn book-tab-btn ${activeTab === 'chapters' ? 'active' : ''}`}
               onClick={() => setActiveTab('chapters')}
             >
-              <span className="tab-icon">📖</span> Capítulos (1-50)
+              <span className="tab-icon">📖</span> Capítulos (1-{activeBookId === 'matthew' ? 28 : 50})
             </button>
             <button
               className={`nav-tab-btn book-tab-btn ${activeTab === 'people' ? 'active' : ''}`}

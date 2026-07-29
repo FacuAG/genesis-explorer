@@ -14,13 +14,14 @@ import UserNotesPanel from './components/panels/UserNotesPanel';
 import './App.css';
 
 export function App() {
+  const [activeBookId, setActiveBookId] = useState('genesis');
   const [activeTab, setActiveTab] = useState('timeline');
   const [searchQuery, setSearchQuery] = useState('');
   const [targetEventId, setTargetEventId] = useState(null);
   const [targetPersonId, setTargetPersonId] = useState(null);
   const [targetChapterNum, setTargetChapterNum] = useState(null);
 
-  const genesis = useGenesisData();
+  const genesis = useGenesisData(activeBookId);
 
   // Resetear el scroll de la ventana al cambiar de pestaña principal
   React.useEffect(() => {
@@ -64,6 +65,8 @@ export function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         totalStats={totalStats}
+        activeBookId={activeBookId}
+        setActiveBookId={setActiveBookId}
       />
 
       {/* Vista de Resultados de Búsqueda (si hay query activa) */}
