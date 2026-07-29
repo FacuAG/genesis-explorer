@@ -15,6 +15,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedOverlapIndex, setSelectedOverlapIndex] = useState(0);
+  const [overlapEraFilter, setOverlapEraFilter] = useState('all'); // 'all' | 'genesis' | 'kings' | 'gospels'
 
   const chartContainerRef = useRef(null);
 
@@ -128,15 +129,63 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     return sortedTiers;
   }, [filteredPeople]);
 
-  // Lista de Patriarcas Principales para la Gráfica de Convivencia Temporal (Anno Mundi 0 a 2369)
-  const overlapPatriarchs = useMemo(() => {
-    const keyIds = [
-      'adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech_sethite', 'noah',
-      'shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah',
-      'abraham', 'isaac', 'jacob', 'joseph'
+  // Lista de Personajes para la Gráfica de Convivencia según Era Bíblica
+  const { overlapPeopleList, chartMin, chartMax, axisTicks } = useMemo(() => {
+    let ids = [];
+    let min = 0;
+    let max = 4033;
+    let ticks = [
+      { label: 'AM 0 (Creación)', pos: 0 },
+      { label: 'AM 1056 (Noé)', pos: 26 },
+      { label: 'AM 1948 (Abraham)', pos: 48 },
+      { label: 'AM 2940 (Rey David)', pos: 73 },
+      { label: 'AM 3445 (Zorobabel)', pos: 85 },
+      { label: 'AM 4000 (Jesucristo)', pos: 99 }
     ];
-    return keyIds.map(id => peopleMap.get(id)).filter(Boolean);
-  }, [peopleMap]);
+
+    if (overlapEraFilter === 'genesis') {
+      ids = ['adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech_sethite', 'noah', 'shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah', 'abraham', 'isaac', 'jacob', 'joseph'];
+      min = 0;
+      max = 2369;
+      ticks = [
+        { label: 'AM 0 (Creación)', pos: 0 },
+        { label: 'AM 500', pos: 21 },
+        { label: 'AM 1056 (Noé)', pos: 44 },
+        { label: 'AM 1656 (Diluvio)', pos: 70 },
+        { label: 'AM 2008 (Abraham)', pos: 84 },
+        { label: 'AM 2369 (José)', pos: 100 }
+      ];
+    } else if (overlapEraFilter === 'kings') {
+      ids = ['boaz', 'obed', 'jesse', 'david', 'solomon', 'rehoboam', 'abijah', 'asa', 'jehoshaphat', 'jehoram', 'uzziah', 'jotham', 'ahaz', 'hezekiah', 'manasseh', 'amon', 'josiah', 'jeconiah', 'shealtiel', 'zerubbabel'];
+      min = 2500;
+      max = 3550;
+      ticks = [
+        { label: 'AM 2560 (Booz)', pos: 5 },
+        { label: 'AM 2710 (Isaí)', pos: 20 },
+        { label: 'AM 2940 (David)', pos: 42 },
+        { label: 'AM 2980 (Salomón)', pos: 46 },
+        { label: 'AM 3252 (Ezequías)', pos: 71 },
+        { label: 'AM 3515 (Zorobabel)', pos: 96 }
+      ];
+    } else if (overlapEraFilter === 'gospels') {
+      ids = ['matthan', 'jacob_matthan', 'joseph', 'mary', 'jesus'];
+      min = 3840;
+      max = 4055;
+      ticks = [
+        { label: 'AM 3840 (Matán)', pos: 0 },
+        { label: 'AM 3950 (José)', pos: 51 },
+        { label: 'AM 3984 (María)', pos: 67 },
+        { label: 'AM 4000 (Nacimiento de Jesús)', pos: 74 },
+        { label: 'AM 4033 (Resurrección)', pos: 90 }
+      ];
+    } else {
+      // 'all'
+      ids = ['adam', 'seth', 'enoch', 'methuselah', 'noah', 'shem', 'eber', 'terah', 'abraham', 'isaac', 'jacob', 'boaz', 'jesse', 'david', 'solomon', 'hezekiah', 'josiah', 'zerubbabel', 'joseph', 'mary', 'jesus'];
+    }
+
+    const list = ids.map(id => peopleMap.get(id)).filter(Boolean);
+    return { overlapPeopleList: list, chartMin: min, chartMax: max, axisTicks: ticks };
+  }, [overlapEraFilter, peopleMap]);
 
   // Convivencia actualmente seleccionada (Soporta esquemas flexibles de datos)
   const activeOverlap = notableOverlaps[selectedOverlapIndex] || notableOverlaps[0];
@@ -470,6 +519,36 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
       {/* 3. PESTAÑA B: GRÁFICO DE CONVIVENCIAS Y SUPERPOSICIÓN TEMPORAL */}
       {activeTab === 'overlaps' && (
         <div className="genealogy-overlaps-view">
+          {/* BARRA DE FILTRADO POR ERAS BÍBLICAS DEL GRÁFICO */}
+          <div className="gtv-toolbar">
+            <div className="gtv-period-filters">
+              <button
+                className={`gtv-filter-chip ${overlapEraFilter === 'all' ? 'active' : ''}`}
+                onClick={() => setOverlapEraFilter('all')}
+              >
+                🌐 Todas las Eras (AM 0 a 4000)
+              </button>
+              <button
+                className={`gtv-filter-chip ${overlapEraFilter === 'genesis' ? 'active' : ''}`}
+                onClick={() => setOverlapEraFilter('genesis')}
+              >
+                🏛️ Era Patriarcal / Génesis
+              </button>
+              <button
+                className={`gtv-filter-chip ${overlapEraFilter === 'kings' ? 'active' : ''}`}
+                onClick={() => setOverlapEraFilter('kings')}
+              >
+                👑 Era de los Reyes
+              </button>
+              <button
+                className={`gtv-filter-chip ${overlapEraFilter === 'gospels' ? 'active' : ''}`}
+                onClick={() => setOverlapEraFilter('gospels')}
+              >
+                ✝️ Era de los Evangelios
+              </button>
+            </div>
+          </div>
+
           {/* SELECTOR DE HISTORIAS DE CONVIVENCIA DESTACADAS */}
           <div className="overlaps-selector-bar">
             <h3>⚡ Convivencias Bíblicas Clave (Transmisión Oral Directa)</h3>
@@ -524,24 +603,22 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
             </div>
           )}
 
-          {/* LIENZO DE BARRAS HORIZONTALES (EJE ANNO MUNDI 0 A 2369) */}
+          {/* LIENZO DE BARRAS HORIZONTALES DINÁMICO SEGÚN LA ERA BÍBLICA */}
           <div ref={chartContainerRef} className="overlaps-timeline-chart">
             <div className="chart-header-axis">
-              <span>AM 0 (Creación)</span>
-              <span>AM 500</span>
-              <span>AM 1056 (Noé)</span>
-              <span>AM 1656 (Diluvio)</span>
-              <span>AM 2008 (Abraham)</span>
-              <span>AM 2369 (José)</span>
+              {axisTicks.map((tick, tIdx) => (
+                <span key={tIdx} style={{ left: `${tick.pos}%`, position: 'absolute' }}>
+                  {tick.label}
+                </span>
+              ))}
             </div>
 
-            <div className="chart-bars-list">
-              {overlapPatriarchs.map(p => {
+            <div className="chart-bars-list" style={{ marginTop: '2.5rem' }}>
+              {overlapPeopleList.map(p => {
                 const dates = getPersonDates(p);
-                
-                // Mapear AM 0 a 2400 a porcentaje 0% - 100%
-                const leftPct = Math.max(0, Math.min(100, (dates.birth / 2369) * 100));
-                const widthPct = Math.max(1.5, Math.min(100 - leftPct, ((dates.death - dates.birth) / 2369) * 100));
+                const maxRange = Math.max(1, chartMax - chartMin);
+                const leftPct = Math.max(0, Math.min(98, ((dates.birth - chartMin) / maxRange) * 100));
+                const widthPct = Math.max(2, Math.min(100 - leftPct, ((dates.death - dates.birth) / maxRange) * 100));
 
                 const isFromActive = activeOverlapPersonFrom?.id === p.id;
                 const isToActive = activeOverlapPersonTo?.id === p.id;
