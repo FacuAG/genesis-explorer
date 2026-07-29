@@ -11966,70 +11966,88 @@
   ],
   "notable_overlaps": [
     {
+      "id": "ov_adam_methuselah",
       "person1_id": "adam",
       "person2_id": "methuselah",
+      "person1_name": "Adán",
+      "person2_name": "Matusalén",
       "years_together": 243,
-      "historical_note": "Adán convivió 243 años con Matusalén (AM 687 – 930), permitiendo la transmisión oral directa de la verdad de la Creación y el Edén a la octava generación patriarcal."
+      "years_overlap": 243,
+      "era": "antediluvian",
+      "historical_note": "Adán convivió 243 años con Matusalén, transmitiendo la revelación original del Edén en forma directa.",
+      "note": "Adán convivió 243 años con Matusalén, transmitiendo la revelación original del Edén en forma directa."
     },
     {
-      "person1_id": "adam",
-      "person2_id": "lamech_sethite",
-      "years_together": 56,
-      "historical_note": "Adán convivió 56 años con Lamec, el padre de Noé (AM 874 – 930), garantizando la continuidad pedagógica de las primeras generaciones."
-    },
-    {
-      "person1_id": "seth",
-      "person2_id": "methuselah",
-      "years_together": 355,
-      "historical_note": "Set convivió 355 años con Matusalén (AM 687 – 1042), conservando la fe y el culto público a Jehová."
-    },
-    {
+      "id": "ov_methuselah_shem",
       "person1_id": "methuselah",
-      "person2_id": "noah",
-      "years_together": 600,
-      "historical_note": "Matusalén convivió 600 años con su nieto Noé (AM 1056 – 1656), falleciendo en el año exacto del inicio del Diluvio Universal."
+      "person2_id": "shem",
+      "person1_name": "Matusalén",
+      "person2_name": "Sem",
+      "years_together": 98,
+      "years_overlap": 98,
+      "era": "antediluvian",
+      "historical_note": "Matusalén convivió 98 años con su nieto Sem antes del Diluvio Universal, garantizando la fe premundial.",
+      "note": "Matusalén convivió 98 años con su nieto Sem antes del Diluvio Universal, garantizando la fe premundial."
     },
     {
-      "person1_id": "noah",
-      "person2_id": "abraham",
-      "years_together": 58,
-      "historical_note": "Noé, el sobreviviente del Diluvio, convivió 58 años con Abraham (nacido en AM 1948, Noé murió en AM 2006), conectando el mundo antediluviano con el padre de la fe."
-    },
-    {
+      "id": "ov_shem_abraham",
       "person1_id": "shem",
       "person2_id": "abraham",
+      "person1_name": "Sem",
+      "person2_name": "Abraham",
       "years_together": 175,
-      "historical_note": "Sem vivió durante toda la vida terrenal de Abraham (175 años, AM 1948 – 2123), sirviendo como el gran maestro patriarcal postdiluviano."
+      "years_overlap": 175,
+      "era": "postdiluvian",
+      "historical_note": "Sem sobrevivió al Diluvio y llegó a convivir 175 años con Abraham, transmitiendo el testimonio del mundo antiguo.",
+      "note": "Sem sobrevivió al Diluvio y llegó a convivir 175 años con Abraham, transmitiendo el testimonio del mundo antiguo."
     },
     {
+      "id": "ov_shem_isaac",
       "person1_id": "shem",
-      "person2_id": "jacob",
-      "years_together": 50,
-      "historical_note": "Sem convivió 50 años con Jacob (nacido en AM 2168; Sem murió en AM 2158 cuando Jacob tenía 50 años en AM 2158)."
-    },
-    {
-      "person1_id": "abraham",
       "person2_id": "isaac",
-      "years_together": 75,
-      "historical_note": "Abraham convivió 75 años con su hijo de la promesa Isaac (AM 2048 – 2123), instruyéndole en el camino del pacto."
+      "person1_name": "Sem",
+      "person2_name": "Isaac",
+      "years_together": 50,
+      "years_overlap": 50,
+      "era": "postdiluvian",
+      "historical_note": "Sem convivió 50 años con Isaac (nacido en AM 2108), conectando la época antediluviana con los patriarcas del Pacto.",
+      "note": "Sem convivió 50 años con Isaac (nacido en AM 2108), conectando la época antediluviana con los patriarcas del Pacto."
     },
     {
-      "person1_id": "abraham",
-      "person2_id": "jacob",
-      "years_together": 15,
-      "historical_note": "Abraham convivió 15 años con su nieto Jacob (nacido en AM 2168, Abraham murió en AM 2183), dejando una impronta indeleble en su juventud."
+      "id": "ov_david_solomon",
+      "person1_id": "david",
+      "person2_id": "solomon",
+      "person1_name": "Rey David",
+      "person2_name": "Salomón",
+      "years_together": 30,
+      "years_overlap": 30,
+      "era": "kings",
+      "historical_note": "El Rey David convivió 30 años con su hijo Salomón, instruyéndolo en los planos del Templo y entregándole el trono de Israel.",
+      "note": "El Rey David convivió 30 años con su hijo Salomón, instruyéndolo en los planos del Templo y entregándole el trono de Israel."
     },
     {
-      "person1_id": "isaac",
-      "person2_id": "jacob",
-      "years_together": 120,
-      "historical_note": "Isaac convivió 120 años con su hijo Jacob (AM 2168 – 2288), hasta poco antes del descenso de la familia a Egipto."
+      "id": "ov_joseph_jesus",
+      "person1_id": "joseph",
+      "person2_id": "jesus",
+      "person1_name": "José (esposo de María)",
+      "person2_name": "JESUCRISTO",
+      "years_together": 20,
+      "years_overlap": 20,
+      "era": "gospels",
+      "historical_note": "José el carpintero convivió 20 años terrenales con Jesucristo, criándolo e instruyéndolo en Nazaret.",
+      "note": "José el carpintero convivió 20 años terrenales con Jesucristo, criándolo e instruyéndolo en Nazaret."
     },
     {
-      "person1_id": "jacob",
-      "person2_id": "joseph",
-      "years_together": 56,
-      "historical_note": "Jacob convivió 17 años en Canaán y 17 años en Egipto con su hijo José (AM 2259 – 2315), experimentando el gozo de la restauración familiar."
+      "id": "ov_mary_jesus",
+      "person1_id": "mary",
+      "person2_id": "jesus",
+      "person1_name": "María (Madre de Jesús)",
+      "person2_name": "JESUCRISTO",
+      "years_together": 33,
+      "years_overlap": 33,
+      "era": "gospels",
+      "historical_note": "María convivió los 33 años de la vida terrenal de Jesucristo, desde la Encarnación hasta la Cruz y la Resurrección.",
+      "note": "María convivió los 33 años de la vida terrenal de Jesucristo, desde la Encarnación hasta la Cruz y la Resurrección."
     }
   ]
 }
