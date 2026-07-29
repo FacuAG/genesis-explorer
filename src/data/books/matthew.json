@@ -1037,8 +1037,157 @@
       "biblical_importance": "Escenario de la muerte expiatoria del Lamb de Dios por los pecados del mundo (Mateo 27:33-50)."
     }
   ],
-  "covenants": [],
-  "messianic_promises": [],
+  "covenants": [
+    {
+      "id": "new_covenant",
+      "name": "El Nuevo Pacto en la Sangre de Jesucristo",
+      "year_am": 4033,
+      "bc_ad_date": "33 d.C.",
+      "mediator": "Jesucristo",
+      "parties": "Dios Padre, Jesucristo y todos los creyentes redimidos de todas las naciones",
+      "scriptural_reference": "Mateo 26:26-28, Jeremías 31:31-34",
+      "key_verse": {
+        "reference": "Mateo 26:28",
+        "text": "Porque esto es mi sangre del nuevo pacto, la cual es derramada por muchos para remisión de los pecados."
+      },
+      "summary": "Pacto eterno instituido por el Señor durante la Última Cena, ratificado con la sangre del Hijo de Dios derramada en la cruz para la remisión incondicional de los pecados.",
+      "theological_significance": "Sustituye la sombra del antiguo sistema levítico por el sacrificio vicario perfecto y definitivo de Cristo, otorgando el perdón absoluto y el acceso directo a la presencia de Dios."
+    }
+  ],
+  "messianic_promises": [
+    {
+      "id": "prophecy_virgin_birth",
+      "title": "La Concepción Virginal de Emanuel",
+      "ot_prophecy_ref": "Isaías 7:14",
+      "nt_fulfillment_ref": "Mateo 1:22-23",
+      "fulfillment_verse": {
+        "reference": "Mateo 1:23",
+        "text": "He aquí la virgen concebirá y parirá un hijo, Y llamarás su nombre Emmanuel, que declarado, es: Con nosotros Dios."
+      },
+      "summary": "Isaías profetizó que una virgen concebiría y daría a luz un hijo llamado Emanuel; Mateo demuestra su cumplimiento milagroso en María."
+    },
+    {
+      "id": "prophecy_ruler_bethlehem",
+      "title": "El Nacimiento del Gobernante en Belén",
+      "ot_prophecy_ref": "Miqueas 5:2",
+      "nt_fulfillment_ref": "Mateo 2:5-6",
+      "fulfillment_verse": {
+        "reference": "Mateo 2:6",
+        "text": "Y tú, Bethlehem, de tierra de Judá, No eres muy pequeña entre los príncipes de Judá; Porque de ti saldrá un guiador, Que apacentará á mi pueblo Israel."
+      },
+      "summary": "Miqueas anunció que de Belén de Efrata saldría el Guiador de Israel; Mateo confirma que Jesús nació allí."
+    },
+    {
+      "id": "prophecy_called_out_of_egypt",
+      "title": "El Llamado del Hijo fuera de Egipto",
+      "ot_prophecy_ref": "Oseas 11:1",
+      "nt_fulfillment_ref": "Mateo 2:14-15",
+      "fulfillment_verse": {
+        "reference": "Mateo 2:15",
+        "text": "Y estuvo allá hasta la muerte de Herodes: para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: De Egipto llamé á mi Hijo."
+      },
+      "summary": "Oseas escribió 'De Egipto llamé a mi hijo'; Mateo demuestra la preservación providencial del niño Jesús en Egipto."
+    },
+    {
+      "id": "prophecy_ramah_weeping",
+      "title": "El Llanto en Ramá por los Inocentes",
+      "ot_prophecy_ref": "Jeremías 31:15",
+      "nt_fulfillment_ref": "Mateo 2:17-18",
+      "fulfillment_verse": {
+        "reference": "Mateo 2:18",
+        "text": "Voz fué oída en Ramá, Grande lamentación, lloro y gemido: Rachêl que llora sus hijos, Y no quiso ser consolada, porque perecieron."
+      },
+      "summary": "Jeremías profetizó el lamento de Raquel; Mateo registra el cumplimiento amargo tras la matanza decretada por Herodes."
+    },
+    {
+      "id": "prophecy_called_nazarene",
+      "title": "La Profecía del Nazareno (El Renuevo)",
+      "ot_prophecy_ref": "Isaías 11:1 / Netzer",
+      "nt_fulfillment_ref": "Mateo 2:23",
+      "fulfillment_verse": {
+        "reference": "Mateo 2:23",
+        "text": "Y vino, y habitó en la ciudad que se llama Nazaret: para que se cumpliese lo que fué dicho por los profetas, que había de ser llamado Nazareno."
+      },
+      "summary": "Los profetas anunciaron que el Mesías sería llamado Nazareno (de la raíz hebrea Netzer, el Renuevo de Isaías)."
+    },
+    {
+      "id": "prophecy_voice_in_wilderness",
+      "title": "La Voz del Precursor en el Desierto",
+      "ot_prophecy_ref": "Isaías 40:3",
+      "nt_fulfillment_ref": "Mateo 3:3",
+      "fulfillment_verse": {
+        "reference": "Mateo 3:3",
+        "text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas."
+      },
+      "summary": "Isaías profetizó una voz clamando en el desierto para preparar el camino del Señor; Mateo señala a Juan el Bautista."
+    },
+    {
+      "id": "prophecy_light_to_zebulun",
+      "title": "Luz Gloriosa en Zabulón y Neftalí",
+      "ot_prophecy_ref": "Isaías 9:1-2",
+      "nt_fulfillment_ref": "Mateo 4:14-16",
+      "fulfillment_verse": {
+        "reference": "Mateo 4:16",
+        "text": "El pueblo asentado en tinieblas, Vió gran luz; Y á los sentados en región y sombra de muerte, Luz les esclareció."
+      },
+      "summary": "Isaías anunció que la tierra de Zabulón y Neftalí vería gran luz; Mateo demuestra que Jesús estableció allí su ministerio en Capernaúm."
+    },
+    {
+      "id": "prophecy_borne_our_infirmities",
+      "title": "El Siervo que Tomó Nuestras Enfermedades",
+      "ot_prophecy_ref": "Isaías 53:4",
+      "nt_fulfillment_ref": "Mateo 8:16-17",
+      "fulfillment_verse": {
+        "reference": "Mateo 8:17",
+        "text": "Para que se cumpliese lo que fué dicho por el profeta Isaías, que dijo: El mismo tomó nuestras enfermedades, y llevó nuestras dolencias."
+      },
+      "summary": "Isaías profezó que el Siervo llevaría nuestras dolencias; Mateo registra la sanidad masiva de enfermos como su cumplimiento."
+    },
+    {
+      "id": "prophecy_gentiles_hope",
+      "title": "El Siervo Escogido Esperanza de los Gentiles",
+      "ot_prophecy_ref": "Isaías 42:1-4",
+      "nt_fulfillment_ref": "Mateo 12:17-21",
+      "fulfillment_verse": {
+        "reference": "Mateo 12:21",
+        "text": "Y en su nombre esperarán los Gentiles."
+      },
+      "summary": "Isaías anunció al Siervo manso en quien los gentiles esperarían; Mateo demuestra la humildad y compasión de Cristo."
+    },
+    {
+      "id": "prophecy_parables_speaking",
+      "title": "Enseñanzas Mesiánicas mediante Parábolas",
+      "ot_prophecy_ref": "Salmo 78:2",
+      "nt_fulfillment_ref": "Mateo 13:34-35",
+      "fulfillment_verse": {
+        "reference": "Mateo 13:35",
+        "text": "Para que se cumpliese lo que fué dicho por el profeta, que dijo: Abriré en parábolas mi boca; Rebosaré cosas escondidas desde la fundación del mundo."
+      },
+      "summary": "El salmista anunció 'Abriré en parábolas mi boca'; Mateo demuestra cómo Jesús reveló los misterios escondidos desde la fundación del mundo."
+    },
+    {
+      "id": "prophecy_king_on_donkey",
+      "title": "La Entrada del Rey Manso sobre un Asno",
+      "ot_prophecy_ref": "Zacarías 9:9",
+      "nt_fulfillment_ref": "Mateo 21:4-5",
+      "fulfillment_verse": {
+        "reference": "Mateo 21:5",
+        "text": "Decid á la hija de Sión: He aquí, tu Rey viene á ti, Manso, y sentado sobre una asna, Y sobre un pollino, hijo de animal de yugo."
+      },
+      "summary": "Zacarías profetizó la llegada del Rey manso montado en un pollino; Mateo muestra su cumplimiento literal en la Entrada Triunfal."
+    },
+    {
+      "id": "prophecy_thirty_pieces_silver",
+      "title": "Las Treinta Piezas de Plata y el Campo del Alfarero",
+      "ot_prophecy_ref": "Zacarías 11:12-13 / Jeremías",
+      "nt_fulfillment_ref": "Mateo 27:9-10",
+      "fulfillment_verse": {
+        "reference": "Mateo 27:9",
+        "text": "Entonces se cumplió lo que fué dicho por el profeta Jeremías, que dijo: Y tomaron las treinta piezas de plata, precio del apreciado, que fué apreciado por los hijos de Israel;"
+      },
+      "summary": "Profecía sobre el precio en que fue tasado el Señor y la compra del campo del alfarero tras la traición de Judas Iscariote."
+    }
+  ],
   "themes": [],
   "questions": [],
   "chapters_map": [],
