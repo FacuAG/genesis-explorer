@@ -6286,7 +6286,9 @@
           "note": "Adán convivió 56 años con Lamec (padre de Noé), garantizando la continuidad pedagógica de la verdad divina."
         }
       ],
-      "generation_from_adam": 1
+      "generation_from_adam": 1,
+      "generation": 1,
+      "is_messianic_line": true
     },
     {
       "id": "eve",
@@ -6619,7 +6621,9 @@
           "note": "Set convivió 355 años con Matusalén, transmitiendo la revelación sin fisuras."
         }
       ],
-      "generation_from_adam": 2
+      "generation_from_adam": 2,
+      "generation": 2,
+      "is_messianic_line": true
     },
     {
       "id": "enoch",
@@ -6702,7 +6706,9 @@
           "note": "Enoc instruyó a su hijo Matusalén durante 300 años de caminata divina antes de ser traspuesto."
         }
       ],
-      "generation_from_adam": 7
+      "generation_from_adam": 7,
+      "generation": 7,
+      "is_messianic_line": true
     },
     {
       "id": "methuselah",
@@ -6785,7 +6791,9 @@
           "note": "Matusalén convivió 600 años con su nieto Noé, ayudando en la edificación del arca y la predicación de justicia."
         }
       ],
-      "generation_from_adam": 8
+      "generation_from_adam": 8,
+      "generation": 8,
+      "is_messianic_line": true
     },
     {
       "id": "noah",
@@ -6901,7 +6909,9 @@
           "note": "Noé convivió 58 años con Abraham (nacido en AM 1948), transmitiéndole viva la historia del Diluvio y la Creación."
         }
       ],
-      "generation_from_adam": 10
+      "generation_from_adam": 10,
+      "generation": 10,
+      "is_messianic_line": true
     },
     {
       "id": "shem",
@@ -7002,7 +7012,9 @@
           "note": "Sem convivió 50 años con Jacob (nacido en AM 2108), conectando cuatro épocas históricas sin mediadores."
         }
       ],
-      "generation_from_adam": 11
+      "generation_from_adam": 11,
+      "generation": 11,
+      "is_messianic_line": true
     },
     {
       "id": "abraham",
@@ -7122,7 +7134,9 @@
           "note": "Abraham convivió 15 años con su nieto Jacob, transmitiéndole la bendición del pacto."
         }
       ],
-      "generation_from_adam": 20
+      "generation_from_adam": 20,
+      "generation": 20,
+      "is_messianic_line": true
     },
     {
       "id": "sarah",
@@ -7609,7 +7623,9 @@
           "note": "Isaac convivió 120 años con su hijo Jacob hasta poco antes de que la familia descendiera a Egipto."
         }
       ],
-      "generation_from_adam": 21
+      "generation_from_adam": 21,
+      "generation": 21,
+      "is_messianic_line": true
     },
     {
       "id": "rebekah",
@@ -7911,7 +7927,9 @@
       "generation_from_adam": 22,
       "birth_am": 2168,
       "death_am": 2315,
-      "lifespan": 147
+      "lifespan": 147,
+      "generation": 22,
+      "is_messianic_line": true
     },
     {
       "id": "leah",
@@ -8111,7 +8129,7 @@
           "chapter": 50,
           "verse": 26
         },
-        "generation": 23
+        "generation": 59
       },
       "family": {
         "father": "jacob",
@@ -8199,7 +8217,9 @@
       "period_era": "post_genesis_gospels",
       "father_id": "jacob_matthan",
       "spouse_id": "mary",
-      "scriptural_reference": "Mateo 1:16-25, Lucas 1:27"
+      "scriptural_reference": "Mateo 1:16-25, Lucas 1:27",
+      "generation": 59,
+      "is_messianic_line": true
     },
     {
       "id": "lamech_cainite",
@@ -8335,7 +8355,9 @@
           "note": "Lamec convivió 56 años con Adán en el inicio de su vida."
         }
       ],
-      "generation_from_adam": 9
+      "generation_from_adam": 9,
+      "generation": 9,
+      "is_messianic_line": true
     },
     {
       "id": "terah",
@@ -8408,7 +8430,9 @@
           "note": "Taré convivió toda su vida (205 años) con el gran patriarca Sem."
         }
       ],
-      "generation_from_adam": 19
+      "generation_from_adam": 19,
+      "generation": 19,
+      "is_messianic_line": true
     },
     {
       "id": "melchizedek",
@@ -9107,7 +9131,9 @@
         "Apocalipsis 5:5"
       ],
       "notable_overlaps": [],
-      "generation_from_adam": 23
+      "generation_from_adam": 23,
+      "generation": 23,
+      "is_messianic_line": true
     },
     {
       "id": "perez",
@@ -9124,7 +9150,9 @@
         "reference": "Mateo 1:3",
         "text": "Judá engendró de Tamar a Fares y a Zara, Fares a Esrom, y Esrom a Aram."
       },
-      "biography": "Hijo de Judá y Tamar. Su nacimiento marcó la brecha soberana por la cual continuaría la simiente mesiánica de Judá hasta David y Jesucristo."
+      "biography": "Hijo de Judá y Tamar. Su nacimiento marcó la brecha soberana por la cual continuaría la simiente mesiánica de Judá hasta David y Jesucristo.",
+      "generation": 24,
+      "is_messianic_line": true
     },
     {
       "id": "hezron",
@@ -9139,7 +9167,9 @@
         "reference": "Rut 4:18",
         "text": "Estas son las generaciones de Fares: Fares engendró a Esrom."
       },
-      "biography": "Hijo de Fares y nieto de Judá. Descendió a Egipto con la familia de Jacob y fue patriarca de la tribu de Judá."
+      "biography": "Hijo de Fares y nieto de Judá. Descendió a Egipto con la familia de Jacob y fue patriarca de la tribu de Judá.",
+      "generation": 25,
+      "is_messianic_line": true
     },
     {
       "id": "ram",
@@ -9154,7 +9184,9 @@
         "reference": "Mateo 1:4",
         "text": "Aram engendró a Aminadab, Aminadab a Naasón, y Naasón a Salmón."
       },
-      "biography": "Hijo de Esrom. Preservó la línea patriarcal durante los años de permanencia de Israel en Egipto."
+      "biography": "Hijo de Esrom. Preservó la línea patriarcal durante los años de permanencia de Israel en Egipto.",
+      "generation": 26,
+      "is_messianic_line": true
     },
     {
       "id": "amminadab",
@@ -9169,7 +9201,9 @@
         "reference": "Éxodo 6:23",
         "text": "Y tomó Aarón por mujer a Elisabet hija de Aminadab, hermana de Naasón."
       },
-      "biography": "Padre de Naasón y suegro del Sumo Sacerdote Aarón. Su familia unió la línea sacerdotal con la línea regia de Judá."
+      "biography": "Padre de Naasón y suegro del Sumo Sacerdote Aarón. Su familia unió la línea sacerdotal con la línea regia de Judá.",
+      "generation": 27,
+      "is_messianic_line": true
     },
     {
       "id": "nahshon",
@@ -9184,7 +9218,9 @@
         "reference": "Números 1:7",
         "text": "De Judá, Naasón hijo de Aminadab, príncipe de los hijos de Judá."
       },
-      "biography": "Príncipe y líder principal de la tribu de Judá durante la travesía del desierto tras el Éxodo de Egipto."
+      "biography": "Príncipe y líder principal de la tribu de Judá durante la travesía del desierto tras el Éxodo de Egipto.",
+      "generation": 28,
+      "is_messianic_line": true
     },
     {
       "id": "salmon",
@@ -9200,7 +9236,9 @@
         "reference": "Mateo 1:5",
         "text": "Salmón engendró de Rahab a Booz, Booz engendró de Rut a Obed, y Obed a Isaí."
       },
-      "biography": "Entró a la Tierra Prometida con Josué y tomó por esposa a Rahab de Jericó, incorporando la fe gentil a la genealogía del Mesías."
+      "biography": "Entró a la Tierra Prometida con Josué y tomó por esposa a Rahab de Jericó, incorporando la fe gentil a la genealogía del Mesías.",
+      "generation": 29,
+      "is_messianic_line": true
     },
     {
       "id": "boaz",
@@ -9216,7 +9254,9 @@
         "reference": "Rut 4:21",
         "text": "Booz engendró a Obed, y Obed engendró a Isaí."
       },
-      "biography": "El pariente redentor de Belén de Judá que rescató a la moabita Rut. Es el prototipo del Mesías como Redentor de su pueblo."
+      "biography": "El pariente redentor de Belén de Judá que rescató a la moabita Rut. Es el prototipo del Mesías como Redentor de su pueblo.",
+      "generation": 30,
+      "is_messianic_line": true
     },
     {
       "id": "obed",
@@ -9232,7 +9272,9 @@
         "reference": "Rut 4:17",
         "text": "Y le dieron nombre las vecinas... y le llamaron Obed. Este es padre de Isaí, padre de David."
       },
-      "biography": "Hijo de Booz y Rut, criado en Belén. Fue el abuelo del Rey David."
+      "biography": "Hijo de Booz y Rut, criado en Belén. Fue el abuelo del Rey David.",
+      "generation": 31,
+      "is_messianic_line": true
     },
     {
       "id": "jesse",
@@ -9247,7 +9289,9 @@
         "reference": "Isaías 11:1",
         "text": "Saldrá una vara del tronco de Isaí, y un vástago retoñará de sus raíces."
       },
-      "biography": "Belenita de Judá, padre de ocho hijos entre ellos el Rey David. La profecía mesiánica de Isaías lo destaca como la raíz de Cristo."
+      "biography": "Belenita de Judá, padre de ocho hijos entre ellos el Rey David. La profecía mesiánica de Isaías lo destaca como la raíz de Cristo.",
+      "generation": 32,
+      "is_messianic_line": true
     },
     {
       "id": "david",
@@ -9262,7 +9306,9 @@
         "reference": "Mateo 1:6",
         "text": "Isaí engendró al rey David, y el rey David engendró a Salomón de la que fue mujer de Urías."
       },
-      "biography": "El gran rey de Israel según el corazón de Dios. Recibió el Pacto Davidico incondicional de que su trono sería eterno mediante Jesucristo."
+      "biography": "El gran rey de Israel según el corazón de Dios. Recibió el Pacto Davidico incondicional de que su trono sería eterno mediante Jesucristo.",
+      "generation": 33,
+      "is_messianic_line": true
     },
     {
       "id": "solomon",
@@ -9277,7 +9323,9 @@
         "reference": "1 Reyes 3:12",
         "text": "He aquí que te he dado corazón sabio y entendido."
       },
-      "biography": "Hijo de David y Betsabé. Edificó el Primer Templo de Jerusalén y gobernó sobre el Reino Unido de Israel en su mayor gloria."
+      "biography": "Hijo de David y Betsabé. Edificó el Primer Templo de Jerusalén y gobernó sobre el Reino Unido de Israel en su mayor gloria.",
+      "generation": 34,
+      "is_messianic_line": true
     },
     {
       "id": "rehoboam",
@@ -9292,7 +9340,9 @@
         "reference": "Mateo 1:7",
         "text": "Salomón engendró a Roboam, Roboam a Abías, y Abías a Asa."
       },
-      "biography": "Hijo de Salomón. Bajo su reinado el reino se dividió en dos: Judá en el sur e Israel en el norte."
+      "biography": "Hijo de Salomón. Bajo su reinado el reino se dividió en dos: Judá en el sur e Israel en el norte.",
+      "generation": 35,
+      "is_messianic_line": true
     },
     {
       "id": "abijah",
@@ -9307,7 +9357,9 @@
         "reference": "2 Crónicas 13:18",
         "text": "Prevalecieron los hijos de Judá, porque se apoyaban en Jehová el Dios de sus padres."
       },
-      "biography": "Rey de Judá que reinó en Jerusalén y confió en Dios durante la guerra contra Jeroboam de Israel."
+      "biography": "Rey de Judá que reinó en Jerusalén y confió en Dios durante la guerra contra Jeroboam de Israel.",
+      "generation": 36,
+      "is_messianic_line": true
     },
     {
       "id": "asa",
@@ -9322,7 +9374,9 @@
         "reference": "1 Reyes 15:11",
         "text": "Asa hizo lo recto ante los ojos de Jehová, como David su padre."
       },
-      "biography": "Rey piadoso de Judá que quitó los ídolos de la tierra y restauró el culto a Jehová en Jerusalén."
+      "biography": "Rey piadoso de Judá que quitó los ídolos de la tierra y restauró el culto a Jehová en Jerusalén.",
+      "generation": 37,
+      "is_messianic_line": true
     },
     {
       "id": "jehoshaphat",
@@ -9337,7 +9391,9 @@
         "reference": "Mateo 1:8",
         "text": "Asa engendró a Josafat, Josafat a Joram, y Joram a Uzías."
       },
-      "biography": "Rey piadoso de Judá que envió maestros con el libro de la Ley por todas las ciudades para instruir al pueblo."
+      "biography": "Rey piadoso de Judá que envió maestros con el libro de la Ley por todas las ciudades para instruir al pueblo.",
+      "generation": 38,
+      "is_messianic_line": true
     },
     {
       "id": "jehoram",
@@ -9352,7 +9408,9 @@
         "reference": "2 Crónicas 21:7",
         "text": "Mas Jehová no quiso destruir la casa de David, respecto del pacto que había hecho con David."
       },
-      "biography": "Rey de Judá. A pesar de sus desviaciones, Dios preservó la lámpara de David en la genealogía mesiánica."
+      "biography": "Rey de Judá. A pesar de sus desviaciones, Dios preservó la lámpara de David en la genealogía mesiánica.",
+      "generation": 39,
+      "is_messianic_line": true
     },
     {
       "id": "uzziah",
@@ -9367,7 +9425,9 @@
         "reference": "Mateo 1:9",
         "text": "Uzías engendró a Jotam, Jotam a Acaz, y Acaz a Ezequías."
       },
-      "biography": "Rey próspero de Judá que gobernó durante 52 años en Jerusalén, contemporáneo del profeta Isaías."
+      "biography": "Rey próspero de Judá que gobernó durante 52 años en Jerusalén, contemporáneo del profeta Isaías.",
+      "generation": 40,
+      "is_messianic_line": true
     },
     {
       "id": "jotham",
@@ -9382,7 +9442,9 @@
         "reference": "2 Crónicas 27:6",
         "text": "Así que Jotam se hizo fuerte, porque preparó sus caminos delante de Jehová su Dios."
       },
-      "biography": "Rey piadoso de Judá que fortificó el Templo y prevaleció sobre sus enemigos."
+      "biography": "Rey piadoso de Judá que fortificó el Templo y prevaleció sobre sus enemigos.",
+      "generation": 41,
+      "is_messianic_line": true
     },
     {
       "id": "ahaz",
@@ -9397,7 +9459,9 @@
         "reference": "Isaías 7:14",
         "text": "Por tanto, el Señor mismo os dará señal: He aquí que la virgen concebirá, y dará a luz un hijo, y llamará su nombre Emanuel."
       },
-      "biography": "Rey de Judá durante cuyo reinado Isaías pronunció la profecía inmortal del nacimiento virginal de Emanuel."
+      "biography": "Rey de Judá durante cuyo reinado Isaías pronunció la profecía inmortal del nacimiento virginal de Emanuel.",
+      "generation": 42,
+      "is_messianic_line": true
     },
     {
       "id": "hezekiah",
@@ -9412,7 +9476,9 @@
         "reference": "2 Reyes 18:5",
         "text": "En Jehová Dios de Israel puso su esperanza; ni después ni antes de él hubo otro como él entre todos los reyes de Judá."
       },
-      "biography": "Uno de los más grandes reyes reformadores de Judá. Oró con fe y Dios liberó a Jerusalén del ejército asirio de Senaquerib."
+      "biography": "Uno de los más grandes reyes reformadores de Judá. Oró con fe y Dios liberó a Jerusalén del ejército asirio de Senaquerib.",
+      "generation": 43,
+      "is_messianic_line": true
     },
     {
       "id": "manasseh",
@@ -9427,7 +9493,9 @@
         "reference": "2 Crónicas 33:13",
         "text": "Y habiendo orado a él, fue atendido... y reconoció Manasés que Jehová era Dios."
       },
-      "biography": "Rey de Judá. Tras ser llevado cautivo a Babilonia, se humilló profundamente, experimentando el perdón de Dios."
+      "biography": "Rey de Judá. Tras ser llevado cautivo a Babilonia, se humilló profundamente, experimentando el perdón de Dios.",
+      "generation": 44,
+      "is_messianic_line": true
     },
     {
       "id": "amon",
@@ -9442,7 +9510,9 @@
         "reference": "Mateo 1:10",
         "text": "Manasés engendró a Amón, y Amón a Josías."
       },
-      "biography": "Rey de Judá, hijo de Manasés y padre del reformador Josías."
+      "biography": "Rey de Judá, hijo de Manasés y padre del reformador Josías.",
+      "generation": 45,
+      "is_messianic_line": true
     },
     {
       "id": "josiah",
@@ -9457,7 +9527,9 @@
         "reference": "2 Reyes 23:25",
         "text": "No hubo otro rey antes de él, que se convirtiese a Jehová de todo su corazón, de toda su alma y de todas sus fuerzas."
       },
-      "biography": "El gran rey niño de Judá que descubrió el Libro de la Ley en el Templo y promovió el mayor avivamiento espiritual."
+      "biography": "El gran rey niño de Judá que descubrió el Libro de la Ley en el Templo y promovió el mayor avivamiento espiritual.",
+      "generation": 46,
+      "is_messianic_line": true
     },
     {
       "id": "jeconiah",
@@ -9472,7 +9544,9 @@
         "reference": "Mateo 1:12",
         "text": "Después de la deportación a Babilonia, Jeconías engendró a Salatiel, y Salatiel a Zorobabel."
       },
-      "biography": "Último rey reinante de la línea real de David antes del Cautiverio Babilónico."
+      "biography": "Último rey reinante de la línea real de David antes del Cautiverio Babilónico.",
+      "generation": 47,
+      "is_messianic_line": true
     },
     {
       "id": "shealtiel",
@@ -9487,7 +9561,9 @@
         "reference": "Mateo 1:12",
         "text": "Jeconías engendró a Salatiel, y Salatiel a Zorobabel."
       },
-      "biography": "Líder judío en el Exilio Babilónico, padre de Zorobabel."
+      "biography": "Líder judío en el Exilio Babilónico, padre de Zorobabel.",
+      "generation": 48,
+      "is_messianic_line": true
     },
     {
       "id": "zerubbabel",
@@ -9502,7 +9578,9 @@
         "reference": "Zacarías 4:6",
         "text": "No con ejército, ni con fuerza, sino con mi Espíritu, ha dicho Jehová de los ejércitos."
       },
-      "biography": "Gobernador judío que lideró el primer retorno del cautiverio babilónico y reedificó el Segundo Templo de Jerusalén."
+      "biography": "Gobernador judío que lideró el primer retorno del cautiverio babilónico y reedificó el Segundo Templo de Jerusalén.",
+      "generation": 49,
+      "is_messianic_line": true
     },
     {
       "id": "abiud",
@@ -9517,7 +9595,9 @@
         "reference": "Mateo 1:13",
         "text": "Zorobabel engendró a Abiud, Abiud a Eliacim, y Eliacim a Azor."
       },
-      "biography": "Hijo de Zorobabel, preservó la descendencia davídica durante el período intertestamentario."
+      "biography": "Hijo de Zorobabel, preservó la descendencia davídica durante el período intertestamentario.",
+      "generation": 50,
+      "is_messianic_line": true
     },
     {
       "id": "eliakim",
@@ -9532,7 +9612,9 @@
         "reference": "Mateo 1:13",
         "text": "Abiud engendró a Eliacim, y Eliacim a Azor."
       },
-      "biography": "Descendiente de David en la línea que conduce al Salvador."
+      "biography": "Descendiente de David en la línea que conduce al Salvador.",
+      "generation": 51,
+      "is_messianic_line": true
     },
     {
       "id": "azor",
@@ -9547,7 +9629,9 @@
         "reference": "Mateo 1:14",
         "text": "Eliacim engendró a Azor, Azor a Sadoc, y Sadoc a Aquim."
       },
-      "biography": "Patriarca intertestamentario de la tribu de Judá."
+      "biography": "Patriarca intertestamentario de la tribu de Judá.",
+      "generation": 52,
+      "is_messianic_line": true
     },
     {
       "id": "zadok",
@@ -9562,7 +9646,9 @@
         "reference": "Mateo 1:14",
         "text": "Azor engendró a Sadoc, y Sadoc a Aquim."
       },
-      "biography": "Descendiente regio de David en el período intertestamentario."
+      "biography": "Descendiente regio de David en el período intertestamentario.",
+      "generation": 53,
+      "is_messianic_line": true
     },
     {
       "id": "achim",
@@ -9577,7 +9663,9 @@
         "reference": "Mateo 1:14",
         "text": "Sadoc engendró a Aquim, y Aquim a Eliud."
       },
-      "biography": "Antepasado de José en el Evangelio según San Mateo."
+      "biography": "Antepasado de José en el Evangelio según San Mateo.",
+      "generation": 54,
+      "is_messianic_line": true
     },
     {
       "id": "eliud",
@@ -9592,7 +9680,9 @@
         "reference": "Mateo 1:15",
         "text": "Aquim engendró a Eliud, Eliud a Eleazar, y Eleazar a Matán."
       },
-      "biography": "Patriarca judaico previo al advenimiento del Mesías."
+      "biography": "Patriarca judaico previo al advenimiento del Mesías.",
+      "generation": 55,
+      "is_messianic_line": true
     },
     {
       "id": "eleazar",
@@ -9607,7 +9697,9 @@
         "reference": "Mateo 1:15",
         "text": "Eliud engendró a Eleazar, y Eleazar a Matán."
       },
-      "biography": "Bisabuelo de José según el registro de Mateo."
+      "biography": "Bisabuelo de José según el registro de Mateo.",
+      "generation": 56,
+      "is_messianic_line": true
     },
     {
       "id": "matthan",
@@ -9622,7 +9714,9 @@
         "reference": "Mateo 1:15",
         "text": "Eleazar engendró a Matán, y Matán a Jacob."
       },
-      "biography": "Abuelo de José en la genealogía real de Belén."
+      "biography": "Abuelo de José en la genealogía real de Belén.",
+      "generation": 57,
+      "is_messianic_line": true
     },
     {
       "id": "jacob_matthan",
@@ -9637,7 +9731,9 @@
         "reference": "Mateo 1:16",
         "text": "Y Jacob engendró a José, marido de María, de la cual nació Jesús, llamado el Cristo."
       },
-      "biography": "Padre biológico de José en Belén de Judea."
+      "biography": "Padre biológico de José en Belén de Judea.",
+      "generation": 58,
+      "is_messianic_line": true
     },
     {
       "id": "mary",
@@ -9652,7 +9748,9 @@
         "reference": "Lucas 1:38",
         "text": "Entonces María dijo: He aquí la sierva del Señor; hágase conmigo conforme a tu palabra."
       },
-      "biography": "Virgen bienaventurada de la estirpe de David. Concibió al Hijo de Dios por obra del Espíritu Santo (cumplimiento de Isaías 7:14)."
+      "biography": "Virgen bienaventurada de la estirpe de David. Concibió al Hijo de Dios por obra del Espíritu Santo (cumplimiento de Isaías 7:14).",
+      "generation": 60,
+      "is_messianic_line": true
     },
     {
       "id": "jesus",
@@ -9668,7 +9766,9 @@
         "reference": "Mateo 1:21",
         "text": "Y dará a luz un hijo, y llamarás su nombre JESÚS, porque él salvará a su pueblo de sus pecados."
       },
-      "biography": "El Hijo Eterno de Dios hecho carne. El Mesías prometido desde el Protoevangelio de Génesis 3:15, Salvador del mundo y Señor de señores."
+      "biography": "El Hijo Eterno de Dios hecho carne. El Mesías prometido desde el Protoevangelio de Génesis 3:15, Salvador del mundo y Señor de señores.",
+      "generation": 61,
+      "is_messianic_line": true
     }
   ],
   "relationships": [],

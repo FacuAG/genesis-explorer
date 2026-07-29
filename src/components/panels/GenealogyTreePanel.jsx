@@ -20,13 +20,13 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
 
   // Lista de antepasados directos de Jesús (Línea Mesiánica) con IDs exactos del dataset
   const messianicIds = useMemo(() => new Set([
-    'adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech', 'noah',
+    'adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech_sethite', 'lamech', 'noah',
     'shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah',
     'abraham', 'isaac', 'jacob', 'judah', 'pharez', 'perez', 'hezron', 'ram', 'amminadab', 'nahshon', 'salmon',
     'boaz', 'obed', 'jesse', 'david', 'solomon', 'rehoboam', 'abijah', 'asa', 'jehoshaphat', 'jehoram',
     'uzziah', 'jotham', 'ahaz', 'hezekiah', 'manasseh', 'amon', 'josiah', 'jeconiah', 'shealtiel',
     'zerubbabel', 'abiud', 'eliakim', 'azor', 'zadok', 'achim', 'eliud', 'eleazar', 'matthan',
-    'jacob_matthan', 'joseph', 'jesus'
+    'jacob_matthan', 'joseph', 'mary', 'jesus'
   ]), []);
 
   // Helper para extraer las fechas Anno Mundi de cualquier personaje sin undefined
