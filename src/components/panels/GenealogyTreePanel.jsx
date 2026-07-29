@@ -137,7 +137,7 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
 
   // Lista de Personajes para la Gráfica de Convivencia según Era Bíblica
   const { overlapPeopleList, chartMin, chartMax, axisTicks } = useMemo(() => {
-    let ids = [];
+    let list = [];
     let min = 0;
     let max = 4033;
     let ticks = [
@@ -150,7 +150,6 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     ];
 
     if (overlapEraFilter === 'genesis') {
-      ids = ['adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech_sethite', 'noah', 'shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah', 'abraham', 'isaac', 'jacob', 'joseph'];
       min = 0;
       max = 2369;
       ticks = [
@@ -161,8 +160,11 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
         { label: 'AM 2008 (Abraham)', pos: 84 },
         { label: 'AM 2369 (José)', pos: 100 }
       ];
+      list = people.filter(p => {
+        const genNum = p.generation_from_adam || p.generation || 1;
+        return genNum <= 23;
+      });
     } else if (overlapEraFilter === 'kings') {
-      ids = ['boaz', 'obed', 'jesse', 'david', 'solomon', 'rehoboam', 'abijah', 'asa', 'jehoshaphat', 'jehoram', 'uzziah', 'jotham', 'ahaz', 'hezekiah', 'manasseh', 'amon', 'josiah', 'jeconiah', 'shealtiel', 'zerubbabel'];
       min = 2500;
       max = 3550;
       ticks = [
@@ -173,8 +175,11 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
         { label: 'AM 3252 (Ezequías)', pos: 71 },
         { label: 'AM 3515 (Zorobabel)', pos: 96 }
       ];
+      list = people.filter(p => {
+        const genNum = p.generation_from_adam || p.generation || 1;
+        return genNum >= 24 && genNum <= 49;
+      });
     } else if (overlapEraFilter === 'gospels') {
-      ids = ['matthan', 'jacob_matthan', 'joseph', 'mary', 'jesus'];
       min = 3840;
       max = 4055;
       ticks = [
@@ -184,14 +189,24 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
         { label: 'AM 4000 (Nacimiento de Jesús)', pos: 74 },
         { label: 'AM 4033 (Resurrección)', pos: 90 }
       ];
+      list = people.filter(p => {
+        const genNum = p.generation_from_adam || p.generation || 1;
+        return genNum >= 50;
+      });
     } else {
-      // 'all'
-      ids = ['adam', 'seth', 'enoch', 'methuselah', 'noah', 'shem', 'eber', 'terah', 'abraham', 'isaac', 'jacob', 'boaz', 'jesse', 'david', 'solomon', 'hezekiah', 'josiah', 'zerubbabel', 'joseph', 'mary', 'jesus'];
+      // 'all' -> Mostrar a los 60 antepasados directos de la Línea Mesiánica de Adán a Jesús
+      list = people.filter(p => messianicIds.has(p.id));
     }
 
-    const list = ids.map(id => peopleMap.get(id)).filter(Boolean);
+    // Ordenar de forma estrictamente ascendente por generación
+    list = list.slice().sort((a, b) => {
+      const gA = a.generation_from_adam || a.generation || 1;
+      const gB = b.generation_from_adam || b.generation || 1;
+      return gA - gB;
+    });
+
     return { overlapPeopleList: list, chartMin: min, chartMax: max, axisTicks: ticks };
-  }, [overlapEraFilter, peopleMap]);
+  }, [overlapEraFilter, people, messianicIds]);
 
   // Cálculo matemático en tiempo real del Comparador Libre entre 2 personajes cualesquiera
   const customCompareResult = useMemo(() => {
