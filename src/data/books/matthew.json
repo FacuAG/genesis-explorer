@@ -45,7 +45,16 @@
       "color_bg": "#0c4a6e",
       "color_accent": "#38bdf8",
       "color_text": "#f0f9ff",
-      "narrative_block_ids": []
+      "narrative_block_ids": [
+        "nb_nativity_infancy",
+        "nb_preparation_baptism",
+        "nb_sermon_on_mount",
+        "nb_galilean_ministry_miracles",
+        "nb_parables_kingdom_opposition",
+        "nb_withdrawal_transfiguration_church",
+        "nb_judean_ministry_olivet",
+        "nb_passion_resurrection_commission"
+      ]
     }
   ],
   "dispensations": [
@@ -62,7 +71,337 @@
       "grace": "La salvación eterna gratuita ofrecida por la fe sola en la gracia de Dios."
     }
   ],
-  "narrative_blocks": [],
+  "narrative_blocks": [
+    {
+      "id": "nb_nativity_infancy",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 1,
+      "name": "El Nacimiento e Infancia del Rey Mesías",
+      "name_short": "Nacimiento e Infancia",
+      "chapters_start": 1,
+      "chapters_end": 2,
+      "am_start": 3996,
+      "am_end": 4002,
+      "icon": "👶",
+      "color_primary": "#1e3a8a",
+      "color_secondary": "#3b82f6",
+      "summary": "Demostración inerrante del linaje legal de Jesús desde Abraham y David mediante la genealogía patriarcal, su concepción virginal por el Espíritu Santo en María, la adoración de los sabios Magos de Oriente con sus tributos de oro, incienso y mirra, y la preservación providencial en Egipto huyendo del edicto sangriento de Herodes el Grande.",
+      "theological_significance": "Establece las credenciales mesiánicas divinas y regias de Cristo como Emanuel (Dios con nosotros) y cumplimiento de las profecías de Isaías, Miqueas y Oseas.",
+      "messianic_connection": "Jesús es el Rey victorioso que nace en Belén y es llamado fuera de Egipto como el Hijo amado de Dios.",
+      "key_people_ids": [
+        "jesus",
+        "mary",
+        "joseph",
+        "herod_the_great",
+        "abraham",
+        "david"
+      ],
+      "key_location_ids": [
+        "bethlehem_judea",
+        "nazareth",
+        "egypt"
+      ],
+      "key_covenant_ids": [
+        "new_covenant"
+      ],
+      "key_theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_son_of_david"
+      ],
+      "key_question_ids": [
+        "question_matthew_genealogy_purpose",
+        "question_virgin_birth_necessity"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_preparation_baptism",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 2,
+      "name": "La Preparación, Bautismo y Tentación del Mesías",
+      "name_short": "Bautismo y Desierto",
+      "chapters_start": 3,
+      "chapters_end": 4,
+      "am_start": 4030,
+      "am_end": 4030,
+      "icon": "🕊️",
+      "color_primary": "#0284c7",
+      "color_secondary": "#38bdf8",
+      "summary": "El ministerio del precursor Juan el Bautista clamando arrepentimiento en el desierto, el bautismo de Jesús en el río Jordán con la manifestación visible de la Santísima Trinidad, la victoria aplastante de Cristo sobre las tentaciones de Satanás tras 40 días de ayuno y el inicio de su predicación en Galilea con el llamamiento de los primeros apóstoles.",
+      "theological_significance": "Consagración pública de Cristo como el Hijo amado del Padre y triunfo del Postrer Adán victorioso sobre el diablo mediante la espada de la Palabra escrita.",
+      "messianic_connection": "Jesús vence al diablo en el desierto donde Israel falló y proclama la luz del evangelio en Zabulón y Neftalí.",
+      "key_people_ids": [
+        "jesus",
+        "john_the_baptist",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "key_location_ids": [
+        "jordan_river",
+        "judean_wilderness",
+        "capernaum",
+        "sea_of_galilee"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_messianic_authority"
+      ],
+      "key_question_ids": [
+        "question_kingdom_of_heaven_vs_god"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_sermon_on_mount",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 3,
+      "name": "El Manifiesto del Reino: El Sermón del Monte (Discurso 1)",
+      "name_short": "Sermón del Monte",
+      "chapters_start": 5,
+      "chapters_end": 7,
+      "am_start": 4030,
+      "am_end": 4030,
+      "icon": "🏔️",
+      "color_primary": "#d97706",
+      "color_secondary": "#f59e0b",
+      "summary": "El magno discurso ético y espiritual de Jesucristo en la montaña proclama las Bienaventuranzas, revela el carácter de los ciudadanos del Reino como sal y luz, expone la plenitud perfecta de la Ley divina trascendiendo la apariencia externa de los fariseos, e instruye sobre la oración sincera del Padre Nuestro y la edificación de la vida sobre la Roca.",
+      "theological_significance": "Cristo se revela como el Gran Legislador divino que interioriza la justicia de Dios en el corazón humano transformado por la gracia.",
+      "messianic_connection": "Jesús revela el propósito supremo y la intención espiritual perfecta de la Ley y los Profetas.",
+      "key_people_ids": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "key_location_ids": [
+        "mount_of_beatitudes"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_righteousness_heart",
+        "theme_prophetic_fulfillment"
+      ],
+      "key_question_ids": [
+        "question_fulfilled_law_meaning"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_galilean_ministry_miracles",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 4,
+      "name": "Ministerio en Galilea: Milagros y Misión Apostólica (Discurso 2)",
+      "name_short": "Milagros y Misión",
+      "chapters_start": 8,
+      "chapters_end": 10,
+      "am_start": 4031,
+      "am_end": 4031,
+      "icon": "⚡",
+      "color_primary": "#059669",
+      "color_secondary": "#10b981",
+      "summary": "Serie ininterrumpida de diez milagros mesiánicos que demuestran la autoridad de Cristo sobre lepra, parálisis, fiebres, tempestades del mar, demonios y muerte. Incluye el llamamiento del publicano Mateo y la elección e instrucción de los Doce Apóstoles para su envío misionero.",
+      "theological_significance": "Confirmación indiscutible de que el Reino de Dios ha llegado con poder, restaurando la creación destruida por la caída y comisionando a la Iglesia.",
+      "messianic_connection": "Cumplimiento directo de Isaías 53:4 ('Él mismo tomó nuestras enfermedades y llevó nuestras dolencias').",
+      "key_people_ids": [
+        "jesus",
+        "centurion_capernaum",
+        "matthew_apostle",
+        "jairus",
+        "woman_flux_blood",
+        "two_blind_men",
+        "leper_cleansed",
+        "paralyzed_man_capernaum"
+      ],
+      "key_location_ids": [
+        "capernaum",
+        "sea_of_galilee",
+        "country_of_gadarenes"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_messianic_authority",
+        "theme_discipleship_cost"
+      ],
+      "key_question_ids": [],
+      "event_ids": []
+    },
+    {
+      "id": "nb_parables_kingdom_opposition",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 5,
+      "name": "Oposición Mesiánica y Parábolas del Reino (Discurso 3)",
+      "name_short": "Parábolas del Reino",
+      "chapters_start": 11,
+      "chapters_end": 13,
+      "am_start": 4032,
+      "am_end": 4032,
+      "icon": "🌾",
+      "color_primary": "#7c3aed",
+      "color_secondary": "#8b5cf6",
+      "summary": "Creciente oposición de los líderes religiosos que atribuyen los milagros a Beelzebú, provocando el juicio de Cristo contra la blasfemia del Espíritu Santo y el llamado al descanso del alma. Jesús enseña desde la barca las 7 parábolas que revelan los misterios del crecimiento e inestimable valor del Reino.",
+      "theological_significance": "Exposición del rechazo judicial de la religión formal y la revelación soberana de los misterios del Reino a los sencillos.",
+      "messianic_connection": "Jesús enseña en parábolas cumpliendo el Salmo 78:2 y ofreciendo descanso al cansado.",
+      "key_people_ids": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "key_location_ids": [
+        "sea_of_galilee",
+        "capernaum"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_hypocrisy_judgment"
+      ],
+      "key_question_ids": [
+        "question_sign_of_jonah",
+        "question_unpardonable_sin"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_withdrawal_transfiguration_church",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 6,
+      "name": "Revelación de la Iglesia y la Transfiguración (Discurso 4)",
+      "name_short": "Transfiguración e Iglesia",
+      "chapters_start": 14,
+      "chapters_end": 18,
+      "am_start": 4032,
+      "am_end": 4032,
+      "icon": "✨",
+      "color_primary": "#c026d3",
+      "color_secondary": "#e879f9",
+      "summary": "Trágico martirio de Juan el Bautista, multiplicación milagrosa de los panes para 5.000 personas, caminata sobre las aguas, atención a la fe de la mujer cananea, la magna confesión de Pedro en Cesarea de Filipo prometiendo edificar la Iglesia, la Transfiguración gloriosa en el monte e instrucciones sobre la grandeza, humildad y perdón en la Iglesia.",
+      "theological_significance": "Revelación de la gloria divina del Hijo de Dios y el anuncio explícito de la edificación de la Iglesia universal sobre la roca de su deidad.",
+      "messianic_connection": "Jesús transfigurado resplandece en la majestad de su deidad respaldado por Moisés y Elías.",
+      "key_people_ids": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "syrophoenician_woman",
+        "herod_antipas",
+        "herodias",
+        "salome_dancer"
+      ],
+      "key_location_ids": [
+        "caesarea_philippi",
+        "mount_hermon",
+        "sea_of_galilee",
+        "tyre_and_sidon"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_discipleship_cost",
+        "theme_messianic_authority"
+      ],
+      "key_question_ids": [
+        "question_church_on_rock"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_judean_ministry_olivet",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 7,
+      "name": "Ministerio Final en Judea y Discurso del Olivar (Discurso 5)",
+      "name_short": "Judea y Fin de los Tiempos",
+      "chapters_start": 19,
+      "chapters_end": 25,
+      "am_start": 4033,
+      "am_end": 4033,
+      "icon": "🏛️",
+      "color_primary": "#b91c1c",
+      "color_secondary": "#ef4444",
+      "summary": "Viaje de Jesús hacia Jerusalén enseñando sobre el matrimonio indisoluble, el joven rico y los obreros de la viña. Entrada Triunfal en Jerusalén montado en un asno, purificación del Templo, duras denuncias en los 7 ayes contra los fariseos y el gran Discurso Escatológico en el Monte de los Olivos sobre la destrucción del Templo, las señales del fin y el Juicio Final.",
+      "theological_significance": "Presentación pública del Rey Mesías en Sion, juicio sobre el templo terrenal esterilizado y revelación de la consumación gloriosa de la historia.",
+      "messianic_connection": "Cumplimiento exacto de Zacarías 9:9 en la Entrada Triunfal y de la profecía del Rey y Juez celestial.",
+      "key_people_ids": [
+        "jesus",
+        "peter",
+        "rich_young_ruler",
+        "bartimaeus_blind"
+      ],
+      "key_location_ids": [
+        "jericho",
+        "bethphage_and_bethany",
+        "jerusalem",
+        "mount_of_olives"
+      ],
+      "key_covenant_ids": [],
+      "key_theme_ids": [
+        "theme_son_of_david",
+        "theme_hypocrisy_judgment"
+      ],
+      "key_question_ids": [
+        "question_olivet_discourse_interpretation"
+      ],
+      "event_ids": []
+    },
+    {
+      "id": "nb_passion_resurrection_commission",
+      "era_id": "era_gospels",
+      "dispensation_id": "disp_grace",
+      "order": 8,
+      "name": "La Pasión, Muerte Expiatoria, Resurrección y Gran Comisión",
+      "name_short": "Pasión y Resurrección",
+      "chapters_start": 26,
+      "chapters_end": 28,
+      "am_start": 4033,
+      "am_end": 4033,
+      "icon": "✝️",
+      "color_primary": "#431407",
+      "color_secondary": "#9a3412",
+      "summary": "Institución del Nuevo Pacto en la Santa Cena, agonía en Getsemaní, arresto a traición por Judas, juicios ante Caifás y Poncio Pilato, flagelación romana, crucifixión sustitutiva en el Gólgota con el rasgado sobrenatural del velo del Templo, sepultura por José de Arimatea, gloriosa Resurrección al tercer día y proclamación de la Gran Comisión Universal.",
+      "theological_significance": "El clímax supremo de la historia de la salvación: la victoria consumada de Jesucristo sobre el pecado, el infierno y la muerte, otorgando vida eterna a todos los creyentes.",
+      "messianic_connection": "El sacrificio expiatorio vicario perfecto del Cordero de Dios ratificando el Nuevo Pacto.",
+      "key_people_ids": [
+        "jesus",
+        "mary",
+        "joseph_of_arimathea",
+        "nicodemus",
+        "pilate",
+        "caiaphas",
+        "judas_iscariot",
+        "mary_magdalene",
+        "simon_of_cyrene",
+        "centurion_cross",
+        "barabbas"
+      ],
+      "key_location_ids": [
+        "gethsemane",
+        "jerusalem",
+        "golgotha",
+        "sea_of_galilee"
+      ],
+      "key_covenant_ids": [
+        "new_covenant"
+      ],
+      "key_theme_ids": [
+        "theme_atonement_redemption",
+        "theme_resurrection_victory",
+        "theme_great_commission_mission"
+      ],
+      "key_question_ids": [
+        "question_great_commission_scope",
+        "question_temple_veil_torn"
+      ],
+      "event_ids": []
+    }
+  ],
   "timeline_events": [],
   "people": [
     {
