@@ -191,6 +191,7 @@ export function App() {
               onSelectEvent={handleSelectEvent}
               onSelectPerson={handleSelectPerson}
               initialChapter={targetChapterNum}
+              activeBookId={activeBookId}
             />
           )}
 

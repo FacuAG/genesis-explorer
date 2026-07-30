@@ -11,11 +11,13 @@ import './ChapterMapPanel.css';
  * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
  * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales Adaptativos de Capítulos y Volver Arriba.
  */
-export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, initialChapter = null }) {
-  const [selectedChapNum, setSelectedChapNum] = useState(initialChapter);
+export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, initialChapter = null, activeBookId = 'genesis' }) {
+  const [selectedChapNum, setSelectedChapNum] = useState(initialChapter || 1);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
+
+  const bookName = activeBookId === 'matthew' || activeBookId === 'mateo' ? 'Mateo' : 'Génesis';
 
   // Responder si cambia la prop initialChapter desde afuera
   useEffect(() => {
@@ -25,6 +27,15 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
       });
     }
   }, [initialChapter]);
+
+  // Si cambia de libro o las opciones de capítulos cambian y el capítulo actual excede el límite
+  useEffect(() => {
+    if (chapters.length > 0 && (selectedChapNum > chapters.length || !selectedChapNum)) {
+      queueMicrotask(() => {
+        setSelectedChapNum(1);
+      });
+    }
+  }, [chapters, selectedChapNum]);
 
   // Referencia a la caja del texto bíblico y al capítulo previo para scroll inteligente
   const readerBoxRef = useRef(null);
@@ -224,8 +235,8 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   const chapterVersesList = useMemo(() => {
     if (!selectedChapNum) return [];
     const verses = [];
-    for (let v = 1; v <= 65; v++) {
-      const vText = getVerseTextRVR1960('Génesis', selectedChapNum, v);
+    for (let v = 1; v <= 100; v++) {
+      const vText = getVerseTextRVR1960(bookName, selectedChapNum, v);
       if (vText && !vText.includes('Santa Biblia Reina-Valera') && vText.startsWith(`${v}.`)) {
         verses.push({
           number: v,
@@ -234,7 +245,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
       }
     }
     return verses;
-  }, [selectedChapNum]);
+  }, [selectedChapNum, bookName]);
 
   // Lista de números de versículos seleccionados
   const selectedVerseNums = useMemo(() => {

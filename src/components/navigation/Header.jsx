@@ -85,7 +85,7 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
                 onChange={(e) => setActiveBookId && setActiveBookId(e.target.value)}
               >
                 <option value="genesis">📖 Génesis (50 Caps - 82 Eventos)</option>
-                <option value="matthew">✝️ San Mateo (28 Caps - 20 Eventos)</option>
+                <option value="matthew">✝️ San Mateo (28 Caps - 81 Eventos)</option>
                 <option value="exodus" disabled>📖 Éxodo (Próximamente)</option>
               </select>
             </div>
