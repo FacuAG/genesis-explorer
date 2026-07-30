@@ -317,7 +317,19 @@
         "question_sign_of_jonah",
         "question_unpardonable_sin"
       ],
-      "event_ids": []
+      "event_ids": [
+        "john_baptist_messengers_inquiry",
+        "jesus_tribute_to_john_the_baptist",
+        "woes_unrepentant_galilean_cities",
+        "come_to_me_gentle_yoke",
+        "sabbath_lord_plucking_grain",
+        "healing_withered_hand_sabbath",
+        "blasphemy_holy_spirit_beelzebub",
+        "sign_of_jonah_requested",
+        "parable_sower_four_soils",
+        "parable_wheat_and_tares",
+        "parables_hidden_treasure_pearl"
+      ]
     },
     {
       "id": "nb_withdrawal_transfiguration_church",
@@ -360,7 +372,16 @@
       "key_question_ids": [
         "question_church_on_rock"
       ],
-      "event_ids": []
+      "event_ids": [
+        "beheading_john_baptist_herod",
+        "feeding_five_thousand_bread",
+        "jesus_walks_on_water",
+        "faith_canaanite_woman",
+        "peters_confession_cesarea",
+        "first_announcement_death_rebuke",
+        "transfiguration_on_mountain",
+        "shekel_in_fish_mouth"
+      ]
     },
     {
       "id": "nb_judean_ministry_olivet",
@@ -399,7 +420,13 @@
       "key_question_ids": [
         "question_olivet_discourse_interpretation"
       ],
-      "event_ids": []
+      "event_ids": [
+        "rich_young_ruler_inquiry",
+        "triumphal_entry_jerusalem",
+        "cleansing_temple_merchants",
+        "seven_woes_scribes_pharisees",
+        "olivet_discourse_end_times"
+      ]
     },
     {
       "id": "nb_passion_resurrection_commission",
@@ -449,7 +476,19 @@
         "question_great_commission_scope",
         "question_temple_veil_torn"
       ],
-      "event_ids": []
+      "event_ids": [
+        "anointing_at_bethany_judas",
+        "last_supper_new_covenant",
+        "agony_in_gethsemane_prayer",
+        "arrest_jesus_gethsemane_malchus",
+        "trial_before_caiaphas_denial",
+        "trial_before_pilate_barabbas",
+        "crucifixion_at_golgotha_death",
+        "signs_at_death_veil_earthquake",
+        "burial_joseph_arimathea_guard",
+        "resurrection_empty_tomb_women",
+        "great_commission_galilee"
+      ]
     }
   ],
   "timeline_events": [
@@ -2868,6 +2907,1900 @@
         "Hechos 1:8"
       ],
       "sub_event_ids": []
+    },
+    {
+      "id": "john_baptist_messengers_inquiry",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Pregunta de los Mensajeros de Juan el Bautista",
+      "short_name": "Pregunta del Bautista",
+      "category": "messianic",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Mensaje desde la prisión"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 11,
+      "verse_start_ref": 1,
+      "chapter_end": 11,
+      "verse_end_ref": 6,
+      "narrative": "Cuando Jesús terminó de dar instrucciones a sus doce discípulos, se fue de allí a enseñar y a predicar en las ciudades de ellos. Y oyendo Juan en la cárcel los hechos de Cristo, le envió dos de sus discípulos, para preguntarle: '¿Eres tú aquel que había de venir, o esperaremos a otro?'. Respondiendo Jesús, les dijo: 'Id, y haced saber a Juan las cosas que oís y veis: Los ciegos ven, los cojos andan, los leprosos son limpiados, los sordos oyen, los muertos son resucitados, y a los pobres es anunciado el evangelio; y bienaventurado es el que no halle tropiezo en mí'.",
+      "historical_context": "Juan estaba encarcelado por Herodes Antipas en la fortaleza de Maqueronte al oriente del Mar Muerto.",
+      "theological_teaching": "Jesús confirma su identiad mesiánica no mediante la fuerza política terrenal, sino mediante el cumplimiento de las señales de sanidad e instrucción de los pobres.",
+      "messianic_connection": "Cumplimiento directo de Isaías 35:5-6 e Isaías 61:1.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 11,
+          "verse_start": 1,
+          "verse_end": 6
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 11:4-5",
+        "text": "Y respondiendo Jesús, les dijo: Id, y haced saber á Juan las cosas que oís y veis:"
+      },
+      "cross_references_nt": [
+        "Lucas 7:18-23",
+        "Isaías 35:5-6"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "jesus_tribute_to_john_the_baptist",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "El Elogio de Jesús a Juan el Bautista y la Generación Inconstante",
+      "short_name": "Elogio a Juan",
+      "category": "patriarch",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Discurso en Galilea"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 11,
+      "verse_start_ref": 7,
+      "chapter_end": 11,
+      "verse_end_ref": 19,
+      "narrative": "Mientras ellos se iban, comenzó Jesús a decir de Juan a la gente: '¿Qué salisteis a ver al desierto? ¿Una caña sacudida por el viento?... ¿Un profeta? Sí, os digo, y más que profeta. Porque éste es de quien está escrito: He aquí, yo envío mi mensajero delante de tu faz, el cual preparará tu camino delante de ti. De cierto os digo: Entre los que nacen de mujer no se ha levantado otro mayor que Juan el Bautista; pero el más pequeño en el reino de los cielos, mayor es que él... Y si queréis recibirlo, él es aquel Elías que había de venir. El que tiene oídos para oír, oiga'.",
+      "historical_context": "Juan era el eslabón final que cerraba la era del Antiguo Pacto señalando al Cordero presente.",
+      "theological_teaching": "La posición privilegiada del creyente en el Nuevo Pacto supera los privilegios de los profetas antiguos.",
+      "messianic_connection": "Identificación de Juan el Bautista con el Elías profetizado en Malaquías 4:5.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 11,
+          "verse_start": 7,
+          "verse_end": 19
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 11:11",
+        "text": "De cierto os digo, que no se levantó entre los que nacen de mujeres otro mayor que Juan el Bautista; mas el que es muy más pequeño en el reino de los cielos, mayor es que él."
+      },
+      "cross_references_nt": [
+        "Malaquías 3:1",
+        "Lucas 7:24-35"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "woes_unrepentant_galilean_cities",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "Los Ayes sobre las Ciudades Impenitentes de Galilea",
+      "short_name": "Ayes sobre Galilea",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Juicio profético"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 11,
+      "verse_start_ref": 20,
+      "chapter_end": 11,
+      "verse_end_ref": 24,
+      "narrative": "Entonces comenzó a reconvenir a las ciudades en las cuales había hecho muchos de sus milagros, porque no se habían arrepentido, diciendo: '¡Ay de ti, Corazín! ¡Ay de ti, Betsaida! Porque si en Tiro y en Sidón se hubieran hecho los milagros que han sido hechos en vosotras, tiempo ha que se habrían arrepentido en cilicio y en ceniza. Por tanto os digo que en el día del juicio, será más tolerable el castigo para Tiro y para Sidón, que para vosotras. Y tú, Capernaúm, que eres levantada hasta el cielo, hasta el hades serás abatida...'.",
+      "historical_context": "Corazín, Betsaida y Capernaúm presenciaron la mayor concentración de milagros de la historia sin arrepentirse.",
+      "theological_teaching": "A mayor luz y revelación recibida, mayor será la responsabilidad y la severidad del juicio divino.",
+      "messianic_connection": "Jesús como Juez del universo pronuncia sentencias sobre la impenitencia humana.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 11,
+          "verse_start": 20,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 11:21",
+        "text": "¡Ay de ti, Corazín! ¡Ay de ti, Bethsaida! porque si en Tiro y en Sidón fueran hechas las maravillas que han sido hechas en vosotras, en otro tiempo se hubieran arrepentido en saco y en ceniza."
+      },
+      "cross_references_nt": [
+        "Lucas 10:13-15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "come_to_me_gentle_yoke",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "El Glorioso Llamado al Descanso del Alma y el Yugo Fácil",
+      "short_name": "Venid a Mí y Descansad",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Invitación de gracia"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 11,
+      "verse_start_ref": 25,
+      "chapter_end": 11,
+      "verse_end_ref": 30,
+      "narrative": "En aquel tiempo, respondiendo Jesús, dijo: 'Te alabo, Padre, Señor del cielo y de la tierra, porque escondiste estas cosas de los sabios y de los entendidos, y las revelaste a los niños. Sí, Padre, porque así te agradó. Todas las cosas me fueron entregadas por mi Padre; y nadie conoce al Hijo, sino el Padre, ni al Padre conoce alguno, sino el Hijo, y aquel a quien el Hijo lo quiera revelar. Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar. Llevad mi yugo sobre vosotros, y aprended de mí, que soy manso y humilde de corazón; y hallaréis descanso para vuestras almas; porque mi yugo es fácil, y ligera mi carga'.",
+      "historical_context": "Los fariseos imponían cientos de cargas legalistas pesadas e insoportables sobre los hombros del pueblo.",
+      "theological_teaching": "Soberanía de la revelación del Padre y del Hijo otorgando la paz y el descanso verdadero de la salvación por la gracia.",
+      "messianic_connection": "Jesús es el Salvador Manso que otorga descanso al pecador fatigado.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 11,
+          "verse_start": 25,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 11:28-30",
+        "text": "Venid á mí todos los que estáis trabajados y cargados, que yo os haré descansar."
+      },
+      "cross_references_nt": [
+        "Jeremías 6:16",
+        "Juan 6:37"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "sabbath_lord_plucking_grain",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "Jesús como el Señor del Sábado en los Sembrados",
+      "short_name": "Señor del Sábado",
+      "category": "covenant",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Debate del Sábado"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 12,
+      "verse_start_ref": 1,
+      "chapter_end": 12,
+      "verse_end_ref": 8,
+      "narrative": "En aquel tiempo iba Jesús por los sembrados en día de reposo; y sus discípulos tuvieron hambre, y comenzaron a arrancar espigas y a comer. Viéndolo los fariseos, le dijeron: 'He aquí tus discípulos hacen lo que no es lícito hacer en el día de reposo'. Pero él les dijo: '¿No habéis leído qué hizo David, cuando él y los que con él estaban tuvieron hambre; cómo entró en la casa de Dios, y comió los panes de la proposición?... ¿O no habéis leído en la ley, cómo en el día de reposo los sacerdotes en el templo profanan el día de reposo, y son sin culpa? Pues os digo que uno mayor que el templo está aquí... Porque el Hijo del Hombre es Señor del día de reposo'.",
+      "historical_context": "Las tradiciones rabínicas prohibían cosechar o desgranar trigo en Sábado clasificándolo como trabajo servil.",
+      "theological_teaching": "La misericordia de Dios y la necesidad humana priman sobre el ritualismo formal; Cristo es superior al Templo y al Sábado.",
+      "messianic_connection": "Jesús proclama su Deidad absoluta autodenominándose Señor del Sábado.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "david"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 12,
+          "verse_start": 1,
+          "verse_end": 8
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 12:8",
+        "text": "Porque Señor es del sábado el Hijo del hombre."
+      },
+      "cross_references_nt": [
+        "1 Samuel 21:1-6",
+        "Marcos 2:23-28",
+        "Lucas 6:1-5"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "healing_withered_hand_sabbath",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Sanidad de la Mano Seca en Sábado y la Conspiración",
+      "short_name": "Sanidad de la Mano Seca",
+      "category": "miracle",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Milagro en la sinagoga"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 12,
+      "verse_start_ref": 9,
+      "chapter_end": 12,
+      "verse_end_ref": 14,
+      "narrative": "Pasando de allí, vino a la sinagoga de ellos. Y he aquí había allí uno que tenía seca una mano; y preguntaron a Jesús, para poder acusarle: '¿Es lícito sanar en el día de reposo?'. Él les dijo: '¿Qué hombre habrá de vosotros, que tenga una oveja, y si ésta cayere en un hoyo en día de reposo, no le eche mano, y la levante? Pues ¿cuánto más vale un hombre que una oveja? Por tanto, es lícito hacer el bien en los días de reposo'. Entonces dijo a aquel hombre: 'Extiende tu mano'. Y él la extendió, y le fue restaurada sana como la otra. Y salidos los fariseos, tomaron consejo contra Jesús para destruirle.",
+      "historical_context": "La dura hipocresía de los fariseos permitía rescatar animales en Sábado pero acusaba a Jesús por sanar a un ser humano.",
+      "theological_teaching": "Hacer el bien y salvar vidas es la verdadera observancia espiritual agradables a Dios.",
+      "messianic_connection": "Jesús manifiesta la autoridad misericordiosa del Rey restaurador.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 12,
+          "verse_start": 9,
+          "verse_end": 14
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 12:12",
+        "text": "Pues ¿cuánto más vale un hombre que una oveja? Así que, lícito es en los sábados hacer bien."
+      },
+      "cross_references_nt": [
+        "Marcos 3:1-6",
+        "Lucas 6:6-11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "blasphemy_holy_spirit_beelzebub",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Conspiración de Beelzebú y la Blasfemia contra el Espíritu Santo",
+      "short_name": "La Blasfemia del Espíritu",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Juicio definitivo"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 12,
+      "verse_start_ref": 22,
+      "chapter_end": 12,
+      "verse_end_ref": 37,
+      "narrative": "Entonces fue traído a él un endemoniado, ciego y mudo; y le sanó... Y toda la gente estaba atónita. Mas los fariseos, al oírlo, decían: 'Este no echa fuera los demonios sino por Beelzebú, príncipe de los demonios'. Sabiendo Jesús los pensamientos de ellos, les dijo: 'Todo reino dividido contra sí mismo, es asolado... Y si yo por Beelzebú echo fuera los demonios, ¿por quién los echan vuestros hijos?... Pero si yo por el Espíritu de Dios echo fuera los demonios, ciertamente ha llegado a vosotros el reino de Dios... Por tanto os digo: Todo pecado y blasfemia será perdonado a los hombres; mas la blasfemia contra el Espíritu no les será perdonada'.",
+      "historical_context": "Beelzebú (Señor de las moscas o del estiércol) era un nombre despectivo judío para Satanás.",
+      "theological_teaching": "La blasfemia contra el Espíritu Santo es el rechazo definitivo y consciente de la revelación de la gracia atribuida al diablo.",
+      "messianic_connection": "Jesús vence al hombre fuerte (Satanás) y saquea sus bienes mediante el Espíritu de Dios.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [
+        "question_unpardonable_sin"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 12,
+          "verse_start": 22,
+          "verse_end": 37
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 12:31-32",
+        "text": "Por tanto os digo: Todo pecado y blasfemia será perdonado á los hombres: mas la blasfemia contra el Espíritu no será perdonada á los hombres."
+      },
+      "cross_references_nt": [
+        "Marcos 3:22-30",
+        "Lucas 11:14-23"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "sign_of_jonah_requested",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Demanda de Señal y la Profecía de la Señal del Profeta Jonás",
+      "short_name": "Señal de Jonás",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Profecía de la Resurrección"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 12,
+      "verse_start_ref": 38,
+      "chapter_end": 12,
+      "verse_end_ref": 42,
+      "narrative": "Entonces respondieron algunos de los escribas y de los fariseos, diciendo: 'Maestro, deseamos ver de ti señal'. Él respondió y les dijo: 'La generación mala y adúltera demanda señal; pero señal no le será dada, sino la señal del profeta Jonás. Porque como estuvo Jonás en el vientre del gran pez tres días y tres noches, así estará el Hijo del Hombre en el corazón de la tierra tres días y tres noches. Los hombres de Nínive se levantarán en el juicio con esta generación, y la condenarán; porque ellos se arrepintieron a la predicación de Jonás, y he aquí más que Jonás en este lugar'.",
+      "historical_context": "Nínive y la Reina del Sur (Saba) eran gentiles que respondieron con fe frente a la incredulidad judía.",
+      "theological_teaching": "La Resurrección corporal de Jesucristo al tercer día es la prueba suprema del evangelio.",
+      "messianic_connection": "Jesús es el cumplimiento tipológico de Jonás y el Rey más sabio que Salomón.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_resurrection_victory"
+      ],
+      "question_ids": [
+        "question_sign_of_jonah"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 12,
+          "verse_start": 38,
+          "verse_end": 42
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 12:40",
+        "text": "Porque como estuvo Jonás en el vientre de la ballena tres días y tres noches, así estará el Hijo del hombre en el corazón de la tierra tres días y tres noches."
+      },
+      "cross_references_nt": [
+        "Jonás 1:17",
+        "1 Reyes 10:1",
+        "Lucas 11:29-32"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "parable_sower_four_soils",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Parábola del Sembrador y la Exposición de los Cuatro Terrenos",
+      "short_name": "El Sembrador",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Parábolas desde la barca"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 13,
+      "verse_start_ref": 1,
+      "chapter_end": 13,
+      "verse_end_ref": 23,
+      "narrative": "Aquel día salió Jesús de la casa y se sentó junto al mar. Y se le juntaron muchas multitudes; y entrando él en la barca, se sentó... Y les habló muchas cosas por parábolas, diciendo: 'He aquí, el sembrador salió a sembrar. Y mientras sembraba, parte de la semilla cayó junto al camino... parte en pedregales... parte entre espinos... y parte cayó en buena tierra, y dio fruto, cuál a ciento, cuál a sesenta, y cuál a treinta por uno. El que tiene oídos para oír, oiga'. Luego explicó que la semilla es la palabra del reino y los terrenos representan las diversas condiciones del corazón humano.",
+      "historical_context": "En la siembra palestina tradicional se esparcía primero la semilla antes de pasar el arado sobre la tierra.",
+      "theological_teaching": "La respuesta a la predicación del Reino depende de la preparación y apertura del corazón ante la Palabra de Dios.",
+      "messianic_connection": "Jesús es el Sembrador divino que imparte la palabra incorruptible del Reino.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 13,
+          "verse_start": 1,
+          "verse_end": 23
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 13:23",
+        "text": "Mas el que fué sembrado en buena tierra, éste es el que oye y entiende la palabra, y el que lleva fruto: y lleva uno á ciento, y otro á sesenta, y otro á treinta."
+      },
+      "cross_references_nt": [
+        "Marcos 4:1-20",
+        "Lucas 8:4-15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "parable_wheat_and_tares",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "La Parábola del Trigo y la Cizaña y el Juicio Escatológico",
+      "short_name": "Trigo y Cizaña",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Parábola del Reino"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 13,
+      "verse_start_ref": 24,
+      "chapter_end": 13,
+      "verse_end_ref": 30,
+      "narrative": "Les refirió otra parábola, diciendo: 'El reino de los cielos es semejante a un hombre que sembró buena semilla en su campo; pero mientras dormían los hombres, vino su enemigo, y sembró cizaña entre el trigo, y se fue. Y cuando brotó la hierba y dio fruto, entonces apareció también la cizaña. Vinieron pues los siervos del padre de familia y le dijeron: Señor, ¿no sembraste buena semilla en tu campo? ¿De dónde, pues, tiene cizaña?... Él les dijo: Dejad crecer juntamente lo uno y lo otro hasta la siega; y al tiempo de la siega yo diré a los segadores: Recoged primero la cizaña, y atadla en manojos para quemarla; pero recoged el trigo en mi granero'.",
+      "historical_context": "La cizaña (Lolium temulentum) es una planta venenosa idéntica al trigo en sus primeras etapas de crecimiento.",
+      "theological_teaching": "Coexistencia temporal de los creyentes y los impíos en el mundo hasta la separación definitiva en el Juicio Final.",
+      "messianic_connection": "Jesús es el Hijo del Hombre que enviará a sus ángeles a purificar su Reino.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 13,
+          "verse_start": 24,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 13:30",
+        "text": "Dejad crecer juntamente lo uno y lo otro hasta la siega; y al tiempo de la siega yo diré á los segadores: Coged primero la cizaña, y atadla en manojos para quemarla; mas recoged el trigo en mi alfolí."
+      },
+      "cross_references_nt": [
+        "Mateo 13:36-43",
+        "Apocalipsis 14:14-20"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "parables_hidden_treasure_pearl",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_parables_kingdom_opposition",
+      "name": "Parábolas del Tesoro Escondido y la Perla de Gran Precio",
+      "short_name": "Tesoro y Perla",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Parábolas de valor supremo"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 13,
+      "verse_start_ref": 44,
+      "chapter_end": 13,
+      "verse_end_ref": 46,
+      "narrative": "'Además, el reino de los cielos es semejante a un tesoro escondido en un campo, el cual un hombre halla, y lo esconde de nuevo; y gozoso por ello va y vende todo lo que tiene, y compra aquel campo. También el reino de los cielos es semejante a un mercader que busca buenas perlas, que habiendo hallado una perla preciosa, fue y vendió todo lo que tenía, y la compró'.",
+      "historical_context": "En tiempos de guerra era común enterrar objetos de valor en los campos para protegerlos de los saqueos.",
+      "theological_teaching": "El valor incalculable e infinito del Reino de Dios supera cualquier posesión terrenal exigiendo gozosa entrega.",
+      "messianic_connection": "Jesús ofrece la salvación como la joya suprema de la eternidad.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 13,
+          "verse_start": 44,
+          "verse_end": 46
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 13:44",
+        "text": "Además, el reino de los cielos es semejante al tesoro escondido en el campo; el cual hallado, el hombre lo encubre, y de gozo de ello va, y vende todo lo que tiene, y compra aquel campo."
+      },
+      "cross_references_nt": [
+        "Filipenses 3:7-8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "beheading_john_baptist_herod",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "El Trágico Martirio y Decapitación de Juan el Bautista",
+      "short_name": "Martirio de Juan el Bautista",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Martirio en Maqueronte"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 14,
+      "verse_start_ref": 1,
+      "chapter_end": 14,
+      "verse_end_ref": 12,
+      "narrative": "En aquel tiempo Herodes el tetrarca oyó la fama de Jesús... Porque Herodes había prendido a Juan, y le había encadenado y metido en la cárcel, por causa de Herodías, mujer de Felipe su hermano; porque Juan le decía: 'No te es lícito tenerla'. Y Herodes quería matarle, pero temía al pueblo... Pero al celebrarse el cumpleaños de Herodes, la hija de Herodías danzó en medio, y agradó a Herodes, por lo cual éste le prometió con juramento darle todo lo que pidiese. Ella, instruida primero por su madre, dijo: 'Dame aquí en un plato la cabeza de Juan el Bautista'. Entonces el rey se entristeció; pero a causa del juramento... mandó decapitar a Juan en la cárcel.",
+      "historical_context": "Flavio Josefo corrobora la ejecución de Juan en la fortaleza de Maqueronte por temores políticos de Herodes Antipas.",
+      "theological_teaching": "Fidelidad profética inquebrantable denunciando el pecado aun a costa de la propia vida corporal.",
+      "messianic_connection": "El martirio del precursor prefigura la muerte violenta que sufriría el propio Mesías en Jerusalén.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist",
+        "herod_antipas",
+        "herodias",
+        "salome_dancer"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment",
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 14,
+          "verse_start": 1,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 14:10",
+        "text": "Y enviando, degolló á Juan en la cárcel."
+      },
+      "cross_references_nt": [
+        "Marcos 6:14-29",
+        "Lucas 9:7-9"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "feeding_five_thousand_bread",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "La Multiplicación Milagrosa de los Panes para 5.000 Hombres",
+      "short_name": "Alimentación de los 5.000",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Milagro del pan"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 14,
+      "verse_start_ref": 13,
+      "chapter_end": 14,
+      "verse_end_ref": 21,
+      "narrative": "Oyéndolo Jesús, se retiró de allí en una barca a un lugar desierto y apartado; y cuando la gente lo oyó, le siguió a pie desde las ciudades. Y saliendo Jesús, vio una gran multitud, y tuvo compasión de ellos, y sanó a los que de ellos estaban enfermos. Cuando oscurecía, se acercaron a él sus discípulos, diciendo: 'El lugar es desierto... despide a la multitud para que vayan por las aldeas y compren de comer'. Jesús les dijo: 'No tienen necesidad de irse; dadles vosotros de comer'. Y ellos dijeron: 'No tenemos aquí sino cinco panes y dos peces'. Él les dijo: 'Traédmelos acá'. Y mandando a la gente recostarse sobre la hierba, tomó los cinco panes y los dos peces, y levantando los ojos al cielo, bendijo, y partió y dio los panes a los discípulos, y los discípulos a la gente. Y comieron todos, y se saciaron; y recogieron de los pedazos sobrantes, doce cestas llenas. Y los que comieron fueron como cinco mil hombres, sin contar las mujeres y los niños.",
+      "historical_context": "El único milagro registrado en los cuatro Evangelios canónicos, demostrando la provisión divina del Maná.",
+      "theological_teaching": "Jesús satisface plenamente las necesidades del ser humano y multiplica los escasos recursos consagrados en sus manos.",
+      "messianic_connection": "Jesús es el Pan vivo del cielo que alimenta a su pueblo en el desierto.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "philip"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 14,
+          "verse_start": 13,
+          "verse_end": 21
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 14:19-20",
+        "text": "Y mandando á las gentes recostarse sobre la hierba, tomando los cinco panes y los dos peces, alzando los ojos al cielo, bendijo, y partió y dió los panes á los discípulos, y los discípulos á las gentes."
+      },
+      "cross_references_nt": [
+        "Marcos 6:30-44",
+        "Lucas 9:10-17",
+        "Juan 6:1-14"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "jesus_walks_on_water",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "Jesús Camina sobre las Aguas y la Salvación de Pedro",
+      "short_name": "Jesús Camina sobre las Aguas",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Milagro en la cuarta vela"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 14,
+      "verse_start_ref": 22,
+      "chapter_end": 14,
+      "verse_end_ref": 33,
+      "narrative": "En seguida Jesús hizo a sus discípulos entrar en la barca e ir delante de él a la otra orilla... Y ya la barca estaba en medio del mar, azotada por las olas; porque el viento era contrario. Mas a la cuarta vela de la noche, Jesús vino a ellos caminando sobre el mar. Y los discípulos, viéndole caminar sobre el mar, se turbaron, diciendo: '¡Un fantasma!'. Y dieron voces de miedo. Pero en seguida Jesús les habló, diciendo: '¡Tened ánimo; yo soy, no temáis!'. Entonces le respondió Pedro, y dijo: 'Señor, si eres tú, manda que yo vaya a ti sobre las aguas'. Y él dijo: 'Ven'. Y descendiendo Pedro de la barca, caminaba sobre las aguas para ir a Jesús. Pero al ver el fuerte viento, tuvo miedo; y comenzando a hundirse, dio voces, diciendo: '¡Señor, sálvame!'. Al momento Jesús, extendiendo la mano, asió de él, y le dijo: '¡Hombre de poca fe! ¿Por qué dudaste?'. Y cuando ellos subieron en la barca, se calmó el viento. Entonces los que estaban en la barca vinieron y le adoraron, diciendo: 'Verdaderamente eres Hijo de Dios'.",
+      "historical_context": "La cuarta vela de la noche abarcaba entre las 3:00 a.m. y las 6:00 a.m. según la división militar romana.",
+      "theological_teaching": "Mantener los ojos fijos en Jesús vence el naufragio de la duda; su mano todopoderosa rescata al creyente que clama.",
+      "messianic_connection": "Revelación de la Deidad al proclamar 'YO SOY' (Ego Eimi) y caminar sobre las olas como sólo Dios puede hacerlo (Job 9:8).",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_son_of_david"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 14,
+          "verse_start": 22,
+          "verse_end": 33
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 14:33",
+        "text": "Entonces los que estaban en el barco, vinieron y le adoraron, diciendo: Verdaderamente eres Hijo de Dios."
+      },
+      "cross_references_nt": [
+        "Job 9:8",
+        "Marcos 6:45-52",
+        "Juan 6:16-21"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "faith_canaanite_woman",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "La Fe Extraordinaria de la Mujer Cananea en Tiro y Sidón",
+      "short_name": "La Mujer Cananea",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Sanidad de la hija"
+      },
+      "location_id": "tyre_and_sidon",
+      "chapter_start": 15,
+      "verse_start_ref": 21,
+      "chapter_end": 15,
+      "verse_end_ref": 28,
+      "narrative": "Saliendo Jesús de allí, se fue a la región de Tiro y de Sidón. Y he aquí una mujer cananea que había salido de aquella región clamaba, diciéndole: '¡Señor, Hijo de David, ten misericordia de mí! Mi hija es gravemente atormentada por un demonio'. Pero Jesús no le respondió palabra. Entonces acercándose sus discípulos, le rogaron, diciendo: 'Despídela, pues da voces tras nosotros'. Él respondiendo, dijo: 'No soy enviado sino a las ovejas perdidas de la casa de Israel'. Entonces ella vino y se postró ante él, diciendo: '¡Señor, socórreme!'. Respondiendo él, dijo: 'No está bien tomar el pan de los hijos, y echarlo a los perrillos'. Y ella dijo: 'Sí, Señor; pero aun los perrillos comen de las migajas que caen de la mesa de sus amos'. Entonces respondiendo Jesús, dijo: 'Oh mujer, grande es tu fe; hágase contigo como quieres'. Y su hija fue sana desde aquella hora.",
+      "historical_context": "Los cananeos eran los antiguos enemigos ancestrales de Israel; la fe de esta mujer quebró barreras raciales y culturales.",
+      "theological_teaching": "La fe humilde, perseverante e inquebrantable que reconoce la señoría de Cristo recibe la bendición de la gracia.",
+      "messianic_connection": "Jesús demuestra que la salvación mesiánica se extiende victoriosamente a los gentiles.",
+      "key_people": [
+        "jesus",
+        "syrophoenician_woman"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_great_commission_mission"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 15,
+          "verse_start": 21,
+          "verse_end": 28
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 15:28",
+        "text": "Entonces respondiendo Jesús, dijo: Oh mujer, grande es tu fe; sea hecho contigo como quieres. Y fué sana su hija desde aquella hora."
+      },
+      "cross_references_nt": [
+        "Marcos 7:24-30"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "peters_confession_cesarea",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "La Confesión de Pedro en Cesarea de Filipo y la Promesa de la Iglesia",
+      "short_name": "La Confesión de Pedro",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Fundación de la Iglesia"
+      },
+      "location_id": "caesarea_philippi",
+      "chapter_start": 16,
+      "verse_start_ref": 13,
+      "chapter_end": 16,
+      "verse_end_ref": 20,
+      "narrative": "Viniendo Jesús a la región de Cesarea de Filipo, preguntó a sus discípulos, diciendo: '¿Quién dicen los hombres que es el Hijo del Hombre?'. Ellos dijeron: 'Unos, Juan el Bautista; otros, Elías; y otros, Jeremías, o uno de los profetas'. Él les dijo: 'Y vosotros, ¿quién decís que soy yo?'. Respondiendo Simón Pedro, dijo: 'Tú eres el Cristo, el Hijo del Dios viviente'. Entonces le respondió Jesús: 'Bienaventurado eres, Simón, hijo de Jonás, porque no te lo reveló carne ni sangre, sino mi Padre que está en los cielos. Y yo también te digo, que tú eres Pedro, y sobre esta roca edificaré mi iglesia; y las puertas del Hades no prevalecerán contra ella. Y a ti te daré las llaves del reino de los cielos...'.",
+      "historical_context": "Cesarea de Filipo al pie del Monte Hermón albergaba un santuario pagano al dios Pan edificado junto a una inmensa gruta rocosa.",
+      "theological_teaching": "La Iglesia universal está edificada victoriosamente sobre la Roca inconmovible de la deidad confesada de Jesucristo.",
+      "messianic_connection": "Jesús anuncia oficialmente por primera vez el establecimiento invencible de su Iglesia (Ekklesia).",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [
+        "question_church_on_rock"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 16,
+          "verse_start": 13,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 16:16-18",
+        "text": "Y respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente."
+      },
+      "cross_references_nt": [
+        "Marcos 8:27-30",
+        "Lucas 9:18-21",
+        "1 Corintios 3:11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "first_announcement_death_rebuke",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "El Primer Anuncio de la Pasión y la Reprensión a Pedro",
+      "short_name": "Primer Anuncio de la Pasión",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Profecía de la Pasión"
+      },
+      "location_id": "caesarea_philippi",
+      "chapter_start": 16,
+      "verse_start_ref": 21,
+      "chapter_end": 16,
+      "verse_end_ref": 28,
+      "narrative": "Desde entonces comenzó Jesús a declarar a sus discípulos que le era necesario ir a Jerusalén y padecer mucho de los ancianos, de los principales sacerdotes y de los escribas, y ser muerto, y resucitar al tercer día. Entonces Pedro, tomándolo aparte, comenzó a reconvenirle, diciendo: 'Señor, ten compasión de ti; en ninguna manera esto te acontezca'. Pero él, volviéndose, dijo a Pedro: '¡Quítate de delante de mí, Satanás! me eres tropiezo; porque no pones la mira en las cosas de Dios, sino en las de los hombres'. Entonces Jesús dijo a sus discípulos: 'Si alguno quiere venir en pos de mí, niéguese a sí mismo, y tome su cruz, y sígame'.",
+      "historical_context": "La mentalidad judía esperaba un Mesías triunfante guerrero; la necesidad de una crucifixión causaba estupefacción.",
+      "theological_teaching": "El camino del discipulado cristiano exige la renuncia al egoísmo y la disposición a abrazar la cruz por amor al Evangelio.",
+      "messianic_connection": "Jesús reafirma la necesidad divina imperativa de su muerte expiatoria y resurrección al tercer día.",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 16,
+          "verse_start": 21,
+          "verse_end": 28
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 16:24",
+        "text": "Entonces Jesús dijo á sus discípulos: Si alguno quiere venir en pos de mí, niéguese á sí mismo, y tome su cruz, y sígame."
+      },
+      "cross_references_nt": [
+        "Marcos 8:31-38",
+        "Lucas 9:22-27"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "transfiguration_on_mountain",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "La Gloriosa Transfiguración de Jesucristo en el Monte",
+      "short_name": "La Transfiguración",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Manifestación de gloria"
+      },
+      "location_id": "mount_hermon",
+      "chapter_start": 17,
+      "verse_start_ref": 1,
+      "chapter_end": 17,
+      "verse_end_ref": 13,
+      "narrative": "Seis días después, Jesús tomó a Pedro, a Jacobo y a Juan su hermano, y los llevó aparte a un monte alto; y se transfiguró delante de ellos, y resplandeció su rostro como el sol, y sus vestidos se hicieron blancos como la luz. Y he aquí les aparecieron Moisés y Elías, hablando con él. Entonces Pedro dijo a Jesús: 'Señor, bueno es para nosotros que estemos aquí...'. Mientras él aún hablaba, una nube de luz los cubrió; y he aquí una voz desde la nube, que decía: 'Este es mi Hijo amado, en quien tengo complacencia; a él oíd'. Al oír esto los discípulos, cayeron sobre sus rostros, y tuvieron gran temor. Entonces Jesús se acercó y los tocó, y dijo: 'Levantaos, y no temáis'. Y alzando ellos los ojos, a nadie vieron sino a Jesús solo.",
+      "historical_context": "Moisés (la Ley) y Elías (los Profetas) dan testimonio presencial de que Cristo es el cumplimiento final de la Escritura.",
+      "theological_teaching": "Revelación anticipada de la majestad y gloria del Hijo de Dios resucitado al cual debemos escuchar soberanamente.",
+      "messianic_connection": "Jesucristo resplandece en la misma gloria divina e increada del Padre.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 17,
+          "verse_start": 1,
+          "verse_end": 13
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 17:5",
+        "text": "Y estando aún él hablando, he aquí una nube de luz que los cubrió; y he aquí una voz de la nube, que dijo: Este es mi Hijo amado, en el cual tomo contentamiento: á él oíd."
+      },
+      "cross_references_nt": [
+        "Marcos 9:2-13",
+        "Lucas 9:28-36",
+        "2 Pedro 1:16-18"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "shekel_in_fish_mouth",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_withdrawal_transfiguration_church",
+      "name": "El Milagro de la Moneda en la Boca del Pez para el Impuesto del Templo",
+      "short_name": "Moneda en la Boca del Pez",
+      "category": "miracle",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4032,
+        "exact_date_note": "32 d.C.",
+        "duration_days": null,
+        "duration_note": "Provisión en Capernaúm"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 17,
+      "verse_start_ref": 24,
+      "chapter_end": 17,
+      "verse_end_ref": 27,
+      "narrative": "Cuando llegaron a Capernaúm, vinieron a Pedro los que cobraban las dos dracmas, y le dijeron: '¿Vuestro Maestro no paga las dos dracmas?'. Él dijo: 'Sí'. Y al entrar en casa, Jesús le habló primero, diciendo: '¿Qué te parece, Simón? Los reyes de la tierra, ¿de quién cobran los tributos o el censo? ¿De sus hijos, o de los extraños?'. Pedro le dijo: 'De los extraños'. Jesús le dijo: 'Luego los hijos están exentos. Sin embargo, para no ofenderles, ve al mar, y echa el anzuelo, y el primer pez que saque, tómalo, y al abrirle la boca, hallarás un estatero; tómalo, y dáselo por mí y por ti'.",
+      "historical_context": "Las dos dracmas (medio siclo) era el impuesto anual obligatorio cobrado a todo varón judío para el mantenimiento del Templo (Éxodo 30:13).",
+      "theological_teaching": "Jesús como Hijo de Dios es dueño del Templo y está exento, pero se somete humildemente para evitar tropezadero.",
+      "messianic_connection": "Omnisciencia y soberanía absoluta de Cristo gobernando la creación hasta en los peces del lago.",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 17,
+          "verse_start": 24,
+          "verse_end": 27
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 17:27",
+        "text": "Mas porque no los escandalicemos, ve á la mar, y echa el anzuelo, y el primer pez que viniere, tómalo, y abierta su boca, hallarás un estatero: tómalo, y dáselo por mí y por ti."
+      },
+      "cross_references_nt": [
+        "Éxodo 30:13"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "rich_young_ruler_inquiry",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_judean_ministry_olivet",
+      "name": "El Joven Rico y el Peligro de las Riquezas para el Reino",
+      "short_name": "El Joven Rico",
+      "category": "sin",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "33 d.C.",
+        "duration_days": null,
+        "duration_note": "Encuentro en Judea"
+      },
+      "location_id": "jericho",
+      "chapter_start": 19,
+      "verse_start_ref": 16,
+      "chapter_end": 19,
+      "verse_end_ref": 30,
+      "narrative": "Entonces vino uno y le dijo: 'Maestro bueno, ¿qué bien haré para tener la vida eterna?'. Él le dijo: '¿Por qué me llamas bueno? Ninguno hay bueno sino uno: Dios. Mas si quieres entrar en la vida, guarda los mandamientos...'. El joven le dijo: 'Todo esto lo he guardado desde mi juventud. ¿Qué más me falta?'. Jesús le dijo: 'Si quieres ser perfecto, ve, vende lo que tienes, y dalo a los pobres, y tendrás tesoro en el cielo; y ven y sígueme'. Oyendo el joven esta palabra, se fue triste, porque tenía muchas posesiones. Entonces Jesús dijo a sus discípulos: 'De cierto os digo, que difícilmente entrará un rico en el reino de los cielos... Mas para Dios todo es posible'.",
+      "historical_context": "El judaísmo interpretaba la riqueza material como bendición automática de Dios; Jesús desenmascara la idolatría del dinero.",
+      "theological_teaching": "Nadie es salvo por cumplir externamente la ley; la salvación exige la renuncia total a los ídolos del corazón.",
+      "messianic_connection": "Jesús expone la bancarrota de la justicia propia y revela que la salvación es una obra imposible para los hombres pero posible para Dios.",
+      "key_people": [
+        "jesus",
+        "rich_young_ruler",
+        "peter"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_discipleship_cost",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 19,
+          "verse_start": 16,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 19:26",
+        "text": "Y mirándo los Jesús, les dijo: Para con los hombres imposible es esto; mas para con Dios todo es posible."
+      },
+      "cross_references_nt": [
+        "Marcos 10:17-31",
+        "Lucas 18:18-30"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "triumphal_entry_jerusalem",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_judean_ministry_olivet",
+      "name": "La Entrada Triunfal del Rey Mesías en Jerusalén",
+      "short_name": "Entrada Triunfal",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Domingo de Ramos 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Entrada regia"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 21,
+      "verse_start_ref": 1,
+      "chapter_end": 21,
+      "verse_end_ref": 11,
+      "narrative": "Cuando se acercaron a Jerusalén, y vinieron a Betfagé, al monte de los Olivos, Jesús envió dos discípulos, diciéndoles: 'Id a la aldea que está enfrente de vosotros, y luego hallaréis una asna atada, y un pollino con ella; desatadla, y traédmelos...'. Todo esto aconteció para que se cumpliese lo dicho por el profeta: 'Decid a la hija de Sion: He aquí, tu Rey viene a ti, manso, y sentado sobre una asna...'. Y la multitud, que era muy numerosa, tendía sus mantos en el camino; y otros cortaban ramas de los árboles... Y las gentes que iban delante y las que iban detrás aclamaban, diciendo: '¡Hosanna al Hijo de David! ¡Bendito el que viene en el nombre del Señor! ¡Hosanna en las alturas!'. Y al entrar él en Jerusalén, toda la ciudad se conmovió, diciendo: '¿Quién es éste?'.",
+      "historical_context": "Entrar montado en un asno (animal de paz) cumplía Zacarías 9:9 en contraste con los generales romanos que montaban caballos de guerra.",
+      "theological_teaching": "Presentación pública inerrante de Jesucristo como el Rey Mesías de Israel humilde y manso que trae la salvación.",
+      "messianic_connection": "Cumplimiento directo de Zacarías 9:9 y Salmo 118:25-26.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 21,
+          "verse_start": 1,
+          "verse_end": 11
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 21:9",
+        "text": "Y las gentes que iban delante, y las que iban detrás, aclamaban diciendo: ¡Hosanna al Hijo de David! ¡Bendito el que viene en el nombre del Señor! ¡Hosanna en las alturas!"
+      },
+      "cross_references_nt": [
+        "Zacarías 9:9",
+        "Salmo 118:26",
+        "Marcos 11:1-11",
+        "Juan 12:12-19"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "cleansing_temple_merchants",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_judean_ministry_olivet",
+      "name": "La Purificación del Templo y la Maldición de la Higuera",
+      "short_name": "Purificación del Templo",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Lunes Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Limpieza del Templo"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 21,
+      "verse_start_ref": 12,
+      "chapter_end": 21,
+      "verse_end_ref": 22,
+      "narrative": "Y entró Jesús en el templo de Dios, y echó fuera a todos los que vendían y compraban en el templo, y volcó las mesas de los cambistas, y las sillas de los que vendían palomas; y les dijo: 'Escrito está: Mi casa, casa de oración será llamada; mas vosotros la habéis hecho cueva de ladrones'. Y vinieron a él en el templo ciegos y cojos, y los sanó... Por la mañana, volviendo a la ciudad, tuvo hambre. Y viendo una higuera cerca del camino, vino a ella, y no halló nada en ella, sino hojas solamente; y le dijo: 'Nunca más nazca de ti fruto'. Y luego se secó la higuera.",
+      "historical_context": "El Atrio de los Gentiles se había convertido en un mercado ruidoso y lucrativo controlado por la casa sacerdotal de Anás.",
+      "theological_teaching": "Celo divino por la pureza del culto a Dios e inminente juicio sobre la religión estéril que exhibe hojas sin fruto.",
+      "messianic_connection": "Jesús ejerce su autoridad como Señor del Templo cumpliendo Malaquías 3:1.",
+      "key_people": [
+        "jesus",
+        "caiaphas"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 21,
+          "verse_start": 12,
+          "verse_end": 22
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 21:13",
+        "text": "Y les dice: Escrito está: Mi casa, casa de oración será llamada; mas vosotros cueva de ladrones la habéis hecho."
+      },
+      "cross_references_nt": [
+        "Isaías 56:7",
+        "Jeremías 7:11",
+        "Marcos 11:15-19"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "seven_woes_scribes_pharisees",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_judean_ministry_olivet",
+      "name": "Los Siete Ayes de Juicio contra Escribas y Fariseos Hipócritas",
+      "short_name": "Los Siete Ayes",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Martes Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Denuncia pública"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 23,
+      "verse_start_ref": 1,
+      "chapter_end": 23,
+      "verse_end_ref": 39,
+      "narrative": "Entonces habló Jesús a la gente y a sus discípulos, diciendo: 'En la cátedra de Moisés se sientan los escribas y los fariseos... Pero ¡ay de vosotros, escribas y fariseos, hipócritas! porque cerráis el reino de los cielos delante de los hombres... ¡Ay de vosotros, guías ciegos!... ¡Ay de vosotros, que diezmáis la menta y el eneldo y el comino, y dejáis lo más importante de la ley: la justicia, la misericordia y la fe!... ¡Ay de vosotros, que limpiáis lo de fuera del vaso y del plato, pero por dentro estáis llenos de robo y de desenfreno!... ¡Jerusalén, Jerusalén, que matas a los profetas!... He aquí vuestra casa os es dejada desierta'.",
+      "historical_context": "Discurso final de Jesús en el Templo denunciando la hipocresía del liderazgo religioso formalista de Israel.",
+      "theological_teaching": "Dios aborrece la religiosidad ostentosa y juzgará la falta de compasión, justicia y verdad del corazón.",
+      "messianic_connection": "Jesús como Juez Supremo retira la gloria divina del Templo terrenal dejándolo desierto.",
+      "key_people": [
+        "jesus",
+        "caiaphas",
+        "annas"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 23,
+          "verse_start": 1,
+          "verse_end": 39
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 23:23",
+        "text": "¡Ay de vosotros, escribas y Fariseos, hipócritas! porque diezmáis la menta y el eneldo y el comino, y dejasteis lo que es lo más grave de la ley, es á saber, el juicio y la misericordia y la fe: esto era menester hacer, y no dejar lo otro."
+      },
+      "cross_references_nt": [
+        "Marcos 12:38-40",
+        "Lucas 11:37-54"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "olivet_discourse_end_times",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_judean_ministry_olivet",
+      "name": "El Discurso del Olivar: Destrucción del Templo y Señales del Fin",
+      "short_name": "Discurso del Olivar",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Martes Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Discurso Escatológico"
+      },
+      "location_id": "mount_of_olives",
+      "chapter_start": 24,
+      "verse_start_ref": 1,
+      "chapter_end": 24,
+      "verse_end_ref": 51,
+      "narrative": "Cuando Jesús salió del templo... se le acercaron sus discípulos para mostrarle los edificios del templo. Respondiendo él, les dijo: '¿Veis todo esto? De cierto os digo, que no quedará aquí piedra sobre piedra, que no sea derribada'. Y estando él sentado en el monte de los Olivos, los discípulos se le acercaron aparte, diciendo: 'Dinos, ¿cuándo serán estas cosas, y qué señal habrá de tu venida, y del fin del siglo?'. Jesús les enseñó sobre los engaños de falsos cristos, guerras, pestes, terremotos, la abominación desoladora, y la venida gloriosa del Hijo del Hombre en las nubes con gran poder y gloria, exhortando a la vigilancia incesante.",
+      "historical_context": "Cumplimiento histórico exacto en el año 70 d.C. cuando las legiones romanas de Tito destruyeron e incendiaron el Templo de Jerusalén.",
+      "theological_teaching": "La historia camina victoriosamente hacia el retorno corporal del Señor Jesucristo; sus discípulos velan velando en fidelidad.",
+      "messianic_connection": "Jesús profetiza su Segunda Venida con majestad cósmica sobre las nubes del cielo (Daniel 7:13-14).",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "andrew"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_resurrection_victory"
+      ],
+      "question_ids": [
+        "question_olivet_discourse_interpretation"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 24,
+          "verse_start": 1,
+          "verse_end": 51
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 24:14",
+        "text": "Y será predicado este evangelio del reino en todo el mundo, por testimonio á todos los Gentiles; y entonces vendrá el fin."
+      },
+      "cross_references_nt": [
+        "Daniel 7:13-14",
+        "Marcos 13:1-37",
+        "Lucas 21:5-36"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "anointing_at_bethany_judas",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Unción en Betania y la Traición Pactada por Judas",
+      "short_name": "Unción en Betania y Traición",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Miércoles Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Pacto de traición"
+      },
+      "location_id": "bethphage_and_bethany",
+      "chapter_start": 26,
+      "verse_start_ref": 1,
+      "chapter_end": 26,
+      "verse_end_ref": 16,
+      "narrative": "Y estando Jesús en Betania, en casa de Simón el leproso, vino a él una mujer con un frasco de alabastro de perfume de gran precio, y lo derramó sobre la cabeza de él, estando sentado a la mesa. Al ver esto, sus discípulos se enojaron... Pero Jesús, entendiéndolo, les dijo: '¿Por qué molestáis a esta mujer? pues ha hecho una buena obra conmigo... Al derramar este perfume sobre mi cuerpo, lo ha hecho a fin de prepararme para la sepultura. De cierto os digo que dondequiera que se predique este evangelio... se dirá también lo que ésta ha hecho...'. Entonces uno de los doce, que se llamaba Judas Iscariote, fue a los principales sacerdotes, y les dijo: '¿Qué me queréis dar, y yo os lo entregaré?'. Y ellos le asignaron treinta piezas de plata.",
+      "historical_context": "Las 30 piezas de plata eran el precio legal fijado en Éxodo 21:32 por la indemnización de un esclavo muerto.",
+      "theological_teaching": "La entrega sacrificada del amor derramando lo más valioso por Cristo frente a la vil avaricia que vende al Salvador.",
+      "messianic_connection": "Unción profética del cuerpo de Cristo para su sepultura y cumplimiento de Zacarías 11:12.",
+      "key_people": [
+        "jesus",
+        "judas_iscariot",
+        "caiaphas"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 26,
+          "verse_start": 1,
+          "verse_end": 16
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 26:12-13",
+        "text": "Porque echando este unguento sobre mi cuerpo, para sepultarme lo ha hecho."
+      },
+      "cross_references_nt": [
+        "Éxodo 21:32",
+        "Zacarías 11:12",
+        "Marcos 14:1-11",
+        "Juan 12:1-8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "last_supper_new_covenant",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Última Cena e Institución del Nuevo Pacto en su Sangre",
+      "short_name": "Institución de la Santa Cena",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Jueves Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Cena Pascual"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 26,
+      "verse_start_ref": 17,
+      "chapter_end": 26,
+      "verse_end_ref": 30,
+      "narrative": "El primer día de la fiesta de los panes sin levadura, vinieron los discípulos a Jesús... Y mientras comían, tomó Jesús el pan, y bendijo, y lo partió, y dio a sus discípulos, y dijo: 'Tomad, comed; esto es mi cuerpo'. Y tomando la copa, y habiendo dado gracias, les dio, diciendo: 'Bebed de ella todos; porque esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados. Y os digo que desde ahora no beberé más de este fruto de la vid, hasta aquel día en que lo beba nuevo con vosotros en el reino de mi Padre'. Y cuando hubieron cantado el himno, salieron al monte de los Olivos.",
+      "historical_context": "Jesús transforma la Cena de la Pascua judía en la institución del Sacramento del Nuevo Pacto.",
+      "theological_teaching": "Sustitución vicaria: el pan partido simboliza su cuerpo quebrantado y la copa su sangre derramada para el perdón eterno.",
+      "messianic_connection": "Jesús es el Cordero Pascual del Nuevo Pacto profetizado en Jeremías 31:31-34.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "john_apostle",
+        "judas_iscariot"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 26,
+          "verse_start": 17,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 26:28",
+        "text": "Porque esto es mi sangre del nuevo pacto, la cual es derramada por muchos para remisión de los pecados."
+      },
+      "cross_references_nt": [
+        "Jeremías 31:31-34",
+        "Marcos 14:22-26",
+        "1 Corintios 11:23-26"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "agony_in_gethsemane_prayer",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Agonía y Oración de Jesús en el Huerto de Getsemaní",
+      "short_name": "Agonía en Getsemaní",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Noche del Jueves Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Oración angustiosa"
+      },
+      "location_id": "gethsemane",
+      "chapter_start": 26,
+      "verse_start_ref": 36,
+      "chapter_end": 26,
+      "verse_end_ref": 46,
+      "narrative": "Entonces llegó Jesús con ellos a un lugar que se llama Getsemaní, y dijo a sus discípulos: 'Sentaos aquí, entre tanto que voy allí y oro'. Y tomando a Pedro, y a los dos hijos de Zebedeo, comenzó a entristecerse y a angustiarse en gran manera. Entonces Jesús les dijo: 'Mi alma está muy triste, hasta la muerte; quedaos aquí, y velad conmigo'. Yendo un poco adelante, se postró sobre su rostro, orando y diciendo: 'Padre mío, si es posible, pase de mí esta copa; pero no sea como yo quiero, sino como tú'. Vino luego a sus discípulos, y los halló durmiendo... Fue otra vez, y oró por segunda vez... Y los dejó, y se fue de nuevo, y oró por tercera vez...",
+      "historical_context": "Getsemaní significa 'Prensa de Aceite'. La 'copa' representa el trago amargo de la ira judicial de Dios contra el pecado.",
+      "theological_teaching": "Sometimiento perfecto y filial de la voluntad humana de Cristo a la voluntad soberana del Padre para la salvación.",
+      "messianic_connection": "Jesús bebe voluntariamente la copa de la ira de Dios en lugar de la humanidad.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 26,
+          "verse_start": 36,
+          "verse_end": 46
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 26:39",
+        "text": "Y yéndose un poco más adelante, se postró sobre su rostro, orando, y diciendo: Padre mío, si es posible, pase de mí este vaso; empero no como yo quiero, sino como tú."
+      },
+      "cross_references_nt": [
+        "Marcos 14:32-42",
+        "Lucas 22:39-46",
+        "Hebreos 5:7-8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "arrest_jesus_gethsemane_malchus",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "El Arresto en Getsemaní y la Sanidad de la Oreja de Malco",
+      "short_name": "Arresto de Jesús",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Noche del Jueves Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Traición y arresto"
+      },
+      "location_id": "gethsemane",
+      "chapter_start": 26,
+      "verse_start_ref": 47,
+      "chapter_end": 26,
+      "verse_end_ref": 56,
+      "narrative": "Mientras aún hablaba, vino Judas, uno de los doce, y con él mucha gente con espadas y palos, de parte de los principales sacerdotes y de los ancianos del pueblo. Y el que le entregaba les había dado señal, diciendo: 'Al que yo besare, ése es; prendedle'. Y en seguida se acercó a Jesús y dijo: '¡Salve, Maestro!'. Y le besó. Y Jesús le dijo: 'Amigo, ¿a qué vienes?'. Entonces se acercaron y echaron mano a Jesús, y le prendieron. Pero uno de los que estaban con Jesús... hirió a un siervo del sumo sacerdote, y le cortó la oreja. Entonces Jesús le dijo: 'Vuelve tu espada a su lugar... ¿Acaso piensas que no puedo ahora orar a mi Padre, y que él no me daría más de doce legiones de ángeles? ¿Pero cómo entonces se cumplirían las Escrituras...?'. Entonces todos los discípulos, dejándole, huyeron.",
+      "historical_context": "Una legión romana constaba de 6.000 soldados; 12 legiones sumaban 72.000 ángeles todopoderosos.",
+      "theological_teaching": "Jesús no fue víctima indefensa, sino que se entregó voluntariamente para cumplir el plan eterno de las Escrituras.",
+      "messianic_connection": "Jesús es el Siervo Manso arrestado injustamente que cumple las profecías proféticas.",
+      "key_people": [
+        "jesus",
+        "judas_iscariot",
+        "peter",
+        "malchus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_atonement_redemption"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 26,
+          "verse_start": 47,
+          "verse_end": 56
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 26:53-54",
+        "text": "¿Acaso piensas que no puedo ahora orar á mi Padre, y él me daría más de doce legiones de ángeles?"
+      },
+      "cross_references_nt": [
+        "Marcos 14:43-50",
+        "Lucas 22:47-53",
+        "Juan 18:3-11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "trial_before_caiaphas_denial",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "El Juicio ante el Sanedrín y las Tres Negaciones de Pedro",
+      "short_name": "Juicio ante Caifás y Negación",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Madrugada del Viernes Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Juicio nocturno"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 26,
+      "verse_start_ref": 57,
+      "chapter_end": 26,
+      "verse_end_ref": 75,
+      "narrative": "Los que prendieron a Jesús le llevaron al sumo sacerdote Caifás, donde los escribas y los ancianos estaban reunidos. Y los principales sacerdotes y todo el concilio buscaban falso testimonio contra Jesús, para entregarle a la muerte... Y el sumo sacerdote le dijo: 'Te conjuro por el Dios viviente, que nos digas si eres tú el Cristo, el Hijo de Dios'. Jesús le dijo: 'Tú lo has dicho; y además os digo, que desde ahora veréis al Hijo del Hombre sentado a la diestra del poder de Dios, y viniendo en las nubes del cielo'. Entonces el sumo sacerdote rasgó sus vestiduras, diciendo: '¡Ha blasfemado!... ¿Qué os parece?'. Y ellos respondieron: '¡Es culpable de muerte!'. Entre tanto, Pedro estaba sentado fuera en el patio; y una criada se le acercó... Y negó tres veces... Y en seguida cantó el gallo. Y Pedro se acordó de la palabra de Jesús... y saliendo fuera, lloró amargamente.",
+      "historical_context": "El juicio nocturno del Sanedrín violaba las leyes rabínicas que exigían audiencias públicas de día.",
+      "theological_teaching": "La falibilidad del líder humano (Pedro) contrasta con la majestad inquebrantable de Cristo ante sus jueces impíos.",
+      "messianic_connection": "Jesús se proclama abiertamente el Hijo del Hombre glorioso de Daniel 7:13.",
+      "key_people": [
+        "jesus",
+        "caiaphas",
+        "peter",
+        "annas"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 26,
+          "verse_start": 57,
+          "verse_end": 75
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 26:64",
+        "text": "Jesús le dijo: Tú lo has dicho: y aun os digo, que desde ahora habéis de ver al Hijo de los hombres sentado á la diestra de la potencia de Dios, y que viene en las nubes del cielo."
+      },
+      "cross_references_nt": [
+        "Daniel 7:13",
+        "Marcos 14:53-72",
+        "Lucas 22:54-71",
+        "Juan 18:12-27"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "trial_before_pilate_barabbas",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "El Juicio ante Poncio Pilato y la Liberación de Barabás",
+      "short_name": "Juicio ante Pilato",
+      "category": "judgment",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Mañana del Viernes Santo 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Juicio romano"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 27,
+      "verse_start_ref": 11,
+      "chapter_end": 27,
+      "verse_end_ref": 26,
+      "narrative": "Jesús, pues, estaba en pie delante del gobernador; y éste le preguntó, diciendo: '¿Eres tú el Rey de los judíos?'. Y Jesús le dijo: 'Tú lo dices'. Y siendo acusado por los principales sacerdotes y por los ancianos, nada respondió... Ahora bien, en el día de la fiesta acostumbraba el gobernador soltar al pueblo un preso... Tenían entonces un preso famoso llamado Barabás. Y reunidos ellos, les dijo Pilato: '¿A quién queréis que os suelte: a Barabás, o a Jesús, llamado el Cristo?'. Porque sabía que por envidia le habían entregado. Y estando él sentado en el tribunal, su mujer le envió a decir: 'No tengas nada que ver con ese justo...'. Pero los sacerdotes persuadieron a la multitud que pidiese a Barabás... Pilato, viendo que nada adelantaba... tomó agua y se lavó las manos delante del pueblo, diciendo: 'Inocente soy yo de la sangre de este justo...'. Y todo el pueblo respondió: 'Su sangre sea sobre nosotros, y sobre nuestros hijos'. Entonces les soltó a Barabás; y habiendo azotado a Jesús, le entregó para ser crucificado.",
+      "historical_context": "Azotar (flagrum) con latigazos de plomo desgarra la carne previa a la crucifixión romana.",
+      "theological_teaching": "Sustitución gráfica: el criminal culpable Barabás es liberado mientras el Inocente Santo es entregado a la muerte.",
+      "messianic_connection": "Jesús es el Cordero silente que no abre su boca cumplimiento de Isaías 53:7.",
+      "key_people": [
+        "jesus",
+        "pilate",
+        "pilate_wife",
+        "barabbas",
+        "caiaphas"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 27,
+          "verse_start": 11,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 27:24",
+        "text": "Y viendo Pilato que nada adelantaba, antes se hacía más alboroto, tomando agua se lavó las manos delante del pueblo, diciendo: Inocente soy yo de la sangre de este justo veréis lo vosotros."
+      },
+      "cross_references_nt": [
+        "Isaías 53:7",
+        "Marcos 15:1-15",
+        "Lucas 23:1-25",
+        "Juan 18:28 - 19:16"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "crucifixion_at_golgotha_death",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Crucifixión en el Gólgota y la Muerte Expiatoria de Jesucristo",
+      "short_name": "La Crucifixión y Muerte",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Viernes Santo 33 d.C. (15:00 hs)",
+        "duration_days": null,
+        "duration_note": "Muerte expiatoria"
+      },
+      "location_id": "golgotha",
+      "chapter_start": 27,
+      "verse_start_ref": 32,
+      "chapter_end": 27,
+      "verse_end_ref": 50,
+      "narrative": "Cuando salían, hallaron a un hombre de Cirene que se llamaba Simón; a éste obligaron a que llevase la cruz. Y cuando llegaron a un lugar llamado Gólgota, que significa: Lugar de la Calavera, le dieron a beber vinagre mezclado con hiel... Cuando le hubieron crucificado, repartieron entre sí sus vestidos, echando suertes, para que se cumpliese lo dicho por el profeta... Y pusieron sobre su cabeza su causa escrita: ESTE ES JESÚS, EL REY DE LOS JUDÍOS. Entonces fueron crucificados con él dos ladrones... Y desde la hora sexta hubo tinieblas sobre toda la tierra hasta la hora novena. Cerca de la hora novena, Jesús clamó a gran voz, diciendo: 'Elí, Elí, ¿lama sabactani? Esto es: Dios mío, Dios mío, ¿por qué me has desamparado?'... Mas Jesús, habiendo clamado otra vez a gran voz, entregó el espíritu.",
+      "historical_context": "La hora sexta a novena (12:00 a 15:00 hs) oscureció milagrosamente la tierra durante la agonía de la cruz.",
+      "theological_teaching": "Sustitución expiatoria vicaria: Cristo soporta el abandono judicial del Padre para pagar la culpa del pecado humano.",
+      "messianic_connection": "Cumplimiento inerrante del Salmo 22:1, Salmo 22:18 e Isaías 53:12.",
+      "key_people": [
+        "jesus",
+        "mary",
+        "simon_of_cyrene",
+        "mary_magdalene"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 27,
+          "verse_start": 32,
+          "verse_end": 50
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 27:46",
+        "text": "Y cerca de la hora de nona, Jesús exclamó con grande voz, diciendo: Eli, Eli, ¿lama sabachtani? Esto es: Dios mío, Dios mío, ¿por qué me has desamparado?"
+      },
+      "cross_references_nt": [
+        "Salmo 22:1",
+        "Isaías 53:12",
+        "Marcos 15:21-37",
+        "Lucas 23:26-46",
+        "Juan 19:17-30"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "signs_at_death_veil_earthquake",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "Las Señales Sobrenaturales: El Velo Rasgado y la Confesión del Centurión",
+      "short_name": "Velo Rasgado y Terremoto",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Viernes Santo 33 d.C. (15:00 hs)",
+        "duration_days": null,
+        "duration_note": "Señales del Gólgota"
+      },
+      "location_id": "golgotha",
+      "chapter_start": 27,
+      "verse_start_ref": 51,
+      "chapter_end": 27,
+      "verse_end_ref": 56,
+      "narrative": "Y he aquí, el velo del templo se rasgó en dos, de arriba abajo; y la tierra tembló, y las rocas se hendieron; y se abrieron los sepulcros, y muchos cuerpos de santos que habían dormido, se levantaron; y saliendo de los sepulcros, después de la resurrección de él, vinieron a la santa ciudad, y aparecieron a muchos. El centurión, y los que estaban con él guardando a Jesús, visto el terremoto, y las cosas que habían sido hechas, temieron en gran manera, y dijeron: 'Verdaderamente éste era Hijo de Dios'. Estaban allí muchas mujeres mirando de lejos, las cuales habían seguido a Jesús desde Galilea, sirviéndole...",
+      "historical_context": "El velo del Templo tenía una altura de casi 20 metros y separaba el Lugar Santo del Lugar Santísimo.",
+      "theological_teaching": "El rasgado del velo simboliza la abolición del antiguo sistema ritual y la apertura del acceso libre a Dios por la sangre de Jesús.",
+      "messianic_connection": "El testimonio oficial del centurión romano proclama la deidad del Hijo de Dios a las naciones.",
+      "key_people": [
+        "jesus",
+        "centurion_cross",
+        "mary_magdalene",
+        "mary_mother_of_james",
+        "salome_mother_of_zebedees"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_atonement_redemption",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [
+        "question_temple_veil_torn"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 27,
+          "verse_start": 51,
+          "verse_end": 56
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 27:51",
+        "text": "Y he aquí, el velo del templo se rompió en dos, de alto á bajo: y la tierra tembló, y las piedras se hendieron;"
+      },
+      "cross_references_nt": [
+        "Hebreos 10:19-22",
+        "Marcos 15:38-39",
+        "Lucas 23:45-47"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "burial_joseph_arimathea_guard",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Sepultura Honorable por José de Arimatea y la Guardia Romana",
+      "short_name": "La Sepultura de Cristo",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Viernes a Sábado Santo 33 d.C.",
+        "duration_days": 3,
+        "duration_note": "Tres días en el sepulcro"
+      },
+      "location_id": "golgotha",
+      "chapter_start": 27,
+      "verse_start_ref": 57,
+      "chapter_end": 27,
+      "verse_end_ref": 66,
+      "narrative": "Cuando cayó la noche, vino un hombre rico de Arimatea, llamado José, que también había sido discípulo de Jesús. Este fue a Pilato y pidió el cuerpo de Jesús. Entonces Pilato mandó que se le diese el cuerpo. Y tomando José el cuerpo, lo envolvió en una sábana limpia, y lo puso en su sepulcro nuevo, que había labrado en la peña; y habiendo hecho rodar una gran piedra a la entrada del sepulcro, se fue. Y estaban allí María Magdalena, y la otra María, sentadas delante del sepulcro. Al día siguiente... se reunieron los principales sacerdotes y los fariseos ante Pilato, diciendo: 'Señor, nos acordamos que aquel engañador dijo... Al tercer día resucitaré. Manda, pues, que se asegure el sepulcro...'. Y ellos fueron y aseguraron el sepulcro, sellando la piedra y poniendo la guardia.",
+      "historical_context": "Un sello romano roto conllevaba la pena de muerte inmediata dictada por las autoridades imperiales.",
+      "theological_teaching": "La sepultura física certifica la muerte real de Cristo y la providencia garantiza la seguridad invencible de la Resurrección.",
+      "messianic_connection": "Cumplimiento directo de Isaías 53:9 ('se dispuso con los ricos fue en su muerte').",
+      "key_people": [
+        "jesus",
+        "joseph_of_arimathea",
+        "nicodemus",
+        "pilate",
+        "mary_magdalene"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 27,
+          "verse_start": 57,
+          "verse_end": 66
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 27:59-60",
+        "text": "Y tomando José el cuerpo, lo envolvió en una sábana limpia,"
+      },
+      "cross_references_nt": [
+        "Isaías 53:9",
+        "Marcos 15:42-47",
+        "Lucas 23:50-56",
+        "Juan 19:38-42"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "resurrection_empty_tomb_women",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Gloriosa Resurrección al Tercer Día y la Aparición a las Mujeres",
+      "short_name": "La Gloriosa Resurrección",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "Domingo de Resurrección 33 d.C.",
+        "duration_days": null,
+        "duration_note": "Resurrección gloriosa"
+      },
+      "location_id": "golgotha",
+      "chapter_start": 28,
+      "verse_start_ref": 1,
+      "chapter_end": 28,
+      "verse_end_ref": 10,
+      "narrative": "Pasado el día de reposo, al amanecer del primer día de la semana, vinieron María Magdalena y la otra María, a ver el sepulcro. Y hubo un gran terremoto; porque un ángel del Señor, descendiendo del cielo y llegando, removió la piedra, y se sentó sobre ella. Su aspecto era como un relámpago, y su vestido blanco como la nieve. Y de miedo de él los guardas temblaron y se quedaron como muertos. Mas el ángel, respondiendo, dijo a las mujeres: 'No temáis vosotras; porque yo sé que buscáis a Jesús, el que fue crucificado. No está aquí, pues ha resucitado, como dijo. Venid, ved el lugar donde fue puesto el Señor. E id pronto y decid a sus discípulos que ha resucitado de los muertos...'. Y ellas, saliendo del sepulcro con temor y gran gozo, fueron corriendo a dar las nuevas a sus discípulos. Y mientras iban... he aquí, Jesús les salió al encuentro, diciendo: '¡Salve!'. Y ellas, acercándose, abrazaron sus pies, y le adoraron. Entonces Jesús les dijo: 'No temáis; id, dad las nuevas a mis hermanos...'.",
+      "historical_context": "El testimonio legal de las mujeres en el siglo I no tenía peso formal; Cristo las honra convirtiéndolas en las primeras evangelistas.",
+      "theological_teaching": "La victoria absoluta de Jesucristo sobre la muerte garantiza la justificación y resurrección futura de todos los creyentes.",
+      "messianic_connection": "Jesús es el Primogénito de los muertos victorioso sobre el Hades y la tumba.",
+      "key_people": [
+        "jesus",
+        "mary_magdalene",
+        "mary_mother_of_james",
+        "peter"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_resurrection_victory",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 28,
+          "verse_start": 1,
+          "verse_end": 10
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 28:5-6",
+        "text": "Y respondiendo el ángel, dijo á las mujeres: No temáis vosotras; porque yo sé que buscáis á Jesús, que fué crucificado."
+      },
+      "cross_references_nt": [
+        "Marcos 16:1-8",
+        "Lucas 24:1-12",
+        "Juan 20:1-18",
+        "1 Corintios 15:3-8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "great_commission_galilee",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_passion_resurrection_commission",
+      "name": "La Gran Comisión Misionera Universal en el Monte de Galilea",
+      "short_name": "La Gran Comisión",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4033,
+        "exact_date_note": "33 d.C.",
+        "duration_days": null,
+        "duration_note": "Envío misionero eterno"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 28,
+      "verse_start_ref": 16,
+      "chapter_end": 28,
+      "verse_end_ref": 20,
+      "narrative": "Pero los once discípulos se fueron a Galilea, al monte donde Jesús les había ordenado. Y cuando le vieron, le adoraron; pero algunos dudaban. Y Jesús se acercó y les habló diciendo: 'Toda potestad me es dada en el cielo y en la tierra. Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del siglo. Amén'.",
+      "historical_context": "El monte de Galilea representa el lugar de cita soberana con el Rey resucitado investido de potestad cósmica.",
+      "theological_teaching": "Mandato imperativo eterno de evangelizar, discipular, bautizar en la Trinidad y enseñar a todas las naciones del mundo.",
+      "messianic_connection": "Jesús es Emanuel cuyos dominios y presencia abarcan hasta el fin de los tiempos.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "philip",
+        "bartholomew",
+        "thomas",
+        "matthew_apostle",
+        "james_son_of_alphaeus",
+        "thaddaeus",
+        "simon_the_zealot"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_great_commission_mission",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [
+        "question_great_commission_scope"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 28,
+          "verse_start": 16,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 28:18-20",
+        "text": "Y llegando Jesús, les habló, diciendo: Toda potestad me es dada en el cielo y en la tierra."
+      },
+      "cross_references_nt": [
+        "Marcos 16:15-18",
+        "Lucas 24:46-49",
+        "Hechos 1:8"
+      ],
+      "sub_event_ids": []
     }
   ],
   "people": [
@@ -2899,7 +4832,89 @@
         "reference": "Mateo 1:21",
         "text": "Y parirá un hijo, y llamarás su nombre JESUS, porque él salvará á su pueblo de sus pecados."
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "announcement_to_joseph",
+        "fulfillment_prophecy_emanuel",
+        "arrival_magi_jerusalem",
+        "prophecy_ruler_bethlehem",
+        "adoration_magi_gifts",
+        "angelic_warning_flight_egypt",
+        "massacre_innocents_bethlehem",
+        "return_from_egypt_to_nazareth",
+        "ministry_john_baptist_wilderness",
+        "john_rebukes_pharisees",
+        "baptism_jesus_jordan_trinity",
+        "temptation_bread_word",
+        "temptation_pinnacle_temple",
+        "temptation_kingdoms_world",
+        "jesus_begins_galilean_ministry",
+        "call_peter_andrew",
+        "call_james_john_zebedee",
+        "first_miracles_and_crowds",
+        "sermon_beatitudes_kingdom",
+        "disciples_salt_light",
+        "christ_fulfills_the_law",
+        "teaching_murder_anger",
+        "teaching_adultery_purity",
+        "teaching_marriage_oaths",
+        "love_your_enemies",
+        "almsgiving_in_secret",
+        "lord_prayer_teaching",
+        "fasting_and_treasures_heaven",
+        "do_not_worry_providence",
+        "judge_not_beam_eye",
+        "ask_seek_knock",
+        "narrow_gate_two_trees",
+        "parable_two_foundations",
+        "cleansing_leper_faith",
+        "centurion_servant_healed",
+        "healing_peter_mother_in_law",
+        "cost_following_jesus",
+        "stilling_storm_galilee",
+        "healing_gadarene_demoniacs",
+        "forgiveness_paralyzed_capernaum",
+        "call_matthew_publican",
+        "resurrection_jairus_daughter",
+        "healing_two_blind_men_mute",
+        "compassion_laborers_harvest",
+        "commissioning_twelve_apostles",
+        "john_baptist_messengers_inquiry",
+        "jesus_tribute_to_john_the_baptist",
+        "woes_unrepentant_galilean_cities",
+        "come_to_me_gentle_yoke",
+        "sabbath_lord_plucking_grain",
+        "healing_withered_hand_sabbath",
+        "blasphemy_holy_spirit_beelzebub",
+        "sign_of_jonah_requested",
+        "parable_sower_four_soils",
+        "parable_wheat_and_tares",
+        "parables_hidden_treasure_pearl",
+        "beheading_john_baptist_herod",
+        "feeding_five_thousand_bread",
+        "jesus_walks_on_water",
+        "faith_canaanite_woman",
+        "peters_confession_cesarea",
+        "first_announcement_death_rebuke",
+        "transfiguration_on_mountain",
+        "shekel_in_fish_mouth",
+        "rich_young_ruler_inquiry",
+        "triumphal_entry_jerusalem",
+        "cleansing_temple_merchants",
+        "seven_woes_scribes_pharisees",
+        "olivet_discourse_end_times",
+        "anointing_at_bethany_judas",
+        "last_supper_new_covenant",
+        "agony_in_gethsemane_prayer",
+        "arrest_jesus_gethsemane_malchus",
+        "trial_before_caiaphas_denial",
+        "trial_before_pilate_barabbas",
+        "crucifixion_at_golgotha_death",
+        "signs_at_death_veil_earthquake",
+        "burial_joseph_arimathea_guard",
+        "resurrection_empty_tomb_women",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 1:1-14",
@@ -2947,7 +4962,15 @@
         "reference": "Mateo 1:18",
         "text": "Y el nacimiento de Jesucristo fué así: Que siendo María su madre desposada con José, antes que se juntasen, se halló haber concebido del Espíritu Santo."
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "announcement_to_joseph",
+        "fulfillment_prophecy_emanuel",
+        "adoration_magi_gifts",
+        "angelic_warning_flight_egypt",
+        "return_from_egypt_to_nazareth",
+        "crucifixion_at_golgotha_death"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 1:26-38",
@@ -2995,7 +5018,14 @@
         "reference": "Mateo 1:24",
         "text": "Y despertando José del sueño, hizo como el ángel del Señor le había mandado, y recibió á su mujer."
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "announcement_to_joseph",
+        "fulfillment_prophecy_emanuel",
+        "adoration_magi_gifts",
+        "angelic_warning_flight_egypt",
+        "return_from_egypt_to_nazareth"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 2:1-52",
@@ -3038,7 +5068,15 @@
         "reference": "Mateo 3:3",
         "text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas."
       },
-      "event_ids": [],
+      "event_ids": [
+        "ministry_john_baptist_wilderness",
+        "john_rebukes_pharisees",
+        "baptism_jesus_jordan_trinity",
+        "jesus_begins_galilean_ministry",
+        "john_baptist_messengers_inquiry",
+        "jesus_tribute_to_john_the_baptist",
+        "beheading_john_baptist_herod"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 1:1-8",
@@ -3082,7 +5120,31 @@
         "reference": "Mateo 16:16",
         "text": "Y respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente."
       },
-      "event_ids": [],
+      "event_ids": [
+        "call_peter_andrew",
+        "sermon_beatitudes_kingdom",
+        "lord_prayer_teaching",
+        "parable_two_foundations",
+        "healing_peter_mother_in_law",
+        "stilling_storm_galilee",
+        "commissioning_twelve_apostles",
+        "sabbath_lord_plucking_grain",
+        "feeding_five_thousand_bread",
+        "jesus_walks_on_water",
+        "peters_confession_cesarea",
+        "first_announcement_death_rebuke",
+        "transfiguration_on_mountain",
+        "shekel_in_fish_mouth",
+        "rich_young_ruler_inquiry",
+        "triumphal_entry_jerusalem",
+        "olivet_discourse_end_times",
+        "last_supper_new_covenant",
+        "agony_in_gethsemane_prayer",
+        "arrest_jesus_gethsemane_malchus",
+        "trial_before_caiaphas_denial",
+        "resurrection_empty_tomb_women",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 8:29",
@@ -3126,7 +5188,18 @@
         "reference": "Mateo 4:19",
         "text": "Y díceles: Venid en pos de mí, y os haré pescadores de hombres."
       },
-      "event_ids": [],
+      "event_ids": [
+        "call_peter_andrew",
+        "sermon_beatitudes_kingdom",
+        "lord_prayer_teaching",
+        "parable_two_foundations",
+        "stilling_storm_galilee",
+        "commissioning_twelve_apostles",
+        "feeding_five_thousand_bread",
+        "peters_confession_cesarea",
+        "olivet_discourse_end_times",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 1:40-42",
@@ -3169,7 +5242,19 @@
         "reference": "Mateo 4:21",
         "text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó."
       },
-      "event_ids": [],
+      "event_ids": [
+        "call_james_john_zebedee",
+        "sermon_beatitudes_kingdom",
+        "lord_prayer_teaching",
+        "parable_two_foundations",
+        "stilling_storm_galilee",
+        "commissioning_twelve_apostles",
+        "peters_confession_cesarea",
+        "transfiguration_on_mountain",
+        "olivet_discourse_end_times",
+        "agony_in_gethsemane_prayer",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 3:17",
@@ -3212,7 +5297,21 @@
         "reference": "Mateo 4:21",
         "text": "Y pasando de allí vió otros dos hermanos, Jacobo, hijo de Zebedeo, y Juan su hermano, en el barco con Zebedeo, su padre, que remendaban sus redes; y los llamó."
       },
-      "event_ids": [],
+      "event_ids": [
+        "call_james_john_zebedee",
+        "sermon_beatitudes_kingdom",
+        "lord_prayer_teaching",
+        "parable_two_foundations",
+        "stilling_storm_galilee",
+        "commissioning_twelve_apostles",
+        "peters_confession_cesarea",
+        "transfiguration_on_mountain",
+        "triumphal_entry_jerusalem",
+        "olivet_discourse_end_times",
+        "last_supper_new_covenant",
+        "agony_in_gethsemane_prayer",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 13:23",
@@ -3256,7 +5355,11 @@
         "reference": "Mateo 10:3",
         "text": "Felipe, y Bartolomé; Tomás, y Mateo el publicano; Jacobo hijo de Alfeo, y Lebeo, por sobrenombre Tadeo;"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "feeding_five_thousand_bread",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 1:43-46",
@@ -3300,7 +5403,10 @@
         "reference": "Mateo 10:3",
         "text": "Felipe, y Bartolomé; Tomás, y Mateo el publicano; Jacobo hijo de Alfeo, y Lebeo, por sobrenombre Tadeo;"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 1:45-51",
@@ -3343,7 +5449,10 @@
         "reference": "Mateo 10:3",
         "text": "Felipe, y Bartolomé; Tomás, y Mateo el publicano; Jacobo hijo de Alfeo, y Lebeo, por sobrenombre Tadeo;"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 11:16",
@@ -3387,7 +5496,11 @@
         "reference": "Mateo 9:9",
         "text": "Y pasando Jesús de allí, vió á un hombre que estaba sentado al banco de los públicos tributos, el cual se llamaba Mateo; y dícele: Sígueme. Y se levantó, y le siguió."
       },
-      "event_ids": [],
+      "event_ids": [
+        "call_matthew_publican",
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 2:14-17",
@@ -3430,7 +5543,10 @@
         "reference": "Mateo 10:3",
         "text": "Felipe, y Bartolomé; Tomás, y Mateo el publicano; Jacobo hijo de Alfeo, y Lebeo, por sobrenombre Tadeo;"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:40",
@@ -3473,7 +5589,10 @@
         "reference": "Mateo 10:3",
         "text": "Felipe, y Bartolomé; Tomás, y Mateo el publicano; Jacobo hijo de Alfeo, y Lebeo, por sobrenombre Tadeo;"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 14:22",
@@ -3516,7 +5635,10 @@
         "reference": "Mateo 10:4",
         "text": "Simón el Cananita y Judas Iscariote, que también le entregó."
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "great_commission_galilee"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 6:15",
@@ -3559,7 +5681,12 @@
         "reference": "Mateo 26:14-15",
         "text": "Entonces uno de los doce, que se llamaba Judas Iscariote, fué á los príncipes de los sacerdotes,"
       },
-      "event_ids": [],
+      "event_ids": [
+        "commissioning_twelve_apostles",
+        "anointing_at_bethany_judas",
+        "last_supper_new_covenant",
+        "arrest_jesus_gethsemane_malchus"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Mateo 27:3-10",
@@ -3605,7 +5732,13 @@
         "reference": "Mateo 2:16",
         "text": "Herodes entonces, como se vió burlado de los magos, se enojó mucho, y envió, y mató á todos los niños que había en Bethlehem y en todos sus términos, de edad de dos años abajo, conforme al tiempo que había entendido de los magos."
       },
-      "event_ids": [],
+      "event_ids": [
+        "arrival_magi_jerusalem",
+        "prophecy_ruler_bethlehem",
+        "angelic_warning_flight_egypt",
+        "massacre_innocents_bethlehem",
+        "return_from_egypt_to_nazareth"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 1:5"
@@ -3649,7 +5782,9 @@
         "reference": "Mateo 14:1",
         "text": "EN aquel tiempo Herodes el tetrarca oyó la fama de Jesús,"
       },
-      "event_ids": [],
+      "event_ids": [
+        "beheading_john_baptist_herod"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 6:14-29",
@@ -3696,7 +5831,9 @@
         "reference": "Mateo 14:8",
         "text": "Y ella, instruída primero de su madre, dijo: Dame aquí en un plato la cabeza de Juan el Bautista."
       },
-      "event_ids": [],
+      "event_ids": [
+        "beheading_john_baptist_herod"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 6:19-28"
@@ -3738,7 +5875,9 @@
         "reference": "Mateo 14:6",
         "text": "Mas celebrándose el día del nacimiento de Herodes, la hija de Herodías danzó en medio, y agradó á Herodes."
       },
-      "event_ids": [],
+      "event_ids": [
+        "beheading_john_baptist_herod"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 6:22-28"
@@ -3782,7 +5921,10 @@
         "reference": "Mateo 27:24",
         "text": "Y viendo Pilato que nada adelantaba, antes se hacía más alboroto, tomando agua se lavó las manos delante del pueblo, diciendo: Inocente soy yo de la sangre de este justo veréis lo vosotros."
       },
-      "event_ids": [],
+      "event_ids": [
+        "trial_before_pilate_barabbas",
+        "burial_joseph_arimathea_guard"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:1-15",
@@ -3828,7 +5970,9 @@
         "reference": "Mateo 27:19",
         "text": "Y estando él sentado en el tribunal, su mujer envió á él, diciendo: No tengas que ver con aquel justo; porque hoy he padecido muchas cosas en sueños por causa de él."
       },
-      "event_ids": [],
+      "event_ids": [
+        "trial_before_pilate_barabbas"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Mateo 27:19"
@@ -3870,7 +6014,13 @@
         "reference": "Mateo 26:63-64",
         "text": "Mas Jesús callaba. Respondiendo el pontífice, le dijo: Te conjuro por el Dios viviente, que nos digas si eres tú el Cristo, Hijo de Dios."
       },
-      "event_ids": [],
+      "event_ids": [
+        "cleansing_temple_merchants",
+        "seven_woes_scribes_pharisees",
+        "anointing_at_bethany_judas",
+        "trial_before_caiaphas_denial",
+        "trial_before_pilate_barabbas"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 11:49-52",
@@ -3914,7 +6064,9 @@
         "reference": "Mateo 27:57",
         "text": "Y como fué la tarde del día, vino un hombre rico de Arimatea, llamado José, el cual también había sido discípulo de Jesús."
       },
-      "event_ids": [],
+      "event_ids": [
+        "burial_joseph_arimathea_guard"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Juan 3:1-21",
@@ -3958,7 +6110,9 @@
         "reference": "Mateo 27:57",
         "text": "Y como fué la tarde del día, vino un hombre rico de Arimatea, llamado José, el cual también había sido discípulo de Jesús."
       },
-      "event_ids": [],
+      "event_ids": [
+        "burial_joseph_arimathea_guard"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:42-46",
@@ -4002,7 +6156,9 @@
         "reference": "Mateo 27:26",
         "text": "Entonces les soltó á Barrabás: y habiendo azotado á Jesús, le entregó para ser crucificado."
       },
-      "event_ids": [],
+      "event_ids": [
+        "trial_before_pilate_barabbas"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:6-15",
@@ -4046,7 +6202,9 @@
         "reference": "Mateo 27:32",
         "text": "Y saliendo, hallaron á un Cireneo, que se llamaba Simón: á éste cargaron para que llevase su cruz."
       },
-      "event_ids": [],
+      "event_ids": [
+        "crucifixion_at_golgotha_death"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:21",
@@ -4089,7 +6247,9 @@
         "reference": "Mateo 8:10",
         "text": "Y oyendo Jesús, se maravilló, y dijo á los que le seguían: De cierto os digo, que ni aun en Israel he hallado fe tanta."
       },
-      "event_ids": [],
+      "event_ids": [
+        "centurion_servant_healed"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 7:1-10"
@@ -4131,7 +6291,9 @@
         "reference": "Mateo 15:28",
         "text": "Entonces respondiendo Jesús, dijo: Oh mujer, grande es tu fe; sea hecho contigo como quieres. Y fué sana su hija desde aquella hora."
       },
-      "event_ids": [],
+      "event_ids": [
+        "faith_canaanite_woman"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 7:24-30"
@@ -4173,7 +6335,12 @@
         "reference": "Mateo 28:1",
         "text": "Y LA víspera de sábado, que amanece para el primer día de la semana, vino María Magdalena, y la otra María, á ver el sepulcro."
       },
-      "event_ids": [],
+      "event_ids": [
+        "crucifixion_at_golgotha_death",
+        "signs_at_death_veil_earthquake",
+        "burial_joseph_arimathea_guard",
+        "resurrection_empty_tomb_women"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 16:1-9",
@@ -4217,7 +6384,9 @@
         "reference": "Mateo 1:1",
         "text": "LIBRO de la generación de Jesucristo, hijo de David, hijo de Abraham."
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Gálatas 3:16",
@@ -4260,7 +6429,10 @@
         "reference": "Mateo 1:1",
         "text": "LIBRO de la generación de Jesucristo, hijo de David, hijo de Abraham."
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "sabbath_lord_plucking_grain"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Romanos 1:3",
@@ -4303,7 +6475,9 @@
         "reference": "Mateo 1:12",
         "text": "Y después de la transmigración de Babilonia, Jechônías engendró á Salathiel: y Salathiel engendró á Zorobabel:"
       },
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 3:27",
@@ -4346,7 +6520,9 @@
         "reference": "Mateo 9:18",
         "text": "Hablando él estas cosas á ellos, he aquí vino un principal, y le adoraba, diciendo: Mi hija es muerta poco ha: mas ven y pon tu mano sobre ella, y vivirá."
       },
-      "event_ids": [],
+      "event_ids": [
+        "resurrection_jairus_daughter"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 5:21-43",
@@ -4389,7 +6565,9 @@
         "reference": "Mateo 9:22",
         "text": "Mas Jesús volviéndose, y mirándola, dijo: Confía, hija, tu fe te ha salvado. Y la mujer fué salva desde aquella hora."
       },
-      "event_ids": [],
+      "event_ids": [
+        "resurrection_jairus_daughter"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 5:25-34",
@@ -4432,7 +6610,9 @@
         "reference": "Mateo 9:29",
         "text": "Entonces tocó los ojos de ellos, diciendo: Conforme á vuestra fe os sea hecho."
       },
-      "event_ids": [],
+      "event_ids": [
+        "healing_two_blind_men_mute"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Mateo 20:29-34"
@@ -4517,7 +6697,9 @@
         "reference": "Mateo 19:22",
         "text": "Y oyendo el mancebo esta palabra, se fué triste, porque tenía muchas posesiones."
       },
-      "event_ids": [],
+      "event_ids": [
+        "rich_young_ruler_inquiry"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 10:17-27",
@@ -4560,7 +6742,10 @@
         "reference": "Mateo 27:56",
         "text": "Entre las cuales estaban María Magdalena, y María la madre de Jacobo y de José, y la madre de los hijos de Zebedeo."
       },
-      "event_ids": [],
+      "event_ids": [
+        "signs_at_death_veil_earthquake",
+        "resurrection_empty_tomb_women"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:40",
@@ -4607,7 +6792,9 @@
         "reference": "Mateo 20:20-21",
         "text": "Entonces se llegó á él la madre de los hijos de Zebedeo con sus hijos, adorándo le, y pidiéndole algo."
       },
-      "event_ids": [],
+      "event_ids": [
+        "signs_at_death_veil_earthquake"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:40",
@@ -4650,7 +6837,9 @@
         "reference": "Mateo 27:54",
         "text": "Y el centurión, y los que estaban con él guardando á Jesús, visto el terremoto, y las cosas que habían sido hechas, temieron en gran manera, diciendo: Verdaderamente Hijo de Dios era éste."
       },
-      "event_ids": [],
+      "event_ids": [
+        "signs_at_death_veil_earthquake"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 15:39",
@@ -4693,7 +6882,9 @@
         "reference": "Mateo 9:6",
         "text": "Pues para que sepáis que el Hijo del hombre tiene potestad en la tierra de perdonar pecados, (dice entonces al paralítico): Levántate, toma tu cama, y vete á tu casa."
       },
-      "event_ids": [],
+      "event_ids": [
+        "forgiveness_paralyzed_capernaum"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 2:1-12",
@@ -4736,7 +6927,9 @@
         "reference": "Mateo 8:3",
         "text": "Y extendiendo Jesús su mano, le tocó, diciendo: Quiero; sé limpio. Y luego su lepra fué limpiada."
       },
-      "event_ids": [],
+      "event_ids": [
+        "cleansing_leper_faith"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 1:40-45",
@@ -4779,7 +6972,10 @@
         "reference": "Mateo 26:57",
         "text": "Y ellos, prendido Jesús, le llevaron á Caifás pontífice, donde los escribas y los ancianos estaban juntos."
       },
-      "event_ids": [],
+      "event_ids": [
+        "seven_woes_scribes_pharisees",
+        "trial_before_caiaphas_denial"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Lucas 3:2",
@@ -4823,7 +7019,9 @@
         "reference": "Mateo 26:51",
         "text": "Y he aquí, uno de los que estaban con Jesús, extendiendo la mano, sacó su espada, é hiriendo á un siervo del pontífice, le quitó la oreja."
       },
-      "event_ids": [],
+      "event_ids": [
+        "arrest_jesus_gethsemane_malchus"
+      ],
       "notable_overlaps": [],
       "cross_references_nt": [
         "Marcos 14:47",
@@ -4851,7 +7049,12 @@
       "modern_equiv": "Beit Lahm (Cisjordania / Palestina)",
       "latitude": 31.7054,
       "longitude": 35.2024,
-      "event_ids": [],
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "fulfillment_prophecy_emanuel",
+        "adoration_magi_gifts",
+        "massacre_innocents_bethlehem"
+      ],
       "key_verse": {
         "reference": "Mateo 2:1",
         "text": "Y COMO fué nacido Jesús en Bethlehem de Judea en días del rey Herodes, he aquí unos magos vinieron del oriente á Jerusalem,"
@@ -4870,7 +7073,10 @@
       "modern_equiv": "Nazaret (Israel)",
       "latitude": 32.7019,
       "longitude": 35.3033,
-      "event_ids": [],
+      "event_ids": [
+        "announcement_to_joseph",
+        "return_from_egypt_to_nazareth"
+      ],
       "key_verse": {
         "reference": "Mateo 2:23",
         "text": "Y vino, y habitó en la ciudad que se llama Nazaret: para que se cumpliese lo que fué dicho por los profetas, que había de ser llamado Nazareno."
@@ -4890,7 +7096,9 @@
       "modern_equiv": "Egipto",
       "latitude": 30.0444,
       "longitude": 31.2357,
-      "event_ids": [],
+      "event_ids": [
+        "angelic_warning_flight_egypt"
+      ],
       "key_verse": {
         "reference": "Mateo 2:15",
         "text": "Y estuvo allá hasta la muerte de Herodes: para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: De Egipto llamé á mi Hijo."
@@ -4909,7 +7117,10 @@
       "modern_equiv": "Río Jordán (Frontera Israel/Jordania)",
       "latitude": 31.8389,
       "longitude": 35.5444,
-      "event_ids": [],
+      "event_ids": [
+        "john_rebukes_pharisees",
+        "baptism_jesus_jordan_trinity"
+      ],
       "key_verse": {
         "reference": "Mateo 3:13",
         "text": "Entonces Jesús vino de Galilea á Juan al Jordán, para ser bautizado de él."
@@ -4927,7 +7138,11 @@
       "modern_equiv": "Desierto de Judea (Israel)",
       "latitude": 31.65,
       "longitude": 35.4,
-      "event_ids": [],
+      "event_ids": [
+        "ministry_john_baptist_wilderness",
+        "temptation_bread_word",
+        "temptation_kingdoms_world"
+      ],
       "key_verse": {
         "reference": "Mateo 4:1",
         "text": "ENTONCES Jesús fué llevado del Espíritu al desierto, para ser tentado del diablo."
@@ -4946,7 +7161,30 @@
       "modern_equiv": "Kfar Nahum (Israel)",
       "latitude": 32.8811,
       "longitude": 35.575,
-      "event_ids": [],
+      "event_ids": [
+        "jesus_begins_galilean_ministry",
+        "first_miracles_and_crowds",
+        "cleansing_leper_faith",
+        "centurion_servant_healed",
+        "healing_peter_mother_in_law",
+        "forgiveness_paralyzed_capernaum",
+        "call_matthew_publican",
+        "resurrection_jairus_daughter",
+        "healing_two_blind_men_mute",
+        "compassion_laborers_harvest",
+        "commissioning_twelve_apostles",
+        "john_baptist_messengers_inquiry",
+        "jesus_tribute_to_john_the_baptist",
+        "woes_unrepentant_galilean_cities",
+        "come_to_me_gentle_yoke",
+        "sabbath_lord_plucking_grain",
+        "healing_withered_hand_sabbath",
+        "blasphemy_holy_spirit_beelzebub",
+        "sign_of_jonah_requested",
+        "parables_hidden_treasure_pearl",
+        "beheading_john_baptist_herod",
+        "shekel_in_fish_mouth"
+      ],
       "key_verse": {
         "reference": "Mateo 4:13",
         "text": "Y dejando á Nazaret, vino y habitó en Capernaum, ciudad marítima, en los confines de Zabulón y de Nephtalim:"
@@ -4967,7 +7205,17 @@
       "modern_equiv": "Lago Kinneret (Israel)",
       "latitude": 32.8333,
       "longitude": 35.5833,
-      "event_ids": [],
+      "event_ids": [
+        "call_peter_andrew",
+        "call_james_john_zebedee",
+        "cost_following_jesus",
+        "stilling_storm_galilee",
+        "parable_sower_four_soils",
+        "parable_wheat_and_tares",
+        "feeding_five_thousand_bread",
+        "jesus_walks_on_water",
+        "great_commission_galilee"
+      ],
       "key_verse": {
         "reference": "Mateo 4:18",
         "text": "Y andando Jesús junto á la mar de Galilea, vió á dos hermanos, Simón, que es llamado Pedro, y Andrés su hermano, que echaban la red en la mar; porque eran pescadores."
@@ -4987,7 +7235,23 @@
       "modern_equiv": "Monte Eremos (Israel)",
       "latitude": 32.8806,
       "longitude": 35.5558,
-      "event_ids": [],
+      "event_ids": [
+        "sermon_beatitudes_kingdom",
+        "disciples_salt_light",
+        "christ_fulfills_the_law",
+        "teaching_murder_anger",
+        "teaching_adultery_purity",
+        "teaching_marriage_oaths",
+        "love_your_enemies",
+        "almsgiving_in_secret",
+        "lord_prayer_teaching",
+        "fasting_and_treasures_heaven",
+        "do_not_worry_providence",
+        "judge_not_beam_eye",
+        "ask_seek_knock",
+        "narrow_gate_two_trees",
+        "parable_two_foundations"
+      ],
       "key_verse": {
         "reference": "Mateo 5:1",
         "text": "Y VIENDO las gentes, subió al monte; y sentándose, se llegaron á él sus discípulos."
@@ -5005,7 +7269,9 @@
       "modern_equiv": "Umm Qais (Jordania)",
       "latitude": 32.6547,
       "longitude": 35.6881,
-      "event_ids": [],
+      "event_ids": [
+        "healing_gadarene_demoniacs"
+      ],
       "key_verse": {
         "reference": "Mateo 8:28",
         "text": "Y como él hubo llegado en la otra ribera al país de los Gergesenos, le vinieron al encuentro dos endemoniados que salían de los sepulcros, fieros en gran manera, que nadie podía pasar por aquel camino."
@@ -5023,7 +7289,9 @@
       "modern_equiv": "Sur de Líbano (Tiro y Sidón)",
       "latitude": 33.2708,
       "longitude": 35.2039,
-      "event_ids": [],
+      "event_ids": [
+        "faith_canaanite_woman"
+      ],
       "key_verse": {
         "reference": "Mateo 15:21",
         "text": "Y saliendo Jesús de allí, se fué á las partes de Tiro y de Sidón."
@@ -5041,7 +7309,10 @@
       "modern_equiv": "Banias (Golán)",
       "latitude": 33.2472,
       "longitude": 35.6931,
-      "event_ids": [],
+      "event_ids": [
+        "peters_confession_cesarea",
+        "first_announcement_death_rebuke"
+      ],
       "key_verse": {
         "reference": "Mateo 16:13",
         "text": "Y viniendo Jesús á las partes de Cesarea de Filipo, preguntó á sus discípulos, diciendo: ¿Quién dicen los hombres que es el Hijo del hombre?"
@@ -5059,7 +7330,9 @@
       "modern_equiv": "Monte Hermón (Frontera Israel/Siria/Líbano)",
       "latitude": 33.4167,
       "longitude": 35.85,
-      "event_ids": [],
+      "event_ids": [
+        "transfiguration_on_mountain"
+      ],
       "key_verse": {
         "reference": "Mateo 17:1",
         "text": "Y DESPUÉS de seis días, Jesús toma á Pedro, y á Jacobo, y á Juan su hermano, y los lleva aparte á un monte alto:"
@@ -5077,7 +7350,9 @@
       "modern_equiv": "Jericó (Cisjordania / Palestina)",
       "latitude": 31.8667,
       "longitude": 35.45,
-      "event_ids": [],
+      "event_ids": [
+        "rich_young_ruler_inquiry"
+      ],
       "key_verse": {
         "reference": "Mateo 20:29",
         "text": "Entonces saliendo ellos de Jericó, le seguía gran compañía."
@@ -5095,7 +7370,9 @@
       "modern_equiv": "El-Azariya (Cisjordania)",
       "latitude": 31.7708,
       "longitude": 35.2608,
-      "event_ids": [],
+      "event_ids": [
+        "anointing_at_bethany_judas"
+      ],
       "key_verse": {
         "reference": "Mateo 21:1",
         "text": "Y COMO se acercaron á Jerusalem, y vinieron á Bethfagé, al monte de las Olivas, entonces Jesús envió dos discípulos,"
@@ -5114,7 +7391,17 @@
       "modern_equiv": "Jerusalén (Israel/Palestina)",
       "latitude": 31.7683,
       "longitude": 35.2137,
-      "event_ids": [],
+      "event_ids": [
+        "arrival_magi_jerusalem",
+        "prophecy_ruler_bethlehem",
+        "temptation_pinnacle_temple",
+        "triumphal_entry_jerusalem",
+        "cleansing_temple_merchants",
+        "seven_woes_scribes_pharisees",
+        "last_supper_new_covenant",
+        "trial_before_caiaphas_denial",
+        "trial_before_pilate_barabbas"
+      ],
       "key_verse": {
         "reference": "Mateo 21:10",
         "text": "Y entrando él en Jerusalem, toda la ciudad se alborotó, diciendo. ¿Quién es éste?"
@@ -5134,7 +7421,9 @@
       "modern_equiv": "Monte de los Olivos (Jerusalén)",
       "latitude": 31.7781,
       "longitude": 35.2447,
-      "event_ids": [],
+      "event_ids": [
+        "olivet_discourse_end_times"
+      ],
       "key_verse": {
         "reference": "Mateo 24:3",
         "text": "Y sentándose él en el monte de las Olivas, se llegaron á él los discípulos aparte, diciendo: Dinos, ¿cuándo serán estas cosas, y qué señal habrá de tu venida, y del fin del mundo?"
@@ -5153,7 +7442,10 @@
       "modern_equiv": "Getsemaní (Jerusalén)",
       "latitude": 31.7794,
       "longitude": 35.2403,
-      "event_ids": [],
+      "event_ids": [
+        "agony_in_gethsemane_prayer",
+        "arrest_jesus_gethsemane_malchus"
+      ],
       "key_verse": {
         "reference": "Mateo 26:36",
         "text": "Entonces llegó Jesús con ellos á la aldea que se llama Gethsemaní, y dice á sus discípulos: Sentaos aquí, hasta que vaya allí y ore."
@@ -5171,7 +7463,12 @@
       "modern_equiv": "Santo Sepulcro / Calvario de Gordon (Jerusalén)",
       "latitude": 31.7836,
       "longitude": 35.2297,
-      "event_ids": [],
+      "event_ids": [
+        "crucifixion_at_golgotha_death",
+        "signs_at_death_veil_earthquake",
+        "burial_joseph_arimathea_guard",
+        "resurrection_empty_tomb_women"
+      ],
       "key_verse": {
         "reference": "Mateo 27:33",
         "text": "Y como llegaron al lugar que se llamaba Gólgotha, que es dicho, El lugar de la calavera,"
