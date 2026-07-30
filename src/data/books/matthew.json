@@ -113,7 +113,17 @@
         "question_matthew_genealogy_purpose",
         "question_virgin_birth_necessity"
       ],
-      "event_ids": []
+      "event_ids": [
+        "genealogy_jesus_royal_line",
+        "announcement_to_joseph",
+        "fulfillment_prophecy_emanuel",
+        "arrival_magi_jerusalem",
+        "prophecy_ruler_bethlehem",
+        "adoration_magi_gifts",
+        "angelic_warning_flight_egypt",
+        "massacre_innocents_bethlehem",
+        "return_from_egypt_to_nazareth"
+      ]
     },
     {
       "id": "nb_preparation_baptism",
@@ -154,7 +164,18 @@
       "key_question_ids": [
         "question_kingdom_of_heaven_vs_god"
       ],
-      "event_ids": []
+      "event_ids": [
+        "ministry_john_baptist_wilderness",
+        "john_rebukes_pharisees",
+        "baptism_jesus_jordan_trinity",
+        "temptation_bread_word",
+        "temptation_pinnacle_temple",
+        "temptation_kingdoms_world",
+        "jesus_begins_galilean_ministry",
+        "call_peter_andrew",
+        "call_james_john_zebedee",
+        "first_miracles_and_crowds"
+      ]
     },
     {
       "id": "nb_sermon_on_mount",
@@ -191,7 +212,23 @@
       "key_question_ids": [
         "question_fulfilled_law_meaning"
       ],
-      "event_ids": []
+      "event_ids": [
+        "sermon_beatitudes_kingdom",
+        "disciples_salt_light",
+        "christ_fulfills_the_law",
+        "teaching_murder_anger",
+        "teaching_adultery_purity",
+        "teaching_marriage_oaths",
+        "love_your_enemies",
+        "almsgiving_in_secret",
+        "lord_prayer_teaching",
+        "fasting_and_treasures_heaven",
+        "do_not_worry_providence",
+        "judge_not_beam_eye",
+        "ask_seek_knock",
+        "narrow_gate_two_trees",
+        "parable_two_foundations"
+      ]
     },
     {
       "id": "nb_galilean_ministry_miracles",
@@ -231,7 +268,20 @@
         "theme_discipleship_cost"
       ],
       "key_question_ids": [],
-      "event_ids": []
+      "event_ids": [
+        "cleansing_leper_faith",
+        "centurion_servant_healed",
+        "healing_peter_mother_in_law",
+        "cost_following_jesus",
+        "stilling_storm_galilee",
+        "healing_gadarene_demoniacs",
+        "forgiveness_paralyzed_capernaum",
+        "call_matthew_publican",
+        "resurrection_jairus_daughter",
+        "healing_two_blind_men_mute",
+        "compassion_laborers_harvest",
+        "commissioning_twelve_apostles"
+      ]
     },
     {
       "id": "nb_parables_kingdom_opposition",
@@ -402,7 +452,2424 @@
       "event_ids": []
     }
   ],
-  "timeline_events": [],
+  "timeline_events": [
+    {
+      "id": "genealogy_jesus_royal_line",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Genealogía Real e Inerrante de Jesucristo",
+      "short_name": "Genealogía Real",
+      "category": "genealogy",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 3996,
+        "exact_date_note": "4 a.C.",
+        "duration_days": null,
+        "duration_note": "Registro histórico"
+      },
+      "location_id": "bethlehem_judea",
+      "chapter_start": 1,
+      "verse_start_ref": 1,
+      "chapter_end": 1,
+      "verse_end_ref": 17,
+      "narrative": "El registro formal e inerrante del libro de la genealogía de Jesucristo abre el Nuevo Testamento demostrando sus derechos legales inalienables. Mateo organiza 42 generaciones divididas en tres grupos de 14 patriarcas: la primera etapa abarca desde el pacto con Abraham hasta el establecimiento del trono del Rey David; la segunda abarca desde la monarquía davídica hasta la deportación a Babilonia; y la tercera etapa va desde la repatriación post-exílica hasta la llegada de José, el esposo de María, de la cual nació Jesús, llamado el Cristo. A diferencia de las genealogías rabínicas tradicionales, Mateo incluye providencialmente a cinco mujeres (Tamar, Rahab, Rut, la esposa de Urías y María), prefigurando que la gracia redentora del Rey salvador alcanzaría a todas las naciones del mundo sin distinción de origen.",
+      "historical_context": "Los registros genealógicos eran custodiados estrictamente en el Templo de Jerusalén para certificar la herencia de las tribus y la pureza del sacerdocio.",
+      "theological_teaching": "Demuestra la fidelidad inalterable de Dios cumpliendo el Pacto Abrahámico y el Pacto Davídico a través de las edades.",
+      "messianic_connection": "Jesucristo es el legítimo Hijo de David e Hijo de Abraham que hereda el trono prometido.",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary",
+        "abraham",
+        "david",
+        "zerubbabel"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_son_of_david"
+      ],
+      "question_ids": [
+        "question_matthew_genealogy_purpose"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 1,
+          "verse_start": 1,
+          "verse_end": 17
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 1:1",
+        "text": "LIBRO de la generación de Jesucristo, hijo de David, hijo de Abraham."
+      },
+      "cross_references_nt": [
+        "Lucas 3:23-38",
+        "Gálatas 3:16"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "announcement_to_joseph",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Anunciación Angélica a José en Sueños",
+      "short_name": "Anuncio a José",
+      "category": "messianic",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 3996,
+        "exact_date_note": "4 a.C.",
+        "duration_days": null,
+        "duration_note": "Visión nocturna"
+      },
+      "location_id": "nazareth",
+      "chapter_start": 1,
+      "verse_start_ref": 18,
+      "chapter_end": 1,
+      "verse_end_ref": 21,
+      "narrative": "Estando María desposada con José, antes de que convivieran juntos, se halló que había concebido del Espíritu Santo. José su marido, como era un hombre justo y no quería infamarla públicamente, resolvió repudiarla en secreto para proteger su vida. Mientras pensaba en esto, un ángel del Señor se le apareció en sueños diciendo: 'José, hijo de David, no temas recibir a María tu mujer, porque lo que en ella es engendrado, del Espíritu Santo es. Y dará a luz un hijo, y llamarás su nombre JESÚS, porque él salvará a su pueblo de sus pecados'. Este anuncio divino consoló y guió el corazón de José para asumir su rol paterno legal.",
+      "historical_context": "El desposorio judío (Kiddushin) era un compromiso legalmente vinculante que solo podía romperse mediante un divorcio formal.",
+      "theological_teaching": "La justicia piadosa combinada con la obediencia a la revelación divina abre el camino para la acción del Espíritu Santo.",
+      "messianic_connection": "Revelación del nombre divino JESÚS (Jehová es Salvación) e indicación de su misión expiatoria.",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_atonement_redemption"
+      ],
+      "question_ids": [
+        "question_virgin_birth_necessity"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 1,
+          "verse_start": 18,
+          "verse_end": 21
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 1:21",
+        "text": "Y parirá un hijo, y llamarás su nombre JESUS, porque él salvará á su pueblo de sus pecados."
+      },
+      "cross_references_nt": [
+        "Lucas 1:31",
+        "Hechos 4:12"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "fulfillment_prophecy_emanuel",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "El Cumplimiento Profético del Nacimiento de Emanuel",
+      "short_name": "Concepción de Emanuel",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 3996,
+        "exact_date_note": "4 a.C.",
+        "duration_days": null,
+        "duration_note": "Nacimiento virginal"
+      },
+      "location_id": "bethlehem_judea",
+      "chapter_start": 1,
+      "verse_start_ref": 22,
+      "chapter_end": 1,
+      "verse_end_ref": 25,
+      "narrative": "Todo esto aconteció para que se cumpliese lo dicho por el Señor por medio del profeta Isaías: 'He aquí, una virgen concebirá y dará a luz un hijo, y llamarás su nombre Emanuel, que traducido es: Dios con nosotros'. Y despertando José del sueño, hizo como el ángel del Señor le había mandado y recibió a su mujer. Pero no la conoció intencionalmente hasta que dio a luz a su hijo primogénito, y le puso por nombre JESÚS. De este modo se unieron la obediencia de los padres terrenales y la fidelidad profética de Dios.",
+      "historical_context": "Cita directa del texto hebreo de Isaías 7:14 adaptado por Mateo al texto griego de la Septuaginta (Parthenos = virgen).",
+      "theological_teaching": "Afirmación ontológica de la plena Deidad encarnada en Jesucristo: Dios habitando entre los hombres.",
+      "messianic_connection": "Jesús es Emanuel, la presencia santa de Dios tabernaculizando con la humanidad.",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_son_of_david"
+      ],
+      "question_ids": [
+        "question_virgin_birth_necessity"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 1,
+          "verse_start": 22,
+          "verse_end": 25
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 1:23",
+        "text": "He aquí la virgen concebirá y parirá un hijo, Y llamarás su nombre Emmanuel, que declarado, es: Con nosotros Dios."
+      },
+      "cross_references_nt": [
+        "Isaías 7:14",
+        "Juan 1:14"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "arrival_magi_jerusalem",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Llegada de los Magos de Oriente a Jerusalén",
+      "short_name": "Llegada de los Magos",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 3998,
+        "exact_date_note": "2 a.C.",
+        "duration_days": null,
+        "duration_note": "Viaje de caravana"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 2,
+      "verse_start_ref": 1,
+      "chapter_end": 2,
+      "verse_end_ref": 4,
+      "narrative": "Cuando Jesús nació en Belén de Judea en días del rey Herodes, vinieron del Oriente a Jerusalén unos magos, preguntando: '¿Dónde está el Rey de los judíos, que ha nacido? Porque su estrella hemos visto en el Oriente, y venimos a adorarle'. Oyendo esto, el rey Herodes se turbó, y toda Jerusalén con él. Y convocados todos los principales sacerdotes y los escribas del pueblo, les preguntó dónde había de nacer el Cristo.",
+      "historical_context": "Los magos eran sabios astrónomos y eruditos de la aristocracia de Media y Persia dedicados a la ciencia y profecías orientales.",
+      "theological_teaching": "La búsqueda sincera de la verdad por parte de los gentiles frente a la apatía religiosa del pueblo de Israel.",
+      "messianic_connection": "Manifestación temprana de la soberanía de Cristo sobre las naciones gentiles.",
+      "key_people": [
+        "jesus",
+        "herod_the_great"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 1,
+          "verse_end": 4
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:2",
+        "text": "Diciendo: ¿Dónde está el Rey de los Judíos, que ha nacido? porque su estrella hemos visto en el oriente, y venimos á adorarle."
+      },
+      "cross_references_nt": [
+        "Números 24:17",
+        "Salmo 72:10"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "prophecy_ruler_bethlehem",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Consulta Profética sobre el Nacer en Belén",
+      "short_name": "Profecía de Belén",
+      "category": "messianic",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 3998,
+        "exact_date_note": "2 a.C.",
+        "duration_days": null,
+        "duration_note": "Consejo en el palacio"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 2,
+      "verse_start_ref": 5,
+      "chapter_end": 2,
+      "verse_end_ref": 8,
+      "narrative": "Los principales sacerdotes y escribas respondieron a Herodes: 'En Belén de Judea; porque así está escrito por el profeta: Y tú, Belén, de la tierra de Judá, no eres la más pequeña entre los príncipes de Judá; porque de ti saldrá un guiador, que apacentará a mi pueblo Israel'. Entonces Herodes, llamando en secreto a los magos, indagó de ellos el tiempo de la aparición de la estrella, y enviándolos a Belén, les dijo: 'Id allá y averiguad con diligencia acerca del niño; y cuando le halléis, hacédmelo saber, para que yo también vaya y le adore'.",
+      "historical_context": "Herodes tramaba en secreto asesinar al rival regio para proteger la continuidad de su propia dinastía idumea.",
+      "theological_teaching": "La Biblia contiene la verdad inerrante, pero el conocimiento intelectual sin fe ni obediencia no salva.",
+      "messianic_connection": "Cumplimiento explícito de la profecía de Miqueas 5:2 sobre el origen del Gobernante en Belén.",
+      "key_people": [
+        "jesus",
+        "herod_the_great"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 5,
+          "verse_end": 8
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:6",
+        "text": "Y tú, Bethlehem, de tierra de Judá, No eres muy pequeña entre los príncipes de Judá; Porque de ti saldrá un guiador, Que apacentará á mi pueblo Israel."
+      },
+      "cross_references_nt": [
+        "Miqueas 5:2",
+        "Juan 7:42"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "adoration_magi_gifts",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Adoración y Presentación de Presentes de los Magos",
+      "short_name": "Adoración de los Magos",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 3998,
+        "exact_date_note": "2 a.C.",
+        "duration_days": null,
+        "duration_note": "Adoración regia"
+      },
+      "location_id": "bethlehem_judea",
+      "chapter_start": 2,
+      "verse_start_ref": 9,
+      "chapter_end": 2,
+      "verse_end_ref": 12,
+      "narrative": "Ellos, habiendo oído al rey, se fueron; y he aquí la estrella que habían visto en el Oriente iba delante de ellos, hasta que llegando, se detuvo sobre donde estaba el niño. Y al ver la estrella, se regocijaron con muy grande gozo. Y al entrar en la casa, vieron al niño con su madre María, y postrándose, le adoraron; y abriendo sus tesoros, le ofrecieron presentes: oro, incienso y mirra. Pero siendo avisados por revelación en sueños que no volviesen a Herodes, regresaron a su tierra por otro camino.",
+      "historical_context": "Los tres presentes poseían alto valor comercial y simbolismo profético: oro para el Rey, incienso para el Dios/Sacerdote, y mirra para la sepultura del Hombre.",
+      "theological_teaching": "La adoración reverente postrada a los pies de Cristo ofreciendo lo mejor de los tesoros de la vida.",
+      "messianic_connection": "Reconocimiento profético de Cristo como Rey (oro), Dios (incienso) y Redentor mortal (mirra).",
+      "key_people": [
+        "jesus",
+        "mary",
+        "joseph"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_son_of_david",
+        "theme_great_commission_mission"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 9,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:11",
+        "text": "Y entrando en la casa, vieron al niño con su madre María, y postrándose, le adoraron; y abriendo sus tesoros, le ofrecieron dones, oro, é incienso y mirra."
+      },
+      "cross_references_nt": [
+        "Salmo 72:15",
+        "Isaías 60:6"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "angelic_warning_flight_egypt",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Advertencia Angélica y la Huida Providencial a Egipto",
+      "short_name": "Huida a Egipto",
+      "category": "exile",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 3998,
+        "exact_date_note": "2 a.C.",
+        "duration_days": null,
+        "duration_note": "Migración de refugio"
+      },
+      "location_id": "egypt",
+      "chapter_start": 2,
+      "verse_start_ref": 13,
+      "chapter_end": 2,
+      "verse_end_ref": 15,
+      "narrative": "Después que se retiraron los magos, he aquí un ángel del Señor apareció en sueños a José y dijo: 'Levántate y toma al niño y a su madre, y huye a Egipto, y permanece allá hasta que yo te diga; porque acontecerá que Herodes buscará al niño para matarlo'. Y él, levantándose de noche, tomó al niño y a su madre, y se fue a Egipto, y estuvo allí hasta la muerte de Herodes; para que se cumpliese lo que dijo el Señor por medio del profeta: 'De Egipto llamé a mi Hijo'.",
+      "historical_context": "Egipto poseía una nutrida comunidad judía (más de 1 millón de habitantes) fuera de la jurisdicción de Herodes el Grande.",
+      "theological_teaching": "La providencia divina guía y protege a los escogidos en medio de la persecución del mundo.",
+      "messianic_connection": "Cumplimiento tipológico de Oseas 11:1; Jesús revive la historia de Israel superando la prueba.",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary",
+        "herod_the_great"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 13,
+          "verse_end": 15
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:15",
+        "text": "Y estuvo allá hasta la muerte de Herodes: para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: De Egipto llamé á mi Hijo."
+      },
+      "cross_references_nt": [
+        "Oseas 11:1",
+        "Éxodo 4:22"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "massacre_innocents_bethlehem",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "La Masacre de los Niños Inocentes en Belén",
+      "short_name": "Matanza de los Inocentes",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 3998,
+        "exact_date_note": "2 a.C.",
+        "duration_days": null,
+        "duration_note": "Masacre real"
+      },
+      "location_id": "bethlehem_judea",
+      "chapter_start": 2,
+      "verse_start_ref": 16,
+      "chapter_end": 2,
+      "verse_end_ref": 18,
+      "narrative": "Herodes entonces, viéndose burlado por los magos, se enojó mucho, y mandó matar a todos los niños menores de dos años que había en Belén y en todos sus alrededores, conforme al tiempo que había inquirido de los magos. Entonces se cumplió lo dicho por el profeta Jeremías: 'Voz fue oída en Ramá, grande llanto y gemido; Raquel que llora a sus hijos, y no quiso ser consolada, porque perecieron'.",
+      "historical_context": "La crueldad de Herodes el Grande está ampliamente documentada por el historiador Flavio Josefo (ejecutó a su esposa y tres de sus hijos).",
+      "theological_teaching": "El odio furioso de los poderes tiránicos contra la llegada del Rey de Paz y el sufrimiento del inocente.",
+      "messianic_connection": "Cumplimiento del lamento profético de Jeremías 31:15 sobre el dolor del pueblo de Dios.",
+      "key_people": [
+        "jesus",
+        "herod_the_great"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 16,
+          "verse_end": 18
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:18",
+        "text": "Voz fué oída en Ramá, Grande lamentación, lloro y gemido: Rachêl que llora sus hijos, Y no quiso ser consolada, porque perecieron."
+      },
+      "cross_references_nt": [
+        "Jeremías 31:15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "return_from_egypt_to_nazareth",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_nativity_infancy",
+      "name": "El Retorno de Egipto y el Establecimiento en Nazaret",
+      "short_name": "Retorno a Nazaret",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4002,
+        "exact_date_note": "2 d.C.",
+        "duration_days": null,
+        "duration_note": "Asentamiento familiar"
+      },
+      "location_id": "nazareth",
+      "chapter_start": 2,
+      "verse_start_ref": 19,
+      "chapter_end": 2,
+      "verse_end_ref": 23,
+      "narrative": "Pero muerto Herodes, he aquí un ángel del Señor apareció en sueños a José en Egipto, diciendo: 'Levántate, toma al niño y a su madre, y vete a tierra de Israel, porque han muerto los que procuraban la muerte del niño'. Él se levantó, tomó al niño y a su madre, y vino a tierra de Israel. Pero oyendo que Arquelao reinaba en Judea en lugar de su padre Herodes, tuvo temor de ir allá; pero avisado por revelación en sueños, se fue a la región de Galilea, y vino y habitó en la ciudad que se llama Nazaret, para que se cumpliese lo que fue dicho por los profetas, que había de ser llamado nazareno.",
+      "historical_context": "Arquelao fue depuesto por Roma en el 6 d.C. por su brutalidad; Galilea era gobernada por Herodes Antipas en relativa paz.",
+      "theological_teaching": "La guía providencial paso a paso mediante el temor santo y la obediencia dócil.",
+      "messianic_connection": "Jesús es llamado Nazareno, conectando con la palabra hebrea Netzer (el Renuevo de Isaías 11:1).",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary",
+        "herod_the_great"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 2,
+          "verse_start": 19,
+          "verse_end": 23
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 2:23",
+        "text": "Y vino, y habitó en la ciudad que se llama Nazaret: para que se cumpliese lo que fué dicho por los profetas, que había de ser llamado Nazareno."
+      },
+      "cross_references_nt": [
+        "Isaías 11:1",
+        "Lucas 2:39-40"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "ministry_john_baptist_wilderness",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "La Proclamación del Bautista en el Desierto de Judea",
+      "short_name": "Predicación del Bautista",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Ministerio precursor"
+      },
+      "location_id": "judean_wilderness",
+      "chapter_start": 3,
+      "verse_start_ref": 1,
+      "chapter_end": 3,
+      "verse_end_ref": 6,
+      "narrative": "En aquellos días vino Juan el Bautista predicando en el desierto de Judea, y diciendo: 'Arrepentíos, porque el reino de los cielos se ha acercado'. Pues éste es aquel de quien habló el profeta Isaías, cuando dijo: 'Voz del que clama en el desierto: Preparad el camino del Señor, enderezad sus sendas'. Y Juan estaba vestido de pelo de camello, y tenía un cinto de cuero alrededor de sus lomos; y su comida era langostas y miel silvestre. Y salía a él Jerusalén, y toda Judea, y toda la provincia de alrededor del Jordán, y eran bautizados por él en el Jordán, confesando sus pecados.",
+      "historical_context": "El atuendo de Juan emulaba al del profeta Elías (2 Reyes 1:8), señalando la restauración del espíritu profético tras 400 años de silencio.",
+      "theological_teaching": "El arrepentimiento genuino confesando pecados es el requisito previo para recibir el Reino de Dios.",
+      "messianic_connection": "Juan es la voz precursora que prepara las mentes para la llegada del Rey Mesías.",
+      "key_people": [
+        "john_the_baptist",
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [
+        "question_kingdom_of_heaven_vs_god"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 3,
+          "verse_start": 1,
+          "verse_end": 6
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 3:3",
+        "text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas."
+      },
+      "cross_references_nt": [
+        "Isaías 40:3",
+        "Marcos 1:1-5",
+        "Lucas 3:1-6"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "john_rebukes_pharisees",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_preparation_baptism",
+      "name": "La Reprensión del Bautista a Fariseos y Saduceos",
+      "short_name": "Reprensión a los Fariseos",
+      "category": "judgment",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Discurso en el Jordán"
+      },
+      "location_id": "jordan_river",
+      "chapter_start": 3,
+      "verse_start_ref": 7,
+      "chapter_end": 3,
+      "verse_end_ref": 12,
+      "narrative": "Al ver Juan que muchos de los fariseos y de los saduceos venían a su bautismo, les decía: '¡Generación de víboras! ¿Quién os enseñó a huir de la ira venidera? Haced, pues, frutos dignos de arrepentimiento, y no penséis decir dentro de vosotros mismos: A Abraham tenemos por padre; porque yo os digo que Dios puede levantar hijos a Abraham aun de estas piedras. Y ya también el hacha está puesta a la raíz de los árboles; por tanto, todo árbol que no da buen fruto es cortado y echado en el fuego. Yo a la verdad os bautizo en agua para arrepentimiento; pero el que viene tras mí, cuyo calzado no soy digno de llevar, es más poderoso que yo; él os bautizará en Espíritu Santo y fuego'.",
+      "historical_context": "Fariseos (ortodoxia ritual) y saduceos (aristocracia sacerdotal) eran grupos rivales unificados por su presunción de linaje.",
+      "theological_teaching": "La herencia étnica o religiosa no salva; Dios exige frutos morales reales fruto del Espíritu Santo.",
+      "messianic_connection": "Cristo es el Juez que bautiza con el Espíritu Santo y limpia su era separando el trigo de la paja.",
+      "key_people": [
+        "john_the_baptist",
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_hypocrisy_judgment",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 3,
+          "verse_start": 7,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 3:11",
+        "text": "Yo á la verdad os bautizo en agua para arrepentimiento; mas el que viene tras mí, más poderoso es que yo; los zapatos del cual yo no soy digno de llevar; él os bautizará en Espíritu Santo y en fuego"
+      },
+      "cross_references_nt": [
+        "Lucas 3:7-17",
+        "Juan 1:26-27"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "baptism_jesus_jordan_trinity",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_preparation_baptism",
+      "name": "El Bautismo de Jesús y la Revelación de la Santísima Trinidad",
+      "short_name": "Bautismo Mesiánico",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Consagración divina"
+      },
+      "location_id": "jordan_river",
+      "chapter_start": 3,
+      "verse_start_ref": 13,
+      "chapter_end": 3,
+      "verse_end_ref": 17,
+      "narrative": "Entonces Jesús vino de Galilea a Juan al Jordán, para ser bautizado por él. Mas Juan se le oponía, diciendo: 'Yo necesito ser bautizado por ti, ¿y tú vienes a mí?'. Pero Jesús le respondió: 'Deja ahora, porque así conviene que cumplamos toda justicia'. Entonces le dejó. Y Jesús, después que fue bautizado, subió luego del agua; y he aquí los cielos le fueron abiertos, y vio al Espíritu de Dios que descendía como paloma, y venía sobre él. Y hubo una voz de los cielos, que decía: 'Este es mi Hijo amado, en quien tengo complacencia'.",
+      "historical_context": "Jesús se somete al bautismo no por necesidad de perdón personal, sino para identificarse con los pecadores y cumplir toda justicia legal.",
+      "theological_teaching": "Manifestación simultánea y clara de la Santísima Trinidad: el Hijo bautizado, el Espíritu descendiendo y el Padre hablando.",
+      "messianic_connection": "Unción oficial del Rey Mesías respaldada por la declaración del Padre celestial.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 3,
+          "verse_start": 13,
+          "verse_end": 17
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 3:17",
+        "text": "Y he aquí una voz de los cielos que decía: Este es mi Hijo amado, en el cual tengo contentamiento."
+      },
+      "cross_references_nt": [
+        "Marcos 1:9-11",
+        "Lucas 3:21-22",
+        "Juan 1:32-34"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "temptation_bread_word",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "La Primera Tentación: El Pan y la Palabra de Dios",
+      "short_name": "Tentación del Pan",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": 40,
+        "duration_note": "Ayuno de 40 días"
+      },
+      "location_id": "judean_wilderness",
+      "chapter_start": 4,
+      "verse_start_ref": 1,
+      "chapter_end": 4,
+      "verse_end_ref": 4,
+      "narrative": "Entonces Jesús fue llevado por el Espíritu al desierto, para ser tentado por el diablo. Y después de haber ayunado cuarenta días y cuarenta noches, tuvo hambre. Y vino a él el tentador, y le dijo: 'Si eres Hijo de Dios, dí que estas piedras se conviertan en pan'. Él respondió y dijo: 'Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios'. Jesús rechazó usar su poder divino egoístamente, sometiéndose a la providencia del Padre.",
+      "historical_context": "El ayuno de 40 días evoca los 40 años de prueba de Israel en el desierto y los ayunos de Moisés y Elías.",
+      "theological_teaching": "La Palabra de Dios es el alimento supremo del alma y la espada para vencer las tentaciones de la carne.",
+      "messianic_connection": "El Postrer Adán vence la concupiscencia donde Adán e Israel cayeron.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 1,
+          "verse_end": 4
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:4",
+        "text": "Mas él respondiendo, dijo: Escrito está: No con solo el pan vivirá el hombre, mas con toda palabra que sale de la boca de Dios."
+      },
+      "cross_references_nt": [
+        "Deuteronomio 8:3",
+        "Lucas 4:1-4"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "temptation_pinnacle_temple",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "La Segunda Tentación: El Pináculo del Templo y la Presunción",
+      "short_name": "Tentación del Pináculo",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Prueba espiritual"
+      },
+      "location_id": "jerusalem",
+      "chapter_start": 4,
+      "verse_start_ref": 5,
+      "chapter_end": 4,
+      "verse_end_ref": 7,
+      "narrative": "Entonces el diablo le llevó a la santa ciudad, y le puso sobre el pináculo del templo, y le dijo: 'Si eres Hijo de Dios, échate abajo; porque escrito está: A sus ángeles mandará cerca de ti, y, en sus manos te sostendrán, para que no tropieces con tu pie en piedra'. Jesús le dijo: 'Escrito está también: No tentarás al Señor tu Dios'. El Señor desenmascaró el uso torcido de las Escrituras por parte de Satanás.",
+      "historical_context": "El pináculo del Templo de Herodes sobresalía por encima del valle del Cedrón a una altura de más de 100 metros.",
+      "theological_teaching": "No se debe tentar a Dios exigiendo señales espectaculares o manipulando las promesas divinas con presunción.",
+      "messianic_connection": "Cristo rechaza la popularidad sensacionalista eligiendo el camino del Siervo Sufriente.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 5,
+          "verse_end": 7
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:7",
+        "text": "Jesús le dijo: Escrito está además: No tentarás al Señor tu Dios."
+      },
+      "cross_references_nt": [
+        "Deuteronomio 6:16",
+        "Salmo 91:11-12",
+        "Lucas 4:9-12"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "temptation_kingdoms_world",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_preparation_baptism",
+      "name": "La Tercera Tentación: Los Reinos del Mundo y la Adoración Única",
+      "short_name": "Reinos del Mundo",
+      "category": "messianic",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Victoria total"
+      },
+      "location_id": "judean_wilderness",
+      "chapter_start": 4,
+      "verse_start_ref": 8,
+      "chapter_end": 4,
+      "verse_end_ref": 11,
+      "narrative": "Otra vez le llevó el diablo a un monte muy alto, y le mostró todos los reinos del mundo y la gloria de ellos, y le dijo: 'Todo esto te daré, si postrado me adorares'. Entonces Jesús le dijo: 'Vete, Satanás, porque escrito está: Al Señor tu Dios adorarás, y a él solo servirás'. El diablo entonces le dejó; y he aquí vinieron ángeles y le servían. Jesús expulsó al diablo confirmando que la adoración pertenece únicamente a Dios.",
+      "historical_context": "Satanás ofreció a Cristo un atajo regio para obtener los reinos de la tierra evitando los sufrimientos de la cruz.",
+      "theological_teaching": "La adoración es exclusiva de Dios; ningún atajo mundano debe reemplazar la fidelidad al Señor.",
+      "messianic_connection": "Victoria aplastante de Jesucristo sobre el príncipe de este mundo.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 8,
+          "verse_end": 11
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:10",
+        "text": "Entonces Jesús le dice: Vete, Satanás, que escrito está: Al Señor tu Dios adorarás y á él solo servirás."
+      },
+      "cross_references_nt": [
+        "Deuteronomio 6:13",
+        "Lucas 4:5-8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "jesus_begins_galilean_ministry",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "El Inicio del Ministerio en Galilea de los Gentiles",
+      "short_name": "Inicio en Galilea",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Inicio de proclamación"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 4,
+      "verse_start_ref": 12,
+      "chapter_end": 4,
+      "verse_end_ref": 17,
+      "narrative": "Cuando Jesús oyó que Juan estaba preso, volvió a Galilea; y dejando a Nazaret, vino y habitó en Capernaúm, ciudad marítima, en la región de Zabulón y de Neftalí, para que se cumpliese lo dicho por el profeta Isaías: 'Tierra de Zabulón y tierra de Neftalí, camino del mar, al otro lado del Jordán, Galilea de los gentiles; El pueblo asentado en tinieblas vio gran luz; y a los asentados en región de sombra de muerte, luz les resplandeció'. Desde entonces comenzó Jesús a predicar, y a decir: 'Arrepentíos, porque el reino de los cielos se ha acercado'.",
+      "historical_context": "Galilea era una región de intenso tránsito comercial y mezcla étnica despreciada por la aristocracia de Jerusalén.",
+      "theological_teaching": "La luz salvadora del evangelio no se limita a las élites religiosas, sino que brilla en las tinieblas de los menesterosos.",
+      "messianic_connection": "Cumplimiento directo de Isaías 9:1-2 como la Gran Luz que resplandece en Galilea.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [
+        "question_kingdom_of_heaven_vs_god"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 12,
+          "verse_end": 17
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:17",
+        "text": "Desde entonces comenzó Jesús á predicar, y á decir: Arrepentíos, que el reino de los cielos se ha acercado."
+      },
+      "cross_references_nt": [
+        "Isaías 9:1-2",
+        "Marcos 1:14-15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "call_peter_andrew",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "El Llamamiento de Simón Pedro y Andrés",
+      "short_name": "Llamado de Pedro y Andrés",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Llamamiento apostólico"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 4,
+      "verse_start_ref": 18,
+      "chapter_end": 4,
+      "verse_end_ref": 20,
+      "narrative": "Andando Jesús junto al mar de Galilea, vio a dos hermanos, Simón, llamado Pedro, y Andrés su hermano, que echaban la red en el mar; porque eran pescadores. Y les dijo: 'Venid en pos de mí, y os haré pescadores de hombres'. Ellos entonces, dejando al instante las redes, le siguieron. Dejaron su negocio y sustento para dedicarse a la causa del Reino.",
+      "historical_context": "En el mundo judío, los discípulos buscaban al rabino; aquí Jesús toma la iniciativa soberana llamando a hombres trabajadores ordinarios.",
+      "theological_teaching": "El llamado eficaz de Cristo exige una respuesta inmediata de fe y la disposición a dejar redes terrenales.",
+      "messianic_connection": "Jesús constituye a sus apóstoles como pescadores de almas en su Reino.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 18,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:19",
+        "text": "Y díceles: Venid en pos de mí, y os haré pescadores de hombres."
+      },
+      "cross_references_nt": [
+        "Marcos 1:16-18",
+        "Lucas 5:1-11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "call_james_john_zebedee",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_preparation_baptism",
+      "name": "El Llamamiento de Jacobo y Juan los hijos de Zebedeo",
+      "short_name": "Llamado de Jacobo y Juan",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Llamamiento apostólico"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 4,
+      "verse_start_ref": 21,
+      "chapter_end": 4,
+      "verse_end_ref": 22,
+      "narrative": "Pasando de allí adelante, vio a otros dos hermanos, Jacobo hijo de Zebedeo, y Juan su hermano, en la barca con Zebedeo su padre, que remendaban sus redes; y los llamó. Y ellos, dejando al instante la barca y a su padre, le siguieron. Su pronta respuesta demostró la prioridad absoluta de la voz del Señor sobre los lazos familiares y económicos.",
+      "historical_context": "Zebedeo poseía una empresa de pesca próspera con jornaleros (Marcos 1:20); Jacobo y Juan renunciaron a su herencia material.",
+      "theological_teaching": "El discipulado exige poner el amor y la lealtad a Cristo por encima de cualquier vínculo familiar o laboral.",
+      "messianic_connection": "Elección soberana del círculo de los tres apóstoles principales.",
+      "key_people": [
+        "jesus",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 21,
+          "verse_end": 22
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:22",
+        "text": "Y ellos, dejando luego el barco y á su padre, le siguieron."
+      },
+      "cross_references_nt": [
+        "Marcos 1:19-20",
+        "Lucas 5:10-11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "first_miracles_and_crowds",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_preparation_baptism",
+      "name": "Las Primeras Sanidades Masivas y Fama en Siria",
+      "short_name": "Sanidades Masivas",
+      "category": "miracle",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Giras por Galilea"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 4,
+      "verse_start_ref": 23,
+      "chapter_end": 4,
+      "verse_end_ref": 25,
+      "narrative": "Y recorrió Jesús toda Galilea, enseñando en las sinagogas de ellos, y predicando el evangelio del reino, y sanando toda enfermedad y toda dolencia en el pueblo. Y se difundió su fama por toda Siria; y le trajeron todos los que tenían dolencias, los afligidos por diversas enfermedades y tormentos, los endemoniados, lunáticos y paralíticos; y los sanó. Y le siguió mucha gente de Galilea, de Decápolis, de Jerusalén, de Judea y del otro lado del Jordán.",
+      "historical_context": "Las sinagogas eran centros comunitarios de oración y enseñanza donde cualquier maestro itinerante podía exponer las Escrituras.",
+      "theological_teaching": "El ministerio triple de Jesús: enseñar la verdad, predicar el evangelio y sanar la dolencia humana.",
+      "messianic_connection": "Manifestación amplia del poder del Rey que remueve los efectos de la caída.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 4,
+          "verse_start": 23,
+          "verse_end": 25
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 4:23",
+        "text": "Y rodeó Jesús toda Galilea, enseñando en las sinagogas de ellos, y predicando el evangelio del reino, y sanando toda enfermedad y toda dolencia en el pueblo."
+      },
+      "cross_references_nt": [
+        "Marcos 1:39",
+        "Lucas 4:44"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "sermon_beatitudes_kingdom",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Proclamación de las Ocho Bienaventuranzas",
+      "short_name": "Las Bienaventuranzas",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Sermón en la montaña"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 1,
+      "chapter_end": 5,
+      "verse_end_ref": 12,
+      "narrative": "Viendo la multitud, subió al monte; y sentándose, vinieron a él sus discípulos. Y abriendo su boca les enseñaba, diciendo: 'Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos. Bienaventurados los que lloran, porque ellos recibirán consolación. Bienaventurados los mansos, porque ellos recibirán la tierra por heredad. Bienaventurados los que tienen hambre y sed de justicia, porque ellos serán saciados. Bienaventurados los misericordiosos, porque ellos alcanzarán misericordia. Bienaventurados los de limpio corazón, porque ellos verán a Dios. Bienaventurados los pacificadores, porque ellos serán llamados hijos de Dios. Bienaventurados los que padecen persecución por causa de la justicia, porque de ellos es el reino de los cielos'.",
+      "historical_context": "Jesús se sienta en posición oficial de maestro rabínico proclamando la paradoja espiritual de los valores del Reino.",
+      "theological_teaching": "Las Bienaventuranzas describen el carácter interior concedido por la gracia a los verdaderos discípulos.",
+      "messianic_connection": "Cristo es el Rey que bendice a los humildes y promete la consolación eterna.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 1,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:3",
+        "text": "Bienaventurados los pobres en espíritu: porque de ellos es el reino de los cielos."
+      },
+      "cross_references_nt": [
+        "Lucas 6:20-23",
+        "Salmo 1:1-3"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "disciples_salt_light",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Los Discípulos como la Sal de la Tierra y la Luz del Mundo",
+      "short_name": "Sal y Luz",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Enseñanza ética"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 13,
+      "chapter_end": 5,
+      "verse_end_ref": 16,
+      "narrative": "'Vosotros sois la sal de la tierra; pero si la sal se desvaneciere, ¿con qué será salada? No sirve más para nada, sino para ser echada fuera y hollada por los hombres. Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder. Ni se enciende una luz y se pone debajo de un almud, sino sobre el candelero, y alumbra a todos los que están en casa. Así alumbre vuestra luz delante de los hombres, para que vean vuestras buenas obras, y glorifiquen a vuestro Padre que está en los cielos'.",
+      "historical_context": "La sal en la antigüedad era el preservativo esencial contra la putrefacción y el sazonador por excelencia.",
+      "theological_teaching": "La Iglesia debe influir preservando moralmente al mundo y reflejando la luz de Cristo mediante buenas obras.",
+      "messianic_connection": "Cristo la Luz verdadera envía a sus discípulos a alumbrar las tinieblas de la sociedad.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_great_commission_mission"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 13,
+          "verse_end": 16
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:16",
+        "text": "Así alumbre vuestra luz delante de los hombres, para que vean vuestras obras buenas, y glorifiquen á vuestro Padre que está en los cielos."
+      },
+      "cross_references_nt": [
+        "Marcos 9:50",
+        "Lucas 14:34-35",
+        "Efesisos 5:8"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "christ_fulfills_the_law",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Cristo y la Plenitud e Inerrancia de la Ley",
+      "short_name": "Cumplimiento de la Ley",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Doctrina de la Ley"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 17,
+      "chapter_end": 5,
+      "verse_end_ref": 20,
+      "narrative": "'No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir. Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido. De manera que cualquiera que quebrante uno de estos mandamientos muy pequeños, y así enseñe a los hombres, muy pequeño será llamado en el reino de los cielos; mas cualquiera que los haga y los enseñe, éste será llamado grande en el reino de los cielos. Porque os digo que si vuestra justicia no fuere mayor que la de los escribas y fariseos, no entraréis en el reino de los cielos'.",
+      "historical_context": "La jota (yod) era la letra hebrea más pequeña y la tilde el pequeño rasgo diferenciador de trazo.",
+      "theological_teaching": "Inerrancia absoluta de las Escrituras y satisfacción perfecta de la Ley por la justicia impecable de Cristo.",
+      "messianic_connection": "Jesús es la meta y el cumplimiento personificado de la Ley y los Profetas.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [
+        "question_fulfilled_law_meaning"
+      ],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 17,
+          "verse_end": 20
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:17",
+        "text": "No penséis que he venido para abrogar la ley ó los profetas: no he venido para abrogar, sino á cumplir."
+      },
+      "cross_references_nt": [
+        "Romanos 3:31",
+        "Romanos 10:4",
+        "Gálatas 3:24"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "teaching_murder_anger",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Enseñanza sobre el Homicidio, la Ira y la Reconciliación",
+      "short_name": "La Ira y la Reconciliación",
+      "category": "sin",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Exégesis del VI mandamiento"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 21,
+      "chapter_end": 5,
+      "verse_end_ref": 26,
+      "narrative": "'Oísteis que fue dicho a los antiguos: No matarás... Pero yo os digo que cualquiera que se enoje contra su hermano, será culpable de juicio; y cualquiera que diga: Raca, a su hermano, será culpable ante el concilio; y cualquiera que le diga: Fatuo, quedará expuesto al infierno de fuego. Por tanto, si traes tu ofrenda al altar, y allí te acuerdas de que tu hermano tiene algo contra ti, deja allí tu ofrenda delante del altar, y anda, reconcíliate primero con tu hermano, y entonces ven y presenta tu ofrenda'.",
+      "historical_context": "'Raca' era un insulto arameo de desprecio que significaba 'cabeza hueca' o 'inútil'.",
+      "theological_teaching": "El homicidio comienza en el corazón con la ira y el desprecio; la reconciliación fraterna prioriza sobre el culto.",
+      "messianic_connection": "Cristo expone la intención espiritual profunda del sexto mandamiento del Decálogo.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 21,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:22",
+        "text": "Mas yo os digo, que cualquiera que se enojare locamente con su hermano, será culpado del juicio; y cualquiera que dijere á su hermano, Raca, será culpado del concejo; y cualquiera que dijere, Fatuo, será culpado del infierno del fuego."
+      },
+      "cross_references_nt": [
+        "Éxodo 20:13",
+        "1 Juan 3:15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "teaching_adultery_purity",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Enseñanza sobre el Adulterio del Corazón y la Radicaleza de la Pureza",
+      "short_name": "Adulterio y Pureza",
+      "category": "sin",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Exégesis del VII mandamiento"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 27,
+      "chapter_end": 5,
+      "verse_end_ref": 30,
+      "narrative": "'Oísteis que fue dicho: No cometerás adulterio. Pero yo os digo que cualquiera que mira a una mujer para codiciarla, ya adulteró con ella en su corazón. Por tanto, si tu ojo derecho te es ocasión de caer, sácalo, y échalo de ti; pues mejor te es que se pierda uno de tus miembros, y no que todo tu cuerpo sea echado al infierno. Y si tu mano derecha te es ocasión de caer, córtala, y échala de ti; pues mejor te es que se pierda uno de tus miembros, y no que todo tu cuerpo sea echado al infierno'.",
+      "historical_context": "Uso del lenguaje de hipérbole semítica para enfatizar la gravedad del pecado y la urgencia de extirpar las tentaciones.",
+      "theological_teaching": "La pureza moral debe custodiarse en los pensamientos y deseos más íntimos del alma.",
+      "messianic_connection": "Jesús establece el estándar impecable de santidad para los redimidos.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 27,
+          "verse_end": 30
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:28",
+        "text": "Mas yo os digo, que cualquiera que mira á una mujer para codiciarla, ya adulteró con ella en su corazón."
+      },
+      "cross_references_nt": [
+        "Éxodo 20:14",
+        "Job 31:1"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "teaching_marriage_oaths",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Enseñanza sobre la Santidad del Matrimonio y la Verdad en los Juramentos",
+      "short_name": "Matrimonio y Juramentos",
+      "category": "covenant",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Instrucción de conducta"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 31,
+      "chapter_end": 5,
+      "verse_end_ref": 37,
+      "narrative": "'También fue dicho: Cualquiera que repudie a su mujer, darle carta de divorcio. Pero yo os digo que el que repudia a su mujer, salvo por causa de fornicación, hace que ella adultere; y el que se casa con la repudiada, comete adulterio. Además habéis oído que fue dicho a los antiguos: No perjurarás... Pero yo os digo: No juréis en ninguna manera... Pero sea vuestro hablar: Sí, sí; No, no; porque lo que es más de esto, de mal procede'.",
+      "historical_context": "Las escuelas rabínicas de Hillel permitían el divorcio por causas triviales; Jesús restaura el diseño del Génesis.",
+      "theological_teaching": "Indisolubilidad del pacto matrimonial y exigencia de veracidad absoluta en el hablar sin necesidad de juramentos.",
+      "messianic_connection": "Jesús restaura la verdad y la santidad del pacto matrimonial de la creación.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 31,
+          "verse_end": 37
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:37",
+        "text": "Mas sea vuestro hablar: Sí, sí; No, no; porque lo que es más de esto, de mal procede."
+      },
+      "cross_references_nt": [
+        "Santiago 5:12",
+        "Génesis 2:24"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "love_your_enemies",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "El Amor a los Enemigos y la Perfección del Padre",
+      "short_name": "Amor a los Enemigos",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Magno mandamiento"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 5,
+      "verse_start_ref": 38,
+      "chapter_end": 5,
+      "verse_end_ref": 48,
+      "narrative": "'Oísteis que fue dicho: Ojo por ojo, y diente por diente. Pero yo os digo: No resistáis al que es malo; antes, a cualquiera que te abofetee en la mejilla derecha, vuélvele también la otra... Oísteis que fue dicho: Amarás a tu prójimo, y aborrecerás a tu enemigo. Pero yo os digo: Amad a vuestros enemigos, bendecid a los que os maldicen, haced bien a los que os aborrecen, y orad por los que os ultrajan y os persiguen; para que seáis hijos de vuestro Padre que está en los cielos, que hace salir su sol sobre malos y buenos, y que hace llover sobre justos e injustos... Sed, pues, vosotros perfectos, como vuestro Padre que está en los cielos es perfecto'.",
+      "historical_context": "La ley del talión (ojo por ojo) era un límite judicial contra la venganza desmedida, no una licencia para el rencor personal.",
+      "theological_teaching": "El amor incondicional hacia los enemigos refleja la gracia común e impecable del Padre celestial.",
+      "messianic_connection": "Jesús encarnó este mandamiento orando por sus ejecutores en la cruz del Gólgota.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 5,
+          "verse_start": 38,
+          "verse_end": 48
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 5:44",
+        "text": "Mas yo os digo: Amad á vuestros enemigos, bendecid á los que os maldicen, haced bien á los que os aborrecen, y orad por los que os ultrajan y os persiguen;"
+      },
+      "cross_references_nt": [
+        "Lucas 6:27-36",
+        "Romanos 12:19-21"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "almsgiving_in_secret",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "La Práctica de la Limosna en Secreto sin Ostentación",
+      "short_name": "La Limosna en Secreto",
+      "category": "restoration",
+      "importance": "low",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Instrucción espiritual"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 6,
+      "verse_start_ref": 1,
+      "chapter_end": 6,
+      "verse_end_ref": 4,
+      "narrative": "'Guardaos de hacer vuestra justicia delante de los hombres, para ser vistos de ellos; de otra manera no tendréis recompensa de vuestro Padre que está en los cielos. Cuando, pues, des limosna, no hagas tocar trompeta delante de ti, como hacen los hipócritas en las sinagogas y en las calles, para ser alabados por los hombres; de cierto os digo que ya tienen su recompensa. Mas cuando tú des limosna, no sepa tu izquierda lo que hace tu derecha, para que sea tu limosna en secreto; y tu Padre que ve en lo secreto te recompensará en público'.",
+      "historical_context": "Los fariseos ostentosos hacían sonar trompetas en las calles con el pretexto de convocar a los pobres para recibir limosna.",
+      "theological_teaching": "Las obras de misericordia deben brotar del amor a Dios en humildad, no del deseo de alabanza humana.",
+      "messianic_connection": "Jesús condena la hipocresía religiosa y enseña a buscar el beneplácito exclusivo del Padre.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 6,
+          "verse_start": 1,
+          "verse_end": 4
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 6:3-4",
+        "text": "Mas cuando tú haces limosna, no sepa tu izquierda lo que hace tu derecha;"
+      },
+      "cross_references_nt": [
+        "Proverbios 19:17",
+        "2 Corintios 9:7"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "lord_prayer_teaching",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "La Doctrina de la Oración y el Modelo del Padre Nuestro",
+      "short_name": "El Padre Nuestro",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Modelo de oración"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 6,
+      "verse_start_ref": 5,
+      "chapter_end": 6,
+      "verse_end_ref": 15,
+      "narrative": "'Y cuando ores, no seas como los hipócritas... Mas tú, cuando ores, entra en tu aposento, y cerrada la puerta, ora a tu Padre que está en secreto; y tu Padre que ve en lo secreto te recompensará en público. Y orando, no uséis vanas repeticiones... Vosotros, pues, oraréis así: Padre nuestro que estás en los cielos, santificado sea tu nombre. Venga tu reino. Hágase tu voluntad, como en el cielo, así también en la tierra. El pan nuestro de cada día, dánoslo hoy. Y perdónanos nuestras deudas, como también nosotros perdonamos a nuestros deudores. Y no nos metas en tentación, mas líbranos del mal; porque tuyo es el reino, y el poder, y la gloria, por todos los siglos. Amén'.",
+      "historical_context": "Los gentiles usaban largas encantaciones y vanas repeticiones creyendo que por su palabrería serían oídos.",
+      "theological_teaching": "La oración filial dirigida a Dios como Padre reverenciando su santidad, buscando su Reino y confiándole las necesidades.",
+      "messianic_connection": "Jesús abre el acceso filial al Padre celestial enseñando la oración del Nuevo Pacto.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 6,
+          "verse_start": 5,
+          "verse_end": 15
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 6:9-10",
+        "text": "Vosotros pues, oraréis así: Padre nuestro que estás en los cielos, santificado sea tu nombre."
+      },
+      "cross_references_nt": [
+        "Lucas 11:1-4",
+        "Romanos 8:15"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "fasting_and_treasures_heaven",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "El Ayuno Discreto y los Tesoros Incorruptibles en el Cielo",
+      "short_name": "Ayuno y Tesoros",
+      "category": "restoration",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Enseñanza de prioridades"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 6,
+      "verse_start_ref": 16,
+      "chapter_end": 6,
+      "verse_end_ref": 24,
+      "narrative": "'Cuando ayunéis, no seáis demudados, como los hipócritas... Mas tú, cuando ayunes, unge tu cabeza y lava tu rostro... No os hagáis tesoros en la tierra, donde la polilla y el orín corrompen, y donde ladrones minan y hurtan; sino haceos tesoros en el cielo... Porque donde esté vuestro tesoro, allí estará también vuestro corazón. La lámpara del cuerpo es el ojo... Ninguno puede servir a dos señores; porque o aborrecerá al uno y amará al otro, o estimará al uno y menospreciará al otro. No podéis servir a Dios y a las riquezas'.",
+      "historical_context": "Los fariseos ayunaban dos veces por semana (lunes y jueves) desfigurando sus rostros para mostrar piedad pública.",
+      "theological_teaching": "La devoción sincera a Dios es incompatible con la idolatría del dinero o la búsqueda de aprobación terrenal.",
+      "messianic_connection": "Jesús demanda lealtad indivisible al Señor de la Gloria.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 6,
+          "verse_start": 16,
+          "verse_end": 24
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 6:21",
+        "text": "Porque donde estuviere vuestro tesoro, allí estará vuestro corazón."
+      },
+      "cross_references_nt": [
+        "Lucas 12:33-34",
+        "1 Timoteo 6:10"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "do_not_worry_providence",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "La Confianza en la Providencia Divina contra el Afán",
+      "short_name": "Confianza Providencial",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Discurso del afán"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 6,
+      "verse_start_ref": 25,
+      "chapter_end": 6,
+      "verse_end_ref": 34,
+      "narrative": "'Por tanto os digo: No os afanéis por vuestra vida, qué habéis de comer o qué habéis de beber; ni por vuestro cuerpo, qué habéis de vestir. ¿No es la vida más que el alimento, y el cuerpo más que el vestido? Mirad las aves del cielo, que no siembran, ni siegan, ni recogen en graneros; y vuestro Padre celestial las alimenta. ¿No valéis vosotros mucho más que ellas?... Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas. Así que, no os afanéis por el día de mañana, porque el día de mañana traerá su afán. Basta a cada día su propio mal'.",
+      "historical_context": "Las colinas de Galilea estaban bordeadas de lirios silvestres y aves que Jesús usó como ilustraciones vivas.",
+      "theological_teaching": "El afán revela falta de fe; la prioridad absoluta del Reino garantiza el cuidado paternal de Dios para nuestras necesidades.",
+      "messianic_connection": "Jesús enseña a descansar en el cuidado paternal del Creador de los Cielos.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 6,
+          "verse_start": 25,
+          "verse_end": 34
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 6:33",
+        "text": "Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas."
+      },
+      "cross_references_nt": [
+        "Lucas 12:22-31",
+        "1 Pedro 5:7"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "judge_not_beam_eye",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "La Advertencia sobre el Juicio Hipócrita: La Paja y la Viga",
+      "short_name": "Juicio y la Viga",
+      "category": "judgment",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Enseñanza sobre juzgar"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 7,
+      "verse_start_ref": 1,
+      "chapter_end": 7,
+      "verse_end_ref": 6,
+      "narrative": "'No juzguéis, para que no seáis juzgados. Porque con el juicio con que juzgáis, seréis juzgados, y con la medida con que medís, os será medido. ¿Y por qué miras la paja que está en el ojo de tu hermano, y no echas de ver la viga que está en tu propio ojo? ¿O cómo dirás a tu hermano: Déjame sacar la paja de tu ojo, y he aquí la viga en el ojo tuyo? ¡Hipócrita! saca primero la viga de tu propio ojo, y entonces verás bien para sacar la paja del ojo de tu hermano. No deis lo santo a los perros, ni echéis vuestras perlas delante de los cerdos'.",
+      "historical_context": "Un dicho humorístico rabínico sobre la viga (gran madero) frente a la paja o mota de polvo.",
+      "theological_teaching": "Prohibición del juicio condenatorio e hipócrita, promoviendo la autoevaluación sincera antes de corregir.",
+      "messianic_connection": "Jesús demanda un examen interior honesto bajo el juicio perfecto de Dios.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 7,
+          "verse_start": 1,
+          "verse_end": 6
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 7:1-2",
+        "text": "NO juzguéis, para que no seáis juzgados."
+      },
+      "cross_references_nt": [
+        "Lucas 6:37-42",
+        "Romanos 2:1-3"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "ask_seek_knock",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Perseverancia en la Oración y la Regla de Oro",
+      "short_name": "Pedid y Regla de Oro",
+      "category": "restoration",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Enseñanza de perseverancia"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 7,
+      "verse_start_ref": 7,
+      "chapter_end": 7,
+      "verse_end_ref": 12,
+      "narrative": "'Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá. Porque todo aquel que pide, recibe; y el que busca, halla; y al que llama, se le abrirá. ¿Qué hombre hay de vosotros, que si su hijo le pide pan, le dará una piedra?... Pues si vosotros, siendo malos, sabéis dar buenas dádivas a vuestros hijos, ¿cuánto más vuestro Padre que está en los cielos dará buenas cosas a los que le piden? Así que, todas las cosas que queráis que los hombres hagan con vosotros, así también haced vosotros con ellos; porque esto es la ley y los profetas'.",
+      "historical_context": "La Regla de Oro formulada positivamente por Jesús superó las versiones negativas del judaísmo rabínico tradicional.",
+      "theological_teaching": "La oración constante confiada en la bondad del Padre y el amor activo traducido en la Regla de Oro.",
+      "messianic_connection": "Jesús sintetiza el corazón del amor al prójimo según la Ley y los Profetas.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_prophetic_fulfillment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 7,
+          "verse_start": 7,
+          "verse_end": 12
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 7:12",
+        "text": "Así que, todas las cosas que quisierais que los hombres hiciesen con vosotros, así también haced vosotros con ellos; porque esta es la ley y los profetas."
+      },
+      "cross_references_nt": [
+        "Lucas 11:9-13",
+        "Levítico 19:18"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "narrow_gate_two_trees",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "La Puerta Estrecha, los Falsos Profetas y los Frutos",
+      "short_name": "Puerta Estrecha y Frutos",
+      "category": "judgment",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Advertencia solemne"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 7,
+      "verse_start_ref": 13,
+      "chapter_end": 7,
+      "verse_end_ref": 23,
+      "narrative": "'Entrad por la puerta estrecha; porque ancha es la puerta, y espacioso el camino que lleva a la perdición... Guardaos de los falsos profetas, que vienen a vosotros con vestidos de ovejas, pero por dentro son lobos rapaces. Por sus frutos los conoceréis... No todo el que me dice: Señor, Señor, entrará en el reino de los cielos, sino el que hace la voluntad de mi Padre que está en los cielos. Muchos me dirán en aquel día: Señor, Señor, ¿no profetizamos en tu nombre?... Y entonces les declararé: Nunca os conocí; apartaos de mí, hacedores de maldad'.",
+      "historical_context": "Las ciudades amuralladas antiguas poseían grandes puertas principales y pequeñas postigos de acceso restringido.",
+      "theological_teaching": "La salvación requiere arrepentimiento genuino; la ortodoxia verbal sin obediencia real a la voluntad de Dios es insuficiente.",
+      "messianic_connection": "Jesús se presenta como el Juez Supremo del último día que examina la vida de todos los profesantes.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_kingdom_of_heaven",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 7,
+          "verse_start": 13,
+          "verse_end": 23
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 7:21",
+        "text": "No todo el que me dice: Señor, Señor, entrará en el reino de los cielos: mas el que hiciere la voluntad de mi Padre que está en los cielos."
+      },
+      "cross_references_nt": [
+        "Lucas 13:24-27",
+        "2 Timoteo 2:19"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "parable_two_foundations",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_sermon_on_mount",
+      "name": "Parábola de los Dos Fundamentos sobre la Roca y la Arena",
+      "short_name": "Los Dos Cimientos",
+      "category": "restoration",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4030,
+        "exact_date_note": "30 d.C.",
+        "duration_days": null,
+        "duration_note": "Clímax del sermón"
+      },
+      "location_id": "mount_of_beatitudes",
+      "chapter_start": 7,
+      "verse_start_ref": 24,
+      "chapter_end": 7,
+      "verse_end_ref": 29,
+      "narrative": "'Cualquiera, pues, que me oye estas palabras, y las hace, le compararé a un hombre prudente, que edificó su casa sobre la roca. Descendió lluvia, y vinieron ríos, y soplaron vientos, y golpearon contra aquella casa; y no cayó, porque estaba fundada sobre la roca. Pero cualquiera que me oye estas palabras y no las hace, le compararé a un hombre insensato, que edificó su casa sobre la arena; y descendió lluvia, y vinieron ríos, y soplaron vientos, y dieron con ímpetu contra aquella casa; y cayó, y fue grande su ruina'. Y cuando Jesús terminó estas palabras, la gente se admiraba de su doctrina; porque les enseñaba como quien tiene autoridad, y no como los escribas.",
+      "historical_context": "Los torrenciales de lluvia invernales en Wadis de Galilea arrasaban fácilmente cualquier edificación levantada sobre arena suelta.",
+      "theological_teaching": "La verdadera sabiduría consiste en oír y obedecer las palabras de Cristo, edificando sobre la Roca eterna que resiste el juicio.",
+      "messianic_connection": "Las palabras de Jesús poseen la autoridad divina absoluta para sostener la eternidad del creyente.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_righteousness_heart",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 7,
+          "verse_start": 24,
+          "verse_end": 29
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 7:24-25",
+        "text": "Cualquiera, pues, que me oye estas palabras, y las hace, le compararé á un hombre prudente, que edificó su casa sobre la peña;"
+      },
+      "cross_references_nt": [
+        "Lucas 6:47-49",
+        "1 Corintios 3:11"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "cleansing_leper_faith",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "La Sanidad Mesiánica del Leproso Humilde",
+      "short_name": "Sanidad del Leproso",
+      "category": "miracle",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Sanidad instantánea"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 8,
+      "verse_start_ref": 1,
+      "chapter_end": 8,
+      "verse_end_ref": 4,
+      "narrative": "Cuando descendió Jesús del monte, le seguían muchas multitudes. Y he aquí vino un leproso y se postró ante él, diciendo: 'Señor, si quieres, puedes limpiarme'. Jesús extendió la mano y le tocó, diciendo: 'Quiero; sé limpio'. Y al instante su lepra desapareció. Entonces Jesús le dijo: 'Mira, no lo digas a nadie; sino ve, muéstrate al sacerdote, y presenta la ofrenda que ordenó Moisés, para testimonio a ellos'.",
+      "historical_context": "Tocando a un leproso un judío quedaba inmundo según Levítico 13; en Cristo el contacto santo transmite purificación divina.",
+      "theological_teaching": "Jesús atiende la fe sumisa que confía en su voluntad y poder para purificar el pecado y la enfermedad.",
+      "messianic_connection": "La sanidad de leprosos era una señal mesiánica esperada anunciada por los profetas.",
+      "key_people": [
+        "jesus",
+        "leper_cleansed"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 1,
+          "verse_end": 4
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:3",
+        "text": "Y extendiendo Jesús su mano, le tocó, diciendo: Quiero; sé limpio. Y luego su lepra fué limpiada."
+      },
+      "cross_references_nt": [
+        "Levítico 14:1-32",
+        "Marcos 1:40-45"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "centurion_servant_healed",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "La Fe del Centurión Romano y la Sanidad a Distancia",
+      "short_name": "La Fe del Centurión",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Sanidad a distancia"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 8,
+      "verse_start_ref": 5,
+      "chapter_end": 8,
+      "verse_end_ref": 13,
+      "narrative": "Entrando Jesús en Capernaúm, vino a él un centurión, rogándole y diciendo: 'Señor, mi mozo yace en casa paralítico, gravemente atormentado'. Y Jesús le dijo: 'Yo iré y le sanaré'. Respondió el centurión y dijo: 'Señor, no soy digno de que entres bajo mi techo; solamente di la palabra, y mi mozo sanará. Porque también yo soy hombre bajo autoridad...'. Al oírlo Jesús, se maravilló, y dijo a los que le seguían: 'De cierto os digo, que ni aun en Israel he hallado tanta fe... Ve, y como creíste te sea hecho'. Y su mozo fue sano en aquella misma hora.",
+      "historical_context": "Un centurión era comandante de 100 soldados romanos. Entrar en su casa causaba impureza ritual a un judío estricto.",
+      "theological_teaching": "La autoridad de la Palabra de Cristo opera a distancia sin barreras físicas o geográficas.",
+      "messianic_connection": "Prefiguración profética de la fe de los gentiles participando en el banquete del Reino con Abraham.",
+      "key_people": [
+        "jesus",
+        "centurion_capernaum"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_great_commission_mission"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 5,
+          "verse_end": 13
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:10",
+        "text": "Y oyendo Jesús, se maravilló, y dijo á los que le seguían: De cierto os digo, que ni aun en Israel he hallado fe tanta."
+      },
+      "cross_references_nt": [
+        "Lucas 7:1-10",
+        "Juan 4:46-54"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "healing_peter_mother_in_law",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Sanidad de la Suegra de Pedro y Expiación de Enfermedades",
+      "short_name": "Suegra de Pedro",
+      "category": "miracle",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Sanidad en Capernaúm"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 8,
+      "verse_start_ref": 14,
+      "chapter_end": 8,
+      "verse_end_ref": 17,
+      "narrative": "Vino Jesús a casa de Pedro, y vio a la suegra de éste postrada en cama, con fiebre. Y tocó su mano, y la fiebre la dejó; y ella se levantó, y les servía. Y cuando llegó la noche, trajeron a él muchos endemoniados; y con la palabra echó fuera a los demonios, y sanó a todos los enfermos; para que se cumpliese lo dicho por el profeta Isaías, cuando dijo: 'Él mismo tomó nuestras enfermedades, y llevó nuestras dolencias'.",
+      "historical_context": "Las casas de Capernaúm estaban construidas con piedra volcánica negra de basalto reunidas alrededor de un patio interior.",
+      "theological_teaching": "La sanidad divina restaura para el servicio inmediato al Señor y sus discípulos.",
+      "messianic_connection": "Cumplimiento inerrante de Isaías 53:4 sobre el Siervo de Jehová.",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_prophetic_fulfillment",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 14,
+          "verse_end": 17
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:17",
+        "text": "Para que se cumpliese lo que fué dicho por el profeta Isaías, que dijo: El mismo tomó nuestras enfermedades, y llevó nuestras dolencias."
+      },
+      "cross_references_nt": [
+        "Isaías 53:4",
+        "Marcos 1:29-34",
+        "Lucas 4:38-41"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "cost_following_jesus",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Exigencias del Discipulado a la Orilla del Mar",
+      "short_name": "Costo de Seguir a Jesús",
+      "category": "patriarch",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Instrucción de camino"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 8,
+      "verse_start_ref": 18,
+      "chapter_end": 8,
+      "verse_end_ref": 22,
+      "narrative": "Viéndose Jesús rodeado de muchas multitudes, mandó pasar al otro lado del mar. Y se le acercó un escriba y le dijo: 'Maestro, te seguiré adondequiera que vayas'. Jesús le dijo: 'Las zorras tienen guaridas, y las aves del cielo nidos; mas el Hijo del Hombre no tiene dónde recostar su cabeza'. Otro de sus discípulos le dijo: 'Señor, permíteme que vaya primero y entierre a mi padre'. Jesús le dijo: 'Sígueme; deja que los muertos entierren a sus muertos'.",
+      "historical_context": "El entierro de un padre era el deber filial judío más sagrado; Jesús exige urgencia sobre cualquier consideración terrenal.",
+      "theological_teaching": "El discipulado cristiano demanda renuncia a las comodidades del mundo y lealtad suprema al llamado de Dios.",
+      "messianic_connection": "Jesús se autodenomina 'El Hijo del Hombre', su título mesiánico preferido de Daniel 7:13.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_discipleship_cost"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 18,
+          "verse_end": 22
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:20",
+        "text": "Y Jesús le dijo: Las zorras tienen cavernas, y las aves del cielo nidos; mas el Hijo del hombre no tiene donde recueste su cabeza."
+      },
+      "cross_references_nt": [
+        "Lucas 9:57-62",
+        "Daniel 7:13"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "stilling_storm_galilee",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Jesús Calma la Gran Tempestad en el Mar de Galilea",
+      "short_name": "Jesús Calma la Tempestad",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Milagro sobre la naturaleza"
+      },
+      "location_id": "sea_of_galilee",
+      "chapter_start": 8,
+      "verse_start_ref": 23,
+      "chapter_end": 8,
+      "verse_end_ref": 27,
+      "narrative": "Y entrando él en la barca, sus discípulos le siguieron. Y he aquí que se levantó en el mar una tempestad tan grande que las olas cubrían la barca; pero él dormía. Y vinieron sus discípulos y le despertaron, diciendo: '¡Señor, sálvanos, que perecemos!'. Él les dijo: '¿Por qué teméis, hombres de poca fe?'. Entonces, levantándose, reprendió a los vientos y al mar; y se hizo grande bonanza. Y los hombres se maravillaron, diciendo: '¿Qué hombre es éste, que aun los vientos y el mar le obedecen?'.",
+      "historical_context": "Las tempestades repentinas en el Mar de Galilea (seismos) son causadas por vientos helados que bajan por las gargantas de los montes.",
+      "theological_teaching": "Jesucristo posee Señorío soberano sobre los elementos de la naturaleza, disipando los miedos de la fe vacilante.",
+      "messianic_connection": "Revelación inequívoca de la Divinidad del Creador que calma los mares (Salmo 107:28-30).",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 23,
+          "verse_end": 27
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:27",
+        "text": "Y los hombres se maravillaron, diciendo: ¿Qué hombre es éste, que aun los vientos y la mar le obedecen?"
+      },
+      "cross_references_nt": [
+        "Salmo 107:28-30",
+        "Marcos 4:35-41",
+        "Lucas 8:22-25"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "healing_gadarene_demoniacs",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Liberación de los Dos Endemoniados Gadarenos",
+      "short_name": "Los Endemoniados Gadarenos",
+      "category": "miracle",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Liberación en Gadara"
+      },
+      "location_id": "country_of_gadarenes",
+      "chapter_start": 8,
+      "verse_start_ref": 28,
+      "chapter_end": 8,
+      "verse_end_ref": 34,
+      "narrative": "Cuando llegó a la otra orilla, a la tierra de los gadarenos, vinieron a su encuentro dos endemoniados que salían de los sepulcros, feroces en gran manera... Y clamaron diciendo: '¿Qué tenemos contigo, Jesús, Hijo de Dios? ¿Has venido aquí para atormentarnos antes de tiempo?'. Y estaba paciendo lejos de ellos un hato de muchos cerdos. Y los demonios le rogaron diciendo: 'Si nos echas fuera, permítenos ir a aquel hato de cerdos'. Él les dijo: 'Id'. Y ellos salieron, y se fueron a aquel hato de cerdos; y he aquí, todo el hato de cerdos se precipitó al mar por un despeñadero, y perecieron en las aguas.",
+      "historical_context": "La cría de grandes piaras de cerdos en la Decápolis evidencia una población predominantemente gentil.",
+      "theological_teaching": "Soberanía absoluta de Cristo sobre el reino demoníaco y el valor inestimable del alma humana sobre el capital material.",
+      "messianic_connection": "Los demonios reconocen la Deidad de Jesús como el Juez Escatológico del universo.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 8,
+          "verse_start": 28,
+          "verse_end": 34
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 8:29",
+        "text": "Y he aquí clamaron, diciendo: ¿Qué tenemos contigo, Jesús, Hijo de Dios? ¿has venido acá á molestarnos antes de tiempo?"
+      },
+      "cross_references_nt": [
+        "Marcos 5:1-20",
+        "Lucas 8:26-39"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "forgiveness_paralyzed_capernaum",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "El Perdón de Pecados y Sanidad del Paralítico en Capernaúm",
+      "short_name": "Perdón del Paralítico",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Perdón e impacto"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 9,
+      "verse_start_ref": 1,
+      "chapter_end": 9,
+      "verse_end_ref": 8,
+      "narrative": "Entonces, entrando Jesús en una barca, pasó al otro lado y vino a su ciudad. Y le trajeron un paralítico, tendido sobre una cama; y viendo Jesús la fe de ellos, dijo al paralítico: 'Ten ánimo, hijo; tus pecados te son perdonados'. Entonces algunos de los escribas decían entre sí: 'Éste blasfema'. Y conociendo Jesús los pensamientos de ellos, dijo: '¿Por qué pensáis mal en vuestros corazones? Porque, ¿qué es más fácil, decir: Los pecados te son perdonados, o decir: Levántate y anda? Pues para que sepáis que el Hijo del Hombre tiene potestad en la tierra para perdonar pecados (dice entonces al paralítico): Levántate, toma tu cama, y vete a tu casa'. Entonces él se levantó y se fue a su casa.",
+      "historical_context": "Para la teología rabínica solo Dios podía perdonar pecados; por eso acusaron a Jesús de blasfemia.",
+      "theological_teaching": "La sanidad física externa confirma de forma tangible el poder divino e invisible de perdonar faltas morales.",
+      "messianic_connection": "Jesús posee la prerrogativa divina exclusiva de perdonar los pecados del hombre.",
+      "key_people": [
+        "jesus",
+        "paralyzed_man_capernaum"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_atonement_redemption"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 9,
+          "verse_start": 1,
+          "verse_end": 8
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 9:6",
+        "text": "Pues para que sepáis que el Hijo del hombre tiene potestad en la tierra de perdonar pecados, (dice entonces al paralítico): Levántate, toma tu cama, y vete á tu casa."
+      },
+      "cross_references_nt": [
+        "Marcos 2:1-12",
+        "Lucas 5:17-26"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "call_matthew_publican",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "El Llamamiento del Publicano Mateo y el Banquete de Gracia",
+      "short_name": "Llamado de Mateo",
+      "category": "patriarch",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Llamamiento del autor"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 9,
+      "verse_start_ref": 9,
+      "chapter_end": 9,
+      "verse_end_ref": 13,
+      "narrative": "Pasando Jesús de allí, vio a un hombre llamado Mateo, que estaba sentado al banco de los tributos públicos, y le dijo: 'Sígueme'. Y se levantó y le siguió. Y aconteció que estando él sentado a la mesa en la casa, he aquí muchos publicanos y pecadores, que habían venido, se sentaron juntamente a la mesa con Jesús y sus discípulos. Viendo esto los fariseos, dijeron a sus discípulos: '¿Por qué come vuestro Maestro con los publicanos y pecadores?'. Al oír esto Jesús, les dijo: 'Los sanos no tienen necesidad de médico, sino los enfermos. Id, pues, y aprended qué significa: Misericordia quiero, y no sacrificio. Porque no he venido a llamar a justos, sino a pecadores, al arrepentimiento'.",
+      "historical_context": "Los publicanos eran considerados traidores ritualmente inmundos por colaborar con la recaudación romana.",
+      "theological_teaching": "La gracia redentora del Salvador busca a los perdidos y exige compasión en lugar de juicio religiosamente legalista.",
+      "messianic_connection": "Jesús es el Médico divino que perdona al pecador arrepentido cumpliendo Oseas 6:6.",
+      "key_people": [
+        "jesus",
+        "matthew_apostle"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_discipleship_cost",
+        "theme_righteousness_heart"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 9,
+          "verse_start": 9,
+          "verse_end": 13
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 9:13",
+        "text": "Andad pues, y aprended qué cosa es: Misericordia quiero, y no sacrificio: porque no he venido á llamar justos, sino pecadores á arrepentimiento."
+      },
+      "cross_references_nt": [
+        "Oseas 6:6",
+        "Marcos 2:14-17",
+        "Lucas 5:27-32"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "resurrection_jairus_daughter",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Resurrección de la Hija de Jairo y Sanidad de la Mujer con Flujo",
+      "short_name": "Hija de Jairo y Flujo de Sangre",
+      "category": "miracle",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Doble milagro"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 9,
+      "verse_start_ref": 18,
+      "chapter_end": 9,
+      "verse_end_ref": 26,
+      "narrative": "Mientras él les decía estas cosas, vino un hombre principal y se postró ante él, diciendo: 'Mi hija acaba de morir; mas ven y pon tu mano sobre ella, y vivirá'. Y se levantó Jesús, y le siguió con sus discípulos. Y he aquí una mujer enferma de flujo de sangre desde hacía doce años, se le acercó por detrás y tocó el borde de su manto; porque decía entre sí: 'Si me tocare tan sólo su manto, seré sana'. Pero Jesús, volviéndose y mirándola, dijo: 'Ten ánimo, hija; tu fe te ha salvado'. Y la mujer fue sana desde aquella hora. Y al entrar Jesús en la casa del principal... tomó de la mano a la niña, y ella se levantó.",
+      "historical_context": "Tocar a una persona muerta o con flujo de sangre causaba impureza ceremonial grave según la ley de Moisés.",
+      "theological_teaching": "La fe humilde que toca a Cristo recibe virtudes purificadoras y poder de resurrección sobre la muerte.",
+      "messianic_connection": "Jesús es el Señor de la Vida que ostenta las llaves de la muerte y del Hades.",
+      "key_people": [
+        "jesus",
+        "jairus",
+        "woman_flux_blood"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_resurrection_victory"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 9,
+          "verse_start": 18,
+          "verse_end": 26
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 9:22",
+        "text": "Mas Jesús volviéndose, y mirándola, dijo: Confía, hija, tu fe te ha salvado. Y la mujer fué salva desde aquella hora."
+      },
+      "cross_references_nt": [
+        "Marcos 5:21-43",
+        "Lucas 8:40-56"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "healing_two_blind_men_mute",
+      "depth_level": 2,
+      "lod_level": 2,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Sanidad de Dos Ciegos y un Endemoniado Mudo en Galilea",
+      "short_name": "Dos Ciegos y el Mudo",
+      "category": "miracle",
+      "importance": "high",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Sanidades en Galilea"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 9,
+      "verse_start_ref": 27,
+      "chapter_end": 9,
+      "verse_end_ref": 34,
+      "narrative": "Pasando Jesús de allí, le siguieron dos ciegos, dando voces y diciendo: '¡Ten misericordia de nosotros, Hijo de David!'. Y llegado a la casa, vinieron a él los ciegos; y Jesús les dijo: '¿Creéis que puedo hacer esto?'. Ellos dijeron: 'Sí, Señor'. Entonces les tocó los ojos, diciendo: 'Conforme a vuestra fe os sea hecho'. Y los ojos de ellos fueron abiertos... Saliendo ellos, he aquí, le trajeron un hombre mudo, endemoniado. Y echado fuera el demonio, el mudo habló; y las multitudes se maravillaban, diciendo: 'Nunca se ha visto tal cosa en Israel'. Pero los fariseos decían: 'Por el príncipe de los demonios echa fuera los demonios'.",
+      "historical_context": "La primera manifestación de la acusación blasfema de los fariseos atribuyendo el poder de Dios a Satanás.",
+      "theological_teaching": "La fe abre los ojos espirituales mientras que el orgullo religioso de la incredulidad permanece ciego.",
+      "messianic_connection": "Cumplimiento profético de Isaías 35:5-6 sobre la apertura de los ojos de ciegos y el habla de mudos.",
+      "key_people": [
+        "jesus",
+        "two_blind_men"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_messianic_authority",
+        "theme_hypocrisy_judgment"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 9,
+          "verse_start": 27,
+          "verse_end": 34
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 9:29",
+        "text": "Entonces tocó los ojos de ellos, diciendo: Conforme á vuestra fe os sea hecho."
+      },
+      "cross_references_nt": [
+        "Isaías 35:5-6",
+        "Mateo 12:22-24"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "compassion_laborers_harvest",
+      "depth_level": 3,
+      "lod_level": 3,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "La Compasión de Jesús por la Mies y la Oración por Obreros",
+      "short_name": "Compasión por la Mies",
+      "category": "restoration",
+      "importance": "medium",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Visión misionera"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 9,
+      "verse_start_ref": 35,
+      "chapter_end": 9,
+      "verse_end_ref": 38,
+      "narrative": "Recorría Jesús todas las ciudades y aldeas, enseñando en las sinagogas de ellas, y predicando el evangelio del reino, y sanando toda enfermedad y toda dolencia en el pueblo. Y al ver las multitudes, tuvo compasión de ellas; porque estaban desamparadas y dispersas como ovejas que no tienen pastor. Entonces dijo a sus discípulos: 'A la verdad la mies es mucha, mas los obreros pocos. Rogad, pues, al Señor de la mies, que envíe obreros a su mies'.",
+      "historical_context": "Las multitudes judías estaban espiritualmente abandonadas por el formalismo desalmado de los escribas y fariseos.",
+      "theological_teaching": "La compasión entrañable de Dios por las almas perdidas motiva la oración intercesora por misioneros y evangelistas.",
+      "messianic_connection": "Jesús es el Buen Pastor profetizado en Ezequiel 34 que recoge a las ovejas perdidas.",
+      "key_people": [
+        "jesus"
+      ],
+      "covenant_id": null,
+      "theme_ids": [
+        "theme_great_commission_mission",
+        "theme_kingdom_of_heaven"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 9,
+          "verse_start": 35,
+          "verse_end": 38
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 9:36",
+        "text": "Y viendo las gentes, tuvo compasión de ellas; porque estaban derramadas y esparcidas como ovejas que no tienen pastor."
+      },
+      "cross_references_nt": [
+        "Ezequiel 34:11-16",
+        "Lucas 10:2"
+      ],
+      "sub_event_ids": []
+    },
+    {
+      "id": "commissioning_twelve_apostles",
+      "depth_level": 1,
+      "lod_level": 1,
+      "parent_id": "nb_galilean_ministry_miracles",
+      "name": "Elección y Comisión Misionera de los Doce Apóstoles (Discurso 2)",
+      "short_name": "Envío de los Doce",
+      "category": "covenant",
+      "importance": "critical",
+      "chronology": {
+        "approx_year_am": 4031,
+        "exact_date_note": "31 d.C.",
+        "duration_days": null,
+        "duration_note": "Discurso Misionero"
+      },
+      "location_id": "capernaum",
+      "chapter_start": 10,
+      "verse_start_ref": 1,
+      "chapter_end": 10,
+      "verse_end_ref": 42,
+      "narrative": "Entonces llamando a sus doce discípulos, les dio autoridad sobre los espíritus inmundos, para que los echasen fuera, y para sanar toda enfermedad y toda dolencia. Los nombres de los doce apóstoles son estos: primero Simón, llamado Pedro, y Andrés su hermano; Jacobo hijo de Zebedeo, y Juan su hermano; Felipe, Bartolomé, Tomás, Mateo el publicano, Jacobo hijo de Alfeo, Tadeo, Simón el Cananista, y Judas Iscariote, el que también le entregó. A estos doce envió Jesús, y les dio instrucciones diciendo: 'No vayáis por camino de gentiles... sino id antes a las ovejas perdidas de la casa de Israel. Y yendo, predicad, diciendo: El reino de los cielos se ha acercado. Sanad enfermos, limpiad leprosos, resucitad muertos, echad fuera demonios; de gracia recibisteis, dad de gracia... El que os recibe a vosotros, a mí me recibe; y el que me recibe a mí, recibe al que me envió'.",
+      "historical_context": "El término 'Apóstol' (Apostolos) implica un embajador oficial enviado con la plena representación legal de quien lo envía.",
+      "theological_teaching": "Delegación divina de autoridad apostólica para edificar la Iglesia y proclamar la verdad con valentía ante la persecución.",
+      "messianic_connection": "Jesús constituye a los doce cimientos patriarcales de la Iglesia del Nuevo Pacto.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "philip",
+        "bartholomew",
+        "thomas",
+        "matthew_apostle",
+        "james_son_of_alphaeus",
+        "thaddaeus",
+        "simon_the_zealot",
+        "judas_iscariot"
+      ],
+      "covenant_id": "new_covenant",
+      "theme_ids": [
+        "theme_great_commission_mission",
+        "theme_messianic_authority"
+      ],
+      "question_ids": [],
+      "references": [
+        {
+          "book": "Mateo",
+          "chapter": 10,
+          "verse_start": 1,
+          "verse_end": 42
+        }
+      ],
+      "key_verse": {
+        "reference": "Mateo 10:7-8",
+        "text": "Y yendo, predicad, diciendo: El reino de los cielos se ha acercado."
+      },
+      "cross_references_nt": [
+        "Marcos 6:7-13",
+        "Lucas 9:1-6",
+        "Hechos 1:8"
+      ],
+      "sub_event_ids": []
+    }
+  ],
   "people": [
     {
       "id": "jesus",
