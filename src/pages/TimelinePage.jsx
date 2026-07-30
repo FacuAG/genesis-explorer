@@ -1,17 +1,6 @@
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { getTimelineEvents, getPeople } from "../services/genesisService";
+import { getTimelineEvents, getPeople, getGenesisData, getParents, getChildren, getSpouses } from "../services/genesisService";
 import { useState } from "react";
-import { getGenesisData } from "../services/genesisService";
-import {
-  getParents,
-  getChildren,
-  getSpouses
-} from "../services/genesisService";
-import {
-  getEventsByPerson,
-  getPromiseByPerson,
-  getLocationById
-} from "../services/genesisService";
 
 function TimelinePage() {
 
@@ -22,6 +11,13 @@ function TimelinePage() {
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [search, setSearch] = useState("");
+
+  const isEventRelatedToSelected = (event) => {
+    if (!selectedPerson) return false;
+    if (selectedPerson.event_ids?.includes(event.id)) return true;
+    if (event.key_people && event.key_people.includes(selectedPerson.id)) return true;
+    return false;
+  };
 
   const filteredPeople = people.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
@@ -46,35 +42,12 @@ function TimelinePage() {
       );
     });
 
-  const peopleMap = Object.fromEntries(
-    people.map((p) => [p.id, p])
-  );
-
-  const getPersonName = (id) => {
-    const person = data.people.find((p) => p.id === id);
-    return person ? person.name : id;
-  };
-
   const getParent = (person) => {
     if (!person.parents?.length) return null;
 
     return people.find(
       p => p.id === person.parents[0]
     );
-  };
-
-  const getPersonById = (id) => {
-    return data.people.find((p) => p.id === id);
-  };
-
-  const getPersonY = (personId) => {
-    const index = peopleWithDates.findIndex(
-      (p) => p.id === personId
-    );
-
-    if (index === -1) return null;
-
-    return 250 + index * 45;
   };
   
   const parents = selectedPerson
@@ -371,7 +344,7 @@ function TimelinePage() {
             ))}
 
             {/* Eventos */}
-            {events.map((event, index) => {
+            {events.map((event) => {
               const x = getEventX(event);
               const y = getEventY(event);
 

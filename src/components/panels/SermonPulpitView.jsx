@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { downloadSermonPDFDirect } from '../../utils/directPdfExporter';
 import './SermonPulpitView.css';
-
-// Helper para cargar html2pdf de forma transparente
-const loadHtml2Pdf = () => {
-  return new Promise((resolve, reject) => {
-    if (window.html2pdf) {
-      resolve(window.html2pdf);
-      return;
-    }
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-    script.onload = () => resolve(window.html2pdf);
-    script.onerror = () => reject(new Error('No se pudo cargar la librería html2pdf.js'));
-    document.body.appendChild(script);
-  });
-};
 
 export default function SermonPulpitView({ sermon, onClose }) {
   const [fontSize, setFontSize] = useState(18); // 14px - 28px
   const [secondsElapsed, setSecondsElapsed] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
-  const [isExportingPDF, setIsExportingPDF] = useState(false);
 
   // Temporizador de Predicación (Cronómetro)
   useEffect(() => {
@@ -46,33 +30,6 @@ export default function SermonPulpitView({ sermon, onClose }) {
       return `${hours.toString().padStart(2, '0')}:${displayMins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     }
     return `${displayMins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-  };
-
-  // Exportación vectorial descargable en 1 Clic con html2pdf.js (300 DPI)
-  const handleExportPDF = async () => {
-    setIsExportingPDF(true);
-    try {
-      const html2pdf = await loadHtml2Pdf();
-      const element = document.getElementById('sermon-pdf-paper');
-
-      const sanitizedTitle = (sermon.title || 'Predicacion').replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_]/g, '_');
-      const opt = {
-        margin:       [16, 16, 16, 16],
-        filename:     `${sanitizedTitle}_Documento_Pastoral.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, logging: false },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
-      };
-
-      await html2pdf().set(opt).from(element).save();
-    } catch (err) {
-      console.error('Error al exportar PDF:', err);
-      // Fallback a impresión de ventana si hay bloqueo de script
-      window.print();
-    } finally {
-      setIsExportingPDF(false);
-    }
   };
 
   const formattedDate = sermon.updatedAt 

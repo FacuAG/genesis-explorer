@@ -73,10 +73,12 @@ export function useGenesisData(bookId = 'genesis') {
     const q = query.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     const events = (currentData.timeline_events || []).filter(e => {
-      const name = (e.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      const summary = (e.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const name = (e.name || e.short_name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      // Schema v3.0 usa 'narrative'; schemas anteriores usan 'summary'. Soportar ambos.
+      const summary = (e.summary || e.narrative || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       return name.includes(q) || summary.includes(q);
     });
+
 
     const people = (currentData.people || []).filter(p => {
       const name = (p.name || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");

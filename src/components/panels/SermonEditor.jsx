@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo, useEffect } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import './SermonEditor.css';

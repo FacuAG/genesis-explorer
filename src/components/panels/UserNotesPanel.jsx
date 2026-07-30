@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   getAllUserNotes,
   deleteNoteForVerse,
@@ -33,17 +33,19 @@ export default function UserNotesPanel({ onNavigateToChapter, fullBibleData }) {
   // Estado de Respaldo JSON (Import/Export)
   const [backupNotice, setBackupNotice] = useState('');
 
-  // Cargar datos iniciales
-  useEffect(() => {
-    reloadAllData();
-  }, []);
-
-  const reloadAllData = () => {
+  const reloadAllData = useCallback(() => {
     const loadedNotes = getAllUserNotes('genesis');
     const loadedSermons = getAllSermons('genesis');
     setNotesList(loadedNotes);
     setSermonsList(loadedSermons);
-  };
+  }, []);
+
+  // Cargar datos iniciales
+  useEffect(() => {
+    queueMicrotask(() => {
+      reloadAllData();
+    });
+  }, [reloadAllData]);
 
   // ----------------------------------------------------------------------
   // FILTRADO Y MÉTROLOGÍA DE NOTAS

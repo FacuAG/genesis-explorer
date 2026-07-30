@@ -13,8 +13,6 @@ import {
   getGenesisData
 } from "../services/genesisService";
 
-import { useNavigate } from "react-router-dom";
-
 function GenealogyPage() {
   const people = getPeople();
   const data = getGenesisData();
@@ -28,7 +26,6 @@ function GenealogyPage() {
 
   const generationMap = {};
 
-  const navigate = useNavigate();
 
   const getNodeColor = (person) => {
     if (person.importance >= 5)

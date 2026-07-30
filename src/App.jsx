@@ -197,7 +197,7 @@ export function App() {
           {activeTab === 'notes' && (
             <UserNotesPanel
               fullBibleData={genesis.fullBibleData}
-              onNavigateToChapter={(chap, verse) => {
+              onNavigateToChapter={(chap) => {
                 setTargetChapterNum(chap);
                 setActiveTab('chapters');
               }}

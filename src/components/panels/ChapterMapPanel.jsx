@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import { getChapterExegesisData } from '../../data/bible/chapterExegesis';
 import { BibleRefLink } from '../common/BibleRefLink';
@@ -11,7 +11,7 @@ import './ChapterMapPanel.css';
  * Incluye barra de lectura pegajosa (Sticky Header), control dinámico de fuente (A-/A+),
  * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales Adaptativos de Capítulos y Volver Arriba.
  */
-export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson, initialChapter = null }) {
+export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, initialChapter = null }) {
   const [selectedChapNum, setSelectedChapNum] = useState(initialChapter);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
@@ -20,7 +20,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   // Responder si cambia la prop initialChapter desde afuera
   useEffect(() => {
     if (initialChapter !== null && initialChapter !== undefined) {
-      setSelectedChapNum(Number(initialChapter));
+      queueMicrotask(() => {
+        setSelectedChapNum(Number(initialChapter));
+      });
     }
   }, [initialChapter]);
 
@@ -52,11 +54,10 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     if (!selectedChapNum) return;
     try {
       const saved = localStorage.getItem(`genesis_notes_ch_${selectedChapNum}`);
-      if (saved) {
-        setUserNotes(JSON.parse(saved));
-      } else {
-        setUserNotes({});
-      }
+      const notesToSet = saved ? JSON.parse(saved) : {};
+      queueMicrotask(() => {
+        setUserNotes(notesToSet);
+      });
     } catch (err) {
       console.warn("Error leyendo notas personales:", err);
     }

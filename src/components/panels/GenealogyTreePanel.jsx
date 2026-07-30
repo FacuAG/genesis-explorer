@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { PersonDetailModal } from './PersonDetailModal';
 import './Panels.css';
 import './GenealogyTreePanel.css';
@@ -135,9 +135,8 @@ export function GenealogyTreePanel({ people = [], peopleMap = new Map(), notable
     return sortedTiers;
   }, [filteredPeople]);
 
-  // Lista de Personajes para la Gráfica de Convivencia según Era Bíblica
   const { overlapPeopleList, chartMin, chartMax, axisTicks } = useMemo(() => {
-    let list = [];
+    let list;
     let min = 0;
     let max = 4033;
     let ticks = [

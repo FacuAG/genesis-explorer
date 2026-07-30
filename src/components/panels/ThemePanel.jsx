@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BibleRefLink } from '../common/BibleRefLink';
 import { Modal } from '../common/Modal';
 import { THEOLOGICAL_STUDIES, LIBRARY_INFO } from '../../data/theology/themeStudies';
@@ -10,7 +10,7 @@ import './ThemePanel.css';
  * Permite estudiar los 8 grandes temas bíblicos con tratados exegéticos descargados
  * de La Biblia del Expositor y la Biblia Temática de Nave.
  */
-export function ThemePanel({ themes = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, onSelectPerson }) {
+export function ThemePanel({ themes = [], eventsMap = new Map(), onSelectEvent }) {
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeStudyTab, setActiveStudyTab] = useState('essay'); // 'essay' | 'hebrew' | 'nt' | 'events'

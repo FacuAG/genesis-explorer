@@ -1,4 +1,3 @@
-import React from 'react';
 import { EVENT_CATEGORIES } from '../../utils/timelineMapper';
 import './TimelineControls.css';
 

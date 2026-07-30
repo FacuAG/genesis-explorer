@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { LifespanBar } from '../timeline/LifespanBar';
 import { PersonDetailModal } from './PersonDetailModal';
 import './Panels.css';
@@ -15,8 +15,10 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, targetPersonId,
 
   useEffect(() => {
     if (targetPersonId) {
-      setActivePersonId(targetPersonId);
-      setIsModalOpen(true);
+      queueMicrotask(() => {
+        setActivePersonId(targetPersonId);
+        setIsModalOpen(true);
+      });
     }
   }, [targetPersonId]);
 
@@ -70,18 +72,7 @@ export function PersonPanel({ people = [], peopleMap, eventsMap, targetPersonId,
       {/* Grilla de Tarjetas de Personajes */}
       <div className="people-grid">
         {filteredPeople.map((person) => {
-          const hasBirth = typeof person.chronology?.birth_am === 'number';
-          const hasDeath = typeof person.chronology?.death_am === 'number';
           const lifespanStr = person.chronology?.lifespan ? `${person.chronology.lifespan} años` : 'No especificada';
-
-          let dateRangeStr = '';
-          if (hasBirth && hasDeath) {
-            dateRangeStr = `(AM ${person.chronology.birth_am} – AM ${person.chronology.death_am})`;
-          } else if (hasBirth) {
-            dateRangeStr = `(Nació AM ${person.chronology.birth_am})`;
-          } else {
-            dateRangeStr = `(Fechas AM no detalladas en el texto)`;
-          }
 
           const fatherId = person.father || person.family?.father;
           const fatherObj = fatherId && peopleMap ? peopleMap.get(fatherId) : null;

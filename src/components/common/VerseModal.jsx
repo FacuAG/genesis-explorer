@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { parseBiblicalRefString, getVerseTextRVR1960 } from '../../data/bible/bibleReader';
 import { Modal } from './Modal';
 import './VerseModal.css';

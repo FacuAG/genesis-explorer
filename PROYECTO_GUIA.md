@@ -1350,7 +1350,7 @@ ESTADO GLOBAL:
 NOTAS DE SESIONES ANTERIORES:
 - 2026-07-23: Se completó la Tarea D-04 (Babel y el Ciclo de Abraham) agregando 28 eventos exhaustivos (5 de Babel/Naciones + 23 de Abraham).
 - 2026-07-23: Se completó la Tarea D-05 (Isaac, Jacob y José) agregando 22 eventos exhaustivos (6 de Isaac + 8 de Jacob + 8 de José). Total acumulado en genesis.json: 82 eventos completos abarcando los 50 capítulos del Génesis según el estándar Schema 3.0 (D-01 a D-05 completados).
-- 2026-07-23: Se completó la Tarea D-06 (Personajes Principales) poblando los 21 perfiles bíblicos exhaustivos divididos en 3 sub-fases (D-06.1, D-06.2, D-06.3) siguiendo strictly el estándar Schema 3.0.
+- 2026-07-23: Se completó la Tarea D-06 (Personajes Principales) poblando los 21 perfiles bíblicos exhaustivos divididos en 3 sub-fases (D-06.1, D-06.2, D-06.3) siguiendo estrictamente el estándar Schema 3.0.
 - 2026-07-23: Se completó la Tarea D-07 poblando 12 personajes secundarios clave (llegando a 33 personas), 5 pactos bíblicos (`covenants`), 7 promesas mesiánicas (`messianic_promises`), 8 temas teológicos (`themes`) y 8 preguntas teológicas frecuentes (`questions`).
 - 2026-07-23: Se completó la Tarea D-08 poblando 15 ubicaciones geográficas (`locations`), el mapeo estructurado de los 50 capítulos (`chapters_map`) y la matriz de convivencias patriarcales reales (`notable_overlaps`).
 - 2026-07-23: Se completó la Tarea D-09 (Validación Final). Se auditó el 100% de la base de datos `src/data/books/genesis.json` (532,172 bytes) confirmando la integridad total de 82 eventos, 33 personajes, 15 ubicaciones, 5 pactos, 7 promesas mesiánicas, 8 temas, 8 preguntas, 50 capítulos y 11 convivencias patriarcales. ¡FASE DE DATOS 100% FINALIZADA CON ÉXITO!

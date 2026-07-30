@@ -449,7 +449,9 @@ export function TimelineView({
     const eventObj = eventsMap.get(targetEventId);
     if (!eventObj) return;
 
-    setSelectedEntity({ type: 'event', data: eventObj });
+    queueMicrotask(() => {
+      setSelectedEntity({ type: 'event', data: eventObj });
+    });
     try {
       const yearAM = getEventAM(eventObj);
       const startWin = amToDate(Math.max(-200, yearAM - 150));

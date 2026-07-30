@@ -1,4 +1,3 @@
-import React from 'react';
 import { Modal } from '../common/Modal';
 import { EVENT_CATEGORIES } from '../../utils/timelineMapper';
 import { formatScriptureRef } from '../../utils/formatters';
@@ -8,7 +7,7 @@ import './EventPanel.css';
 /**
  * Componente modal/panel de detalle completo para un evento bíblico de Génesis.
  */
-export function EventPanel({ event, isOpen, onClose, peopleMap = new Map(), locationsMap = new Map(), onSelectPerson, onSelectLocation }) {
+export function EventPanel({ event, isOpen, onClose, peopleMap = new Map(), locationsMap = new Map(), onSelectPerson }) {
   if (!event) return null;
 
   const categoryInfo = EVENT_CATEGORIES[event.category] || { label: 'Evento', color: '#6366f1', icon: '📌' };

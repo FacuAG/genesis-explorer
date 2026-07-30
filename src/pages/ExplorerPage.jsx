@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import Timeline from '../components/Timeline/Timeline';
 import Sidebar from '../components/Sidebar/Sidebar';
@@ -8,7 +8,7 @@ export default function ExplorerPage() {
   const [selectedId, setSelectedId] = useState(null);
   
   // Próximamente: view = 'timeline' | 'genealogy' | 'map' | 'covenants'
-  const [view, setView] = useState('timeline'); 
+  const [view] = useState('timeline'); 
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-gray-950 font-sans">

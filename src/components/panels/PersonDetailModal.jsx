@@ -1,4 +1,3 @@
-import React from 'react';
 import { Modal } from '../common/Modal';
 import { formatLifespan } from '../../utils/formatters';
 import { BibleRefLink } from '../common/BibleRefLink';
