@@ -7495,7 +7495,384 @@
       "theological_significance": "Sustituye la sombra del antiguo sistema levítico por el sacrificio vicario perfecto y definitivo de Cristo, otorgando el perdón absoluto y el acceso directo a la presencia de Dios."
     }
   ],
-  "messianic_promises": [],
+  "messianic_promises": [
+    {
+      "id": "promise_matthew_born_of_virgin",
+      "order": 1,
+      "chapter_ref": 1,
+      "title": "El Nacimiento Virginal del Emanuel",
+      "ot_prophecy": {
+        "reference": "Isaías 7:14",
+        "text": "Por tanto, el Señor mismo os dará señal: He aquí que la virgen concebirá, y dará a luz un hijo, y llamará su nombre Emanuel."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 1:22-23",
+        "text": "Todo esto aconteció para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: He aquí la virgen concebirá y parirá un hijo, Y llamarás su nombre Emmanuel, que declarado, es: Con nosotros Dios."
+      },
+      "explanation": "Mateo demuestra que la concepción de Jesús en el vientre de María por obra del Espíritu Santo es el cumplimiento literal e inerrante de Isaías 7:14, revelando que el Rey promete ser verdaderamente Dios con nosotros.",
+      "key_people_ids": [
+        "jesus",
+        "mary",
+        "joseph"
+      ]
+    },
+    {
+      "id": "promise_matthew_born_in_bethlehem",
+      "order": 2,
+      "chapter_ref": 2,
+      "title": "El Gobernante Nacido en Belén de Judea",
+      "ot_prophecy": {
+        "reference": "Miqueas 5:2",
+        "text": "Pero tú, Belén Efrata, pequeña para estar entre las familias de Judá, de ti me saldrá el que será Señor en Israel; y sus salidas son desde el principio, desde los días de la eternidad."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 2:5-6",
+        "text": "Y ellos le dijeron: En Bethlehem de Judea; porque así está escrito por el profeta: Y tú, Bethlehem, de tierra de Judá, No eres muy pequeña entre los príncipes de Judá; Porque de ti saldrá un guiador, Que apacentará á mi pueblo Israel."
+      },
+      "explanation": "La providencia divina guió el nacimiento de Jesucristo en Belén de Judea, la patria ancestral del Rey David, ratificando las profecías redactadas 700 años antes de su venida.",
+      "key_people_ids": [
+        "jesus",
+        "herod_the_great"
+      ]
+    },
+    {
+      "id": "promise_matthew_called_out_of_egypt",
+      "order": 3,
+      "chapter_ref": 2,
+      "title": "El Llamamiento de Egipto",
+      "ot_prophecy": {
+        "reference": "Oseas 11:1",
+        "text": "Cuando Israel era niño, yo lo amé, y de Egipto llamé a mi hijo."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 2:14-15",
+        "text": "Y él despertando, tomó al niño y á su madre de noche, y se fué á Egipto; Y estuvo allá hasta la muerte de Herodes: para que se cumpliese lo que fué dicho por el Señor, por el profeta que dijo: De Egipto llamé á mi Hijo."
+      },
+      "explanation": "Cumplimiento tipológico donde Jesús revive de forma impecable la prueba de Israel, siendo preservado en Egipto y llamado de vuelta por el Padre a la Tierra Prometida.",
+      "key_people_ids": [
+        "jesus",
+        "joseph",
+        "mary"
+      ]
+    },
+    {
+      "id": "promise_matthew_voice_in_ramah",
+      "order": 4,
+      "chapter_ref": 2,
+      "title": "El Lamento de Raquel por los Inocentes",
+      "ot_prophecy": {
+        "reference": "Jeremías 31:15",
+        "text": "Voz fue oída en Ramá, llanto y lloro amargo; Raquel que lamenta por sus hijos, y no quiso ser consolada acerca de sus hijos, porque perecieron."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 2:17-18",
+        "text": "Entonces fué cumplido lo que se había dicho por el profeta Jeremías, que dijo: Voz fué oída en Ramá, Grande lamentación, lloro y gemido: Rachêl que llora sus hijos, Y no quiso ser consolada, porque perecieron."
+      },
+      "explanation": "La masacre de los niños inocentes ordenada por la paranoia de Herodes cumplió el dolor profetizado en Jeremías sobre la aflicción del remanente en la tierra de Judá.",
+      "key_people_ids": [
+        "jesus",
+        "herod_the_great"
+      ]
+    },
+    {
+      "id": "promise_matthew_called_nazarene",
+      "order": 5,
+      "chapter_ref": 2,
+      "title": "El Renuevo Mesiánico Nazareno",
+      "ot_prophecy": {
+        "reference": "Isaías 11:1",
+        "text": "Saldrá una vara del tronco de Isaí, y un renuevo (Netzer) retoñará de sus raíces."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 2:23",
+        "text": "Y vino, y habitó en la ciudad que se llama Nazaret: para que se cumpliese lo que fué dicho por los profetas, que había de ser llamado Nazareno."
+      },
+      "explanation": "La radicación de la Sagrada Familia en Nazaret relaciona fonética y teológicamente el vocablo hebreo Netzer (Renuevo) con la humilde procedencia del Mesías.",
+      "key_people_ids": [
+        "jesus",
+        "joseph"
+      ]
+    },
+    {
+      "id": "promise_matthew_voice_in_wilderness",
+      "order": 6,
+      "chapter_ref": 3,
+      "title": "La Voz del Precursor en el Desierto",
+      "ot_prophecy": {
+        "reference": "Isaías 40:3",
+        "text": "Voz que clama en el desierto: Preparad camino a Jehová; enderezad calzada en la soledad para nuestro Dios."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 3:3",
+        "text": "Porque éste es aquel del cual fué dicho por el profeta Isaías, que dijo: Voz de uno que clama en el desierto: Aparejad el camino del Señor, Enderezad sus veredas."
+      },
+      "explanation": "Juan el Bautista sirvió como el herald profético que desbrozó el camino moral del pueblo de Israel para recibir la llegada de Jesucristo.",
+      "key_people_ids": [
+        "jesus",
+        "john_the_baptist"
+      ]
+    },
+    {
+      "id": "promise_matthew_light_in_galilee",
+      "order": 7,
+      "chapter_ref": 4,
+      "title": "La Gran Luz Resplandeciente en Galilea",
+      "ot_prophecy": {
+        "reference": "Isaías 9:1-2",
+        "text": "El pueblo que andaba en tinieblas vio gran luz; los que moraban en tierra de sombra de muerte, luz resplandeció sobre ellos."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 4:14-16",
+        "text": "Para que se cumpliese lo que fué dicho por el profeta Isaías, que dijo: La tierra de Zabulón, y la tierra de Nephtalim, Camino de la mar, de la otra parte del Jordán, Galilea de los Gentiles; El pueblo asentado en tinieblas, Vió gran luz; Y á los sentados en región y sombra de muerte, Luz les esclareció."
+      },
+      "explanation": "El establecimiento del ministerio de Jesús en Capernaúm de Galilea llevó la luz gloriosa de la salvación a la región despreciada del norte.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_took_our_infirmities",
+      "order": 8,
+      "chapter_ref": 8,
+      "title": "El Siervo que Lleva nuestras Dolencias",
+      "ot_prophecy": {
+        "reference": "Isaías 53:4",
+        "text": "Ciertamente llevó él nuestras enfermedades, y sufrió nuestros dolores."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 8:17",
+        "text": "Para que se cumpliese lo que fué dicho por el profeta Isaías, que dijo: El mismo tomó nuestras enfermedades, y llevó nuestras dolencias."
+      },
+      "explanation": "Las sanidades masivas y expulsiones de demonios realizadas por Jesús en Capernaúm mostraron de forma física la obra sustitutiva del Siervo Sufriente.",
+      "key_people_ids": [
+        "jesus",
+        "peter"
+      ]
+    },
+    {
+      "id": "promise_matthew_gentle_servant",
+      "order": 9,
+      "chapter_ref": 12,
+      "title": "El Siervo Escogido Manso y Humilde",
+      "ot_prophecy": {
+        "reference": "Isaías 42:1-3",
+        "text": "He aquí mi siervo, yo le sostendré; mi escogido... No clamará, ni alzará su voz... La caña cascada no quebrará..."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 12:17-21",
+        "text": "Para que se cumpliese lo que estaba dicho por el profeta Isaías, que dijo: He aquí mi siervo, al cual he escogido; Mi Amado, en el cual se agrada mi alma: Pondré mi Espíritu sobre él Y á los Gentiles anunciará juicio."
+      },
+      "explanation": "Jesús evitó la ostentación y la violencia política, manifestando la mansedumbre infinita del Siervo escogido por el Padre para proclamar justicia a los gentiles.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_teaching_in_parables",
+      "order": 10,
+      "chapter_ref": 13,
+      "title": "La Enseñanza Mesiánica en Parábolas",
+      "ot_prophecy": {
+        "reference": "Salmo 78:2",
+        "text": "Abriré mi boca en proverbios; hablaré cosas escondidas desde tiempos antiguos."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 13:34-35",
+        "text": "Todo esto habló Jesús por parábolas á las gentes, y sin parábolas no les hablaba: Para que se cumpliese lo que fué dicho por el profeta, que dijo: Abriré en parábolas mi boca; Rebosaré cosas escondidas desde la fundación del mundo."
+      },
+      "explanation": "El método de enseñanza parabólico de Jesús reveló los misterios del Reino a los humildes mientras mantuvo velada la verdad a los orgullosos.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_triumphal_entry_donkey",
+      "order": 11,
+      "chapter_ref": 21,
+      "title": "El Rey Humilde Montado en Asna",
+      "ot_prophecy": {
+        "reference": "Zacarías 9:9",
+        "text": "Alégrate mucho, hija de Sion... he aquí tu rey vendrá a ti, justo y salvador, humilde, y cabalgando sobre un asno."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 21:4-5",
+        "text": "Y todo esto fué hecho, para que se cumpliese lo que fué dicho por el profeta, que dijo: Decid á la hija de Sión: He aquí, tu Rey viene á ti, Manso, y sentado sobre una asna, Y sobre un pollino, hijo de animal de yugo."
+      },
+      "explanation": "La Entrada Triunfal en Jerusalén cumplió al pie de la letra la profecía de Zacarías sobre el Rey de Paz que entra a su ciudad.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_rejected_chief_cornerstone",
+      "order": 12,
+      "chapter_ref": 21,
+      "title": "La Piedra Desechada convertida en Cabeza de Ángulo",
+      "ot_prophecy": {
+        "reference": "Salmo 118:22-23",
+        "text": "La piedra que desecharon los edificadores ha venido a ser cabeza del ángulo. De parte de Jehová es esto."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 21:42",
+        "text": "Díceles Jesús: ¿Nunca leísteis en las Escrituras: La piedra que desecharon los que edificaban, Esta fué hecha por cabeza de esquina: Por el Señor es hecho esto, Y es cosa maravillosa en nuestros ojos?"
+      },
+      "explanation": "Jesús confrontó a los líderes del Templo advirtiéndoles que su rechazo a su persona los dejaría fuera del Reino mientras Él se convierte en la Piedra Angular.",
+      "key_people_ids": [
+        "jesus",
+        "caiaphas"
+      ]
+    },
+    {
+      "id": "promise_matthew_thirty_pieces_silver",
+      "order": 13,
+      "chapter_ref": 26,
+      "title": "El Precio del Rescate: Treinta Piezas de Plata",
+      "ot_prophecy": {
+        "reference": "Zacarías 11:12",
+        "text": "Y les dije: Si os parece bien, dadme mi salario... Y pesaron por mi salario treinta piezas de plata."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 26:15",
+        "text": "Y les dijo: ¿Qué me queréis dar, y yo os lo entregaré? Y ellos le señalaron treinta piezas de plata."
+      },
+      "explanation": "El monto fijado por Judas y los sacerdotes para traicionar a Cristo cumplió el valor del salario despreciable profetizado en Zacarías.",
+      "key_people_ids": [
+        "jesus",
+        "judas_iscariot",
+        "caiaphas"
+      ]
+    },
+    {
+      "id": "promise_matthew_smite_shepherd_scatter_sheep",
+      "order": 14,
+      "chapter_ref": 26,
+      "title": "Herir al Pastor y la Dispersión de las Ovejas",
+      "ot_prophecy": {
+        "reference": "Zacarías 13:7",
+        "text": "Hiere al pastor, y serán dispersadas las ovejas; y haré volver mi mano contra los pequeñitos."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 26:31",
+        "text": "Entonces Jesús les dice: Todos vosotros seréis escandalizados en mí esta noche; porque escrito está: Heriré al Pastor, y las ovejas de la manada serán dispersas."
+      },
+      "explanation": "Jesús profetizó en la noche de su arresto que todos sus discípulos tropezarían y huirían al ser arrestado el Pastor Supremo.",
+      "key_people_ids": [
+        "jesus",
+        "peter"
+      ]
+    },
+    {
+      "id": "promise_matthew_silent_lamb_before_shearers",
+      "order": 15,
+      "chapter_ref": 27,
+      "title": "El Cordero Silencioso ante sus Acusadores",
+      "ot_prophecy": {
+        "reference": "Isaías 53:7",
+        "text": "Angustiado él, y afligido, no abrió su boca; como cordero fue llevado al matadero... enmudeció."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 27:12-14",
+        "text": "Y siendo acusado por los príncipes de los sacerdotes, y por los ancianos, nada respondió. Y no le respondió ni una palabra; de tal manera que el presidente se maravillaba mucho,"
+      },
+      "explanation": "La serenidad y el silencio digno de Jesús ante el tribunal de Pilato maravillo al procurador romano y cumplió el pasaje del Siervo de Isaías.",
+      "key_people_ids": [
+        "jesus",
+        "pilate"
+      ]
+    },
+    {
+      "id": "promise_matthew_lots_cast_for_garments",
+      "order": 16,
+      "chapter_ref": 27,
+      "title": "Reparto de Vestiduras y Suertes sobre la Túnica",
+      "ot_prophecy": {
+        "reference": "Salmo 22:18",
+        "text": "Repartieron entre sí mis vestidos, y sobre mi ropa echaron suertes."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 27:35",
+        "text": "Y después que le hubieron crucificado, repartieron sus vestidos, echando suertes: para que se cumpliese lo que fué dicho por el profeta: Se repartieron mis vestidos, y sobre mi ropa echaron suertes."
+      },
+      "explanation": "Los soldados romanos sortearon las vestiduras de Jesús al pie de la cruz en el Gólgota sin saber que estaban cumpliendo el Salmo 22.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_numbered_with_transgressors",
+      "order": 17,
+      "chapter_ref": 27,
+      "title": "Contado con los Transgresores en la Cruz",
+      "ot_prophecy": {
+        "reference": "Isaías 53:12",
+        "text": "Y fue contado con los pecadores, habiendo él llevado el pecado de muchos, y orado por los transgresores."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 27:38",
+        "text": "Entonces crucificaron con él dos ladrones, uno á la derecha, y otro á la izquierda."
+      },
+      "explanation": "Jesús fue crucificado entre dos ladrones sediciosos, identificándose plenamente con los pecadores a los que venía a redimir.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_gall_and_vinegar",
+      "order": 18,
+      "chapter_ref": 27,
+      "title": "La Bebida de Hiel y Vinagre en la Agonía",
+      "ot_prophecy": {
+        "reference": "Salmo 69:21",
+        "text": "En mi comida me dieron hiel, y en mi sed me dieron a beber vinagre."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 27:34",
+        "text": "Le dieron á beber vinagre mezclado con hiel: y gustando, no quiso beber lo"
+      },
+      "explanation": "La oferta de vinagre con hiel en el Gólgota cumplió el lamento profético de David sobre los sufrimientos del Mesías.",
+      "key_people_ids": [
+        "jesus"
+      ]
+    },
+    {
+      "id": "promise_matthew_rich_man_tomb",
+      "order": 19,
+      "chapter_ref": 27,
+      "title": "La Sepultura en la Tumba del Rico",
+      "ot_prophecy": {
+        "reference": "Isaías 53:9",
+        "text": "Y se dispuso con los impíos su sepultura, mas con los ricos fue en su muerte; aunque nunca hizo maldad."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 27:57-60",
+        "text": "Y como fué la tarde del día, vino un hombre rico de Arimatea, llamado José, el cual también había sido discípulo de Jesús. Y lo puso en su sepulcro nuevo, que había labrado en la peña: y revuelta una grande piedra á la puerta del sepulcro, se fué."
+      },
+      "explanation": "El cuerpo de Jesús fue depositado honorablemente en el sepulcro excavado de José de Arimatea, un varón rico e ilustre del Sanedrín.",
+      "key_people_ids": [
+        "jesus",
+        "joseph_of_arimathea"
+      ]
+    },
+    {
+      "id": "promise_matthew_resurrection_third_day",
+      "order": 20,
+      "chapter_ref": 28,
+      "title": "La Resurrección Gloriosa al Tercer Día",
+      "ot_prophecy": {
+        "reference": "Salmo 16:10",
+        "text": "Porque no dejarás mi alma en el Seol, ni permitirás que tu santo vea corrupción."
+      },
+      "nt_fulfillment": {
+        "reference": "Mateo 28:6",
+        "text": "No está aquí; porque ha resucitado, como dijo. Venid, ved el lugar donde fué puesto el Señor."
+      },
+      "explanation": "El triunfo definitivo de Jesucristo sobre la sepultura al tercer día garantizó la abolición de la muerte y la victoria del Nuevo Pacto.",
+      "key_people_ids": [
+        "jesus",
+        "mary_magdalene"
+      ]
+    }
+  ],
   "themes": [
     {
       "id": "theme_kingdom_of_heaven",
@@ -7911,6 +8288,815 @@
       ]
     }
   ],
-  "chapters_map": [],
+  "chapters_map": [
+    {
+      "chapter_number": 1,
+      "title": "Genealogía y Nacimiento Virginal de Jesucristo",
+      "summary": "Registro legal de 42 generaciones desde Abraham y David hasta José, y el anuncio del nacimiento virginal de Emanuel por el Espíritu Santo.",
+      "christological_theme": "Jesús como el Hijo de David legal y el Emanuel divino (Dios con nosotros).",
+      "key_people": [
+        "jesus",
+        "joseph",
+        "mary",
+        "abraham",
+        "david"
+      ],
+      "locations": [
+        "bethlehem_judea",
+        "nazareth"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Βίβλος γενέσεως",
+          "transliteration": "Biblos geneseos",
+          "strong": "G976 / G1078",
+          "target_verse": 1,
+          "target_word": "Libro de la genealogía",
+          "meaning": "Registro histórico formal del origen e historia familiar del Rey Mesías."
+        },
+        {
+          "greek": "Ἐμμανουήλ",
+          "transliteration": "Emmanouel",
+          "strong": "G1694",
+          "target_verse": 23,
+          "target_word": "Emanuel",
+          "meaning": "Nombre profético divino: Dios en su sustancia habitando de forma permanente con los hombres."
+        },
+        {
+          "greek": "Πνεῦμα Ἅγιον",
+          "transliteration": "Pneuma Hagion",
+          "strong": "G4151 / G40",
+          "target_verse": 18,
+          "target_word": "Espíritu Santo",
+          "meaning": "La tercera Persona de la Santísima Trinidad cuya potencia efectuó la concepción virginal."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 2,
+      "title": "Adoración de los Magos y Preservación en Egipto",
+      "summary": "Llegada de los sabios de Oriente con tributos de oro, incienso y mirra, persecución sangrienta de Herodes y refugio providencial en Egipto.",
+      "christological_theme": "Jesús como el Rey universal adorado por gentiles y el Hijo llamado fuera de Egipto.",
+      "key_people": [
+        "jesus",
+        "mary",
+        "joseph",
+        "herod_the_great"
+      ],
+      "locations": [
+        "bethlehem_judea",
+        "jerusalem",
+        "egypt",
+        "nazareth"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Μάγοι",
+          "transliteration": "Magoi",
+          "strong": "G3097",
+          "target_verse": 1,
+          "target_word": "magos",
+          "meaning": "Sabios astrónomos de la aristocracia oriental dedicada al estudio de profecías."
+        },
+        {
+          "greek": "Προσεκύνησαν",
+          "transliteration": "Prosekynesan",
+          "strong": "G4352",
+          "target_verse": 11,
+          "target_word": "adoraron",
+          "meaning": "Postración reverente en máxima adoración debida únicamente a la Deidad."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 3,
+      "title": "Ministerio de Juan el Bautista y Bautismo de Jesús",
+      "summary": "Proclamación de arrepentimiento por Juan el Bautista en el desierto y manifestaciones de la Trinidad durante el bautismo de Jesús en el Jordán.",
+      "christological_theme": "Jesús consagrado por el Espíritu Santo y proclamado el Hijo amado por el Padre.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "locations": [
+        "jordan_river",
+        "judean_wilderness"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Βάπτισμα",
+          "transliteration": "Baptisma",
+          "strong": "G908",
+          "target_verse": 7,
+          "target_word": "bautismo",
+          "meaning": "Inmersión ritual de arrepentimiento y purificación confesando pecados."
+        },
+        {
+          "greek": "Μετανοεῖτε",
+          "transliteration": "Metanoeite",
+          "strong": "G3340",
+          "target_verse": 2,
+          "target_word": "Arrepentíos",
+          "meaning": "Cambio radical de mente y dirección del corazón volviéndose de las tinieblas a Dios."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 4,
+      "title": "Victoria en el Desierto e Inicio del Ministerio en Galilea",
+      "summary": "Jesús vence victoriosamente las tentaciones del diablo tras 40 días de ayuno y llama a sus primeros apóstoles en el Mar de Galilea.",
+      "christological_theme": "El Postrer Adán victorioso sobre Satanás y la Gran Luz de Galilea.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "locations": [
+        "judean_wilderness",
+        "capernaum",
+        "sea_of_galilee"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Γέγραπται",
+          "transliteration": "Gegraptai",
+          "strong": "G1125",
+          "target_verse": 4,
+          "target_word": "Escrito está",
+          "meaning": "Fórmula autoritativa inalterable indicando la permanencia inerrante de la Palabra escrita."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 5,
+      "title": "El Sermón del Monte: Las Bienaventuranzas y la Plenitud de la Ley",
+      "summary": "Jesús proclama el Manifiesto del Reino con las Bienaventuranzas, la llamada a ser sal y luz, y la justicia que trasciende el exteriorismo fariseo.",
+      "christological_theme": "Cristo el Legislador Divino que cumple y perfecciona la Ley moral.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew"
+      ],
+      "locations": [
+        "mount_of_beatitudes"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Μακάριοι",
+          "transliteration": "Makarioi",
+          "strong": "G3107",
+          "target_verse": 3,
+          "target_word": "Bienaventurados",
+          "meaning": "Dicha y gozo celestial profundo concedidos por la gracia soberana de Dios."
+        },
+        {
+          "greek": "Πληρῶσαι",
+          "transliteration": "Plerosai",
+          "strong": "G4137",
+          "target_verse": 17,
+          "target_word": "cumplir",
+          "meaning": "Llevar a su máxima plenitud, consumación y propósito perfecto de diseño."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 6,
+      "title": "La Oración del Padre Nuestro y la Confianza Providencial",
+      "summary": "Instrucción sobre la limosna y la oración sin ostentación, la entrega del Padre Nuestro y el llamado a buscar primeramente el Reino de Dios.",
+      "christological_theme": "Jesús el Mediador que revela el acceso filial al Padre celestial.",
+      "key_people": [
+        "jesus"
+      ],
+      "locations": [
+        "mount_of_beatitudes"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Πάτερ ἡμῶν",
+          "transliteration": "Pater hemon",
+          "strong": "G3962",
+          "target_verse": 9,
+          "target_word": "Padre nuestro",
+          "meaning": "Invocación filial reverente que afirma la adopción de los creyentes."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 7,
+      "title": "El Juicio Recto, la Puerta Estrecha y los Dos Cimientos",
+      "summary": "Advertencia sobre la viga en el ojo, la exhortación a pedir y buscar, la puerta estrecha y la parábola del hombre sabio sobre la Roca.",
+      "christological_theme": "Jesús la Roca eterna y el Juez Supremo que prueba las obras.",
+      "key_people": [
+        "jesus"
+      ],
+      "locations": [
+        "mount_of_beatitudes"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Πέτραν",
+          "transliteration": "Petran",
+          "strong": "G4073",
+          "target_verse": 24,
+          "target_word": "roca",
+          "meaning": "Masa rocosa firme e inmovible sobre la que se edifica la obediencia espiritual."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 8,
+      "title": "Diez Milagros de Autoridad Mesiánica en Galilea",
+      "summary": "Sanidad del leproso, fe del centurión romano, calma de la tempestad en el mar y liberación de los endemoniados gadarenos.",
+      "christological_theme": "Cristo el Señor con autoridad sobre lepra, parálisis, vientos, mares y demonios.",
+      "key_people": [
+        "jesus",
+        "leper_cleansed",
+        "centurion_capernaum",
+        "peter"
+      ],
+      "locations": [
+        "capernaum",
+        "sea_of_galilee",
+        "country_of_gadarenes"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Ἐπιτιμάω",
+          "transliteration": "Epitimao",
+          "strong": "G2008",
+          "target_verse": 26,
+          "target_word": "reprendió",
+          "meaning": "Orden imperativa autoritativa que somete las fuerzas enemigas y naturales."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 9,
+      "title": "El Perdón del Paralítico, Llamado de Mateo y Resurrecciones",
+      "summary": "Jesús perdona los pecados del paralítico, llama a Mateo el publicano, sana a la mujer con flujo de sangre y resucita a la hija de Jairo.",
+      "christological_theme": "El Señor que perdona pecados y ostenta las llaves de la vida sobre la muerte.",
+      "key_people": [
+        "jesus",
+        "paralyzed_man_capernaum",
+        "matthew_apostle",
+        "jairus",
+        "woman_flux_blood"
+      ],
+      "locations": [
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Exousia",
+          "transliteration": "Exousia",
+          "strong": "G1849",
+          "target_verse": 6,
+          "target_word": "potestad",
+          "meaning": "Derecho soberano y potestad absoluta sobre el pecado y la culpa."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 10,
+      "title": "El Discurso Misionero y el Envío de los Doce Apóstoles",
+      "summary": "Elección de los Doce Apóstoles y comisión para predicar el Reino, sanar enfermos y proclamar la verdad sin temor a los hombres.",
+      "christological_theme": "El Rey Supremo que comisiona y reviste de autoridad a su Iglesia.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "matthew_apostle",
+        "judas_iscariot"
+      ],
+      "locations": [
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Ἀπόστολος",
+          "transliteration": "Apostolos",
+          "strong": "G652",
+          "target_verse": 2,
+          "target_word": "apóstoles",
+          "meaning": "Embajadores oficiales enviados con la plena autoridad de su Representante."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 11,
+      "title": "El Testimonio sobre Juan y el Descanso del Alma",
+      "summary": "Respuesta a los mensajeros de Juan el Bautista, ayes sobre Galilea y la gloriosa invitación al yugo fácil de Cristo.",
+      "christological_theme": "El Salvador Manso que otorga descanso eterno a las almas trabajadas.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist"
+      ],
+      "locations": [
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Anapausis",
+          "transliteration": "Anapausis",
+          "strong": "G372",
+          "target_verse": 29,
+          "target_word": "descanso",
+          "meaning": "Paz interior profunda y reposo sabático espiritual concedido al creyente."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 12,
+      "title": "El Señor del Sábado y la Blasfemia contra el Espíritu Santo",
+      "summary": "Debates sobre el día de reposo, acusación farisea de Beelzebú, la blasfemia imperdonable y la promesa de la Señal de Jonás.",
+      "christological_theme": "Jesús el Señor del Sábado y el Juez que resucitará al tercer día.",
+      "key_people": [
+        "jesus",
+        "david"
+      ],
+      "locations": [
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Kyrios",
+          "transliteration": "Kyrios",
+          "strong": "G2962",
+          "target_verse": 8,
+          "target_word": "Señor",
+          "meaning": "Señorío divino absoluto con los mismos atributos del Jehová del Antiguo Pacto."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 13,
+      "title": "Las Siete Parábolas del Reino de los Cielos",
+      "summary": "Jesús enseña desde la barca las parábolas del Sembrador, Trigo y Cizaña, Mostaza, Levadura, Tesoro, Perla y la Red.",
+      "christological_theme": "El Sembrador Divino y el Rey que gobierna los misterios del Reino.",
+      "key_people": [
+        "jesus"
+      ],
+      "locations": [
+        "sea_of_galilee",
+        "nazareth"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Παραβολή",
+          "transliteration": "Parabole",
+          "strong": "G3850",
+          "target_verse": 3,
+          "target_word": "parábolas",
+          "meaning": "Comparación terrenal que coloca al lado una verdad celestial profunda."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 14,
+      "title": "Martirio del Bautista, 5.000 Alimentados y Marcha sobre el Mar",
+      "summary": "Decapitación de Juan por Herodes Antipas, multiplicación de panes para 5.000 hombres y caminata sobre el mar salvando a Pedro.",
+      "christological_theme": "El Pan de Vida y el 'YO SOY' que domina el mar y la tempestad.",
+      "key_people": [
+        "jesus",
+        "john_the_baptist",
+        "herod_antipas",
+        "herodias",
+        "salome_dancer",
+        "peter"
+      ],
+      "locations": [
+        "sea_of_galilee"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Ego Eimi",
+          "transliteration": "Ego Eimi",
+          "strong": "G1473 / G1510",
+          "target_verse": 27,
+          "target_word": "yo soy",
+          "meaning": "La auto-revelación del Santo Nombre de Dios que infunde paz invencible."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 15,
+      "title": "Tradiciones Humanas vs Mandamientos y la Fe Cananea",
+      "summary": "Denuncia del ritualismo fariseo, la fe extraordinaria de la mujer cananea sanando a su hija y multiplicación para 4.000.",
+      "christological_theme": "El Rey que limpia el corazón y extiende la mesa de la gracia a los gentiles.",
+      "key_people": [
+        "jesus",
+        "syrophoenician_woman"
+      ],
+      "locations": [
+        "tyre_and_sidon",
+        "sea_of_galilee"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Kardia",
+          "transliteration": "Kardia",
+          "strong": "G2588",
+          "target_verse": 18,
+          "target_word": "corazón",
+          "meaning": "El centro moral e intelectivo del alma humana donde nace la obediencia o el pecado."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 16,
+      "title": "La Confesión de Pedro y el Anuncio de la Cruz",
+      "summary": "Pedro confiesa a Jesús como el Cristo en Cesarea de Filipo, promesa de edificar la Iglesia y primer anuncio de la Pasión.",
+      "christological_theme": "El Hijo del Dios viviente sobre cuya deidad se edifica la Iglesia victoriosa.",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "locations": [
+        "caesarea_philippi"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Ekklesia",
+          "transliteration": "Ekklesia",
+          "strong": "G1577",
+          "target_verse": 18,
+          "target_word": "iglesia",
+          "meaning": "La asamblea de los redimidos llamados fuera del mundo para formar el cuerpo de Cristo."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 17,
+      "title": "La Transfiguración en el Monte y el Impuesto del Templo",
+      "summary": "Jesús resplandece en gloria ante Pedro, Jacobo y Juan junto a Moisés y Elías, sanidad del epiléptico y la moneda en el pez.",
+      "christological_theme": "El Hijo Amado transfigurado en majestad increada de Dios.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "locations": [
+        "mount_hermon",
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Metamorphoo",
+          "transliteration": "Metamorphoo",
+          "strong": "G3339",
+          "target_verse": 2,
+          "target_word": "transfiguró",
+          "meaning": "Transformación exterior que deja irradiar la gloria divina interior intrínseca."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 18,
+      "title": "Grandez de los Niños, Disciplina e Instrucción del Perdón",
+      "summary": "Enseñanza sobre la humildad de los niños, la parábola de la oveja perdida, el proceso de disciplina eclesial y el perdón incondicional.",
+      "christological_theme": "El Buen Pastor que busca a la oveja perdida y demanda amor fraterno.",
+      "key_people": [
+        "jesus",
+        "peter"
+      ],
+      "locations": [
+        "capernaum"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Adelphos",
+          "transliteration": "Adelphos",
+          "strong": "G80",
+          "target_verse": 15,
+          "target_word": "hermano",
+          "meaning": "El compañero en la fe unido por la sangre del Nuevo Pacto."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 19,
+      "title": "El Matrimonio, los Niños y el Encuentro con el Joven Rico",
+      "summary": "Jesús enseña sobre la indisolubilidad del matrimonio, bendice a los niños y muestra la imposibilidad de salvarse por riquezas.",
+      "christological_theme": "El Maestro Santo que revela la santidad del pacto matrimonial y la salvación por la sola gracia de Dios.",
+      "key_people": [
+        "jesus",
+        "rich_young_ruler",
+        "peter"
+      ],
+      "locations": [
+        "jericho"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Soterian",
+          "transliteration": "Soterian",
+          "strong": "G4991",
+          "target_verse": 25,
+          "target_word": "salvarse",
+          "meaning": "Rescate divino de la perdición eterna por la omnipotencia de Dios."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 20,
+      "title": "Parábola de los Obreros de la Viña y Petición de los Zebedeos",
+      "summary": "Gracia igual para todos en la viña, tercer anuncio de la Pasión, lección sobre el servicio y sanidad de dos ciegos en Jericó.",
+      "christological_theme": "El Rey que vino a servir y a dar su vida en rescate por muchos.",
+      "key_people": [
+        "jesus",
+        "salome_mother_of_zebedees",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "bartimaeus_blind"
+      ],
+      "locations": [
+        "jericho"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Lutron",
+          "transliteration": "Lutron",
+          "strong": "G3083",
+          "target_verse": 28,
+          "target_word": "rescate",
+          "meaning": "Precio de redención pagado mediante la vida sustitutiva de Cristo."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 21,
+      "title": "Entrada Triunfal, Purificación del Templo y Viñadores",
+      "summary": "Jesús entra en Jerusalén montado en asno, purifica el Templo de los mercaderes y pronuncia la parábola de los viñadores malvados.",
+      "christological_theme": "El Rey Mesías de Sion y la Piedra Angular desechada.",
+      "key_people": [
+        "jesus",
+        "caiaphas"
+      ],
+      "locations": [
+        "bethphage_and_bethany",
+        "jerusalem"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Hosanna",
+          "transliteration": "Hosanna",
+          "strong": "G5614",
+          "target_verse": 9,
+          "target_word": "Hosanna",
+          "meaning": "Clamor mesiánico: '¡Salva ahora, rogamos!', dirigido al Hijo de David."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 22,
+      "title": "Parábola de las Bodas y Controversias con los Líderes",
+      "summary": "Parábola de la fiesta de bodas del rey, preguntas capciosas del tributo al César, la resurrección y el Gran Mandamiento del amor.",
+      "christological_theme": "El Esposo divino y la Sabiduría encarnada que silencia a sus detractores.",
+      "key_people": [
+        "jesus"
+      ],
+      "locations": [
+        "jerusalem"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Agapao",
+          "transliteration": "Agapao",
+          "strong": "G25",
+          "target_verse": 37,
+          "target_word": "Amarás",
+          "meaning": "Amor abnegado e incondicional de la voluntad dirigido a Dios sobre todas las cosas."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 23,
+      "title": "Denuncia de los Siete Ayes contra los Fariseos",
+      "summary": "Solemne denuncia pública de Jesús contra la hipocresía de los escribas y fariseos, y el lamento sobre Jerusalén.",
+      "christological_theme": "El Juez Santo que aborrece la mentira religiosa y se compadece de los perdidos.",
+      "key_people": [
+        "jesus",
+        "caiaphas",
+        "annas"
+      ],
+      "locations": [
+        "jerusalem"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Hypokrites",
+          "transliteration": "Hypokrites",
+          "strong": "G5273",
+          "target_verse": 13,
+          "target_word": "hipócritas",
+          "meaning": "Actor de teatro que viste una máscara para disimular su verdadera condición moral."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 24,
+      "title": "El Discurso Escatológico en el Monte de los Olivos",
+      "summary": "Profecía sobre la destrucción del Templo de Jerusalén, dolores de parto, tribulación y la gloriosa Segunda Venida de Cristo.",
+      "christological_theme": "El Rey y Señor que retornará visiblemente con poder y gloria sobre las nubes.",
+      "key_people": [
+        "jesus",
+        "peter",
+        "james_son_of_zebedee",
+        "john_apostle",
+        "andrew"
+      ],
+      "locations": [
+        "mount_of_olives"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Parousia",
+          "transliteration": "Parousia",
+          "strong": "G3952",
+          "target_verse": 3,
+          "target_word": "venida",
+          "meaning": "Presencia visible, advenimiento regio y retorno glorioso del Señor Jesucristo."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 25,
+      "title": "Diez Vírgenes, los Talentos y el Juicio de las Naciones",
+      "summary": "Parábolas sobre la preparación espiritual (Vírgenes y Talentos) y la escena victoriosa del Juicio Final separando ovejas de cabritos.",
+      "christological_theme": "El Juez Supremo y Rey que juzgará a toda la humanidad sobre el trono de su gloria.",
+      "key_people": [
+        "jesus"
+      ],
+      "locations": [
+        "mount_of_olives"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Basileus",
+          "transliteration": "Basileus",
+          "strong": "G935",
+          "target_verse": 34,
+          "target_word": "Rey",
+          "meaning": "Soberano supremo que otorga la herencia eterna del Reino preparado desde la fundación."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 26,
+      "title": "La Última Cena, Getsemaní, Arresto y Juicio ante Caifás",
+      "summary": "Unción en Betania, pacto de Judas por 30 monedas, Santa Cena, agonía en Getsemaní, arresto y juicio condenatorio ante Caifás.",
+      "christological_theme": "El Cordero Pascual cuya sangre ratifica el Nuevo Pacto para remisión de los pecados.",
+      "key_people": [
+        "jesus",
+        "judas_iscariot",
+        "peter",
+        "caiaphas",
+        "malchus"
+      ],
+      "locations": [
+        "bethphage_and_bethany",
+        "jerusalem",
+        "gethsemane"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Diatheke",
+          "transliteration": "Diatheke",
+          "strong": "G1242",
+          "target_verse": 28,
+          "target_word": "pacto",
+          "meaning": "Disposición y pacto divino incondicional ratificado con la sangre inmaculada de Jesús."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 27,
+      "title": "El Juicio ante Pilato, la Crucifixión en el Gólgota y Sepultura",
+      "summary": "Muerte de Judas, opción por Barabás, flagelación, crucifixión en el Gólgota, velo del Templo rasgado y sepultura por José de Arimatea.",
+      "christological_theme": "El Sustituto Expiatorio que muere en el madero y vence la condena en el sepulcro.",
+      "key_people": [
+        "jesus",
+        "pilate",
+        "pilate_wife",
+        "barabbas",
+        "simon_of_cyrene",
+        "joseph_of_arimathea",
+        "nicodemus",
+        "mary_magdalene",
+        "centurion_cross"
+      ],
+      "locations": [
+        "jerusalem",
+        "golgotha"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Stauros",
+          "transliteration": "Stauros",
+          "strong": "G4716",
+          "target_verse": 32,
+          "target_word": "cruz",
+          "meaning": "Madero de tormento ejecutor donde Cristo expió los pecados del mundo."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter_number": 28,
+      "title": "La Gloriosa Resurrección y la Gran Comisión Universal",
+      "summary": "El terremoto y la tumba vacía al tercer día, aparición a las mujeres, soborno sacerdotal y el envío de la Gran Comisión a todas las naciones.",
+      "christological_theme": "El Señor Resucitado victorioso provisto de toda potestad celestial y terrenal.",
+      "key_people": [
+        "jesus",
+        "mary_magdalene",
+        "mary_mother_of_james",
+        "peter",
+        "andrew",
+        "james_son_of_zebedee",
+        "john_apostle"
+      ],
+      "locations": [
+        "golgotha",
+        "sea_of_galilee"
+      ],
+      "hebrew_terms": [],
+      "greek_terms": [
+        {
+          "greek": "Egeiro",
+          "transliteration": "Egeiro",
+          "strong": "G1453",
+          "target_verse": 6,
+          "target_word": "ha resucitado",
+          "meaning": "Levantarse victoriosamente de la muerte corporal destruyendo el poder del sepulcro."
+        },
+        {
+          "greek": "Matheteusate",
+          "transliteration": "Matheteusate",
+          "strong": "G3100",
+          "target_verse": 19,
+          "target_word": "haced discípulos",
+          "meaning": "Mandato imperativo supremo de instruir y formar seguidores maduros de Jesucristo."
+        }
+      ],
+      "notes": []
+    }
+  ],
   "notable_overlaps": []
 }
