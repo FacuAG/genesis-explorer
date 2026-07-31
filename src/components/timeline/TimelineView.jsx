@@ -488,7 +488,6 @@ export function TimelineView({
     setSelectedBlockId('all');
     setSelectedChapter('all');
     setFilterText('');
-    setActiveJump(null);
     setActiveDetailLevel(2);
     setSelectedEntity(null);
     if (timelineInstanceRef.current) {
@@ -504,7 +503,6 @@ export function TimelineView({
     setSelectedBlockId('all');
     setSelectedChapter('all');
     setFilterText('');
-    setActiveJump(null);
   };
 
   // Extraer datos auxiliares para el inspector
@@ -613,12 +611,6 @@ export function TimelineView({
           <div className="banner-left-info">
             <span>✨ Filtros Activos ({filteredEvents.length} eventos visibles):</span>
             <div className="active-chips-list">
-              {activeJump && (
-                <span className="filter-chip chip-jump">
-                  🚀 Salto: {activeJump.toUpperCase()}
-                  <button className="chip-remove-btn" onClick={() => setActiveJump(null)}>✕</button>
-                </span>
-              )}
               {selectedCategory !== 'all' && (
                 <span className="filter-chip chip-category">
                   🏷️ {EVENT_CATEGORIES[selectedCategory]?.label}
