@@ -12,7 +12,7 @@ import './ChapterMapPanel.css';
  * Menú Flotante de Acciones para Versículos Seleccionados, Botones Flotantes Laterales Adaptativos de Capítulos y Volver Arriba.
  */
 export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMap = new Map(), onSelectEvent, initialChapter = null, activeBookId = 'genesis' }) {
-  const [selectedChapNum, setSelectedChapNum] = useState(initialChapter || 1);
+  const [selectedChapNum, setSelectedChapNum] = useState(initialChapter ? Number(initialChapter) : null);
   const [filterQuery, setFilterQuery] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
   const [modalPerson, setModalPerson] = useState(null);
@@ -28,9 +28,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     }
   }, [initialChapter]);
 
-  // Si cambia de libro o las opciones de capítulos cambian y el capítulo actual excede el límite
+  // Si cambia de libro y el capítulo actual excede el límite del nuevo libro
   useEffect(() => {
-    if (chapters.length > 0 && (selectedChapNum > chapters.length || !selectedChapNum)) {
+    if (chapters.length > 0 && selectedChapNum !== null && selectedChapNum > chapters.length) {
       queueMicrotask(() => {
         setSelectedChapNum(1);
       });
@@ -204,9 +204,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Ordenar lista de 50 capítulos
+  // Ordenar lista de capítulos
   const sortedChapters = useMemo(() => {
-    return [...chapters].sort((a, b) => a.chapter - b.chapter);
+    return [...chapters].sort((a, b) => (a.chapter ?? a.chapter_number ?? 0) - (b.chapter ?? b.chapter_number ?? 0));
   }, [chapters]);
 
   // Filtrar capítulos en la vista de cuadrícula
@@ -214,34 +214,36 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     if (!filterQuery) return sortedChapters;
     const q = filterQuery.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     return sortedChapters.filter(c => {
+      const cNum = c.chapter ?? c.chapter_number ?? 0;
       const title = (c.title || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const summary = (c.summary || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      return title.includes(q) || summary.includes(q) || String(c.chapter) === q;
+      return title.includes(q) || summary.includes(q) || String(cNum) === q;
     });
   }, [sortedChapters, filterQuery]);
 
   // Objeto del capítulo activo seleccionado
   const selectedChapterObj = useMemo(() => {
     if (!selectedChapNum) return null;
-    return sortedChapters.find(c => c.chapter === selectedChapNum) || null;
+    return sortedChapters.find(c => (c.chapter ?? c.chapter_number ?? 0) === selectedChapNum) || null;
   }, [sortedChapters, selectedChapNum]);
 
   // Datos exegéticos del capítulo activo
   const exegesisData = useMemo(() => {
     if (!selectedChapNum) return null;
-    return getChapterExegesisData(selectedChapNum, selectedChapterObj);
-  }, [selectedChapNum, selectedChapterObj]);
+    return getChapterExegesisData(selectedChapNum, selectedChapterObj, bookName);
+  }, [selectedChapNum, selectedChapterObj, bookName]);
 
   // Texto bíblico completo RVR1960 del capítulo seleccionado (línea por línea)
   const chapterVersesList = useMemo(() => {
     if (!selectedChapNum) return [];
     const verses = [];
-    for (let v = 1; v <= 100; v++) {
+    for (let v = 1; v <= 175; v++) {
       const vText = getVerseTextRVR1960(bookName, selectedChapNum, v);
-      if (vText && !vText.includes('Santa Biblia Reina-Valera') && vText.startsWith(`${v}.`)) {
+      if (vText && typeof vText === 'string' && !vText.includes('Santa Biblia Reina-Valera')) {
+        const cleanText = vText.startsWith(`${v}. `) ? vText.replace(`${v}. `, '') : vText;
         verses.push({
           number: v,
-          text: vText.replace(`${v}. `, '')
+          text: cleanText
         });
       }
     }
@@ -359,22 +361,23 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
 
           <div className="chapters-grid">
             {filteredChapters.map((c) => {
+              const chapNum = c.chapter ?? c.chapter_number ?? 0;
               const eventCount = (c.key_events || []).length;
               const peopleCount = (c.key_people || []).length;
 
               return (
                 <div
-                  key={c.chapter}
+                  key={chapNum}
                   className="chapter-card"
                   onClick={() => {
-                    setSelectedChapNum(c.chapter);
+                    setSelectedChapNum(chapNum);
                     setHighlightedVerses({});
                     setVerseSearchText('');
                   }}
                 >
                   <div className="chapter-card-header">
-                    <span className="chapter-num-badge">Cap. {c.chapter}</span>
-                    <span className="chapter-block-tag">{c.block_id ? c.block_id.replace('nb_', '').toUpperCase() : 'GÉNESIS'}</span>
+                    <span className="chapter-num-badge">Cap. {chapNum}</span>
+                    <span className="chapter-block-tag">{c.block_id ? c.block_id.replace('nb_', '').toUpperCase() : bookName.toUpperCase()}</span>
                   </div>
                   <h3 className="chapter-card-title">{c.title}</h3>
                   <p className="chapter-card-summary">{c.summary}</p>

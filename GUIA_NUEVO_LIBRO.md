@@ -553,17 +553,18 @@ VERIFICACIÓN FINAL:
 
 ### Campos mínimos por capítulo (todos obligatorios)
 ```
-chapter_number    → número entero del capítulo (1, 2, 3...)
-title             → título descriptivo del capítulo (no "Capítulo 1")
-summary           → resumen narrativo de 2-4 oraciones
-key_verse         → { reference: "...", text: "..." } — el versículo más representativo
-key_people        → array de IDs de personas principales del capítulo
-                    (DEBEN existir en el array people[])
-main_event_ids    → array de IDs de eventos del capítulo
-                    (DEBEN existir en el array timeline_events[])
-narrative_block_id → ID del bloque narrativo al que pertenece
-                    (DEBE existir en el array narrative_blocks[])
-christological_theme → conexión del capítulo con Cristo o la promesa mesiánica
+chapter            → número entero del capítulo (1, 2, 3...) [ÍNDICE PRINCIPAL DE REQUERIMIENTO DE LA UI]
+chapter_number     → número entero del capítulo (1, 2, 3...) [ALIAS DE NORMADO PARA COMPATIBILIDAD]
+title              → título descriptivo del capítulo (no "Capítulo 1")
+summary            → resumen narrativo exegético de 2-4 oraciones de los acontecimientos
+key_verse          → { reference: "...", text: "..." } — el versículo más representativo del capítulo
+key_people         → array de IDs de personas principales del capítulo (DEBEN existir en el array people[])
+key_events         → array de IDs de eventos principales (DEBEN existir en el array timeline_events[])
+block_id           → ID del bloque narrativo al que pertenece (DEBE existir en el array narrative_blocks[])
+locations          → array de IDs de ubicaciones geográficas involucradas (DEBEN existir en locations[])
+greek_terms / hebrew_terms → array de términos clave en Hebreo/Griego con código Strong, versículo, transliteración y exégesis
+outline            → array de divisiones del capítulo [{ verses: "vv. 1-15", title: "..." }]
+christological_theme / theological_significance → revelación mesiánica, cristología y significancia teológica del capítulo
 ```
 
 ### Auditoría obligatoria
