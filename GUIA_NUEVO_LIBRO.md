@@ -2,6 +2,8 @@
 ## Bible Explorer · Documento Oficial para Agentes IA
 
 > **INSTRUCCIÓN PARA LA IA:** Leer este documento **completo** antes de escribir una sola línea de código. Cada sección está ordenada por dependencia: si saltás una, algo va a fallar en silencio.
+>
+> **NOTA DE ARQUITECTURA UX:** Los "Saltos Rápidos" han sido removidos permanentemente de la UI de la línea de tiempo para evitar redundancias. Toda la navegación por secciones se realiza mediante el selector de *Bloques Narrativos* (`narrative_blocks`).
 
 ---
 

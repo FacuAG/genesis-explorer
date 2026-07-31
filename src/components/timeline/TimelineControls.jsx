@@ -17,31 +17,13 @@ export function TimelineControls({
   setFilterText,
   detailLevel = 3,
   setDetailLevel,
-  activeJump,
   narrativeBlocks = [],
-  onJumpToAM,
   onZoomIn,
   onZoomOut,
   onFitAll,
   chaptersCount = 50,
   bookTitle = 'Génesis'
 }) {
-  // Hitos bíblicos calculados dinámicamente según los bloques narrativos del libro activo
-  const QUICK_JUMPS = useMemo(() => {
-    if (Array.isArray(narrativeBlocks) && narrativeBlocks.length > 0) {
-      return narrativeBlocks.slice(0, 6).map(b => ({
-        id: b.id,
-        label: `${b.icon || '📍'} ${b.name_short || b.name}`,
-        amStart: (b.am_start ?? b.year_am ?? 0) - 5,
-        amEnd: (b.am_end ?? b.year_am ?? 0) + 5,
-        title: `Salto a ${b.name} (AM ${b.am_start || 0})`
-      }));
-    }
-    return [
-      { id: 'start', label: '✨ Inicio', amStart: 0, amEnd: 50, title: 'Salto al inicio del libro' }
-    ];
-  }, [narrativeBlocks]);
-
   return (
     <div className="timeline-controls-wrapper">
       {/* Fila 1: Filtros de Búsqueda y Selección */}
@@ -147,25 +129,8 @@ export function TimelineControls({
         </div>
       </div>
 
-      {/* Fila 2: Saltos Rápido a Hitos Bíblicos y Zoom */}
-      <div className="controls-row-jumps">
-        <div className="quick-jumps-group">
-          <span className="quick-jumps-title">📍 Salto Rápido:</span>
-          <div className="quick-jump-buttons">
-            {QUICK_JUMPS.map((jump) => (
-              <button
-                key={jump.id}
-                className={`jump-chip-btn ${activeJump === jump.id ? 'active' : ''}`}
-                onClick={() => onJumpToAM(jump.id, jump.amStart, jump.amEnd, jump.label)}
-                title={jump.title}
-              >
-                {jump.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Botones de Navegación de Zoom */}
+      {/* Fila 2: Botones de Navegación de Zoom */}
+      <div className="controls-row-jumps" style={{ justifyContent: 'flex-end' }}>
         <div className="zoom-actions-group">
           <button className="control-action-btn" onClick={onZoomIn} title="Acercar Zoom">
             🔍 + Zoom

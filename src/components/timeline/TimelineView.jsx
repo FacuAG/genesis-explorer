@@ -64,7 +64,6 @@ export function TimelineView({
   const [selectedBlockId, setSelectedBlockId] = useState('all');
   const [selectedChapter, setSelectedChapter] = useState('all');
   const [filterText, setFilterText] = useState('');
-  const [activeJump, setActiveJump] = useState(null); // 'adam', 'noah', 'abraham', 'joseph', 'exodus'
 
   // Estado para la entidad seleccionada en el inspector rápido superior
   const [selectedEntity, setSelectedEntity] = useState(null);
@@ -101,49 +100,6 @@ export function TimelineView({
     eras.forEach(e => map.set(e.id, e));
     return map;
   }, [eras]);
-
-  const QUICK_JUMP_EVENT_IDS = {
-    adam: 'creation_adam_eve',
-    noah: 'flood_start',
-    abraham: 'abraham_call',
-    joseph: 'joseph_interprets_pharaoh',
-    exodus: 'joseph_reveals_himself'
-  };
-
-  // Handler para saltos rápidos a hitos históricos clave en la cronología
-  const handleQuickJump = (jumpKey, yearAM) => {
-    setActiveJump(jumpKey);
-
-    // Buscar el evento hito correspondiente en el dataset
-    const milestoneEventId = QUICK_JUMP_EVENT_IDS[jumpKey];
-    let milestoneEvent = milestoneEventId ? eventsMap.get(milestoneEventId) : null;
-
-    // Si no encuentra por ID directo, buscar por coincidencia aproximada de año AM
-    if (!milestoneEvent && allEvents.length > 0) {
-      milestoneEvent = allEvents.find(e => Math.abs(getEventAM(e) - yearAM) <= 15);
-    }
-
-    if (milestoneEvent) {
-      setSelectedEntity({ type: 'event', data: milestoneEvent });
-      if (onSelectEvent) onSelectEvent(milestoneEvent.id);
-
-      if (timelineInstanceRef.current) {
-        try {
-          timelineInstanceRef.current.setSelection([milestoneEvent.id]);
-        } catch (err) {
-          console.warn("No se pudo seleccionar el hito en el canvas:", err);
-        }
-      }
-    }
-
-    if (timelineInstanceRef.current) {
-      const startWin = amToDate(Math.max(-300, yearAM - 140));
-      const endWin = amToDate(Math.min(2500, yearAM + 140));
-      timelineInstanceRef.current.setWindow(startWin, endWin, {
-        animation: { duration: 700, easingFunction: 'easeInOutQuad' }
-      });
-    }
-  };
 
   // Helper para vincular un evento bíblico a su Bloque Narrativo del Génesis correspondiente
   const getBlockForEvent = (evt) => {
@@ -235,9 +191,7 @@ export function TimelineView({
     return selectedCategory !== 'all' || selectedBlockId !== 'all' || selectedChapter !== 'all' || filterText.trim().length > 0;
   }, [selectedCategory, selectedBlockId, selectedChapter, filterText]);
 
-  const isFilterActive = useMemo(() => {
-    return isSearchOrCategoryFilterActive || activeJump !== null;
-  }, [isSearchOrCategoryFilterActive, activeJump]);
+  const isFilterActive = isSearchOrCategoryFilterActive;
 
   const { minAM, maxAM } = useMemo(() => {
     let min = 99999;
@@ -561,17 +515,6 @@ export function TimelineView({
   const getEventSummary = (evt) => evt?.summary || evt?.teaching || 'Sin resumen disponible.';
   const getEventRefStr = (evt) => evt?.scriptural_reference?.display || formatRef(evt?.scriptural_reference) || (evt?.chapter ? `${bookTitle} ${evt.chapter}` : bookTitle);
 
-  const quickJumpsList = useMemo(() => {
-    if (Array.isArray(narrativeBlocks) && narrativeBlocks.length > 0) {
-      return narrativeBlocks.slice(0, 6).map(b => ({
-        id: b.id,
-        label: `${b.icon || '📍'} ${b.name_short || b.name} (AM ${b.am_start || 0})`,
-        yearAM: b.am_start || 0
-      }));
-    }
-    return [];
-  }, [narrativeBlocks]);
-
   const chaptersCount = useMemo(() => {
     if (narrativeBlocks.length > 0) {
       return Math.max(...narrativeBlocks.map(b => b.chapters_end || 1));
@@ -581,25 +524,7 @@ export function TimelineView({
 
   return (
     <div className="timeline-view-wrapper">
-      {/* 1. BARRA DE SALTOS RÁPIDOS A HITOS ANNO MUNDI */}
-      {quickJumpsList.length > 0 && (
-        <div className="quick-jump-bar">
-          <span className="qj-label">🚀 Saltos Rápidos:</span>
-          <div className="qj-buttons">
-            {quickJumpsList.map((jump) => (
-              <button
-                key={jump.id}
-                className={`qj-btn ${activeJump === jump.id ? 'active' : ''}`}
-                onClick={() => handleQuickJump(jump.id, jump.yearAM)}
-              >
-                {jump.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* 2. BARRA DE FILTROS AVANZADOS DE 5 DIMENSIONES */}
+      {/* BARRA DE FILTROS AVANZADOS DE 5 DIMENSIONES */}
       <div className="timeline-controls-bar">
         <div className="filters-row">
           <div className="filter-group">
