@@ -3,11 +3,11 @@ import './Panels.css';
 /**
  * Componente para el Explorador de Geografía y Ubicaciones de Génesis.
  */
-export function LocationPanel({ locations }) {
+export function LocationPanel({ locations, bookTitle = 'Génesis' }) {
   return (
     <div className="panel-container">
       <div className="panel-header">
-        <h2>📍 Ubicaciones Geográficas del Génesis ({locations.length})</h2>
+        <h2>📍 Ubicaciones Geográficas de {bookTitle} ({locations.length})</h2>
         <p>Lugares bíblicos estratégicos con descripción histórica, coordenadas y eventos asociados.</p>
       </div>
 

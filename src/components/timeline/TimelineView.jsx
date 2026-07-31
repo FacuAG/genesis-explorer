@@ -35,7 +35,9 @@ export function TimelineView({
   eventsMap: externalEventsMap,
   targetEventId,
   onSelectEvent,
-  onSelectPerson
+  onSelectPerson,
+  activeBookId = 'genesis',
+  bookTitle = 'Génesis'
 }) {
   const allEvents = useMemo(() => {
     if (Array.isArray(events) && events.length > 0) return events;
@@ -237,6 +239,22 @@ export function TimelineView({
     return isSearchOrCategoryFilterActive || activeJump !== null;
   }, [isSearchOrCategoryFilterActive, activeJump]);
 
+  const { minAM, maxAM } = useMemo(() => {
+    let min = 99999;
+    let max = -99999;
+    allEvents.forEach(e => {
+      const am = getEventAM(e);
+      if (am < min) min = am;
+      if (am > max) max = am;
+    });
+    narrativeBlocks.forEach(b => {
+      if (typeof b.am_start === 'number' && b.am_start < min) min = b.am_start;
+      if (typeof b.am_end === 'number' && b.am_end > max) max = b.am_end;
+    });
+    if (min > max) { min = 0; max = 2500; }
+    return { minAM: Math.max(-500, min), maxAM: max };
+  }, [allEvents, narrativeBlocks]);
+
   // 1. Inicialización ÚNICA de vis-timeline al montar el componente
   useEffect(() => {
     if (!containerRef.current) return;
@@ -255,12 +273,12 @@ export function TimelineView({
         axis: 'top',
         item: 'top'
       },
-      min: amToDate(-300),
-      max: amToDate(2500),
-      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 40, // Límite mínimo de zoom: 40 años
-      zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 3000,
-      start: amToDate(-180),
-      end: amToDate(2369),
+      min: amToDate(minAM - 150),
+      max: amToDate(maxAM + 150),
+      zoomMin: 1000 * 60 * 60 * 24 * 365.25 * 1, // Límite mínimo de zoom: 1 año
+      zoomMax: 1000 * 60 * 60 * 24 * 365.25 * 5000,
+      start: amToDate(minAM - 20),
+      end: amToDate(maxAM + 20),
       format: {
         minorLabels: function (date) {
           const am = dateToAM(date);
@@ -443,6 +461,25 @@ export function TimelineView({
     visItemsRef.current.add(items);
   }, [filteredEvents, narrativeBlocks, covenants, eras, activeDetailLevel, isSearchOrCategoryFilterActive, targetEventId]);
 
+  // Re-ajuste automático de cámara y límites de vis-timeline al alternar de libro
+  useEffect(() => {
+    if (timelineInstanceRef.current && typeof minAM === 'number' && typeof maxAM === 'number') {
+      try {
+        timelineInstanceRef.current.setOptions({
+          min: amToDate(minAM - 150),
+          max: amToDate(maxAM + 150)
+        });
+        timelineInstanceRef.current.setWindow(
+          amToDate(minAM - 20),
+          amToDate(maxAM + 20),
+          { animation: { duration: 500 } }
+        );
+      } catch (err) {
+        console.warn("Error ajustando ventana de línea de tiempo:", err);
+      }
+    }
+  }, [activeBookId, minAM, maxAM]);
+
   // 3. Auto-enfoque de cámara si hay targetEventId activo
   useEffect(() => {
     if (!targetEventId || !timelineInstanceRef.current) return;
@@ -522,31 +559,45 @@ export function TimelineView({
   const activeCovenantObj = selectedEntity?.type === 'covenant' ? selectedEntity.data : null;
 
   const getEventSummary = (evt) => evt?.summary || evt?.teaching || 'Sin resumen disponible.';
-  const getEventRefStr = (evt) => evt?.scriptural_reference?.display || formatRef(evt?.scriptural_reference) || (evt?.chapter ? `Génesis ${evt.chapter}` : 'Génesis');
+  const getEventRefStr = (evt) => evt?.scriptural_reference?.display || formatRef(evt?.scriptural_reference) || (evt?.chapter ? `${bookTitle} ${evt.chapter}` : bookTitle);
+
+  const quickJumpsList = useMemo(() => {
+    if (Array.isArray(narrativeBlocks) && narrativeBlocks.length > 0) {
+      return narrativeBlocks.slice(0, 6).map(b => ({
+        id: b.id,
+        label: `${b.icon || '📍'} ${b.name_short || b.name} (AM ${b.am_start || 0})`,
+        yearAM: b.am_start || 0
+      }));
+    }
+    return [];
+  }, [narrativeBlocks]);
+
+  const chaptersCount = useMemo(() => {
+    if (narrativeBlocks.length > 0) {
+      return Math.max(...narrativeBlocks.map(b => b.chapters_end || 1));
+    }
+    return activeBookId === 'matthew' ? 28 : 50;
+  }, [narrativeBlocks, activeBookId]);
 
   return (
     <div className="timeline-view-wrapper">
       {/* 1. BARRA DE SALTOS RÁPIDOS A HITOS ANNO MUNDI */}
-      <div className="quick-jump-bar">
-        <span className="qj-label">🚀 Saltos Rápidos:</span>
-        <div className="qj-buttons">
-          <button className={`qj-btn ${activeJump === 'adam' ? 'active' : ''}`} onClick={() => handleQuickJump('adam', 0)}>
-            🌟 Adán & Creación (AM 0)
-          </button>
-          <button className={`qj-btn ${activeJump === 'noah' ? 'active' : ''}`} onClick={() => handleQuickJump('noah', 1656)}>
-            🌊 Diluvio (AM 1656)
-          </button>
-          <button className={`qj-btn ${activeJump === 'abraham' ? 'active' : ''}`} onClick={() => handleQuickJump('abraham', 2083)}>
-            📜 Llamado de Abram (AM 2083)
-          </button>
-          <button className={`qj-btn ${activeJump === 'joseph' ? 'active' : ''}`} onClick={() => handleQuickJump('joseph', 2289)}>
-            🌾 José en Egipto (AM 2289)
-          </button>
-          <button className={`qj-btn ${activeJump === 'exodus' ? 'active' : ''}`} onClick={() => handleQuickJump('exodus', 2369)}>
-            ⛺ Muerte de José (AM 2369)
-          </button>
+      {quickJumpsList.length > 0 && (
+        <div className="quick-jump-bar">
+          <span className="qj-label">🚀 Saltos Rápidos:</span>
+          <div className="qj-buttons">
+            {quickJumpsList.map((jump) => (
+              <button
+                key={jump.id}
+                className={`qj-btn ${activeJump === jump.id ? 'active' : ''}`}
+                onClick={() => handleQuickJump(jump.id, jump.yearAM)}
+              >
+                {jump.label}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2. BARRA DE FILTROS AVANZADOS DE 5 DIMENSIONES */}
       <div className="timeline-controls-bar">
@@ -561,7 +612,7 @@ export function TimelineView({
                 2: Estructurado
               </button>
               <button className={`lod-btn ${activeDetailLevel === 3 ? 'active' : ''}`} onClick={() => setActiveDetailLevel(3)}>
-                3: Exhaustivo ({timelineEvents.length})
+                3: Exhaustivo ({allEvents.length})
               </button>
             </div>
           </div>
@@ -589,8 +640,8 @@ export function TimelineView({
           <div className="filter-group">
             <label>Capítulo:</label>
             <select value={selectedChapter} onChange={(e) => setSelectedChapter(e.target.value)} className="timeline-select">
-              <option value="all">Todos los Capítulos (1-50)</option>
-              {Array.from({ length: 50 }, (_, i) => i + 1).map(cNum => (
+              <option value="all">Todos los Capítulos (1-{chaptersCount})</option>
+              {Array.from({ length: chaptersCount }, (_, i) => i + 1).map(cNum => (
                 <option key={cNum} value={cNum}>Capítulo {cNum}</option>
               ))}
             </select>
@@ -862,9 +913,9 @@ export function TimelineView({
 
           {selectedEntity.type === 'block' && (
             <div className="entity-modal-content">
-              <div className="block-modal-badge">Bloque Narrativo del Génesis</div>
+              <div className="block-modal-badge">Bloque Narrativo de {bookTitle}</div>
               <h2 className="entity-modal-title">{selectedEntity.data.name}</h2>
-              <p className="entity-modal-ref">📖 Capítulos: Génesis {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</p>
+              <p className="entity-modal-ref">📖 Capítulos: {bookTitle} {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end}</p>
               {selectedEntity.data.toledot_reference && (
                 <p className="entity-modal-toledot">
                   ✨ <em>Sección Toledot:</em> "{selectedEntity.data.toledot_text}" ({selectedEntity.data.toledot_reference})
@@ -893,7 +944,7 @@ export function TimelineView({
             <div className="entity-modal-content">
               <div className="era-modal-badge">Gran Era de la Historia Sagrada</div>
               <h2 className="entity-modal-title">{selectedEntity.data.name} — {selectedEntity.data.subtitle}</h2>
-              <p className="entity-modal-ref">📖 Génesis Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
+              <p className="entity-modal-ref">📖 {bookTitle} Capítulos {selectedEntity.data.chapters_start} al {selectedEntity.data.chapters_end} | AM {selectedEntity.data.am_start} al {selectedEntity.data.am_end}</p>
               <div className="entity-modal-section">
                 <h3>📜 Panorama General de la Era</h3>
                 {renderFormattedParagraphs(selectedEntity.data.description)}

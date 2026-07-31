@@ -1,8 +1,9 @@
+import { useMemo } from 'react';
 import { EVENT_CATEGORIES } from '../../utils/timelineMapper';
 import './TimelineControls.css';
 
 /**
- * Componente de Controles y Filtros Avanzados para la Línea de Tiempo de Génesis.
+ * Componente de Controles y Filtros Avanzados para la Línea de Tiempo Bíblica Multilibro.
  */
 export function TimelineControls({
   eventsCount = 0,
@@ -21,16 +22,25 @@ export function TimelineControls({
   onJumpToAM,
   onZoomIn,
   onZoomOut,
-  onFitAll
+  onFitAll,
+  chaptersCount = 50,
+  bookTitle = 'Génesis'
 }) {
-  // Hitos bíblicos estratégicos auditados con cronología exacta Anno Mundi (AM)
-  const QUICK_JUMPS = [
-    { id: 'creation', label: '✨ Creación', amStart: 0, amEnd: 10, title: 'Salto a la Creación y el Edén (AM 0)' },
-    { id: 'flood', label: '🌊 El Diluvio', amStart: 1650, amEnd: 1665, title: 'Salto al Diluvio de Noé (AM 1656)' },
-    { id: 'babel', label: '🗼 Torre de Babel', amStart: 1745, amEnd: 1770, title: 'Salto a Babel y la Confusión de Lenguas (AM 1757)' },
-    { id: 'abraham', label: '👑 Llamado Abraham', amStart: 2075, amEnd: 2110, title: 'Salto al Llamado de Abraham a los 75 años (AM 2083) y el Pacto' },
-    { id: 'joseph', label: '🌾 José en Egipto', amStart: 2270, amEnd: 2310, title: 'Salto a José Gobernador de Egipto (AM 2289) y reunión familiar' }
-  ];
+  // Hitos bíblicos calculados dinámicamente según los bloques narrativos del libro activo
+  const QUICK_JUMPS = useMemo(() => {
+    if (Array.isArray(narrativeBlocks) && narrativeBlocks.length > 0) {
+      return narrativeBlocks.slice(0, 6).map(b => ({
+        id: b.id,
+        label: `${b.icon || '📍'} ${b.name_short || b.name}`,
+        amStart: (b.am_start ?? b.year_am ?? 0) - 5,
+        amEnd: (b.am_end ?? b.year_am ?? 0) + 5,
+        title: `Salto a ${b.name} (AM ${b.am_start || 0})`
+      }));
+    }
+    return [
+      { id: 'start', label: '✨ Inicio', amStart: 0, amEnd: 50, title: 'Salto al inicio del libro' }
+    ];
+  }, [narrativeBlocks]);
 
   return (
     <div className="timeline-controls-wrapper">
@@ -42,7 +52,7 @@ export function TimelineControls({
           <input
             type="text"
             className="timeline-search-input"
-            placeholder="Filtrar eventos por palabra..."
+            placeholder={`Filtrar eventos de ${bookTitle}...`}
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
           />
@@ -72,7 +82,7 @@ export function TimelineControls({
             <button
               className={`lod-btn ${detailLevel === 3 ? 'active' : ''}`}
               onClick={() => setDetailLevel(3)}
-              title="Nivel 3: Detalle Completo de los 82 Eventos Bíblicos"
+              title={`Nivel 3: Detalle Completo de los ${eventsCount} Eventos`}
             >
               3. Eventos (Detalle)
             </button>
@@ -116,7 +126,7 @@ export function TimelineControls({
           </select>
         </div>
 
-        {/* Selector de Capítulo Específico del 1 al 50 */}
+        {/* Selector de Capítulo Específico */}
         <div className="filter-group">
           <label className="filter-label">Capítulo:</label>
           <select
@@ -124,8 +134,8 @@ export function TimelineControls({
             value={selectedChapter}
             onChange={(e) => setSelectedChapter(e.target.value)}
           >
-            <option value="all">Todos (1 - 50)</option>
-            {Array.from({ length: 50 }, (_, i) => i + 1).map(num => (
+            <option value="all">Todos (1 - {chaptersCount})</option>
+            {Array.from({ length: chaptersCount }, (_, i) => i + 1).map(num => (
               <option key={num} value={num}>Capítulo {num}</option>
             ))}
           </select>
@@ -163,8 +173,8 @@ export function TimelineControls({
           <button className="control-action-btn" onClick={onZoomOut} title="Alejar Zoom">
             🔍 - Zoom
           </button>
-          <button className="control-action-btn action-accent" onClick={onFitAll} title="Ver Todo Génesis (AM 0 - 2369)">
-            🌌 Ver Todo (AM 0 - 2369)
+          <button className="control-action-btn action-accent" onClick={onFitAll} title={`Ver Todo ${bookTitle}`}>
+            🌌 Ver Todo
           </button>
         </div>
       </div>

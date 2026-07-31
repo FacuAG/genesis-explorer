@@ -3,11 +3,11 @@ import './Panels.css';
 /**
  * Componente para el Explorador de Pactos y Promesas Mesiánicas.
  */
-export function CovenantPanel({ covenants, messianicPromises }) {
+export function CovenantPanel({ covenants = [], messianicPromises = [], bookTitle = 'Génesis' }) {
   return (
     <div className="panel-container">
       <div className="panel-section">
-        <h2>👑 Pactos Bíblicos ({covenants.length})</h2>
+        <h2>👑 Pactos Bíblicos en {bookTitle} ({covenants.length})</h2>
         <div className="covenants-grid">
           {covenants.map((cov) => (
             <div key={cov.id} className="covenant-card">
@@ -32,7 +32,7 @@ export function CovenantPanel({ covenants, messianicPromises }) {
       </div>
 
       <div className="panel-section" style={{ marginTop: '2.5rem' }}>
-        <h2>✨ Promesas Mesiánicas ({messianicPromises.length})</h2>
+        <h2>✨ Promesas Mesiánicas en {bookTitle} ({messianicPromises.length})</h2>
         <div className="promises-grid">
           {messianicPromises.map((p) => (
             <div key={p.id} className="promise-card">

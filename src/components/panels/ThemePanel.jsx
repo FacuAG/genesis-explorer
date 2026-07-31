@@ -10,7 +10,7 @@ import './ThemePanel.css';
  * Permite estudiar los 8 grandes temas bíblicos con tratados exegéticos descargados
  * de La Biblia del Expositor y la Biblia Temática de Nave.
  */
-export function ThemePanel({ themes = [], eventsMap = new Map(), onSelectEvent }) {
+export function ThemePanel({ themes = [], eventsMap = new Map(), onSelectEvent, bookTitle = 'Génesis' }) {
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeStudyTab, setActiveStudyTab] = useState('essay'); // 'essay' | 'hebrew' | 'nt' | 'events'
@@ -32,7 +32,7 @@ export function ThemePanel({ themes = [], eventsMap = new Map(), onSelectEvent }
       {/* Cabecera del Panel de Temas Teológicos */}
       <div className="panel-header">
         <div>
-          <h2>🕊️ Temas Teológicos Transversales ({themes.length})</h2>
+          <h2>🕊️ Temas Teológicos Transversales de {bookTitle} ({themes.length})</h2>
           <p>
             Tratados de investigación y exégesis extraídos de <strong>{librarySource}</strong> ({libraryEdition}).
           </p>

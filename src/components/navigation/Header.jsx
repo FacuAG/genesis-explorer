@@ -94,13 +94,13 @@ export function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, t
           {/* Estadísticas rápidas del libro */}
           {totalStats && (
             <div className="stats-badges-container">
-              <span className="stat-badge" title="Eventos Cronológicos de Génesis">
+              <span className="stat-badge" title="Eventos Cronológicos del Libro Activo">
                 ⚡ <strong>{totalStats.eventsCount}</strong> Eventos
               </span>
-              <span className="stat-badge" title="Personajes Documentados">
+              <span className="stat-badge" title="Personajes Documentados en el Libro Activo">
                 👥 <strong>{totalStats.peopleCount}</strong> Personajes
               </span>
-              <span className="stat-badge stat-badge-gold" title="Pactos Bíblicos en Génesis">
+              <span className="stat-badge stat-badge-gold" title="Pactos Bíblicos del Libro Activo">
                 🤝 <strong>{totalStats.covenantsCount}</strong> Pactos
               </span>
             </div>

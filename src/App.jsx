@@ -76,7 +76,7 @@ export function App() {
             <h2>🔍 Resultados de Búsqueda para "{searchQuery}"</h2>
 
             {searchResults.events.length === 0 && searchResults.people.length === 0 && searchResults.locations.length === 0 ? (
-              <p className="no-results-msg">No se encontraron coincidencias en el libro del Génesis.</p>
+              <p className="no-results-msg">No se encontraron coincidencias en el libro activo.</p>
             ) : (
               <div className="search-results-sections">
                 {searchResults.events.length > 0 && (
@@ -141,6 +141,8 @@ export function App() {
               eventsMap={genesis.eventsMap}
               targetEventId={targetEventId}
               onSelectPerson={handleSelectPerson}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
@@ -166,6 +168,8 @@ export function App() {
               eventsMap={genesis.eventsMap}
               targetPersonId={targetPersonId}
               onSelectEvent={handleSelectEvent}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
@@ -176,11 +180,17 @@ export function App() {
               peopleMap={genesis.peopleMap}
               onSelectEvent={handleSelectEvent}
               onSelectPerson={handleSelectPerson}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
           {activeTab === 'dispensations' && (
-            <DispensationPanel dispensations={genesis.dispensations} />
+            <DispensationPanel
+              dispensations={genesis.dispensations}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
+            />
           )}
 
           {activeTab === 'chapters' && (
@@ -192,6 +202,7 @@ export function App() {
               onSelectPerson={handleSelectPerson}
               initialChapter={targetChapterNum}
               activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
@@ -202,6 +213,8 @@ export function App() {
                 setTargetChapterNum(chap);
                 setActiveTab('chapters');
               }}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
@@ -209,15 +222,25 @@ export function App() {
             <CovenantPanel
               covenants={genesis.covenants}
               messianicPromises={genesis.messianicPromises}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
             />
           )}
 
           {activeTab === 'locations' && (
-            <LocationPanel locations={genesis.locations} />
+            <LocationPanel
+              locations={genesis.locations}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
+            />
           )}
 
           {activeTab === 'questions' && (
-            <QuestionPanel questions={genesis.questions} />
+            <QuestionPanel
+              questions={genesis.questions}
+              activeBookId={activeBookId}
+              bookTitle={genesis.bookInfo?.title || 'Génesis'}
+            />
           )}
         </main>
       )}

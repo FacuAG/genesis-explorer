@@ -264,20 +264,36 @@ export const CHAPTER_EXEGESIS = {
 };
 
 /**
- * Generador automático de auxilio exegético para capítulos que aún no poseen entrada completa
+ * Generador automático de auxilio exegético para capítulos que poseen entrada completa o Schema 3.0
  */
-export function getChapterExegesisData(chapNum, chapterObj) {
+export function getChapterExegesisData(chapNum, chapterObj, bookTitle = 'Génesis') {
+  if (chapterObj) {
+    const terms = chapterObj.greek_terms || chapterObj.hebrew_terms || [];
+    const outline = chapterObj.outline || [
+      { verses: "Parte I", title: `Acontecimientos de ${chapterObj.title || `Capítulo ${chapNum}`}` },
+      { verses: "Parte II", title: `Desarrollo de la Narrativa` }
+    ];
+    return {
+      outline,
+      theological_teaching: chapterObj.theological_significance || chapterObj.theological_teaching || chapterObj.summary || '',
+      hebrew_terms: terms,
+      greek_terms: chapterObj.greek_terms || [],
+      nt_cross_references: chapterObj.nt_cross_references || chapterObj.ot_cross_references || ["Hebreos 11:1-40"]
+    };
+  }
+
   const custom = CHAPTER_EXEGESIS[chapNum];
   if (custom) return custom;
 
-  // Fallback exegético bien estructurado si el capítulo aún no tiene entrada personalizada
+  // Fallback exegético bien estructurado
   return {
     outline: [
-      { verses: "Parte I", title: `Acontecimientos Principales de Génesis Capítulo ${chapNum}` },
-      { verses: "Parte II", title: `Desarrollo de la Narrativa Patriarcal` }
+      { verses: "Parte I", title: `Acontecimientos Principales de ${bookTitle} Capítulo ${chapNum}` },
+      { verses: "Parte II", title: `Desarrollo de la Narrativa` }
     ],
-    theological_teaching: chapterObj?.summary || `Este capítulo forma parte del registro providencial del Génesis, demostrando la fidelidad de Dios con las generaciones patriarcales.`,
+    theological_teaching: `Este capítulo forma parte del registro providencial de ${bookTitle}, demostrando la fidelidad de Dios.`,
     hebrew_terms: [],
+    greek_terms: [],
     nt_cross_references: ["Hebreos 11:1-40"]
   };
 }

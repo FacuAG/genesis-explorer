@@ -64,7 +64,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   useEffect(() => {
     if (!selectedChapNum) return;
     try {
-      const saved = localStorage.getItem(`genesis_notes_ch_${selectedChapNum}`);
+      const saved = localStorage.getItem(`${activeBookId}_notes_ch_${selectedChapNum}`);
       const notesToSet = saved ? JSON.parse(saved) : {};
       queueMicrotask(() => {
         setUserNotes(notesToSet);
@@ -89,7 +89,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
     if (!text.trim()) delete updated[verseNum];
     setUserNotes(updated);
     try {
-      localStorage.setItem(`genesis_notes_ch_${selectedChapNum}`, JSON.stringify(updated));
+      localStorage.setItem(`${activeBookId}_notes_ch_${selectedChapNum}`, JSON.stringify(updated));
     } catch (err) {
       console.warn("Error guardando nota personal:", err);
     }
@@ -193,11 +193,12 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   };
 
   const handleNextChapter = () => {
-    if (selectedChapNum < 50) {
+    if (selectedChapNum < chapters.length) {
       setSelectedChapNum(prev => prev + 1);
       setHighlightedVerses({});
     }
   };
+
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -282,7 +283,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
       return `${num}. ${vObj ? vObj.text : ''}`;
     });
 
-    const formattedText = `GÉNESIS ${selectedChapNum}:${rangeStr} (RVR1960)\n` + selectedLines.join('\n');
+    const formattedText = `${bookName.toUpperCase()} ${selectedChapNum}:${rangeStr} (RVR1960)\n` + selectedLines.join('\n');
 
     navigator.clipboard.writeText(formattedText);
     setSelectionNotice(`✓ ${selectedVerseNums.length} versículo(s) copiado(s) al portapapeles!`);
@@ -310,7 +311,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
   // Copiar capítulo completo al portapapeles
   const handleCopyChapter = () => {
     if (!selectedChapterObj) return;
-    const fullText = `GÉNESIS CAPÍTULO ${selectedChapNum} (RVR1960)\n` +
+    const fullText = `${bookName.toUpperCase()} CAPÍTULO ${selectedChapNum} (RVR1960)\n` +
       `${selectedChapterObj.title}\n\n` +
       chapterVersesList.map(v => `${v.number}. ${v.text}`).join('\n');
 
@@ -334,9 +335,9 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
         <>
           <div className="panel-header">
             <div>
-              <h2>📖 Centro de Estudio por Capítulos (1 al 50)</h2>
+              <h2>📖 Centro de Estudio por Capítulos (1 al {chapters.length})</h2>
               <p>
-                Selecciona cualquier capítulo del Génesis para ingresar a su <strong>Sala de Estudio Exegético</strong> con lectura RVR1960, bosquejo homilético, hebreo bíblico y eventos AM.
+                Selecciona cualquier capítulo de {bookName} para ingresar a su <strong>Sala de Estudio Exegético</strong> con lectura RVR1960, bosquejo homilético, hebreo bíblico y eventos AM.
               </p>
             </div>
 
@@ -407,12 +408,12 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
               >
                 ◀ Cap. {selectedChapNum - 1}
               </button>
-              <span className="current-chap-pill">GÉNESIS {selectedChapNum} DE 50</span>
+              <span className="current-chap-pill">{bookName.toUpperCase()} {selectedChapNum} DE {chapters.length}</span>
               <button
                 className="nav-chap-arrow"
-                disabled={selectedChapNum >= 50}
+                disabled={selectedChapNum >= chapters.length}
                 onClick={() => {
-                  setSelectedChapNum(prev => Math.min(50, prev + 1));
+                  setSelectedChapNum(prev => Math.min(chapters.length, prev + 1));
                   setHighlightedVerses({});
                 }}
               >
@@ -424,7 +425,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
           <div className="chapter-study-header">
             <div className="csh-titles">
               <span className="csh-badge">📖 Sala de Estudio Teológico</span>
-              <h2>Génesis Capítulo {selectedChapNum}: {selectedChapterObj.title}</h2>
+              <h2>{bookName} Capítulo {selectedChapNum}: {selectedChapterObj.title}</h2>
               <p className="csh-summary">{selectedChapterObj.summary}</p>
             </div>
             <div className="csh-actions">
@@ -483,19 +484,19 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                         <button
                           className="srt-title-badge-btn"
                           onClick={() => setIsChapterSelectorOpen(!isChapterSelectorOpen)}
-                          title="Haz clic para abrir el menú de salto rápido a cualquier capítulo de Génesis (1 al 50)"
+                          title={`Haz clic para abrir el menú de salto rápido a cualquier capítulo de ${bookName} (1 al ${chapters.length})`}
                         >
-                          📖 GÉNESIS {selectedChapNum} <span className="chap-select-arrow">▾</span>
+                          📖 {bookName.toUpperCase()} {selectedChapNum} <span className="chap-select-arrow">▾</span>
                         </button>
 
                         {isChapterSelectorOpen && (
                           <div className="srt-chapter-selector-popover">
                             <div className="cs-popover-header">
-                              <span>⚡ Salto Rápido a Capítulo de Génesis</span>
+                              <span>⚡ Salto Rápido a Capítulo de {bookName}</span>
                               <button className="cs-close-btn" onClick={() => setIsChapterSelectorOpen(false)}>✕</button>
                             </div>
                             <div className="cs-popover-grid">
-                              {Array.from({ length: 50 }, (_, i) => i + 1).map((cNum) => (
+                              {Array.from({ length: chapters.length }, (_, i) => i + 1).map((cNum) => (
                                 <button
                                   key={cNum}
                                   className={`cs-num-chip ${selectedChapNum === cNum ? 'active' : ''}`}
@@ -515,7 +516,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
 
                       <button
                         className="srt-nav-btn"
-                        disabled={selectedChapNum >= 50}
+                        disabled={selectedChapNum >= chapters.length}
                         onClick={handleNextChapter}
                         title={`Capítulo Siguiente (Cap. ${selectedChapNum + 1})`}
                       >
@@ -587,7 +588,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                 {isHebrewLexiconActive && (
                   <div className="inline-lexicon-banner">
                     <div className="ilb-header">
-                      <h4>📜 Glosario & Léxico Hebreo Interlineal de Génesis {selectedChapNum}</h4>
+                      <h4>📜 Glosario & Léxico Interlineal de {bookName} {selectedChapNum}</h4>
                       <button className="close-lexicon-btn" onClick={() => setIsHebrewLexiconActive(false)}>✕ Ocultar Léxico</button>
                     </div>
                     {exegesisData?.hebrew_terms && exegesisData.hebrew_terms.length > 0 ? (
@@ -739,7 +740,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                         {/* Editor Inline de Nota Personal */}
                         {editingNoteVerseNum === v.number && (
                           <div className="inline-note-editor" onClick={(e) => e.stopPropagation()}>
-                            <strong>📝 Nota Personal en Génesis {selectedChapNum}:{v.number}</strong>
+                            <strong>📝 Nota Personal en {bookName} {selectedChapNum}:{v.number}</strong>
                             <textarea
                               className="inline-note-textarea"
                               placeholder="Escribe tu reflexión devocional, comentario o idea de estudio..."
@@ -775,7 +776,7 @@ export function ChapterMapPanel({ chapters = [], eventsMap = new Map(), peopleMa
                   ) : <div className="cr-footer-spacer" />}
 
                   <div className="cr-footer-center-info">
-                    <span className="cr-footer-badge">📖 Génesis Capítulo {selectedChapNum} de 50</span>
+                    <span className="cr-footer-badge">📖 {bookName} Capítulo {selectedChapNum} de {chapters.length}</span>
                     <span className="cr-footer-subtext">Fin de lectura del capítulo</span>
                   </div>
 

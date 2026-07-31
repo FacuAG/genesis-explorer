@@ -3,11 +3,11 @@ import './Panels.css';
 /**
  * Componente para el módulo de Preguntas Teológicas Frecuentes.
  */
-export function QuestionPanel({ questions }) {
+export function QuestionPanel({ questions = [], bookTitle = 'Génesis' }) {
   return (
     <div className="panel-container">
       <div className="panel-header">
-        <h2>❓ Preguntas Teológicas Frecuentes ({questions.length})</h2>
+        <h2>❓ Preguntas Teológicas Frecuentes de {bookTitle} ({questions.length})</h2>
         <p>Respuestas exegéticas profundas fundamentadas en las Escrituras.</p>
       </div>
 

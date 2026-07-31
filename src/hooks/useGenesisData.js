@@ -107,7 +107,14 @@ export function useGenesisData(bookId = 'genesis') {
     themes: currentData.themes || [],
     questions: currentData.questions || [],
     dispensations: currentData.dispensations || [],
-    chaptersMap: currentData.chapters_map || [],
+    // Normalizar chapters_map: unificar 'chapter' y 'chapter_number' en un solo campo 'chapter'.
+    // genesis.json usa 'chapter', matthew.json usa 'chapter_number'. El componente ChapterMapPanel
+    // siempre lee c.chapter, por lo que normalizamos aquí para que funcione cualquier libro.
+    chaptersMap: (currentData.chapters_map || []).map(c => ({
+      ...c,
+      chapter: c.chapter ?? c.chapter_number ?? 0
+    })),
+
     notableOverlaps: currentData.notable_overlaps || [],
     // Maps indexados O(1)
     eventsMap,
