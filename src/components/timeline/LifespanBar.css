@@ -185,3 +185,49 @@
   color: #94a3b8;
   font-weight: 500;
 }
+
+/* Estilos de Segmentos y Saltos Generacionales */
+.lifespan-segments-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lifespan-segment-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.lifespan-break-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.break-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192, 132, 252, 0.4) 50%, transparent 100%);
+}
+
+.break-badge {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px dashed rgba(192, 132, 252, 0.5);
+  color: #e9d5ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.segment-era-header h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: #38bdf8;
+  font-weight: 700;
+}

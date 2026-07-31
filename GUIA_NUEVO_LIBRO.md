@@ -555,7 +555,7 @@ VERIFICACIÓN FINAL:
 ```
 chapter            → número entero del capítulo (1, 2, 3...) [ÍNDICE PRINCIPAL DE REQUERIMIENTO DE LA UI]
 chapter_number     → número entero del capítulo (1, 2, 3...) [ALIAS DE NORMADO PARA COMPATIBILIDAD]
-title              → título descriptivo del capítulo (no "Capítulo 1")
+title              → título descriptivo del capítulo ( no "Capítulo 1")
 summary            → resumen narrativo exegético de 2-4 oraciones de los acontecimientos
 key_verse          → { reference: "...", text: "..." } — el versículo más representativo del capítulo
 key_people         → array de IDs de personas principales del capítulo (DEBEN existir en el array people[])
